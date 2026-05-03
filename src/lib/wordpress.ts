@@ -74,6 +74,14 @@ function normalizePost(post: WordPressPostResponse): WordPressPost {
 	const terms = post._embedded?.['wp:term']?.flat() ?? [];
 	const category = terms.find((term) => term?.slug && term?.name);
 	const featuredMedia = post._embedded?.['wp:featuredmedia']?.[0];
+	
+	let featuredImage = featuredMedia?.source_url ?? null;
+	const apiBase = getWordPressApiBase();
+
+	// Ensure featured image URL is absolute if it starts with /
+	if (featuredImage && featuredImage.startsWith('/') && apiBase) {
+		featuredImage = `${apiBase}${featuredImage}`;
+	}
 
 	return {
 		id: post.id,
@@ -81,7 +89,7 @@ function normalizePost(post: WordPressPostResponse): WordPressPost {
 		excerpt: stripHtml(post.excerpt?.rendered),
 		link: post.link ?? '#',
 		date: post.date ?? null,
-		featuredImage: featuredMedia?.source_url ?? null,
+		featuredImage,
 		featuredImageAlt: featuredMedia?.alt_text || '',
 		categoryLabel: category?.name ?? null,
 		categorySlug: category?.slug ?? null
