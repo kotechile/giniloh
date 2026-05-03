@@ -24,108 +24,129 @@ const formattedDate = post.date ? new Date(post.date).toLocaleDateString('en-US'
 }) : '';
 ---
 
-<BaseLayout title={`${post.title} | Giniloh`}>
-  <div class="max-w-4xl mx-auto px-6 py-20">
-    <!-- Header / Intelligence Metadata -->
-    <div class="mb-12 space-y-4">
-      <div class="flex items-center gap-4 text-xs font-mono tracking-widest text-cyan-400 uppercase">
+<BaseLayout 
+  title={`${post.title} | Giniloh`}
+  description={post.excerpt}
+>
+  <!-- SEO & Social Meta Tags -->
+  <meta slot="head" property="og:title" content={post.title} />
+  <meta slot="head" property="og:description" content={post.excerpt} />
+  {post.featuredImage && <meta slot="head" property="og:image" content={post.featuredImage} />}
+  <meta slot="head" name="twitter:card" content="summary_large_image" />
+
+  <div class="max-w-[1400px] mx-auto px-6 py-12 md:py-20">
+    <!-- Header Area -->
+    <div class="max-w-4xl mb-12 space-y-6">
+      <div class="flex flex-wrap items-center gap-4 text-[10px] md:text-xs font-mono tracking-widest text-cyan-400 uppercase">
         <span class="px-2 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded">Brief_ID: {post.id}</span>
         {post.categoryLabel && (
           <span class="px-2 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded text-emerald-400">
             Sector: {post.categoryLabel}
           </span>
         )}
-        <span class="ml-auto opacity-50">Released: {formattedDate}</span>
+        <span class="opacity-50">Released: {formattedDate}</span>
       </div>
       
-      <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-white leading-tight">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1]">
         {post.title}
       </h1>
-      
-      <div class="flex items-center gap-6 pt-4 border-t border-slate-800/50">
-        <div class="text-slate-400 text-sm">
-          <span class="font-mono text-xs uppercase block text-slate-500">Subject</span>
-          Decision Frameworks
-        </div>
-        <div class="text-slate-400 text-sm">
-          <span class="font-mono text-xs uppercase block text-slate-500">Security</span>
-          Public Intelligence
-        </div>
-      </div>
     </div>
 
-    <!-- Featured Image -->
-    {post.featuredImage && (
-      <div class="relative group mb-16">
-        <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-        <div class="relative aspect-[21/9] rounded-2xl overflow-hidden border border-white/10">
-          <img 
-            src={post.featuredImage} 
-            alt={post.featuredImageAlt}
-            class="w-full h-full object-cover"
-          />
+    <!-- Main Grid: Fluid and Responsive -->
+    <div class="flex flex-col lg:flex-row gap-12 xl:gap-20">
+      
+      <!-- Content Column -->
+      <main class="flex-1 min-w-0">
+        <!-- Featured Image -->
+        {post.featuredImage && (
+          <div class="relative group mb-16">
+            <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+            <div class="relative aspect-video lg:aspect-[21/9] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+              <img 
+                src={post.featuredImage} 
+                alt={post.featuredImageAlt}
+                class="w-full h-full object-cover scale-[1.01]"
+              />
+            </div>
+          </div>
+        )}
+
+        <!-- Readability Shield: Solid backing for long-form text -->
+        <div class="relative">
+          <div class="prose prose-invert lg:prose-xl max-w-none">
+            <!-- Summary Box -->
+            <div class="font-mono text-sm md:text-base mb-12 p-8 rounded-2xl bg-slate-900/60 border border-cyan-500/20 backdrop-blur-xl text-slate-200 leading-relaxed shadow-2xl relative overflow-hidden">
+               <div class="absolute top-0 left-0 w-1 h-full bg-cyan-500"></div>
+               <span class="text-cyan-400 font-bold block mb-3 uppercase tracking-widest text-xs">Executive_Summary //</span>
+               {post.excerpt}
+            </div>
+
+            <!-- Main Content -->
+            <div class="article-body space-y-8" set:html={post.content} />
+          </div>
         </div>
-      </div>
-    )}
+      </main>
 
-    <!-- Content Area -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-      <!-- Article Content -->
-      <article class="lg:col-span-8 prose prose-invert prose-slate max-w-none 
-        prose-headings:text-white prose-headings:font-bold prose-headings:tracking-tight
-        prose-a:text-cyan-400 prose-a:no-underline hover:prose-a:underline
-        prose-strong:text-white prose-code:text-emerald-400 prose-code:font-mono
-        prose-img:rounded-2xl prose-img:border prose-img:border-white/10">
-        
-        <div class="font-mono text-sm mb-8 p-6 rounded-xl bg-slate-900/40 border border-slate-800/50 backdrop-blur-sm text-slate-300 leading-relaxed italic">
-          <span class="text-cyan-400 font-bold block mb-2">Executive Summary:</span>
-          {post.excerpt}
-        </div>
-
-        <div set:html={post.content} />
-      </article>
-
-      <!-- Sidebar / Technical Metrics -->
-      <aside class="lg:col-span-4 space-y-8">
-        <div class="p-6 rounded-2xl bg-slate-900/40 border border-white/10 backdrop-blur-md sticky top-24">
-          <h3 class="font-mono text-xs uppercase tracking-widest text-slate-500 mb-6">Decision_Metrics</h3>
-          
-          <div class="space-y-6">
-            <div>
-              <div class="flex justify-between text-xs font-mono text-slate-400 mb-2">
-                <span>EST_ROI</span>
-                <span class="text-emerald-400">High</span>
+      <!-- Sidebar Column -->
+      <aside class="w-full lg:w-80 xl:w-96 shrink-0">
+        <div class="sticky top-24 space-y-8">
+          <!-- Decision Metrics Card -->
+          <div class="p-8 rounded-3xl bg-slate-900/40 border border-white/10 backdrop-blur-md shadow-2xl">
+            <h3 class="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-500 mb-8 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
+              Decision_Metrics
+            </h3>
+            
+            <div class="space-y-8">
+              <div>
+                <div class="flex justify-between text-[11px] font-mono text-slate-400 mb-3 tracking-wider">
+                  <span>EST_ROI</span>
+                  <span class="text-emerald-400">High</span>
+                </div>
+                <div class="h-1.5 bg-slate-800/50 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-emerald-600 to-emerald-400 w-[85%]"></div>
+                </div>
               </div>
-              <div class="h-1 bg-slate-800 rounded-full overflow-hidden">
-                <div class="h-full bg-emerald-500 w-[85%]"></div>
+
+              <div>
+                <div class="flex justify-between text-[11px] font-mono text-slate-400 mb-3 tracking-wider">
+                  <span>IMPLEMENTATION_EFFORT</span>
+                  <span class="text-cyan-400">Medium</span>
+                </div>
+                <div class="h-1.5 bg-slate-800/50 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-cyan-600 to-cyan-400 w-[45%]"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex justify-between text-[11px] font-mono text-slate-400 mb-3 tracking-wider">
+                  <span>STRATEGIC_VALUE</span>
+                  <span class="text-violet-400">Max</span>
+                </div>
+                <div class="h-1.5 bg-slate-800/50 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-violet-600 to-violet-400 w-[95%]"></div>
+                </div>
               </div>
             </div>
 
-            <div>
-              <div class="flex justify-between text-xs font-mono text-slate-400 mb-2">
-                <span>IMPLEMENTATION_EFFORT</span>
-                <span class="text-cyan-400">Medium</span>
-              </div>
-              <div class="h-1 bg-slate-800 rounded-full overflow-hidden">
-                <div class="h-full bg-cyan-500 w-[45%]"></div>
-              </div>
-            </div>
-
-            <div>
-              <div class="flex justify-between text-xs font-mono text-slate-400 mb-2">
-                <span>STRATEGIC_VALUE</span>
-                <span class="text-violet-400">Max</span>
-              </div>
-              <div class="h-1 bg-slate-800 rounded-full overflow-hidden">
-                <div class="h-full bg-violet-500 w-[95%]"></div>
-              </div>
+            <div class="mt-10 pt-8 border-t border-slate-800/50">
+              <button class="w-full py-4 px-6 rounded-2xl bg-white text-slate-950 font-bold text-sm hover:bg-cyan-400 transition-all active:scale-95 shadow-lg shadow-white/5">
+                Deploy Framework
+              </button>
             </div>
           </div>
 
-          <div class="mt-8 pt-6 border-t border-slate-800/50">
-            <button class="w-full py-3 px-4 rounded-xl bg-white text-slate-950 font-bold text-sm hover:bg-cyan-400 transition-colors">
-              Deploy Framework
-            </button>
+          <!-- Share/Action Tool -->
+          <div class="p-6 rounded-2xl border border-slate-800 bg-slate-900/20 text-center">
+            <p class="text-xs font-mono text-slate-500 uppercase tracking-widest mb-4">Transmission</p>
+            <div class="flex justify-center gap-4">
+               <div class="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center hover:bg-white hover:text-black cursor-pointer transition-all">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-1.015-2.174-1.649-3.594-1.649-2.719 0-4.923 2.204-4.923 4.923 0 .385.043.76.127 1.119-4.091-.205-7.719-2.165-10.148-5.144-.424.656-.667 1.432-.667 2.268 0 1.708 1.1 3.214 2.772 3.86-.717-.023-1.391-.219-1.981-.547v.062c0 2.385 1.697 4.374 3.946 4.828-.413.111-.849.171-1.296.171-.317 0-.626-.03-.927-.086.626 1.956 2.444 3.379 4.6 3.419-1.685 1.321-3.808 2.108-6.115 2.108-.397 0-.79-.023-1.175-.068 2.179 1.396 4.768 2.212 7.548 2.212 9.057 0 14.01-7.507 14.01-14.01 0-.213-.005-.426-.014-.637.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+               </div>
+               <div class="w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center hover:bg-white hover:text-black cursor-pointer transition-all">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+               </div>
+            </div>
           </div>
         </div>
       </aside>
