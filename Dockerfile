@@ -2,19 +2,27 @@
 FROM node:lts-alpine AS build
 WORKDIR /app
 
-# Pass build-time variables
+# Install curl for debugging
+RUN apk add --no-cache curl
+
 ARG PUBLIC_WORDPRESS_API_BASE
 ENV PUBLIC_WORDPRESS_API_BASE=$PUBLIC_WORDPRESS_API_BASE
+# This helps if the server has trouble with its own SSL certificate during build
+ENV NODE_TLS_REJECT_UNAUTHORIZED=0
 
 COPY package*.json ./
 RUN npm install
 COPY . .
+
+# Debug: Try to connect to WordPress before building
+RUN echo "Checking connection to $PUBLIC_WORDPRESS_API_BASE..." && \
+    curl -v -I "$PUBLIC_WORDPRESS_API_BASE/wp-json/wp/v2/posts" || echo "Connection check failed, but proceeding with build..."
+
 RUN npm run build
 
 # Production stage
 FROM nginx:stable-alpine
 
-# Create a basic nginx config to handle SPA routing if needed
 RUN echo 'server { \
     listen 80; \
     location / { \
