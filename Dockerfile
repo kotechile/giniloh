@@ -23,9 +23,6 @@ RUN npm run build
 # Production stage
 FROM nginx:stable-alpine
 
-# Production stage
-FROM nginx:stable-alpine
-
 RUN echo 'server { \
     listen 80; \
     server_name localhost; \
