@@ -186,73 +186,49 @@ a {
 
 /* --- Technical Typography (Prose Overrides) --- */
 .prose {
-  --tw-prose-body: #cbd5e1; /* slate-300 */
+  --tw-prose-body: #cbd5e1;
   --tw-prose-headings: #ffffff;
-  --tw-prose-links: #22d3ee; /* cyan-400 */
-  --tw-prose-bold: #ffffff;
-  --tw-prose-counters: #64748b; /* slate-500 */
-  --tw-prose-bullets: #475569; /* slate-600 */
-  --tw-prose-hr: #1e293b; /* slate-800 */
-  --tw-prose-quotes: #e2e8f0; /* slate-200 */
-  --tw-prose-quote-borders: #06b6d4; /* cyan-500 */
-  --tw-prose-captions: #94a3b8; /* slate-400 */
-  --tw-prose-code: #34d399; /* emerald-400 */
-  --tw-prose-pre-code: #e2e8f0;
-  --tw-prose-pre-bg: #0f172a;
-  --tw-prose-th-borders: #334155;
-  --tw-prose-td-borders: #1e293b;
   max-width: none !important;
 }
 
-.prose :where(img):not(:where([class~="not-prose"] *)) {
-  margin-top: 3rem !important;
-  margin-bottom: 3rem !important;
-  border-radius: 1rem;
-  border: 1px solid rgba(255,255,255,0.1);
+/* Force Headers to be High-Energy and Visible */
+.prose h1 { @apply text-4xl md:text-5xl font-extrabold mb-8 text-white tracking-tight leading-tight !important; }
+.prose h2 { @apply text-3xl md:text-4xl font-bold mt-16 mb-6 text-white tracking-tight border-l-4 border-cyan-500 pl-6 !important; }
+.prose h3 { @apply text-2xl md:text-3xl font-bold mt-12 mb-4 text-white tracking-tight !important; }
+.prose h4 { @apply text-xl md:text-2xl font-bold mt-10 mb-4 text-cyan-400 tracking-tight !important; }
+
+/* Force Table Contrast Lockdown */
+.prose table {
+  @apply my-12 w-full border-collapse rounded-2xl overflow-hidden border border-slate-700 bg-slate-950 shadow-2xl !important;
 }
 
-.prose :where(table):not(:where([class~="not-prose"] *)) {
-  margin-top: 2.5rem !important;
-  margin-bottom: 2.5rem !important;
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  border-radius: 0.75rem;
-  border: 1px solid #1e293b;
-  background-color: rgba(15, 23, 42, 0.5);
-  overflow: hidden;
+.prose thead {
+  @apply bg-slate-800/80 !important;
 }
 
-.prose :where(thead):not(:where([class~="not-prose"] *)) {
-  background-color: rgba(30, 41, 59, 0.8);
+.prose th {
+  @apply px-6 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-cyan-400 border-b border-slate-700 !important;
 }
 
-.prose :where(th):not(:where([class~="not-prose"] *)) {
-  padding: 0.75rem 1rem !important;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.75rem !important;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #22d3ee !important;
-  text-align: left;
+.prose td {
+  @apply px-6 py-5 text-white border-b border-slate-800/50 leading-relaxed !important;
 }
 
-.prose :where(td):not(:where([class~="not-prose"] *)) {
-  padding: 1rem !important;
-  border-top: 1px solid #1e293b;
-  color: #cbd5e1 !important;
+/* Fix the "White Row" Contrast Issue */
+.prose tr:nth-child(even) {
+  @apply bg-white/[0.03] !important;
 }
 
-.prose :where(tr:nth-child(even)):not(:where([class~="not-prose"] *)) {
-  background-color: rgba(255, 255, 255, 0.02);
+.prose tr:hover td {
+  @apply bg-cyan-500/5 !important;
 }
 
-.prose :where(blockquote):not(:where([class~="not-prose"] *)) {
-  border-left-width: 4px;
-  border-left-color: #06b6d4;
-  background-color: rgba(6, 182, 212, 0.05);
-  padding: 1.5rem 2rem !important;
-  font-style: italic;
-  border-radius: 0 0.5rem 0.5rem 0;
+.prose img {
+  @apply my-16 rounded-3xl border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)] !important;
 }
+
+.prose blockquote {
+  @apply border-l-4 border-cyan-500 bg-slate-900/50 px-8 py-6 italic rounded-r-2xl text-xl text-slate-100 !important;
+}
+
 

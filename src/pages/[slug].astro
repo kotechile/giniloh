@@ -83,7 +83,7 @@ const formattedDate = post.date ? new Date(post.date).toLocaleDateString('en-US'
             </div>
 
             <!-- Main Content -->
-            <div class="article-body space-y-8" set:html={post.content} />
+            <div class="article-body space-y-8 max-w-3xl mx-auto" set:html={post.content} />
           </div>
         </div>
       </main>
