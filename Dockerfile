@@ -29,27 +29,26 @@ RUN echo 'server { \
     root /usr/share/nginx/html; \
     index index.html; \
 \
-    # Handle Astro Subpages and Static Files \
+    # 1. Handle Astro Subpages and Static Files \
     location / { \
-        try_files $uri $uri/ $uri.html /404.html; \
+        try_files $uri $uri/ $uri.html /index.html; \
     } \
 \
-    # Proxy WordPress Media and Assets \
-    location ~* ^/(wp-content|wp-includes) { \
+    # 2. Proxy ALL WordPress Backend paths \
+    location ~* ^/(wp-content|wp-includes|wp-json|wp-admin|wp-login\.php|wp-cron\.php) { \
         proxy_pass https://cms.giniloh.com; \
         proxy_set_header Host cms.giniloh.com; \
+        proxy_set_header X-Real-IP $remote_addr; \
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; \
+        proxy_set_header X-Forwarded-Proto $scheme; \
         proxy_ssl_server_name on; \
-        proxy_cache_bypass $http_upgrade; \
+        proxy_buffer_size 128k; \
+        proxy_buffers 4 256k; \
+        proxy_busy_buffers_size 256k; \
     } \
 \
-    # Proxy WordPress API for Search/Islands \
-    location /wp-json { \
-        proxy_pass https://cms.giniloh.com; \
-        proxy_set_header Host cms.giniloh.com; \
-        proxy_ssl_server_name on; \
-    } \
-\
-    error_page 404 /404.html; \
+    # Fix for Astro 404s to prevent loop \
+    error_page 404 /index.html; \
 }' > /etc/nginx/conf.d/default.conf
 
 COPY --from=build /app/dist /usr/share/nginx/html
