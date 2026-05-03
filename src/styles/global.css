@@ -192,43 +192,88 @@ a {
 }
 
 /* Force Headers to be High-Energy and Visible */
-.prose h1 { @apply text-4xl md:text-5xl font-extrabold mb-8 text-white tracking-tight leading-tight !important; }
-.prose h2 { @apply text-3xl md:text-4xl font-bold mt-16 mb-6 text-white tracking-tight border-l-4 border-cyan-500 pl-6 !important; }
-.prose h3 { @apply text-2xl md:text-3xl font-bold mt-12 mb-4 text-white tracking-tight !important; }
-.prose h4 { @apply text-xl md:text-2xl font-bold mt-10 mb-4 text-cyan-400 tracking-tight !important; }
+.prose h1 { 
+  font-size: 2.25rem !important;
+  line-height: 2.5rem !important;
+  font-weight: 800 !important;
+  margin-bottom: 2rem !important;
+  color: #ffffff !important;
+  letter-spacing: -0.025em !important;
+}
+@media (min-width: 768px) {
+  .prose h1 { font-size: 3.75rem !important; line-height: 1 !important; }
+}
+
+.prose h2 { 
+  font-size: 1.875rem !important;
+  line-height: 2.25rem !important;
+  font-weight: 700 !important;
+  margin-top: 4rem !important;
+  margin-bottom: 1.5rem !important;
+  color: #ffffff !important;
+  border-left: 4px solid #06b6d4 !important;
+  padding-left: 1.5rem !important;
+}
+
+.prose h3 { 
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  margin-top: 3rem !important;
+  margin-bottom: 1rem !important;
+  color: #ffffff !important;
+}
 
 /* Force Table Contrast Lockdown */
 .prose table {
-  @apply my-12 w-full border-collapse rounded-2xl overflow-hidden border border-slate-700 bg-slate-950 shadow-2xl !important;
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+  width: 100% !important;
+  border-collapse: collapse !important;
+  border-radius: 1rem !important;
+  overflow: hidden !important;
+  border: 1px solid #334155 !important;
+  background-color: #020617 !important; /* slate-950 */
 }
 
 .prose thead {
-  @apply bg-slate-800/80 !important;
+  background-color: rgba(30, 41, 59, 0.8) !important;
 }
 
 .prose th {
-  @apply px-6 py-4 font-mono text-[11px] uppercase tracking-[0.2em] text-cyan-400 border-b border-slate-700 !important;
+  padding: 1rem 1.5rem !important;
+  font-family: ui-monospace, monospace !important;
+  font-size: 11px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.2em !important;
+  color: #22d3ee !important;
+  border-bottom: 1px solid #334155 !important;
 }
 
 .prose td {
-  @apply px-6 py-5 text-white border-b border-slate-800/50 leading-relaxed !important;
+  padding: 1.25rem 1.5rem !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid rgba(30, 41, 59, 0.5) !important;
+  line-height: 1.625 !important;
 }
 
-/* Fix the "White Row" Contrast Issue */
 .prose tr:nth-child(even) {
-  @apply bg-white/[0.03] !important;
-}
-
-.prose tr:hover td {
-  @apply bg-cyan-500/5 !important;
+  background-color: rgba(255, 255, 255, 0.03) !important;
 }
 
 .prose img {
-  @apply my-16 rounded-3xl border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)] !important;
+  margin-top: 4rem !important;
+  margin-bottom: 4rem !important;
+  border-radius: 1.5rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 .prose blockquote {
-  @apply border-l-4 border-cyan-500 bg-slate-900/50 px-8 py-6 italic rounded-r-2xl text-xl text-slate-100 !important;
+  border-left: 4px solid #06b6d4 !important;
+  background-color: rgba(15, 23, 42, 0.5) !important;
+  padding: 1.5rem 2rem !important;
+  border-radius: 0 1rem 1rem 0 !important;
+  color: #f1f5f9 !important;
 }
+
 
 
