@@ -223,44 +223,55 @@ a {
   color: #ffffff !important;
 }
 
-/* Force Table Contrast Lockdown */
+/* --- Blended Editorial Tables --- */
+.prose table, 
+.prose thead, 
+.prose tbody, 
+.prose tr, 
+.prose th, 
+.prose td {
+  background-color: transparent !important; /* Kill all WP injected backgrounds */
+  background: none !important;
+  border-color: rgba(51, 65, 85, 0.5) !important; /* subtle slate-700 */
+}
+
 .prose table {
   margin-top: 3rem !important;
   margin-bottom: 3rem !important;
   width: 100% !important;
   border-collapse: collapse !important;
-  border-radius: 1rem !important;
-  overflow: hidden !important;
-  border: 1px solid #334155 !important;
-  background-color: #020617 !important; /* Force deep black/slate */
-}
-
-.prose thead {
-  background-color: #0f172a !important; /* slate-900 */
+  border-top: 1px solid rgba(34, 211, 238, 0.3) !important; /* subtle cyan top line */
 }
 
 .prose th {
-  padding: 1.25rem 1.5rem !important;
+  padding: 1.5rem 1rem !important;
   font-family: ui-monospace, monospace !important;
-  font-size: 11px !important;
+  font-size: 10px !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.2em !important;
-  color: #22d3ee !important;
-  border-bottom: 2px solid #1e293b !important;
+  letter-spacing: 0.25em !important;
+  color: #22d3ee !important; /* Bright Cyan Headers */
+  text-align: left !important;
+  border-bottom: 2px solid rgba(34, 211, 238, 0.2) !important;
 }
 
 .prose td {
-  padding: 1.25rem 1.5rem !important;
-  color: #ffffff !important; /* Force white text */
-  border-bottom: 1px solid rgba(30, 41, 59, 0.5) !important;
-  background-color: transparent !important; /* Prevent white background bleed */
+  padding: 1.25rem 1rem !important;
+  color: #f8fafc !important; /* Bright Slate-50 Text */
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.3) !important;
 }
 
-.prose tr:nth-child(even) {
-  background-color: rgba(255, 255, 255, 0.03) !important;
+.prose tr:last-child td {
+  border-bottom: none !important;
 }
 
-/* Fix Key Takeaway / Light Blocks */
+/* Subtle Row Highlight */
+.prose tr:hover td {
+  background-color: rgba(34, 211, 238, 0.03) !important;
+}
+
+/* Key Takeaway / Light Blocks (Refined) */
 /* We target blocks that have a white/light background from WordPress */
 .prose .wp-block-group,
 .prose .wp-block-columns,
