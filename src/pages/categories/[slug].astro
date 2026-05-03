@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getAllCategories, getCategoryBySlug } from '../../lib/categories';
+import { fetchPostsByCategory } from '../../lib/wordpress';
+import PostCard from '../../components/PostCard.astro';
+
+export async function getStaticPaths() {
+	const categories = await getAllCategories();
+	return categories.map((category) => ({
+		params: { slug: category.slug }
+	}));
+}
+
+const slug = Astro.params.slug ?? '';
+const category = await getCategoryBySlug(slug);
+
+if (!category) {
+	return Astro.redirect('/categories');
+}
+
+const posts = category.wordpressCategoryId ? await fetchPostsByCategory(category.wordpressCategoryId, 12) : [];
+const siblingCategories = category.children;
+---
+
+<BaseLayout
+	title={`${category.name} | Gini Loh`}
+	description={category.description || `Explore posts in ${category.name} on Gini Loh.`}
+>
+	<section class="pt-32">
+		<p class="section-eyebrow">Category Detail</p>
+		<h1 class="mt-4 max-w-4xl text-5xl font-bold tracking-tight text-white sm:text-6xl">
+			{category.name}
+		</h1>
+		<p class="mt-6 max-w-3xl text-lg leading-8 text-slate-400 font-mono">
+			> {category.description || 'This category is ready to display live WordPress posts once the REST API returns content.'}
+		</p>
+		<div class="mt-8 flex flex-wrap gap-3">
+			<a href="/categories" class="btn-secondary">Back to categories</a>
+			{
+				category.wordpressCategoryId ? (
+					<span class="rounded-full border border-slate-800 bg-slate-900/50 px-4 py-2 text-xs font-mono text-slate-500">
+						WordPress category ID: <span class="text-cyan-400">{category.wordpressCategoryId}</span>
+					</span>
+				) : null
+			}
+		</div>
+	</section>
+
+	{
+		siblingCategories.length ? (
+			<section class="mt-12">
+				<p class="section-eyebrow text-cyan-400">Subcategories</p>
+				<div class="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+					{siblingCategories.map((child) => (
+						<a
+							href={`/categories/${child.slug}`}
+							class="group panel-soft rounded-[1.8rem] border border-slate-800 bg-slate-900/40 p-6 transition hover:-translate-y-1 hover:border-cyan-500/30 hover:shadow-[0_16px_35px_rgba(0,0,0,0.4)]"
+						>
+							<h2 class="text-xl font-bold tracking-tight text-slate-100 group-hover:text-white transition-colors">{child.name}</h2>
+							<p class="mt-3 text-sm leading-7 text-slate-400 font-mono">
+								> {child.description || 'A focused subcategory within this area.'}
+							</p>
+						</a>
+					))}
+				</div>
+			</section>
+		) : null
+	}
+
+	<section class="mt-14">
+		<div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between border-b border-slate-800 pb-6">
+			<div>
+				<p class="section-eyebrow text-cyan-400">WordPress Feed</p>
+				<h2 class="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+					Signals detected in this category
+				</h2>
+			</div>
+			<p class="max-w-md text-sm leading-6 text-slate-500 font-mono">
+				> Mapping CSV slug to WordPress category ID for automated retrieval.
+			</p>
+		</div>
+
+		{
+			posts.length ? (
+				<div class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+					{posts.map((post) => <PostCard post={post} />)}
+				</div>
+			) : (
+				<div class="mt-8 rounded-[1.5rem] border border-slate-800 bg-slate-900 p-8">
+					<div class="flex items-center gap-3 text-cyan-400 mb-4">
+						<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+						<h3 class="text-xl font-semibold font-mono uppercase">Awaiting incoming signals</h3>
+					</div>
+					<p class="max-w-2xl text-sm leading-7 text-slate-400 font-mono">
+						{category.wordpressCategoryId
+							? '> The data stream is currently empty. The system is active and awaiting incoming intelligence briefs for this category ID.'
+							: '> API connection not established for this category. No WordPress category ID mapped in source CSV.'}
+					</p>
+				</div>
+			)
+		}
+	</section>
+</BaseLayout>

@@ -1,0 +1,66 @@
+---
+import type { WordPressPost } from '../lib/wordpress';
+
+interface Props {
+	post: WordPressPost;
+}
+
+const { post } = Astro.props;
+
+// Helper to generate a simulated decision metric based on title hash or length for visual consistency
+const pseudoMetric = (title: string) => {
+	const val = title.length % 3;
+	if (val === 0) return { roi: '14.2%', effort: 'Low' };
+	if (val === 1) return { roi: '8.5%', effort: 'Med' };
+	return { roi: '21.0%', effort: 'High' };
+};
+
+const metric = pseudoMetric(post.title);
+---
+
+<article class="group h-full overflow-hidden rounded-[1.5rem] border border-slate-800 bg-slate-900/40 transition duration-300 ease-out hover:-translate-y-1 hover:border-cyan-500/50 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] backdrop-blur-md">
+	<a
+		href={post.link}
+		class="flex h-full flex-col focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400"
+	>
+		{
+			post.featuredImage && (
+				<div class="h-48 overflow-hidden border-b border-slate-800/50">
+					<img
+						src={post.featuredImage}
+						alt={post.featuredImageAlt || ''}
+						loading="lazy"
+						class="h-full w-full object-cover transition duration-500 group-hover:scale-105 opacity-70 group-hover:opacity-100"
+					/>
+				</div>
+			)
+		}
+		
+		<div class="flex flex-1 flex-col p-6">
+			<div class="flex items-center justify-between gap-4 font-mono text-[0.65rem] uppercase tracking-widest text-slate-500 mb-4 border-b border-slate-800/50 pb-3">
+				<span class="text-cyan-400">{post.categoryLabel ?? 'Brief'}</span>
+				<span>{post.date ? new Date(post.date).toLocaleDateString() : 'REAL-TIME'}</span>
+			</div>
+			
+			<h3 class="text-xl font-bold tracking-tight text-white group-hover:text-cyan-50 transition-colors leading-tight">
+				{post.title}
+			</h3>
+			
+			<p class="mt-4 flex-1 text-sm leading-6 text-slate-400 font-mono italic opacity-80">
+				> {post.excerpt || 'Signal detected. Full analysis available in the Zenith portal.'}
+			</p>
+			
+			<div class="mt-6 p-3 bg-slate-950/80 rounded-lg border border-slate-800 flex justify-between items-center font-mono text-[0.7rem] shadow-inner">
+				<div>
+					<span class="text-slate-500 uppercase tracking-tighter">Exp. ROI:</span> 
+					<span class="text-emerald-400 ml-1 font-bold">{metric.roi}</span>
+				</div>
+				<div class="h-4 w-px bg-slate-800"></div>
+				<div>
+					<span class="text-slate-500 uppercase tracking-tighter">Effort:</span> 
+					<span class="text-cyan-400 ml-1 font-bold">{metric.effort}</span>
+				</div>
+			</div>
+		</div>
+	</a>
+</article>

@@ -1,0 +1,107 @@
+---
+const navLinks = [
+	{ href: '/categories', label: 'Frameworks' },
+	{ href: '#intelligence', label: 'Intelligence' },
+	{ href: '#tools', label: 'Tools' },
+	{ href: 'https://wellroost.com', label: 'WellRoost' }
+];
+
+const pathname = Astro.url.pathname;
+---
+
+<header class="fixed inset-x-0 top-4 z-50 flex justify-center px-4">
+	<div class="w-full max-w-6xl rounded-full border border-slate-700/50 bg-slate-900/80 px-3 py-3 shadow-[0_22px_45px_rgba(0,0,0,0.5)] backdrop-blur-md">
+		<div class="flex items-center justify-between gap-4">
+			<a
+				href="/"
+				class="inline-flex items-center gap-3 rounded-full px-3 py-2 text-sm font-semibold tracking-[0.18em] text-slate-100 transition hover:bg-slate-800/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
+			>
+				<span class="inline-flex h-9 w-9 items-center justify-center rounded-full bg-slate-800 border border-slate-700 text-base text-cyan-400 font-mono shadow-[0_0_15px_rgba(34,211,238,0.2)]">
+					GL
+				</span>
+				<span class="hidden text-left sm:block">
+					<span class="block text-[0.68rem] uppercase text-cyan-400/80 font-mono">Gini Loh</span>
+					<span class="block text-[0.82rem] tracking-[0.2em] text-slate-300">Decision Engine</span>
+				</span>
+			</a>
+
+			<nav class="hidden items-center gap-2 md:flex" aria-label="Primary navigation">
+				{
+					navLinks.map((link) => {
+						const isActive = pathname === link.href || (pathname.startsWith('/categories') && link.label === 'Frameworks');
+						return (
+							<a
+								href={link.href}
+								class:list={[
+									'rounded-full px-4 py-2 text-sm font-medium transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400 font-mono uppercase tracking-widest text-[0.7rem]',
+									isActive
+										? 'bg-slate-800 text-cyan-400 shadow-[inset_0_0_0_1px_rgba(34,211,238,0.2)]'
+										: 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-200'
+								]}
+								aria-current={isActive ? 'page' : undefined}
+							>
+								{link.label}
+							</a>
+						);
+					})
+				}
+			</nav>
+
+			<div class="flex items-center gap-2">
+				<button
+					type="button"
+					data-search-open
+					aria-label="Open site search"
+					class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-700/50 bg-slate-800/50 text-slate-300 transition hover:scale-105 hover:bg-slate-700 hover:text-cyan-400 hover:shadow-[0_0_15px_rgba(34,211,238,0.2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400 motion-reduce:hover:scale-100"
+				>
+					<svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" aria-hidden="true">
+						<path
+							d="M21 21l-4.35-4.35m1.35-5.15a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0Z"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						/>
+					</svg>
+				</button>
+
+				<details class="group relative md:hidden">
+					<summary
+						class="inline-flex h-11 w-11 cursor-pointer list-none items-center justify-center rounded-full border border-slate-700/50 bg-slate-800/50 text-slate-300 transition hover:bg-slate-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
+						aria-label="Open navigation menu"
+					>
+						<svg viewBox="0 0 24 24" fill="none" class="h-5 w-5" aria-hidden="true">
+							<path
+								d="M4 7h16M4 12h16M4 17h16"
+								stroke="currentColor"
+								stroke-width="1.8"
+								stroke-linecap="round"
+							/>
+						</svg>
+					</summary>
+					<div class="absolute right-0 top-[calc(100%+0.8rem)] w-64 rounded-[1.5rem] border border-slate-700/80 bg-slate-900/95 p-3 shadow-[0_18px_55px_rgba(0,0,0,0.6)] backdrop-blur-xl">
+						<nav class="grid gap-1" aria-label="Mobile navigation">
+							{
+								navLinks.map((link) => {
+									const isActive = pathname === link.href || (pathname.startsWith('/categories') && link.label === 'Frameworks');
+									return (
+										<a
+											href={link.href}
+											class:list={[
+												'rounded-2xl px-4 py-3 text-sm transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400 font-mono uppercase tracking-widest text-[0.75rem]',
+												isActive ? 'bg-slate-800 text-cyan-400' : 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-200'
+											]}
+											aria-current={isActive ? 'page' : undefined}
+										>
+											{link.label}
+										</a>
+									);
+								})
+							}
+						</nav>
+					</div>
+				</details>
+			</div>
+		</div>
+	</div>
+</header>

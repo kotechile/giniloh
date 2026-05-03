@@ -1,0 +1,43 @@
+---
+import Footer from '../components/Footer.astro';
+import SearchOverlay from '../components/SearchOverlay.astro';
+import SiteNav from '../components/SiteNav.astro';
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const { title, description = 'Headless editorial front end for Gini Loh powered by Astro and WordPress.' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<title>{title}</title>
+	</head>
+	<body class="min-h-screen bg-site text-slate-200 antialiased">
+		<div class="site-background">
+			<div class="orb orb-one"></div>
+			<div class="orb orb-two"></div>
+			<div class="orb orb-three"></div>
+		</div>
+		<SiteNav />
+		<SearchOverlay />
+		<main class="relative z-10">
+			<div class="mx-auto max-w-7xl px-4 pb-10 pt-6 sm:px-6 lg:px-8">
+				<slot />
+			</div>
+		</main>
+		<div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+			<Footer />
+		</div>
+	</body>
+</html>

@@ -1,0 +1,105 @@
+---
+import type { CategoryRecord } from '../lib/categories';
+
+interface Props {
+	categories: CategoryRecord[];
+}
+
+const { categories } = Astro.props;
+
+// Filter and map to the specific 4 pillars requested
+// 1. Wealth Allocation (mapping to Decision Engineering / Capital Allocation)
+// 2. The WellRoost Vertical (mapping to Real Assets & Living)
+// 3. Personal Systems (mapping to Personal Systems & AI)
+// 4. Market Intelligence (mapping to Market Intelligence)
+
+const gridData = [
+	{
+		title: 'Wealth Allocation',
+		tagline: 'Where to deploy capital next.',
+		categorySlug: 'decision-engineering',
+		icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />',
+		color: 'text-emerald-400',
+		bg: 'bg-emerald-500/10'
+	},
+	{
+		title: 'The WellRoost Vertical',
+		tagline: 'Systematizing the home for ROI.',
+		categorySlug: 'real-assets-living',
+		icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />',
+		color: 'text-blue-400',
+		bg: 'bg-blue-500/10'
+	},
+	{
+		title: 'Personal Systems',
+		tagline: 'Leveraging AI and automation.',
+		categorySlug: 'personal-systems-ai',
+		icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />',
+		color: 'text-purple-400',
+		bg: 'bg-purple-500/10'
+	},
+	{
+		title: 'Market Intelligence',
+		tagline: 'Signals in the noise.',
+		categorySlug: 'market-intelligence',
+		icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />',
+		color: 'text-cyan-400',
+		bg: 'bg-cyan-500/10'
+	}
+];
+---
+
+<section class="mt-24">
+	<div class="flex items-end justify-between gap-6">
+		<div>
+			<p class="section-eyebrow">Active Frameworks</p>
+			<h2 class="mt-3 text-3xl font-semibold tracking-tight text-slate-100 sm:text-4xl">
+				The four pillars of the Decision Engine
+			</h2>
+		</div>
+		<a href="/categories" class="hidden text-sm font-mono text-cyan-400 transition hover:text-cyan-300 md:inline-flex">
+			[VIEW_ALL_MODULES]
+		</a>
+	</div>
+
+	<div class="mt-8 grid gap-4 sm:grid-cols-2">
+		{
+			gridData.map((item) => {
+				const category = categories.find(c => c.slug === item.categorySlug);
+				
+				return (
+					<a
+						href={`/categories/${category?.slug || item.categorySlug}`}
+						class="group relative flex min-h-48 flex-col justify-between overflow-hidden rounded-[1.5rem] border border-slate-800 bg-slate-900/40 p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-500/30 hover:shadow-2xl backdrop-blur-md"
+					>
+						<!-- Technical Background Pattern -->
+						<div class="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PHBhdGggZD0iTTAgMjBoMjBNMjAgMHYyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=')]"></div>
+						
+						<div class="relative z-10 flex items-start justify-between">
+							<div class={`p-3 rounded-xl ${item.bg} ${item.color}`}>
+								<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" set:html={item.icon} />
+							</div>
+							<p class="font-mono text-[0.65rem] uppercase tracking-widest text-slate-500">
+								SYS.{category?.children.length || 0}
+							</p>
+						</div>
+						
+						<div class="relative z-10 mt-8">
+							<h3 class="text-xl font-bold tracking-tight text-white group-hover:text-cyan-400 transition-colors">
+								{item.title}
+							</h3>
+							<p class="mt-2 text-sm text-slate-400 font-mono">
+								> {item.tagline}
+							</p>
+						</div>
+						
+						<div class="relative z-10 mt-6 flex items-center gap-2 text-xs font-mono text-slate-500">
+							<span class="inline-flex h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>
+							Active Status
+						</div>
+					</a>
+				);
+			})
+		}
+	</div>
+</section>

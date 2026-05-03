@@ -1,0 +1,274 @@
+---
+import { getConfiguredWordPressApiBase } from '../lib/wordpress';
+
+const apiBase = getConfiguredWordPressApiBase();
+---
+
+<div
+	id="search-overlay"
+	class="pointer-events-none fixed inset-0 z-[70] opacity-0 transition duration-300 data-[open=true]:pointer-events-auto data-[open=true]:opacity-100 motion-reduce:transition-none"
+	data-api-base={apiBase}
+	data-open="false"
+	aria-hidden="true"
+>
+	<button
+		class="absolute inset-0 h-full w-full cursor-default bg-[rgba(3,8,27,0.72)] backdrop-blur-2xl"
+		type="button"
+		data-search-close
+		aria-label="Close search"
+	></button>
+	<div class="relative flex min-h-full items-start justify-center px-4 py-24 sm:px-6">
+		<div
+			class="panel-shell relative z-10 w-full max-w-4xl overflow-hidden rounded-[2rem] border border-slate-700/50 bg-slate-900/90 p-6 text-white shadow-[0_24px_80px_rgba(0,0,0,0.8)] backdrop-blur-3xl sm:p-8"
+			role="dialog"
+			aria-modal="true"
+			aria-labelledby="search-overlay-title"
+		>
+			<div class="flex items-start justify-between gap-4">
+				<div>
+					<p class="text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-cyan-200/80">
+						Instant Lookup
+					</p>
+					<h2 id="search-overlay-title" class="mt-2 text-3xl font-semibold tracking-tight text-white">
+						Search the Gini Loh archive
+					</h2>
+				</div>
+				<button
+					type="button"
+					class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-700 bg-slate-800 text-white transition hover:bg-slate-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
+					data-search-close
+					aria-label="Close search overlay"
+				>
+					<span aria-hidden="true" class="text-xl leading-none">×</span>
+				</button>
+			</div>
+
+			<form class="mt-8" id="search-form" novalidate>
+				<label class="sr-only" for="search-input">Search posts</label>
+				<input
+					id="search-input"
+					type="search"
+					name="q"
+					placeholder="Search decisions, systems, investing, AI..."
+					autocomplete="off"
+					class="w-full rounded-xl border border-slate-700 bg-slate-950/80 px-6 py-4 text-lg text-white placeholder:text-slate-500 focus:border-cyan-400 focus:outline-none focus:ring-1 focus:ring-cyan-400/50 font-mono"
+				/>
+			</form>
+
+			<div class="mt-6 min-h-32 rounded-[1.5rem] border border-slate-800 bg-slate-950/35 p-4 sm:p-5">
+				<p id="search-status" class="text-sm text-slate-500 font-mono">
+					> Start typing to search posts from WordPress.
+				</p>
+				<ul id="search-results" class="mt-4 grid gap-3" aria-live="polite"></ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	type SearchResult = {
+		title: string;
+		excerpt: string;
+		link: string;
+		date: string | null;
+		categoryLabel: string | null;
+	};
+
+	type SearchPostResponse = {
+		link?: string;
+		date?: string;
+		title?: { rendered?: string };
+		excerpt?: { rendered?: string };
+		_embedded?: {
+			'wp:term'?: Array<Array<{ name?: string }>>;
+		};
+	};
+
+	const overlay = document.querySelector<HTMLDivElement>('#search-overlay');
+	const input = document.querySelector<HTMLInputElement>('#search-input');
+	const resultsList = document.querySelector<HTMLUListElement>('#search-results');
+	const status = document.querySelector<HTMLParagraphElement>('#search-status');
+	const form = document.querySelector<HTMLFormElement>('#search-form');
+	const closeButtons = Array.from(document.querySelectorAll<HTMLElement>('[data-search-close]'));
+	const openButtons = Array.from(document.querySelectorAll<HTMLElement>('[data-search-open]'));
+	const apiBase = overlay?.getAttribute('data-api-base') ?? '';
+	const focusableSelector =
+		'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+
+	let previousFocusedElement: HTMLElement | null = null;
+	let activeRequest: AbortController | null = null;
+	let debounceTimer: number | null = null;
+
+	const setOpen = (open: boolean) => {
+		if (!overlay) {
+			return;
+		}
+
+		overlay.setAttribute('data-open', open ? 'true' : 'false');
+		overlay.setAttribute('aria-hidden', open ? 'false' : 'true');
+		document.documentElement.classList.toggle('overflow-hidden', open);
+
+		if (open) {
+			previousFocusedElement =
+				document.activeElement instanceof HTMLElement ? document.activeElement : null;
+			window.setTimeout(() => input?.focus(), 30);
+		} else {
+			window.setTimeout(() => previousFocusedElement?.focus?.(), 30);
+		}
+	};
+
+	const renderResults = (posts: SearchResult[]) => {
+		if (!resultsList || !status) {
+			return;
+		}
+
+		resultsList.innerHTML = '';
+
+		if (!posts.length) {
+			status.textContent = 'No matching posts found yet.';
+			return;
+		}
+
+		status.textContent = `${posts.length} result${posts.length === 1 ? '' : 's'} found`;
+
+		for (const post of posts) {
+			const item = document.createElement('li');
+			item.innerHTML = `
+				<a
+					href="${post.link}"
+					class="block rounded-xl border border-slate-800 bg-slate-900/50 p-5 transition hover:border-cyan-400/50 hover:bg-slate-800/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400 group"
+				>
+					<div class="flex items-center justify-between gap-4 font-mono text-[0.65rem] uppercase tracking-widest text-slate-500 mb-2">
+						<span class="text-cyan-400">${post.categoryLabel ?? 'Brief'}</span>
+						<span>${post.date ? new Date(post.date).toLocaleDateString() : ''}</span>
+					</div>
+					<h3 class="text-lg font-bold tracking-tight text-white group-hover:text-cyan-50 transition-colors">${post.title}</h3>
+					<p class="mt-2 text-sm leading-6 text-slate-400 font-mono opacity-80">> ${post.excerpt || 'Open the post to read more.'}</p>
+				</a>
+			`;
+			resultsList.appendChild(item);
+		}
+	};
+
+	const searchPosts = async (query: string) => {
+		if (!status || !resultsList) {
+			return;
+		}
+
+		if (!apiBase) {
+			status.textContent = 'Search is unavailable until PUBLIC_WORDPRESS_API_BASE is configured.';
+			resultsList.innerHTML = '';
+			return;
+		}
+
+		if (!query.trim()) {
+			status.textContent = 'Start typing to search posts from WordPress.';
+			resultsList.innerHTML = '';
+			return;
+		}
+
+		activeRequest?.abort();
+		activeRequest = new AbortController();
+		status.textContent = 'Searching WordPress...';
+
+		try {
+			const url = new URL(`${apiBase.replace(/\/$/, '')}/wp-json/wp/v2/posts`);
+			url.searchParams.set('_embed', '1');
+			url.searchParams.set('search', query.trim());
+			url.searchParams.set('per_page', '8');
+
+			const response = await fetch(url, { signal: activeRequest.signal });
+			if (!response.ok) {
+				throw new Error(`HTTP ${response.status}`);
+			}
+
+			const data = (await response.json()) as SearchPostResponse[];
+			const posts = data.map((post) => {
+				const category = (post?._embedded?.['wp:term'] ?? []).flat().find((term) => term?.name);
+				return {
+					title: (post?.title?.rendered ?? 'Untitled post')
+						.replace(/<[^>]+>/g, ' ')
+						.replace(/&amp;/g, '&')
+						.replace(/&#8217;/g, "'")
+						.replace(/&#8211;/g, '–')
+						.replace(/\s+/g, ' ')
+						.trim(),
+					excerpt: (post?.excerpt?.rendered ?? '')
+						.replace(/<[^>]+>/g, ' ')
+						.replace(/&amp;/g, '&')
+						.replace(/&#8217;/g, "'")
+						.replace(/&#8211;/g, '–')
+						.replace(/\s+/g, ' ')
+						.trim(),
+					link: post?.link ?? '#',
+					date: post?.date ?? null,
+					categoryLabel: category?.name ?? null
+				};
+			});
+
+			renderResults(posts);
+		} catch (error) {
+			if (error instanceof DOMException && error.name === 'AbortError') {
+				return;
+			}
+
+			status.textContent = 'Search failed. Please try again in a moment.';
+			resultsList.innerHTML = '';
+		}
+	};
+
+	const handleTyping = (event: Event) => {
+		const target = event.currentTarget;
+		if (!(target instanceof HTMLInputElement)) {
+			return;
+		}
+
+		const value = target.value ?? '';
+		if (debounceTimer !== null) {
+			window.clearTimeout(debounceTimer);
+		}
+		debounceTimer = window.setTimeout(() => searchPosts(value), 200);
+	};
+
+	for (const button of openButtons) {
+		button.addEventListener('click', () => setOpen(true));
+	}
+
+	for (const button of closeButtons) {
+		button.addEventListener('click', () => setOpen(false));
+	}
+
+	form?.addEventListener('submit', (event) => {
+		event.preventDefault();
+		searchPosts(input?.value ?? '');
+	});
+
+	input?.addEventListener('input', handleTyping);
+
+	document.addEventListener('keydown', (event) => {
+		if (event.key === 'Escape' && overlay?.getAttribute('data-open') === 'true') {
+			setOpen(false);
+		}
+
+		if (event.key === 'Tab' && overlay?.getAttribute('data-open') === 'true') {
+			const focusableElements = Array.from(
+				overlay.querySelectorAll<HTMLElement>(focusableSelector)
+			).filter((element) => !element.hasAttribute('disabled'));
+
+			if (!focusableElements.length) {
+				return;
+			}
+
+			const firstElement = focusableElements[0];
+			const lastElement = focusableElements[focusableElements.length - 1];
+
+			if (event.shiftKey && document.activeElement === firstElement) {
+				event.preventDefault();
+				lastElement.focus();
+			} else if (!event.shiftKey && document.activeElement === lastElement) {
+				event.preventDefault();
+				firstElement.focus();
+			}
+		}
+	});
+</script>
