@@ -10,18 +10,17 @@ WordPress remains the content system for posts, categories, featured images, and
 
 Before writing or changing code, inspect these files if they exist in the repository:
 
-* `Documents/_giniloh_front_end/wordpress_categories.csv`
-* `Documents/_giniloh_front_end/giniloh_overview.md`
+* `giniloh_overview.md`
+* `design-language.md`
 
-Use `wordpress_categories.csv` as the source of truth for the category menu, category pages, category labels, and category slugs. Do not invent category names if the CSV is present.
+Use WordPress categories as the source of truth for the category menu, category pages, category labels, category slugs, hierarchy, and category IDs.
 
 Use `giniloh_overview.md` as the source of truth for the site concept, audience, tone, positioning, homepage copy direction, and any content hierarchy.
 
-If either file is missing, search the repository for similar names before proceeding:
+Use `design-language.md` as the directional reference for palette, spacing, tone, and visual composition. It is not the source of truth for content, but it should guide aesthetic decisions.
 
-* `wordpress_categories.csv`
-* `wordpress _categories.csv`
-* `categories.csv`
+If any supporting content file is missing, search the repository for similar names before proceeding:
+
 * `giniloh_overview.md`
 * `giniloh overview.md`
 * `overview.md`
@@ -40,13 +39,46 @@ Use:
 
 Do not turn the site into a full single-page React app. Astro should own routing, page composition, and static/server-rendered content.
 
+## Current implemented architecture
+
+The repo now contains a working Astro front end. Prefer extending this implementation rather than recreating it from scratch.
+
+Current key files:
+
+* `src/layouts/BaseLayout.astro`
+* `src/components/SiteNav.astro`
+* `src/components/SearchOverlay.astro`
+* `src/components/HeroGlass.astro`
+* `src/components/CategoryBento.astro`
+* `src/components/LatestPostsGrid.astro`
+* `src/components/PostCard.astro`
+* `src/components/Footer.astro`
+* `src/lib/source-files.ts`
+* `src/lib/categories.ts`
+* `src/lib/overview.ts`
+* `src/lib/wordpress.ts`
+* `src/pages/index.astro`
+* `src/pages/categories/index.astro`
+* `src/pages/categories/[slug].astro`
+* `src/pages/[slug].astro`
+* `src/pages/about.astro`
+* `src/styles/global.css`
+
+Important implementation notes:
+
+* The search overlay is currently implemented as `SearchOverlay.astro` with client-side script, not as a React island.
+* The site already supports a local Astro article route at `src/pages/[slug].astro` that fetches WordPress posts by slug and recreates them as Astro-rendered pages.
+* `src/lib/categories.ts` now reads live category structure directly from WordPress rather than from a CSV file.
+* `src/lib/source-files.ts` remains available for overview-style source file discovery, but category structure should not be re-coupled to a CSV without explicit intent.
+
 ## Core pages to build
 
 Create or update these routes:
 
 * `/` — high-energy landing page.
-* `/categories` — category index using the CSV-backed category list.
+* `/categories` — category index using the live WordPress category list.
 * `/categories/[slug]` — category detail page showing posts from that WordPress category.
+* `/[slug]` — local article detail page that recreates a WordPress article inside Astro.
 * `/about` — about page using the overview file as directional copy.
 
 Optional if the architecture already supports it:
@@ -63,7 +95,7 @@ The homepage must include:
 4. Primary CTA and secondary CTA.
 5. A responsive bento-style section introducing the main site themes or categories.
 6. A `Latest Posts` grid powered by the WordPress REST API.
-7. Category links based on `wordpress_categories.csv`.
+7. Category links based on the live WordPress taxonomy.
 8. A search icon that opens a full-screen overlay.
 
 Visual direction:
@@ -117,6 +149,8 @@ The overlay must:
 
 Keep this as a React island if needed. Do not ship unnecessary JavaScript to the rest of the page.
 
+The current implementation uses an Astro component with inline client script. Reuse that approach unless React materially improves the behavior.
+
 ## Latest Posts grid requirements
 
 Build a `Latest Posts` section that pulls from the WordPress REST API.
@@ -158,10 +192,22 @@ Responsibilities:
 * Read `WORDPRESS_API_BASE` or `PUBLIC_WORDPRESS_API_BASE` from environment variables.
 * Fetch latest posts.
 * Fetch posts by category.
+* Fetch a single post by slug for local article pages.
+* Fetch all posts when generating Astro article routes.
 * Fetch categories if needed.
 * Normalize WordPress responses into front-end-friendly objects.
 * Handle missing featured images gracefully.
 * Handle API failures gracefully.
+
+The current `src/lib/wordpress.ts` already includes:
+
+* `fetchLatestPosts`
+* `fetchPostsByCategory`
+* `searchPosts`
+* `fetchPostBySlug`
+* `fetchAllPosts`
+
+When extending this module, preserve the normalized `WordPressPost` shape and keep absolute image URLs working.
 
 Do not hardcode the WordPress production URL in multiple components. Centralize it in the API utility and `.env.example`.
 
@@ -179,21 +225,12 @@ Create a data-loading utility, for example:
 
 Responsibilities:
 
-* Read `Documents/_giniloh_front_end/wordpress_categories.csv` at build time if available.
-* Normalize category names, slugs, and optional descriptions.
-* Use CSV categories for nav/menu and category pages.
+* Read categories from the WordPress REST API at build time.
+* Normalize category names, slugs, descriptions, hierarchy, and counts.
+* Use WordPress categories for nav/menu and category pages.
 * Do not manually duplicate category data across components.
-
-If the CSV structure is unknown, inspect headers first and adapt. Common expected fields may include:
-
-* `name`
-* `slug`
-* `description`
-* `parent`
-* `count`
-* `id`
-
-If the CSV includes WordPress category IDs, use those IDs to fetch category posts from the REST API.
+* Exclude or intentionally handle infrastructure categories such as `uncategorized`.
+* If you need a CSV in the future, treat it as an optional enrichment layer rather than the primary taxonomy source.
 
 ## Design system
 
@@ -222,17 +259,20 @@ Prefer small reusable components:
 
 ```txt
 src/components/SiteNav.astro
-src/components/SearchOverlay.tsx
+src/components/SearchOverlay.astro
 src/components/HeroGlass.astro
 src/components/LatestPostsGrid.astro
 src/components/PostCard.astro
 src/components/CategoryBento.astro
 src/components/Footer.astro
+src/lib/source-files.ts
+src/lib/overview.ts
 src/lib/wordpress.ts
 src/lib/categories.ts
 src/pages/index.astro
 src/pages/categories/index.astro
 src/pages/categories/[slug].astro
+src/pages/[slug].astro
 src/pages/about.astro
 ```
 
@@ -258,16 +298,44 @@ Adjust paths to match the existing repository structure.
 * Avoid large animation libraries unless already installed and justified.
 * Avoid adding dependencies unless they materially simplify the build.
 
+Because WordPress API access may fail during build or in restricted environments, all page-level data fetches must degrade gracefully instead of crashing the build.
+
+## WordPress article recreation requirements
+
+When implementing or updating `src/pages/[slug].astro`, the goal is not to iframe or proxy the WordPress theme. The goal is to recreate the article as a native Astro page while preserving the article’s content fidelity.
+
+Requirements:
+
+* Fetch the post from WordPress by slug using `src/lib/wordpress.ts`.
+* Generate static paths from the live WordPress post list when possible.
+* Use the normalized post object for title, excerpt, date, category label, featured image, canonical link, and HTML content.
+* Render the article body with `set:html` only after the content has been sourced from WordPress and normalized in the shared utility.
+* Preserve canonical metadata and social metadata.
+* Recreate the reading experience in Astro rather than duplicating WordPress theme markup one-for-one.
+* Keep the article page visually aligned with the site’s editorial design system.
+* Do not embed WordPress admin chrome, Elementor wrappers, or WordPress theme navigation.
+* Prefer semantic article structure, readable measure, strong contrast, and responsive media handling.
+
+When reading articles from WordPress to recreate them in Astro:
+
+1. Inspect the WordPress REST response for the post slug.
+2. Reuse the normalized data fields from `src/lib/wordpress.ts` instead of re-parsing the same response in the page.
+3. Preserve featured media and the article title exactly enough to keep content identity intact.
+4. Cleanly render long-form HTML content while avoiding extra WordPress front-end chrome.
+5. If the WordPress HTML includes layout-specific or theme-specific wrappers that harm readability, strip or override them in Astro rather than reproducing them blindly.
+6. If future work requires more robust cleanup of WordPress article HTML, add that cleanup in the shared WordPress utility layer, not ad hoc in one page.
+
 ## Implementation workflow for Codex
 
 Before editing:
 
 1. Inspect the current repo structure.
 2. Inspect `package.json`, `astro.config.*`, `tailwind.config.*`, and existing layout/components.
-3. Read `Documents/_giniloh_front_end/wordpress_categories.csv`.
-4. Read `Documents/_giniloh_front_end/giniloh_overview.md`.
-5. Identify the safest minimal file changes.
-6. Briefly summarize the plan before coding.
+3. Read `wordpress_categories.csv` or `wordpress _categories.csv` if present.
+4. Read `giniloh_overview.md`.
+5. Read `design-language.md` for visual direction.
+6. Identify the safest minimal file changes.
+7. Briefly summarize the plan before coding.
 
 While editing:
 
@@ -275,9 +343,10 @@ While editing:
 2. Build shared layout/navigation next.
 3. Build the homepage sections.
 4. Build category and about pages.
-5. Add search overlay as the only required client island.
-6. Keep components small and reusable.
-7. Avoid hardcoded content that should come from the CSV or overview file.
+5. Maintain or extend the local article route at `src/pages/[slug].astro` when article recreation is in scope.
+6. Add search overlay behavior with minimal client JavaScript.
+7. Keep components small and reusable.
+8. Avoid hardcoded content that should come from the CSV or overview file.
 
 After editing:
 
@@ -312,8 +381,9 @@ The work is complete when:
 * Search opens a full-screen overlay and queries WordPress posts.
 * Latest Posts pulls featured images and titles from WordPress REST API.
 * Latest Posts cards scale to `1.05` on hover and show a soft neon glow.
-* Categories are sourced from the CSV when available.
-* Category pages are generated from the CSV-backed category list.
+* Categories are sourced from the live WordPress taxonomy.
+* Category pages are generated from the WordPress-backed category list.
+* Local article pages can be generated from WordPress post slugs when `src/pages/[slug].astro` is in scope.
 * The About page reflects `giniloh_overview.md`.
 * The site builds successfully.
 * Missing WordPress API data does not break the page.

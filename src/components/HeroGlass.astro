@@ -1,13 +1,4 @@
 ---
-import type { CategoryRecord } from '../lib/categories';
-import type { OverviewContent } from '../lib/overview';
-
-interface Props {
-	overview: OverviewContent;
-	topCategories: CategoryRecord[];
-}
-
-const { overview, topCategories } = Astro.props;
 ---
 
 <section class="relative pt-32">
@@ -91,4 +82,3 @@ const { overview, topCategories } = Astro.props;
 		</div>
 	</div>
 </section>
-

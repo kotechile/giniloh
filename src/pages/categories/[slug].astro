@@ -76,7 +76,7 @@ const siblingCategories = category.children;
 				</h2>
 			</div>
 			<p class="max-w-md text-sm leading-6 text-slate-500 font-mono">
-				> Mapping CSV slug to WordPress category ID for automated retrieval.
+				> Category routes and post retrieval are both driven by the live WordPress taxonomy.
 			</p>
 		</div>
 
@@ -93,8 +93,8 @@ const siblingCategories = category.children;
 					</div>
 					<p class="max-w-2xl text-sm leading-7 text-slate-400 font-mono">
 						{category.wordpressCategoryId
-							? '> The data stream is currently empty. The system is active and awaiting incoming intelligence briefs for this category ID.'
-							: '> API connection not established for this category. No WordPress category ID mapped in source CSV.'}
+							? '> The data stream is currently empty. The system is active and awaiting incoming intelligence briefs for this WordPress category.'
+							: '> API connection not established for this category. The live WordPress taxonomy did not return a usable category ID.'}
 					</p>
 				</div>
 			)

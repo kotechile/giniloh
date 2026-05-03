@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { fetchAllPosts, fetchPostBySlug } from '../lib/wordpress';
+import { fetchAllPosts } from '../lib/wordpress';
 
 export async function getStaticPaths() {
   const posts = await fetchAllPosts(100);
@@ -10,7 +10,6 @@ export async function getStaticPaths() {
   }));
 }
 
-const { slug } = Astro.params;
 const { post } = Astro.props;
 
 if (!post) {

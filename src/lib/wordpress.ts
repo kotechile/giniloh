@@ -18,12 +18,22 @@ interface WordPressPostResponse {
 	link?: string;
 	date?: string;
 	title?: WordPressRenderedField;
+	excerpt?: WordPressRenderedField;
 	content?: WordPressRenderedField;
 	slug?: string;
 	_embedded?: {
 		'wp:featuredmedia'?: WordPressMedia[];
 		'wp:term'?: WordPressTerm[][];
 	};
+}
+
+interface WordPressCategoryResponse {
+	id: number;
+	count?: number;
+	description?: string;
+	name?: string;
+	slug?: string;
+	parent?: number;
 }
 
 export interface WordPressPost {
@@ -38,6 +48,15 @@ export interface WordPressPost {
 	featuredImageAlt: string;
 	categoryLabel: string | null;
 	categorySlug: string | null;
+}
+
+export interface WordPressCategory {
+	id: number;
+	name: string;
+	slug: string;
+	description: string;
+	parent: number | null;
+	count: number;
 }
 
 const HTML_ENTITY_MAP: Record<string, string> = {
@@ -128,6 +147,17 @@ async function fetchWordPress(endpoint: string, query: Record<string, string | n
 	}
 }
 
+function normalizeCategory(category: WordPressCategoryResponse): WordPressCategory {
+	return {
+		id: category.id,
+		name: stripHtml(category.name) || 'Untitled category',
+		slug: category.slug?.trim() || `category-${category.id}`,
+		description: stripHtml(category.description),
+		parent: category.parent && category.parent > 0 ? category.parent : null,
+		count: category.count ?? 0
+	};
+}
+
 export function hasWordPressApiBase() {
 	return Boolean(getWordPressApiBase());
 }
@@ -185,4 +215,13 @@ export async function fetchAllPosts(limit = 100) {
 		per_page: limit
 	});
 	return posts.map(normalizePost);
+}
+
+export async function fetchAllCategories(limit = 100) {
+	const categories = (await fetchWordPress('categories', {
+		per_page: limit,
+		hide_empty: 0
+	})) as WordPressCategoryResponse[];
+
+	return categories.map(normalizeCategory);
 }
