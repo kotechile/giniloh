@@ -232,32 +232,60 @@ a {
   border-radius: 1rem !important;
   overflow: hidden !important;
   border: 1px solid #334155 !important;
-  background-color: #020617 !important; /* slate-950 */
+  background-color: #020617 !important; /* Force deep black/slate */
 }
 
 .prose thead {
-  background-color: rgba(30, 41, 59, 0.8) !important;
+  background-color: #0f172a !important; /* slate-900 */
 }
 
 .prose th {
-  padding: 1rem 1.5rem !important;
+  padding: 1.25rem 1.5rem !important;
   font-family: ui-monospace, monospace !important;
   font-size: 11px !important;
   text-transform: uppercase !important;
   letter-spacing: 0.2em !important;
   color: #22d3ee !important;
-  border-bottom: 1px solid #334155 !important;
+  border-bottom: 2px solid #1e293b !important;
 }
 
 .prose td {
   padding: 1.25rem 1.5rem !important;
-  color: #ffffff !important;
+  color: #ffffff !important; /* Force white text */
   border-bottom: 1px solid rgba(30, 41, 59, 0.5) !important;
-  line-height: 1.625 !important;
+  background-color: transparent !important; /* Prevent white background bleed */
 }
 
 .prose tr:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Fix Key Takeaway / Light Blocks */
+/* We target blocks that have a white/light background from WordPress */
+.prose .wp-block-group,
+.prose .wp-block-columns,
+.prose div[style*="background-color"] {
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 2rem !important;
+  margin: 3rem 0 !important;
+  border-radius: 1.5rem !important;
+}
+
+/* Force high contrast for the light takeaway box */
+.prose div[style*="background-color: #ffffff"],
+.prose div[style*="background-color:#ffffff"],
+.prose .has-white-background-color {
+  background-color: #edf1f8 !important; /* Your requested light color */
+  color: #0f172a !important; /* Deep slate text for readability */
+}
+
+.prose div[style*="background-color"] h1,
+.prose div[style*="background-color"] h2,
+.prose div[style*="background-color"] h3,
+.prose div[style*="background-color"] p,
+.prose div[style*="background-color"] strong {
+  color: #0f172a !important; /* Ensure all text inside light boxes is dark */
 }
 
 .prose img {
@@ -274,6 +302,7 @@ a {
   border-radius: 0 1rem 1rem 0 !important;
   color: #f1f5f9 !important;
 }
+
 
 
 
