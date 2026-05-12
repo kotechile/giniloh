@@ -415,29 +415,31 @@ a {
   background: #eff1f4 !important;
   color: #202938 !important;
   border: 1px solid #e5e7eb !important;
-  border-radius: 16px !important;
-  padding: 20px 24px !important;
+  border-radius: 18px !important;
+  padding: 2rem 2.25rem !important;
   margin: 0 0 24px 0 !important;
   box-shadow: none !important;
 }
 
 .prose .geo-key-takeaways h2,
 .prose [data-geo-injected="key-takeaways"] h2 {
-  margin: 0 0 12px 0 !important;
+  margin: 0 0 1.25rem 0 !important;
   padding-left: 0 !important;
   border-left: 0 !important;
   color: #111827 !important;
-  font-size: 1.5rem !important;
-  line-height: 1.3 !important;
-  font-weight: 700 !important;
-  letter-spacing: normal !important;
+  font-size: clamp(2.3rem, 4vw, 3.3rem) !important;
+  line-height: 1.05 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.035em !important;
 }
 
 .prose .geo-key-takeaways ul,
 .prose [data-geo-injected="key-takeaways"] ul {
   margin: 0 !important;
-  padding-left: 1.5rem !important;
+  padding-left: 1.9rem !important;
   color: #1f2937 !important;
+  list-style: disc !important;
+  list-style-position: outside !important;
 }
 
 .prose .geo-key-takeaways li,
@@ -445,7 +447,20 @@ a {
 .prose .geo-key-takeaways p,
 .prose [data-geo-injected="key-takeaways"] p {
   color: #1f2937 !important;
-  line-height: 1.7 !important;
+  font-size: clamp(1.28rem, 2.3vw, 1.52rem) !important;
+  line-height: 1.72 !important;
+}
+
+.prose .geo-key-takeaways li,
+.prose [data-geo-injected="key-takeaways"] li {
+  margin: 0 0 1rem 0 !important;
+  padding-left: 0.15rem !important;
+}
+
+.prose .geo-key-takeaways li::marker,
+.prose [data-geo-injected="key-takeaways"] li::marker {
+  color: #111827 !important;
+  font-size: 0.95em !important;
 }
 
 .prose img {
@@ -462,4 +477,3 @@ a {
   border-radius: 0 1rem 1rem 0 !important;
   color: #f1f5f9 !important;
 }
-
