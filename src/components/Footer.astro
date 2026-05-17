@@ -43,7 +43,8 @@ const topCategories = await getTopLevelCategories();
 			<div>
 				<p class="font-mono text-xs uppercase tracking-widest text-slate-500">Active Modules</p>
 				<div class="mt-4 grid gap-3 text-sm font-mono text-slate-400">
-					{topCategories.slice(0, 4).map((category) => <a href={`/categories/${category.slug}`} class="transition hover:text-cyan-400">{category.name}</a>)}
+					{topCategories.slice(0, 3).map((category) => <a href={`/categories/${category.slug}`} class="transition hover:text-cyan-400">{category.name}</a>)}
+					<a href="/tools" class="transition hover:text-cyan-400">Tools Hub</a>
 				</div>
 			</div>
 		</div>

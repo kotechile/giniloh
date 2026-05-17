@@ -29,7 +29,7 @@ const accentPresets = [
 	}
 ];
 
-const featuredCategories = categories.slice(0, 4);
+const featuredCategories = categories.slice(0, 3);
 ---
 
 <section class="mt-24">
@@ -37,11 +37,11 @@ const featuredCategories = categories.slice(0, 4);
 		<div>
 			<p class="section-eyebrow">Active Frameworks</p>
 			<h2 class="mt-3 text-3xl font-semibold tracking-tight text-slate-100 sm:text-4xl">
-				The four pillars of the Decision Engine
+				Three pillars plus the Tools Hub
 			</h2>
 		</div>
 		<a href="/categories" class="hidden text-sm font-mono text-cyan-400 transition hover:text-cyan-300 md:inline-flex">
-			[VIEW_ALL_MODULES]
+			[VIEW_PILLARS]
 		</a>
 	</div>
 
@@ -84,5 +84,34 @@ const featuredCategories = categories.slice(0, 4);
 				);
 			})
 		}
+		<a
+			href="/tools"
+			class="group relative flex min-h-48 flex-col justify-between overflow-hidden rounded-[1.5rem] border border-cyan-500/20 bg-[linear-gradient(135deg,rgba(14,165,233,0.16),rgba(15,23,42,0.5)_55%,rgba(16,185,129,0.12))] p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-400/40 hover:shadow-[0_0_40px_rgba(56,189,248,0.18)] backdrop-blur-md"
+		>
+			<div class="absolute inset-0 opacity-[0.04] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PHBhdGggZD0iTTAgMjBoMjBNMjAgMHYyMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=')]"></div>
+
+			<div class="relative z-10 flex items-start justify-between">
+				<div class="rounded-xl bg-cyan-500/10 p-3 text-cyan-300">
+					<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16M7 4v6m10-6v6M6 14h4v4H6v-4Zm8 0h4v4h-4v-4Z" />
+					</svg>
+				</div>
+				<p class="font-mono text-[0.65rem] uppercase tracking-widest text-cyan-300/70">TOOLS</p>
+			</div>
+
+			<div class="relative z-10 mt-8">
+				<h3 class="text-xl font-bold tracking-tight text-white transition-colors group-hover:text-cyan-300">
+					Tools Hub
+				</h3>
+				<p class="mt-2 text-sm text-slate-300 font-mono">
+					&gt; Calculators and playbooks that turn the three WordPress pillars into decisions you can run.
+				</p>
+			</div>
+
+			<div class="relative z-10 mt-6 flex items-center gap-2 text-xs font-mono text-slate-400">
+				<span class="inline-flex h-2 w-2 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></span>
+				Open calculator system
+			</div>
+		</a>
 	</div>
 </section>
