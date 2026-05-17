@@ -1,47 +1,20 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getTopLevelCategories } from '../../lib/categories';
-
-const topCategories = await getTopLevelCategories();
+const destination = '/#pillars';
 ---
 
-<BaseLayout
-	title="Categories | Gini Loh"
-	description="Explore Gini Loh's three editorial pillars, sourced directly from WordPress."
->
-	<link slot="head" rel="canonical" href={new URL('/categories/', Astro.site).toString()} />
-	<section class="pt-32">
-		<p class="section-eyebrow">Category Index</p>
-		<h1 class="mt-4 max-w-4xl text-5xl font-bold tracking-tight text-white sm:text-6xl">
-			Three pillars for better decisions
-		</h1>
-		<p class="mt-6 max-w-3xl text-lg leading-8 text-slate-400 font-mono">
-			> Live top-level WordPress categories, kept flat so the site mirrors the current editorial model.
-		</p>
-	</section>
-
-	<section class="mt-12 grid gap-6">
-		{
-			topCategories.map((category) => (
-				<article class="panel-soft rounded-[2.2rem] border border-slate-800 bg-slate-900/40 p-7 shadow-2xl backdrop-blur-md">
-					<div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
-						<div class="max-w-3xl">
-							<p class="section-eyebrow text-cyan-400">Top-Level Pillar</p>
-							<h2 class="mt-3 text-3xl font-bold tracking-tight text-white">
-								<a href={`/categories/${category.slug}/`} class="transition hover:text-cyan-400">
-									{category.name}
-								</a>
-							</h2>
-							<p class="mt-4 text-base leading-8 text-slate-400">
-								{category.description || 'A core strategic area in the Gini Loh editorial system.'}
-							</p>
-						</div>
-						<a href={`/categories/${category.slug}/`} class="btn-secondary whitespace-nowrap">
-							View category
-						</a>
-					</div>
-				</article>
-			))
-		}
-	</section>
-</BaseLayout>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="refresh" content={`0;url=${destination}`} />
+		<link rel="canonical" href={new URL(destination, Astro.site).toString()} />
+		<title>Redirecting to Gini Loh Pillars</title>
+		<script is:inline>
+			window.location.replace('/#pillars');
+		</script>
+	</head>
+	<body>
+		<a href="/#pillars">Continue to the Gini Loh pillars.</a>
+	</body>
+</html>

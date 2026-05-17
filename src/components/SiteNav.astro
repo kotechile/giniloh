@@ -1,7 +1,6 @@
 ---
 const navLinks = [
 	{ href: '/', label: 'Home' },
-	{ href: '/categories/', label: 'Categories' },
 	{ href: '/tools/', label: 'Tools' },
 	{ href: '/about/', label: 'About' }
 ];
@@ -30,8 +29,7 @@ const pathname = Astro.url.pathname;
 					navLinks.map((link) => {
 						const isActive =
 							pathname === link.href ||
-							(link.href !== '/' && pathname.startsWith(`${link.href}/`)) ||
-							(link.href === '/categories' && pathname.startsWith('/categories'));
+							(link.href !== '/' && pathname.startsWith(`${link.href}/`));
 						return (
 							<a
 								href={link.href}
@@ -88,8 +86,7 @@ const pathname = Astro.url.pathname;
 								navLinks.map((link) => {
 									const isActive =
 										pathname === link.href ||
-										(link.href !== '/' && pathname.startsWith(`${link.href}/`)) ||
-										(link.href === '/categories' && pathname.startsWith('/categories'));
+										(link.href !== '/' && pathname.startsWith(`${link.href}/`));
 									return (
 										<a
 											href={link.href}

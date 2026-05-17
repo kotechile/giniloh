@@ -32,7 +32,7 @@ const accentPresets = [
 const featuredCategories = categories.slice(0, 3);
 ---
 
-<section class="mt-24">
+<section id="pillars" class="mt-24 scroll-mt-32">
 	<div class="flex items-end justify-between gap-6">
 		<div>
 			<p class="section-eyebrow">Active Frameworks</p>
@@ -40,9 +40,6 @@ const featuredCategories = categories.slice(0, 3);
 				Three pillars plus the Tools Hub
 			</h2>
 		</div>
-		<a href="/categories/" class="hidden text-sm font-mono text-cyan-400 transition hover:text-cyan-300 md:inline-flex">
-			[VIEW_PILLARS]
-		</a>
 	</div>
 
 	<div class="mt-8 grid gap-4 sm:grid-cols-2">
@@ -51,8 +48,7 @@ const featuredCategories = categories.slice(0, 3);
 				const preset = accentPresets[index % accentPresets.length];
 				
 				return (
-					<a
-						href={`/categories/${category.slug}/`}
+					<article
 						class="group relative flex min-h-48 flex-col justify-between overflow-hidden rounded-[1.5rem] border border-slate-800 bg-slate-900/40 p-6 transition duration-300 hover:-translate-y-1 hover:border-cyan-500/30 hover:shadow-2xl backdrop-blur-md"
 					>
 						<!-- Technical Background Pattern -->
@@ -80,7 +76,7 @@ const featuredCategories = categories.slice(0, 3);
 							<span class="inline-flex h-2 w-2 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>
 							{category.postCount ?? 0} Linked Posts
 						</div>
-					</a>
+					</article>
 				);
 			})
 		}
