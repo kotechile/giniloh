@@ -110,10 +110,10 @@ function NumberField({
 	return (
 		<label
 			htmlFor={id}
-			className="grid gap-3 rounded-[1.35rem] border border-slate-800/80 bg-slate-950/45 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]"
+			className="grid min-w-0 gap-3 rounded-[1.35rem] border border-slate-800/80 bg-slate-950/45 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]"
 		>
 			<span className="text-sm font-semibold tracking-wide text-slate-100">{label}</span>
-			<div className="relative">
+			<div className="relative min-w-0">
 				{prefix ? (
 					<span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-slate-500">
 						{prefix}
@@ -127,7 +127,7 @@ function NumberField({
 					value={value}
 					onChange={(event) => onChange(Number(event.target.value))}
 					className={[
-						'w-full rounded-[1rem] border border-slate-700/80 bg-slate-950/80 py-3 text-base font-semibold text-white outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20',
+						'w-full min-w-0 rounded-[1rem] border border-slate-700/80 bg-slate-950/80 py-3 text-sm font-semibold tabular-nums text-white outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 sm:text-base',
 						prefix ? 'pl-10' : 'pl-4',
 						suffix ? 'pr-14' : 'pr-4'
 					].join(' ')}
@@ -159,9 +159,11 @@ function MetricCard({ label, value, detail, tone = 'cyan' }: MetricCardProps) {
 	}[tone];
 
 	return (
-		<div className={`rounded-[1.35rem] border bg-slate-950/55 p-4 ${toneClass}`}>
+		<div className={`min-w-0 overflow-hidden rounded-[1.35rem] border bg-slate-950/55 p-4 ${toneClass}`}>
 			<p className="font-mono text-[0.66rem] uppercase tracking-[0.22em] text-slate-500">{label}</p>
-			<p className="mt-3 text-2xl font-semibold tracking-tight">{value}</p>
+			<p className="mt-3 text-[clamp(1.7rem,2.4vw,2.35rem)] leading-none font-semibold tracking-tight tabular-nums">
+				{value}
+			</p>
 			<p className="mt-2 text-sm leading-6 text-slate-400">{detail}</p>
 		</div>
 	);
@@ -205,7 +207,7 @@ export default function RemodelyticsPlatform() {
 	return (
 		<div className="grid gap-6">
 			<div className="overflow-hidden rounded-[1.8rem] border border-cyan-500/20 bg-[linear-gradient(135deg,rgba(0,11,80,0.76),rgba(2,6,23,0.96)_58%,rgba(29,106,229,0.2))]">
-				<div className="grid gap-6 px-6 py-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-7">
+				<div className="grid gap-6 px-6 py-6 xl:grid-cols-[minmax(0,1.15fr)_minmax(18rem,0.85fr)] xl:px-7">
 					<div>
 						<p className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-200/80">
 							Multi-engine platform
@@ -256,7 +258,7 @@ export default function RemodelyticsPlatform() {
 								{breakdown.overImprovementRisk} risk
 							</span>
 						</div>
-						<div className="grid gap-3 sm:grid-cols-3">
+						<div className="grid grid-cols-1 gap-3 sm:grid-cols-2 2xl:grid-cols-3">
 							<MetricCard
 								label="Local cost"
 								value={formatCurrency(breakdown.localProjectCost)}
@@ -279,15 +281,15 @@ export default function RemodelyticsPlatform() {
 				</div>
 			</div>
 
-			<div className="grid gap-5 rounded-[1.8rem] border border-slate-800/90 bg-slate-950/40 p-5 md:grid-cols-2 xl:grid-cols-4">
-				<label className="grid gap-3 rounded-[1.35rem] border border-slate-800/80 bg-slate-950/45 p-4">
+			<div className="grid grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] gap-5 rounded-[1.8rem] border border-slate-800/90 bg-slate-950/40 p-5">
+				<label className="grid min-w-0 gap-3 rounded-[1.35rem] border border-slate-800/80 bg-slate-950/45 p-4">
 					<span className="text-sm font-semibold tracking-wide text-slate-100">Project type</span>
 					<select
 						value={inputs.projectType}
 						onChange={(event) =>
 							updateInput('projectType', event.target.value as RemodelyticsProjectType)
 						}
-						className="rounded-[1rem] border border-slate-700/80 bg-slate-950/80 px-4 py-3 text-base font-semibold text-white outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+						className="min-w-0 rounded-[1rem] border border-slate-700/80 bg-slate-950/80 px-4 py-3 text-sm font-semibold text-white outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 sm:text-base"
 					>
 						{PROJECT_OPTIONS.map((option) => (
 							<option key={option.value} value={option.value}>
@@ -297,14 +299,14 @@ export default function RemodelyticsPlatform() {
 					</select>
 					<span className="text-xs leading-5 text-slate-500">Routes the remodel into the best-fit engine.</span>
 				</label>
-				<label className="grid gap-3 rounded-[1.35rem] border border-slate-800/80 bg-slate-950/45 p-4">
+				<label className="grid min-w-0 gap-3 rounded-[1.35rem] border border-slate-800/80 bg-slate-950/45 p-4">
 					<span className="text-sm font-semibold tracking-wide text-slate-100">Material tier</span>
 					<select
 						value={inputs.materialTier}
 						onChange={(event) =>
 							updateInput('materialTier', event.target.value as RemodelyticsMaterialTier)
 						}
-						className="rounded-[1rem] border border-slate-700/80 bg-slate-950/80 px-4 py-3 text-base font-semibold text-white outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+						className="min-w-0 rounded-[1rem] border border-slate-700/80 bg-slate-950/80 px-4 py-3 text-sm font-semibold text-white outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 sm:text-base"
 					>
 						{MATERIAL_OPTIONS.map((option) => (
 							<option key={option.value} value={option.value}>
@@ -316,14 +318,14 @@ export default function RemodelyticsPlatform() {
 				</label>
 				<label
 					htmlFor={`${fieldId}-zip`}
-					className="grid gap-3 rounded-[1.35rem] border border-slate-800/80 bg-slate-950/45 p-4"
+					className="grid min-w-0 gap-3 rounded-[1.35rem] border border-slate-800/80 bg-slate-950/45 p-4"
 				>
 					<span className="text-sm font-semibold tracking-wide text-slate-100">ZIP code</span>
 					<input
 						id={`${fieldId}-zip`}
 						value={inputs.zipCode}
 						onChange={(event) => updateInput('zipCode', event.target.value)}
-						className="rounded-[1rem] border border-slate-700/80 bg-slate-950/80 px-4 py-3 text-base font-semibold text-white outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+						className="min-w-0 rounded-[1rem] border border-slate-700/80 bg-slate-950/80 px-4 py-3 text-sm font-semibold text-white outline-none transition focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 sm:text-base"
 					/>
 					<span className="text-xs leading-5 text-slate-500">Placeholder for RSMeans, AVM, AMI, and DSIRE lookups.</span>
 				</label>
@@ -338,7 +340,7 @@ export default function RemodelyticsPlatform() {
 				/>
 			</div>
 
-			<div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+			<div className="grid grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] gap-5">
 				<NumberField
 					id={`${fieldId}-baseline-cost`}
 					label="National baseline cost"
@@ -404,7 +406,7 @@ export default function RemodelyticsPlatform() {
 					</div>
 				</div>
 
-				<div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+				<div className="grid grid-cols-[repeat(auto-fit,minmax(13rem,1fr))] gap-4">
 					<MetricCard
 						label="Resale lift"
 						value={formatCurrency(breakdown.immediateAppreciation)}
@@ -493,7 +495,7 @@ export default function RemodelyticsPlatform() {
 				</div>
 			</div>
 
-			<div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+			<div className="grid grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] gap-5">
 				<NumberField
 					id={`${fieldId}-income`}
 					label="Household income"
@@ -544,7 +546,7 @@ export default function RemodelyticsPlatform() {
 						FHA / HomeStyle / HELOC stress
 					</span>
 				</div>
-				<div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+				<div className="grid grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] gap-5">
 					<NumberField
 						id={`${fieldId}-current-value`}
 						label="Current value"
@@ -605,7 +607,7 @@ export default function RemodelyticsPlatform() {
 						30-year lifecycle
 					</span>
 				</div>
-				<div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+				<div className="grid grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] gap-5">
 					<NumberField
 						id={`${fieldId}-rent`}
 						label="Gross monthly rent"

@@ -15,7 +15,7 @@ const { eyebrow, title, description } = Astro.props;
 		<p class="mt-6 text-lg leading-8 text-slate-400">{description}</p>
 	</div>
 
-	<div class="mt-12 grid gap-8 xl:grid-cols-[1.1fr_0.9fr]">
+	<div class="mt-12 grid gap-8 2xl:grid-cols-[minmax(0,1.35fr)_minmax(22rem,0.65fr)]">
 		<div class="panel-soft rounded-[2rem] border border-slate-800/90 bg-slate-900/50 p-6 shadow-[0_22px_70px_rgba(0,0,0,0.55)] backdrop-blur-2xl sm:p-8">
 			<slot name="calculator" />
 		</div>
