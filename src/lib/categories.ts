@@ -38,30 +38,20 @@ async function loadCategories() {
 	}
 
 	const records: CategoryRecord[] = liveCategories
+		.filter((category) => !category.parent)
 		.map((category) => ({
 			id: String(category.id),
 			name: category.name,
 			slug: category.slug,
 			description: category.description,
-			level: category.parent ? 2 : 1,
-			parentCategoryId: category.parent ? String(category.parent) : null,
+			level: 1,
+			parentCategoryId: null,
 			wordpressCategoryId: category.id,
 			wordpressSiteDomain: null,
 			postCount: category.count,
 			children: []
 		}))
 		.filter((category) => category.name && category.slug && category.slug !== 'uncategorized');
-
-	const categoryById = new Map(records.map((category) => [category.id, category]));
-
-	for (const category of records) {
-		if (category.parentCategoryId) {
-			const parent = categoryById.get(category.parentCategoryId);
-			if (parent) {
-				parent.children.push(category);
-			}
-		}
-	}
 
 	return records;
 }
