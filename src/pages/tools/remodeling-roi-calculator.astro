@@ -1,0 +1,96 @@
+---
+import CalculatorShell from '../../components/calculators/CalculatorShell.astro';
+import BasicRemodelingCalculator from '../../components/calculators/react/BasicRemodelingCalculator';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const quickNotes = [
+	{
+		title: 'Built for homeowners first',
+		body:
+			'This version avoids lender and investor jargon. It focuses on cost, recovery, timeline, savings, and how much you will actually enjoy the upgrade.'
+	},
+	{
+		title: 'Fast answer, not a giant model',
+		body:
+			'You can complete the calculator in under a minute and get a direct Worth it / Maybe / Skip recommendation without digging through advanced assumptions.'
+	},
+	{
+		title: 'Best for early filtering',
+		body:
+			'Use it when you want to quickly pressure-test whether a remodel feels directionally smart before you spend time gathering deeper comps, quotes, or financing details.'
+	}
+];
+---
+
+<BaseLayout
+	title="Remodeling ROI Calculator | Gini Loh"
+	description="Get a fast Worth it / Maybe / Skip recommendation for a home upgrade using simple cost, resale, timeline, and savings inputs."
+>
+	<link
+		slot="head"
+		rel="canonical"
+		href={new URL('/tools/remodeling-roi-calculator/', Astro.site).toString()}
+	/>
+
+	<CalculatorShell
+		eyebrow="Home upgrade decisions"
+		title="Remodeling ROI Calculator"
+		description="A fast homeowner-first calculator that gives you a practical remodel recommendation using six simple inputs: cost, resale lift, timeline, enjoyment, and savings."
+	>
+		<div slot="calculator">
+			<BasicRemodelingCalculator client:load />
+		</div>
+
+		<div slot="aside" class="grid gap-6">
+			<article class="overflow-hidden rounded-[1.8rem] border border-cyan-500/20 bg-[linear-gradient(135deg,rgba(8,47,73,0.92),rgba(2,6,23,0.98)_70%,rgba(16,185,129,0.12))] p-6 shadow-[0_0_40px_rgba(34,211,238,0.08)]">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-200/80">Basic tier</p>
+				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white">
+					The quick answer before the big research project
+				</h2>
+				<p class="mt-4 text-sm leading-7 text-slate-300">
+					This tool is designed for homeowners who want a fast directional answer. It keeps the math
+					honest, but it does not ask you for property-data details most people do not have handy.
+				</p>
+				<div class="mt-6 rounded-[1.3rem] border border-white/10 bg-white/5 p-4">
+					<p class="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">
+						Best use case
+					</p>
+					<p class="mt-2 text-sm leading-7 text-slate-200">
+						Run this first when you are comparing whether a project feels sensible at all. Move to
+						Remodelytics Premium when you want valuation context, local cost logic, or underwriting detail.
+					</p>
+				</div>
+			</article>
+
+			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-emerald-300/80">How it thinks</p>
+				<div class="mt-5 grid gap-4">
+					{quickNotes.map((item) => (
+						<div class="rounded-[1.2rem] border border-slate-800/80 bg-slate-950/55 p-4">
+							<h2 class="text-base font-semibold text-white">{item.title}</h2>
+							<p class="mt-2 text-sm leading-7 text-slate-400">{item.body}</p>
+						</div>
+					))}
+				</div>
+			</article>
+
+			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">Logic</p>
+				<div class="mt-4 rounded-[1.3rem] border border-slate-800/90 bg-slate-950/60 p-5 font-mono text-sm leading-7 text-slate-200">
+					<p>total value during stay = resale lift + savings + lifestyle credit</p>
+					<p class="mt-2">recommendation blends recovery, timeline, savings, and enjoyment</p>
+					<p class="mt-2">output = Worth it / Maybe / Skip</p>
+				</div>
+			</article>
+
+			<article class="rounded-[1.8rem] border border-amber-400/15 bg-[linear-gradient(180deg,rgba(120,53,15,0.18),rgba(2,6,23,0.96))] p-6 shadow-[0_0_40px_rgba(245,158,11,0.08)]">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-amber-200/80">Planning note</p>
+				<h2 class="mt-3 text-xl font-semibold text-white">Simple on purpose</h2>
+				<p class="mt-3 text-sm leading-7 text-slate-300">
+					This version does not use live external data. It is meant to help you decide whether a remodel
+					deserves more serious investigation, not replace a detailed underwriting or appraisal workflow.
+				</p>
+			</article>
+		</div>
+	</CalculatorShell>
+</BaseLayout>
