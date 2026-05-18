@@ -5,19 +5,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const quickNotes = [
 	{
-		title: 'Built for homeowners first',
+		title: 'How to read the result',
 		body:
-			'This version avoids lender and investor jargon. It focuses on cost, recovery, timeline, savings, and how much you will actually enjoy the upgrade.'
+			'Use Worth it when the project looks sensible across value, timeline, and quality of life. Use Maybe when the answer depends heavily on your assumptions. Use Skip when the cost is doing too much work for the likely payoff.'
 	},
 	{
-		title: 'Fast answer, not a giant model',
+		title: 'What Basic leaves out',
 		body:
-			'You can complete the calculator in under a minute and get a direct Worth it / Maybe / Skip recommendation without digging through advanced assumptions.'
-	},
-	{
-		title: 'Best for early filtering',
-		body:
-			'Use it when you want to quickly pressure-test whether a remodel feels directionally smart before you spend time gathering deeper comps, quotes, or financing details.'
+			'This version does not use live comps, local contractor pricing, incentive databases, or loan rules. It is a fast first filter, not a professional underwriting model.'
 	}
 ];
 ---
@@ -63,7 +58,7 @@ const quickNotes = [
 			</article>
 
 			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
-				<p class="font-mono text-xs uppercase tracking-[0.28em] text-emerald-300/80">How it thinks</p>
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-emerald-300/80">Plain-English guide</p>
 				<div class="mt-5 grid gap-4">
 					{quickNotes.map((item) => (
 						<div class="rounded-[1.2rem] border border-slate-800/80 bg-slate-950/55 p-4">
@@ -75,21 +70,12 @@ const quickNotes = [
 			</article>
 
 			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
-				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">Logic</p>
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">Behind the answer</p>
 				<div class="mt-4 rounded-[1.3rem] border border-slate-800/90 bg-slate-950/60 p-5 font-mono text-sm leading-7 text-slate-200">
-					<p>total value during stay = resale lift + savings + lifestyle credit</p>
-					<p class="mt-2">recommendation blends recovery, timeline, savings, and enjoyment</p>
-					<p class="mt-2">output = Worth it / Maybe / Skip</p>
+					<p>value during stay = resale lift + savings + enjoyment credit</p>
+					<p class="mt-2">recommendation blends recovery, timeline, savings, and personal fit</p>
+					<p class="mt-2">answer = Worth it / Maybe / Skip</p>
 				</div>
-			</article>
-
-			<article class="rounded-[1.8rem] border border-amber-400/15 bg-[linear-gradient(180deg,rgba(120,53,15,0.18),rgba(2,6,23,0.96))] p-6 shadow-[0_0_40px_rgba(245,158,11,0.08)]">
-				<p class="font-mono text-xs uppercase tracking-[0.28em] text-amber-200/80">Planning note</p>
-				<h2 class="mt-3 text-xl font-semibold text-white">Simple on purpose</h2>
-				<p class="mt-3 text-sm leading-7 text-slate-300">
-					This version does not use live external data. It is meant to help you decide whether a remodel
-					deserves more serious investigation, not replace a detailed underwriting or appraisal workflow.
-				</p>
 			</article>
 		</div>
 	</CalculatorShell>

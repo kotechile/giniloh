@@ -113,6 +113,8 @@ export default function BasicRemodelingCalculator() {
 	const [inputs, setInputs] = useState(INITIAL_INPUTS);
 	const fieldId = useId();
 	const breakdown = calculateBasicRemodeling(inputs);
+	const selectedEnjoyment =
+		ENJOYMENT_OPTIONS.find((option) => option.value === inputs.enjoymentLevel) ?? ENJOYMENT_OPTIONS[2];
 
 	const updateInput = <K extends keyof BasicRemodelingInputs>(
 		key: K,
@@ -124,7 +126,7 @@ export default function BasicRemodelingCalculator() {
 	return (
 		<div className="grid gap-6">
 			<div className="overflow-hidden rounded-[1.8rem] border border-cyan-500/20 bg-[linear-gradient(135deg,rgba(8,47,73,0.9),rgba(2,6,23,0.96)_65%,rgba(16,185,129,0.16))]">
-				<div className="grid gap-6 px-6 py-6 xl:grid-cols-[minmax(0,1.05fr)_minmax(18rem,0.95fr)] xl:px-7">
+				<div className="grid gap-6 px-6 py-6 2xl:grid-cols-[minmax(0,1.05fr)_minmax(18rem,0.95fr)] 2xl:px-7">
 					<div>
 						<p className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-200/75">
 							Quick homeowner decision
@@ -182,7 +184,7 @@ export default function BasicRemodelingCalculator() {
 				</div>
 			</div>
 
-			<div className="grid gap-5 xl:grid-cols-[minmax(0,1.05fr)_minmax(19rem,0.95fr)]">
+			<div className="grid gap-5">
 				<div className="grid gap-5">
 					<div className="rounded-[1.8rem] border border-slate-800/90 bg-slate-950/40 p-5">
 						<div className="flex flex-wrap items-end justify-between gap-4">
@@ -293,11 +295,11 @@ export default function BasicRemodelingCalculator() {
 											Enjoyment value
 										</span>
 									</div>
-									<span className="rounded-full border border-cyan-500/15 bg-cyan-500/10 px-3 py-1 font-mono text-[0.64rem] uppercase tracking-[0.22em] text-cyan-200/80">
-										Personal fit
-									</span>
-								</div>
-								<div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
+										<span className="rounded-full border border-cyan-500/15 bg-cyan-500/10 px-3 py-1 font-mono text-[0.64rem] uppercase tracking-[0.22em] text-cyan-200/80">
+											Personal fit
+										</span>
+									</div>
+								<div className="grid grid-cols-2 gap-3 lg:grid-cols-5">
 									{ENJOYMENT_OPTIONS.map((option) => {
 										const active = inputs.enjoymentLevel === option.value;
 
@@ -314,10 +316,18 @@ export default function BasicRemodelingCalculator() {
 												].join(' ')}
 											>
 												<p className="text-sm font-semibold text-white">{option.shortLabel}</p>
-												<p className="mt-2 text-xs leading-5 text-slate-400">{option.description}</p>
 											</button>
 										);
 									})}
+								</div>
+								<div className="rounded-[1.1rem] border border-slate-800 bg-slate-950/55 p-4">
+									<p className="font-mono text-[0.66rem] uppercase tracking-[0.22em] text-slate-500">
+										Selected enjoyment level
+									</p>
+									<p className="mt-2 text-base font-semibold text-white">{selectedEnjoyment.label}</p>
+									<p className="mt-2 text-sm leading-6 text-slate-400">
+										{selectedEnjoyment.description}
+									</p>
 								</div>
 							</div>
 						</div>
@@ -329,7 +339,7 @@ export default function BasicRemodelingCalculator() {
 						<p className="font-mono text-xs uppercase tracking-[0.28em] text-cyan-200/80">
 							Quick read
 						</p>
-						<div className="mt-5 grid gap-4">
+						<div className="mt-5 grid gap-4 xl:grid-cols-3">
 							<div className="rounded-[1.4rem] border border-slate-800 bg-slate-950/55 p-4">
 								<p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">
 									Resale recovery
@@ -368,7 +378,7 @@ export default function BasicRemodelingCalculator() {
 
 					<div className="rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
 						<p className="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">Decision notes</p>
-						<div className="mt-5 grid gap-4">
+						<div className="mt-5 grid gap-4 xl:grid-cols-3">
 							{breakdown.decisionNotes.map((note) => (
 								<div key={note} className="rounded-[1.2rem] border border-slate-800/80 bg-slate-950/55 p-4">
 									<p className="text-sm leading-7 text-slate-300">{note}</p>
