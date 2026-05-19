@@ -10,30 +10,6 @@ export const calculatorTools = [
 		utility: 'Calculate renter exit costs',
 		category: 'FinanceApplication',
 		keywords: ['lease break calculator', 'early lease termination', 'rent calculator']
-	},
-	{
-		title: 'Remodeling ROI Calculator',
-		slug: 'remodeling-roi',
-		href: '/calculators/remodeling-roi/',
-		status: 'Live',
-		accent: 'cyan',
-		description:
-			'Pressure-test a home upgrade with project cost, resale lift, stay horizon, enjoyment value, and monthly savings.',
-		utility: 'Decide if a project is worth it',
-		category: 'FinanceApplication',
-		keywords: ['remodeling ROI calculator', 'home improvement ROI', 'renovation calculator']
-	},
-	{
-		title: 'Remodelytics',
-		slug: 'remodelytics',
-		href: '/calculators/remodelytics/',
-		status: 'Live',
-		accent: 'blue',
-		description:
-			'Model remodel ROI, ARV, energy incentives, ADU income, leverage, and over-improvement risk in one platform.',
-		utility: 'Run advanced remodel math',
-		category: 'BusinessApplication',
-		keywords: ['Remodelytics', 'home upgrade ROI calculator', 'ARV calculator', 'renovation underwriting']
 	}
 ] as const;
 
