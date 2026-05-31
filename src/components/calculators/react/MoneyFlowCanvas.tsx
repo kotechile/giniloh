@@ -76,6 +76,26 @@ const NODE_TOOLTIPS: Record<string, { title: string; desc: string; numbers: stri
 	}
 };
 
+const getBalanceSliderConfig = (nodeId: string) => {
+	switch (nodeId) {
+		case 'checking':
+			return { max: 100000, step: 500 };
+		case 'debt':
+		case 'hsa':
+			return { max: 100000, step: 500 };
+		case 'hysa':
+		case 'ira':
+			return { max: 500000, step: 1000 };
+		case 'match401k':
+		case 'max401k':
+			return { max: 2000000, step: 5000 };
+		case 'brokerage':
+			return { max: 5000000, step: 10000 };
+		default:
+			return { max: 100000, step: 500 };
+	}
+};
+
 export default function MoneyFlowCanvas({
 	nodes,
 	edges,
@@ -266,8 +286,8 @@ export default function MoneyFlowCanvas({
 							<input
 								type="range"
 								min="0"
-								max="50000"
-								step="250"
+								max={getBalanceSliderConfig(selectedNode.id).max}
+								step={getBalanceSliderConfig(selectedNode.id).step}
 								value={selectedNode.balance}
 								onChange={(e) => handleSliderChange('balance', parseFloat(e.target.value))}
 								className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-slate-800 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-slate-800 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
