@@ -33,6 +33,49 @@ const ACCENT_COLORS: Record<string, { border: string; glow: string; text: string
 	brokerage: { border: 'border-violet-500/30', glow: 'shadow-[0_0_20px_rgba(139,92,246,0.15)]', text: 'text-violet-400', bg: 'bg-violet-500/10' }
 };
 
+const NODE_TOOLTIPS: Record<string, { title: string; desc: string; numbers: string }> = {
+	checking: {
+		title: 'Primary Checking',
+		desc: 'The central clearing hub for cash flow. Daily income is deposited here first.',
+		numbers: 'Large number: current balance. C/F: Ceiling sweep threshold (surplus routes to savings/investing) and Floor safety threshold (deficit pulls from HYSA).'
+	},
+	hysa: {
+		title: 'HYSA (Emergency Fund)',
+		desc: 'High-Yield Savings Account for liquid emergency reserves.',
+		numbers: 'Large number: accumulated balance (earns yield monthly at 4.5% APY). Sweeps fill this up to its target ceiling (default $15,000).'
+	},
+	match401k: {
+		title: 'Employer 401k Match',
+		desc: 'Workplace 401(k) contributions up to the employer matching cap (100% risk-free return).',
+		numbers: 'Large number: accumulated balance. Automated sweeps cap out at the annual limit (default $6,000 employer matching limit).'
+	},
+	debt: {
+		title: 'High-Interest Debt',
+		desc: 'Credit cards or other high-interest liabilities. Target of aggressive pay-downs.',
+		numbers: 'Large number: outstanding debt balance. Interest charges accrue monthly at 18% APY, increasing the debt unless paid.'
+	},
+	hsa: {
+		title: 'Pre-tax HSA',
+		desc: 'Health Savings Account. Double tax-sheltered: tax-free contributions, growth, and medical withdrawals.',
+		numbers: 'Large number: accumulated balance. Subject to annual contribution limit (default $4,150).'
+	},
+	ira: {
+		title: 'Roth IRA',
+		desc: 'Individual Retirement Account with post-tax contributions and 100% tax-free growth and withdrawals.',
+		numbers: 'Large number: accumulated balance. Subject to annual contribution limit (default $7,000).'
+	},
+	max401k: {
+		title: 'Workplace 401k Max',
+		desc: 'Workplace 401(k) contributions beyond the matching limit to maximize tax-deferred savings.',
+		numbers: 'Large number: accumulated balance. Subject to annual contribution limit (default $23,000).'
+	},
+	brokerage: {
+		title: 'Taxable Brokerage',
+		desc: 'Standard taxable investing account for broad-market index funds. The final overflow bucket.',
+		numbers: 'Large number: accumulated investment balance. No annual limits.'
+	}
+};
+
 export default function MoneyFlowCanvas({
 	nodes,
 	edges,
@@ -138,6 +181,8 @@ export default function MoneyFlowCanvas({
 
 						const colors = ACCENT_COLORS[node.id] || ACCENT_COLORS.checking;
 						const isSelected = selectedNodeId === node.id;
+						const tooltip = NODE_TOOLTIPS[node.id];
+						const isTopRow = node.id === 'hysa' || node.id === 'hsa';
 
 						return (
 							<button
@@ -145,12 +190,29 @@ export default function MoneyFlowCanvas({
 								onClick={() => setSelectedNodeId(node.id)}
 								style={{ left: `${coords.x}px`, top: `${coords.y}px` }}
 								className={[
-									'absolute w-[240px] h-[80px] text-left p-4 rounded-2xl border bg-slate-900/60 backdrop-blur-md transition flex flex-col justify-between hover:scale-103 cursor-pointer z-10',
+									'absolute w-[240px] h-[80px] text-left p-4 rounded-2xl border bg-slate-900/60 backdrop-blur-md transition flex flex-col justify-between hover:scale-103 cursor-pointer z-10 group',
 									isSelected
 										? 'border-cyan-400 bg-slate-800/80 shadow-[0_0_25px_rgba(6,182,212,0.25)]'
 										: `${colors.border} ${colors.glow} hover:border-slate-600`
 								].join(' ')}
 							>
+								{/* Tooltip Hover Overlay */}
+								{tooltip && (
+									<div className={[
+										'absolute w-72 p-4 rounded-2xl border border-slate-800 bg-slate-950/95 shadow-2xl backdrop-blur-lg opacity-0 pointer-events-none group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-200 z-50 normal-case whitespace-normal leading-relaxed text-[11px] text-slate-300 font-normal',
+										isTopRow ? 'top-full mt-3 left-1/2 -translate-x-1/2' : 'bottom-full mb-3 left-1/2 -translate-x-1/2'
+									].join(' ')}>
+										<div className="flex items-center gap-1.5 pb-2 mb-2 border-b border-slate-850">
+											<span className={`h-1.5 w-1.5 rounded-full ${colors.bg} ${colors.text} shadow-[0_0_8px_currentColor]`}></span>
+											<span className="font-bold text-white text-xs">{tooltip.title}</span>
+										</div>
+										<div className="space-y-2">
+											<p><strong className="text-slate-200">Concept:</strong> {tooltip.desc}</p>
+											<p><strong className="text-slate-200">Values:</strong> {tooltip.numbers}</p>
+										</div>
+									</div>
+								)}
+
 								<div className="flex items-center justify-between w-full">
 									<span className="font-bold text-white text-xs tracking-tight">{node.name}</span>
 									<span className={`text-[9px] uppercase tracking-widest px-2 py-0.5 rounded font-mono font-semibold ${colors.bg} ${colors.text}`}>
