@@ -73,7 +73,7 @@ const HTML_ENTITY_MAP: Record<string, string> = {
 
 function getWordPressApiBase() {
 	const baseUrl =
-		import.meta.env.PUBLIC_WORDPRESS_API_BASE ?? import.meta.env.WORDPRESS_API_BASE ?? '';
+		import.meta.env.PUBLIC_WORDPRESS_API_BASE ?? import.meta.env.WORDPRESS_API_BASE ?? 'https://cms.giniloh.com';
 	return baseUrl.replace(/\/$/, '');
 }
 
