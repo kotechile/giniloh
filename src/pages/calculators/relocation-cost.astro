@@ -1,0 +1,58 @@
+---
+import CalculatorShell from '../../components/calculators/CalculatorShell.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+
+const calculator = getCalculatorBySlug('relocation-cost');
+const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+---
+
+<BaseLayout
+	title="Career Relocation Cost & Payback Calculator | Gini Loh"
+	description="Find out how many months of a new salary bump it takes to break even on moving costs, lease breaks, and new deposits."
+>
+	<link slot="head" rel="canonical" href={new URL('/calculators/relocation-cost/', Astro.site).toString()} />
+	{schema ? <JsonLd slot="head" data={schema} /> : null}
+
+	<CalculatorShell
+		eyebrow="Relocation Calculator"
+		title="Career Relocation Cost &amp; Payback Calculator"
+		description="Model moving costs, deposit offsets, and lease break fees against a prospective job bump to find your precise break-even period."
+	>
+		<div slot="calculator" class="rounded-[2rem] border border-blue-500/20 bg-slate-900/60 p-8 shadow-2xl backdrop-blur-md">
+			<div class="flex flex-col items-center justify-center py-12 text-center">
+				<div class="h-16 w-16 rounded-full bg-blue-500/10 border border-blue-500/30 flex items-center justify-center mb-6">
+					<svg class="w-8 h-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+					</svg>
+				</div>
+				<h2 class="text-2xl font-bold text-white tracking-tight">Interactive Module Under Development</h2>
+				<p class="mt-3 text-slate-400 max-w-md text-sm leading-6">
+					The relocation break-even modeler and tax adjustment tool is scheduled for deployment in Phase 4.
+				</p>
+				
+				<div class="mt-8 p-6 rounded-xl border border-slate-800 bg-slate-950/50 w-full max-w-sm text-left">
+					<p class="font-mono text-xs uppercase tracking-widest text-slate-500">Upcoming Features</p>
+					<ul class="mt-3 space-y-2 text-xs font-mono text-slate-400">
+						<li>• Full moving expense checklist (packers, transport, setup)</li>
+						<li>• Lease break penalty integration</li>
+						<li>• Net-of-tax salary increase break-even amortization</li>
+					</ul>
+				</div>
+				
+				<a href="/calculators/" class="mt-8 btn-primary">Back to Calculator Hub</a>
+			</div>
+		</div>
+
+		<div slot="aside" class="grid gap-6">
+			<article class="overflow-hidden rounded-[1.8rem] border border-blue-500/20 bg-[linear-gradient(135deg,rgba(15,23,42,0.92),rgba(2,6,23,0.98)_70%,rgba(59,130,246,0.12))] p-6 shadow-[0_0_40px_rgba(59,130,246,0.08)]">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-blue-200/80">Amortization note</p>
+				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white">Relocation Payback</h2>
+				<p class="mt-4 text-sm leading-7 text-slate-300">
+					A $20,000 raise is exciting, but if relocating costs $10,000 out of pocket (including double-rent or lease breaks), it will take you over half a year of post-tax earning just to break even. Calculating this helps you negotiate better sign-on bonuses.
+				</p>
+			</article>
+		</div>
+	</CalculatorShell>
+</BaseLayout>

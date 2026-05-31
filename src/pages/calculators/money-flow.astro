@@ -1,0 +1,58 @@
+---
+import CalculatorShell from '../../components/calculators/CalculatorShell.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+
+const calculator = getCalculatorBySlug('money-flow');
+const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+---
+
+<BaseLayout
+	title="Frictionless Money Flow Simulator | Gini Loh"
+	description="Visualize automated account routing: from checking, through retirement matches, HSAs, and index fund allocation."
+>
+	<link slot="head" rel="canonical" href={new URL('/calculators/money-flow/', Astro.site).toString()} />
+	{schema ? <JsonLd slot="head" data={schema} /> : null}
+
+	<CalculatorShell
+		eyebrow="Automation Simulator"
+		title="Frictionless Money Flow Simulator"
+		description="Map and configure automated money pipelines to route savings, retirement matching, tax-sheltered accounts, and taxable indexing without manual budgeting."
+	>
+		<div slot="calculator" class="rounded-[2rem] border border-violet-500/20 bg-slate-900/60 p-8 shadow-2xl backdrop-blur-md">
+			<div class="flex flex-col items-center justify-center py-12 text-center">
+				<div class="h-16 w-16 rounded-full bg-violet-500/10 border border-violet-500/30 flex items-center justify-center mb-6">
+					<svg class="w-8 h-8 text-violet-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+					</svg>
+				</div>
+				<h2 class="text-2xl font-bold text-white tracking-tight">Interactive Module Under Development</h2>
+				<p class="mt-3 text-slate-400 max-w-md text-sm leading-6">
+					The system flow generator and configuration planner is scheduled for deployment in Phase 3.
+				</p>
+				
+				<div class="mt-8 p-6 rounded-xl border border-slate-800 bg-slate-950/50 w-full max-w-sm text-left">
+					<p class="font-mono text-xs uppercase tracking-widest text-slate-500">Upcoming Features</p>
+					<ul class="mt-3 space-y-2 text-xs font-mono text-slate-400">
+						<li>• Drag-and-drop flowchart builder for account automation</li>
+						<li>• Automatic percentage-based tax withholding calculations</li>
+						<li>• Real-time savings and investment velocity metrics</li>
+					</ul>
+				</div>
+				
+				<a href="/calculators/" class="mt-8 btn-primary">Back to Calculator Hub</a>
+			</div>
+		</div>
+
+		<div slot="aside" class="grid gap-6">
+			<article class="overflow-hidden rounded-[1.8rem] border border-violet-500/20 bg-[linear-gradient(135deg,rgba(46,16,101,0.92),rgba(2,6,23,0.98)_70%,rgba(139,92,246,0.12))] p-6 shadow-[0_0_40px_rgba(139,92,246,0.08)]">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-violet-200/80">Loh-Friction Philosophy</p>
+				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white">Never budget manually again</h2>
+				<p class="mt-4 text-sm leading-7 text-slate-300">
+					Budgeting apps focus on looking backward at what you spent. Automation engines look forward by routing cash at the moment of deposit, eliminating friction and making investment compounding automatic.
+				</p>
+			</article>
+		</div>
+	</CalculatorShell>
+</BaseLayout>

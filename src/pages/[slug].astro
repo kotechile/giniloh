@@ -21,6 +21,38 @@ const formattedDate = post.date ? new Date(post.date).toLocaleDateString('en-US'
   month: 'long',
   day: 'numeric'
 }) : '';
+
+// Determine metrics based on category slug
+const categorySlug = post.categorySlug || '';
+let estRoi = 'High';
+let estRoiWidth = '80%';
+let implementationEffort = 'Medium';
+let implementationWidth = '50%';
+let strategicValue = 'High';
+let strategicWidth = '85%';
+
+if (categorySlug === 'buying-decisions') {
+  estRoi = 'High';
+  estRoiWidth = '85%';
+  implementationEffort = 'Medium';
+  implementationWidth = '55%';
+  strategicValue = 'High';
+  strategicWidth = '80%';
+} else if (categorySlug === 'decision-frameworks') {
+  estRoi = 'Max';
+  estRoiWidth = '95%';
+  implementationEffort = 'High';
+  implementationWidth = '75%';
+  strategicValue = 'Max';
+  strategicWidth = '95%';
+} else if (categorySlug === 'money-decisions') {
+  estRoi = 'Max';
+  estRoiWidth = '90%';
+  implementationEffort = 'Low';
+  implementationWidth = '30%';
+  strategicValue = 'Max';
+  strategicWidth = '90%';
+}
 ---
 
 <BaseLayout 
@@ -101,38 +133,38 @@ const formattedDate = post.date ? new Date(post.date).toLocaleDateString('en-US'
               <div>
                 <div class="flex justify-between text-[11px] font-mono text-slate-400 mb-3 tracking-wider">
                   <span>EST_ROI</span>
-                  <span class="text-emerald-400">High</span>
+                  <span class="text-emerald-400">{estRoi}</span>
                 </div>
                 <div class="h-1.5 bg-slate-800/50 rounded-full overflow-hidden">
-                  <div class="h-full bg-gradient-to-r from-emerald-600 to-emerald-400 w-[85%]"></div>
+                  <div class="h-full bg-gradient-to-r from-emerald-600 to-emerald-400" style={`width: ${estRoiWidth}`}></div>
                 </div>
               </div>
 
               <div>
                 <div class="flex justify-between text-[11px] font-mono text-slate-400 mb-3 tracking-wider">
                   <span>IMPLEMENTATION_EFFORT</span>
-                  <span class="text-cyan-400">Medium</span>
+                  <span class="text-cyan-400">{implementationEffort}</span>
                 </div>
                 <div class="h-1.5 bg-slate-800/50 rounded-full overflow-hidden">
-                  <div class="h-full bg-gradient-to-r from-cyan-600 to-cyan-400 w-[45%]"></div>
+                  <div class="h-full bg-gradient-to-r from-cyan-600 to-cyan-400" style={`width: ${implementationWidth}`}></div>
                 </div>
               </div>
 
               <div>
                 <div class="flex justify-between text-[11px] font-mono text-slate-400 mb-3 tracking-wider">
                   <span>STRATEGIC_VALUE</span>
-                  <span class="text-violet-400">Max</span>
+                  <span class="text-violet-400">{strategicValue}</span>
                 </div>
                 <div class="h-1.5 bg-slate-800/50 rounded-full overflow-hidden">
-                  <div class="h-full bg-gradient-to-r from-violet-600 to-violet-400 w-[95%]"></div>
+                  <div class="h-full bg-gradient-to-r from-violet-600 to-violet-400" style={`width: ${strategicWidth}`}></div>
                 </div>
               </div>
             </div>
 
             <div class="mt-10 pt-8 border-t border-slate-800/50">
-              <button class="w-full py-4 px-6 rounded-2xl bg-white text-slate-950 font-bold text-sm hover:bg-cyan-400 transition-all active:scale-95 shadow-lg shadow-white/5">
+              <a href="/calculators/" class="block w-full py-4 px-6 rounded-2xl bg-white text-slate-950 font-bold text-sm text-center hover:bg-cyan-400 transition-all active:scale-95 shadow-lg shadow-white/5">
                 Deploy Framework
-              </button>
+              </a>
             </div>
           </div>
 

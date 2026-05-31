@@ -1,20 +1,58 @@
 ---
-const destination = '/#pillars';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTopLevelCategories } from '../../lib/categories';
+
+const categories = await getTopLevelCategories();
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta http-equiv="refresh" content={`0;url=${destination}`} />
-		<link rel="canonical" href={new URL(destination, Astro.site).toString()} />
-		<title>Redirecting to Gini Loh Pillars</title>
-		<script is:inline>
-			window.location.replace('/#pillars');
-		</script>
-	</head>
-	<body>
-		<a href="/#pillars">Continue to the Gini Loh pillars.</a>
-	</body>
-</html>
+<BaseLayout
+	title="Categories | Gini Loh"
+	description="Browse editorial pillars for high-stakes decisions, career growth strategy, and automated portfolio systems."
+>
+	<link slot="head" rel="canonical" href={new URL('/categories/', Astro.site).toString()} />
+
+	<div class="relative py-12">
+		<div class="absolute inset-x-0 top-0 -z-10 h-96 bg-[radial-gradient(circle_at_top,rgba(0,112,243,0.1),transparent_60%)]"></div>
+		
+		<div class="mx-auto max-w-3xl text-center">
+			<p class="section-eyebrow">Decision Pillars</p>
+			<h1 class="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+				Explore Our Frameworks
+			</h1>
+			<p class="mt-4 text-lg text-slate-400">
+				Deep-dive articles and practical guides organized by financial and career decision areas.
+			</p>
+		</div>
+
+		<div class="mx-auto mt-16 max-w-5xl grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+			{categories.map((category) => (
+				<a
+					href={`/categories/${category.slug}/`}
+					class="group relative flex flex-col justify-between overflow-hidden rounded-[1.8rem] border border-slate-800 bg-slate-900/40 p-8 shadow-2xl backdrop-blur-md transition duration-300 hover:scale-102 hover:border-cyan-500/50 hover:shadow-[0_0_40px_rgba(56,189,248,0.2)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-400"
+				>
+					<div>
+						<div class="h-12 w-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition duration-300">
+							<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2" />
+							</svg>
+						</div>
+						<h2 class="mt-6 text-2xl font-bold text-white tracking-tight group-hover:text-cyan-300 transition">
+							{category.name}
+						</h2>
+						<p class="mt-4 text-sm leading-6 text-slate-400">
+							{category.description || 'Guides, templates, and analytics to support decision-making in this area.'}
+						</p>
+					</div>
+					<div class="mt-8 flex items-center justify-between">
+						<span class="font-mono text-xs uppercase tracking-widest text-slate-500 group-hover:text-cyan-400 transition">
+							{category.postCount !== null ? `${category.postCount} Articles` : 'Guides'}
+						</span>
+						<span class="text-sm font-semibold text-cyan-400 group-hover:text-cyan-300 flex items-center gap-1">
+							Open Pillar <span aria-hidden="true" class="transition group-hover:translate-x-1 inline-block">-></span>
+						</span>
+					</div>
+				</a>
+			))}
+		</div>
+	</div>
+</BaseLayout>
