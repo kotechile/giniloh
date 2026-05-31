@@ -59,6 +59,7 @@ export default function MoneyFlowCanvas({
 	};
 
 	const handleSliderChange = (field: 'balance' | 'ceiling' | 'floor', value: number) => {
+		console.log('Slider change triggered:', field, value);
 		if (selectedNode) {
 			onNodeUpdate({
 				...selectedNode,

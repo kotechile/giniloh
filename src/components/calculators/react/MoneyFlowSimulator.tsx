@@ -66,10 +66,15 @@ export default function MoneyFlowSimulator() {
 
 	// Update node settings via slider
 	const handleNodeUpdate = (updatedNode: AccountNode) => {
-		setState((current) => ({
-			...current,
-			nodes: current.nodes.map((n) => (n.id === updatedNode.id ? updatedNode : n))
-		}));
+		console.log('handleNodeUpdate called with:', updatedNode);
+		setState((current) => {
+			const updated = {
+				...current,
+				nodes: current.nodes.map((n) => (n.id === updatedNode.id ? updatedNode : n))
+			};
+			console.log('New state nodes:', updated.nodes);
+			return updated;
+		});
 	};
 
 	// Process terminal input
