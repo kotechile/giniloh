@@ -28,14 +28,34 @@ const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.
 					Map and configure automated money pipelines to route savings, retirement matching, tax-sheltered accounts, and taxable indexing without manual budgeting.
 				</p>
 			</div>
-			
-			<article class="overflow-hidden rounded-[1.8rem] border border-violet-500/20 bg-[linear-gradient(135deg,rgba(46,16,101,0.92),rgba(2,6,23,0.98)_70%,rgba(139,92,246,0.12))] p-6 shadow-[0_0_40px_rgba(139,92,246,0.08)]">
-				<p class="font-mono text-xs uppercase tracking-[0.28em] text-violet-200/80">Loh-Friction Philosophy</p>
-				<h2 class="mt-3 text-xl font-semibold tracking-tight text-white">Never budget manually again</h2>
-				<p class="mt-3 text-sm leading-6 text-slate-300">
-					Budgeting apps focus on looking backward. Automation engines look forward by routing cash at the moment of deposit, eliminating friction and making investment compounding automatic.
-				</p>
-			</article>
+			<div class="grid gap-6">
+				<article class="overflow-hidden rounded-[1.8rem] border border-violet-500/20 bg-[linear-gradient(135deg,rgba(46,16,101,0.92),rgba(2,6,23,0.98)_70%,rgba(139,92,246,0.12))] p-6 shadow-[0_0_40px_rgba(139,92,246,0.08)]">
+					<p class="font-mono text-xs uppercase tracking-[0.28em] text-violet-200/80">Loh-Friction Philosophy</p>
+					<h2 class="mt-3 text-xl font-semibold tracking-tight text-white">Never budget manually again</h2>
+					<p class="mt-3 text-sm leading-6 text-slate-300">
+						Budgeting apps focus on looking backward. Automation engines look forward by routing cash at the moment of deposit, eliminating friction and making investment compounding automatic.
+					</p>
+				</article>
+
+				<article class="overflow-hidden rounded-[1.8rem] border border-cyan-500/20 bg-[linear-gradient(135deg,rgba(8,47,73,0.92),rgba(2,6,23,0.98)_70%,rgba(34,211,238,0.12))] p-6 shadow-[0_0_40px_rgba(34,211,238,0.08)]">
+					<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/80">User Manual</p>
+					<h2 class="mt-3 text-xl font-semibold tracking-tight text-white">How to run the simulator</h2>
+					<ul class="mt-3 space-y-2.5 text-sm leading-6 text-slate-300">
+						<li class="flex items-start gap-2">
+							<span class="text-cyan-400 font-bold select-none">•</span>
+							<span><strong>Configure accounts:</strong> Click any node on the canvas (e.g. Primary Checking) to manually adjust balances, ceiling limits (T_over), or safety floors (T_under).</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-cyan-400 font-bold select-none">•</span>
+							<span><strong>Establish pipelines:</strong> Type shorthand links in the CLI terminal below (e.g. <code>checking [2500] hysa</code>) and execute to route custom automated sweeps.</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-cyan-400 font-bold select-none">•</span>
+							<span><strong>Start the clock:</strong> Click <strong>Start Clock</strong> or step day-by-day to watch cash automatically route across accounts according to the savings waterfall order.</span>
+						</li>
+					</ul>
+				</article>
+			</div>
 		</div>
 
 		<!-- Simulator spans the full screen width -->
