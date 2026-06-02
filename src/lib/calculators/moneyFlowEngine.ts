@@ -167,11 +167,11 @@ export function createDefaultNodes(): AccountNode[] {
 	return [
 		{ id: 'checking', name: 'Primary Checking', type: 'checking', balance: 4000, ceiling: 5000, floor: 1500, ytdContributions: 0 },
 		{ id: 'hysa', name: 'HYSA (Emergency Fund)', type: 'hysa', balance: 5000, ceiling: 15000, floor: 0, interestRate: 4.5, ytdContributions: 0 },
-		{ id: 'match401k', name: 'Employer 401k Match', type: 'match401k', balance: 2000, ceiling: 100000, floor: 0, annualLimit: 6000, ytdContributions: 2000 },
+		{ id: 'match401k', name: '401k (Base & Match)', type: 'match401k', balance: 2000, ceiling: 100000, floor: 0, annualLimit: 6000, ytdContributions: 2000 },
 		{ id: 'debt', name: 'High-Interest Debt', type: 'debt', balance: 3500, ceiling: 0, floor: 0, interestRate: 18.0, ytdContributions: 0 },
 		{ id: 'hsa', name: 'Pre-tax HSA', type: 'hsa', balance: 1000, ceiling: 4150, floor: 0, annualLimit: 4150, ytdContributions: 1000 },
 		{ id: 'ira', name: 'Roth IRA', type: 'ira', balance: 3000, ceiling: 7000, floor: 0, annualLimit: 7000, ytdContributions: 3000 },
-		{ id: 'max401k', name: 'Workplace 401k Max', type: 'max401k', balance: 0, ceiling: 23000, floor: 0, annualLimit: 23000, ytdContributions: 0 },
+		{ id: 'max401k', name: '401k (Voluntary Max)', type: 'max401k', balance: 0, ceiling: 23000, floor: 0, annualLimit: 23000, ytdContributions: 0 },
 		{ id: 'brokerage', name: 'Taxable Brokerage', type: 'brokerage', balance: 12000, ceiling: 1000000, floor: 0, ytdContributions: 0 }
 	];
 }

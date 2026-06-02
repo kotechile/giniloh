@@ -75,9 +75,9 @@ const PERSONAL_NODE_TOOLTIPS: Record<string, { title: string; desc: string; numb
 		numbers: 'Large number: accumulated balance (earns yield monthly at 4.5% APY). Sweeps fill this up to its target ceiling (default $15,000).'
 	},
 	match401k: {
-		title: 'Employer 401k Match',
-		desc: 'Workplace 401(k) contributions up to the employer matching cap. Split from "401k Max" because capturing the 100% risk-free company match is the highest-priority investment, routed immediately after your HYSA is filled.',
-		numbers: 'Large number: accumulated balance. Automated sweeps cap out at the annual matching limit (default $6,000 YTD).'
+		title: '401k (Base & Match)',
+		desc: 'Workplace 401(k) contributions up to the employer matching cap. Split from the Voluntary Max tier because capturing the 100% risk-free company match is the highest-priority investment, routed immediately after your HYSA is filled.',
+		numbers: 'Large number: accumulated balance (including historical principal). Automated sweeps cap out at the annual matching limit (default $6,000 YTD).'
 	},
 	debt: {
 		title: 'High-Interest Debt',
@@ -95,8 +95,8 @@ const PERSONAL_NODE_TOOLTIPS: Record<string, { title: string; desc: string; numb
 		numbers: 'Large number: accumulated balance. Subject to annual contribution limit (default $7,000).'
 	},
 	max401k: {
-		title: 'Workplace 401k Max',
-		desc: 'Voluntary workplace 401(k) contributions beyond the matching limit to maximize tax-deferred savings. Split from "401k Match" because voluntary contributions (without matching) have a lower priority than paying high-interest debt, HSAs, or Roth IRAs.',
+		title: '401k (Voluntary Max)',
+		desc: 'Voluntary workplace 401(k) contributions beyond the matching limit to maximize tax-deferred savings. Split from the Base & Match tier because voluntary contributions (without matching) have a lower priority than paying high-interest debt, HSAs, or Roth IRAs.',
 		numbers: 'Large number: accumulated balance. Subject to the remaining IRS annual contribution limit (default $23,000 YTD).'
 	},
 	brokerage: {
