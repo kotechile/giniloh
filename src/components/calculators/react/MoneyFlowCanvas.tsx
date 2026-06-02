@@ -76,8 +76,8 @@ const PERSONAL_NODE_TOOLTIPS: Record<string, { title: string; desc: string; numb
 	},
 	match401k: {
 		title: 'Employer 401k Match',
-		desc: 'Workplace 401(k) contributions up to the employer matching cap (100% risk-free return).',
-		numbers: 'Large number: accumulated balance. Automated sweeps cap out at the annual limit (default $6,000 employer matching limit).'
+		desc: 'Workplace 401(k) contributions up to the employer matching cap. Split from "401k Max" because capturing the 100% risk-free company match is the highest-priority investment, routed immediately after your HYSA is filled.',
+		numbers: 'Large number: accumulated balance. Automated sweeps cap out at the annual matching limit (default $6,000 YTD).'
 	},
 	debt: {
 		title: 'High-Interest Debt',
@@ -96,8 +96,8 @@ const PERSONAL_NODE_TOOLTIPS: Record<string, { title: string; desc: string; numb
 	},
 	max401k: {
 		title: 'Workplace 401k Max',
-		desc: 'Workplace 401(k) contributions beyond the matching limit to maximize tax-deferred savings.',
-		numbers: 'Large number: accumulated balance. Subject to annual contribution limit (default $23,000).'
+		desc: 'Voluntary workplace 401(k) contributions beyond the matching limit to maximize tax-deferred savings. Split from "401k Match" because voluntary contributions (without matching) have a lower priority than paying high-interest debt, HSAs, or Roth IRAs.',
+		numbers: 'Large number: accumulated balance. Subject to the remaining IRS annual contribution limit (default $23,000 YTD).'
 	},
 	brokerage: {
 		title: 'Taxable Brokerage',
