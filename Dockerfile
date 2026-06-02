@@ -32,9 +32,16 @@ RUN echo 'server { \
     # 1. Handle Astro Subpages and Static Files \
     location / { \
         try_files $uri $uri/ $uri.html /index.html; \
+        add_header Cache-Control "no-cache, no-store, must-revalidate"; \
     } \
 \
-    # 2. Proxy ALL WordPress Backend paths \
+    # 2. Cache hashed static assets \
+    location /_astro/ { \
+        expires 1y; \
+        add_header Cache-Control "public, max-age=31536000, immutable"; \
+    } \
+\
+    # 3. Proxy ALL WordPress Backend paths \
     location ~* ^/(wp-content|wp-includes|wp-json|wp-admin|wp-login\.php|wp-cron\.php) { \
         proxy_pass https://cms.giniloh.com; \
         proxy_set_header Host cms.giniloh.com; \
