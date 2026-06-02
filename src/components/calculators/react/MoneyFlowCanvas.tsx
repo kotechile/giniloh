@@ -345,9 +345,9 @@ export default function MoneyFlowCanvas({
 								onClick={() => setSelectedNodeId(node.id)}
 								style={{ left: `${coords.x}px`, top: `${coords.y}px` }}
 								className={[
-									'absolute w-[240px] h-[80px] text-left p-4 rounded-2xl border bg-slate-900/60 backdrop-blur-md transition flex flex-col justify-between hover:scale-103 cursor-pointer z-10 group',
+									'absolute w-[240px] h-[80px] text-left p-4 rounded-2xl border bg-slate-900/60 backdrop-blur-md transition flex flex-col justify-between hover:scale-103 cursor-pointer z-10 hover:z-30 focus-within:z-30 group',
 									isSelected
-										? 'border-cyan-400 bg-slate-800/80 shadow-[0_0_25px_rgba(6,182,212,0.25)]'
+										? 'border-cyan-400 bg-slate-800/80 shadow-[0_0_25px_rgba(6,182,212,0.25)] z-20'
 										: `${colors.border} ${colors.glow} hover:border-slate-600`
 								].join(' ')}
 							>
