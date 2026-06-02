@@ -13,28 +13,28 @@ interface MoneyFlowCanvasProps {
 
 // Layout positions (x, y) coordinates for Personal Mode
 const PERSONAL_NODE_COORDINATES: Record<string, { x: number; y: number }> = {
-	checking: { x: 120, y: 220 },
-	hysa: { x: 420, y: 70 },
-	match401k: { x: 420, y: 220 },
-	debt: { x: 420, y: 370 },
-	hsa: { x: 720, y: 70 },
-	ira: { x: 720, y: 220 },
-	max401k: { x: 720, y: 370 },
-	brokerage: { x: 1000, y: 220 }
+	checking: { x: 120, y: 260 },
+	hysa: { x: 420, y: 110 },
+	match401k: { x: 420, y: 260 },
+	debt: { x: 420, y: 410 },
+	hsa: { x: 720, y: 110 },
+	ira: { x: 720, y: 260 },
+	max401k: { x: 720, y: 410 },
+	brokerage: { x: 1000, y: 260 }
 };
 
 // Layout positions (x, y) coordinates for Enterprise Mode (left-to-right cascade)
 const ENTERPRISE_NODE_COORDINATES: Record<string, { x: number; y: number }> = {
-	revenues: { x: 50, y: 50 },
-	receivables: { x: 50, y: 190 },
-	payables: { x: 50, y: 330 },
-	operating_cash_flow: { x: 350, y: 110 },
-	cogs: { x: 350, y: 250 },
-	hr_costs: { x: 350, y: 390 },
-	capex: { x: 650, y: 110 },
-	financing: { x: 650, y: 280 },
-	net_cash_flow: { x: 950, y: 200 },
-	mfs: { x: 1250, y: 200 }
+	revenues: { x: 50, y: 90 },
+	receivables: { x: 50, y: 230 },
+	payables: { x: 50, y: 370 },
+	operating_cash_flow: { x: 350, y: 150 },
+	cogs: { x: 350, y: 290 },
+	hr_costs: { x: 350, y: 430 },
+	capex: { x: 650, y: 150 },
+	financing: { x: 650, y: 320 },
+	net_cash_flow: { x: 950, y: 240 },
+	mfs: { x: 1250, y: 240 }
 };
 
 // Styles mapping for Personal Mode
@@ -239,12 +239,12 @@ export default function MoneyFlowCanvas({
 	};
 
 	return (
-		<div className="relative w-full rounded-3xl border border-slate-800 bg-slate-950/45 p-6 shadow-2xl backdrop-blur-md overflow-hidden min-h-[520px]">
+		<div className="relative w-full rounded-3xl border border-slate-800 bg-slate-950/45 p-6 shadow-2xl backdrop-blur-md overflow-hidden min-h-[600px]">
 			{/* Background Grid Pattern */}
 			<div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTQwIDBIMHY0MGg0MFYweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=')] pointer-events-none"></div>
 
 			{/* Visual canvas window */}
-			<div className="relative overflow-x-auto w-full h-[460px] scrollbar-thin scrollbar-thumb-slate-800">
+			<div className="relative overflow-x-auto w-full h-[540px] scrollbar-thin scrollbar-thumb-slate-800">
 				<div className="w-[1550px] h-full relative">
 					{/* SVG Flow Connections Layer */}
 					<svg className="absolute inset-0 w-full h-full pointer-events-none z-0">
