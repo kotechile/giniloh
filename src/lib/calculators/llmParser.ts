@@ -32,7 +32,35 @@ const ACCOUNT_ALIASES: Record<string, string> = {
 	brokerage: 'brokerage',
 	'taxable brokerage': 'brokerage',
 	'investments': 'brokerage',
-	'stocks': 'brokerage'
+	'stocks': 'brokerage',
+	// Corporate Account Aliases
+	revenues: 'revenues',
+	'revenue plan': 'revenues',
+	revenue: 'revenues',
+	sales: 'revenues',
+	receivables: 'receivables',
+	'account receivables': 'receivables',
+	cogs: 'cogs',
+	'cost of goods': 'cogs',
+	'cost of goods sold': 'cogs',
+	'hr costs': 'hr_costs',
+	'hr': 'hr_costs',
+	salaries: 'hr_costs',
+	payroll: 'hr_costs',
+	capex: 'capex',
+	'capital expenditures': 'capex',
+	payables: 'payables',
+	'account payables': 'payables',
+	'operating cash flow': 'operating_cash_flow',
+	'operating cash': 'operating_cash_flow',
+	financing: 'financing',
+	'credit line': 'financing',
+	'net cash flow': 'net_cash_flow',
+	'net cash': 'net_cash_flow',
+	mfs: 'mfs',
+	'money market': 'mfs',
+	'money market fund': 'mfs',
+	'treasury fund': 'mfs'
 };
 
 /**
@@ -53,7 +81,7 @@ function localRegexParse(prompt: string): string | null {
 
 	// 1. Match set parameters e.g., "set checking ceiling to 6000" or "set checking floor to 2000"
 	// matches: set [account] [field] (to) [value]
-	const setRegex = /set\s+([a-zA-Z0-9\s\-\(\)]+?)\s+(balance|ceiling|floor|threshold)\s*(?:to)?\s*\$?([0-9\.,]+)/i;
+	const setRegex = /set\s+([a-zA-Z0-9\s\-\(\)_]+?)\s+(balance|ceiling|floor|threshold|dso|dpo|risk|spread)\s*(?:to)?\s*\$?([0-9\.,]+)/i;
 	const setMatch = text.match(setRegex);
 	if (setMatch) {
 		const accountRaw = setMatch[1].trim();
@@ -61,6 +89,7 @@ function localRegexParse(prompt: string): string | null {
 		const val = parseFloat(setMatch[3].replace(/,/g, ''));
 		
 		if (field === 'threshold') field = 'ceiling'; // default threshold to ceiling
+		if (field === 'dpo') field = 'dpoVariable'; // default dpo variable
 
 		// resolve account alias
 		const nodeId = ACCOUNT_ALIASES[accountRaw] || accountRaw;
@@ -69,7 +98,7 @@ function localRegexParse(prompt: string): string | null {
 
 	// 2. Match sweep commands e.g., "send $500 from checking to hysa" or "route 1000 from checking to brokerage"
 	// matches: (send/sweep/route/transfer) [amount] (from) [source] (to) [target]
-	const sweepRegex = /(?:send|sweep|route|transfer|move)\s*\$?([0-9\.,]+)\s*(?:from)?\s+([a-zA-Z0-9\s\-\(\)]+?)\s+to\s+([a-zA-Z0-9\s\-\(\)]+)/i;
+	const sweepRegex = /(?:send|sweep|route|transfer|move)\s*\$?([0-9\.,]+)\s*(?:from)?\s+([a-zA-Z0-9\s\-\(\)_]+?)\s+to\s+([a-zA-Z0-9\s\-\(\)_]+)/i;
 	const sweepMatch = text.match(sweepRegex);
 	if (sweepMatch) {
 		const amount = parseFloat(sweepMatch[1].replace(/,/g, ''));
@@ -83,7 +112,7 @@ function localRegexParse(prompt: string): string | null {
 	}
 
 	// 3. Alternative sweep e.g., "checking to hysa $500"
-	const altSweepRegex = /([a-zA-Z0-9\s\-\(\)]+?)\s+to\s+([a-zA-Z0-9\s\-\(\)]+?)\s*(?:for)?\s*\$?([0-9\.,]+)/i;
+	const altSweepRegex = /([a-zA-Z0-9\s\-\(\)_]+?)\s+to\s+([a-zA-Z0-9\s\-\(\)_]+?)\s*(?:for)?\s*\$?([0-9\.,]+)/i;
 	const altMatch = text.match(altSweepRegex);
 	if (altMatch) {
 		const sourceRaw = altMatch[1].trim();
@@ -111,19 +140,19 @@ export async function parseNaturalLanguage(prompt: string): Promise<{ command: s
 		};
 	}
 
-	// Simulated low-cost LLM API query (in production, fetch/endpoint can be called)
-	// We check for environment keys
 	const geminiApiKey = typeof process !== 'undefined' ? process.env?.PUBLIC_GEMINI_API_KEY : undefined;
 	const deepseekApiKey = typeof process !== 'undefined' ? process.env?.PUBLIC_DEEPSEEK_API_KEY : undefined;
 
 	const promptSystemText = `You are an API translation layer. Translate user requests into commands for a finance simulator.
 Available commands:
-1. "Source [Amount] Target" (e.g. "checking [3000] hysa", "checking [1000] brokerage")
-2. "set [node] [balance|ceiling|floor] [value]" (e.g. "set checking ceiling 6000")
+1. "Source [Amount] Target" (e.g. "checking [3000] hysa", "revenues [10] operating_cash_flow")
+2. "set [node] [balance|ceiling|floor|dso|dpoVariable|dpoFixed|fixedSpread] [value]" (e.g. "set checking ceiling 6000", "set receivables dso 45")
 3. "reset"
 4. "clear"
 
-Available account IDs: checking, hysa, match401k, debt, hsa, ira, max401k, brokerage.
+Available account IDs (Personal & Corporate): 
+checking, hysa, match401k, debt, hsa, ira, max401k, brokerage,
+revenues, receivables, cogs, hr_costs, capex, payables, operating_cash_flow, financing, net_cash_flow, mfs.
 
 Translate the user request: "${prompt}"
 Return raw command output on the first line, followed by a short explanation on the second line.`;
@@ -181,9 +210,8 @@ Return raw command output on the first line, followed by a short explanation on 
 		}
 	}
 
-	// Default fallback explanation when heuristics don't match
 	return {
 		command: 'help',
-		explanation: `I couldn't fully map "${prompt}" to an automation command. Try saying: "Sweep $500 from checking to HYSA" or "Set checking ceiling to 6000".`
+		explanation: `I couldn't fully map "${prompt}" to an automation command. Try saying: "Sweep 500 from checking to HYSA", "Set receivables DSO to 45", or "Revenues to Operating Cash Flow 10".`
 	};
 }

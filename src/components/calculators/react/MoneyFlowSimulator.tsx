@@ -5,6 +5,7 @@ import type {
 } from '../../../lib/calculators/moneyFlowEngine';
 import { 
 	createDefaultNodes, 
+	createDefaultEnterpriseNodes,
 	stepSimulation, 
 	hasCircularDependency 
 } from '../../../lib/calculators/moneyFlowEngine';
@@ -33,7 +34,29 @@ const INITIAL_STATE: SimulationState = {
 	macroHistory: [{ day: 0, inflationRate: 2.0, marketReturn: 1.0, marketIndexValue: 5000, eventLabel: 'Initial Setup' }],
 	isPaused: false,
 	checklistCompleted: false,
-	checklistProgress: 0
+	checklistProgress: 0,
+	mode: 'personal'
+};
+
+const INITIAL_ENTERPRISE_STATE: SimulationState = {
+	day: 0,
+	nodes: createDefaultEnterpriseNodes(),
+	edges: [
+		{ id: 'flow-e1', source: 'revenues', target: 'receivables', amount: 100, type: 'percent' },
+		{ id: 'flow-e2', source: 'payables', target: 'net_cash_flow', amount: 100, type: 'percent' },
+		{ id: 'flow-e3', source: 'net_cash_flow', target: 'mfs', amount: 100, type: 'percent' }
+	],
+	holdings: [],
+	totalWealthAccumulated: 415000, // Net assets: net cash + MMF + receivables - payables - debt
+	log: ['Corporate Treasury initialized. Waiting for revenue projections.'],
+	transferHistory: [],
+	pdtTradesToday: 0,
+	macroScenario: 'baseline',
+	macroHistory: [{ day: 0, inflationRate: 2.0, marketReturn: 1.0, marketIndexValue: 5000, eventLabel: 'Initial Corporate Setup' }],
+	isPaused: false,
+	checklistCompleted: false,
+	checklistProgress: 0,
+	mode: 'enterprise'
 };
 
 const EMOTIONAL_QUESTIONS = [
@@ -45,12 +68,33 @@ const EMOTIONAL_QUESTIONS = [
 	"Will you promise to wait at least 24 hours before making any major liquidation decisions?"
 ];
 
+// Helper to fast-forward simulate projections
+function projectFutureLiquidity(currentState: SimulationState, days: number, dailyInc: number): { netCash: number; MMF: number; receivables: number; payables: number; financing: number; total: number } {
+	let tempState = { ...currentState, isPaused: false };
+	for (let d = 0; d < days; d++) {
+		tempState = stepSimulation(tempState, dailyInc);
+	}
+	const netCash = tempState.nodes.find(n => n.id === 'net_cash_flow')?.balance || 0;
+	const MMF = tempState.nodes.find(n => n.id === 'mfs')?.balance || 0;
+	const receivables = tempState.nodes.find(n => n.id === 'receivables')?.balance || 0;
+	const payables = tempState.nodes.find(n => n.id === 'payables')?.balance || 0;
+	const financing = tempState.nodes.find(n => n.id === 'financing')?.balance || 0;
+	return {
+		netCash,
+		MMF,
+		receivables,
+		payables,
+		financing,
+		total: netCash + MMF + receivables - payables - financing
+	};
+}
+
 export default function MoneyFlowSimulator() {
 	const [state, setState] = useState<SimulationState>(INITIAL_STATE);
 	const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null);
 	const [isRunning, setIsRunning] = useState(false);
 	const [speedMs, setSpeedMs] = useState(400); // simulation interval time
-	const [dailyIncome, setDailyIncome] = useState(250);
+	const [dailyIncome, setDailyIncome] = useState(250); // custom income slider
 	
 	// Natural Language Chat State
 	const [chatInput, setChatInput] = useState('');
@@ -59,25 +103,53 @@ export default function MoneyFlowSimulator() {
 	]);
 	const [isPendingAI, setIsPendingAI] = useState(false);
 
+	// Parallel Scenario states for Enterprise comparisons
+	const [enterpriseScenarios, setEnterpriseScenarios] = useState<Record<string, SimulationState>>({
+		baseline: INITIAL_ENTERPRISE_STATE,
+		inflation: { ...INITIAL_ENTERPRISE_STATE, macroScenario: 'inflation' },
+		supply_delay: { ...INITIAL_ENTERPRISE_STATE, macroScenario: 'supply_delay' }
+	});
+
 	// Scripting Rules State
-	const [rules, setRules] = useState<ScriptRule[]>(createDefaultRules());
+	const [rules, setRules] = useState<ScriptRule[]>(createDefaultRules);
 
 	const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-	// Reset to defaults
-	const handleReset = () => {
+	// Reset to defaults based on current active mode
+	const handleReset = (targetMode?: 'personal' | 'enterprise') => {
 		setIsRunning(false);
-		setState(INITIAL_STATE);
+		const activeMode = targetMode || state.mode;
 		setSelectedNodeId(null);
-		setChatHistory([
-			{ text: "System reset to defaults. How can I assist you with your cash flows today?", sender: 'assistant' }
-		]);
+		
+		if (activeMode === 'personal') {
+			setState(INITIAL_STATE);
+			setChatHistory([
+				{ text: "System reset to Personal Wealth Defaults. How can I assist you with your cash flows today?", sender: 'assistant' }
+			]);
+		} else {
+			setState(INITIAL_ENTERPRISE_STATE);
+			setEnterpriseScenarios({
+				baseline: INITIAL_ENTERPRISE_STATE,
+				inflation: { ...INITIAL_ENTERPRISE_STATE, macroScenario: 'inflation' },
+				supply_delay: { ...INITIAL_ENTERPRISE_STATE, macroScenario: 'supply_delay' }
+			});
+			setChatHistory([
+				{ text: "System reset to Enterprise CFO Room Defaults. How can I assist you with corporate treasury forecasting?", sender: 'assistant' }
+			]);
+		}
 	};
 
-	// Start / Pause simulator clock
+	// Switch Mode Handler
+	const handleModeSwitch = (newMode: 'personal' | 'enterprise') => {
+		if (newMode === state.mode) return;
+		handleReset(newMode);
+	};
+
+	// Synchronized simulation clock step
 	useEffect(() => {
 		if (isRunning && !state.isPaused) {
 			timerRef.current = setInterval(() => {
+				// Step Active Main State
 				setState((current) => {
 					if (current.isPaused) return current;
 					let next = stepSimulation(current, dailyIncome);
@@ -85,17 +157,26 @@ export default function MoneyFlowSimulator() {
 					// Evaluate dynamic script rules
 					rules.forEach((rule) => {
 						if (rule.isActive && evaluateCondition(rule.conditionStr, next)) {
-							// Trigger command action
 							const result = executeRawCommand(rule.actionStr, next);
 							if (result.success) {
 								next = result.nextState;
-								next.log.push(`[Rule Triggered] "${rule.name}" condition met. Action executed: ${rule.actionStr}`);
+								next.log.push(`[Rule Triggered] "${rule.name}" met. Action: ${rule.actionStr}`);
 							}
 						}
 					});
 
 					return next;
 				});
+
+				// Step Enterprise Parallel Scenarios
+				if (state.mode === 'enterprise') {
+					setEnterpriseScenarios((prev) => ({
+						baseline: stepSimulation(prev.baseline, dailyIncome),
+						inflation: { ...stepSimulation(prev.inflation, dailyIncome), macroScenario: 'inflation' },
+						supply_delay: { ...stepSimulation(prev.supply_delay, dailyIncome), macroScenario: 'supply_delay' }
+					}));
+				}
+
 			}, speedMs);
 		} else {
 			if (timerRef.current) {
@@ -108,7 +189,7 @@ export default function MoneyFlowSimulator() {
 				clearInterval(timerRef.current);
 			}
 		};
-	}, [isRunning, speedMs, dailyIncome, rules, state.isPaused]);
+	}, [isRunning, speedMs, dailyIncome, rules, state.isPaused, state.mode]);
 
 	// Single step trigger
 	const handleStep = () => {
@@ -121,13 +202,21 @@ export default function MoneyFlowSimulator() {
 					const result = executeRawCommand(rule.actionStr, next);
 					if (result.success) {
 						next = result.nextState;
-						next.log.push(`[Rule Triggered] "${rule.name}" condition met. Action executed: ${rule.actionStr}`);
+						next.log.push(`[Rule Triggered] "${rule.name}" met. Action: ${rule.actionStr}`);
 					}
 				}
 			});
 
 			return next;
 		});
+
+		if (state.mode === 'enterprise') {
+			setEnterpriseScenarios((prev) => ({
+				baseline: stepSimulation(prev.baseline, dailyIncome),
+				inflation: { ...stepSimulation(prev.inflation, dailyIncome), macroScenario: 'inflation' },
+				supply_delay: { ...stepSimulation(prev.supply_delay, dailyIncome), macroScenario: 'supply_delay' }
+			}));
+		}
 	};
 
 	// Update node settings via slider
@@ -136,6 +225,21 @@ export default function MoneyFlowSimulator() {
 			...current,
 			nodes: current.nodes.map((n) => (n.id === updatedNode.id ? updatedNode : n))
 		}));
+		
+		// Sync sliders configurations to all comparison tracks in enterprise mode
+		if (state.mode === 'enterprise') {
+			setEnterpriseScenarios((prev) => {
+				const sync = (s: SimulationState) => ({
+					...s,
+					nodes: s.nodes.map((n) => (n.id === updatedNode.id ? { ...n, balance: updatedNode.balance, ceiling: updatedNode.ceiling, floor: updatedNode.floor, interestRate: updatedNode.interestRate, dso: updatedNode.dso, insolvencyRisk: updatedNode.insolvencyRisk, dpoVariable: updatedNode.dpoVariable, dpoFixed: updatedNode.dpoFixed, vatRate: updatedNode.vatRate, factoringRate: updatedNode.factoringRate, fixedSpread: updatedNode.fixedSpread, variableRateIndex: updatedNode.variableRateIndex, loanType: updatedNode.loanType, loanLifetime: updatedNode.loanLifetime } : n))
+				});
+				return {
+					baseline: sync(prev.baseline),
+					inflation: sync(prev.inflation),
+					supply_delay: sync(prev.supply_delay)
+				};
+			});
+		}
 	};
 
 	// Helper to execute commands on a target state block
@@ -189,7 +293,7 @@ export default function MoneyFlowSimulator() {
 
 		if (baseCommand === 'set') {
 			if (parts.length < 4) {
-				return { success: false, nextState: targetState, output: 'Syntax: set [node] [balance|ceiling|floor] [value]' };
+				return { success: false, nextState: targetState, output: 'Syntax: set [node] [balance|ceiling|floor|dso|dpoVariable|dpoFixed|fixedSpread] [value]' };
 			}
 			const nodeId = parts[1].toLowerCase();
 			const field = parts[2].toLowerCase();
@@ -204,17 +308,23 @@ export default function MoneyFlowSimulator() {
 				return { success: false, nextState: targetState, output: `Error: Account "${nodeId}" not found.` };
 			}
 
-			if (field !== 'balance' && field !== 'ceiling' && field !== 'floor') {
-				return { success: false, nextState: targetState, output: `Error: Field must be balance, ceiling, or floor.` };
+			const validFields = ['balance', 'ceiling', 'floor', 'dso', 'dpovariable', 'dpofixed', 'fixedspread'];
+			if (!validFields.includes(field)) {
+				return { success: false, nextState: targetState, output: `Error: Field must be balance, ceiling, floor, dso, dpoVariable, dpoFixed, or fixedSpread.` };
 			}
+
+			let normalizedField = field;
+			if (field === 'dpovariable') normalizedField = 'dpoVariable';
+			if (field === 'dpofixed') normalizedField = 'dpoFixed';
+			if (field === 'fixedspread') normalizedField = 'fixedSpread';
 
 			return {
 				success: true,
 				nextState: {
 					...targetState,
-					nodes: targetState.nodes.map((n) => (n.id === nodeId ? { ...n, [field]: value } : n))
+					nodes: targetState.nodes.map((n) => (n.id === nodeId ? { ...n, [normalizedField]: value } : n))
 				},
-				output: `Updated ${node.name} ${field} to ${formatCurrency(value)}.`
+				output: `Updated ${node.name} ${field} to ${value}.`
 			};
 		}
 
@@ -258,14 +368,18 @@ export default function MoneyFlowSimulator() {
 		}
 	};
 
-	// Scenario Selector update
-	const handleScenarioChange = (scenario: 'baseline' | 'inflation' | 'crash') => {
+	// Scenario Selector update for Main simulation view
+	const handleScenarioChange = (scenario: 'baseline' | 'inflation' | 'crash' | 'supply_delay') => {
 		setIsRunning(false);
+		
+		const isEnterprise = state.mode === 'enterprise';
+		const baseNodes = isEnterprise ? createDefaultEnterpriseNodes() : createDefaultNodes();
+		
 		setState(prev => ({
 			...prev,
 			macroScenario: scenario,
 			day: 0,
-			nodes: createDefaultNodes(),
+			nodes: baseNodes,
 			macroHistory: [{ day: 0, inflationRate: scenario === 'inflation' ? 8.5 : 2.0, marketReturn: 1.0, marketIndexValue: 5000, eventLabel: 'Backtest Setup' }],
 			isPaused: false,
 			checklistCompleted: false,
@@ -294,12 +408,49 @@ export default function MoneyFlowSimulator() {
 		});
 	};
 
+	// Promo Scenario Application Handler
+	const applyScenarioForecast = (scKey: string) => {
+		const targetSc = enterpriseScenarios[scKey];
+		if (!targetSc) return;
+		setState({
+			...targetSc,
+			macroScenario: scKey as any
+		});
+		setChatHistory(prev => [...prev, { text: `Approved and merged ${scKey.toUpperCase()} scenario forecast as the Official Corporate Plan.`, sender: 'assistant' }]);
+	};
+
 	const currentSAndP = state.macroHistory.length > 0
 		? state.macroHistory[state.macroHistory.length - 1].marketIndexValue
 		: 5000;
 	const currentInflation = state.macroHistory.length > 0
 		? state.macroHistory[state.macroHistory.length - 1].inflationRate
 		: 2.0;
+
+	// Bottom-up projections computation
+	const isEnterprise = state.mode === 'enterprise';
+	const monthProj = isEnterprise ? projectFutureLiquidity(state, 30, dailyIncome) : null;
+	const yearProj = isEnterprise ? projectFutureLiquidity(state, 365, dailyIncome) : null;
+
+	const getProjectionGrid = () => {
+		if (!isEnterprise || !monthProj || !yearProj) return [];
+		
+		const receivables = state.nodes.find(n => n.id === 'receivables')?.balance || 0;
+		const payables = state.nodes.find(n => n.id === 'payables')?.balance || 0;
+		const netCash = state.nodes.find(n => n.id === 'net_cash_flow')?.balance || 0;
+		const mmf = state.nodes.find(n => n.id === 'mfs')?.balance || 0;
+		const financing = state.nodes.find(n => n.id === 'financing')?.balance || 0;
+
+		return [
+			{ name: 'Receivables Outstanding', cur: receivables, month: monthProj.receivables, year: yearProj.receivables, type: 'asset' },
+			{ name: 'Money Market Funds', cur: mmf, month: monthProj.MMF, year: yearProj.MMF, type: 'asset' },
+			{ name: 'Primary Cash buffer', cur: netCash, month: monthProj.netCash, year: yearProj.netCash, type: 'asset' },
+			{ name: 'Payables Accrued', cur: payables, month: monthProj.payables, year: yearProj.payables, type: 'liability' },
+			{ name: '战略Strategic Debt (Credit Line)', cur: financing, month: monthProj.financing, year: yearProj.financing, type: 'liability' },
+			{ name: 'Total Net Position', cur: netCash + mmf + receivables - payables - financing, month: monthProj.total, year: yearProj.total, type: 'net' }
+		];
+	};
+
+	const liquidityRows = getProjectionGrid();
 
 	return (
 		<div className="grid gap-6 relative">
@@ -315,7 +466,6 @@ export default function MoneyFlowSimulator() {
 							The macro backtest has encountered a severe market drop (&gt;10%). To avoid panic-driven portfolio liquidation, you must complete the Ardal Loh-Gronager emotional centering assessment.
 						</p>
 
-						{/* Question wizard */}
 						{state.checklistProgress < EMOTIONAL_QUESTIONS.length ? (
 							<div className="bg-slate-950 p-6 rounded-2xl border border-slate-800 flex flex-col gap-4">
 								<div className="flex justify-between text-xs font-mono text-slate-500">
@@ -339,30 +489,67 @@ export default function MoneyFlowSimulator() {
 				</div>
 			)}
 
+			{/* Mode Toggles Header Section */}
+			<div className="flex items-center justify-between bg-slate-900/50 p-3 rounded-2xl border border-slate-800/80 backdrop-blur-sm">
+				<div className="flex gap-2">
+					<button
+						onClick={() => handleModeSwitch('personal')}
+						className={[
+							'px-4 py-1.5 rounded-xl text-xs font-semibold tracking-tight transition duration-200 cursor-pointer',
+							state.mode === 'personal'
+								? 'bg-cyan-600 text-white shadow-lg shadow-cyan-600/20'
+								: 'bg-transparent text-slate-400 hover:text-slate-200'
+						].join(' ')}
+					>
+						👤 Personal Wealth Orchestrator
+					</button>
+					<button
+						onClick={() => handleModeSwitch('enterprise')}
+						className={[
+							'px-4 py-1.5 rounded-xl text-xs font-semibold tracking-tight transition duration-200 cursor-pointer',
+							state.mode === 'enterprise'
+								? 'bg-emerald-600 text-white shadow-lg shadow-emerald-600/20'
+								: 'bg-transparent text-slate-400 hover:text-slate-200'
+						].join(' ')}
+					>
+						🏢 Enterprise CFO Simulation Room
+					</button>
+				</div>
+				<span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest px-3">
+					Active Engine Core: T+1 Event loops
+				</span>
+			</div>
+
 			{/* Main Simulator Dashboard */}
 			<div className="overflow-hidden rounded-[2rem] border border-slate-800 bg-slate-950/60 p-6 shadow-2xl backdrop-blur-md">
 				<div className="flex flex-wrap items-center justify-between gap-6 pb-6 border-b border-slate-800/80">
 					<div>
-						<p className="font-mono text-xs uppercase tracking-[0.28em] text-cyan-400">High-Fidelity Backtesting & AI Engine</p>
-						<h2 className="mt-3 text-3xl font-bold tracking-tight text-white">System Flow Control</h2>
+						<p className="font-mono text-xs uppercase tracking-[0.28em] text-cyan-400">
+							{isEnterprise ? 'SPV Waterfall Cash Simulator' : 'High-Fidelity Backtesting & AI Engine'}
+						</p>
+						<h2 className="mt-3 text-3xl font-bold tracking-tight text-white">
+							{isEnterprise ? 'Enterprise CFO Controls' : 'System Flow Control'}
+						</h2>
 					</div>
 					
 					{/* Status Stats */}
 					<div className="flex flex-wrap gap-4 text-left">
 						<div className="rounded-xl border border-slate-800 bg-slate-900/30 px-4 py-2">
 							<span className="block font-mono text-[9px] uppercase tracking-widest text-slate-500">Macro Feed</span>
-							<span className="block text-sm font-bold font-mono text-white mt-1">S&P 500: {currentSAndP.toFixed(2)}</span>
+							<span className="block text-sm font-bold font-mono text-white mt-1">Index: {currentSAndP.toFixed(2)}</span>
 						</div>
 						<div className="rounded-xl border border-slate-800 bg-slate-900/30 px-4 py-2">
 							<span className="block font-mono text-[9px] uppercase tracking-widest text-slate-500">Inflation</span>
 							<span className="block text-sm font-bold font-mono text-red-400 mt-1">{currentInflation.toFixed(1)}%</span>
 						</div>
 						<div className="rounded-xl border border-slate-800 bg-slate-900/30 px-4 py-2">
-							<span className="block font-mono text-[9px] uppercase tracking-widest text-slate-500">Day count</span>
+							<span className="block font-mono text-[9px] uppercase tracking-widest text-slate-500">Day Count</span>
 							<span className="block text-sm font-bold font-mono text-white mt-1">{state.day} days</span>
 						</div>
-						<div className="rounded-xl border border-slate-800 bg-slate-900/30 px-4 py-2">
-							<span className="block font-mono text-[9px] uppercase tracking-widest text-slate-500">Wealth projection</span>
+						<div className="rounded-xl border border-slate-800 bg-slate-900/30 px-4 py-2 border-emerald-500/10 bg-emerald-500/5">
+							<span className="block font-mono text-[9px] uppercase tracking-widest text-slate-400">
+								{isEnterprise ? 'Treasury Net Position' : 'Wealth Projection'}
+							</span>
 							<span className="block text-sm font-bold font-mono text-emerald-400 mt-1">
 								{formatCurrency(state.totalWealthAccumulated)}
 							</span>
@@ -380,7 +567,9 @@ export default function MoneyFlowSimulator() {
 								'py-2 px-5 rounded-full text-xs font-mono uppercase tracking-wider transition font-bold select-none border cursor-pointer disabled:opacity-30',
 								isRunning
 									? 'bg-red-500/15 border-red-500/30 text-red-400 hover:bg-red-500/25'
-									: 'bg-emerald-500/15 border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/25'
+									: isEnterprise
+										? 'bg-emerald-500/15 border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/25'
+										: 'bg-cyan-500/15 border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/25'
 							].join(' ')}
 						>
 							{isRunning ? 'Pause clock' : 'Start clock'}
@@ -393,7 +582,7 @@ export default function MoneyFlowSimulator() {
 							Step 1 day
 						</button>
 						<button
-							onClick={handleReset}
+							onClick={() => handleReset()}
 							className="py-2 px-4 rounded-full text-xs font-mono uppercase tracking-wider border border-slate-800 hover:bg-slate-900 text-slate-400 cursor-pointer"
 						>
 							Reset
@@ -403,15 +592,19 @@ export default function MoneyFlowSimulator() {
 					<div className="flex flex-wrap items-center gap-6">
 						{/* Backtest Scenarios */}
 						<div className="flex items-center gap-2">
-							<span className="text-xs font-mono text-slate-500 uppercase tracking-widest">Backtest:</span>
+							<span className="text-xs font-mono text-slate-500 uppercase tracking-widest">Macro Shock:</span>
 							<select
 								value={state.macroScenario}
 								onChange={(e) => handleScenarioChange(e.target.value as any)}
-								className="bg-slate-900 border border-slate-800 text-slate-300 rounded px-2.5 py-1 text-xs outline-none"
+								className="bg-slate-900 border border-slate-800 text-slate-300 rounded px-2.5 py-1 text-xs outline-none cursor-pointer"
 							>
-								<option value="baseline">Baseline (Steady Growth)</option>
-								<option value="inflation">Stagflation Regime (High Rates)</option>
-								<option value="crash">Market Contraction (2008 Crash)</option>
+								<option value="baseline">Baseline Growth</option>
+								<option value="inflation">Stagflation Shock</option>
+								{isEnterprise ? (
+									<option value="supply_delay">Supply Chain Interruption</option>
+								) : (
+									<option value="crash">Market Contraction (Crash)</option>
+								)}
 							</select>
 						</div>
 
@@ -421,7 +614,7 @@ export default function MoneyFlowSimulator() {
 							<select
 								value={speedMs}
 								onChange={(e) => setSpeedMs(parseInt(e.target.value))}
-								className="bg-slate-900 border border-slate-800 text-slate-300 rounded px-2.5 py-1 text-xs outline-none"
+								className="bg-slate-900 border border-slate-800 text-slate-300 rounded px-2.5 py-1 text-xs outline-none cursor-pointer"
 							>
 								<option value="800">1x (Slow)</option>
 								<option value="400">2x (Normal)</option>
@@ -431,7 +624,9 @@ export default function MoneyFlowSimulator() {
 
 						{/* Daily savings factor */}
 						<div className="flex items-center gap-2">
-							<span className="text-xs font-mono text-slate-500 uppercase tracking-widest">Income/day:</span>
+							<span className="text-xs font-mono text-slate-500 uppercase tracking-widest">
+								{isEnterprise ? 'Daily Base Revenue:' : 'Income/day:'}
+							</span>
 							<input
 								type="number"
 								min="0"
@@ -451,8 +646,102 @@ export default function MoneyFlowSimulator() {
 					selectedNodeId={selectedNodeId}
 					setSelectedNodeId={setSelectedNodeId}
 					onNodeUpdate={handleNodeUpdate}
+					mode={state.mode}
 				/>
 			</div>
+
+			{/* Interactive Bottom-up Liquidity Projections Grid */}
+			{isEnterprise && liquidityRows.length > 0 && (
+				<div className="rounded-[1.8rem] border border-slate-800 bg-slate-950/75 p-6 shadow-xl backdrop-blur-sm animate-[fadeIn_0.3s_ease-out]">
+					<h3 className="text-lg font-bold text-white mb-2">Liquidity Projections Data Grid</h3>
+					<p className="text-xs text-slate-400 mb-4 leading-normal">
+						Effortless top-down projection calculated bottom-up by running simulated clock steps forwards in real time.
+					</p>
+					
+					<div className="overflow-x-auto">
+						<table className="w-full text-left font-mono text-xs border-collapse">
+							<thead>
+								<tr className="border-b border-slate-800 text-slate-500">
+									<th className="py-2.5 px-3">Treasury Account Node</th>
+									<th className="py-2.5 px-3">Category</th>
+									<th className="py-2.5 px-3 text-right">Current Ledger</th>
+									<th className="py-2.5 px-3 text-right text-cyan-400">Month-End Forecast (30d)</th>
+									<th className="py-2.5 px-3 text-right text-emerald-400">Year-End Forecast (365d)</th>
+								</tr>
+							</thead>
+							<tbody className="divide-y divide-slate-800 text-slate-300">
+								{liquidityRows.map((row, idx) => {
+									const isTotal = row.type === 'net';
+									return (
+										<tr 
+											key={idx} 
+											className={[
+												isTotal ? 'bg-slate-900/35 font-bold text-white' : 'hover:bg-slate-900/10',
+												row.type === 'liability' ? 'text-rose-300' : ''
+											].join(' ')}
+										>
+											<td className="py-2.5 px-3">{row.name}</td>
+											<td className="py-2.5 px-3 uppercase text-[10px] tracking-wider text-slate-500">
+												{row.type}
+											</td>
+											<td className="py-2.5 px-3 text-right">{formatCurrency(row.cur)}</td>
+											<td className="py-2.5 px-3 text-right text-cyan-400">{formatCurrency(row.month)}</td>
+											<td className="py-2.5 px-3 text-right text-emerald-400">{formatCurrency(row.year)}</td>
+										</tr>
+									);
+								})}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			)}
+
+			{/* Parallel Scenario Comparisons (CFO Scenario Room) */}
+			{isEnterprise && (
+				<div className="grid gap-6 md:grid-cols-3">
+					{Object.keys(enterpriseScenarios).map((scKey) => {
+						const scState = enterpriseScenarios[scKey];
+						const label = scKey === 'baseline' ? 'Steady Growth Baseline' : scKey === 'inflation' ? 'Stagflation Shock' : 'Supply Chain Interruptions';
+						const colorClass = scKey === 'baseline' ? 'border-emerald-500/25 bg-emerald-500/5' : scKey === 'inflation' ? 'border-red-500/25 bg-red-500/5' : 'border-amber-500/25 bg-amber-500/5';
+						
+						return (
+							<div key={scKey} className={["p-5 rounded-2xl border flex flex-col justify-between gap-4", colorClass].join(' ')}>
+								<div>
+									<div className="flex items-center justify-between">
+										<span className="text-xs font-mono uppercase font-bold text-slate-400">{scKey}</span>
+										<span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400">
+											{scState.day}d Simulated
+										</span>
+									</div>
+									<h4 className="text-sm font-bold text-white mt-2 leading-tight">{label}</h4>
+									
+									<div className="mt-4 space-y-2 font-mono text-[11px] text-slate-300">
+										<div className="flex justify-between">
+											<span>Total Net Assets:</span>
+											<span className="font-bold text-white">{formatCurrency(scState.totalWealthAccumulated)}</span>
+										</div>
+										<div className="flex justify-between">
+											<span>Receivables Outstanding:</span>
+											<span>{formatCurrency(scState.nodes.find(n => n.id === 'receivables')?.balance || 0)}</span>
+										</div>
+										<div className="flex justify-between">
+											<span>MMF Treasury Yields:</span>
+											<span>{formatCurrency(scState.nodes.find(n => n.id === 'mfs')?.balance || 0)}</span>
+										</div>
+									</div>
+								</div>
+
+								<button
+									onClick={() => applyScenarioForecast(scKey)}
+									className="w-full py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700/60 rounded-xl text-xs font-mono text-slate-200 transition cursor-pointer text-center"
+								>
+									Apply to Active Canvas
+								</button>
+							</div>
+						);
+					})}
+				</div>
+			)}
 
 			{/* AI Chat & Scripting bottom panel */}
 			<div className="grid gap-6 md:grid-cols-3">
@@ -460,7 +749,7 @@ export default function MoneyFlowSimulator() {
 				<div className="flex flex-col h-[350px] rounded-2xl border border-slate-800 bg-slate-950/90 font-mono text-xs shadow-2xl overflow-hidden md:col-span-2">
 					<div className="h-9 border-b border-slate-800 bg-slate-900/60 flex items-center px-4 justify-between">
 						<div className="flex items-center gap-1.5">
-							<span className="inline-flex h-1.5 w-1.5 rounded-full bg-cyan-400"></span>
+							<span className="inline-flex h-1.5 w-1.5 rounded-full bg-cyan-400 animate-ping"></span>
 							<span className="font-semibold text-slate-400 text-[10px] tracking-wider uppercase">AI_Orchestration_Chat</span>
 						</div>
 						<span className="text-[9px] text-slate-500">LOW-COST LLM WRAPPER</span>
@@ -497,7 +786,7 @@ export default function MoneyFlowSimulator() {
 							type="text"
 							value={chatInput}
 							onChange={(e) => setChatInput(e.target.value)}
-							placeholder="Tell the AI what to do (e.g. 'Route $600 from checking to Roth IRA')..."
+							placeholder={isEnterprise ? "Tell the AI what to do (e.g. 'Set receivables DSO to 45' or 'Route revenues to receivables')..." : "Tell the AI what to do (e.g. 'Route $600 from checking to Roth IRA')..."}
 							className="flex-1 bg-transparent text-slate-200 border-none outline-none focus:ring-0 p-0 text-xs placeholder:text-slate-600 font-mono"
 						/>
 						<button type="submit" className="px-4 py-1.5 bg-cyan-600 hover:bg-cyan-500 text-white font-semibold rounded-lg text-[10px] uppercase tracking-wider transition cursor-pointer">

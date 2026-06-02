@@ -7,18 +7,42 @@ export type AccountType =
 	| 'ira' // Traditional or Roth IRA
 	| 'max401k' // Workplace 401k Max-Out
 	| 'brokerage' // Taxable Brokerage
-	| 'income'; // Virtual input source
+	| 'income' // Virtual input source
+	// Corporate Account Types
+	| 'revenues'
+	| 'receivables'
+	| 'cogs'
+	| 'hr_costs'
+	| 'capex'
+	| 'payables'
+	| 'operating_cash_flow'
+	| 'financing'
+	| 'net_cash_flow'
+	| 'mfs';
 
 export interface AccountNode {
 	id: string;
 	name: string;
 	type: AccountType;
 	balance: number;
-	ceiling: number; // T_over
-	floor: number; // T_under
+	ceiling: number; // T_over (or surplus sweep trigger)
+	floor: number; // T_under (or deficit pull trigger)
 	interestRate?: number;
 	annualLimit?: number; // e.g. HSA $3,850, IRA $7,000, 401k $24,500
 	ytdContributions: number;
+	// Enterprise Metrics & Configuration
+	dso?: number; // Days Sales Outstanding for Receivables
+	insolvencyRisk?: number; // default risk percentage (e.g. 3.5)
+	agingRisk?: { current: number; '30d': number; '60d': number; '90d+': number };
+	dpoVariable?: number; // DPO for COGS (Variable Costs)
+	dpoFixed?: number; // DPO for HR/Capex (Fixed Costs)
+	legalEntity?: string;
+	vatRate?: number; // e.g. 19.0 (%)
+	factoringRate?: number; // e.g. 2.5 (%)
+	loanLifetime?: number; // loan term in months
+	fixedSpread?: number; // financing fixed spread %
+	variableRateIndex?: number; // financing variable benchmark rate %
+	loanType?: 'term' | 'revolving';
 }
 
 export interface FlowEdge {
@@ -33,7 +57,8 @@ export interface SettlementHolding {
 	amount: number;
 	originAccountId: string;
 	releaseDay: number;
-	type: 'ACH' | 'ACAT' | 'T1';
+	type: 'ACH' | 'ACAT' | 'T1' | 'DSO' | 'DPO_COGS' | 'DPO_HR' | 'DPO_CAPEX';
+	entityLabel?: string;
 }
 
 export interface TransferRecord {
@@ -56,15 +81,24 @@ export interface SimulationState {
 	nodes: AccountNode[];
 	edges: FlowEdge[];
 	holdings: SettlementHolding[];
-	totalWealthAccumulated: number;
+	totalWealthAccumulated: number; // Personal wealth or Corporate total liquidity/net equity
 	log: string[];
 	transferHistory: TransferRecord[];
 	pdtTradesToday: number;
-	macroScenario: 'baseline' | 'inflation' | 'crash';
+	macroScenario: 'baseline' | 'inflation' | 'crash' | 'supply_delay';
 	macroHistory: MacroDataPoint[];
 	isPaused: boolean;
 	checklistCompleted: boolean;
-	checklistProgress: number; // progress through the 250 questions
+	checklistProgress: number; // progress through the questions
+	// Mode configurations
+	mode: 'personal' | 'enterprise';
+	corporateInvoices?: Array<{
+		id: string;
+		amount: number;
+		type: 'receivable' | 'payable';
+		dueDay: number;
+		paid: boolean;
+	}>;
 }
 
 export const WATERFALL_ORDER: AccountType[] = [
@@ -127,7 +161,7 @@ export function hasCircularDependency(edges: FlowEdge[], candidateSource: string
 }
 
 /**
- * Initialize default account nodes
+ * Initialize default personal account nodes
  */
 export function createDefaultNodes(): AccountNode[] {
 	return [
@@ -143,6 +177,24 @@ export function createDefaultNodes(): AccountNode[] {
 }
 
 /**
+ * Initialize default enterprise corporate nodes
+ */
+export function createDefaultEnterpriseNodes(): AccountNode[] {
+	return [
+		{ id: 'revenues', name: 'Revenues Plan', type: 'revenues', balance: 0, ceiling: 0, floor: 0, ytdContributions: 0, vatRate: 19.0, factoringRate: 2.5 },
+		{ id: 'receivables', name: 'Account Receivables', type: 'receivables', balance: 120000, ceiling: 0, floor: 0, ytdContributions: 0, dso: 35, insolvencyRisk: 3.5, agingRisk: { current: 1, '30d': 5, '60d': 15, '90d+': 50 } },
+		{ id: 'cogs', name: 'COGS', type: 'cogs', balance: 0, ceiling: 0, floor: 0, ytdContributions: 0, dpoVariable: 45, legalEntity: 'Entity A' },
+		{ id: 'hr_costs', name: 'HR Costs', type: 'hr_costs', balance: 0, ceiling: 0, floor: 0, ytdContributions: 0, dpoFixed: 30, legalEntity: 'Entity A' },
+		{ id: 'capex', name: 'Capex', type: 'capex', balance: 0, ceiling: 0, floor: 0, ytdContributions: 0, dpoFixed: 60, legalEntity: 'Entity A' },
+		{ id: 'payables', name: 'Account Payables', type: 'payables', balance: 80000, ceiling: 0, floor: 0, ytdContributions: 0 },
+		{ id: 'operating_cash_flow', name: 'Operating Cash Flow', type: 'operating_cash_flow', balance: 100000, ceiling: 0, floor: 0, ytdContributions: 0 },
+		{ id: 'financing', name: 'Strategic Financing', type: 'financing', balance: 0, ceiling: 500000, floor: 0, ytdContributions: 0, loanLifetime: 24, fixedSpread: 3.5, variableRateIndex: 4.0, loanType: 'revolving' },
+		{ id: 'net_cash_flow', name: 'Net Cash Flow', type: 'net_cash_flow', balance: 75000, ceiling: 120000, floor: 30000, ytdContributions: 0 },
+		{ id: 'mfs', name: 'Money Market Fund (MMF)', type: 'mfs', balance: 250000, ceiling: 5000000, floor: 0, interestRate: 4.2, ytdContributions: 0 }
+	];
+}
+
+/**
  * Executes a single simulation step (one business day)
  */
 export function stepSimulation(state: SimulationState, dailyIncome: number = 200): SimulationState {
@@ -153,16 +205,16 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 
 	const nextDay = state.day + 1;
 	const nextLog: string[] = [];
-	
-	// Deep copy nodes, holdings, and history
 	const nextNodes = state.nodes.map((node) => ({ ...node }));
 	let nextHoldings = state.holdings.map((h) => ({ ...h }));
 	const nextTransferHistory = [...(state.transferHistory || [])];
-	let pdtTradesToday = 0;
 
-	// 1. Process Macroeconomics & Market Performance
+	// Determine active mode (default to personal if not set)
+	const mode = state.mode || 'personal';
+
+	// 1. Process Macroeconomics
 	let inflationRate = 2.0;
-	let marketReturn = 1.0003; // daily growth ~8% annualized
+	let marketReturn = 1.0003; // daily growth ~8% annualized for personal stocks
 	let marketIndexValue = state.macroHistory.length > 0 
 		? state.macroHistory[state.macroHistory.length - 1].marketIndexValue 
 		: 5000;
@@ -178,240 +230,440 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 		nextNodes.forEach(node => {
 			if (node.id === 'hysa') node.interestRate = 5.5; // High HYSA yield
 			if (node.id === 'debt') node.interestRate = 22.0; // High borrowing rates
+			if (node.id === 'mfs') node.interestRate = 5.2; // High MMF corporate yield
 		});
 	} else if (state.macroScenario === 'crash') {
 		inflationRate = 3.0;
-		// A sharp crash happens between Day 15 and Day 35
 		if (nextDay >= 15 && nextDay <= 35) {
 			marketReturn = 0.985; // 1.5% daily crash
 			eventLabel = 'Market Contraction Event';
 		} else if (nextDay > 35 && nextDay <= 60) {
-			marketReturn = 1.0001; // sluggish recovery
+			marketReturn = 1.0001;
 			eventLabel = 'Post-Crash Consolidation';
 		} else {
-			marketReturn = 1.0004; // standard recovery
+			marketReturn = 1.0004;
 		}
 		marketIndexValue = marketIndexValue * marketReturn;
+	} else if (state.macroScenario === 'supply_delay') {
+		inflationRate = 4.0;
+		marketReturn = 1.0001;
+		eventLabel = 'Supply Chain Disruptions';
 	} else {
 		// Baseline growth
 		marketIndexValue = marketIndexValue * marketReturn;
 	}
 
-	// Apply market returns to equity accounts: Match401k, Workplace401kMax, RothIRA, Brokerage
-	nextNodes.forEach((node) => {
-		if (['match401k', 'ira', 'max401k', 'brokerage'].includes(node.type)) {
-			node.balance = node.balance * marketReturn;
+	// 2. Fork logic by Mode
+	if (mode === 'personal') {
+		// --- PERSONAL WEALTH SIMULATION MODE ---
+		
+		// Apply market returns to equity accounts: Match401k, Workplace401kMax, RothIRA, Brokerage
+		nextNodes.forEach((node) => {
+			if (['match401k', 'ira', 'max401k', 'brokerage'].includes(node.type)) {
+				node.balance = node.balance * marketReturn;
+			}
+		});
+
+		// Behavioral Safeguard trigger: Pause on severe contraction
+		let triggerPause = false;
+		if (state.macroScenario === 'crash' && nextDay === 18 && !state.checklistCompleted) {
+			triggerPause = true;
+			nextLog.push(`Day ${nextDay}: [WARNING] Severe market contraction detected! S&P 500 dropped to ${marketIndexValue.toFixed(2)}. Simulation paused for behavioral cooling.`);
 		}
-	});
 
-	// Append macro snapshot
-	const macroDataPoint: MacroDataPoint = {
-		day: nextDay,
-		inflationRate,
-		marketReturn,
-		marketIndexValue,
-		eventLabel
-	};
-	const nextMacroHistory = [...(state.macroHistory || []), macroDataPoint];
+		const checkingNode = nextNodes.find((n) => n.id === 'checking')!;
 
-	// Behavioral Safeguard trigger: Pause on severe contraction
-	let triggerPause = false;
-	if (state.macroScenario === 'crash' && nextDay === 18 && !state.checklistCompleted) {
-		triggerPause = true;
-		nextLog.push(`Day ${nextDay}: [WARNING] Severe market contraction detected! S&P 500 dropped to ${marketIndexValue.toFixed(2)}. Simulation paused for behavioral cooling.`);
-	}
+		// Process daily income to primary checking
+		if (dailyIncome > 0 && !triggerPause) {
+			checkingNode.balance += dailyIncome;
+			nextLog.push(`Day ${nextDay}: Deposited daily income of $${dailyIncome.toFixed(2)} to Checking.`);
+		}
 
-	const checkingNode = nextNodes.find((n) => n.id === 'checking')!;
+		// Accrue interest once every 30 days
+		nextNodes.forEach((node) => {
+			if (node.interestRate && nextDay % 30 === 0 && !triggerPause) {
+				const monthlyRate = (node.interestRate / 100) / 12;
+				if (node.type === 'debt') {
+					const interest = node.balance * monthlyRate;
+					node.balance += interest;
+					nextLog.push(`Day ${nextDay}: Debt charged $${interest.toFixed(2)} interest.`);
+				} else if (node.type === 'hysa') {
+					const yieldEarned = node.balance * monthlyRate;
+					node.balance += yieldEarned;
+					nextLog.push(`Day ${nextDay}: HYSA earned $${yieldEarned.toFixed(2)} yield.`);
+				}
+			}
+		});
 
-	// 2. Process daily income to primary checking
-	if (dailyIncome > 0 && !triggerPause) {
-		checkingNode.balance += dailyIncome;
-		nextLog.push(`Day ${nextDay}: Deposited daily income of $${dailyIncome.toFixed(2)} to Checking.`);
-	}
+		// Process clearing queue (Release holds)
+		const pendingHoldings: SettlementHolding[] = [];
+		if (!triggerPause) {
+			nextHoldings.forEach((holding) => {
+				if (holding.releaseDay <= nextDay) {
+					const targetNode = nextNodes.find((n) => n.id === holding.originAccountId);
+					if (targetNode) {
+						targetNode.balance += holding.amount;
+						nextLog.push(`Day ${nextDay}: Completed ${holding.type} hold of $${holding.amount.toFixed(2)} for ${targetNode.name}.`);
+					}
+				} else {
+					pendingHoldings.push(holding);
+				}
+			});
+		} else {
+			pendingHoldings.push(...nextHoldings);
+		}
+		nextHoldings = pendingHoldings;
 
-	// 3. Accrue interest on applicable nodes (Checking / HYSA / Debt) once every 30 days
-	nextNodes.forEach((node) => {
-		if (node.interestRate && nextDay % 30 === 0 && !triggerPause) {
-			const monthlyRate = (node.interestRate / 100) / 12;
-			if (node.type === 'debt') {
-				const interest = node.balance * monthlyRate;
-				node.balance += interest;
-				nextLog.push(`Day ${nextDay}: Debt charged $${interest.toFixed(2)} interest.`);
-			} else if (node.type === 'hysa') {
-				const yieldEarned = node.balance * monthlyRate;
-				node.balance += yieldEarned;
-				nextLog.push(`Day ${nextDay}: HYSA earned $${yieldEarned.toFixed(2)} yield.`);
+		// Sweep function with compliance rules
+		let pdtTradesToday = state.pdtTradesToday;
+		const executeSweep = (source: AccountNode, target: AccountNode, amountToSweep: number, logMessage: string) => {
+			if (amountToSweep <= 0) return;
+
+			// A. ENFORCE IRA OUTBOUND BLOCK
+			if (source.type === 'ira') {
+				nextLog.push(`Day ${nextDay}: ERROR: Automated sweep from IRA to ${target.name} blocked to prevent early distribution penalties.`);
+				return;
+			}
+
+			// B. ENFORCE 60-DAY AML SWEEP RESTRICTION
+			const amlWindowStart = Math.max(0, nextDay - 60);
+			const incomingTransfers = nextTransferHistory.filter(
+				(record) => record.target === source.id && record.day >= amlWindowStart
+			);
+			if (incomingTransfers.length > 0) {
+				const isReturnToOrigin = incomingTransfers.some((record) => record.source === target.id);
+				if (!isReturnToOrigin) {
+					nextLog.push(`Day ${nextDay}: [AML RESTRICTION] Blocked sweep of $${amountToSweep.toFixed(2)} from ${source.name} to ${target.name}. Within 60 days, funds can only return to their originating account.`);
+					return;
+				}
+			}
+
+			// C. ENFORCE PATTERN DAY TRADER (PDT) LIMITS
+			const isEquityTarget = ['brokerage', 'ira', 'max401k', 'match401k'].includes(target.id);
+			if (isEquityTarget) {
+				const totalEquity = nextNodes
+					.filter(n => ['brokerage', 'ira', 'max401k', 'match401k'].includes(n.id))
+					.reduce((sum, n) => sum + n.balance, 0);
+				if (totalEquity < 25000) {
+					if (pdtTradesToday >= 2) {
+						nextLog.push(`Day ${nextDay}: [PDT LIMIT REACHED] Sweep to equity ${target.name} blocked. Account under $25k is limited to 2 daily sweeps.`);
+						return;
+					}
+					pdtTradesToday++;
+				}
+			}
+
+			source.balance -= amountToSweep;
+			
+			// If holds apply
+			let holdType: 'ACH' | 'ACAT' | 'T1' = 'T1';
+			let delay = 1;
+
+			if (source.type === 'checking' && target.type === 'brokerage') {
+				holdType = 'ACH';
+				delay = 6;
+			} else if (source.type === 'brokerage' && target.type === 'checking') {
+				holdType = 'ACAT';
+				delay = 15;
+			}
+
+			// Record transfer details
+			nextTransferHistory.push({
+				day: nextDay,
+				source: source.id,
+				target: target.id,
+				amount: amountToSweep
+			});
+
+			if (target.annualLimit !== undefined) {
+				target.ytdContributions += amountToSweep;
+			}
+
+			nextHoldings.push({
+				amount: amountToSweep,
+				originAccountId: target.id,
+				releaseDay: nextDay + delay,
+				type: holdType
+			});
+
+			nextLog.push(`Day ${nextDay}: ${logMessage} (Enforced ${holdType} hold of ${delay} days).`);
+		};
+
+		// Deficit pull (underbalance checking)
+		if (checkingNode.balance < checkingNode.floor && !triggerPause) {
+			const deficit = checkingNode.floor - checkingNode.balance;
+			const hysaNode = nextNodes.find((n) => n.type === 'hysa');
+			if (hysaNode && hysaNode.balance > 0) {
+				const pullAmount = Math.min(deficit, hysaNode.balance);
+				executeSweep(hysaNode, checkingNode, pullAmount, `Underbalance sweep: Restored checking floor by pulling $${pullAmount.toFixed(2)} from HYSA.`);
 			}
 		}
-	});
 
-	// 4. Process clearing queue (Release holds)
-	const pendingHoldings: SettlementHolding[] = [];
-	if (!triggerPause) {
+		// Surplus sweeps (overbalance checking)
+		if (checkingNode.balance > checkingNode.ceiling && !triggerPause) {
+			let surplus = checkingNode.balance - checkingNode.ceiling;
+			
+			for (const type of WATERFALL_ORDER) {
+				if (surplus <= 0) break;
+				
+				const targetNode = nextNodes.find((n) => n.type === type);
+				if (!targetNode) continue;
+
+				let capacity = Infinity;
+				if (targetNode.annualLimit !== undefined) {
+					capacity = Math.max(0, targetNode.annualLimit - targetNode.ytdContributions);
+				}
+				if (type === 'hysa') {
+					capacity = Math.max(0, targetNode.ceiling - targetNode.balance);
+				} else if (type === 'debt') {
+					capacity = targetNode.balance;
+				}
+
+				if (capacity > 0) {
+					const sweepAmt = Math.min(surplus, capacity);
+					if (sweepAmt > 0) {
+						executeSweep(checkingNode, targetNode, sweepAmt, `Overbalance sweep: Routed $${sweepAmt.toFixed(2)} surplus to ${targetNode.name}.`);
+						surplus -= sweepAmt;
+					}
+				}
+			}
+		}
+
+		// Calculate total wealth
+		let totalWealth = 0;
+		nextNodes.forEach((node) => {
+			if (node.type === 'debt') {
+				totalWealth -= node.balance;
+			} else if (['checking', 'hysa', 'match401k', 'hsa', 'ira', 'max401k', 'brokerage'].includes(node.type)) {
+				totalWealth += node.balance;
+			}
+		});
+
+		return {
+			day: nextDay,
+			nodes: nextNodes,
+			edges: state.edges,
+			holdings: nextHoldings,
+			totalWealthAccumulated: totalWealth,
+			log: [...state.log, ...nextLog].slice(-100),
+			transferHistory: nextTransferHistory,
+			pdtTradesToday,
+			macroScenario: state.macroScenario,
+			macroHistory: [...(state.macroHistory || []), { day: nextDay, inflationRate, marketReturn, marketIndexValue, eventLabel }],
+			isPaused: triggerPause || state.isPaused,
+			checklistCompleted: state.checklistCompleted,
+			checklistProgress: state.checklistProgress,
+			mode
+		};
+
+	} else {
+		// --- ENTERPRISE CFO SIMULATION ROOM MODE ---
+
+		const revenuesNode = nextNodes.find((n) => n.id === 'revenues')!;
+		const receivablesNode = nextNodes.find((n) => n.id === 'receivables')!;
+		const cogsNode = nextNodes.find((n) => n.id === 'cogs')!;
+		const hrNode = nextNodes.find((n) => n.id === 'hr_costs')!;
+		const capexNode = nextNodes.find((n) => n.id === 'capex')!;
+		const payablesNode = nextNodes.find((n) => n.id === 'payables')!;
+		const operatingNode = nextNodes.find((n) => n.id === 'operating_cash_flow')!;
+		const financingNode = nextNodes.find((n) => n.id === 'financing')!;
+		const netCashNode = nextNodes.find((n) => n.id === 'net_cash_flow')!;
+		const mfsNode = nextNodes.find((n) => n.id === 'mfs')!;
+
+		// A. Process daily drivers under macroeconomic shocks
+		let baseDailyRevenue = dailyIncome * 50; // default corporate scale multiplier
+		let baseDailyCOGS = dailyIncome * 20;
+		let baseDailyHR = dailyIncome * 15;
+		let baseDailyCapex = dailyIncome * 5;
+
+		if (state.macroScenario === 'inflation') {
+			// Inflation spikes HR costs/salaries by 15%, capex by 10%
+			baseDailyHR *= 1.15;
+			baseDailyCapex *= 1.10;
+		}
+
+		if (state.macroScenario === 'supply_delay') {
+			// Supply chain delay increases COGS by 20%, reduces revenue by 10%
+			baseDailyCOGS *= 1.20;
+			baseDailyRevenue *= 0.90;
+		}
+
+		// Adjust DSO/DPO variables based on scenario
+		let dsoVal = receivablesNode.dso || 35;
+		let dpoCogsVal = cogsNode.dpoVariable || 45;
+		let dpoHRVal = hrNode.dpoFixed || 30;
+		let dpoCapexVal = capexNode.dpoFixed || 60;
+
+		if (state.macroScenario === 'supply_delay') {
+			// Supply delays visually delay receivables (DSO + 15 days)
+			dsoVal += 15;
+		}
+
+		// Set current values for tracking UI parameters
+		receivablesNode.dso = dsoVal;
+		cogsNode.dpoVariable = dpoCogsVal;
+		hrNode.dpoFixed = dpoHRVal;
+		capexNode.dpoFixed = dpoCapexVal;
+
+		// VAT computation
+		const vatRate = revenuesNode.vatRate || 19.0;
+		const vatMultiplier = 1 + (vatRate / 100);
+
+		// Record daily generation metrics in balance sheet nodes for visual representation
+		revenuesNode.balance += baseDailyRevenue;
+		cogsNode.balance += baseDailyCOGS;
+		hrNode.balance += baseDailyHR;
+		capexNode.balance += baseDailyCapex;
+
+		// B. Receivables Revenue Pipeline (either factoring or DSO hold)
+		const factoringRate = revenuesNode.factoringRate || 2.5;
+		const useFactoring = state.edges.some(e => e.source === 'revenues' && e.target === 'operating_cash_flow');
+		
+		const grossReceivableAmount = baseDailyRevenue * vatMultiplier;
+
+		if (useFactoring) {
+			// Factoring: Liquidate 97.5% instantly into Operating Cash Flow, fee (2.5%) lost
+			const factoredCash = grossReceivableAmount * (1 - (factoringRate / 100));
+			operatingNode.balance += factoredCash;
+			nextLog.push(`Day ${nextDay}: Factored revenue of $${factoredCash.toFixed(2)} cash received instantly (Fee paid: $${(grossReceivableAmount - factoredCash).toFixed(2)}).`);
+		} else {
+			// Default DSO track: Add to receivables outstanding, trigger DSO release hold
+			receivablesNode.balance += grossReceivableAmount;
+			
+			// Insolvency defaults reduction
+			const insolvRisk = receivablesNode.insolvencyRisk || 3.5;
+			const netCollected = grossReceivableAmount * (1 - (insolvRisk / 100));
+
+			nextHoldings.push({
+				amount: netCollected,
+				originAccountId: 'operating_cash_flow',
+				releaseDay: nextDay + dsoVal,
+				type: 'DSO'
+			});
+		}
+
+		// C. Payables cost pipeline (COGS/HR/Capex scheduled via DPO)
+		const variablesTaxMultiplier = 1.15; // approximate VAT inputs credit
+		const rawCOGSAccrued = baseDailyCOGS * variablesTaxMultiplier;
+		const rawHRAccrued = baseDailyHR; // HR costs generally have no VAT
+		const rawCapexAccrued = baseDailyCapex * variablesTaxMultiplier;
+
+		payablesNode.balance += (rawCOGSAccrued + rawHRAccrued + rawCapexAccrued);
+
+		// Schedule DPO releases
+		nextHoldings.push({
+			amount: rawCOGSAccrued,
+			originAccountId: 'operating_cash_flow_minus_cogs', // visual tag
+			releaseDay: nextDay + dpoCogsVal,
+			type: 'DPO_COGS',
+			entityLabel: cogsNode.legalEntity
+		});
+		nextHoldings.push({
+			amount: rawHRAccrued,
+			originAccountId: 'operating_cash_flow_minus_hr',
+			releaseDay: nextDay + dpoHRVal,
+			type: 'DPO_HR',
+			entityLabel: hrNode.legalEntity
+		});
+		nextHoldings.push({
+			amount: rawCapexAccrued,
+			originAccountId: 'operating_cash_flow_minus_capex',
+			releaseDay: nextDay + dpoCapexVal,
+			type: 'DPO_CAPEX',
+			entityLabel: capexNode.legalEntity
+		});
+
+		// D. Process clearing holdings
+		const pendingHoldings: SettlementHolding[] = [];
 		nextHoldings.forEach((holding) => {
 			if (holding.releaseDay <= nextDay) {
-				const targetNode = nextNodes.find((n) => n.id === holding.originAccountId);
-				if (targetNode) {
-					nextLog.push(`Day ${nextDay}: Completed ${holding.type} hold of $${holding.amount.toFixed(2)} for ${targetNode.name}.`);
+				if (holding.type === 'DSO') {
+					// Cash collected
+					operatingNode.balance += holding.amount;
+					receivablesNode.balance = Math.max(0, receivablesNode.balance - holding.amount);
+					nextLog.push(`Day ${nextDay}: Collected accounts receivable of $${holding.amount.toFixed(2)} after DSO hold.`);
+				} else if (holding.type === 'DPO_COGS' || holding.type === 'DPO_HR' || holding.type === 'DPO_CAPEX') {
+					// Bills paid from operating cash flow / net cash flow
+					const payment = holding.amount;
+					operatingNode.balance -= payment;
+					payablesNode.balance = Math.max(0, payablesNode.balance - payment);
+					
+					// Visually register on net cash flow
+					netCashNode.balance -= payment;
+					nextLog.push(`Day ${nextDay}: Corporate payout for ${holding.type} ($${payment.toFixed(2)}) disbursed from treasury.`);
 				}
 			} else {
 				pendingHoldings.push(holding);
 			}
 		});
-	} else {
-		pendingHoldings.push(...nextHoldings);
-	}
-	nextHoldings = pendingHoldings;
+		nextHoldings = pendingHoldings;
 
-	// Helper for executing sweeps with compliance rules
-	const executeSweep = (source: AccountNode, target: AccountNode, amountToSweep: number, logMessage: string) => {
-		if (amountToSweep <= 0) return;
-
-		// A. ENFORCE IRA OUTBOUND BLOCK
-		if (source.type === 'ira') {
-			nextLog.push(`Day ${nextDay}: ERROR: Automated sweep from IRA to ${target.name} blocked to prevent early distribution penalties.`);
-			return;
+		// Move operating cash flow balance into Net Cash Flow on clock cycle
+		if (operatingNode.balance !== 0) {
+			const shift = operatingNode.balance;
+			operatingNode.balance = 0;
+			netCashNode.balance += shift;
 		}
 
-		// B. ENFORCE 60-DAY AML SWEEP RESTRICTION
-		// Look for any incoming transfers to source in the last 60 days
-		const amlWindowStart = Math.max(0, nextDay - 60);
-		const incomingTransfers = nextTransferHistory.filter(
-			(record) => record.target === source.id && record.day >= amlWindowStart
-		);
-		if (incomingTransfers.length > 0) {
-			// Find if the target is one of the originating accounts
-			const isReturnToOrigin = incomingTransfers.some((record) => record.source === target.id);
-			if (!isReturnToOrigin) {
-				nextLog.push(`Day ${nextDay}: [AML RESTRICTION] Blocked sweep of $${amountToSweep.toFixed(2)} from ${source.name} to ${target.name}. Within a 60-day window, funds can only be swept back to their originating account.`);
-				return;
+		// E. Active Treasury Management MMF Sweeping (Ceiling triggers)
+		if (netCashNode.balance > netCashNode.ceiling) {
+			const surplus = netCashNode.balance - netCashNode.ceiling;
+			netCashNode.balance -= surplus;
+			mfsNode.balance += surplus;
+			nextLog.push(`Day ${nextDay}: [TREASURY SWEEP] Idle corporate surplus of $${surplus.toFixed(2)} swept to MMF (reducing cash drag).`);
+		}
+
+		// F. Strategic Financing Drawdown (Floor triggers)
+		if (netCashNode.balance < netCashNode.floor) {
+			const deficit = netCashNode.floor - netCashNode.balance;
+			const maxFinancingDraw = financingNode.ceiling - financingNode.balance;
+			if (maxFinancingDraw > 0) {
+				const drawAmt = Math.min(deficit, maxFinancingDraw);
+				financingNode.balance += drawAmt;
+				netCashNode.balance += drawAmt;
+				nextLog.push(`Day ${nextDay}: [STRATEGIC DRAW] Drew $${drawAmt.toFixed(2)} from Credit Line to protect corporate floor liquidity.`);
+			} else {
+				nextLog.push(`Day ${nextDay}: [LIQUIDITY ALERT] Net cash is below safety floor of $${netCashNode.floor.toFixed(2)} and financing capacity is exhausted!`);
 			}
 		}
 
-		// C. ENFORCE PATTERN DAY TRADER (PDT) LIMITS
-		const isEquityTarget = ['brokerage', 'ira', 'max401k', 'match401k'].includes(target.id);
-		if (isEquityTarget) {
-			const totalEquity = nextNodes
-				.filter(n => ['brokerage', 'ira', 'max401k', 'match401k'].includes(n.id))
-				.reduce((sum, n) => sum + n.balance, 0);
-			if (totalEquity < 25000) {
-				if (pdtTradesToday >= 2) {
-					nextLog.push(`Day ${nextDay}: [PDT LIMIT REACHED] Sweep to equity ${target.name} blocked. Account under $25k is limited to 2 daily sweeps.`);
-					return;
-				}
-				pdtTradesToday++;
+		// G. Strategic Financing Interest & Yield Accruals (Every 30 Days)
+		if (nextDay % 30 === 0) {
+			// Yield on MMF
+			const yieldRate = (mfsNode.interestRate || 4.2) / 100 / 12;
+			const yieldEarned = mfsNode.balance * yieldRate;
+			mfsNode.balance += yieldEarned;
+			nextLog.push(`Day ${nextDay}: MMF Treasury accrued interest yield of $${yieldEarned.toFixed(2)}.`);
+
+			// Cost of Financing
+			if (financingNode.balance > 0) {
+				const spread = financingNode.fixedSpread || 3.5;
+				const variable = financingNode.variableRateIndex || 4.0;
+				const interestRate = (spread + variable) / 100 / 12;
+				const charges = financingNode.balance * interestRate;
+				financingNode.balance += charges;
+				nextLog.push(`Day ${nextDay}: Strategic Financing credit line charged interest fee of $${charges.toFixed(2)}.`);
 			}
 		}
 
-		source.balance -= amountToSweep;
-		target.balance += amountToSweep;
-		
-		// Record transfer history
-		nextTransferHistory.push({
+		// Calculate total corporate asset value (total liquidity)
+		const totalLiquidity = netCashNode.balance + mfsNode.balance + receivablesNode.balance - payablesNode.balance - financingNode.balance;
+
+		return {
 			day: nextDay,
-			source: source.id,
-			target: target.id,
-			amount: amountToSweep
-		});
-
-		// Enforce annual contribution trackers
-		if (target.annualLimit !== undefined) {
-			target.ytdContributions += amountToSweep;
-		}
-
-		// Enforce regulatory latencies
-		let holdType: 'ACH' | 'ACAT' | 'T1' = 'T1';
-		let delay = 1;
-
-		if (source.type === 'checking' && target.type === 'brokerage') {
-			holdType = 'ACH';
-			delay = 6;
-		} else if (source.type === 'brokerage' && target.type === 'checking') {
-			holdType = 'ACAT';
-			delay = 15;
-		}
-
-		nextHoldings.push({
-			amount: amountToSweep,
-			originAccountId: target.id,
-			releaseDay: nextDay + delay,
-			type: holdType
-		});
-
-		nextLog.push(`Day ${nextDay}: ${logMessage} (Enforced ${holdType} hold of ${delay} days).`);
-	};
-
-	// 5. PROCESS UNDERBALANCE RULES (Restorative pulls)
-	if (checkingNode.balance < checkingNode.floor && !triggerPause) {
-		const deficit = checkingNode.floor - checkingNode.balance;
-		const hysaNode = nextNodes.find((n) => n.type === 'hysa');
-		if (hysaNode && hysaNode.balance > 0) {
-			const pullAmount = Math.min(deficit, hysaNode.balance);
-			executeSweep(hysaNode, checkingNode, pullAmount, `Underbalance sweep: Restored checking floor by pulling $${pullAmount.toFixed(2)} from HYSA.`);
-		}
+			nodes: nextNodes,
+			edges: state.edges,
+			holdings: nextHoldings,
+			totalWealthAccumulated: totalLiquidity,
+			log: [...state.log, ...nextLog].slice(-100),
+			transferHistory: nextTransferHistory,
+			pdtTradesToday: 0,
+			macroScenario: state.macroScenario,
+			macroHistory: [...(state.macroHistory || []), { day: nextDay, inflationRate, marketReturn, marketIndexValue, eventLabel }],
+			isPaused: state.isPaused,
+			checklistCompleted: state.checklistCompleted,
+			checklistProgress: state.checklistProgress,
+			mode
+		};
 	}
-
-	// 6. PROCESS OVERBALANCE RULES (Sweeping surplus)
-	if (checkingNode.balance > checkingNode.ceiling && !triggerPause) {
-		let surplus = checkingNode.balance - checkingNode.ceiling;
-		
-		for (const type of WATERFALL_ORDER) {
-			if (surplus <= 0) break;
-			
-			const targetNode = nextNodes.find((n) => n.type === type);
-			if (!targetNode) continue;
-
-			let capacity = Infinity;
-			
-			if (targetNode.annualLimit !== undefined) {
-				const remainingCap = Math.max(0, targetNode.annualLimit - targetNode.ytdContributions);
-				capacity = remainingCap;
-			}
-
-			if (type === 'hysa') {
-				capacity = Math.max(0, targetNode.ceiling - targetNode.balance);
-			} else if (type === 'debt') {
-				capacity = targetNode.balance;
-			}
-
-			if (capacity > 0) {
-				const sweepAmt = Math.min(surplus, capacity);
-				if (sweepAmt > 0) {
-					executeSweep(
-						checkingNode,
-						targetNode,
-						sweepAmt,
-						`Overbalance sweep: Routed $${sweepAmt.toFixed(2)} surplus to ${targetNode.name}.`
-					);
-					surplus -= sweepAmt;
-				}
-			}
-		}
-	}
-
-	// Calculate total wealth accumulated
-	let totalWealth = 0;
-	nextNodes.forEach((node) => {
-		if (node.type === 'debt') {
-			totalWealth -= node.balance;
-		} else {
-			totalWealth += node.balance;
-		}
-	});
-
-	return {
-		day: nextDay,
-		nodes: nextNodes,
-		edges: state.edges,
-		holdings: nextHoldings,
-		totalWealthAccumulated: totalWealth,
-		log: [...state.log, ...nextLog].slice(-100),
-		transferHistory: nextTransferHistory,
-		pdtTradesToday,
-		macroScenario: state.macroScenario,
-		macroHistory: nextMacroHistory,
-		isPaused: triggerPause || state.isPaused,
-		checklistCompleted: state.checklistCompleted,
-		checklistProgress: state.checklistProgress
-	};
 }
