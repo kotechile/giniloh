@@ -1,0 +1,239 @@
+# User Guide: Giniloh Money Flow Simulator
+
+The **Frictionless Money Flow Simulator** is an interactive financial modeling playground designed to help you visualize, configure, and backtest automated cash flow pipelines. 
+
+By simulating daily transactions and monthly interest cycles, this tool shows how a forward-looking "waterfall" routing system can automatically optimize your net worth. It replaces stressful manual monthly budgeting with a zero-friction system that deposits income, fills emergency reserves, wipes out high-interest debt, maximizes tax-advantaged accounts, and channels leftover surpluses into long-term wealth generators—all automatically.
+
+---
+
+## Table of Contents
+1. [Why Automated Cash Flows Matter in Real Life](#1-why-automated-cash-flows-matter-in-real-life)
+2. [Detailed Account Node Directory](#2-detailed-account-node-directory)
+3. [Regulatory Safeguards & Simulation Rules](#3-regulatory-safeguards--simulation-rules)
+4. [Interface & Control Dashboards](#4-interface--control-dashboards)
+5. [Orchestrator CLI Command Syntax Reference](#5-orchestrator-cli-command-syntax-reference)
+6. [Real-World Configuration Scenarios](#6-real-world-configuration-scenarios)
+
+---
+
+## 1. Why Automated Cash Flows Matter in Real Life
+
+Traditional budgeting is a **retrospective chore**. It asks you to categorize past expenses, feel guilty about overspending, and manually transfer funds between accounts every month. This creates cognitive load and decision fatigue, often resulting in money sitting idle in low-interest checking accounts or failing to reach investment goals.
+
+The **Loh-Friction Philosophy** turns budgeting on its head:
+* **Forward-Looking Allocations**: Money is routed the moment it enters your ecosystem. 
+* **Zero Decision Friction**: By configuring rules once, you eliminate the emotional willpower needed to save and invest.
+* **Optimized Compounding**: Cash is never left dragging; it immediately goes to its highest-utility destination (paying off 18% debt, securing free 401(k) matches, or earning yield in index funds).
+* **Automatic Safety Nets**: If an unexpected expense drains your checking account, savings are pulled back automatically to protect you from overdrafts.
+
+Spending 15 minutes in this simulator allows you to stress-test these rules under historic market regimes (steady growth, stagflation, or a 2008-style crash) before configuring them in your real-life bank and brokerage accounts.
+
+---
+
+## 2. Detailed Account Node Directory
+
+The canvas models eight distinct accounts. Every account has specific logic rules, limits, and time-frame behaviors.
+
+| Account ID | Display Name | Account Type | Real-Life Purpose & Mechanics |
+| :--- | :--- | :--- | :--- |
+| `checking` | **Primary Checking** | Hub | **The entry point.** All income deposits here. When the balance exceeds its **Ceiling ($T_{over}$)**, surplus cash sweeps to the waterfall. If the balance drops below its **Floor ($T_{under}$)**, it triggers an emergency pull from HYSA. |
+| `hysa` | **HYSA (Emergency Fund)** | Cash / Yield | **Safety reserve.** Earns interest (APY) computed daily and accrued every **30 simulated days**. Sweeps fill it up to its ceiling (typically 3–6 months of expenses), after which it is bypassed. |
+| `match401k` | **Employer 401k Match** | Equity | **Free money.** Captures pre-tax contributions up to the employer matching cap (annual YTD limit). Balances grow/shrink daily based on simulated stock market index returns. |
+| `debt` | **High-Interest Debt** | Liability | **Credit cards / high-rate loans.** Charges interest (APY) accrued every **30 simulated days**. The waterfall routes cash aggressively to pay this balance down to $0 before passing to standard investments. |
+| `hsa` | **Pre-tax HSA** | Health / Equity | **Triple-tax-advantaged account.** Tax-deductible contributions, tax-free growth, and tax-free withdrawals for healthcare. Sweeps are capped by the annual IRS YTD limit. |
+| `ira` | **Roth IRA** | Retirement | **Post-tax tax-free growth.** Sweeps are capped by the annual IRS YTD limit. Standard rules apply: **outbound sweeps are strictly blocked** to simulate early-withdrawal tax penalties. |
+| `max401k` | **Workplace 401k Max** | Retirement | **Pre-tax voluntary max-out.** Routes cash after securing matching funds, paying high-rate debt, and filling IRAs, capped at the annual IRS YTD limit. |
+| `brokerage` | **Taxable Brokerage** | Taxable Equity | **Surplus compounder.** Receives the absolute overflow with infinite capacity. Subject to daily stock market fluctuations. Used for money needed before retirement age. |
+
+### Units of Time & Rates in the Simulator
+* **1 Day**: The fundamental step unit. Daily income is added and market returns are compounded every business day.
+* **30 Days**: The billing/statement cycle. Every 30 days, interest is calculated and posted (positive dividends to `hysa`, negative interest charges to `debt`).
+* **Annual Limits**: IRS caps (e.g., $7,000 for `ira`, $4,150 for `hsa`) reset when the simulation restarts. YTD trackers prevent exceeding these limits.
+
+---
+
+## 3. Regulatory Safeguards & Simulation Rules
+
+To model real-life compliance and protect users from destructive financial behaviors, the engine enforces six built-in guardrails:
+
+1. **Circular Dependency Protection**
+   * *The Rule*: You cannot route funds in an infinite loop (e.g., Checking $\rightarrow$ HYSA and HYSA $\rightarrow$ Checking).
+   * *Simulation response*: Commands creating cyclic paths are blocked with a `Circular dependency detected` error.
+2. **IRA Outbound Protection**
+   * *The Rule*: Siphoning cash out of a Roth IRA or 401(k) for daily expenses triggers high IRS tax penalties.
+   * *Simulation response*: Automated sweeps out of `ira` or 401(k) accounts are blocked immediately.
+3. **Realistic Transfer Latency Holds**
+   * *The Rule*: Cash transfers do not settle instantly. Standard transfers take time, ACH deposits have hold periods, and account transfers (ACATS) freeze assets.
+   * *Simulation response*: Transfers are held in a pending state:
+     * Standard Transfers: **1-day hold** (`T+1`).
+     * Checking $\rightarrow$ Brokerage: **6-day ACH settlement hold**.
+     * Brokerage $\rightarrow$ Checking: **15-day ACAT settlement lock**.
+4. **Pattern Day Trader (PDT) Limits**
+   * *The Rule*: Equity accounts with balances below $25,000 are restricted from excessive daily trading.
+   * *Simulation response*: If total equity across `brokerage`, `ira`, and `401k` is under $25,000, you are limited to a maximum of **2 sweeps to equity accounts per day**. Further sweeps are blocked.
+5. **Anti-Money Laundering (AML) Lookback**
+   * *The Rule*: Moving money rapidly back and forth between accounts mimics layering schemes flaggable by compliance.
+   * *Simulation response*: Within a **60-day window** of receiving a transfer, an account can only route funds *back to the originating account*. Sweeps to new third-party accounts are blocked.
+6. **Ardal Loh-Gronager Behavioral Safeguard Overlay**
+   * *The Rule*: Panic-selling during market crashes locks in temporary paper losses as permanent realized losses.
+   * *Simulation response*: In the **Market Contraction (Crash)** scenario, the simulator automatically pauses on **Day 18** (when the market drops over 10%). The interface locks until you complete the 6-question emotional centering checklist.
+
+---
+
+## 4. Interface & Control Dashboards
+
+* **System Flow Control (Top)**: Toggle the automated daily clock, step manually day-by-day, modify daily income, choose simulation speeds, or select the macroeconomic backtesting regime.
+* **Backtest Scenario Selector**:
+  * *Baseline*: Solid, steady growth mimicking historical long-term averages.
+  * *Stagflation*: High inflation (8.5%+) causing HYSA rates to spike to 5.5% and debt rates to surge to 22.0% while stock performance remains flat.
+  * *Market Contraction*: Mimics the 2008 crash. The stock market plunges starting Day 15, triggering the emotional centering check-in.
+* **Interactive Money Flow Canvas (Middle)**: Double-click nodes to view tooltip statistics, or click them to activate the parameters drawer where you can drag sliders to change balances, ceilings, and floors in real time.
+* **AI Orchestration Chat (Bottom-Left)**: Talk to the simulator using natural language. The system resolves your speech to automated commands using the LLM API layer (Gemini or DeepSeek) or a fast, local heuristics engine if no keys are found.
+* **Market Scripting Rules (Bottom-Right)**: Enable conditional rules that trigger actions based on simulated conditions (e.g., stopping sweeps if inflation rises, buying the dip if S&P 500 drops).
+
+---
+
+## 5. Orchestrator CLI Command Syntax Reference
+
+In the Frictionless Moneyflow Simulator, the Natural Language / LLM configuration chat operates as an intelligent translation layer. It bridges everyday speech (e.g., "sweep 500 from checking to emergency fund") and the simulator's strict internal syntax (e.g., `checking [500] hysa`).
+
+Here is a detailed breakdown of how the parser translates user requests, what commands are generated under the hood, and how users should format their instructions.
+
+### 1. The Core Translation Mechanism
+The parser in `llmParser.ts` runs incoming text through a two-tier parsing workflow:
+* **Local Heuristics (Regex)**: It first attempts to match commands using fast, local regex matching. For example:
+  * Set parameters: matches `set [account] [field] (to) [value]` $\rightarrow$ `set checking ceiling 6000`
+  * Sweep commands: matches expressions starting with send, sweep, route, transfer, or move, followed by an amount and the source/target account $\rightarrow$ `checking [500] brokerage`
+* **LLM API Fallback (Gemini or DeepSeek)**: If the local regex does not match, the simulator leverages a cloud LLM (DeepSeek's `deepseek-chat` using `PUBLIC_DEEPSEEK_API_KEY` or Gemini's `gemini-2.5-flash` using `PUBLIC_GEMINI_API_KEY` depending on the environment keys configured). The system instructions prompt the LLM to act as a strict API translation layer returning:
+  * A valid simulator command on the first line.
+  * A friendly explanation on the second line.
+
+### 2. Supported Account Identifiers & Aliases
+The parser contains mapping dictionaries to translate natural language synonyms to actual simulator node IDs:
+
+| System Node ID | Common User Aliases (Input) |
+| :--- | :--- |
+| `checking` | checking, primary checking, checking account |
+| `hysa` | hysa, emergency fund, savings, savings account, high yield savings |
+| `match401k` | match401k, 401k match, employer match |
+| `debt` | debt, credit card, high-interest debt, loan |
+| `hsa` | hsa, health savings |
+| `ira` | ira, roth ira |
+| `max401k` | max401k, 401k max, workplace 401k |
+| `brokerage` | brokerage, taxable brokerage, investments, stocks |
+
+### 3. "Can I just say 'add automatic savings to my savings account'?"
+No, not exactly—you need to specify the numerical value or limits.
+
+Because the underlying Giniloh simulator must know how much money to route or what ceiling/floor limits to set, conversational prompts **MUST INCLUDE NUMERIC VALUES**.
+
+* **Why vague prompts fail**:
+  If a user inputs: *"add automatic savings to my savings account"*
+  * *Local Regex Parser*: Fails to match because it expects a specific amount (like $500 or 10%).
+  * *LLM API Fallback*: Will struggle because the prompt lacks the amount of the sweep. The system prompt directs the LLM to translate strictly to `Source [Amount] Target`. Without an amount, it cannot formulate a valid command and will fallback to a warning/help state.
+* **Recommended way to instruct**:
+  Users should specify the amount/percentage and the source/destination accounts. Here are ideal examples:
+  * To build cash flow pipelines:
+    * *"Sweep 500 from checking to savings"* $\rightarrow$ Translates to: `checking [500] hysa`
+    * *"Route 10 from checking to stocks"* $\rightarrow$ Translates to: `checking [10] brokerage` (percentages are represented without % in the bracket)
+    * *"Send 2000 from checking to roth ira"* $\rightarrow$ Translates to: `checking [2000] ira`
+  * To set account thresholds:
+    * *"Set checking ceiling to 5000"* $\rightarrow$ Translates to: `set checking ceiling 5000`
+    * *"Set debt balance to 8000"* $\rightarrow$ Translates to: `set debt balance 8000`
+    * *"Set emergency fund threshold to 15000"* $\rightarrow$ Translates to: `set hysa ceiling 15000`
+
+### 4. Basic Command Table
+
+| Command Pattern | Action | Real-Life Application Example |
+| :--- | :--- | :--- |
+| `set [node] [balance/ceiling/floor] [value]` | Configures account thresholds or balances. | `set checking ceiling 6000` <br> `set debt balance 5000` |
+| `[Source] [[Amount]] [Target]` | Establishes an automated routing pipeline of `$Amount` (if fixed) or `%Amount` (if percentage). | `checking [1500] hysa` <br> `checking [10] match401k` |
+| `reset` | Reverts all account stats, history, and storage configuration to defaults. | `reset` |
+| `clear` | Clears the command console history. | `clear` |
+
+---
+
+## 6. Real-World Configuration Scenarios
+
+Below are three copy-pasteable configuration scripts you can enter via the AI Chat or CLI to simulate specific life situations.
+
+### Scenario A: The Debt Crusher 🥊
+*Goal*: You have $8,000 in credit card debt costing you 18% APY. You want to freeze investments, run a lean checking account, and funnel every spare penny into wiping out the debt.
+
+1. **Set Up the Parameters**:
+   * Set checking ceiling low so sweeps trigger quickly:
+     ```txt
+     set checking ceiling 2500
+     ```
+   * Set your outstanding credit card balance:
+     ```txt
+     set debt balance 8000
+     ```
+   * Set HYSA emergency fund ceiling to a bare-minimum starter fund ($1,000):
+     ```txt
+     set hysa ceiling 1000
+     ```
+2. **Execution**:
+   * Click **Start clock**. Notice how Checking sweeps surplus first to fill the $1,000 HYSA, and then routes 100% of the remaining surplus directly to `debt`.
+   * Watch the daily interest charge on Day 30 in the audit log, and observe how fast the debt is crushed to $0 before any funds flow to the brokerage.
+
+---
+
+## 7. Real-Life Personal Money Flow Practice Scenarios
+
+Here are 4 real-life scenarios formatted with execution steps (including both AI commands and manual settings), and the expected user observations.
+
+### Scenario 1: Aggressive Debt Paydown vs. Earning Interest
+* **Scenario**: A user takes home $2,800 every two weeks ($200/day). They currently have $3,000 in checking but want to cap it at $2,000. They also have $4,000 in high-interest credit card debt and want to watch the system automate payoff.
+* **Execution**:
+  * *AI Chat*: User types: *"Set my income to 200 a day. Set my checking balance to 3000 and limit it to 2000. Set my debt to 4000."*
+  * *Manual alternative*: Click checking node $\rightarrow$ set balance to 3,000 and ceiling to 2,000. Click debt node $\rightarrow$ set balance to 4,000.
+* **Observation**: When starting the clock, the $1,000 surplus sweeps to HYSA and then cascades to pay down High-Interest Debt. The user watches the debt decrease to $0 while seeing interest charges accrue monthly until fully cleared.
+
+### Scenario 2: The Emergency Expense (Floor Protection)
+* **Scenario**: A user has $15,000 in HYSA. They want to maintain a checking floor of $1,500. An unexpected expense drops their checking balance to $500. They want to verify floor restoration rules.
+* **Execution**:
+  * *AI Chat*: User types: *"Set my checking floor to 1500. Set checking balance to 500. Set my HYSA to 15000."*
+  * *Manual alternative*: Select Checking node $\rightarrow$ drag Floor to $1,500 and Balance to $500. Select HYSA $\rightarrow$ set balance to $15,000.
+* **Observation**: Step 1 day. The system detects the checking deficit and triggers an automated "Underbalance sweep" of $1,000 from HYSA back to checking to restore the floor.
+
+### Scenario 3: The Income Surge and Waterfall Overflow
+* **Scenario**: A user receives a promotion ($500/day). The HYSA is full ($15,000) and debt is zero. They want to verify long-term investment cascading.
+* **Execution**:
+  * *AI Chat*: User types: *"Set my income to 500 a day. Set my HYSA balance to 15000 and its ceiling to 15000. Set my debt to 0."*
+  * *Manual alternative*: Set income/day to $500, set HYSA balance and ceiling to $15,000, and ensure Debt is zero.
+* **Observation**: Run at 5x. Daily surpluses bypass HYSA and debt, cascading down to max out Employer 401(k) Match, fill pre-tax HSA, fill Roth IRA, and finally overflow into the Taxable Brokerage.
+
+### Scenario 4: Testing the System Guardrails (Prohibited Transfers)
+* **Scenario**: A user attempts to draw funds out of their Roth IRA back to Checking to cover daily expenses.
+* **Execution**:
+  * *AI Chat*: User types: *"Route 1000 from my IRA to checking."* (Translates to: `ira [1000] checking`)
+* **Observation**: No cyan path is drawn. The CLI and Audit Log print: `"ERROR: Automated sweep from IRA blocked to prevent early distribution penalties"`, enforcing real-world retirement account guidelines.
+
+---
+
+## 8. Enterprise Treasury Flow Practice Scenarios
+
+### Scenario 1: Active Treasury Management to Eliminate Cash Drag
+* **Scenario**: A corporate treasury wants to sweep idle capital exceeding $1,000,000 in their operating account into a Money Market Fund to eliminate cash drag.
+* **Execution**:
+  * *AI Chat*: User types: *"Set operating account ceiling to $1,000,000. Route surplus to money market fund."* (Or manual equivalent: Select operating node $\rightarrow$ set ceiling to $1,000,000 and connect edge to Money Market Fund).
+* **Observation**: Clock runs, and any daily operating balance over $1,000,000 is automatically swept to the Money Market Fund, capturing high-utility corporate yield.
+
+### Scenario 2: Funding Special Purpose Vehicles (SPVs)
+* **Scenario**: A company needs to continuously route $50,000 from corporate revenue into a Special Purpose Vehicle (SPV).
+* **Execution**:
+  * *AI Chat*: User types: *"Create a programmatic waterfall routing $50,000 from corporate revenue to the SPV account."* (Translates to: `revenue [50000] spv`).
+* **Observation**: A glowing cyan flow path connects the revenue node to the SPV node, automating structured distribution continuously.
+
+### Scenario 3: Multi-Currency Account Distribution
+* **Scenario**: A multinational processes revenues in various currencies and routes them to regional distribution accounts to cover local payroll.
+* **Execution**:
+  * *AI Chat*: User types: *"Route surplus from the multi-currency holding account to the European distribution account."* (Translates to automated overbalance sweep rules in the CLI).
+* **Observation**: Multi-currency account balance surpluses automatically sweep into localized regional accounts.
+
+### Scenario 4: Preventing Delayed Asset Allocation (The Biometric FIDO Upgrade)
+* **Scenario**: A systems administrator compares traditional passwords/OTP login friction to modern biometric FIDO passwordless authentication.
+* **Execution**:
+  * *AI Chat*: User types: *"Compare traditional OTP login costs to modern FIDO passwordless standards."*
+* **Observation**: System outputs comparative logs detailing transaction speedups, help-desk savings, and the mitigation of delays that cause idle asset drag.
