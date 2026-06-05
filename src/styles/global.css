@@ -308,12 +308,11 @@ a {
 .prose div[style*="background-color"] {
   height: auto !important;
   min-height: 0 !important;
-  padding: 2rem !important;
-  margin: 3rem 0 !important;
-  border-radius: 1.5rem !important;
+  padding: 1.5rem 0 !important; /* blend without extra box padding */
+  margin: 2rem 0 !important;
 }
 
-/* Force high contrast for the light takeaway box */
+/* Force dark/transparent styling for standard groups and columns to blend with the page */
 .prose div[style*="background-color: #ffffff"],
 .prose div[style*="background-color:#ffffff"],
 .prose .has-white-background-color,
@@ -321,10 +320,9 @@ a {
 .prose .has-very-light-gray-background-color,
 .prose .wp-block-group.has-background,
 .prose .wp-block-columns.has-background {
-  background: #eff1f4 !important;
-  color: #202938 !important;
-  border: 1px solid rgba(17, 24, 39, 0.09) !important;
-  border-radius: 1.75rem !important;
+  background: transparent !important;
+  color: #cbd5e1 !important;
+  border: none !important;
   box-shadow: none !important;
 }
 
@@ -363,7 +361,7 @@ a {
 .prose .wp-block-columns.has-background p,
 .prose .wp-block-columns.has-background li,
 .prose .wp-block-columns.has-background strong {
-  color: #1f2937 !important;
+  color: #cbd5e1 !important;
 }
 
 .prose .has-white-background-color h2,
@@ -373,14 +371,13 @@ a {
 .prose .wp-block-columns.has-background h2,
 .prose div[style*="background-color"] h2 {
   margin-top: 0 !important;
-  margin-bottom: 1.75rem !important;
-  padding-left: 0 !important;
-  border-left: 0 !important;
-  font-size: clamp(2rem, 3.5vw, 2.85rem) !important;
-  line-height: 1.08 !important;
-  font-weight: 800 !important;
-  letter-spacing: -0.04em !important;
-  color: #101828 !important;
+  margin-bottom: 1.5rem !important;
+  padding-left: 1rem !important;
+  border-left: 4px solid #06b6d4 !important;
+  font-size: 1.875rem !important;
+  line-height: 2.25rem !important;
+  font-weight: 700 !important;
+  color: #ffffff !important;
 }
 
 .prose .has-white-background-color ul,
@@ -389,7 +386,7 @@ a {
 .prose .wp-block-group.has-background ul,
 .prose .wp-block-columns.has-background ul,
 .prose div[style*="background-color"] ul {
-  color: #202938 !important;
+  color: #cbd5e1 !important;
   padding-left: 1.5rem !important;
 }
 
@@ -417,8 +414,8 @@ a {
 .prose div[style*="background-color"] a,
 .prose .geo-key-takeaways a,
 .prose [data-geo-injected="key-takeaways"] a {
-  color: #1d4ed8 !important;
-  text-decoration-color: rgba(29, 78, 216, 0.55) !important;
+  color: #60a5fa !important;
+  text-decoration-color: rgba(96, 165, 250, 0.7) !important;
 }
 
 .prose .has-white-background-color a:hover,
@@ -429,9 +426,8 @@ a {
 .prose div[style*="background-color"] a:hover,
 .prose .geo-key-takeaways a:hover,
 .prose [data-geo-injected="key-takeaways"] a:hover {
-  color: #1e40af !important;
-  text-decoration-color: rgba(30, 64, 175, 0.85) !important;
-  text-shadow: none !important;
+  color: #93c5fd !important;
+  text-decoration-color: rgba(147, 197, 253, 0.95) !important;
 }
 
 .prose .has-white-background-color li + li,
@@ -464,13 +460,14 @@ a {
 /* WordPress injected takeaway summary block */
 .prose .geo-key-takeaways,
 .prose [data-geo-injected="key-takeaways"] {
-  background: #eff1f4 !important;
-  color: #202938 !important;
-  border: 1px solid #e5e7eb !important;
+  background: rgba(15, 23, 42, 0.6) !important;
+  color: #e2e8f0 !important;
+  border: 1px solid rgba(56, 189, 248, 0.2) !important;
   border-radius: 18px !important;
   padding: 2rem 2.25rem !important;
   margin: 0 0 24px 0 !important;
-  box-shadow: none !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(8px) !important;
 }
 
 .prose .geo-key-takeaways h2,
@@ -478,18 +475,18 @@ a {
   margin: 0 0 1.25rem 0 !important;
   padding-left: 0 !important;
   border-left: 0 !important;
-  color: #111827 !important;
-  font-size: clamp(2.3rem, 4vw, 3.3rem) !important;
-  line-height: 1.05 !important;
-  font-weight: 800 !important;
-  letter-spacing: -0.035em !important;
+  color: #ffffff !important;
+  font-size: 1.875rem !important;
+  line-height: 2.25rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.025em !important;
 }
 
 .prose .geo-key-takeaways ul,
 .prose [data-geo-injected="key-takeaways"] ul {
   margin: 0 !important;
-  padding-left: 1.9rem !important;
-  color: #1f2937 !important;
+  padding-left: 1.5rem !important;
+  color: #cbd5e1 !important;
   list-style: disc !important;
   list-style-position: outside !important;
 }
@@ -498,9 +495,9 @@ a {
 .prose [data-geo-injected="key-takeaways"] li,
 .prose .geo-key-takeaways p,
 .prose [data-geo-injected="key-takeaways"] p {
-  color: #1f2937 !important;
-  font-size: clamp(1.28rem, 2.3vw, 1.52rem) !important;
-  line-height: 1.72 !important;
+  color: #cbd5e1 !important;
+  font-size: 1.05rem !important;
+  line-height: 1.8 !important;
 }
 
 .prose .geo-key-takeaways li,
@@ -511,7 +508,7 @@ a {
 
 .prose .geo-key-takeaways li::marker,
 .prose [data-geo-injected="key-takeaways"] li::marker {
-  color: #111827 !important;
+  color: #06b6d4 !important;
   font-size: 0.95em !important;
 }
 
