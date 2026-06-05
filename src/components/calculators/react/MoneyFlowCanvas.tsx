@@ -239,7 +239,7 @@ export default function MoneyFlowCanvas({
 	};
 
 	return (
-		<div className="relative w-full rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/45 p-2 md:p-6 shadow-xl backdrop-blur-md overflow-hidden min-h-[600px]">
+		<div className="relative w-full rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 p-2 md:p-6 shadow-inner overflow-hidden min-h-[600px]">
 			{/* Background Grid Pattern */}
 			<div className="absolute inset-0 opacity-[0.05] dark:opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTQwIDBIMHY0MGg0MFYweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM2YzZjRmIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=')] pointer-events-none"></div>
 
@@ -348,7 +348,7 @@ export default function MoneyFlowCanvas({
 									'absolute w-[240px] h-[80px] text-left p-4 rounded-xl border bg-white dark:bg-slate-800 transition flex flex-col justify-between hover:scale-105 cursor-pointer z-10 hover:z-30 focus-within:z-30 group shadow-sm hover:shadow-md dark:shadow-none',
 									isSelected
 										? 'border-blue-500 dark:border-cyan-400 shadow-[0_0_0_2px_rgba(59,130,246,0.3)] z-20'
-										: `border-slate-200 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-500`
+										: `border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600`
 								].join(' ')}
 							>
 								{/* Tooltip Hover Overlay */}

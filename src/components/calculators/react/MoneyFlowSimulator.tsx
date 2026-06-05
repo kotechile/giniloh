@@ -496,10 +496,10 @@ export default function MoneyFlowSimulator() {
 					<button
 						onClick={() => handleModeSwitch('personal')}
 						className={[
-							'px-4 py-1.5 rounded-xl text-xs font-semibold tracking-tight transition duration-200 cursor-pointer',
+							'px-4 py-1.5 rounded-lg text-xs font-semibold tracking-tight transition duration-200 cursor-pointer',
 							state.mode === 'personal'
-								? 'bg-cyan-600 text-white shadow-lg shadow-cyan-600/20'
-								: 'bg-transparent text-slate-400 hover:text-slate-200'
+								? 'bg-slate-800 text-white dark:bg-slate-700'
+								: 'bg-transparent text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200'
 						].join(' ')}
 					>
 						👤 Personal Wealth Orchestrator
@@ -507,10 +507,10 @@ export default function MoneyFlowSimulator() {
 					<button
 						onClick={() => handleModeSwitch('enterprise')}
 						className={[
-							'px-4 py-1.5 rounded-xl text-xs font-semibold tracking-tight transition duration-200 cursor-pointer',
+							'px-4 py-1.5 rounded-lg text-xs font-semibold tracking-tight transition duration-200 cursor-pointer',
 							state.mode === 'enterprise'
-								? 'bg-emerald-600 text-white shadow-lg shadow-emerald-600/20'
-								: 'bg-transparent text-slate-400 hover:text-slate-200'
+								? 'bg-slate-800 text-white dark:bg-slate-700'
+								: 'bg-transparent text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200'
 						].join(' ')}
 					>
 						🏢 Enterprise CFO Simulation Room
@@ -522,7 +522,7 @@ export default function MoneyFlowSimulator() {
 			</div>
 
 			{/* Main Simulator Dashboard */}
-			<div className="overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/40 p-4 md:p-6 shadow-xl backdrop-blur-md">
+			<div className="overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 md:p-6 shadow-xl">
 				<div className="flex flex-wrap items-center justify-between gap-6 pb-6 border-b border-slate-200 dark:border-slate-800">
 					<div>
 						<p className="font-mono text-xs uppercase tracking-[0.28em] text-cyan-600 dark:text-cyan-400">
@@ -535,23 +535,23 @@ export default function MoneyFlowSimulator() {
 					
 					{/* Status Stats */}
 					<div className="flex flex-wrap gap-3 text-left">
-						<div className="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm px-4 py-2">
+						<div className="rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 px-4 py-2">
 							<span className="block font-mono text-[9px] uppercase tracking-widest text-slate-500">Macro Feed</span>
-							<span className="block text-sm font-bold font-mono text-slate-900 dark:text-white mt-1">Index: {currentSAndP.toFixed(2)}</span>
+							<span className="block text-sm font-bold font-sans text-slate-900 dark:text-white mt-1">Index: {currentSAndP.toFixed(2)}</span>
 						</div>
-						<div className="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm px-4 py-2">
+						<div className="rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 px-4 py-2">
 							<span className="block font-mono text-[9px] uppercase tracking-widest text-slate-500">Inflation</span>
-							<span className="block text-sm font-bold font-mono text-red-600 dark:text-red-400 mt-1">{currentInflation.toFixed(1)}%</span>
+							<span className="block text-sm font-bold font-sans text-red-600 dark:text-red-400 mt-1">{currentInflation.toFixed(1)}%</span>
 						</div>
-						<div className="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm px-4 py-2">
+						<div className="rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 px-4 py-2">
 							<span className="block font-mono text-[9px] uppercase tracking-widest text-slate-500">Day Count</span>
-							<span className="block text-sm font-bold font-mono text-slate-900 dark:text-white mt-1">{state.day} days</span>
+							<span className="block text-sm font-bold font-sans text-slate-900 dark:text-white mt-1">{state.day} days</span>
 						</div>
-						<div className="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm px-4 py-2">
+						<div className="rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 px-4 py-2">
 							<span className="block font-mono text-[9px] uppercase tracking-widest text-slate-500">
 								{isEnterprise ? 'Treasury Net Position' : 'Wealth Projection'}
 							</span>
-							<span className="block text-sm font-bold font-mono text-emerald-600 dark:text-emerald-400 mt-1">
+							<span className="block text-sm font-bold font-sans text-emerald-600 dark:text-emerald-400 mt-1">
 								{formatCurrency(state.totalWealthAccumulated)}
 							</span>
 						</div>
