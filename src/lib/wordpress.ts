@@ -105,11 +105,18 @@ function normalizePost(post: WordPressPostResponse): WordPressPost {
 		featuredImage = `${apiBase}${featuredImage}`;
 	}
 
+	let htmlContent = post.content?.rendered || '';
+	
+	// Remove redundant "Short Answer" section and the "article-context" block inserted by WordPress
+	htmlContent = htmlContent
+		.replace(/<div class="article-context"[^>]*>[\s\S]*?<\/div>\s*<\/div>/ig, '')
+		.replace(/<h2[^>]*>\s*Short Answer\s*<\/h2>\s*<p[^>]*>[\s\S]*?<\/p>/ig, '');
+
 	return {
 		id: post.id,
 		title: stripHtml(post.title?.rendered) || 'Untitled post',
 		excerpt: stripHtml(post.excerpt?.rendered),
-		content: post.content?.rendered || '',
+		content: htmlContent,
 		slug: post.slug || '',
 		link: post.link ?? '#',
 		date: post.date ?? null,
