@@ -38,29 +38,29 @@ const ENTERPRISE_NODE_COORDINATES: Record<string, { x: number; y: number }> = {
 };
 
 // Styles mapping for Personal Mode
-const PERSONAL_ACCENT_COLORS: Record<string, { border: string; glow: string; text: string; bg: string }> = {
-	checking: { border: 'border-cyan-500/30', glow: 'shadow-[0_0_20px_rgba(6,182,212,0.15)]', text: 'text-cyan-400', bg: 'bg-cyan-500/10' },
-	hysa: { border: 'border-emerald-500/30', glow: 'shadow-[0_0_20px_rgba(16,185,129,0.15)]', text: 'text-emerald-400', bg: 'bg-emerald-500/10' },
-	match401k: { border: 'border-blue-500/30', glow: 'shadow-[0_0_20px_rgba(59,130,246,0.15)]', text: 'text-blue-400', bg: 'bg-blue-500/10' },
-	debt: { border: 'border-red-500/30', glow: 'shadow-[0_0_20px_rgba(239,68,68,0.15)]', text: 'text-red-400', bg: 'bg-red-500/10' },
-	hsa: { border: 'border-teal-500/30', glow: 'shadow-[0_0_20px_rgba(20,184,166,0.15)]', text: 'text-teal-400', bg: 'bg-teal-500/10' },
-	ira: { border: 'border-indigo-500/30', glow: 'shadow-[0_0_20px_rgba(99,102,241,0.15)]', text: 'text-indigo-400', bg: 'bg-indigo-500/10' },
-	max401k: { border: 'border-purple-500/30', glow: 'shadow-[0_0_20px_rgba(168,85,247,0.15)]', text: 'text-purple-400', bg: 'bg-purple-500/10' },
-	brokerage: { border: 'border-violet-500/30', glow: 'shadow-[0_0_20px_rgba(139,92,246,0.15)]', text: 'text-violet-400', bg: 'bg-violet-500/10' }
+const PERSONAL_ACCENT_COLORS: Record<string, { text: string; bg: string }> = {
+	checking: { text: 'text-cyan-700 dark:text-cyan-300', bg: 'bg-cyan-100 dark:bg-cyan-900/50' },
+	hysa: { text: 'text-emerald-700 dark:text-emerald-300', bg: 'bg-emerald-100 dark:bg-emerald-900/50' },
+	match401k: { text: 'text-blue-700 dark:text-blue-300', bg: 'bg-blue-100 dark:bg-blue-900/50' },
+	debt: { text: 'text-red-700 dark:text-red-300', bg: 'bg-red-100 dark:bg-red-900/50' },
+	hsa: { text: 'text-teal-700 dark:text-teal-300', bg: 'bg-teal-100 dark:bg-teal-900/50' },
+	ira: { text: 'text-indigo-700 dark:text-indigo-300', bg: 'bg-indigo-100 dark:bg-indigo-900/50' },
+	max401k: { text: 'text-purple-700 dark:text-purple-300', bg: 'bg-purple-100 dark:bg-purple-900/50' },
+	brokerage: { text: 'text-violet-700 dark:text-violet-300', bg: 'bg-violet-100 dark:bg-violet-900/50' }
 };
 
 // Styles mapping for Enterprise Mode
-const ENTERPRISE_ACCENT_COLORS: Record<string, { border: string; glow: string; text: string; bg: string }> = {
-	revenues: { border: 'border-emerald-500/30', glow: 'shadow-[0_0_20px_rgba(16,185,129,0.15)]', text: 'text-emerald-400', bg: 'bg-emerald-500/10' },
-	receivables: { border: 'border-amber-500/30', glow: 'shadow-[0_0_20px_rgba(245,158,11,0.15)]', text: 'text-amber-400', bg: 'bg-amber-500/10' },
-	payables: { border: 'border-rose-500/30', glow: 'shadow-[0_0_20px_rgba(244,63,94,0.15)]', text: 'text-rose-400', bg: 'bg-rose-500/10' },
-	operating_cash_flow: { border: 'border-cyan-500/30', glow: 'shadow-[0_0_20px_rgba(6,182,212,0.15)]', text: 'text-cyan-400', bg: 'bg-cyan-500/10' },
-	cogs: { border: 'border-orange-500/30', glow: 'shadow-[0_0_20px_rgba(249,115,22,0.15)]', text: 'text-orange-400', bg: 'bg-orange-500/10' },
-	hr_costs: { border: 'border-red-500/30', glow: 'shadow-[0_0_20px_rgba(239,68,68,0.15)]', text: 'text-red-400', bg: 'bg-red-500/10' },
-	capex: { border: 'border-fuchsia-500/30', glow: 'shadow-[0_0_20px_rgba(217,70,239,0.15)]', text: 'text-fuchsia-400', bg: 'bg-fuchsia-500/10' },
-	financing: { border: 'border-violet-500/30', glow: 'shadow-[0_0_20px_rgba(139,92,246,0.15)]', text: 'text-violet-400', bg: 'bg-violet-500/10' },
-	net_cash_flow: { border: 'border-blue-500/30', glow: 'shadow-[0_0_20px_rgba(59,130,246,0.15)]', text: 'text-blue-400', bg: 'bg-blue-500/10' },
-	mfs: { border: 'border-teal-500/30', glow: 'shadow-[0_0_20px_rgba(20,184,166,0.15)]', text: 'text-teal-400', bg: 'bg-teal-500/10' }
+const ENTERPRISE_ACCENT_COLORS: Record<string, { text: string; bg: string }> = {
+	revenues: { text: 'text-emerald-700 dark:text-emerald-300', bg: 'bg-emerald-100 dark:bg-emerald-900/50' },
+	receivables: { text: 'text-amber-700 dark:text-amber-300', bg: 'bg-amber-100 dark:bg-amber-900/50' },
+	payables: { text: 'text-rose-700 dark:text-rose-300', bg: 'bg-rose-100 dark:bg-rose-900/50' },
+	operating_cash_flow: { text: 'text-cyan-700 dark:text-cyan-300', bg: 'bg-cyan-100 dark:bg-cyan-900/50' },
+	cogs: { text: 'text-orange-700 dark:text-orange-300', bg: 'bg-orange-100 dark:bg-orange-900/50' },
+	hr_costs: { text: 'text-red-700 dark:text-red-300', bg: 'bg-red-100 dark:bg-red-900/50' },
+	capex: { text: 'text-fuchsia-700 dark:text-fuchsia-300', bg: 'bg-fuchsia-100 dark:bg-fuchsia-900/50' },
+	financing: { text: 'text-violet-700 dark:text-violet-300', bg: 'bg-violet-100 dark:bg-violet-900/50' },
+	net_cash_flow: { text: 'text-blue-700 dark:text-blue-300', bg: 'bg-blue-100 dark:bg-blue-900/50' },
+	mfs: { text: 'text-teal-700 dark:text-teal-300', bg: 'bg-teal-100 dark:bg-teal-900/50' }
 };
 
 const PERSONAL_NODE_TOOLTIPS: Record<string, { title: string; desc: string; numbers: string }> = {
@@ -239,12 +239,12 @@ export default function MoneyFlowCanvas({
 	};
 
 	return (
-		<div className="relative w-full rounded-3xl border border-slate-800 bg-slate-950/45 p-6 shadow-2xl backdrop-blur-md overflow-hidden min-h-[600px]">
+		<div className="relative w-full rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/45 p-2 md:p-6 shadow-xl backdrop-blur-md overflow-hidden min-h-[600px]">
 			{/* Background Grid Pattern */}
-			<div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTQwIDBIMHY0MGg0MFYweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=')] pointer-events-none"></div>
+			<div className="absolute inset-0 opacity-[0.05] dark:opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTQwIDBIMHY0MGg0MFYweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM2YzZjRmIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=')] pointer-events-none"></div>
 
 			{/* Visual canvas window */}
-			<div className="relative overflow-x-auto w-full h-[540px] scrollbar-thin scrollbar-thumb-slate-800">
+			<div className="relative overflow-x-auto w-full h-[540px] scrollbar-thin scrollbar-thumb-slate-300 dark:scrollbar-thumb-slate-800">
 				<div className="w-[1550px] h-full relative">
 					{/* SVG Flow Connections Layer */}
 					<svg className="absolute inset-0 w-full h-full pointer-events-none z-0">
@@ -261,7 +261,7 @@ export default function MoneyFlowCanvas({
 								<stop offset="100%" stopColor="#3b82f6" />
 							</linearGradient>
 							<filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
-								<feDropShadow dx="0" dy="0" stdDeviation="3" floodColor="#06b6d4" floodOpacity="0.4" />
+								<feDropShadow dx="0" dy="0" stdDeviation="4" floodColor="#3b82f6" floodOpacity="0.5" />
 							</filter>
 						</defs>
 
@@ -274,30 +274,30 @@ export default function MoneyFlowCanvas({
 										key={`base-${key}`}
 										d={calculateBezierPath('checking', key)}
 										fill="none"
-										stroke="rgba(30, 41, 59, 0.5)"
-										strokeWidth="2"
+										className="stroke-slate-300 dark:stroke-slate-700/60"
+										strokeWidth="3"
 									/>
 								);
 							})
 						) : (
 							<>
 								{/* Revenues -> Receivables & Operating Cash Flow link */}
-								<path d={calculateBezierPath('revenues', 'operating_cash_flow')} fill="none" stroke="rgba(30, 41, 59, 0.4)" strokeWidth="2" />
-								<path d={calculateBezierPath('revenues', 'receivables')} fill="none" stroke="rgba(30, 41, 59, 0.4)" strokeWidth="2" />
-								<path d={calculateBezierPath('receivables', 'operating_cash_flow')} fill="none" stroke="rgba(30, 41, 59, 0.4)" strokeWidth="2" />
+								<path d={calculateBezierPath('revenues', 'operating_cash_flow')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
+								<path d={calculateBezierPath('revenues', 'receivables')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
+								<path d={calculateBezierPath('receivables', 'operating_cash_flow')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
 
 								{/* Costs links */}
-								<path d={calculateBezierPath('operating_cash_flow', 'cogs')} fill="none" stroke="rgba(30, 41, 59, 0.4)" strokeWidth="2" />
-								<path d={calculateBezierPath('operating_cash_flow', 'hr_costs')} fill="none" stroke="rgba(30, 41, 59, 0.4)" strokeWidth="2" />
-								<path d={calculateBezierPath('operating_cash_flow', 'capex')} fill="none" stroke="rgba(30, 41, 59, 0.4)" strokeWidth="2" />
-								<path d={calculateBezierPath('cogs', 'payables')} fill="none" stroke="rgba(30, 41, 59, 0.4)" strokeWidth="2" />
-								<path d={calculateBezierPath('hr_costs', 'payables')} fill="none" stroke="rgba(30, 41, 59, 0.4)" strokeWidth="2" />
-								<path d={calculateBezierPath('capex', 'payables')} fill="none" stroke="rgba(30, 41, 59, 0.4)" strokeWidth="2" />
+								<path d={calculateBezierPath('operating_cash_flow', 'cogs')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
+								<path d={calculateBezierPath('operating_cash_flow', 'hr_costs')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
+								<path d={calculateBezierPath('operating_cash_flow', 'capex')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
+								<path d={calculateBezierPath('cogs', 'payables')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
+								<path d={calculateBezierPath('hr_costs', 'payables')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
+								<path d={calculateBezierPath('capex', 'payables')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
 
 								{/* Discharges */}
-								<path d={calculateBezierPath('payables', 'net_cash_flow')} fill="none" stroke="rgba(30, 41, 59, 0.4)" strokeWidth="2" />
-								<path d={calculateBezierPath('financing', 'net_cash_flow')} fill="none" stroke="rgba(30, 41, 59, 0.4)" strokeWidth="2" />
-								<path d={calculateBezierPath('net_cash_flow', 'mfs')} fill="none" stroke="rgba(30, 41, 59, 0.4)" strokeWidth="2" />
+								<path d={calculateBezierPath('payables', 'net_cash_flow')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
+								<path d={calculateBezierPath('financing', 'net_cash_flow')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
+								<path d={calculateBezierPath('net_cash_flow', 'mfs')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
 							</>
 						)}
 
@@ -312,15 +312,15 @@ export default function MoneyFlowCanvas({
 										stroke={isEnterprise ? "url(#corpGradient)" : "url(#activeGradient)"}
 										strokeWidth="4"
 										filter="url(#glow)"
-										className="opacity-70"
+										className="opacity-50 dark:opacity-70"
 									/>
 									<path
 										d={path}
 										fill="none"
-										stroke={isEnterprise ? "url(#corpGradient)" : "url(#activeGradient)"}
-										strokeWidth="2"
-										strokeDasharray="6, 12"
-										className="animate-[dash_1.5s_linear_infinite]"
+										stroke={isEnterprise ? "#10b981" : "#3b82f6"}
+										strokeWidth="3"
+										strokeDasharray="6, 24"
+										className="animate-[dash_1s_linear_infinite]"
 									/>
 								</g>
 							);
@@ -345,65 +345,64 @@ export default function MoneyFlowCanvas({
 								onClick={() => setSelectedNodeId(node.id)}
 								style={{ left: `${coords.x}px`, top: `${coords.y}px` }}
 								className={[
-									'absolute w-[240px] h-[80px] text-left p-4 rounded-2xl border bg-slate-900/60 backdrop-blur-md transition flex flex-col justify-between hover:scale-103 cursor-pointer z-10 hover:z-30 focus-within:z-30 group',
+									'absolute w-[240px] h-[80px] text-left p-4 rounded-xl border bg-white dark:bg-slate-800 transition flex flex-col justify-between hover:scale-105 cursor-pointer z-10 hover:z-30 focus-within:z-30 group shadow-sm hover:shadow-md dark:shadow-none',
 									isSelected
-										? 'border-cyan-400 bg-slate-800/80 shadow-[0_0_25px_rgba(6,182,212,0.25)] z-20'
-										: `${colors.border} ${colors.glow} hover:border-slate-600`
+										? 'border-blue-500 dark:border-cyan-400 shadow-[0_0_0_2px_rgba(59,130,246,0.3)] z-20'
+										: `border-slate-200 dark:border-slate-700 hover:border-slate-400 dark:hover:border-slate-500`
 								].join(' ')}
 							>
 								{/* Tooltip Hover Overlay */}
 								{tooltip && (
 									<div className={[
-										'absolute w-72 p-4 rounded-2xl border border-slate-800 bg-slate-950/95 shadow-2xl backdrop-blur-lg opacity-0 pointer-events-none group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-200 z-50 normal-case whitespace-normal leading-relaxed text-[11px] text-slate-300 font-normal',
+										'absolute w-72 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950/95 shadow-xl backdrop-blur-lg opacity-0 pointer-events-none group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-200 z-50 normal-case whitespace-normal leading-relaxed text-[11px] text-slate-600 dark:text-slate-300 font-normal',
 										isTopRow ? 'top-full mt-3 left-1/2 -translate-x-1/2' : 'bottom-full mb-3 left-1/2 -translate-x-1/2'
 									].join(' ')}>
-										<div className="flex items-center gap-1.5 pb-2 mb-2 border-b border-slate-850">
-											<span className={`h-1.5 w-1.5 rounded-full ${colors.bg} ${colors.text} shadow-[0_0_8px_currentColor]`}></span>
-											<span className="font-bold text-white text-xs">{tooltip.title}</span>
+										<div className="flex items-center gap-1.5 pb-2 mb-2 border-b border-slate-100 dark:border-slate-800">
+											<span className="font-bold text-slate-900 dark:text-white text-xs">{tooltip.title}</span>
 										</div>
 										<div className="space-y-2">
-											<p><strong className="text-slate-200">Concept:</strong> {tooltip.desc}</p>
-											<p><strong className="text-slate-200">Values:</strong> {tooltip.numbers}</p>
+											<p><strong className="text-slate-900 dark:text-slate-200">Concept:</strong> {tooltip.desc}</p>
+											<p><strong className="text-slate-900 dark:text-slate-200">Values:</strong> {tooltip.numbers}</p>
 										</div>
 									</div>
 								)}
 
 								<div className="flex items-center justify-between w-full">
-									<span className="font-bold text-white text-xs tracking-tight">{node.name}</span>
+									<span className="font-bold text-slate-900 dark:text-white text-sm tracking-tight">{node.name}</span>
 									<span className={`text-[9px] uppercase tracking-widest px-2 py-0.5 rounded font-mono font-semibold ${colors.bg} ${colors.text}`}>
 										{node.type}
 									</span>
 								</div>
 
-								<div className="flex items-end justify-between w-full mt-2">
-									<span className="text-sm font-semibold font-mono text-slate-200">
+								<div className="flex items-end justify-between w-full mt-1">
+									<span className="text-xl font-bold font-sans text-black dark:text-white">
 										{formatCurrency(node.balance)}
 									</span>
 									{!isEnterprise ? (
 										node.type === 'checking' && (
-											<span className="text-[9px] text-slate-500 font-mono">
+											<span className="text-[10px] text-slate-500 font-mono">
 												C:{Math.round(node.ceiling)} / F:{Math.round(node.floor)}
 											</span>
 										)
 									) : (
 										node.type === 'net_cash_flow' && (
-											<span className="text-[9px] text-slate-500 font-mono">
+											<span className="text-[10px] text-slate-500 font-mono">
 												C:{Math.round(node.ceiling)} / F:{Math.round(node.floor)}
 											</span>
 										)
 									)}
 									{node.interestRate !== undefined && (
-										<span className="text-[9px] text-emerald-400 font-mono font-bold">
+										<span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-mono font-bold">
 											{node.interestRate}% APY
 										</span>
 									)}
 									{isEnterprise && node.id === 'receivables' && (
-										<span className="text-[9px] text-amber-400 font-mono">
+										<span className="text-[10px] text-amber-600 dark:text-amber-400 font-mono">
 											DSO: {node.dso}d
 										</span>
 									)}
 									{isEnterprise && node.id === 'financing' && node.balance > 0 && (
-										<span className="text-[9px] text-violet-400 font-mono font-bold">
+										<span className="text-[10px] text-violet-600 dark:text-violet-400 font-mono font-bold">
 											Rate: {((node.fixedSpread || 0) + (node.variableRateIndex || 0)).toFixed(1)}%
 										</span>
 									)}
