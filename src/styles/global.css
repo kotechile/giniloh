@@ -1079,3 +1079,90 @@ html.light .bg-\[linear-gradient\(135deg\,rgba\(14\,165\,233\,0\.16\)\,rgba\(15\
 html.light .data-point {
   color: #059669;
 }
+
+/* ============================================================
+   MONEY FLOW SIMULATOR (LIGHT MODE OVERRIDES)
+   ============================================================ */
+
+/* Top Cards in money-flow.astro */
+html.light .bg-\[linear-gradient\(135deg\,rgba\(46\,16\,101\,0\.92\)\,rgba\(2\,6\,23\,0\.98\)_70\%\,rgba\(139\,92\,246\,0\.12\)\)\] {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(255, 255, 255, 0.6) 70%, rgba(139, 92, 246, 0.05)) !important;
+  border-color: rgba(139, 92, 246, 0.2) !important;
+}
+
+html.light .bg-\[linear-gradient\(135deg\,rgba\(8\,47\,73\,0\.92\)\,rgba\(2\,6\,23\,0\.98\)_70\%\,rgba\(34\,211\,238\,0\.12\)\)\] {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.08), rgba(255, 255, 255, 0.6) 70%, rgba(6, 182, 212, 0.05)) !important;
+  border-color: rgba(6, 182, 212, 0.2) !important;
+}
+
+/* Simulator Main Dashboard & Wrappers */
+html.light .bg-slate-950\/60,
+html.light .bg-slate-950\/90,
+html.light .bg-slate-950\/45,
+html.light .bg-slate-900\/60 {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* Chat user message (light mode) */
+html.light .bg-cyan-950\/40 {
+  background-color: rgba(6, 182, 212, 0.1) !important;
+  border-color: rgba(6, 182, 212, 0.2) !important;
+}
+html.light .border-cyan-800\/40 {
+  border-color: rgba(6, 182, 212, 0.2) !important;
+}
+html.light .text-cyan-200 {
+  color: #0e7490 !important;
+}
+
+/* Chat system message */
+html.light .bg-red-950\/40 {
+  background-color: rgba(239, 68, 68, 0.1) !important;
+}
+html.light .border-red-900\/40 {
+  border-color: rgba(239, 68, 68, 0.2) !important;
+}
+html.light .text-red-300 {
+  color: #b91c1c !important;
+}
+
+/* Scripting rule blocks & chat bubbles */
+html.light .bg-slate-900\/40,
+html.light .bg-slate-900\/60 {
+  background-color: #f8fafc !important;
+  border-color: rgba(15, 23, 42, 0.1) !important;
+  color: #334155 !important;
+}
+
+/* Node borders darker (light mode) */
+html.light .border-cyan-500\/30 { border-color: rgba(6, 182, 212, 0.5) !important; }
+html.light .border-emerald-500\/30 { border-color: rgba(16, 185, 129, 0.5) !important; }
+html.light .border-blue-500\/30 { border-color: rgba(59, 130, 246, 0.5) !important; }
+html.light .border-red-500\/30 { border-color: rgba(239, 68, 68, 0.5) !important; }
+html.light .border-teal-500\/30 { border-color: rgba(20, 184, 166, 0.5) !important; }
+html.light .border-indigo-500\/30 { border-color: rgba(99, 102, 241, 0.5) !important; }
+html.light .border-purple-500\/30 { border-color: rgba(168, 85, 247, 0.5) !important; }
+html.light .border-violet-500\/30 { border-color: rgba(139, 92, 246, 0.5) !important; }
+html.light .border-amber-500\/30 { border-color: rgba(245, 158, 11, 0.5) !important; }
+html.light .border-rose-500\/30 { border-color: rgba(244, 63, 94, 0.5) !important; }
+html.light .border-orange-500\/30 { border-color: rgba(249, 115, 22, 0.5) !important; }
+html.light .border-fuchsia-500\/30 { border-color: rgba(217, 70, 239, 0.5) !important; }
+
+/* Text colors inside components */
+html.light .text-violet-200\/80 { color: rgba(109, 40, 217, 0.8) !important; }
+html.light .text-cyan-300\/80 { color: rgba(8, 145, 178, 0.8) !important; }
+html.light .text-slate-300 { color: #475569 !important; }
+html.light .text-slate-400 { color: #64748b !important; }
+html.light .text-slate-200 { color: #334155 !important; }
+html.light .text-white { color: #0f172a !important; }
+html.light .text-cyan-400 { color: #0891b2 !important; }
+html.light .text-emerald-400 { color: #059669 !important; }
+html.light .text-amber-400 { color: #d97706 !important; }
+html.light .text-rose-400 { color: #e11d48 !important; }
+html.light .text-blue-400 { color: #2563eb !important; }
+html.light .text-teal-400 { color: #0d9488 !important; }
+html.light .text-indigo-400 { color: #4f46e5 !important; }
+html.light .text-purple-400 { color: #9333ea !important; }
+html.light .text-violet-400 { color: #7c3aed !important; }
+html.light .text-orange-400 { color: #ea580c !important; }
+html.light .text-fuchsia-400 { color: #c026d3 !important; }
