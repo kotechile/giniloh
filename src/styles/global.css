@@ -531,3 +531,551 @@ a {
 .prose .article-context {
   display: none !important;
 }
+
+/* ============================================================
+   LIGHT MODE OVERRIDES
+   Activated by adding class="light" to <html>.
+   Uses CSS specificity to override dark-mode defaults.
+   ============================================================ */
+
+html.light {
+  --site-bg: #f8fafc;
+  --brand-ink: #0f172a;
+  --brand-navy: #f8fafc;
+  --brand-slate: #f1f5f9;
+  --brand-deep-slate: #f8fafc;
+}
+
+html.light body {
+  color: #1e293b;
+}
+
+/* --- Background & Orbs (light mode) --- */
+html.light .site-background {
+  background-image:
+    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+}
+
+html.light .orb-one {
+  background: radial-gradient(circle, rgba(96, 165, 250, 0.35), transparent 70%);
+  opacity: 0.12;
+}
+
+html.light .orb-two {
+  background: radial-gradient(circle, rgba(52, 211, 153, 0.3), transparent 70%);
+  opacity: 0.1;
+}
+
+html.light .orb-three {
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.3), transparent 70%);
+  opacity: 0.1;
+}
+
+/* --- Glass panels (light mode) --- */
+html.light .panel-soft {
+  background-color: rgba(255, 255, 255, 0.55);
+  border-color: rgba(15, 23, 42, 0.08);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.06),
+    inset 1px 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+html.light .panel-shell {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* --- Section eyebrow (light mode) --- */
+html.light .section-eyebrow {
+  color: #0369a1;
+}
+
+/* --- Buttons (light mode) --- */
+html.light .btn-primary {
+  background: #0f172a;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18);
+}
+
+html.light .btn-primary:hover {
+  background: #1e293b;
+}
+
+html.light .btn-secondary {
+  border-color: rgba(15, 23, 42, 0.15);
+  background: rgba(15, 23, 42, 0.04);
+  color: #0f172a;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+html.light .btn-secondary:hover {
+  background: rgba(15, 23, 42, 0.08);
+}
+
+html.light .btn-inline {
+  color: #0369a1;
+}
+
+/* --- Navigation bar (light mode) --- */
+html.light header > div {
+  border-color: rgba(15, 23, 42, 0.1);
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.08);
+}
+
+html.light header a,
+html.light header span {
+  color: #334155;
+}
+
+html.light header a[aria-current="page"] {
+  background-color: rgba(15, 23, 42, 0.06);
+  color: #0369a1;
+  box-shadow: inset 0 0 0 1px rgba(3, 105, 161, 0.15);
+}
+
+html.light header nav a:hover {
+  background-color: rgba(15, 23, 42, 0.05);
+  color: #0f172a;
+}
+
+/* Nav logo area */
+html.light header .text-cyan-400,
+html.light header .text-cyan-400\/80 {
+  color: #0369a1 !important;
+}
+
+html.light header .text-slate-300 {
+  color: #475569 !important;
+}
+
+html.light header .text-slate-100 {
+  color: #0f172a !important;
+}
+
+/* Nav icon buttons */
+html.light header button,
+html.light header summary {
+  border-color: rgba(15, 23, 42, 0.1);
+  background-color: rgba(15, 23, 42, 0.04);
+  color: #475569;
+}
+
+html.light header button:hover,
+html.light header summary:hover {
+  background-color: rgba(15, 23, 42, 0.08);
+  color: #0f172a;
+}
+
+/* Nav logo badge */
+html.light header span.bg-slate-800 {
+  background-color: #e2e8f0 !important;
+  border-color: #cbd5e1 !important;
+  color: #0369a1 !important;
+}
+
+/* Mobile dropdown */
+html.light header details > div {
+  border-color: rgba(15, 23, 42, 0.1);
+  background-color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.1);
+}
+
+html.light header details nav a {
+  color: #475569;
+}
+
+html.light header details nav a:hover {
+  background-color: rgba(15, 23, 42, 0.05);
+  color: #0f172a;
+}
+
+html.light header details nav a[aria-current="page"] {
+  background-color: rgba(3, 105, 161, 0.08);
+  color: #0369a1;
+}
+
+/* --- Hero section (light mode) --- */
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4 {
+  color: #0f172a;
+}
+
+html.light .text-white {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-100 {
+  color: #1e293b !important;
+}
+
+html.light .text-slate-200 {
+  color: #334155 !important;
+}
+
+html.light .text-slate-300 {
+  color: #475569 !important;
+}
+
+html.light .text-slate-400 {
+  color: #64748b !important;
+}
+
+html.light .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+/* Accent colors - keep vibrant but slightly deeper for light bg */
+html.light .text-cyan-400 {
+  color: #0891b2 !important;
+}
+
+html.light .text-cyan-300 {
+  color: #0e7490 !important;
+}
+
+html.light .text-cyan-200\/80 {
+  color: rgba(14, 116, 144, 0.8) !important;
+}
+
+html.light .text-emerald-400 {
+  color: #059669 !important;
+}
+
+html.light .text-emerald-300\/75 {
+  color: rgba(5, 150, 105, 0.85) !important;
+}
+
+html.light .text-blue-400 {
+  color: #2563eb !important;
+}
+
+html.light .text-cyan-50 {
+  color: #0369a1 !important;
+}
+
+html.light .text-cyan-100 {
+  color: #0e7490 !important;
+}
+
+/* --- Border overrides (light mode) --- */
+html.light .border-slate-700,
+html.light .border-slate-700\/50,
+html.light .border-slate-700\/80,
+html.light .border-slate-800,
+html.light .border-slate-800\/50 {
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+/* --- Background overrides (light mode) --- */
+html.light .bg-slate-800,
+html.light .bg-slate-800\/30,
+html.light .bg-slate-800\/50 {
+  background-color: rgba(241, 245, 249, 0.8) !important;
+}
+
+html.light .bg-slate-900,
+html.light .bg-slate-900\/40,
+html.light .bg-slate-900\/45,
+html.light .bg-slate-900\/50,
+html.light .bg-slate-900\/60,
+html.light .bg-slate-900\/80,
+html.light .bg-slate-900\/90,
+html.light .bg-slate-900\/95 {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+html.light .bg-slate-950,
+html.light .bg-slate-950\/35,
+html.light .bg-slate-950\/45,
+html.light .bg-slate-950\/50,
+html.light .bg-slate-950\/80 {
+  background-color: rgba(248, 250, 252, 0.9) !important;
+}
+
+/* Cyan accent backgrounds */
+html.light .bg-cyan-500\/10 {
+  background-color: rgba(6, 182, 212, 0.08) !important;
+}
+
+html.light .bg-emerald-500\/10 {
+  background-color: rgba(16, 185, 129, 0.08) !important;
+}
+
+html.light .bg-blue-500\/10 {
+  background-color: rgba(59, 130, 246, 0.08) !important;
+}
+
+html.light .bg-purple-500\/10 {
+  background-color: rgba(168, 85, 247, 0.08) !important;
+}
+
+/* --- Cards & Posts (light mode) --- */
+html.light article.group {
+  border-color: rgba(15, 23, 42, 0.08);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+html.light article.group:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+/* Card inner metrics box */
+html.light .bg-slate-950\/80.rounded-lg {
+  background-color: rgba(241, 245, 249, 0.8) !important;
+  border-color: rgba(15, 23, 42, 0.06) !important;
+}
+
+/* --- Category Bento cards (light mode) --- */
+html.light button[data-pillar-trigger] {
+  border-color: rgba(15, 23, 42, 0.08);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+html.light button[data-pillar-trigger]:hover {
+  border-color: rgba(6, 182, 212, 0.25);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+}
+
+html.light button[data-pillar-trigger][data-active="true"] {
+  border-color: rgba(6, 182, 212, 0.35);
+  box-shadow: 0 0 42px rgba(6, 182, 212, 0.08);
+}
+
+/* --- Search overlay (light mode) --- */
+html.light #search-overlay button[data-search-close]:first-child {
+  background-color: rgba(248, 250, 252, 0.72);
+}
+
+html.light #search-overlay > div > div {
+  border-color: rgba(15, 23, 42, 0.1);
+  background-color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.12);
+  color: #0f172a;
+}
+
+html.light #search-overlay input {
+  border-color: rgba(15, 23, 42, 0.12);
+  background-color: rgba(241, 245, 249, 0.8);
+  color: #0f172a;
+}
+
+html.light #search-overlay input::placeholder {
+  color: #94a3b8;
+}
+
+html.light #search-overlay input:focus {
+  border-color: #0891b2;
+  box-shadow: 0 0 0 1px rgba(8, 145, 178, 0.3);
+}
+
+html.light #search-overlay .rounded-\[1\.5rem\] {
+  border-color: rgba(15, 23, 42, 0.06);
+  background-color: rgba(248, 250, 252, 0.6);
+}
+
+/* Search results */
+html.light #search-results a {
+  border-color: rgba(15, 23, 42, 0.06);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+html.light #search-results a:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+  background-color: rgba(248, 250, 252, 0.8);
+}
+
+/* --- Footer (light mode) --- */
+html.light footer {
+  border-color: rgba(15, 23, 42, 0.08);
+  background-color: #f1f5f9;
+}
+
+html.light footer .bg-slate-900\/50,
+html.light footer .rounded-xl {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  border-color: rgba(15, 23, 42, 0.06) !important;
+}
+
+html.light footer a:hover {
+  color: #0891b2 !important;
+}
+
+/* --- Article page prose (light mode) --- */
+html.light .prose {
+  --tw-prose-body: #334155;
+  --tw-prose-headings: #0f172a;
+}
+
+html.light .prose h1,
+html.light .prose h2,
+html.light .prose h3 {
+  color: #0f172a !important;
+}
+
+html.light .prose h2 {
+  border-left-color: #0891b2 !important;
+}
+
+html.light .prose a,
+html.light .article-body a {
+  color: #2563eb !important;
+  text-decoration-color: rgba(37, 99, 235, 0.5) !important;
+}
+
+html.light .prose a:hover,
+html.light .article-body a:hover {
+  color: #1d4ed8 !important;
+  text-decoration-color: rgba(29, 78, 216, 0.8) !important;
+  text-shadow: none !important;
+}
+
+html.light .prose p,
+html.light .prose li,
+html.light .prose td {
+  color: #334155 !important;
+}
+
+html.light .prose th {
+  color: #0891b2 !important;
+  border-bottom-color: rgba(8, 145, 178, 0.2) !important;
+}
+
+html.light .prose table {
+  border-top-color: rgba(8, 145, 178, 0.2) !important;
+}
+
+html.light .prose tr:hover td {
+  background-color: rgba(8, 145, 178, 0.03) !important;
+}
+
+html.light .prose blockquote {
+  border-left-color: #0891b2 !important;
+  background-color: rgba(241, 245, 249, 0.6) !important;
+  color: #334155 !important;
+}
+
+html.light .prose img {
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Article detail sidebar */
+html.light .prose + aside div,
+html.light aside .bg-slate-900\/40,
+html.light aside .bg-slate-900\/20 {
+  background-color: rgba(255, 255, 255, 0.6) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Article hero gradient glow */
+html.light .group .bg-gradient-to-r {
+  opacity: 0.08;
+}
+
+/* Key Takeaways (light mode) */
+html.light .prose .geo-key-takeaways,
+html.light .prose [data-geo-injected="key-takeaways"] {
+  background: rgba(241, 245, 249, 0.7) !important;
+  border-color: rgba(8, 145, 178, 0.15) !important;
+  color: #334155 !important;
+}
+
+html.light .prose .geo-key-takeaways h2,
+html.light .prose [data-geo-injected="key-takeaways"] h2 {
+  color: #0f172a !important;
+}
+
+html.light .prose .geo-key-takeaways li,
+html.light .prose [data-geo-injected="key-takeaways"] li,
+html.light .prose .geo-key-takeaways p,
+html.light .prose [data-geo-injected="key-takeaways"] p {
+  color: #334155 !important;
+}
+
+html.light .prose .geo-key-takeaways li::marker,
+html.light .prose [data-geo-injected="key-takeaways"] li::marker {
+  color: #0891b2 !important;
+}
+
+/* Article summary box (light mode) */
+html.light .prose .font-mono.bg-slate-900\/60 {
+  background-color: rgba(241, 245, 249, 0.7) !important;
+  border-color: rgba(8, 145, 178, 0.15) !important;
+  color: #334155 !important;
+}
+
+html.light .prose .font-mono .text-cyan-400 {
+  color: #0891b2 !important;
+}
+
+/* Hero radial gradients */
+html.light .bg-\[radial-gradient\(circle_at_top\,rgba\(0\,112\,243\,0\.15\)\,transparent_58\%\)\] {
+  background: radial-gradient(circle at top, rgba(96, 165, 250, 0.08), transparent 58%);
+}
+
+html.light .bg-\[radial-gradient\(circle_at_top\,rgba\(0\,112\,243\,0\.1\)\,transparent_60\%\)\] {
+  background: radial-gradient(circle at top, rgba(96, 165, 250, 0.06), transparent 60%);
+}
+
+/* Horizontal dividers */
+html.light .border-t.border-slate-800 {
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+/* The bottom CTA triple-grid section */
+html.light .bg-slate-800.gap-px {
+  background-color: rgba(15, 23, 42, 0.06) !important;
+}
+
+/* Decorative blurs */
+html.light .blur-3xl,
+html.light .blur-2xl {
+  opacity: 0.06;
+}
+
+/* Article deck (inline styles override) */
+html.light .article-deck {
+  color: #64748b !important;
+  border-left-color: #2563eb !important;
+}
+
+/* Progress bars in sidebar */
+html.light .bg-slate-800\/50.rounded-full {
+  background-color: rgba(226, 232, 240, 0.6) !important;
+}
+
+/* Shadow overrides */
+html.light .shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* Hover glow adjustments */
+html.light .hover\:shadow-\[0_0_40px_rgba\(56\,189\,248\,0\.35\)\]:hover {
+  box-shadow: 0 0 40px rgba(6, 182, 212, 0.1) !important;
+}
+
+html.light .hover\:shadow-\[0_0_40px_rgba\(56\,189\,248\,0\.2\)\]:hover {
+  box-shadow: 0 0 40px rgba(6, 182, 212, 0.08) !important;
+}
+
+/* Animate pulse dots */
+html.light .bg-emerald-500 {
+  background-color: #059669 !important;
+}
+
+html.light .bg-cyan-400 {
+  background-color: #0891b2 !important;
+}
+
+/* Category bento calculator card gradient */
+html.light .bg-\[linear-gradient\(135deg\,rgba\(14\,165\,233\,0\.16\)\,rgba\(15\,23\,42\,0\.5\)_55\%\,rgba\(16\,185\,129\,0\.12\)\)\] {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.08), rgba(255, 255, 255, 0.5) 55%, rgba(16, 185, 129, 0.06)) !important;
+}
+
+/* Data point mono accent */
+html.light .data-point {
+  color: #059669;
+}
