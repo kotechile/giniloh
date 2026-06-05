@@ -39,28 +39,28 @@ const ENTERPRISE_NODE_COORDINATES: Record<string, { x: number; y: number }> = {
 
 // Styles mapping for Personal Mode
 const PERSONAL_ACCENT_COLORS: Record<string, { text: string; bg: string }> = {
-	checking: { text: 'text-cyan-700 dark:text-cyan-300', bg: 'bg-cyan-100 dark:bg-cyan-900/50' },
-	hysa: { text: 'text-emerald-700 dark:text-emerald-300', bg: 'bg-emerald-100 dark:bg-emerald-900/50' },
-	match401k: { text: 'text-blue-700 dark:text-blue-300', bg: 'bg-blue-100 dark:bg-blue-900/50' },
-	debt: { text: 'text-red-700 dark:text-red-300', bg: 'bg-red-100 dark:bg-red-900/50' },
-	hsa: { text: 'text-teal-700 dark:text-teal-300', bg: 'bg-teal-100 dark:bg-teal-900/50' },
-	ira: { text: 'text-indigo-700 dark:text-indigo-300', bg: 'bg-indigo-100 dark:bg-indigo-900/50' },
-	max401k: { text: 'text-purple-700 dark:text-purple-300', bg: 'bg-purple-100 dark:bg-purple-900/50' },
-	brokerage: { text: 'text-violet-700 dark:text-violet-300', bg: 'bg-violet-100 dark:bg-violet-900/50' }
+	checking: { text: 'text-cyan-400 [.light_&]:text-cyan-700', bg: 'bg-cyan-900/40 [.light_&]:bg-cyan-100' },
+	hysa: { text: 'text-emerald-400 [.light_&]:text-emerald-700', bg: 'bg-emerald-900/40 [.light_&]:bg-emerald-100' },
+	match401k: { text: 'text-blue-400 [.light_&]:text-blue-700', bg: 'bg-blue-900/40 [.light_&]:bg-blue-100' },
+	debt: { text: 'text-red-400 [.light_&]:text-red-700', bg: 'bg-red-900/40 [.light_&]:bg-red-100' },
+	hsa: { text: 'text-teal-400 [.light_&]:text-teal-700', bg: 'bg-teal-900/40 [.light_&]:bg-teal-100' },
+	ira: { text: 'text-indigo-400 [.light_&]:text-indigo-700', bg: 'bg-indigo-900/40 [.light_&]:bg-indigo-100' },
+	max401k: { text: 'text-purple-400 [.light_&]:text-purple-700', bg: 'bg-purple-900/40 [.light_&]:bg-purple-100' },
+	brokerage: { text: 'text-violet-400 [.light_&]:text-violet-700', bg: 'bg-violet-900/40 [.light_&]:bg-violet-100' }
 };
 
 // Styles mapping for Enterprise Mode
 const ENTERPRISE_ACCENT_COLORS: Record<string, { text: string; bg: string }> = {
-	revenues: { text: 'text-emerald-700 dark:text-emerald-300', bg: 'bg-emerald-100 dark:bg-emerald-900/50' },
-	receivables: { text: 'text-amber-700 dark:text-amber-300', bg: 'bg-amber-100 dark:bg-amber-900/50' },
-	payables: { text: 'text-rose-700 dark:text-rose-300', bg: 'bg-rose-100 dark:bg-rose-900/50' },
-	operating_cash_flow: { text: 'text-cyan-700 dark:text-cyan-300', bg: 'bg-cyan-100 dark:bg-cyan-900/50' },
-	cogs: { text: 'text-orange-700 dark:text-orange-300', bg: 'bg-orange-100 dark:bg-orange-900/50' },
-	hr_costs: { text: 'text-red-700 dark:text-red-300', bg: 'bg-red-100 dark:bg-red-900/50' },
-	capex: { text: 'text-fuchsia-700 dark:text-fuchsia-300', bg: 'bg-fuchsia-100 dark:bg-fuchsia-900/50' },
-	financing: { text: 'text-violet-700 dark:text-violet-300', bg: 'bg-violet-100 dark:bg-violet-900/50' },
-	net_cash_flow: { text: 'text-blue-700 dark:text-blue-300', bg: 'bg-blue-100 dark:bg-blue-900/50' },
-	mfs: { text: 'text-teal-700 dark:text-teal-300', bg: 'bg-teal-100 dark:bg-teal-900/50' }
+	revenues: { text: 'text-emerald-400 [.light_&]:text-emerald-700', bg: 'bg-emerald-900/40 [.light_&]:bg-emerald-100' },
+	receivables: { text: 'text-amber-400 [.light_&]:text-amber-700', bg: 'bg-amber-900/40 [.light_&]:bg-amber-100' },
+	payables: { text: 'text-rose-400 [.light_&]:text-rose-700', bg: 'bg-rose-900/40 [.light_&]:bg-rose-100' },
+	operating_cash_flow: { text: 'text-cyan-400 [.light_&]:text-cyan-700', bg: 'bg-cyan-900/40 [.light_&]:bg-cyan-100' },
+	cogs: { text: 'text-orange-400 [.light_&]:text-orange-700', bg: 'bg-orange-900/40 [.light_&]:bg-orange-100' },
+	hr_costs: { text: 'text-red-400 [.light_&]:text-red-700', bg: 'bg-red-900/40 [.light_&]:bg-red-100' },
+	capex: { text: 'text-fuchsia-400 [.light_&]:text-fuchsia-700', bg: 'bg-fuchsia-900/40 [.light_&]:bg-fuchsia-100' },
+	financing: { text: 'text-violet-400 [.light_&]:text-violet-700', bg: 'bg-violet-900/40 [.light_&]:bg-violet-100' },
+	net_cash_flow: { text: 'text-blue-400 [.light_&]:text-blue-700', bg: 'bg-blue-900/40 [.light_&]:bg-blue-100' },
+	mfs: { text: 'text-teal-400 [.light_&]:text-teal-700', bg: 'bg-teal-900/40 [.light_&]:bg-teal-100' }
 };
 
 const PERSONAL_NODE_TOOLTIPS: Record<string, { title: string; desc: string; numbers: string }> = {
@@ -239,7 +239,7 @@ export default function MoneyFlowCanvas({
 	};
 
 	return (
-		<div className="relative w-full rounded-2xl border border-slate-800 bg-slate-950 p-2 md:p-6 shadow-inner overflow-hidden min-h-[600px] [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
+		<div className="relative w-full rounded-2xl border border-slate-800 bg-slate-950 p-2 md:p-6 shadow-inner overflow-hidden min-h-[600px] [.light_&]:border-slate-300 [.light_&]:bg-slate-100">
 			{/* Background Grid Pattern */}
 			<div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTQwIDBIMHY0MGg0MFYweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM2YzZjRmIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=')] pointer-events-none [.light_&]:opacity-[0.05]"></div>
 
@@ -348,7 +348,7 @@ export default function MoneyFlowCanvas({
 									'absolute w-[240px] h-[80px] text-left p-4 rounded-xl border bg-slate-800 transition flex flex-col justify-between hover:scale-105 cursor-pointer z-10 hover:z-30 focus-within:z-30 group shadow-sm [.light_&]:hover:shadow-md [.light_&]:bg-white',
 									isSelected
 										? 'border-cyan-400 shadow-[0_0_0_2px_rgba(59,130,246,0.3)] z-20 [.light_&]:border-blue-500'
-										: `border-slate-700 hover:border-slate-600 [.light_&]:border-slate-200 [.light_&]:hover:border-slate-300`
+										: `border-slate-700 hover:border-slate-600 [.light_&]:border-slate-300 [.light_&]:hover:border-slate-400`
 								].join(' ')}
 							>
 								{/* Tooltip Hover Overlay */}
