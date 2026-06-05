@@ -652,32 +652,32 @@ export default function MoneyFlowSimulator() {
 
 			{/* Interactive Bottom-up Liquidity Projections Grid */}
 			{isEnterprise && liquidityRows.length > 0 && (
-				<div className="rounded-[1.8rem] border border-slate-800 bg-slate-950/75 p-6 shadow-xl backdrop-blur-sm animate-[fadeIn_0.3s_ease-out]">
-					<h3 className="text-lg font-bold text-white mb-2">Liquidity Projections Data Grid</h3>
-					<p className="text-xs text-slate-400 mb-4 leading-normal">
+				<div className="rounded-[1.8rem] border border-slate-800 bg-slate-950/75 p-6 shadow-xl backdrop-blur-sm animate-[fadeIn_0.3s_ease-out] [.light_&]:bg-slate-50 [.light_&]:border-slate-200 [.light_&]:shadow-lg">
+					<h3 className="text-lg font-bold text-white mb-2 [.light_&]:text-slate-900">Liquidity Projections Data Grid</h3>
+					<p className="text-xs text-slate-400 mb-4 leading-normal [.light_&]:text-slate-500">
 						Effortless top-down projection calculated bottom-up by running simulated clock steps forwards in real time.
 					</p>
 					
 					<div className="overflow-x-auto">
 						<table className="w-full text-left font-mono text-xs border-collapse">
 							<thead>
-								<tr className="border-b border-slate-800 text-slate-500">
+								<tr className="border-b border-slate-800 text-slate-500 [.light_&]:border-slate-200 [.light_&]:text-slate-600">
 									<th className="py-2.5 px-3">Treasury Account Node</th>
 									<th className="py-2.5 px-3">Category</th>
 									<th className="py-2.5 px-3 text-right">Current Ledger</th>
-									<th className="py-2.5 px-3 text-right text-cyan-400">Month-End Forecast (30d)</th>
-									<th className="py-2.5 px-3 text-right text-emerald-400">Year-End Forecast (365d)</th>
+									<th className="py-2.5 px-3 text-right text-cyan-400 [.light_&]:text-cyan-700">Month-End Forecast (30d)</th>
+									<th className="py-2.5 px-3 text-right text-emerald-400 [.light_&]:text-emerald-700">Year-End Forecast (365d)</th>
 								</tr>
 							</thead>
-							<tbody className="divide-y divide-slate-800 text-slate-300">
+							<tbody className="divide-y divide-slate-800 text-slate-300 [.light_&]:divide-slate-200 [.light_&]:text-slate-700">
 								{liquidityRows.map((row, idx) => {
 									const isTotal = row.type === 'net';
 									return (
 										<tr 
 											key={idx} 
 											className={[
-												isTotal ? 'bg-slate-900/35 font-bold text-white' : 'hover:bg-slate-900/10',
-												row.type === 'liability' ? 'text-rose-300' : ''
+												isTotal ? 'bg-slate-900/35 font-bold text-white [.light_&]:bg-slate-100 [.light_&]:text-slate-900' : 'hover:bg-slate-900/10 [.light_&]:hover:bg-slate-50',
+												row.type === 'liability' ? 'text-rose-300 [.light_&]:text-rose-600' : ''
 											].join(' ')}
 										>
 											<td className="py-2.5 px-3">{row.name}</td>
@@ -705,20 +705,20 @@ export default function MoneyFlowSimulator() {
 						const colorClass = scKey === 'baseline' ? 'border-emerald-500/25 bg-emerald-500/5' : scKey === 'inflation' ? 'border-red-500/25 bg-red-500/5' : 'border-amber-500/25 bg-amber-500/5';
 						
 						return (
-							<div key={scKey} className={["p-5 rounded-2xl border flex flex-col justify-between gap-4", colorClass].join(' ')}>
+							<div key={scKey} className={["p-5 rounded-2xl border flex flex-col justify-between gap-4 [.light_&]:border-slate-200 [.light_&]:bg-slate-50", colorClass].join(' ')}>
 								<div>
 									<div className="flex items-center justify-between">
-										<span className="text-xs font-mono uppercase font-bold text-slate-400">{scKey}</span>
-										<span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400">
+										<span className="text-xs font-mono uppercase font-bold text-slate-400 [.light_&]:text-slate-600">{scKey}</span>
+										<span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 [.light_&]:bg-slate-200 [.light_&]:text-slate-600">
 											{scState.day}d Simulated
 										</span>
 									</div>
-									<h4 className="text-sm font-bold text-white mt-2 leading-tight">{label}</h4>
+									<h4 className="text-sm font-bold text-white mt-2 leading-tight [.light_&]:text-slate-900">{label}</h4>
 									
-									<div className="mt-4 space-y-2 font-mono text-[11px] text-slate-300">
+									<div className="mt-4 space-y-2 font-mono text-[11px] text-slate-300 [.light_&]:text-slate-600">
 										<div className="flex justify-between">
 											<span>Total Net Assets:</span>
-											<span className="font-bold text-white">{formatCurrency(scState.totalWealthAccumulated)}</span>
+											<span className="font-bold text-white [.light_&]:text-slate-900">{formatCurrency(scState.totalWealthAccumulated)}</span>
 										</div>
 										<div className="flex justify-between">
 											<span>Receivables Outstanding:</span>
@@ -733,7 +733,7 @@ export default function MoneyFlowSimulator() {
 
 								<button
 									onClick={() => applyScenarioForecast(scKey)}
-									className="w-full py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700/60 rounded-xl text-xs font-mono text-slate-200 transition cursor-pointer text-center"
+									className="w-full py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700/60 rounded-xl text-xs font-mono text-slate-200 transition cursor-pointer text-center [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-slate-700"
 								>
 									Apply to Active Canvas
 								</button>
@@ -746,17 +746,17 @@ export default function MoneyFlowSimulator() {
 			{/* AI Chat & Scripting bottom panel */}
 			<div className="grid gap-6 md:grid-cols-3">
 				{/* AI Conversational Assistant */}
-				<div className="flex flex-col h-[350px] rounded-2xl border border-slate-800 bg-slate-950/90 font-mono text-xs shadow-2xl overflow-hidden md:col-span-2">
-					<div className="h-9 border-b border-slate-800 bg-slate-900/60 flex items-center px-4 justify-between">
+				<div className="flex flex-col h-[350px] rounded-2xl border border-slate-800 bg-slate-950/90 font-mono text-xs shadow-2xl overflow-hidden md:col-span-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50 [.light_&]:shadow-lg">
+					<div className="h-9 border-b border-slate-800 bg-slate-900/60 flex items-center px-4 justify-between [.light_&]:border-slate-200 [.light_&]:bg-slate-100">
 						<div className="flex items-center gap-1.5">
 							<span className="inline-flex h-1.5 w-1.5 rounded-full bg-cyan-400 animate-ping"></span>
-							<span className="font-semibold text-slate-400 text-[10px] tracking-wider uppercase">AI_Orchestration_Chat</span>
+							<span className="font-semibold text-slate-400 text-[10px] tracking-wider uppercase [.light_&]:text-slate-600">AI_Orchestration_Chat</span>
 						</div>
-						<span className="text-[9px] text-slate-500">LOW-COST LLM WRAPPER</span>
+						<span className="text-[9px] text-slate-500 [.light_&]:text-slate-400">LOW-COST LLM WRAPPER</span>
 					</div>
 					
 					{/* Message Logs */}
-					<div className="flex-1 p-4 overflow-y-auto space-y-3 scrollbar-thin scrollbar-thumb-slate-800">
+					<div className="flex-1 p-4 overflow-y-auto space-y-3 scrollbar-thin scrollbar-thumb-slate-800 [.light_&]:scrollbar-thumb-slate-300">
 						{chatHistory.map((chat, idx) => {
 							const isUser = chat.sender === 'user';
 							const isSystem = chat.sender === 'system';
@@ -766,10 +766,10 @@ export default function MoneyFlowSimulator() {
 									className={[
 										'p-3 rounded-xl max-w-[85%] leading-relaxed whitespace-pre-wrap',
 										isUser 
-											? 'ml-auto bg-cyan-950/40 border border-cyan-800/40 text-cyan-200' 
+											? 'ml-auto bg-cyan-950/40 border border-cyan-800/40 text-cyan-200 [.light_&]:bg-cyan-50 [.light_&]:border-cyan-200 [.light_&]:text-cyan-800' 
 											: isSystem 
-												? 'bg-red-950/40 border border-red-900/40 text-red-300' 
-												: 'bg-slate-900/60 border border-slate-800 text-slate-300'
+												? 'bg-red-950/40 border border-red-900/40 text-red-300 [.light_&]:bg-red-50 [.light_&]:border-red-200 [.light_&]:text-red-800' 
+												: 'bg-slate-900/60 border border-slate-800 text-slate-300 [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-slate-700'
 									].join(' ')}
 								>
 									{chat.text}
@@ -781,13 +781,13 @@ export default function MoneyFlowSimulator() {
 						)}
 					</div>
 
-					<form onSubmit={handleChatSubmit} className="border-t border-slate-800 bg-slate-900/40 p-3 flex gap-2">
+					<form onSubmit={handleChatSubmit} className="border-t border-slate-800 bg-slate-900/40 p-3 flex gap-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-100">
 						<input
 							type="text"
 							value={chatInput}
 							onChange={(e) => setChatInput(e.target.value)}
 							placeholder={isEnterprise ? "Tell the AI what to do (e.g. 'Set receivables DSO to 45' or 'Route revenues to receivables')..." : "Tell the AI what to do (e.g. 'Route $600 from checking to Roth IRA')..."}
-							className="flex-1 bg-transparent text-slate-200 border-none outline-none focus:ring-0 p-0 text-xs placeholder:text-slate-600 font-mono"
+							className="flex-1 bg-transparent text-slate-200 border-none outline-none focus:ring-0 p-0 text-xs placeholder:text-slate-600 [.light_&]:text-slate-800 [.light_&]:placeholder:text-slate-400 font-mono"
 						/>
 						<button type="submit" className="px-4 py-1.5 bg-cyan-600 hover:bg-cyan-500 text-white font-semibold rounded-lg text-[10px] uppercase tracking-wider transition cursor-pointer">
 							Send
@@ -796,16 +796,16 @@ export default function MoneyFlowSimulator() {
 				</div>
 
 				{/* Scripting Rules & Audit Logs */}
-				<div className="flex flex-col h-[350px] rounded-2xl border border-slate-800 bg-slate-950/90 font-mono text-xs shadow-2xl overflow-hidden">
-					<div className="h-9 border-b border-slate-800 bg-slate-900/60 flex items-center px-4 justify-between">
-						<span className="font-semibold text-slate-400 text-[10px] tracking-wider uppercase">Market_Scripting_Rules</span>
-						<span className="text-[9px] text-slate-500">CONDITIONAL RUNNER</span>
+				<div className="flex flex-col h-[350px] rounded-2xl border border-slate-800 bg-slate-950/90 font-mono text-xs shadow-2xl overflow-hidden [.light_&]:border-slate-200 [.light_&]:bg-slate-50 [.light_&]:shadow-lg">
+					<div className="h-9 border-b border-slate-800 bg-slate-900/60 flex items-center px-4 justify-between [.light_&]:border-slate-200 [.light_&]:bg-slate-100">
+						<span className="font-semibold text-slate-400 text-[10px] tracking-wider uppercase [.light_&]:text-slate-600">Market_Scripting_Rules</span>
+						<span className="text-[9px] text-slate-500 [.light_&]:text-slate-400">CONDITIONAL RUNNER</span>
 					</div>
 					
-					<div className="flex-1 p-4 overflow-y-auto space-y-4 scrollbar-thin scrollbar-thumb-slate-800">
+					<div className="flex-1 p-4 overflow-y-auto space-y-4 scrollbar-thin scrollbar-thumb-slate-800 [.light_&]:scrollbar-thumb-slate-300">
 						<div className="space-y-3">
 							{rules.map((rule) => (
-								<div key={rule.id} className="p-3 bg-slate-900/40 border border-slate-800 rounded-xl flex items-start justify-between gap-2">
+								<div key={rule.id} className="p-3 bg-slate-900/40 border border-slate-800 rounded-xl flex items-start justify-between gap-2 [.light_&]:bg-white [.light_&]:border-slate-200">
 									<div className="flex-1">
 										<p className="font-bold text-slate-200 text-xs">{rule.name}</p>
 										<p className="text-[10px] text-slate-400 mt-1 leading-normal">{rule.description}</p>

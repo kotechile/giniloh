@@ -25,16 +25,16 @@ const PERSONAL_NODE_COORDINATES: Record<string, { x: number; y: number }> = {
 
 // Layout positions (x, y) coordinates for Enterprise Mode (left-to-right cascade)
 const ENTERPRISE_NODE_COORDINATES: Record<string, { x: number; y: number }> = {
-	revenues: { x: 50, y: 90 },
-	receivables: { x: 50, y: 230 },
-	payables: { x: 50, y: 370 },
-	operating_cash_flow: { x: 350, y: 150 },
-	cogs: { x: 350, y: 290 },
-	hr_costs: { x: 350, y: 430 },
-	capex: { x: 650, y: 150 },
-	financing: { x: 650, y: 320 },
-	net_cash_flow: { x: 950, y: 240 },
-	mfs: { x: 1250, y: 240 }
+	revenues: { x: 50, y: 100 },
+	receivables: { x: 350, y: 100 },
+	operating_cash_flow: { x: 350, y: 250 },
+	capex: { x: 650, y: 100 },
+	cogs: { x: 650, y: 250 },
+	hr_costs: { x: 650, y: 400 },
+	payables: { x: 950, y: 250 },
+	financing: { x: 950, y: 400 },
+	net_cash_flow: { x: 1250, y: 250 },
+	mfs: { x: 1550, y: 250 }
 };
 
 // Styles mapping for Personal Mode
@@ -245,9 +245,9 @@ export default function MoneyFlowCanvas({
 
 			{/* Visual canvas window */}
 			<div className="relative overflow-x-auto w-full h-[540px] scrollbar-thin scrollbar-thumb-slate-300 dark:scrollbar-thumb-slate-800">
-				<div className="w-[1550px] h-full relative">
-					{/* SVG Flow Connections Layer */}
-					<svg className="absolute inset-0 w-full h-full pointer-events-none z-0">
+				<div className="w-[1850px] h-full relative">
+					{/* Flow lines (SVG) */}
+					<svg className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
 						<defs>
 							<linearGradient id="activeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
 								<stop offset="0%" stopColor="#06b6d4" />
