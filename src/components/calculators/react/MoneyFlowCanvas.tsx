@@ -182,9 +182,9 @@ export default function MoneyFlowCanvas({
 
 		// Account for node dimensions: nodes are 240px wide, start is on right border, end is on left border
 		const startX = start.x + 240;
-		const startY = start.y + 40; // centered vertically (height 80px)
+		const startY = start.y + 48; // centered vertically (height 96px)
 		const endX = end.x;
-		const endY = end.y + 40;
+		const endY = end.y + 48;
 
 		const controlOffset = Math.abs(endX - startX) / 2;
 		return `M ${startX} ${startY} C ${startX + controlOffset} ${startY}, ${endX - controlOffset} ${endY}, ${endX} ${endY}`;
@@ -345,7 +345,7 @@ export default function MoneyFlowCanvas({
 								onClick={() => setSelectedNodeId(node.id)}
 								style={{ left: `${coords.x}px`, top: `${coords.y}px` }}
 								className={[
-									'absolute w-[240px] h-[80px] text-left p-4 rounded-xl border bg-slate-800 transition flex flex-col justify-between hover:scale-105 cursor-pointer z-10 hover:z-30 focus-within:z-30 group shadow-sm [.light_&]:hover:shadow-md [.light_&]:bg-white',
+									'absolute w-[240px] h-[96px] text-left p-4 rounded-xl border bg-slate-800 transition flex flex-col justify-between hover:scale-105 cursor-pointer z-10 hover:z-30 focus-within:z-30 group shadow-sm [.light_&]:hover:shadow-md [.light_&]:bg-white',
 									isSelected
 										? 'border-cyan-400 shadow-[0_0_0_2px_rgba(59,130,246,0.3)] z-20 [.light_&]:border-blue-500'
 										: `border-slate-700 hover:border-slate-600 [.light_&]:border-slate-300 [.light_&]:hover:border-slate-400`
