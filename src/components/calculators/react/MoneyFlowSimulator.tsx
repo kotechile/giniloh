@@ -781,15 +781,24 @@ export default function MoneyFlowSimulator() {
 						)}
 					</div>
 
-					<form onSubmit={handleChatSubmit} className="border-t border-slate-800 bg-slate-900/40 p-3 flex gap-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-100">
-						<input
-							type="text"
-							value={chatInput}
-							onChange={(e) => setChatInput(e.target.value)}
-							placeholder={isEnterprise ? "Tell the AI what to do (e.g. 'Set receivables DSO to 45' or 'Route revenues to receivables')..." : "Tell the AI what to do (e.g. 'Route $600 from checking to Roth IRA')..."}
-							className="flex-1 bg-transparent text-slate-200 border-none outline-none focus:ring-0 p-0 text-xs placeholder:text-slate-600 [.light_&]:text-slate-800 [.light_&]:placeholder:text-slate-400 font-mono"
-						/>
-						<button type="submit" className="px-4 py-1.5 bg-cyan-600 hover:bg-cyan-500 text-white font-semibold rounded-lg text-[10px] uppercase tracking-wider transition cursor-pointer">
+					<form onSubmit={handleChatSubmit} className="border-t border-slate-800 bg-slate-900/80 p-4 flex gap-3 [.light_&]:border-slate-200 [.light_&]:bg-slate-100/80">
+						<div className="flex-1 relative flex items-center">
+							<div className="absolute left-3 text-cyan-500/70 [.light_&]:text-cyan-600">
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+							</div>
+							<input
+								type="text"
+								value={chatInput}
+								onChange={(e) => setChatInput(e.target.value)}
+								placeholder={isEnterprise ? "Command the AI (e.g. 'Set receivables DSO to 45')..." : "Command the AI (e.g. 'Route $600 from checking to Roth IRA')..."}
+								className="w-full bg-slate-950 border border-slate-700 rounded-xl outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 py-3 pl-10 pr-4 text-xs text-slate-200 placeholder:text-slate-500 [.light_&]:bg-white [.light_&]:border-slate-300 [.light_&]:text-slate-800 [.light_&]:placeholder:text-slate-400 font-mono transition-all shadow-inner"
+							/>
+						</div>
+						<button 
+							type="submit" 
+							disabled={!chatInput.trim() || isPendingAI}
+							className="px-6 py-2 bg-cyan-600 hover:bg-cyan-500 disabled:opacity-50 text-white font-bold rounded-xl text-xs uppercase tracking-wider transition cursor-pointer shadow-[0_0_15px_rgba(8,145,178,0.3)] hover:shadow-[0_0_20px_rgba(8,145,178,0.5)]"
+						>
 							Send
 						</button>
 					</form>
