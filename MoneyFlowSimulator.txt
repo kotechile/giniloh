@@ -1,8 +1,40 @@
-# User Guide: Giniloh Money Flow Simulator
+Giniloh Money Flow Simulator
 
 The **Frictionless Money Flow Simulator** is an interactive financial modeling playground designed to help you visualize, configure, and backtest automated cash flow pipelines. 
 
 By simulating daily transactions and monthly interest cycles, this tool shows how a forward-looking "waterfall" routing system can automatically optimize your net worth. It replaces stressful manual monthly budgeting with a zero-friction system that deposits income, fills emergency reserves, wipes out high-interest debt, maximizes tax-advantaged accounts, and channels leftover surpluses into long-term wealth generators—all automatically.
+
+What is a Frictionless Simulator? The concept of a "Frictionless Simulator" is rooted in the Unified Loh-Friction Philosophy, an architectural framework designed to eliminate the cognitive, emotional, and structural barriers that cause people to fail at wealth building
+. Traditional budgeting is a retrospective chore that forces users to categorize past expenses, inducing guilt and decision fatigue
+.
+The frictionless approach flips this into prospective expense management
+. By planning with intention and creating a pre-determined allocation of resources, money is automatically routed to its highest-utility destination—whether that is paying off debt, capturing 401(k) matches, or investing—the moment it enters your financial ecosystem
+. It eliminates the willpower needed to save and protects you from behavioral mistakes (like panic-selling during a crash) and structural friction (like login fatigue, which is bypassed using modern FIDO biometric standards)
+.
+How the Giniloh.com Simulator Works The Giniloh Frictionless Money Flow Simulator is an interactive modeling playground that brings this theoretical orchestrator to life
+. Under the hood, the engine simulates daily transactions, monthly interest cycles, and market returns to help you backtest automated cash flow pipelines
+.
+The core of the system relies on dual-threshold account mechanics (Overbalance and Underbalance rules)
+:
+Overbalance Sweeps: If your primary checking account exceeds a custom "Ceiling" threshold (T 
+over
+​
+ ), the excess surplus is instantly swept down an algorithmic waterfall, targeting emergency funds, high-interest debt, and tax-advantaged accounts first, before hitting a taxable brokerage
+.
+Underbalance Pulls: If an unexpected expense drops your checking account below your "Floor" safety threshold (T 
+under
+​
+ ), the system automatically pulls funds from your High-Yield Savings Account (HYSA) to prevent an overdraft
+.
+To ensure real-world fidelity, the simulator enforces strict regulatory safeguards, including blocking outbound transfers from Roth IRAs (preventing IRS penalties), enforcing 6-day ACH settlement holds, and restricting daily trades for accounts under $25,000 to mimic Pattern Day Trader (PDT) limits
+.
+How to Use the Simulator You manage the simulator through three primary dashboards:
+System Flow Control (Top): Control the clock speed (run daily, fast-forward, or step manually) and select macroeconomic backtesting regimes (e.g., Baseline growth, Stagflation, or a 2008-style Market Contraction)
+.
+Interactive Money Flow Canvas (Middle): A visual map of your accounts. You can click nodes (like Checking or HYSA) to open a parameter drawer and manually drag sliders to set your current balances, ceilings, and floors
+.
+AI Orchestration Chat & CLI (Bottom): You can configure pipelines using natural language. Because the simulator needs exact math to function, your prompts must include numerical values
+. For example, instead of saying "save money," you must say "Sweep 500 from checking to savings" or "Set checking ceiling to 5000"
 
 ---
 
@@ -237,3 +269,40 @@ Here are 4 real-life scenarios formatted with execution steps (including both AI
 * **Execution**:
   * *AI Chat*: User types: *"Compare traditional OTP login costs to modern FIDO passwordless standards."*
 * **Observation**: System outputs comparative logs detailing transaction speedups, help-desk savings, and the mitigation of delays that cause idle asset drag.
+
+Real-Life Practice Scenarios
+Here are 4 real-life scenarios formatted with execution steps and expected observations to demonstrate how the system works:
+Scenario 1: Aggressive Debt Paydown vs. Earning Interest
+Scenario: A user takes home $2,800 every two weeks (which translates to $200/day). They currently have $3,000 in their checking account but want to cap it at $2,000 so they don't overspend. They also have $4,000 in high-interest credit card debt. They want to see how quickly the automated system will pay off their debt
+.
+Execution:
+How the AI Chat handles it: User types: "Set my income to 200 a day. Set my checking balance to 3000 and limit it to 2000. Set my debt to 4000."
+Manual Alternative: The user clicks the Checking node and adjusts the balance slider to $3,000 and the ceiling slider to $2,000. They then click the Debt node and set the balance to $4,000
+.
+What the user observes: The user clicks Start clock. They will watch the $1,000 checking surplus instantly sweep to the HYSA, then cascade directly to pay down the High-Interest Debt. As simulated days pass, they will watch the debt balance decrease to $0 while seeing interest charges automatically accrue monthly until the balance is fully cleared
+.
+Scenario 2: The Emergency Expense (Floor Protection)
+Scenario: A user has successfully built up $15,000 in their High-Yield Savings Account (HYSA). They want to ensure their checking account never drops below $1,500. Suddenly, an unexpected expense drops their checking balance to $500. They want to verify that the system will protect them
+.
+Execution:
+How the AI Chat handles it: User types: "Set my checking floor to 1500. Set checking balance to 500. Set my HYSA to 15000."
+Manual Alternative: The user selects the Checking node on the canvas, dragging the Floor threshold to $1,500 and the Balance to $500. They select the HYSA node and set its balance to $15,000
+.
+What the user observes: The user clicks Step 1 day. The system detects the checking deficit and instantly triggers an automated "Underbalance sweep," pulling exactly $1,000 from the HYSA back to checking to restore the floor balance
+.
+Scenario 3: The Income Surge and Waterfall Overflow
+Scenario: A user receives a massive promotion and now takes home $500/day. Their emergency HYSA is completely full at its $15,000 limit, and they carry zero debt. They want to visualize how the system automatically handles long-term investment cascading
+.
+Execution:
+How the AI Chat handles it: User types: "Set my income to 500 a day. Set my HYSA balance to 15000 and its ceiling to 15000. Set my debt to 0."
+Manual Alternative: Adjust the Income/day to $500 in the top control bar. Click the HYSA node to set both balance and ceiling to $15,000, and ensure the Debt node balance is zero
+.
+What the user observes: The user sets the simulation to run at 5x speed. They will witness daily checking surpluses bypass the full HYSA and zero-balance debt nodes. Instead, cash visually cascades down the priority list: automatically maxing out the Employer 401(k) Match, filling the pre-tax HSA, filling the Roth IRA, and dumping all remaining overflow into the Taxable Brokerage
+.
+Scenario 4: Testing the System Guardrails (Prohibited Transfers)
+Scenario: A user is curious about routing money in reverse and attempts to draw funds out of their Roth IRA back to their primary checking account to cover daily expenses
+.
+Execution:
+How the AI Chat handles it: User types: "Route 1000 from my IRA to checking."
+What the user observes: The user will not see a cyan flow path created on the canvas. Instead, the system's regulatory guardrails will kick in. The CLI and Audit Log will immediately block the command and output: "ERROR: Automated sweep from IRA blocked to prevent early distribution penalties," perfectly mimicking real-world IRS constraints
+.
