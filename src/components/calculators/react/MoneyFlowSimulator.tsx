@@ -522,36 +522,36 @@ export default function MoneyFlowSimulator() {
 			</div>
 
 			{/* Main Simulator Dashboard */}
-			<div className="overflow-hidden rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 md:p-6 shadow-xl">
+			<div className="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 p-4 md:p-6 shadow-xl [.light_&]:border-slate-200 [.light_&]:bg-white">
 				<div className="flex flex-wrap items-center justify-between gap-6 pb-6 border-b border-slate-200 dark:border-slate-800">
 					<div>
-						<p className="font-mono text-xs uppercase tracking-[0.28em] text-cyan-600 dark:text-cyan-400">
+						<p className="font-mono text-xs uppercase tracking-[0.28em] text-cyan-400 [.light_&]:text-cyan-600">
 							{isEnterprise ? 'SPV Waterfall Cash Simulator' : 'High-Fidelity Backtesting & AI Engine'}
 						</p>
-						<h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 dark:text-white">
+						<h2 className="mt-2 text-2xl font-bold tracking-tight text-white [.light_&]:text-slate-900">
 							{isEnterprise ? 'Enterprise CFO Controls' : 'System Flow Control'}
 						</h2>
 					</div>
 					
 					{/* Status Stats */}
 					<div className="flex flex-wrap gap-3 text-left">
-						<div className="rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 px-4 py-2">
+						<div className="rounded-lg border border-slate-700 bg-slate-800/80 px-4 py-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
 							<span className="block font-mono text-[9px] uppercase tracking-widest text-slate-500">Macro Feed</span>
-							<span className="block text-sm font-bold font-sans text-slate-900 dark:text-white mt-1">Index: {currentSAndP.toFixed(2)}</span>
+							<span className="block text-sm font-bold font-sans text-white [.light_&]:text-slate-900 mt-1">Index: {currentSAndP.toFixed(2)}</span>
 						</div>
-						<div className="rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 px-4 py-2">
+						<div className="rounded-lg border border-slate-700 bg-slate-800/80 px-4 py-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
 							<span className="block font-mono text-[9px] uppercase tracking-widest text-slate-500">Inflation</span>
-							<span className="block text-sm font-bold font-sans text-red-600 dark:text-red-400 mt-1">{currentInflation.toFixed(1)}%</span>
+							<span className="block text-sm font-bold font-sans text-red-400 [.light_&]:text-red-600 mt-1">{currentInflation.toFixed(1)}%</span>
 						</div>
-						<div className="rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 px-4 py-2">
+						<div className="rounded-lg border border-slate-700 bg-slate-800/80 px-4 py-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
 							<span className="block font-mono text-[9px] uppercase tracking-widest text-slate-500">Day Count</span>
-							<span className="block text-sm font-bold font-sans text-slate-900 dark:text-white mt-1">{state.day} days</span>
+							<span className="block text-sm font-bold font-sans text-white [.light_&]:text-slate-900 mt-1">{state.day} days</span>
 						</div>
-						<div className="rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 px-4 py-2">
+						<div className="rounded-lg border border-slate-700 bg-slate-800/80 px-4 py-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
 							<span className="block font-mono text-[9px] uppercase tracking-widest text-slate-500">
 								{isEnterprise ? 'Treasury Net Position' : 'Wealth Projection'}
 							</span>
-							<span className="block text-sm font-bold font-sans text-emerald-600 dark:text-emerald-400 mt-1">
+							<span className="block text-sm font-bold font-sans text-emerald-400 [.light_&]:text-emerald-600 mt-1">
 								{formatCurrency(state.totalWealthAccumulated)}
 							</span>
 						</div>
@@ -566,10 +566,10 @@ export default function MoneyFlowSimulator() {
 							className={[
 								'py-2 px-5 rounded-lg text-xs font-mono uppercase tracking-wider transition font-bold select-none border cursor-pointer disabled:opacity-30 shadow-sm',
 								isRunning
-									? 'bg-red-50 dark:bg-red-500/15 border-red-200 dark:border-red-500/30 text-red-600 dark:text-red-400 hover:bg-red-100'
+									? 'bg-red-500/15 border-red-500/30 text-red-400 hover:bg-red-500/25 [.light_&]:bg-red-50 [.light_&]:border-red-200 [.light_&]:text-red-600 [.light_&]:hover:bg-red-100'
 									: isEnterprise
-										? 'bg-emerald-50 dark:bg-emerald-500/15 border-emerald-200 dark:border-emerald-500/30 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-100'
-										: 'bg-cyan-50 dark:bg-cyan-500/15 border-cyan-200 dark:border-cyan-500/30 text-cyan-700 dark:text-cyan-400 hover:bg-cyan-100'
+										? 'bg-emerald-500/15 border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/25 [.light_&]:bg-emerald-50 [.light_&]:border-emerald-200 [.light_&]:text-emerald-600 [.light_&]:hover:bg-emerald-100'
+										: 'bg-cyan-500/15 border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/25 [.light_&]:bg-cyan-50 [.light_&]:border-cyan-200 [.light_&]:text-cyan-700 [.light_&]:hover:bg-cyan-100'
 							].join(' ')}
 						>
 							{isRunning ? 'Pause clock' : 'Start clock'}
@@ -577,13 +577,13 @@ export default function MoneyFlowSimulator() {
 						<button
 							onClick={handleStep}
 							disabled={isRunning || state.isPaused}
-							className="py-2 px-4 rounded-lg text-xs font-mono uppercase tracking-wider border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-300 disabled:opacity-30 cursor-pointer shadow-sm"
+							className="py-2 px-4 rounded-lg text-xs font-mono uppercase tracking-wider border border-slate-700 bg-slate-800 hover:bg-slate-700 text-slate-300 disabled:opacity-30 cursor-pointer shadow-sm [.light_&]:border-slate-200 [.light_&]:bg-white [.light_&]:text-slate-700 [.light_&]:hover:bg-slate-50"
 						>
 							Step 1 day
 						</button>
 						<button
 							onClick={() => handleReset()}
-							className="py-2 px-4 rounded-lg text-xs font-mono uppercase tracking-wider border border-slate-200 dark:border-slate-800 bg-white dark:bg-transparent hover:bg-slate-50 dark:hover:bg-slate-900 text-slate-600 dark:text-slate-400 cursor-pointer shadow-sm"
+							className="py-2 px-4 rounded-lg text-xs font-mono uppercase tracking-wider border border-slate-800 bg-transparent hover:bg-slate-900 text-slate-400 cursor-pointer shadow-sm [.light_&]:border-slate-200 [.light_&]:bg-white [.light_&]:text-slate-600 [.light_&]:hover:bg-slate-50"
 						>
 							Reset
 						</button>
@@ -596,7 +596,7 @@ export default function MoneyFlowSimulator() {
 							<select
 								value={state.macroScenario}
 								onChange={(e) => handleScenarioChange(e.target.value as any)}
-								className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 rounded-lg px-3 py-1.5 text-xs outline-none cursor-pointer shadow-sm font-medium appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2010L12%2015L17%2010%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E')] bg-[length:20px_20px] bg-no-repeat bg-[position:right_4px_center] pr-8"
+								className="bg-slate-800 border border-slate-700 text-slate-200 [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-slate-800 rounded-lg px-3 py-1.5 text-xs outline-none cursor-pointer shadow-sm font-medium appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2010L12%2015L17%2010%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E')] bg-[length:20px_20px] bg-no-repeat bg-[position:right_4px_center] pr-8"
 							>
 								<option value="baseline">Baseline Growth</option>
 								<option value="inflation">Stagflation Shock</option>
@@ -614,7 +614,7 @@ export default function MoneyFlowSimulator() {
 							<select
 								value={speedMs}
 								onChange={(e) => setSpeedMs(parseInt(e.target.value))}
-								className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 rounded-lg px-3 py-1.5 text-xs outline-none cursor-pointer shadow-sm font-medium appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2010L12%2015L17%2010%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E')] bg-[length:20px_20px] bg-no-repeat bg-[position:right_4px_center] pr-8"
+								className="bg-slate-800 border border-slate-700 text-slate-200 [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-slate-800 rounded-lg px-3 py-1.5 text-xs outline-none cursor-pointer shadow-sm font-medium appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2010L12%2015L17%2010%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E')] bg-[length:20px_20px] bg-no-repeat bg-[position:right_4px_center] pr-8"
 							>
 								<option value="800">1x (Slow)</option>
 								<option value="400">2x (Normal)</option>
@@ -633,7 +633,7 @@ export default function MoneyFlowSimulator() {
 								step="10"
 								value={dailyIncome}
 								onChange={(e) => setDailyIncome(parseFloat(e.target.value) || 0)}
-								className="w-20 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-800 dark:text-slate-200 rounded-lg px-3 py-1.5 text-xs outline-none font-mono shadow-sm"
+								className="w-20 bg-slate-800 border border-slate-700 text-slate-200 [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-slate-800 rounded-lg px-3 py-1.5 text-xs outline-none font-mono shadow-sm"
 							/>
 						</div>
 					</div>

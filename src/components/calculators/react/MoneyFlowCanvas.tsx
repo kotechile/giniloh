@@ -239,9 +239,9 @@ export default function MoneyFlowCanvas({
 	};
 
 	return (
-		<div className="relative w-full rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 p-2 md:p-6 shadow-inner overflow-hidden min-h-[600px]">
+		<div className="relative w-full rounded-2xl border border-slate-800 bg-slate-950 p-2 md:p-6 shadow-inner overflow-hidden min-h-[600px] [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
 			{/* Background Grid Pattern */}
-			<div className="absolute inset-0 opacity-[0.05] dark:opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTQwIDBIMHY0MGg0MFYweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM2YzZjRmIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=')] pointer-events-none"></div>
+			<div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTQwIDBIMHY0MGg0MFYweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM2YzZjRmIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=')] pointer-events-none [.light_&]:opacity-[0.05]"></div>
 
 			{/* Visual canvas window */}
 			<div className="relative overflow-x-auto w-full h-[540px] scrollbar-thin scrollbar-thumb-slate-300 dark:scrollbar-thumb-slate-800">
@@ -274,7 +274,7 @@ export default function MoneyFlowCanvas({
 										key={`base-${key}`}
 										d={calculateBezierPath('checking', key)}
 										fill="none"
-										className="stroke-slate-300 dark:stroke-slate-700/60"
+										className="stroke-slate-700/60 [.light_&]:stroke-slate-300"
 										strokeWidth="3"
 									/>
 								);
@@ -282,22 +282,22 @@ export default function MoneyFlowCanvas({
 						) : (
 							<>
 								{/* Revenues -> Receivables & Operating Cash Flow link */}
-								<path d={calculateBezierPath('revenues', 'operating_cash_flow')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
-								<path d={calculateBezierPath('revenues', 'receivables')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
-								<path d={calculateBezierPath('receivables', 'operating_cash_flow')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
+								<path d={calculateBezierPath('revenues', 'operating_cash_flow')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
+								<path d={calculateBezierPath('revenues', 'receivables')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
+								<path d={calculateBezierPath('receivables', 'operating_cash_flow')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
 
 								{/* Costs links */}
-								<path d={calculateBezierPath('operating_cash_flow', 'cogs')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
-								<path d={calculateBezierPath('operating_cash_flow', 'hr_costs')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
-								<path d={calculateBezierPath('operating_cash_flow', 'capex')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
-								<path d={calculateBezierPath('cogs', 'payables')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
-								<path d={calculateBezierPath('hr_costs', 'payables')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
-								<path d={calculateBezierPath('capex', 'payables')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
+								<path d={calculateBezierPath('operating_cash_flow', 'cogs')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
+								<path d={calculateBezierPath('operating_cash_flow', 'hr_costs')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
+								<path d={calculateBezierPath('operating_cash_flow', 'capex')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
+								<path d={calculateBezierPath('cogs', 'payables')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
+								<path d={calculateBezierPath('hr_costs', 'payables')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
+								<path d={calculateBezierPath('capex', 'payables')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
 
 								{/* Discharges */}
-								<path d={calculateBezierPath('payables', 'net_cash_flow')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
-								<path d={calculateBezierPath('financing', 'net_cash_flow')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
-								<path d={calculateBezierPath('net_cash_flow', 'mfs')} fill="none" className="stroke-slate-300 dark:stroke-slate-700/60" strokeWidth="3" />
+								<path d={calculateBezierPath('payables', 'net_cash_flow')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
+								<path d={calculateBezierPath('financing', 'net_cash_flow')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
+								<path d={calculateBezierPath('net_cash_flow', 'mfs')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
 							</>
 						)}
 
@@ -312,7 +312,7 @@ export default function MoneyFlowCanvas({
 										stroke={isEnterprise ? "url(#corpGradient)" : "url(#activeGradient)"}
 										strokeWidth="4"
 										filter="url(#glow)"
-										className="opacity-50 dark:opacity-70"
+										className="opacity-70 [.light_&]:opacity-50"
 									/>
 									<path
 										d={path}
@@ -345,37 +345,37 @@ export default function MoneyFlowCanvas({
 								onClick={() => setSelectedNodeId(node.id)}
 								style={{ left: `${coords.x}px`, top: `${coords.y}px` }}
 								className={[
-									'absolute w-[240px] h-[80px] text-left p-4 rounded-xl border bg-white dark:bg-slate-800 transition flex flex-col justify-between hover:scale-105 cursor-pointer z-10 hover:z-30 focus-within:z-30 group shadow-sm hover:shadow-md dark:shadow-none',
+									'absolute w-[240px] h-[80px] text-left p-4 rounded-xl border bg-slate-800 transition flex flex-col justify-between hover:scale-105 cursor-pointer z-10 hover:z-30 focus-within:z-30 group shadow-sm [.light_&]:hover:shadow-md [.light_&]:bg-white',
 									isSelected
-										? 'border-blue-500 dark:border-cyan-400 shadow-[0_0_0_2px_rgba(59,130,246,0.3)] z-20'
-										: `border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600`
+										? 'border-cyan-400 shadow-[0_0_0_2px_rgba(59,130,246,0.3)] z-20 [.light_&]:border-blue-500'
+										: `border-slate-700 hover:border-slate-600 [.light_&]:border-slate-200 [.light_&]:hover:border-slate-300`
 								].join(' ')}
 							>
 								{/* Tooltip Hover Overlay */}
 								{tooltip && (
 									<div className={[
-										'absolute w-72 p-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950/95 shadow-xl backdrop-blur-lg opacity-0 pointer-events-none group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-200 z-50 normal-case whitespace-normal leading-relaxed text-[11px] text-slate-600 dark:text-slate-300 font-normal',
+										'absolute w-72 p-4 rounded-xl border border-slate-800 bg-slate-950/95 shadow-xl backdrop-blur-lg opacity-0 pointer-events-none group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-200 z-50 normal-case whitespace-normal leading-relaxed text-[11px] text-slate-300 font-normal [.light_&]:border-slate-200 [.light_&]:bg-white [.light_&]:text-slate-600',
 										isTopRow ? 'top-full mt-3 left-1/2 -translate-x-1/2' : 'bottom-full mb-3 left-1/2 -translate-x-1/2'
 									].join(' ')}>
-										<div className="flex items-center gap-1.5 pb-2 mb-2 border-b border-slate-100 dark:border-slate-800">
-											<span className="font-bold text-slate-900 dark:text-white text-xs">{tooltip.title}</span>
+										<div className="flex items-center gap-1.5 pb-2 mb-2 border-b border-slate-800 [.light_&]:border-slate-100">
+											<span className="font-bold text-white text-xs [.light_&]:text-slate-900">{tooltip.title}</span>
 										</div>
 										<div className="space-y-2">
-											<p><strong className="text-slate-900 dark:text-slate-200">Concept:</strong> {tooltip.desc}</p>
-											<p><strong className="text-slate-900 dark:text-slate-200">Values:</strong> {tooltip.numbers}</p>
+											<p><strong className="text-slate-200 [.light_&]:text-slate-900">Concept:</strong> {tooltip.desc}</p>
+											<p><strong className="text-slate-200 [.light_&]:text-slate-900">Values:</strong> {tooltip.numbers}</p>
 										</div>
 									</div>
 								)}
 
 								<div className="flex items-center justify-between w-full">
-									<span className="font-bold text-slate-900 dark:text-white text-sm tracking-tight">{node.name}</span>
+									<span className="font-bold text-white text-sm tracking-tight [.light_&]:text-slate-900">{node.name}</span>
 									<span className={`text-[9px] uppercase tracking-widest px-2 py-0.5 rounded font-mono font-semibold ${colors.bg} ${colors.text}`}>
 										{node.type}
 									</span>
 								</div>
 
 								<div className="flex items-end justify-between w-full mt-1">
-									<span className="text-xl font-bold font-sans text-black dark:text-white">
+									<span className="text-xl font-bold font-sans text-white [.light_&]:text-black">
 										{formatCurrency(node.balance)}
 									</span>
 									{!isEnterprise ? (
@@ -392,17 +392,17 @@ export default function MoneyFlowCanvas({
 										)
 									)}
 									{node.interestRate !== undefined && (
-										<span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-mono font-bold">
+										<span className="text-[10px] text-emerald-400 font-mono font-bold [.light_&]:text-emerald-600">
 											{node.interestRate}% APY
 										</span>
 									)}
 									{isEnterprise && node.id === 'receivables' && (
-										<span className="text-[10px] text-amber-600 dark:text-amber-400 font-mono">
+										<span className="text-[10px] text-amber-400 font-mono [.light_&]:text-amber-600">
 											DSO: {node.dso}d
 										</span>
 									)}
 									{isEnterprise && node.id === 'financing' && node.balance > 0 && (
-										<span className="text-[10px] text-violet-600 dark:text-violet-400 font-mono font-bold">
+										<span className="text-[10px] text-violet-400 font-mono font-bold [.light_&]:text-violet-600">
 											Rate: {((node.fixedSpread || 0) + (node.variableRateIndex || 0)).toFixed(1)}%
 										</span>
 									)}
