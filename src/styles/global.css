@@ -526,3 +526,8 @@ a {
   border-radius: 0 1rem 1rem 0 !important;
   color: #f1f5f9 !important;
 }
+
+/* Hide the redundant context/summary box before the article content */
+.prose .article-context {
+  display: none !important;
+}
