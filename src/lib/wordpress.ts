@@ -140,8 +140,17 @@ async function fetchWordPress(endpoint: string, query: Record<string, string | n
 		}
 	}
 
+	// Add a cache-buster parameter to prevent CDN/Edge nodes from serving stale JSON
+	url.searchParams.set('_t', Date.now().toString());
+
 	try {
-		const response = await fetch(url);
+		const response = await fetch(url, {
+			headers: {
+				'Cache-Control': 'no-cache, no-store, must-revalidate',
+				Pragma: 'no-cache'
+			},
+			cache: 'no-store'
+		});
 		if (!response.ok) {
 			return [];
 		}
