@@ -33,6 +33,10 @@ const ACCOUNT_ALIASES: Record<string, string> = {
 	'taxable brokerage': 'brokerage',
 	'investments': 'brokerage',
 	'stocks': 'brokerage',
+	mortgage: 'mortgage',
+	'home loan': 'mortgage',
+	'house loan': 'mortgage',
+	'mortgage payment': 'mortgage',
 	// Corporate Account Aliases
 	revenues: 'revenues',
 	'revenue plan': 'revenues',
@@ -92,7 +96,7 @@ function localRegexParse(prompt: string): string | null {
 
 	// 1. Match set parameters e.g., "set checking ceiling to 6000" or "set checking floor to 2000"
 	// matches: set [account] [field] (to) [value]
-	const setRegex = /set\s+([a-zA-Z0-9\s\-\(\)_]+?)\s+(balance|ceiling|floor|threshold|dso|dpo|risk|spread|grossincome|gross\s+income|taxrate|tax\s+rate|frequency)\s*(?:to)?\s*\$?([0-9\.,a-zA-Z\-]+)/i;
+	const setRegex = /set\s+([a-zA-Z0-9\s\-\(\)_]+?)\s+(balance|ceiling|floor|threshold|dso|dpo|risk|spread|grossincome|gross\s+income|taxrate|tax\s+rate|frequency|interestrate|interest\s+rate|mortgagepayment|mortgage\s+payment)\s*(?:to)?\s*\$?([0-9\.,a-zA-Z\-]+)/i;
 	const setMatch = text.match(setRegex);
 	if (setMatch) {
 		const accountRaw = setMatch[1].trim();
@@ -103,6 +107,8 @@ function localRegexParse(prompt: string): string | null {
 		if (field === 'dpo') field = 'dpoVariable'; // default dpo variable
 		if (field === 'grossincome') field = 'grossIncome';
 		if (field === 'taxrate') field = 'taxRate';
+		if (field === 'interestrate') field = 'interestRate';
+		if (field === 'mortgagepayment') field = 'mortgagePayment';
 
 		// resolve account alias
 		const nodeId = ACCOUNT_ALIASES[accountRaw] || accountRaw;

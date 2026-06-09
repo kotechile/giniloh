@@ -23,7 +23,8 @@ const PERSONAL_NODE_COORDINATES: Record<string, { x: number; y: number }> = {
 	ira: { x: 810, y: 260 },
 	max401k: { x: 810, y: 410 },
 	brokerage: { x: 1070, y: 260 },
-	taxes_paid: { x: 1070, y: 410 }
+	taxes_paid: { x: 1070, y: 410 },
+	mortgage: { x: 290, y: 410 }
 };
 
 // Layout positions (x, y) coordinates for Enterprise Mode (left-to-right cascade)
@@ -52,7 +53,8 @@ const PERSONAL_ACCENT_COLORS: Record<string, { text: string; bg: string }> = {
 	ira: { text: 'text-indigo-400 [.light_&]:text-indigo-700', bg: 'bg-indigo-900/40 [.light_&]:bg-indigo-100' },
 	max401k: { text: 'text-purple-400 [.light_&]:text-purple-700', bg: 'bg-purple-900/40 [.light_&]:bg-purple-100' },
 	brokerage: { text: 'text-violet-400 [.light_&]:text-violet-700', bg: 'bg-violet-900/40 [.light_&]:bg-violet-100' },
-	taxes_paid: { text: 'text-amber-400 [.light_&]:text-amber-700', bg: 'bg-amber-900/40 [.light_&]:bg-amber-100' }
+	taxes_paid: { text: 'text-amber-400 [.light_&]:text-amber-700', bg: 'bg-amber-900/40 [.light_&]:bg-amber-100' },
+	mortgage: { text: 'text-indigo-400 [.light_&]:text-indigo-700', bg: 'bg-indigo-900/40 [.light_&]:bg-indigo-100' }
 };
 
 // Styles mapping for Enterprise Mode
@@ -120,6 +122,11 @@ const PERSONAL_NODE_TOOLTIPS: Record<string, { title: string; desc: string; numb
 		title: 'Taxes Paid (IRS)',
 		desc: 'Cumulative state and federal income tax withholdings.',
 		numbers: 'Large number: total tax withheld YTD from paycheck cycles.'
+	},
+	mortgage: {
+		title: 'Mortgage Loan',
+		desc: 'Long-term low-interest mortgage liability on primary residence.',
+		numbers: 'Large number: outstanding principal balance. Auto-debited monthly at fixed Minimum Payment. Interest APY compiles daily and charges monthly.'
 	}
 };
 
@@ -421,11 +428,15 @@ export default function MoneyFlowCanvas({
 										{formatCurrency(node.balance)}
 									</span>
 									{!isEnterprise ? (
-										node.type === 'checking' && (
+										node.type === 'checking' ? (
 											<span className="text-[10px] text-slate-500 font-mono">
 												C:{Math.round(node.ceiling)} / F:{Math.round(node.floor)}
 											</span>
-										)
+										) : node.type === 'mortgage' ? (
+											<span className="text-[10px] text-slate-500 font-mono">
+												Min: {Math.round(node.mortgagePayment || 1800)}/mo
+											</span>
+										) : null
 									) : (
 										node.type === 'net_cash_flow' && (
 											<span className="text-[10px] text-slate-500 font-mono">
@@ -570,6 +581,42 @@ export default function MoneyFlowCanvas({
 										<option value="bi-weekly">Bi-weekly Paycheck</option>
 										<option value="monthly">Monthly Salary</option>
 									</select>
+								</div>
+							</>
+						)}
+
+						{!isEnterprise && selectedNode.type === 'mortgage' && (
+							<>
+								<div className="flex flex-col gap-2">
+									<div className="flex justify-between text-xs font-mono text-slate-400">
+										<span>Mortgage Interest Rate (%)</span>
+										<span className="text-cyan-400 font-bold">{selectedNode.interestRate || 6.5}% APY</span>
+									</div>
+									<input
+										type="range"
+										min="1.0"
+										max="15.0"
+										step="0.1"
+										value={selectedNode.interestRate || 6.5}
+										onChange={(e) => handleSliderChange('interestRate', parseFloat(e.target.value))}
+										className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-slate-800 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-slate-800 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
+									/>
+								</div>
+
+								<div className="flex flex-col gap-2">
+									<div className="flex justify-between text-xs font-mono text-slate-400">
+										<span>Monthly Minimum Payment</span>
+										<span className="text-emerald-400 font-bold">{formatCurrency(selectedNode.mortgagePayment || 1800)}</span>
+									</div>
+									<input
+										type="range"
+										min="100"
+										max="8000"
+										step="50"
+										value={selectedNode.mortgagePayment || 1800}
+										onChange={(e) => handleSliderChange('mortgagePayment', parseFloat(e.target.value))}
+										className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-slate-800 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-slate-800 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
+									/>
 								</div>
 							</>
 						)}

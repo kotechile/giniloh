@@ -10,6 +10,7 @@ export type AccountType =
 	| 'income' // Virtual input source
 	| 'taxes_paid' // Virtual tracking node for IRS withholdings
 	| 'corp_taxes' // Virtual tracking node for corporate taxes & VAT
+	| 'mortgage' // Long-Term Low-Interest Debt
 	// Corporate Account Types
 	| 'revenues'
 	| 'receivables'
@@ -49,6 +50,7 @@ export interface AccountNode {
 	grossIncome?: number; // gross amount per paycheck
 	taxRate?: number; // withholding rate %
 	frequency?: 'daily' | 'bi-weekly' | 'monthly';
+	mortgagePayment?: number; // Fixed monthly mortgage minimum payment
 }
 
 export interface FlowEdge {
@@ -181,7 +183,8 @@ export function createDefaultNodes(): AccountNode[] {
 		{ id: 'ira', name: 'Roth IRA', type: 'ira', balance: 3000, ceiling: 7000, floor: 0, annualLimit: 7000, ytdContributions: 3000 },
 		{ id: 'max401k', name: '401k (Voluntary Max)', type: 'max401k', balance: 0, ceiling: 23000, floor: 0, annualLimit: 23000, ytdContributions: 0 },
 		{ id: 'brokerage', name: 'Taxable Brokerage', type: 'brokerage', balance: 12000, ceiling: 1000000, floor: 0, ytdContributions: 0 },
-		{ id: 'taxes_paid', name: 'Taxes Paid (IRS)', type: 'taxes_paid', balance: 0, ceiling: 1000000, floor: 0, ytdContributions: 0 }
+		{ id: 'taxes_paid', name: 'Taxes Paid (IRS)', type: 'taxes_paid', balance: 0, ceiling: 1000000, floor: 0, ytdContributions: 0 },
+		{ id: 'mortgage', name: 'Mortgage Loan', type: 'mortgage', balance: 300000, ceiling: 1000000, floor: 0, interestRate: 6.5, ytdContributions: 0, mortgagePayment: 1800 }
 	];
 }
 
@@ -326,6 +329,10 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 					const yieldEarned = node.balance * monthlyRate;
 					node.balance += yieldEarned;
 					nextLog.push(`Day ${nextDay}: HYSA earned $${yieldEarned.toFixed(2)} yield.`);
+				} else if (node.type === 'mortgage') {
+					const interest = node.balance * monthlyRate;
+					node.balance += interest;
+					nextLog.push(`Day ${nextDay}: Mortgage charged $${interest.toFixed(2)} interest.`);
 				}
 			}
 		});
@@ -424,6 +431,20 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 			nextLog.push(`Day ${nextDay}: ${logMessage} (Enforced ${holdType} hold of ${delay} days).`);
 		};
 
+		// Process monthly mortgage payment once every 30 days
+		if (nextDay % 30 === 0 && !triggerPause) {
+			const mortgageNode = nextNodes.find((n) => n.type === 'mortgage');
+			if (mortgageNode && mortgageNode.balance > 0) {
+				const payment = mortgageNode.mortgagePayment || 1800;
+				const actualPayment = Math.min(payment, mortgageNode.balance);
+				if (actualPayment > 0) {
+					checkingNode.balance -= actualPayment;
+					mortgageNode.balance -= actualPayment;
+					nextLog.push(`Day ${nextDay}: [MORTGAGE] Auto-debited monthly mortgage payment of $${actualPayment.toFixed(2)} from Checking. Remaining principal: $${mortgageNode.balance.toFixed(2)}.`);
+				}
+			}
+		}
+
 		// Deficit pull (underbalance checking)
 		if (checkingNode.balance < checkingNode.floor && !triggerPause) {
 			const deficit = checkingNode.floor - checkingNode.balance;
@@ -468,7 +489,7 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 		// Calculate total wealth
 		let totalWealth = 0;
 		nextNodes.forEach((node) => {
-			if (node.type === 'debt') {
+			if (node.type === 'debt' || node.type === 'mortgage') {
 				totalWealth -= node.balance;
 			} else if (['checking', 'hysa', 'match401k', 'hsa', 'ira', 'max401k', 'brokerage'].includes(node.type)) {
 				totalWealth += node.balance;

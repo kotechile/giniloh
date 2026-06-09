@@ -300,7 +300,7 @@ export default function MoneyFlowSimulator() {
 				return { success: false, nextState: targetState, output: 'Syntax: reorder [list of accounts separated by spaces or commas]' };
 			}
 			const orderArgs = cmd.substring(baseCommand.length).toLowerCase().replace(/_/g, '').split(/[\s,]+/).map(x => x.trim()).filter(Boolean);
-			const validPersonalTypes: AccountType[] = ['hysa', 'match401k', 'debt', 'hsa', 'ira', 'max401k', 'brokerage'];
+			const validPersonalTypes: AccountType[] = ['hysa', 'match401k', 'debt', 'hsa', 'ira', 'max401k', 'brokerage', 'mortgage'];
 			
 			const normalizedOrder = orderArgs.map(arg => {
 				if (arg === 'rothira' || arg === 'ira') return 'ira';
@@ -309,6 +309,7 @@ export default function MoneyFlowSimulator() {
 				if (arg === 'brokerage' || arg === 'investments' || arg === 'stocks') return 'brokerage';
 				if (arg === '401kmatch' || arg === 'match401k') return 'match401k';
 				if (arg === '401kmax' || arg === 'max401k') return 'max401k';
+				if (arg === 'mortgage' || arg === 'homeloan' || arg === 'houseloan') return 'mortgage';
 				return arg;
 			});
 
@@ -358,9 +359,9 @@ export default function MoneyFlowSimulator() {
 				return { success: false, nextState: targetState, output: `Error: Account "${nodeId}" not found.` };
 			}
 
-			const validFields = ['balance', 'ceiling', 'floor', 'dso', 'dpovariable', 'dpofixed', 'fixedspread', 'grossincome', 'taxrate', 'frequency'];
+			const validFields = ['balance', 'ceiling', 'floor', 'dso', 'dpovariable', 'dpofixed', 'fixedspread', 'grossincome', 'taxrate', 'frequency', 'interestrate', 'mortgagepayment'];
 			if (!validFields.includes(field)) {
-				return { success: false, nextState: targetState, output: `Error: Field must be balance, ceiling, floor, dso, dpoVariable, dpoFixed, fixedSpread, grossIncome, taxRate, or frequency.` };
+				return { success: false, nextState: targetState, output: `Error: Field must be balance, ceiling, floor, dso, dpoVariable, dpoFixed, fixedSpread, grossIncome, taxRate, frequency, interestRate, or mortgagePayment.` };
 			}
 
 			let normalizedField = field;
@@ -369,6 +370,8 @@ export default function MoneyFlowSimulator() {
 			if (field === 'fixedspread') normalizedField = 'fixedSpread';
 			if (field === 'grossincome') normalizedField = 'grossIncome';
 			if (field === 'taxrate') normalizedField = 'taxRate';
+			if (field === 'interestrate') normalizedField = 'interestRate';
+			if (field === 'mortgagepayment') normalizedField = 'mortgagePayment';
 
 			return {
 				success: true,
