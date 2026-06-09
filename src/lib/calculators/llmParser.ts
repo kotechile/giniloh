@@ -79,17 +79,30 @@ function localRegexParse(prompt: string): string | null {
 		return 'help';
 	}
 
+	// 0. Match qualitative priority sweeps locally
+	if (text.includes('prioritize debt') || text.includes('pay off debt') || text.includes('debt reduction')) {
+		return 'reorder debt, hysa, match401k, hsa, ira, max401k, brokerage; set checking ceiling 2000';
+	}
+	if (text.includes('prioritize savings') || text.includes('emergency savings') || text.includes('save more')) {
+		return 'reorder hysa, match401k, debt, hsa, ira, max401k, brokerage; set checking ceiling 4000';
+	}
+	if (text.includes('prioritize invest') || text.includes('stock market') || text.includes('investing')) {
+		return 'reorder match401k, hysa, hsa, ira, max401k, brokerage, debt; set checking ceiling 3000';
+	}
+
 	// 1. Match set parameters e.g., "set checking ceiling to 6000" or "set checking floor to 2000"
 	// matches: set [account] [field] (to) [value]
-	const setRegex = /set\s+([a-zA-Z0-9\s\-\(\)_]+?)\s+(balance|ceiling|floor|threshold|dso|dpo|risk|spread)\s*(?:to)?\s*\$?([0-9\.,]+)/i;
+	const setRegex = /set\s+([a-zA-Z0-9\s\-\(\)_]+?)\s+(balance|ceiling|floor|threshold|dso|dpo|risk|spread|grossincome|gross\s+income|taxrate|tax\s+rate|frequency)\s*(?:to)?\s*\$?([0-9\.,a-zA-Z\-]+)/i;
 	const setMatch = text.match(setRegex);
 	if (setMatch) {
 		const accountRaw = setMatch[1].trim();
-		let field = setMatch[2].trim();
-		const val = parseFloat(setMatch[3].replace(/,/g, ''));
+		let field = setMatch[2].trim().replace(/\s+/g, '').toLowerCase();
+		const val = setMatch[3].trim();
 		
 		if (field === 'threshold') field = 'ceiling'; // default threshold to ceiling
 		if (field === 'dpo') field = 'dpoVariable'; // default dpo variable
+		if (field === 'grossincome') field = 'grossIncome';
+		if (field === 'taxrate') field = 'taxRate';
 
 		// resolve account alias
 		const nodeId = ACCOUNT_ALIASES[accountRaw] || accountRaw;
@@ -146,16 +159,23 @@ export async function parseNaturalLanguage(prompt: string): Promise<{ command: s
 	const promptSystemText = `You are an API translation layer. Translate user requests into commands for a finance simulator.
 Available commands:
 1. "Source [Amount] Target" (e.g. "checking [3000] hysa", "revenues [10] operating_cash_flow")
-2. "set [node] [balance|ceiling|floor|dso|dpoVariable|dpoFixed|fixedSpread] [value]" (e.g. "set checking ceiling 6000", "set receivables dso 45")
-3. "reset"
-4. "clear"
+2. "set [node] [balance|ceiling|floor|dso|dpoVariable|dpoFixed|fixedSpread|grossIncome|taxRate|frequency] [value]" (e.g. "set checking ceiling 6000", "set receivables dso 45", "set income grossIncome 5000")
+3. "reorder [comma-separated account types]" (e.g. "reorder debt, hysa, match401k, hsa, ira, max401k, brokerage" to prioritize debt paydown over HYSA)
+4. "reset"
+5. "clear"
 
 Available account IDs (Personal & Corporate): 
-checking, hysa, match401k, debt, hsa, ira, max401k, brokerage,
+checking, hysa, match401k, debt, hsa, ira, max401k, brokerage, income, taxes_paid, corp_taxes,
 revenues, receivables, cogs, hr_costs, capex, payables, operating_cash_flow, financing, net_cash_flow, mfs.
 
+QUALITATIVE INTENTS & BATCHING:
+If the user expresses a qualitative intent like "prioritize debt" or "focus on emergency savings" or "invest checking surplus in stocks", output a sequence of semicolon-separated commands that configure the simulator parameters to align with their goal. E.g.:
+- "prioritize debt paydown" -> "reorder debt, hysa, match401k, hsa, ira, max401k, brokerage; set checking ceiling 2000"
+- "focus on emergency savings" -> "reorder hysa, match401k, debt, hsa, ira, max401k, brokerage; set checking ceiling 4000; set hysa ceiling 20000"
+- "invest in stocks and market" -> "reorder match401k, hysa, hsa, ira, max401k, brokerage, debt; set checking ceiling 3000"
+
 Translate the user request: "${prompt}"
-Return raw command output on the first line, followed by a short explanation on the second line.`;
+Return raw command output (can be semicolon-separated for multiple operations) on the first line, followed by a short explanation on the second line.`;
 
 	if (deepseekApiKey) {
 		try {

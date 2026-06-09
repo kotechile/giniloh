@@ -8,6 +8,8 @@ export type AccountType =
 	| 'max401k' // Workplace 401k Max-Out
 	| 'brokerage' // Taxable Brokerage
 	| 'income' // Virtual input source
+	| 'taxes_paid' // Virtual tracking node for IRS withholdings
+	| 'corp_taxes' // Virtual tracking node for corporate taxes & VAT
 	// Corporate Account Types
 	| 'revenues'
 	| 'receivables'
@@ -43,6 +45,10 @@ export interface AccountNode {
 	fixedSpread?: number; // financing fixed spread %
 	variableRateIndex?: number; // financing variable benchmark rate %
 	loanType?: 'term' | 'revolving';
+	// Income settings for Personal Mode
+	grossIncome?: number; // gross amount per paycheck
+	taxRate?: number; // withholding rate %
+	frequency?: 'daily' | 'bi-weekly' | 'monthly';
 }
 
 export interface FlowEdge {
@@ -92,6 +98,7 @@ export interface SimulationState {
 	checklistProgress: number; // progress through the questions
 	// Mode configurations
 	mode: 'personal' | 'enterprise';
+	waterfallOrder: AccountType[];
 	corporateInvoices?: Array<{
 		id: string;
 		amount: number;
@@ -165,6 +172,7 @@ export function hasCircularDependency(edges: FlowEdge[], candidateSource: string
  */
 export function createDefaultNodes(): AccountNode[] {
 	return [
+		{ id: 'income', name: 'Gross Income', type: 'income', balance: 0, ceiling: 0, floor: 0, ytdContributions: 0, grossIncome: 3500, taxRate: 20, frequency: 'bi-weekly' },
 		{ id: 'checking', name: 'Primary Checking', type: 'checking', balance: 4000, ceiling: 5000, floor: 1500, ytdContributions: 0 },
 		{ id: 'hysa', name: 'HYSA (Emergency Fund)', type: 'hysa', balance: 5000, ceiling: 15000, floor: 0, interestRate: 4.5, ytdContributions: 0 },
 		{ id: 'match401k', name: '401k (Base & Match)', type: 'match401k', balance: 2000, ceiling: 100000, floor: 0, annualLimit: 6000, ytdContributions: 2000 },
@@ -172,7 +180,8 @@ export function createDefaultNodes(): AccountNode[] {
 		{ id: 'hsa', name: 'Pre-tax HSA', type: 'hsa', balance: 1000, ceiling: 4150, floor: 0, annualLimit: 4150, ytdContributions: 1000 },
 		{ id: 'ira', name: 'Roth IRA', type: 'ira', balance: 3000, ceiling: 7000, floor: 0, annualLimit: 7000, ytdContributions: 3000 },
 		{ id: 'max401k', name: '401k (Voluntary Max)', type: 'max401k', balance: 0, ceiling: 23000, floor: 0, annualLimit: 23000, ytdContributions: 0 },
-		{ id: 'brokerage', name: 'Taxable Brokerage', type: 'brokerage', balance: 12000, ceiling: 1000000, floor: 0, ytdContributions: 0 }
+		{ id: 'brokerage', name: 'Taxable Brokerage', type: 'brokerage', balance: 12000, ceiling: 1000000, floor: 0, ytdContributions: 0 },
+		{ id: 'taxes_paid', name: 'Taxes Paid (IRS)', type: 'taxes_paid', balance: 0, ceiling: 1000000, floor: 0, ytdContributions: 0 }
 	];
 }
 
@@ -190,7 +199,8 @@ export function createDefaultEnterpriseNodes(): AccountNode[] {
 		{ id: 'operating_cash_flow', name: 'Operating Cash Flow', type: 'operating_cash_flow', balance: 100000, ceiling: 0, floor: 0, ytdContributions: 0 },
 		{ id: 'financing', name: 'Strategic Financing', type: 'financing', balance: 0, ceiling: 500000, floor: 0, ytdContributions: 0, loanLifetime: 24, fixedSpread: 3.5, variableRateIndex: 4.0, loanType: 'revolving' },
 		{ id: 'net_cash_flow', name: 'Net Cash Flow', type: 'net_cash_flow', balance: 75000, ceiling: 120000, floor: 30000, ytdContributions: 0 },
-		{ id: 'mfs', name: 'Money Market Fund (MMF)', type: 'mfs', balance: 250000, ceiling: 5000000, floor: 0, interestRate: 4.2, ytdContributions: 0 }
+		{ id: 'mfs', name: 'Money Market Fund (MMF)', type: 'mfs', balance: 250000, ceiling: 5000000, floor: 0, interestRate: 4.2, ytdContributions: 0 },
+		{ id: 'corp_taxes', name: 'Corporate Taxes & VAT', type: 'corp_taxes', balance: 25000, ceiling: 1000000, floor: 0, ytdContributions: 0 }
 	];
 }
 
@@ -273,10 +283,35 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 
 		const checkingNode = nextNodes.find((n) => n.id === 'checking')!;
 
-		// Process daily income to primary checking
-		if (dailyIncome > 0 && !triggerPause) {
-			checkingNode.balance += dailyIncome;
-			nextLog.push(`Day ${nextDay}: Deposited daily income of $${dailyIncome.toFixed(2)} to Checking.`);
+		// Process paycheck cycles and tax withholding to taxes_paid
+		const incomeNode = nextNodes.find((n) => n.id === 'income');
+		const taxesPaidNode = nextNodes.find((n) => n.id === 'taxes_paid');
+		
+		let isPayday = false;
+		if (incomeNode && !triggerPause) {
+			const freq = incomeNode.frequency || 'bi-weekly';
+			if (freq === 'daily') {
+				isPayday = true;
+			} else if (freq === 'bi-weekly') {
+				isPayday = (nextDay % 14 === 0);
+			} else if (freq === 'monthly') {
+				isPayday = (nextDay % 30 === 0);
+			}
+		}
+
+		if (isPayday && incomeNode && !triggerPause) {
+			const gross = incomeNode.grossIncome || 3500;
+			const taxRate = incomeNode.taxRate || 20;
+			const taxWithheld = gross * (taxRate / 100);
+			const netPay = gross - taxWithheld;
+			
+			checkingNode.balance += netPay;
+			incomeNode.balance += gross; // Increment YTD Gross Income visually on node
+			if (taxesPaidNode) {
+				taxesPaidNode.balance += taxWithheld;
+			}
+			
+			nextLog.push(`Day ${nextDay}: [PAYDAY] Paycheck deposited. Gross: $${gross.toFixed(2)} | Tax Withheld: $${taxWithheld.toFixed(2)} | Net Deposit: $${netPay.toFixed(2)}.`);
 		}
 
 		// Accrue interest once every 30 days
@@ -403,7 +438,8 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 		if (checkingNode.balance > checkingNode.ceiling && !triggerPause) {
 			let surplus = checkingNode.balance - checkingNode.ceiling;
 			
-			for (const type of WATERFALL_ORDER) {
+			const activeOrder = state.waterfallOrder || WATERFALL_ORDER;
+			for (const type of activeOrder) {
 				if (surplus <= 0) break;
 				
 				const targetNode = nextNodes.find((n) => n.type === type);
@@ -453,7 +489,8 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 			isPaused: triggerPause || state.isPaused,
 			checklistCompleted: state.checklistCompleted,
 			checklistProgress: state.checklistProgress,
-			mode
+			mode,
+			waterfallOrder: state.waterfallOrder
 		};
 
 	} else {
@@ -514,6 +551,19 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 		cogsNode.balance += baseDailyCOGS;
 		hrNode.balance += baseDailyHR;
 		capexNode.balance += baseDailyCapex;
+
+		// Compute VAT and Corporate Income Tax provisions
+		const vatAmountOnSales = baseDailyRevenue * (vatRate / 100);
+		const vatCreditOnExpenses = (baseDailyCOGS + baseDailyCapex) * 0.15; // 15% VAT inputs credit
+		const netVatLiability = vatAmountOnSales - vatCreditOnExpenses;
+		const corporateNetMargin = baseDailyRevenue - baseDailyCOGS - baseDailyHR - baseDailyCapex;
+		const corpIncomeTaxProvision = Math.max(0, corporateNetMargin * 0.20); // 20% profit tax
+		const totalDailyTaxAccrued = netVatLiability + corpIncomeTaxProvision;
+
+		const corpTaxesNode = nextNodes.find((n) => n.id === 'corp_taxes');
+		if (corpTaxesNode) {
+			corpTaxesNode.balance += totalDailyTaxAccrued;
+		}
 
 		// B. Receivables Revenue Pipeline (either factoring or DSO hold)
 		const factoringRate = revenuesNode.factoringRate || 2.5;
@@ -663,7 +713,8 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 			isPaused: state.isPaused,
 			checklistCompleted: state.checklistCompleted,
 			checklistProgress: state.checklistProgress,
-			mode
+			mode,
+			waterfallOrder: state.waterfallOrder
 		};
 	}
 }

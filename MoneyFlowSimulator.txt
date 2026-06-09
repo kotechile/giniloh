@@ -64,11 +64,12 @@ Spending 15 minutes in this simulator allows you to stress-test these rules unde
 
 ## 2. Detailed Account Node Directory
 
-The canvas models eight distinct accounts. Every account has specific logic rules, limits, and time-frame behaviors.
+The canvas models ten distinct accounts in Personal Mode, representing various stages of the Loh-Friction priority waterfall.
 
 | Account ID | Display Name | Account Type | Real-Life Purpose & Mechanics |
 | :--- | :--- | :--- | :--- |
-| `checking` | **Primary Checking** | Hub | **The entry point.** All income deposits here. When the balance exceeds its **Ceiling ($T_{over}$)**, surplus cash sweeps to the waterfall. If the balance drops below its **Floor ($T_{under}$)**, it triggers an emergency pull from HYSA. |
+| `income` | **Gross Income** | Income | **Paycheck engine.** Logs total gross YTD income and routes net deposits to checking based on your paycheck cycles (daily, bi-weekly, or monthly). Configurable tax rate. |
+| `checking` | **Primary Checking** | Hub | **The entry point.** Net paycheck deposits are routed here first. When the balance exceeds its **Ceiling ($T_{over}$)**, surplus cash sweeps to the waterfall. If the balance drops below its **Floor ($T_{under}$)**, it triggers an emergency pull from HYSA. |
 | `hysa` | **HYSA (Emergency Fund)** | Cash / Yield | **Safety reserve.** Earns interest (APY) computed daily and accrued every **30 simulated days**. Sweeps fill it up to its ceiling (typically 3–6 months of expenses), after which it is bypassed. |
 | `match401k` | **Employer 401k Match** | Equity | **Free money.** Captures pre-tax contributions up to the employer matching cap (annual YTD limit). Balances grow/shrink daily based on simulated stock market index returns. |
 | `debt` | **High-Interest Debt** | Liability | **Credit cards / high-rate loans.** Charges interest (APY) accrued every **30 simulated days**. The waterfall routes cash aggressively to pay this balance down to $0 before passing to standard investments. |
@@ -76,6 +77,9 @@ The canvas models eight distinct accounts. Every account has specific logic rule
 | `ira` | **Roth IRA** | Retirement | **Post-tax tax-free growth.** Sweeps are capped by the annual IRS YTD limit. Standard rules apply: **outbound sweeps are strictly blocked** to simulate early-withdrawal tax penalties. |
 | `max401k` | **Workplace 401k Max** | Retirement | **Pre-tax voluntary max-out.** Routes cash after securing matching funds, paying high-rate debt, and filling IRAs, capped at the annual IRS YTD limit. |
 | `brokerage` | **Taxable Brokerage** | Taxable Equity | **Surplus compounder.** Receives the absolute overflow with infinite capacity. Subject to daily stock market fluctuations. Used for money needed before retirement age. |
+| `taxes_paid` | **Taxes Paid (IRS)** | Tax | **Tax tracking.** Receives federal and state income tax withholdings from paycheck deposits on payday cycles. |
+
+For Enterprise Mode, the node directory features specialized corporate nodes, including a **Corporate Taxes & VAT** (`corp_taxes`) tracking node that automatically accrues corporate profit taxes (20% of net margin) and net VAT provisions daily.
 
 ### Units of Time & Rates in the Simulator
 * **1 Day**: The fundamental step unit. Daily income is added and market returns are compounded every business day.
@@ -119,9 +123,10 @@ To model real-life compliance and protect users from destructive financial behav
   * *Baseline*: Solid, steady growth mimicking historical long-term averages.
   * *Stagflation*: High inflation (8.5%+) causing HYSA rates to spike to 5.5% and debt rates to surge to 22.0% while stock performance remains flat.
   * *Market Contraction*: Mimics the 2008 crash. The stock market plunges starting Day 15, triggering the emotional centering check-in.
-* **Interactive Money Flow Canvas (Middle)**: Double-click nodes to view tooltip statistics, or click them to activate the parameters drawer where you can drag sliders to change balances, ceilings, and floors in real time.
-* **AI Orchestration Chat (Bottom-Left)**: Talk to the simulator using natural language. The system resolves your speech to automated commands using the LLM API layer (Gemini or DeepSeek) or a fast, local heuristics engine if no keys are found.
-* **Market Scripting Rules (Bottom-Right)**: Enable conditional rules that trigger actions based on simulated conditions (e.g., stopping sweeps if inflation rises, buying the dip if S&P 500 drops).
+* **Interactive Money Flow Canvas (Middle)**: Double-click nodes to view tooltip statistics, or click them to activate the parameters drawer where you can drag sliders to change balances, ceilings, floors, paycheck amount, tax rate, and pay frequency in real time.
+* **AI Orchestration Chat (Bottom-Left)**: Talk to the simulator using natural language. The system resolves your speech to automated commands using the LLM API layer (Gemini or DeepSeek) or a fast, local heuristics engine if no keys are found. It parses qualitative financial intents and translates them into sequential command lists (separated by semicolons).
+* **Waterfall Priority Config (Bottom-Center in Personal Mode)**: Customize the priority hierarchy of the Loh-Friction savings sweep waterfall in real time. Click the up (▲) and down (▼) arrow buttons to reorder nodes, instantly updating visual flow paths and allocation priorities.
+* **Market Scripting Rules (Bottom-Right)**: Enable conditional rules that trigger actions based on simulated conditions. Rules support compound logical checking (AND, OR, NOT, UNLESS, parentheses) and calendar day triggers (e.g. `day % 7 == 5` or `is_friday == true`).
 
 ---
 
@@ -134,10 +139,11 @@ Here is a detailed breakdown of how the parser translates user requests, what co
 ### 1. The Core Translation Mechanism
 The parser in `llmParser.ts` runs incoming text through a two-tier parsing workflow:
 * **Local Heuristics (Regex)**: It first attempts to match commands using fast, local regex matching. For example:
-  * Set parameters: matches `set [account] [field] (to) [value]` $\rightarrow$ `set checking ceiling 6000`
+  * Set parameters: matches `set [account] [field] (to) [value]` $\rightarrow$ `set checking ceiling 6000` or `set income grossIncome 3500`
   * Sweep commands: matches expressions starting with send, sweep, route, transfer, or move, followed by an amount and the source/target account $\rightarrow$ `checking [500] brokerage`
-* **LLM API Fallback (Gemini or DeepSeek)**: If the local regex does not match, the simulator leverages a cloud LLM (DeepSeek's `deepseek-chat` using `PUBLIC_DEEPSEEK_API_KEY` or Gemini's `gemini-2.5-flash` using `PUBLIC_GEMINI_API_KEY` depending on the environment keys configured). The system instructions prompt the LLM to act as a strict API translation layer returning:
-  * A valid simulator command on the first line.
+  * Qualitative goals: matches prompts containing debt paydown, savings, or investing $\rightarrow$ translates to reordering and sweep configuration sequences (separated by semicolons).
+* **LLM API Fallback (Gemini or DeepSeek)**: If the local regex does not match, the simulator leverages a cloud LLM. The system instructions prompt the LLM to act as a strict API translation layer returning:
+  * A valid simulator command (or multiple semicolon-separated commands) on the first line.
   * A friendly explanation on the second line.
 
 ### 2. Supported Account Identifiers & Aliases
@@ -145,6 +151,7 @@ The parser contains mapping dictionaries to translate natural language synonyms 
 
 | System Node ID | Common User Aliases (Input) |
 | :--- | :--- |
+| `income` | income, gross income, paycheck, salary |
 | `checking` | checking, primary checking, checking account |
 | `hysa` | hysa, emergency fund, savings, savings account, high yield savings |
 | `match401k` | match401k, 401k match, employer match |
@@ -153,32 +160,28 @@ The parser contains mapping dictionaries to translate natural language synonyms 
 | `ira` | ira, roth ira |
 | `max401k` | max401k, 401k max, workplace 401k |
 | `brokerage` | brokerage, taxable brokerage, investments, stocks |
+| `taxes_paid` | taxes paid, irs, tax withholdings |
 
-### 3. "Can I just say 'add automatic savings to my savings account'?"
-No, not exactly—you need to specify the numerical value or limits.
+### 3. "Can I say qualitative things or do I need numbers?"
+You can do both! 
 
-Because the underlying Giniloh simulator must know how much money to route or what ceiling/floor limits to set, conversational prompts **MUST INCLUDE NUMERIC VALUES**.
-
-* **Why vague prompts fail**:
-  If a user inputs: *"add automatic savings to my savings account"*
-  * *Local Regex Parser*: Fails to match because it expects a specific amount (like $500 or 10%).
-  * *LLM API Fallback*: Will struggle because the prompt lacks the amount of the sweep. The system prompt directs the LLM to translate strictly to `Source [Amount] Target`. Without an amount, it cannot formulate a valid command and will fallback to a warning/help state.
-* **Recommended way to instruct**:
-  Users should specify the amount/percentage and the source/destination accounts. Here are ideal examples:
-  * To build cash flow pipelines:
-    * *"Sweep 500 from checking to savings"* $\rightarrow$ Translates to: `checking [500] hysa`
-    * *"Route 10 from checking to stocks"* $\rightarrow$ Translates to: `checking [10] brokerage` (percentages are represented without % in the bracket)
-    * *"Send 2000 from checking to roth ira"* $\rightarrow$ Translates to: `checking [2000] ira`
-  * To set account thresholds:
-    * *"Set checking ceiling to 5000"* $\rightarrow$ Translates to: `set checking ceiling 5000`
-    * *"Set debt balance to 8000"* $\rightarrow$ Translates to: `set debt balance 8000`
-    * *"Set emergency fund threshold to 15000"* $\rightarrow$ Translates to: `set hysa ceiling 15000`
+* **Qualitative Prompts (Goal-Based)**:
+  If a user inputs: *"prioritize paying off debt"*
+  * *Translation*: `reorder debt, hysa, match401k, hsa, ira, max401k, brokerage; set checking ceiling 2000`
+  * *Result*: Automatically re-arranges savings waterfall priorities to push debt to position 1 and lowers checking ceilings to sweep surplus cash aggressively.
+  
+* **Quantitative Prompts (Direct sweeps/thresholds)**:
+  Users can specify the amount/percentage and the source/destination accounts:
+  * *"Sweep 500 from checking to savings"* $\rightarrow$ `checking [500] hysa`
+  * *"Set checking ceiling to 5000"* $\rightarrow$ `set checking ceiling 5000`
+  * *"Set paycheck to 3500 and frequency to bi-weekly"* $\rightarrow$ `set income grossIncome 3500; set income frequency bi-weekly`
 
 ### 4. Basic Command Table
 
 | Command Pattern | Action | Real-Life Application Example |
 | :--- | :--- | :--- |
-| `set [node] [balance/ceiling/floor] [value]` | Configures account thresholds or balances. | `set checking ceiling 6000` <br> `set debt balance 5000` |
+| `set [node] [balance/ceiling/floor/grossIncome/taxRate/frequency] [value]` | Configures account thresholds, balances, or paycheck metrics. | `set checking ceiling 6000` <br> `set income grossIncome 4500` <br> `set income frequency monthly` |
+| `reorder [comma-separated account types]` | Rearranges the priority order of checking surplus sweeps. | `reorder debt, hysa, match401k` |
 | `[Source] [[Amount]] [Target]` | Establishes an automated routing pipeline of `$Amount` (if fixed) or `%Amount` (if percentage). | `checking [1500] hysa` <br> `checking [10] match401k` |
 | `reset` | Reverts all account stats, history, and storage configuration to defaults. | `reset` |
 | `clear` | Clears the command console history. | `clear` |

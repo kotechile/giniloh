@@ -11,16 +11,19 @@ interface MoneyFlowCanvasProps {
 	mode: 'personal' | 'enterprise';
 }
 
+
 // Layout positions (x, y) coordinates for Personal Mode
 const PERSONAL_NODE_COORDINATES: Record<string, { x: number; y: number }> = {
-	checking: { x: 120, y: 260 },
-	hysa: { x: 420, y: 110 },
-	match401k: { x: 420, y: 260 },
-	debt: { x: 420, y: 410 },
-	hsa: { x: 720, y: 110 },
-	ira: { x: 720, y: 260 },
-	max401k: { x: 720, y: 410 },
-	brokerage: { x: 1000, y: 260 }
+	income: { x: 50, y: 260 },
+	checking: { x: 290, y: 260 },
+	hysa: { x: 550, y: 110 },
+	match401k: { x: 550, y: 260 },
+	debt: { x: 550, y: 410 },
+	hsa: { x: 810, y: 110 },
+	ira: { x: 810, y: 260 },
+	max401k: { x: 810, y: 410 },
+	brokerage: { x: 1070, y: 260 },
+	taxes_paid: { x: 1070, y: 410 }
 };
 
 // Layout positions (x, y) coordinates for Enterprise Mode (left-to-right cascade)
@@ -32,13 +35,15 @@ const ENTERPRISE_NODE_COORDINATES: Record<string, { x: number; y: number }> = {
 	cogs: { x: 650, y: 250 },
 	hr_costs: { x: 650, y: 400 },
 	payables: { x: 950, y: 250 },
-	financing: { x: 950, y: 400 },
+	corp_taxes: { x: 950, y: 370 },
+	financing: { x: 950, y: 490 },
 	net_cash_flow: { x: 1250, y: 250 },
 	mfs: { x: 1550, y: 250 }
 };
 
 // Styles mapping for Personal Mode
 const PERSONAL_ACCENT_COLORS: Record<string, { text: string; bg: string }> = {
+	income: { text: 'text-lime-400 [.light_&]:text-lime-700', bg: 'bg-lime-900/40 [.light_&]:bg-lime-100' },
 	checking: { text: 'text-cyan-400 [.light_&]:text-cyan-700', bg: 'bg-cyan-900/40 [.light_&]:bg-cyan-100' },
 	hysa: { text: 'text-emerald-400 [.light_&]:text-emerald-700', bg: 'bg-emerald-900/40 [.light_&]:bg-emerald-100' },
 	match401k: { text: 'text-blue-400 [.light_&]:text-blue-700', bg: 'bg-blue-900/40 [.light_&]:bg-blue-100' },
@@ -46,7 +51,8 @@ const PERSONAL_ACCENT_COLORS: Record<string, { text: string; bg: string }> = {
 	hsa: { text: 'text-teal-400 [.light_&]:text-teal-700', bg: 'bg-teal-900/40 [.light_&]:bg-teal-100' },
 	ira: { text: 'text-indigo-400 [.light_&]:text-indigo-700', bg: 'bg-indigo-900/40 [.light_&]:bg-indigo-100' },
 	max401k: { text: 'text-purple-400 [.light_&]:text-purple-700', bg: 'bg-purple-900/40 [.light_&]:bg-purple-100' },
-	brokerage: { text: 'text-violet-400 [.light_&]:text-violet-700', bg: 'bg-violet-900/40 [.light_&]:bg-violet-100' }
+	brokerage: { text: 'text-violet-400 [.light_&]:text-violet-700', bg: 'bg-violet-900/40 [.light_&]:bg-violet-100' },
+	taxes_paid: { text: 'text-amber-400 [.light_&]:text-amber-700', bg: 'bg-amber-900/40 [.light_&]:bg-amber-100' }
 };
 
 // Styles mapping for Enterprise Mode
@@ -60,10 +66,16 @@ const ENTERPRISE_ACCENT_COLORS: Record<string, { text: string; bg: string }> = {
 	capex: { text: 'text-fuchsia-400 [.light_&]:text-fuchsia-700', bg: 'bg-fuchsia-900/40 [.light_&]:bg-fuchsia-100' },
 	financing: { text: 'text-violet-400 [.light_&]:text-violet-700', bg: 'bg-violet-900/40 [.light_&]:bg-violet-100' },
 	net_cash_flow: { text: 'text-blue-400 [.light_&]:text-blue-700', bg: 'bg-blue-900/40 [.light_&]:bg-blue-100' },
-	mfs: { text: 'text-teal-400 [.light_&]:text-teal-700', bg: 'bg-teal-900/40 [.light_&]:bg-teal-100' }
+	mfs: { text: 'text-teal-400 [.light_&]:text-teal-700', bg: 'bg-teal-900/40 [.light_&]:bg-teal-100' },
+	corp_taxes: { text: 'text-amber-400 [.light_&]:text-amber-700', bg: 'bg-amber-900/40 [.light_&]:bg-amber-100' }
 };
 
 const PERSONAL_NODE_TOOLTIPS: Record<string, { title: string; desc: string; numbers: string }> = {
+	income: {
+		title: 'Gross Income',
+		desc: 'The starting paycheck engine. Logs total gross income and routes net deposits to Checking.',
+		numbers: 'Configures gross paycheck, tax withholding rate, and paycheck frequency.'
+	},
 	checking: {
 		title: 'Primary Checking',
 		desc: 'The central clearing hub for cash flow. Daily income is deposited here first.',
@@ -103,6 +115,11 @@ const PERSONAL_NODE_TOOLTIPS: Record<string, { title: string; desc: string; numb
 		title: 'Taxable Brokerage',
 		desc: 'Standard taxable investing account for broad-market index funds. The final overflow bucket.',
 		numbers: 'Large number: accumulated investment balance. No annual limits.'
+	},
+	taxes_paid: {
+		title: 'Taxes Paid (IRS)',
+		desc: 'Cumulative state and federal income tax withholdings.',
+		numbers: 'Large number: total tax withheld YTD from paycheck cycles.'
 	}
 };
 
@@ -156,6 +173,11 @@ const ENTERPRISE_NODE_TOOLTIPS: Record<string, { title: string; desc: string; nu
 		title: 'Money Market Fund (MMF)',
 		desc: 'Highly liquid yields accumulator holding corporate reserve surplus.',
 		numbers: 'Accumulates cash swept from Net Cash Flow; yields interest monthly.'
+	},
+	corp_taxes: {
+		title: 'Corporate Taxes & VAT',
+		desc: 'Cumulative corporate profit taxes (20%) and net VAT (sales output minus purchases input credit) liabilities.',
+		numbers: 'Large number: accrued tax liability provision based on daily margins.'
 	}
 };
 
@@ -215,6 +237,8 @@ export default function MoneyFlowCanvas({
 				case 'financing':
 				case 'mfs':
 					return { max: 5000000, step: 25000 };
+				case 'corp_taxes':
+					return { max: 1000000, step: 5000 };
 				default:
 					return { max: 500000, step: 5000 };
 			}
@@ -233,6 +257,9 @@ export default function MoneyFlowCanvas({
 				return { max: 2000000, step: 5000 };
 			case 'brokerage':
 				return { max: 5000000, step: 10000 };
+			case 'income':
+			case 'taxes_paid':
+				return { max: 1000000, step: 5000 };
 			default:
 				return { max: 100000, step: 500 };
 		}
@@ -267,18 +294,32 @@ export default function MoneyFlowCanvas({
 
 						{/* Inactive base structure linkages */}
 						{!isEnterprise ? (
-							Object.keys(activeCoordinates).map((key) => {
-								if (key === 'checking') return null;
-								return (
-									<path
-										key={`base-${key}`}
-										d={calculateBezierPath('checking', key)}
-										fill="none"
-										className="stroke-slate-700/60 [.light_&]:stroke-slate-300"
-										strokeWidth="3"
-									/>
-								);
-							})
+							<>
+								{Object.keys(activeCoordinates).map((key) => {
+									if (key === 'checking' || key === 'income' || key === 'taxes_paid') return null;
+									return (
+										<path
+											key={`base-${key}`}
+											d={calculateBezierPath('checking', key)}
+											fill="none"
+											className="stroke-slate-700/60 [.light_&]:stroke-slate-300"
+											strokeWidth="3"
+										/>
+									);
+								})}
+								<path
+									d={calculateBezierPath('income', 'checking')}
+									fill="none"
+									className="stroke-slate-700/60 [.light_&]:stroke-slate-300"
+									strokeWidth="3"
+								/>
+								<path
+									d={calculateBezierPath('income', 'taxes_paid')}
+									fill="none"
+									className="stroke-slate-700/60 [.light_&]:stroke-slate-300"
+									strokeWidth="3"
+								/>
+							</>
 						) : (
 							<>
 								{/* Revenues -> Receivables & Operating Cash Flow link */}
@@ -290,6 +331,7 @@ export default function MoneyFlowCanvas({
 								<path d={calculateBezierPath('operating_cash_flow', 'cogs')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
 								<path d={calculateBezierPath('operating_cash_flow', 'hr_costs')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
 								<path d={calculateBezierPath('operating_cash_flow', 'capex')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
+								<path d={calculateBezierPath('operating_cash_flow', 'corp_taxes')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
 								<path d={calculateBezierPath('cogs', 'payables')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
 								<path d={calculateBezierPath('hr_costs', 'payables')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
 								<path d={calculateBezierPath('capex', 'payables')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
@@ -479,6 +521,55 @@ export default function MoneyFlowCanvas({
 										onChange={(e) => handleSliderChange('floor', parseFloat(e.target.value))}
 										className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-slate-800 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-slate-800 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
 									/>
+								</div>
+							</>
+						)}
+
+						{!isEnterprise && selectedNode.type === 'income' && (
+							<>
+								<div className="flex flex-col gap-2">
+									<div className="flex justify-between text-xs font-mono text-slate-400">
+										<span>Gross Paycheck Amount</span>
+										<span className="text-cyan-400 font-bold">{formatCurrency(selectedNode.grossIncome || 3500)}</span>
+									</div>
+									<input
+										type="range"
+										min="500"
+										max="15000"
+										step="250"
+										value={selectedNode.grossIncome || 3500}
+										onChange={(e) => handleSliderChange('grossIncome', parseFloat(e.target.value))}
+										className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-slate-800 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-slate-800 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
+									/>
+								</div>
+
+								<div className="flex flex-col gap-2">
+									<div className="flex justify-between text-xs font-mono text-slate-400">
+										<span>Tax Withholding Rate (%)</span>
+										<span className="text-emerald-400 font-bold">{selectedNode.taxRate || 20}%</span>
+									</div>
+									<input
+										type="range"
+										min="0"
+										max="50"
+										step="1"
+										value={selectedNode.taxRate || 20}
+										onChange={(e) => handleSliderChange('taxRate', parseFloat(e.target.value))}
+										className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-slate-800 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-slate-800 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
+									/>
+								</div>
+
+								<div className="flex flex-col gap-2">
+									<label className="text-xs font-mono text-slate-400">Pay Frequency</label>
+									<select
+										value={selectedNode.frequency || 'bi-weekly'}
+										onChange={(e) => handleSliderChange('frequency', e.target.value)}
+										className="bg-slate-950 text-slate-200 border border-slate-800 rounded px-2 py-1 text-xs outline-none font-mono"
+									>
+										<option value="daily">Daily Pay</option>
+										<option value="bi-weekly">Bi-weekly Paycheck</option>
+										<option value="monthly">Monthly Salary</option>
+									</select>
 								</div>
 							</>
 						)}

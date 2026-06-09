@@ -2,7 +2,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import type { 
 	SimulationState, 
-	AccountNode
+	AccountNode,
+	AccountType
 } from '../../../lib/calculators/moneyFlowEngine';
 import { 
 	createDefaultNodes, 
@@ -36,7 +37,8 @@ const INITIAL_STATE: SimulationState = {
 	isPaused: false,
 	checklistCompleted: false,
 	checklistProgress: 0,
-	mode: 'personal'
+	mode: 'personal',
+	waterfallOrder: ['hysa', 'match401k', 'debt', 'hsa', 'ira', 'max401k', 'brokerage']
 };
 
 const INITIAL_ENTERPRISE_STATE: SimulationState = {
@@ -57,7 +59,8 @@ const INITIAL_ENTERPRISE_STATE: SimulationState = {
 	isPaused: false,
 	checklistCompleted: false,
 	checklistProgress: 0,
-	mode: 'enterprise'
+	mode: 'enterprise',
+	waterfallOrder: []
 };
 
 const EMOTIONAL_QUESTIONS = [
@@ -292,15 +295,61 @@ export default function MoneyFlowSimulator() {
 			};
 		}
 
+		if (baseCommand === 'reorder') {
+			if (parts.length < 2) {
+				return { success: false, nextState: targetState, output: 'Syntax: reorder [list of accounts separated by spaces or commas]' };
+			}
+			const orderArgs = cmd.substring(baseCommand.length).toLowerCase().replace(/_/g, '').split(/[\s,]+/).map(x => x.trim()).filter(Boolean);
+			const validPersonalTypes: AccountType[] = ['hysa', 'match401k', 'debt', 'hsa', 'ira', 'max401k', 'brokerage'];
+			
+			const normalizedOrder = orderArgs.map(arg => {
+				if (arg === 'rothira' || arg === 'ira') return 'ira';
+				if (arg === 'emergency' || arg === 'emergencyfund' || arg === 'hysa') return 'hysa';
+				if (arg === 'checking') return 'checking';
+				if (arg === 'brokerage' || arg === 'investments' || arg === 'stocks') return 'brokerage';
+				if (arg === '401kmatch' || arg === 'match401k') return 'match401k';
+				if (arg === '401kmax' || arg === 'max401k') return 'max401k';
+				return arg;
+			});
+
+			const filteredOrder = normalizedOrder.filter(x => validPersonalTypes.includes(x as AccountType)) as AccountType[];
+			
+			if (filteredOrder.length === 0) {
+				return { success: false, nextState: targetState, output: 'Error: No valid personal account types provided for reordering. Valid options: hysa, match401k, debt, hsa, ira, max401k, brokerage' };
+			}
+
+			const newOrder = [...filteredOrder];
+			validPersonalTypes.forEach(type => {
+				if (!newOrder.includes(type)) {
+					newOrder.push(type);
+				}
+			});
+
+			return {
+				success: true,
+				nextState: {
+					...targetState,
+					waterfallOrder: newOrder
+				},
+				output: `Waterfall priority order updated to: ${newOrder.join(' -> ')}.`
+			};
+		}
+
 		if (baseCommand === 'set') {
 			if (parts.length < 4) {
-				return { success: false, nextState: targetState, output: 'Syntax: set [node] [balance|ceiling|floor|dso|dpoVariable|dpoFixed|fixedSpread] [value]' };
+				return { success: false, nextState: targetState, output: 'Syntax: set [node] [balance|ceiling|floor|dso|dpoVariable|dpoFixed|fixedSpread|grossIncome|taxRate|frequency] [value]' };
 			}
 			const nodeId = parts[1].toLowerCase();
 			const field = parts[2].toLowerCase();
-			const value = parseFloat(parts[3]);
+			const rawVal = parts[3];
+			let value: any = parseFloat(rawVal.replace(/,/g, ''));
 
-			if (isNaN(value)) {
+			if (field === 'frequency') {
+				value = rawVal.toLowerCase();
+				if (!['daily', 'bi-weekly', 'monthly'].includes(value)) {
+					return { success: false, nextState: targetState, output: `Error: Frequency must be daily, bi-weekly, or monthly.` };
+				}
+			} else if (isNaN(value)) {
 				return { success: false, nextState: targetState, output: `Error: "${parts[3]}" is not a valid number.` };
 			}
 
@@ -309,15 +358,17 @@ export default function MoneyFlowSimulator() {
 				return { success: false, nextState: targetState, output: `Error: Account "${nodeId}" not found.` };
 			}
 
-			const validFields = ['balance', 'ceiling', 'floor', 'dso', 'dpovariable', 'dpofixed', 'fixedspread'];
+			const validFields = ['balance', 'ceiling', 'floor', 'dso', 'dpovariable', 'dpofixed', 'fixedspread', 'grossincome', 'taxrate', 'frequency'];
 			if (!validFields.includes(field)) {
-				return { success: false, nextState: targetState, output: `Error: Field must be balance, ceiling, floor, dso, dpoVariable, dpoFixed, or fixedSpread.` };
+				return { success: false, nextState: targetState, output: `Error: Field must be balance, ceiling, floor, dso, dpoVariable, dpoFixed, fixedSpread, grossIncome, taxRate, or frequency.` };
 			}
 
 			let normalizedField = field;
 			if (field === 'dpovariable') normalizedField = 'dpoVariable';
 			if (field === 'dpofixed') normalizedField = 'dpoFixed';
 			if (field === 'fixedspread') normalizedField = 'fixedSpread';
+			if (field === 'grossincome') normalizedField = 'grossIncome';
+			if (field === 'taxrate') normalizedField = 'taxRate';
 
 			return {
 				success: true,
@@ -352,14 +403,29 @@ export default function MoneyFlowSimulator() {
 			} else if (command === 'clear') {
 				setChatHistory([]);
 			} else {
-				// Execute translated command
+				// Execute translated command list sequentially
 				setState(current => {
-					const result = executeRawCommand(command, current);
+					const commandList = command.split(';').map(c => c.trim()).filter(Boolean);
+					let tempState = current;
+					let finalOutput = '';
+					let allSuccess = true;
+
+					for (const cmd of commandList) {
+						const res = executeRawCommand(cmd, tempState);
+						if (res.success) {
+							tempState = res.nextState;
+							finalOutput += `• ${res.output}\n`;
+						} else {
+							finalOutput += `• Error: ${res.output}\n`;
+							allSuccess = false;
+						}
+					}
+
 					setChatHistory(prev => [...prev, { 
-						text: `${explanation}\n\nResult: ${result.output}`, 
-						sender: result.success ? 'assistant' : 'system' 
+						text: `${explanation}\n\nResult:\n${finalOutput}`, 
+						sender: allSuccess ? 'assistant' : 'system' 
 					}]);
-					return result.success ? result.nextState : current;
+					return tempState;
 				});
 			}
 		} catch (err) {
@@ -744,7 +810,7 @@ export default function MoneyFlowSimulator() {
 			)}
 
 			{/* AI Chat & Scripting bottom panel */}
-			<div className="grid gap-6 md:grid-cols-3">
+			<div className={["grid gap-6", isEnterprise ? "md:grid-cols-3" : "md:grid-cols-4"].join(' ')}>
 				{/* AI Conversational Assistant */}
 				<div className="flex flex-col h-[350px] rounded-2xl border border-slate-800 bg-slate-950/90 font-mono text-xs shadow-2xl overflow-hidden md:col-span-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50 [.light_&]:shadow-lg">
 					<div className="h-9 border-b border-slate-800 bg-slate-900/60 flex items-center px-4 justify-between [.light_&]:border-slate-200 [.light_&]:bg-slate-100">
@@ -849,6 +915,77 @@ export default function MoneyFlowSimulator() {
 						</div>
 					</div>
 				</div>
+
+				{/* Waterfall Priorities (Only in Personal Mode) */}
+				{!isEnterprise && (
+					<div className="flex flex-col h-[350px] rounded-2xl border border-slate-800 bg-slate-950/90 font-mono text-xs shadow-2xl overflow-hidden [.light_&]:border-slate-200 [.light_&]:bg-slate-50 [.light_&]:shadow-lg">
+						<div className="h-9 border-b border-slate-800 bg-slate-900/60 flex items-center px-4 justify-between [.light_&]:border-slate-200 [.light_&]:bg-slate-100">
+							<span className="font-semibold text-slate-400 text-[10px] tracking-wider uppercase [.light_&]:text-slate-600">Savings_Waterfall_Order</span>
+							<span className="text-[9px] text-slate-500 [.light_&]:text-slate-400">PRIORITY CONFIG</span>
+						</div>
+						
+						<div className="flex-1 p-4 overflow-y-auto space-y-2.5 scrollbar-thin scrollbar-thumb-slate-800 [.light_&]:scrollbar-thumb-slate-300">
+							<p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider mb-2 leading-tight">Sweep Priority Order</p>
+							{state.waterfallOrder.map((type, idx) => {
+								const node = state.nodes.find(n => n.type === type);
+								const displayName = node ? node.name : type;
+								
+								const handleMoveUp = () => {
+									if (idx === 0) return;
+									const newOrder = [...state.waterfallOrder];
+									const temp = newOrder[idx];
+									newOrder[idx] = newOrder[idx - 1];
+									newOrder[idx - 1] = temp;
+									setState(prev => ({
+										...prev,
+										waterfallOrder: newOrder,
+										log: [...prev.log, `Reordered waterfall: Moved ${displayName} up.`].slice(-100)
+									}));
+								};
+
+								const handleMoveDown = () => {
+									if (idx === state.waterfallOrder.length - 1) return;
+									const newOrder = [...state.waterfallOrder];
+									const temp = newOrder[idx];
+									newOrder[idx] = newOrder[idx + 1];
+									newOrder[idx + 1] = temp;
+									setState(prev => ({
+										...prev,
+										waterfallOrder: newOrder,
+										log: [...prev.log, `Reordered waterfall: Moved ${displayName} down.`].slice(-100)
+									}));
+								};
+
+								return (
+									<div key={type} className="flex items-center justify-between p-2.5 bg-slate-900/40 border border-slate-800 rounded-xl [.light_&]:bg-white [.light_&]:border-slate-200 hover:border-slate-700/60 transition">
+										<div className="flex items-center gap-2 overflow-hidden mr-2">
+											<span className="text-slate-500 font-bold text-[10px]">{idx + 1}.</span>
+											<span className="text-slate-200 font-bold truncate text-[10px] [.light_&]:text-slate-800">{displayName}</span>
+										</div>
+										<div className="flex items-center gap-1.5 flex-shrink-0">
+											<button
+												onClick={handleMoveUp}
+												disabled={idx === 0}
+												title="Move Up"
+												className="p-1 rounded bg-slate-800 hover:bg-slate-700 border border-slate-700 disabled:opacity-20 transition text-slate-300 font-bold text-[9px] cursor-pointer [.light_&]:bg-slate-100 [.light_&]:border-slate-200 [.light_&]:text-slate-700"
+											>
+												▲
+											</button>
+											<button
+												onClick={handleMoveDown}
+												disabled={idx === state.waterfallOrder.length - 1}
+												title="Move Down"
+												className="p-1 rounded bg-slate-800 hover:bg-slate-700 border border-slate-700 disabled:opacity-20 transition text-slate-300 font-bold text-[9px] cursor-pointer [.light_&]:bg-slate-100 [.light_&]:border-slate-200 [.light_&]:text-slate-700"
+											>
+												▼
+											</button>
+										</div>
+									</div>
+								);
+							})}
+						</div>
+					</div>
+				)}
 			</div>
 		</div>
 	);
