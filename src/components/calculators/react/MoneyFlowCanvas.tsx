@@ -199,6 +199,33 @@ export default function MoneyFlowCanvas({
 	const selectedNode = nodes.find((n) => n.id === selectedNodeId) || null;
 	const isEnterprise = mode === 'enterprise';
 
+	const [zoom, setZoom] = React.useState<number>(1.0);
+	const containerRef = React.useRef<HTMLDivElement>(null);
+
+	const handleZoomFit = () => {
+		if (containerRef.current) {
+			const containerWidth = containerRef.current.clientWidth;
+			const maxRight = isEnterprise ? 1850 : 1350;
+			const targetZoom = Math.min(1.0, Math.max(0.4, (containerWidth - 32) / maxRight));
+			setZoom(parseFloat(targetZoom.toFixed(2)));
+		}
+	};
+
+	React.useEffect(() => {
+		const timer = setTimeout(() => {
+			handleZoomFit();
+		}, 100);
+		return () => clearTimeout(timer);
+	}, [mode]);
+
+	React.useEffect(() => {
+		const handleResize = () => {
+			handleZoomFit();
+		};
+		window.addEventListener('resize', handleResize);
+		return () => window.removeEventListener('resize', handleResize);
+	}, [mode]);
+
 	const activeCoordinates = isEnterprise ? ENTERPRISE_NODE_COORDINATES : PERSONAL_NODE_COORDINATES;
 	const activeColors = isEnterprise ? ENTERPRISE_ACCENT_COLORS : PERSONAL_ACCENT_COLORS;
 	const activeTooltips = isEnterprise ? ENTERPRISE_NODE_TOOLTIPS : PERSONAL_NODE_TOOLTIPS;
@@ -273,13 +300,59 @@ export default function MoneyFlowCanvas({
 	};
 
 	return (
-		<div className="relative w-full rounded-2xl border border-slate-800 bg-slate-950 p-2 md:p-6 shadow-inner overflow-hidden min-h-[600px] [.light_&]:border-slate-300 [.light_&]:bg-slate-100">
+		<div ref={containerRef} className="relative w-full rounded-2xl border border-slate-800 bg-slate-950 p-2 md:p-6 shadow-inner overflow-hidden min-h-[600px] [.light_&]:border-slate-300 [.light_&]:bg-slate-100">
+			{/* Floating Zoom Controls */}
+			<div className="absolute top-4 right-4 z-40 flex items-center gap-1 bg-slate-900/90 border border-slate-800 rounded-lg p-1 shadow-lg backdrop-blur-md text-xs font-mono select-none [.light_&]:bg-white/90 [.light_&]:border-slate-200">
+				<button 
+					onClick={() => setZoom(z => Math.max(0.4, parseFloat((z - 0.1).toFixed(1))))}
+					className="px-2 py-1 hover:bg-slate-800 rounded cursor-pointer text-slate-300 hover:text-white [.light_&]:text-slate-600 [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-black font-bold"
+					title="Zoom Out"
+				>
+					-
+				</button>
+				<span className="px-1 text-slate-400 min-w-[36px] text-center [.light_&]:text-slate-500">
+					{Math.round(zoom * 100)}%
+				</span>
+				<button 
+					onClick={() => setZoom(z => Math.min(1.5, parseFloat((z + 0.1).toFixed(1))))}
+					className="px-2 py-1 hover:bg-slate-800 rounded cursor-pointer text-slate-300 hover:text-white [.light_&]:text-slate-600 [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-black font-bold"
+					title="Zoom In"
+				>
+					+
+				</button>
+				<div className="w-[1px] h-4 bg-slate-800 mx-1 [.light_&]:bg-slate-200"></div>
+				<button 
+					onClick={() => setZoom(1.0)}
+					className="px-1.5 py-1 hover:bg-slate-800 rounded cursor-pointer text-slate-400 hover:text-white [.light_&]:text-slate-500 [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-black"
+					title="Reset Zoom to 100%"
+				>
+					100%
+				</button>
+				<button 
+					onClick={handleZoomFit}
+					className="px-1.5 py-1 hover:bg-slate-800 rounded cursor-pointer text-cyan-400 hover:text-cyan-300 [.light_&]:text-blue-600 [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-blue-700 font-medium"
+					title="Fit entire flow to screen width"
+				>
+					Fit
+				</button>
+			</div>
+
 			{/* Background Grid Pattern */}
 			<div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTQwIDBIMHY0MGg0MFYweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM2YzZjRmIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=')] pointer-events-none [.light_&]:opacity-[0.05]"></div>
 
 			{/* Visual canvas window */}
-			<div className="relative overflow-x-auto w-full h-[540px] scrollbar-thin scrollbar-thumb-slate-300 dark:scrollbar-thumb-slate-800">
-				<div className="w-[1850px] h-full relative">
+			<div 
+				className="relative overflow-x-auto w-full scrollbar-thin scrollbar-thumb-slate-300 dark:scrollbar-thumb-slate-800 transition-all duration-200 ease-out"
+				style={{ height: `${540 * zoom}px`, minHeight: '350px' }}
+			>
+				<div 
+					className="h-full relative origin-top-left transition-transform duration-200 ease-out"
+					style={{ width: `${1850 * zoom}px`, height: `${540 * zoom}px` }}
+				>
+					<div 
+						className="absolute top-0 left-0 origin-top-left"
+						style={{ transform: `scale(${zoom})`, width: '1850px', height: '540px' }}
+					>
 					{/* Flow lines (SVG) */}
 					<svg className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
 						<defs>
@@ -463,6 +536,7 @@ export default function MoneyFlowCanvas({
 							</button>
 						);
 					})}
+					</div>
 				</div>
 			</div>
 
