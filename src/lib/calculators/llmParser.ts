@@ -102,13 +102,19 @@ function localRegexParse(prompt: string): string | null {
 		return 'reorder match401k, hysa, hsa, ira, max401k, brokerage, debt; set checking ceiling 3000';
 	}
 
+	let lastAccountId: string | null = null;
+
 	// Helper to resolve raw account name
 	const resolveAccount = (raw: string): string => {
-		const clean = raw.toLowerCase().trim().replace(/^(?:my|our|the|an?)\s+/, '');
+		let clean = raw.toLowerCase().trim();
+		if ((clean === 'it' || clean === 'its' || clean === 'this' || clean === 'that' || clean === 'them') && lastAccountId) {
+			return lastAccountId;
+		}
+		clean = clean.replace(/^(?:my|our|the|an?)\s+/, '');
 		return ACCOUNT_ALIASES[clean] || clean;
 	};
 
-	const parseSingleClause = (clause: string): string | null => {
+	const parseSingleClause = (clause: string): { cmd: string; nodeId: string } | null => {
 		const cText = clause.trim();
 		if (!cText) return null;
 
@@ -122,7 +128,10 @@ function localRegexParse(prompt: string): string | null {
 			if (freqRaw === 'day' || freqRaw === 'daily') frequency = 'daily';
 			if (freqRaw === 'month' || freqRaw === 'monthly') frequency = 'monthly';
 			if (freqRaw === 'bi-weekly') frequency = 'bi-weekly';
-			return `set income grossIncome ${val}; set income frequency ${frequency}`;
+			return {
+				cmd: `set income grossIncome ${val}; set income frequency ${frequency}`,
+				nodeId: 'income'
+			};
 		}
 
 		// B. Match specific set parameters e.g., "set checking ceiling to 6000"
@@ -142,7 +151,10 @@ function localRegexParse(prompt: string): string | null {
 
 			const nodeId = resolveAccount(accountRaw);
 			if (!VALID_NODE_IDS.has(nodeId)) return null;
-			return `set ${nodeId} ${field} ${val}`;
+			return {
+				cmd: `set ${nodeId} ${field} ${val}`,
+				nodeId
+			};
 		}
 
 		// C. Match general limit/ceiling set e.g., "limit checking to 2000"
@@ -153,7 +165,10 @@ function localRegexParse(prompt: string): string | null {
 			const val = limitMatch[2].trim();
 			const nodeId = resolveAccount(accountRaw);
 			if (!VALID_NODE_IDS.has(nodeId)) return null;
-			return `set ${nodeId} ceiling ${val}`;
+			return {
+				cmd: `set ${nodeId} ceiling ${val}`,
+				nodeId
+			};
 		}
 
 		// D. Match generic set without field (default to balance) e.g., "set my debt to 4000" or "set checking 3000"
@@ -164,7 +179,10 @@ function localRegexParse(prompt: string): string | null {
 			const val = genericMatch[2].trim();
 			const nodeId = resolveAccount(accountRaw);
 			if (!VALID_NODE_IDS.has(nodeId)) return null;
-			return `set ${nodeId} balance ${val}`;
+			return {
+				cmd: `set ${nodeId} balance ${val}`,
+				nodeId
+			};
 		}
 
 		// E. Match sweep commands e.g., "send $500 from checking to hysa"
@@ -179,7 +197,10 @@ function localRegexParse(prompt: string): string | null {
 			const targetId = resolveAccount(targetRaw);
 			if (!VALID_NODE_IDS.has(sourceId) || !VALID_NODE_IDS.has(targetId)) return null;
 
-			return `${sourceId} [${amount}] ${targetId}`;
+			return {
+				cmd: `${sourceId} [${amount}] ${targetId}`,
+				nodeId: sourceId
+			};
 		}
 
 		// F. Alternative sweep e.g., "checking to hysa $500"
@@ -194,19 +215,25 @@ function localRegexParse(prompt: string): string | null {
 			const targetId = resolveAccount(targetRaw);
 			if (!VALID_NODE_IDS.has(sourceId) || !VALID_NODE_IDS.has(targetId)) return null;
 
-			return `${sourceId} [${amount}] ${targetId}`;
+			return {
+				cmd: `${sourceId} [${amount}] ${targetId}`,
+				nodeId: sourceId
+			};
 		}
 
 		return null;
 	};
 
-	// Split prompt into clauses by period, semicolon, or newline
-	const clauses = prompt.split(/[\.;\n]+/);
+	// Split prompt into clauses by period, semicolon, newline, or words "and", "then"
+	const clauses = prompt.split(/[\.;\n]|\band\b|\bthen\b/i);
 	const results: string[] = [];
 	for (const clause of clauses) {
 		const res = parseSingleClause(clause);
 		if (res) {
-			results.push(res);
+			results.push(res.cmd);
+			if (res.nodeId) {
+				lastAccountId = res.nodeId;
+			}
 		}
 	}
 
