@@ -14,17 +14,18 @@ interface MoneyFlowCanvasProps {
 
 // Layout positions (x, y) coordinates for Personal Mode
 const PERSONAL_NODE_COORDINATES: Record<string, { x: number; y: number }> = {
-	income: { x: 30, y: 260 },
-	checking: { x: 290, y: 260 },
-	hysa: { x: 550, y: 110 },
-	match401k: { x: 550, y: 260 },
-	debt: { x: 550, y: 410 },
-	hsa: { x: 810, y: 110 },
-	ira: { x: 810, y: 260 },
-	max401k: { x: 810, y: 410 },
-	brokerage: { x: 1070, y: 260 },
-	taxes_paid: { x: 1070, y: 410 },
-	mortgage: { x: 290, y: 410 }
+	income: { x: 30, y: 50 },
+	taxes_paid: { x: 290, y: 50 },
+	checking: { x: 290, y: 180 },
+	hysa: { x: 550, y: 180 },
+	expenses: { x: 30, y: 310 },
+	mortgage: { x: 290, y: 310 },
+	debt: { x: 550, y: 310 },
+	match401k: { x: 290, y: 440 },
+	hsa: { x: 550, y: 440 },
+	ira: { x: 810, y: 440 },
+	max401k: { x: 1070, y: 440 },
+	brokerage: { x: 1330, y: 440 }
 };
 
 // Layout positions (x, y) coordinates for Enterprise Mode (left-to-right cascade)
@@ -54,7 +55,8 @@ const PERSONAL_ACCENT_COLORS: Record<string, { text: string; bg: string }> = {
 	max401k: { text: 'text-purple-400 [.light_&]:text-purple-700', bg: 'bg-purple-900/40 [.light_&]:bg-purple-100' },
 	brokerage: { text: 'text-violet-400 [.light_&]:text-violet-700', bg: 'bg-violet-900/40 [.light_&]:bg-violet-100' },
 	taxes_paid: { text: 'text-amber-400 [.light_&]:text-amber-700', bg: 'bg-amber-900/40 [.light_&]:bg-amber-100' },
-	mortgage: { text: 'text-indigo-400 [.light_&]:text-indigo-700', bg: 'bg-indigo-900/40 [.light_&]:bg-indigo-100' }
+	mortgage: { text: 'text-indigo-400 [.light_&]:text-indigo-700', bg: 'bg-indigo-900/40 [.light_&]:bg-indigo-100' },
+	expenses: { text: 'text-rose-400 [.light_&]:text-rose-700', bg: 'bg-rose-900/40 [.light_&]:bg-rose-100' }
 };
 
 // Styles mapping for Enterprise Mode
@@ -127,6 +129,11 @@ const PERSONAL_NODE_TOOLTIPS: Record<string, { title: string; desc: string; numb
 		title: 'Mortgage Loan',
 		desc: 'Long-term low-interest mortgage liability on primary residence.',
 		numbers: 'Large number: outstanding principal balance. Auto-debited monthly at fixed Minimum Payment. Interest APY compiles daily and charges monthly.'
+	},
+	expenses: {
+		title: 'Living Expenses',
+		desc: 'Explicit monthly budget for housing, food, and other bills. Automatically debits from Checking every 30 days.',
+		numbers: 'Accumulates total money spent YTD. Configures monthly budget limit (default $2,000).'
 	}
 };
 
@@ -205,7 +212,7 @@ export default function MoneyFlowCanvas({
 	const handleZoomFit = () => {
 		if (containerRef.current) {
 			const containerWidth = containerRef.current.clientWidth;
-			const maxRight = isEnterprise ? 1850 : 1350;
+			const maxRight = isEnterprise ? 1850 : 1600;
 			const targetZoom = Math.min(1.0, Math.max(0.4, (containerWidth - 32) / maxRight));
 			setZoom(parseFloat(targetZoom.toFixed(2)));
 		}
@@ -230,20 +237,43 @@ export default function MoneyFlowCanvas({
 	const activeColors = isEnterprise ? ENTERPRISE_ACCENT_COLORS : PERSONAL_ACCENT_COLORS;
 	const activeTooltips = isEnterprise ? ENTERPRISE_NODE_TOOLTIPS : PERSONAL_NODE_TOOLTIPS;
 
-	// Computes horizontal Bezier curve control points
+	// Computes direction-aware Bezier curve control points
 	const calculateBezierPath = (sourceId: string, targetId: string) => {
 		const start = activeCoordinates[sourceId];
 		const end = activeCoordinates[targetId];
 		if (!start || !end) return '';
 
-		// Account for node dimensions: nodes are 240px wide, start is on right border, end is on left border
-		const startX = start.x + 240;
-		const startY = start.y + 48; // centered vertically (height 96px)
-		const endX = end.x;
-		const endY = end.y + 48;
+		const dx = end.x - start.x;
+		const dy = end.y - start.y;
 
-		const controlOffset = Math.abs(endX - startX) / 2;
-		return `M ${startX} ${startY} C ${startX + controlOffset} ${startY}, ${endX - controlOffset} ${endY}, ${endX} ${endY}`;
+		let startX, startY, endX, endY;
+		let controlOffset;
+
+		if (Math.abs(dx) < 100) {
+			// Vertical alignment
+			startX = start.x + 120;
+			startY = dy > 0 ? start.y + 96 : start.y;
+			endX = end.x + 120;
+			endY = dy > 0 ? end.y : end.y + 96;
+			controlOffset = Math.max(40, Math.abs(endY - startY) / 2);
+			return `M ${startX} ${startY} C ${startX} ${startY + (dy > 0 ? controlOffset : -controlOffset)}, ${endX} ${endY + (dy > 0 ? -controlOffset : controlOffset)}, ${endX} ${endY}`;
+		} else if (dx < 0) {
+			// Target is to the left
+			startX = start.x;
+			startY = start.y + 48;
+			endX = end.x + 240;
+			endY = end.y + 48;
+			controlOffset = Math.max(40, Math.abs(endX - startX) / 2);
+			return `M ${startX} ${startY} C ${startX - controlOffset} ${startY}, ${endX + controlOffset} ${endY}, ${endX} ${endY}`;
+		} else {
+			// Target is to the right
+			startX = start.x + 240;
+			startY = start.y + 48;
+			endX = end.x;
+			endY = end.y + 48;
+			controlOffset = Math.max(40, Math.abs(endX - startX) / 2);
+			return `M ${startX} ${startY} C ${startX + controlOffset} ${startY}, ${endX - controlOffset} ${endY}, ${endX} ${endY}`;
+		}
 	};
 
 	const handleSliderChange = (field: keyof AccountNode, value: any) => {
@@ -347,11 +377,11 @@ export default function MoneyFlowCanvas({
 			>
 				<div 
 					className="h-full relative origin-top-left transition-transform duration-200 ease-out"
-					style={{ width: `${1850 * zoom}px`, height: `${540 * zoom}px` }}
+					style={{ width: `${(isEnterprise ? 1850 : 1600) * zoom}px`, height: `${540 * zoom}px` }}
 				>
 					<div 
 						className="absolute top-0 left-0 origin-top-left"
-						style={{ transform: `scale(${zoom})`, width: '1850px', height: '540px' }}
+						style={{ transform: `scale(${zoom})`, width: isEnterprise ? '1850px' : '1600px', height: '540px' }}
 					>
 					{/* Flow lines (SVG) */}
 					<svg className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
@@ -508,6 +538,10 @@ export default function MoneyFlowCanvas({
 										) : node.type === 'mortgage' ? (
 											<span className="text-[10px] text-slate-500 font-mono">
 												Min: {Math.round(node.mortgagePayment || 1800)}/mo
+											</span>
+										) : node.type === 'expense' ? (
+											<span className="text-[10px] text-slate-500 font-mono">
+												Budget: {Math.round(node.monthlyExpenses || 2000)}/mo
 											</span>
 										) : null
 									) : (
@@ -693,6 +727,25 @@ export default function MoneyFlowCanvas({
 									/>
 								</div>
 							</>
+						)}
+
+						{/* Living Expenses budget drawer */}
+						{!isEnterprise && selectedNode.type === 'expense' && (
+							<div className="flex flex-col gap-2">
+								<div className="flex justify-between text-xs font-mono text-slate-400">
+									<span>Monthly Living Expenses Budget</span>
+									<span className="text-cyan-400 font-bold">{formatCurrency(selectedNode.monthlyExpenses || 2000)}</span>
+								</div>
+								<input
+									type="range"
+									min="500"
+									max="10000"
+									step="100"
+									value={selectedNode.monthlyExpenses || 2000}
+									onChange={(e) => handleSliderChange('monthlyExpenses', parseFloat(e.target.value))}
+									className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-slate-800 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-slate-800 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
+								/>
+							</div>
 						)}
 
 						{/* --- ENTERPRISE DRIVER DRAWERS --- */}

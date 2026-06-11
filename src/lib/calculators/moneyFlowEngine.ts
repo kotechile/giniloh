@@ -11,6 +11,7 @@ export type AccountType =
 	| 'taxes_paid' // Virtual tracking node for IRS withholdings
 	| 'corp_taxes' // Virtual tracking node for corporate taxes & VAT
 	| 'mortgage' // Long-Term Low-Interest Debt
+	| 'expense' // Living Expenses Node
 	// Corporate Account Types
 	| 'revenues'
 	| 'receivables'
@@ -51,6 +52,7 @@ export interface AccountNode {
 	taxRate?: number; // withholding rate %
 	frequency?: 'daily' | 'bi-weekly' | 'monthly';
 	mortgagePayment?: number; // Fixed monthly mortgage minimum payment
+	monthlyExpenses?: number; // Monthly budget/expenses for Living Expenses node
 }
 
 export interface FlowEdge {
@@ -84,6 +86,20 @@ export interface MacroDataPoint {
 	eventLabel?: string;
 }
 
+export interface HistoryDataPoint {
+	day: number;
+	netWorth: number;
+	checking: number;
+	hysa: number;
+	investments: number;
+	debt: number;
+	// Enterprise mode values
+	operatingCash?: number;
+	receivables?: number;
+	payables?: number;
+	mfs?: number;
+}
+
 export interface SimulationState {
 	day: number;
 	nodes: AccountNode[];
@@ -108,6 +124,7 @@ export interface SimulationState {
 		dueDay: number;
 		paid: boolean;
 	}>;
+	history: HistoryDataPoint[];
 }
 
 export const WATERFALL_ORDER: AccountType[] = [
@@ -184,7 +201,8 @@ export function createDefaultNodes(): AccountNode[] {
 		{ id: 'max401k', name: '401k (Voluntary Max)', type: 'max401k', balance: 0, ceiling: 23000, floor: 0, annualLimit: 23000, ytdContributions: 0 },
 		{ id: 'brokerage', name: 'Taxable Brokerage', type: 'brokerage', balance: 12000, ceiling: 1000000, floor: 0, ytdContributions: 0 },
 		{ id: 'taxes_paid', name: 'Taxes Paid (IRS)', type: 'taxes_paid', balance: 0, ceiling: 1000000, floor: 0, ytdContributions: 0 },
-		{ id: 'mortgage', name: 'Mortgage Loan', type: 'mortgage', balance: 300000, ceiling: 1000000, floor: 0, interestRate: 6.5, ytdContributions: 0, mortgagePayment: 1800 }
+		{ id: 'mortgage', name: 'Mortgage Loan', type: 'mortgage', balance: 300000, ceiling: 1000000, floor: 0, interestRate: 6.5, ytdContributions: 0, mortgagePayment: 1800 },
+		{ id: 'expenses', name: 'Living Expenses', type: 'expense', balance: 0, ceiling: 0, floor: 0, ytdContributions: 0, monthlyExpenses: 2000 }
 	];
 }
 
@@ -303,8 +321,8 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 		}
 
 		if (isPayday && incomeNode && !triggerPause) {
-			const gross = incomeNode.grossIncome || 3500;
-			const taxRate = incomeNode.taxRate || 20;
+			const gross = incomeNode.grossIncome ?? 3500;
+			const taxRate = incomeNode.taxRate ?? 20;
 			const taxWithheld = gross * (taxRate / 100);
 			const netPay = gross - taxWithheld;
 			
@@ -435,12 +453,25 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 		if (nextDay % 30 === 0 && !triggerPause) {
 			const mortgageNode = nextNodes.find((n) => n.type === 'mortgage');
 			if (mortgageNode && mortgageNode.balance > 0) {
-				const payment = mortgageNode.mortgagePayment || 1800;
+				const payment = mortgageNode.mortgagePayment ?? 1800;
 				const actualPayment = Math.min(payment, mortgageNode.balance);
 				if (actualPayment > 0) {
 					checkingNode.balance -= actualPayment;
 					mortgageNode.balance -= actualPayment;
 					nextLog.push(`Day ${nextDay}: [MORTGAGE] Auto-debited monthly mortgage payment of $${actualPayment.toFixed(2)} from Checking. Remaining principal: $${mortgageNode.balance.toFixed(2)}.`);
+				}
+			}
+		}
+
+		// Process monthly living expenses once every 30 days
+		if (nextDay % 30 === 0 && !triggerPause) {
+			const expensesNode = nextNodes.find((n) => n.id === 'expenses');
+			if (expensesNode) {
+				const expensesAmount = expensesNode.monthlyExpenses !== undefined ? expensesNode.monthlyExpenses : 2000;
+				if (expensesAmount > 0) {
+					checkingNode.balance -= expensesAmount;
+					expensesNode.balance += expensesAmount; // Accumulate YTD spending
+					nextLog.push(`Day ${nextDay}: [EXPENSES] Auto-debited monthly living expenses of $${expensesAmount.toFixed(2)} from Checking.`);
 				}
 			}
 		}
@@ -496,6 +527,26 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 			}
 		});
 
+		const invSum = nextNodes
+			.filter(n => ['match401k', 'hsa', 'ira', 'max401k', 'brokerage'].includes(n.type))
+			.reduce((sum, n) => sum + n.balance, 0);
+
+		const debtSum = nextNodes
+			.filter(n => ['debt', 'mortgage'].includes(n.type))
+			.reduce((sum, n) => sum + n.balance, 0);
+
+		const hysaBal = nextNodes.find(n => n.type === 'hysa')?.balance || 0;
+		const checkingBal = checkingNode.balance;
+
+		const personalHistoryPoint: HistoryDataPoint = {
+			day: nextDay,
+			netWorth: totalWealth,
+			checking: checkingBal,
+			hysa: hysaBal,
+			investments: invSum,
+			debt: debtSum
+		};
+
 		return {
 			day: nextDay,
 			nodes: nextNodes,
@@ -511,7 +562,8 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 			checklistCompleted: state.checklistCompleted,
 			checklistProgress: state.checklistProgress,
 			mode,
-			waterfallOrder: state.waterfallOrder
+			waterfallOrder: state.waterfallOrder,
+			history: [...(state.history || []), personalHistoryPoint]
 		};
 
 	} else {
@@ -720,6 +772,19 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 		// Calculate total corporate asset value (total liquidity)
 		const totalLiquidity = netCashNode.balance + mfsNode.balance + receivablesNode.balance - payablesNode.balance - financingNode.balance;
 
+		const corpHistoryPoint: HistoryDataPoint = {
+			day: nextDay,
+			netWorth: totalLiquidity,
+			checking: 0,
+			hysa: 0,
+			investments: 0,
+			debt: 0,
+			operatingCash: netCashNode.balance,
+			receivables: receivablesNode.balance,
+			payables: payablesNode.balance,
+			mfs: mfsNode.balance
+		};
+
 		return {
 			day: nextDay,
 			nodes: nextNodes,
@@ -735,7 +800,8 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 			checklistCompleted: state.checklistCompleted,
 			checklistProgress: state.checklistProgress,
 			mode,
-			waterfallOrder: state.waterfallOrder
+			waterfallOrder: state.waterfallOrder,
+			history: [...(state.history || []), corpHistoryPoint]
 		};
 	}
 }

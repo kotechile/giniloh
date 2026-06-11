@@ -37,6 +37,11 @@ const ACCOUNT_ALIASES: Record<string, string> = {
 	'home loan': 'mortgage',
 	'house loan': 'mortgage',
 	'mortgage payment': 'mortgage',
+	expenses: 'expenses',
+	'living expenses': 'expenses',
+	'monthly expenses': 'expenses',
+	bills: 'expenses',
+	spending: 'expenses',
 	// Corporate Account Aliases
 	revenues: 'revenues',
 	'revenue plan': 'revenues',
@@ -72,7 +77,7 @@ const ACCOUNT_ALIASES: Record<string, string> = {
  */
 const VALID_NODE_IDS = new Set([
 	'checking', 'hysa', 'match401k', 'debt', 'hsa', 'ira', 'max401k', 'brokerage', 'income', 'taxes_paid', 'corp_taxes',
-	'revenues', 'receivables', 'cogs', 'hr_costs', 'capex', 'payables', 'operating_cash_flow', 'financing', 'net_cash_flow', 'mfs', 'mortgage'
+	'revenues', 'receivables', 'cogs', 'hr_costs', 'capex', 'payables', 'operating_cash_flow', 'financing', 'net_cash_flow', 'mfs', 'mortgage', 'expenses'
 ]);
 
 /**
@@ -135,7 +140,7 @@ function localRegexParse(prompt: string): string | null {
 		}
 
 		// B. Match specific set parameters e.g., "set checking ceiling to 6000"
-		const setRegex = /set\s+([a-zA-Z0-9\s\-\(\)_]+?)\s+(balance|ceiling|floor|threshold|dso|dpo|risk|spread|grossincome|gross\s+income|taxrate|tax\s+rate|frequency|interestrate|interest\s+rate|mortgagepayment|mortgage\s+payment)\s*(?:to)?\s*\$?([0-9\.,a-zA-Z\-]+)/i;
+		const setRegex = /set\s+([a-zA-Z0-9\s\-\(\)_]+?)\s+(balance|ceiling|floor|threshold|dso|dpo|risk|spread|grossincome|gross\s+income|taxrate|tax\s+rate|frequency|interestrate|interest\s+rate|mortgagepayment|mortgage\s+payment|monthlyexpenses|monthly\s+expenses|spending)\s*(?:to)?\s*\$?([0-9\.,a-zA-Z\-]+)/i;
 		const setMatch = cText.match(setRegex);
 		if (setMatch) {
 			const accountRaw = setMatch[1].trim();
@@ -148,6 +153,7 @@ function localRegexParse(prompt: string): string | null {
 			if (field === 'taxrate') field = 'taxRate';
 			if (field === 'interestrate') field = 'interestRate';
 			if (field === 'mortgagepayment') field = 'mortgagePayment';
+			if (field === 'monthlyexpenses' || field === 'monthlyspending' || field === 'spending') field = 'monthlyExpenses';
 
 			const nodeId = resolveAccount(accountRaw);
 			if (!VALID_NODE_IDS.has(nodeId)) return null;
@@ -263,7 +269,7 @@ export async function parseNaturalLanguage(prompt: string): Promise<{ command: s
 	const promptSystemText = `You are an API translation layer. Translate user requests into commands for a finance simulator.
 Available commands:
 1. "Source [Amount] Target" (e.g. "checking [3000] hysa", "revenues [10] operating_cash_flow")
-2. "set [node] [balance|ceiling|floor|dso|dpoVariable|dpoFixed|fixedSpread|grossIncome|taxRate|frequency] [value]" (e.g. "set checking ceiling 6000", "set receivables dso 45", "set income grossIncome 5000")
+2. "set [node] [balance|ceiling|floor|dso|dpoVariable|dpoFixed|fixedSpread|grossIncome|taxRate|frequency|monthlyExpenses] [value]" (e.g. "set checking ceiling 6000", "set receivables dso 45", "set income grossIncome 5000", "set expenses monthlyExpenses 1800")
 3. "reorder [comma-separated account types]" (e.g. "reorder debt, hysa, match401k, hsa, ira, max401k, brokerage" to prioritize debt paydown over HYSA)
 4. "reset"
 5. "clear"

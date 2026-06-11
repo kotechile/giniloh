@@ -19,6 +19,7 @@ import {
 } from '../../../lib/calculators/scriptingEngine';
 import MoneyFlowCanvas from './MoneyFlowCanvas';
 import { formatCurrency } from '../../../lib/calculators/format';
+import HistoryChart from './HistoryChart';
 
 const INITIAL_STATE: SimulationState = {
 	day: 0,
@@ -38,7 +39,15 @@ const INITIAL_STATE: SimulationState = {
 	checklistCompleted: false,
 	checklistProgress: 0,
 	mode: 'personal',
-	waterfallOrder: ['hysa', 'match401k', 'debt', 'hsa', 'ira', 'max401k', 'brokerage']
+	waterfallOrder: ['hysa', 'match401k', 'debt', 'hsa', 'ira', 'max401k', 'brokerage'],
+	history: [{
+		day: 0,
+		netWorth: -276500,
+		checking: 4000,
+		hysa: 5000,
+		investments: 18000,
+		debt: 303500
+	}]
 };
 
 const INITIAL_ENTERPRISE_STATE: SimulationState = {
@@ -60,7 +69,19 @@ const INITIAL_ENTERPRISE_STATE: SimulationState = {
 	checklistCompleted: false,
 	checklistProgress: 0,
 	mode: 'enterprise',
-	waterfallOrder: []
+	waterfallOrder: [],
+	history: [{
+		day: 0,
+		netWorth: 365000,
+		checking: 0,
+		hysa: 0,
+		investments: 0,
+		debt: 0,
+		operatingCash: 75000,
+		receivables: 120000,
+		payables: 80000,
+		mfs: 250000
+	}]
 };
 
 const EMOTIONAL_QUESTIONS = [
@@ -338,7 +359,7 @@ export default function MoneyFlowSimulator() {
 
 		if (baseCommand === 'set') {
 			if (parts.length < 4) {
-				return { success: false, nextState: targetState, output: 'Syntax: set [node] [balance|ceiling|floor|dso|dpoVariable|dpoFixed|fixedSpread|grossIncome|taxRate|frequency] [value]' };
+				return { success: false, nextState: targetState, output: 'Syntax: set [node] [balance|ceiling|floor|dso|dpoVariable|dpoFixed|fixedSpread|grossIncome|taxRate|frequency|interestRate|mortgagePayment|monthlyExpenses] [value]' };
 			}
 			const nodeId = parts[1].toLowerCase();
 			const field = parts[2].toLowerCase();
@@ -359,9 +380,9 @@ export default function MoneyFlowSimulator() {
 				return { success: false, nextState: targetState, output: `Error: Account "${nodeId}" not found.` };
 			}
 
-			const validFields = ['balance', 'ceiling', 'floor', 'dso', 'dpovariable', 'dpofixed', 'fixedspread', 'grossincome', 'taxrate', 'frequency', 'interestrate', 'mortgagepayment'];
+			const validFields = ['balance', 'ceiling', 'floor', 'dso', 'dpovariable', 'dpofixed', 'fixedspread', 'grossincome', 'taxrate', 'frequency', 'interestrate', 'mortgagepayment', 'monthlyexpenses'];
 			if (!validFields.includes(field)) {
-				return { success: false, nextState: targetState, output: `Error: Field must be balance, ceiling, floor, dso, dpoVariable, dpoFixed, fixedSpread, grossIncome, taxRate, frequency, interestRate, or mortgagePayment.` };
+				return { success: false, nextState: targetState, output: `Error: Field must be balance, ceiling, floor, dso, dpoVariable, dpoFixed, fixedSpread, grossIncome, taxRate, frequency, interestRate, mortgagePayment, or monthlyExpenses.` };
 			}
 
 			let normalizedField = field;
@@ -372,6 +393,7 @@ export default function MoneyFlowSimulator() {
 			if (field === 'taxrate') normalizedField = 'taxRate';
 			if (field === 'interestrate') normalizedField = 'interestRate';
 			if (field === 'mortgagepayment') normalizedField = 'mortgagePayment';
+			if (field === 'monthlyexpenses') normalizedField = 'monthlyExpenses';
 
 			return {
 				success: true,
@@ -445,6 +467,26 @@ export default function MoneyFlowSimulator() {
 		const isEnterprise = state.mode === 'enterprise';
 		const baseNodes = isEnterprise ? createDefaultEnterpriseNodes() : createDefaultNodes();
 		
+		const initialHistory = isEnterprise ? [{
+			day: 0,
+			netWorth: 365000,
+			checking: 0,
+			hysa: 0,
+			investments: 0,
+			debt: 0,
+			operatingCash: 75000,
+			receivables: 120000,
+			payables: 80000,
+			mfs: 250000
+		}] : [{
+			day: 0,
+			netWorth: -276500,
+			checking: 4000,
+			hysa: 5000,
+			investments: 18000,
+			debt: 303500
+		}];
+
 		setState(prev => ({
 			...prev,
 			macroScenario: scenario,
@@ -454,7 +496,8 @@ export default function MoneyFlowSimulator() {
 			isPaused: false,
 			checklistCompleted: false,
 			checklistProgress: 0,
-			log: [`Backtest reset to ${scenario.toUpperCase()} scenario.`]
+			log: [`Backtest reset to ${scenario.toUpperCase()} scenario.`],
+			history: initialHistory
 		}));
 		setChatHistory([
 			{ text: `Backtest scenario changed to ${scenario.toUpperCase()}. Click 'Start clock' to observe macro effects.`, sender: 'assistant' }
@@ -718,6 +761,9 @@ export default function MoneyFlowSimulator() {
 					mode={state.mode}
 				/>
 			</div>
+
+			{/* Historical Evolution Chart */}
+			<HistoryChart history={state.history} mode={state.mode} />
 
 			{/* Interactive Bottom-up Liquidity Projections Grid */}
 			{isEnterprise && liquidityRows.length > 0 && (
