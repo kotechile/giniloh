@@ -123,6 +123,28 @@ function localRegexParse(prompt: string): string | null {
 		const cText = clause.trim();
 		if (!cText) return null;
 
+		// 1. Match direct gross income setting (e.g. "set gross income to 10000" or "set income to 8000")
+		const grossIncomeDirectRegex = /^set\s+(?:gross\s+)?income\s*(?:amount|paycheck)?\s*(?:to)?\s*\$?([0-9\.,]+)(?!\s+(?:a|per|every))/i;
+		const grossIncomeMatch = cText.match(grossIncomeDirectRegex);
+		if (grossIncomeMatch) {
+			const val = parseFloat(grossIncomeMatch[1].replace(/,/g, ''));
+			return {
+				cmd: `set income grossIncome ${val}`,
+				nodeId: 'income'
+			};
+		}
+
+		// 2. Match direct monthly expenses setting (e.g. "set monthly expenses to 5000" or "set expenses to 3000")
+		const expensesDirectRegex = /^set\s+(?:monthly\s+)?expenses\s*(?:budget|limit|amount|spending)?\s*(?:to)?\s*\$?([0-9\.,]+)/i;
+		const expensesMatch = cText.match(expensesDirectRegex);
+		if (expensesMatch) {
+			const val = parseFloat(expensesMatch[1].replace(/,/g, ''));
+			return {
+				cmd: `set expenses monthlyExpenses ${val}`,
+				nodeId: 'expenses'
+			};
+		}
+
 		// A. Match income setting e.g., "set my income to 200 a day" or "paycheck of 3500 every bi-weekly"
 		const incomeRegex = /(?:set\s+)?(?:my\s+)?(?:income|paycheck)\s+to\s+\$?([0-9\.,]+)\s+(?:a|per|every)\s*(day|daily|week|weekly|bi-weekly|month|monthly)/i;
 		const incomeMatch = cText.match(incomeRegex);
