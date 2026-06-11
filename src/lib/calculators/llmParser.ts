@@ -70,6 +70,14 @@ const ACCOUNT_ALIASES: Record<string, string> = {
 /**
  * Local regex-based parser used as fallback
  */
+const VALID_NODE_IDS = new Set([
+	'checking', 'hysa', 'match401k', 'debt', 'hsa', 'ira', 'max401k', 'brokerage', 'income', 'taxes_paid', 'corp_taxes',
+	'revenues', 'receivables', 'cogs', 'hr_costs', 'capex', 'payables', 'operating_cash_flow', 'financing', 'net_cash_flow', 'mfs', 'mortgage'
+]);
+
+/**
+ * Local regex-based parser used as fallback
+ */
 function localRegexParse(prompt: string): string | null {
 	const text = prompt.toLowerCase().trim();
 
@@ -94,54 +102,117 @@ function localRegexParse(prompt: string): string | null {
 		return 'reorder match401k, hysa, hsa, ira, max401k, brokerage, debt; set checking ceiling 3000';
 	}
 
-	// 1. Match set parameters e.g., "set checking ceiling to 6000" or "set checking floor to 2000"
-	// matches: set [account] [field] (to) [value]
-	const setRegex = /set\s+([a-zA-Z0-9\s\-\(\)_]+?)\s+(balance|ceiling|floor|threshold|dso|dpo|risk|spread|grossincome|gross\s+income|taxrate|tax\s+rate|frequency|interestrate|interest\s+rate|mortgagepayment|mortgage\s+payment)\s*(?:to)?\s*\$?([0-9\.,a-zA-Z\-]+)/i;
-	const setMatch = text.match(setRegex);
-	if (setMatch) {
-		const accountRaw = setMatch[1].trim();
-		let field = setMatch[2].trim().replace(/\s+/g, '').toLowerCase();
-		const val = setMatch[3].trim();
-		
-		if (field === 'threshold') field = 'ceiling'; // default threshold to ceiling
-		if (field === 'dpo') field = 'dpoVariable'; // default dpo variable
-		if (field === 'grossincome') field = 'grossIncome';
-		if (field === 'taxrate') field = 'taxRate';
-		if (field === 'interestrate') field = 'interestRate';
-		if (field === 'mortgagepayment') field = 'mortgagePayment';
+	// Helper to resolve raw account name
+	const resolveAccount = (raw: string): string => {
+		const clean = raw.toLowerCase().trim().replace(/^(?:my|our|the|an?)\s+/, '');
+		return ACCOUNT_ALIASES[clean] || clean;
+	};
 
-		// resolve account alias
-		const nodeId = ACCOUNT_ALIASES[accountRaw] || accountRaw;
-		return `set ${nodeId} ${field} ${val}`;
+	const parseSingleClause = (clause: string): string | null => {
+		const cText = clause.trim();
+		if (!cText) return null;
+
+		// A. Match income setting e.g., "set my income to 200 a day" or "paycheck of 3500 every bi-weekly"
+		const incomeRegex = /(?:set\s+)?(?:my\s+)?(?:income|paycheck)\s+to\s+\$?([0-9\.,]+)\s+(?:a|per|every)\s*(day|daily|week|weekly|bi-weekly|month|monthly)/i;
+		const incomeMatch = cText.match(incomeRegex);
+		if (incomeMatch) {
+			const val = parseFloat(incomeMatch[1].replace(/,/g, ''));
+			let freqRaw = incomeMatch[2].toLowerCase();
+			let frequency = 'bi-weekly';
+			if (freqRaw === 'day' || freqRaw === 'daily') frequency = 'daily';
+			if (freqRaw === 'month' || freqRaw === 'monthly') frequency = 'monthly';
+			if (freqRaw === 'bi-weekly') frequency = 'bi-weekly';
+			return `set income grossIncome ${val}; set income frequency ${frequency}`;
+		}
+
+		// B. Match specific set parameters e.g., "set checking ceiling to 6000"
+		const setRegex = /set\s+([a-zA-Z0-9\s\-\(\)_]+?)\s+(balance|ceiling|floor|threshold|dso|dpo|risk|spread|grossincome|gross\s+income|taxrate|tax\s+rate|frequency|interestrate|interest\s+rate|mortgagepayment|mortgage\s+payment)\s*(?:to)?\s*\$?([0-9\.,a-zA-Z\-]+)/i;
+		const setMatch = cText.match(setRegex);
+		if (setMatch) {
+			const accountRaw = setMatch[1].trim();
+			let field = setMatch[2].trim().replace(/\s+/g, '').toLowerCase();
+			const val = setMatch[3].trim();
+			
+			if (field === 'threshold') field = 'ceiling';
+			if (field === 'dpo') field = 'dpoVariable';
+			if (field === 'grossincome') field = 'grossIncome';
+			if (field === 'taxrate') field = 'taxRate';
+			if (field === 'interestrate') field = 'interestRate';
+			if (field === 'mortgagepayment') field = 'mortgagePayment';
+
+			const nodeId = resolveAccount(accountRaw);
+			if (!VALID_NODE_IDS.has(nodeId)) return null;
+			return `set ${nodeId} ${field} ${val}`;
+		}
+
+		// C. Match general limit/ceiling set e.g., "limit checking to 2000"
+		const limitRegex = /limit\s+([a-zA-Z0-9\s\-\(\)_]+?)\s+(?:to\s+)?\$?([0-9\.,]+)/i;
+		const limitMatch = cText.match(limitRegex);
+		if (limitMatch) {
+			const accountRaw = limitMatch[1].trim();
+			const val = limitMatch[2].trim();
+			const nodeId = resolveAccount(accountRaw);
+			if (!VALID_NODE_IDS.has(nodeId)) return null;
+			return `set ${nodeId} ceiling ${val}`;
+		}
+
+		// D. Match generic set without field (default to balance) e.g., "set my debt to 4000" or "set checking 3000"
+		const setGenericRegex = /set\s+([a-zA-Z0-9\s\-\(\)_]+?)\s+(?:to\s+)?\$?([0-9\.,]+)/i;
+		const genericMatch = cText.match(setGenericRegex);
+		if (genericMatch) {
+			const accountRaw = genericMatch[1].trim();
+			const val = genericMatch[2].trim();
+			const nodeId = resolveAccount(accountRaw);
+			if (!VALID_NODE_IDS.has(nodeId)) return null;
+			return `set ${nodeId} balance ${val}`;
+		}
+
+		// E. Match sweep commands e.g., "send $500 from checking to hysa"
+		const sweepRegex = /(?:send|sweep|route|transfer|move)\s*\$?([0-9\.,]+)\s*(?:from)?\s+([a-zA-Z0-9\s\-\(\)_]+?)\s+to\s+([a-zA-Z0-9\s\-\(\)_]+)/i;
+		const sweepMatch = cText.match(sweepRegex);
+		if (sweepMatch) {
+			const amount = parseFloat(sweepMatch[1].replace(/,/g, ''));
+			const sourceRaw = sweepMatch[2].trim();
+			const targetRaw = sweepMatch[3].trim();
+
+			const sourceId = resolveAccount(sourceRaw);
+			const targetId = resolveAccount(targetRaw);
+			if (!VALID_NODE_IDS.has(sourceId) || !VALID_NODE_IDS.has(targetId)) return null;
+
+			return `${sourceId} [${amount}] ${targetId}`;
+		}
+
+		// F. Alternative sweep e.g., "checking to hysa $500"
+		const altSweepRegex = /([a-zA-Z0-9\s\-\(\)_]+?)\s+to\s+([a-zA-Z0-9\s\-\(\)_]+?)\s*(?:for)?\s*\$?([0-9\.,]+)/i;
+		const altMatch = cText.match(altSweepRegex);
+		if (altMatch) {
+			const sourceRaw = altMatch[1].trim();
+			const targetRaw = altMatch[2].trim();
+			const amount = parseFloat(altMatch[3].replace(/,/g, ''));
+
+			const sourceId = resolveAccount(sourceRaw);
+			const targetId = resolveAccount(targetRaw);
+			if (!VALID_NODE_IDS.has(sourceId) || !VALID_NODE_IDS.has(targetId)) return null;
+
+			return `${sourceId} [${amount}] ${targetId}`;
+		}
+
+		return null;
+	};
+
+	// Split prompt into clauses by period, semicolon, or newline
+	const clauses = prompt.split(/[\.;\n]+/);
+	const results: string[] = [];
+	for (const clause of clauses) {
+		const res = parseSingleClause(clause);
+		if (res) {
+			results.push(res);
+		}
 	}
 
-	// 2. Match sweep commands e.g., "send $500 from checking to hysa" or "route 1000 from checking to brokerage"
-	// matches: (send/sweep/route/transfer) [amount] (from) [source] (to) [target]
-	const sweepRegex = /(?:send|sweep|route|transfer|move)\s*\$?([0-9\.,]+)\s*(?:from)?\s+([a-zA-Z0-9\s\-\(\)_]+?)\s+to\s+([a-zA-Z0-9\s\-\(\)_]+)/i;
-	const sweepMatch = text.match(sweepRegex);
-	if (sweepMatch) {
-		const amount = parseFloat(sweepMatch[1].replace(/,/g, ''));
-		const sourceRaw = sweepMatch[2].trim();
-		const targetRaw = sweepMatch[3].trim();
-
-		const sourceId = ACCOUNT_ALIASES[sourceRaw] || sourceRaw;
-		const targetId = ACCOUNT_ALIASES[targetRaw] || targetRaw;
-
-		return `${sourceId} [${amount}] ${targetId}`;
-	}
-
-	// 3. Alternative sweep e.g., "checking to hysa $500"
-	const altSweepRegex = /([a-zA-Z0-9\s\-\(\)_]+?)\s+to\s+([a-zA-Z0-9\s\-\(\)_]+?)\s*(?:for)?\s*\$?([0-9\.,]+)/i;
-	const altMatch = text.match(altSweepRegex);
-	if (altMatch) {
-		const sourceRaw = altMatch[1].trim();
-		const targetRaw = altMatch[2].trim();
-		const amount = parseFloat(altMatch[3].replace(/,/g, ''));
-
-		const sourceId = ACCOUNT_ALIASES[sourceRaw] || sourceRaw;
-		const targetId = ACCOUNT_ALIASES[targetRaw] || targetRaw;
-
-		return `${sourceId} [${amount}] ${targetId}`;
+	if (results.length > 0) {
+		// Join all subcommands with a semicolon
+		return results.join('; ');
 	}
 
 	return null;
