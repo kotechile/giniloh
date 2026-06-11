@@ -14,7 +14,7 @@ interface MoneyFlowCanvasProps {
 
 // Layout positions (x, y) coordinates for Personal Mode
 const PERSONAL_NODE_COORDINATES: Record<string, { x: number; y: number }> = {
-	income: { x: 50, y: 260 },
+	income: { x: 30, y: 260 },
 	checking: { x: 290, y: 260 },
 	hysa: { x: 550, y: 110 },
 	match401k: { x: 550, y: 260 },
