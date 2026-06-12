@@ -141,12 +141,12 @@ export default function MoneyFlowSimulator() {
 	const [rules, setRules] = useState<ScriptRule[]>(createDefaultRules);
 
 	const timerRef = useRef<NodeJS.Timeout | null>(null);
-	const logsEndRef = useRef<HTMLDivElement>(null);
+	const logsContainerRef = useRef<HTMLDivElement>(null);
 
-	// Auto-scroll logs to bottom
+	// Auto-scroll logs container internally to bottom
 	useEffect(() => {
-		if (logsEndRef.current) {
-			logsEndRef.current.scrollIntoView({ behavior: 'smooth' });
+		if (logsContainerRef.current) {
+			logsContainerRef.current.scrollTop = logsContainerRef.current.scrollHeight;
 		}
 	}, [state.log]);
 
@@ -1051,7 +1051,10 @@ export default function MoneyFlowSimulator() {
 					</div>
 					<span className="text-[9px] text-slate-500">REAL-TIME SIMULATION ENGINE AUDIT TRAIL</span>
 				</div>
-				<div className="max-h-[185px] min-h-[130px] overflow-y-auto space-y-1.5 text-[11px] leading-relaxed font-mono scrollbar-thin scrollbar-thumb-slate-800 pr-2">
+				<div 
+					ref={logsContainerRef}
+					className="max-h-[185px] min-h-[130px] overflow-y-auto space-y-1.5 text-[11px] leading-relaxed font-mono scrollbar-thin scrollbar-thumb-slate-800 pr-2"
+				>
 					{state.log.length > 0 ? (
 						state.log.map((line, idx) => {
 							const isWarning = line.includes('WARNING') || line.includes('ALERT') || line.includes('ERROR');
@@ -1080,7 +1083,6 @@ export default function MoneyFlowSimulator() {
 					) : (
 						<div className="text-slate-600 italic">No transactions or events logged yet. Advance the clock to run.</div>
 					)}
-					<div ref={logsEndRef} />
 				</div>
 			</div>
 		</div>
