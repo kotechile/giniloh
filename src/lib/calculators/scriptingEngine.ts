@@ -122,6 +122,46 @@ export function createDefaultRules(): ScriptRule[] {
 			conditionStr: 'debt > 1000',
 			actionStr: 'checking [1500] debt',
 			isActive: false
+		},
+		{
+			id: 'rule-3',
+			name: 'Lifestyle Booster',
+			description: 'If debt is fully paid off, increase Checking ceiling to $3,500 to allow for more lifestyle flexibility.',
+			conditionStr: 'debt == 0',
+			actionStr: 'set checking ceiling 3500',
+			isActive: false
+		},
+		{
+			id: 'rule-4',
+			name: 'Emergency Fund Overflow',
+			description: 'If HYSA emergency savings exceed $10,000, automatically reorder the savings waterfall to prioritize stock market investments.',
+			conditionStr: 'hysa >= 10000',
+			actionStr: 'reorder match401k, hsa, ira, max401k, brokerage, hysa, debt',
+			isActive: false
+		},
+		{
+			id: 'rule-5',
+			name: 'Monthly Roth IRA Auto-Pilot',
+			description: 'Automatically invest a fixed $500 monthly from Checking to Roth IRA.',
+			conditionStr: 'day % 30 == 0',
+			actionStr: 'checking [500] ira',
+			isActive: false
+		},
+		{
+			id: 'rule-6',
+			name: 'Weekend Discretionary Sweep',
+			description: 'Every Friday, route $150 from Checking to Living Expenses to set aside discretionary cash.',
+			conditionStr: 'is_friday',
+			actionStr: 'checking [150] expenses',
+			isActive: false
+		},
+		{
+			id: 'rule-7',
+			name: 'Dry Powder Accumulator',
+			description: 'If S&P 500 falls below 4000 and you have >$6,000 in HYSA, pull $2,000 to buy cheap brokerage assets.',
+			conditionStr: 'sp500 < 4000 and hysa > 6000',
+			actionStr: 'hysa [2000] brokerage',
+			isActive: false
 		}
 	];
 }
