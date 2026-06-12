@@ -430,7 +430,10 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 			} else if (source.type === 'brokerage' && target.type === 'checking') {
 				holdType = 'ACAT';
 				delay = 15;
-			} else if (source.type === 'hysa' && target.type === 'checking') {
+			} else if (
+				(source.type === 'hysa' && target.type === 'checking') ||
+				(source.type === 'checking' && target.type === 'hysa')
+			) {
 				delay = 0;
 			}
 
