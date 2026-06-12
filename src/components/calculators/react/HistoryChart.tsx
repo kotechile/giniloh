@@ -17,6 +17,7 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 		hysa: true,
 		investments: true,
 		debt: true,
+		mortgage: true,
 		// Enterprise series
 		operatingCash: true,
 		receivables: true,
@@ -72,7 +73,8 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 		{ key: 'checking', label: 'Checking Balance', stroke: '#06b6d4', fill: 'none' },
 		{ key: 'hysa', label: 'HYSA Savings', stroke: '#3b82f6', fill: 'none' },
 		{ key: 'investments', label: 'Investments', stroke: '#8b5cf6', fill: 'none' },
-		{ key: 'debt', label: 'Total Liabilities', stroke: '#f43f5e', fill: 'none' }
+		{ key: 'debt', label: 'High-Interest Debt', stroke: '#f43f5e', fill: 'none' },
+		{ key: 'mortgage', label: 'Mortgage Loan', stroke: '#6366f1', fill: 'none' }
 	];
 
 	// Enterprise Series definitions

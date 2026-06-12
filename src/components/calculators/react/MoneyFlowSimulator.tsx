@@ -46,7 +46,8 @@ const INITIAL_STATE: SimulationState = {
 		checking: 4000,
 		hysa: 5000,
 		investments: 18000,
-		debt: 303500
+		debt: 3500,
+		mortgage: 300000
 	}]
 };
 
@@ -77,6 +78,7 @@ const INITIAL_ENTERPRISE_STATE: SimulationState = {
 		hysa: 0,
 		investments: 0,
 		debt: 0,
+		mortgage: 0,
 		operatingCash: 75000,
 		receivables: 120000,
 		payables: 80000,
@@ -474,6 +476,7 @@ export default function MoneyFlowSimulator() {
 			hysa: 0,
 			investments: 0,
 			debt: 0,
+			mortgage: 0,
 			operatingCash: 75000,
 			receivables: 120000,
 			payables: 80000,
@@ -484,7 +487,8 @@ export default function MoneyFlowSimulator() {
 			checking: 4000,
 			hysa: 5000,
 			investments: 18000,
-			debt: 303500
+			debt: 3500,
+			mortgage: 300000
 		}];
 
 		setState(prev => ({

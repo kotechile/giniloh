@@ -92,7 +92,8 @@ export interface HistoryDataPoint {
 	checking: number;
 	hysa: number;
 	investments: number;
-	debt: number;
+	debt: number; // High-Interest Credit Card Debt only
+	mortgage: number; // Mortgage Principal balance only
 	// Enterprise mode values
 	operatingCash?: number;
 	receivables?: number;
@@ -535,9 +536,8 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 			.filter(n => ['match401k', 'hsa', 'ira', 'max401k', 'brokerage'].includes(n.type))
 			.reduce((sum, n) => sum + n.balance, 0);
 
-		const debtSum = nextNodes
-			.filter(n => ['debt', 'mortgage'].includes(n.type))
-			.reduce((sum, n) => sum + n.balance, 0);
+		const ccDebt = nextNodes.find(n => n.type === 'debt')?.balance || 0;
+		const mortgageBal = nextNodes.find(n => n.type === 'mortgage')?.balance || 0;
 
 		const hysaBal = nextNodes.find(n => n.type === 'hysa')?.balance || 0;
 		const checkingBal = checkingNode.balance;
@@ -548,7 +548,8 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 			checking: checkingBal,
 			hysa: hysaBal,
 			investments: invSum,
-			debt: debtSum
+			debt: ccDebt,
+			mortgage: mortgageBal
 		};
 
 		return {
@@ -783,6 +784,7 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 			hysa: 0,
 			investments: 0,
 			debt: 0,
+			mortgage: 0,
 			operatingCash: netCashNode.balance,
 			receivables: receivablesNode.balance,
 			payables: payablesNode.balance,
