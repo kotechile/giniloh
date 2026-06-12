@@ -362,7 +362,11 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 				if (holding.releaseDay <= nextDay) {
 					const targetNode = nextNodes.find((n) => n.id === holding.originAccountId);
 					if (targetNode) {
-						targetNode.balance += holding.amount;
+						if (targetNode.type === 'debt' || targetNode.type === 'mortgage') {
+							targetNode.balance = Math.max(0, targetNode.balance - holding.amount);
+						} else {
+							targetNode.balance += holding.amount;
+						}
 						nextLog.push(`Day ${nextDay}: Completed ${holding.type} hold of $${holding.amount.toFixed(2)} for ${targetNode.name}.`);
 					}
 				} else {
