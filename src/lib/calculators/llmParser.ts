@@ -96,6 +96,8 @@ function localRegexParse(prompt: string): string | null {
 		return 'help';
 	}
 
+	const results: string[] = [];
+
 	// 0. Match dynamic custom waterfall priority reordering
 	const isPrioritizationIntent = /(?:prioritize|reorder|first|then|after|order|priority|waterfall|pay\s+off\s+.*?\s+first|build\s+.*?\s+first)/i.test(text);
 	if (isPrioritizationIntent) {
@@ -129,19 +131,19 @@ function localRegexParse(prompt: string): string | null {
 		});
 		
 		if (uniqueIds.length >= 2) {
-			return `reorder ${uniqueIds.join(', ')}`;
+			results.push(`reorder ${uniqueIds.join(', ')}`);
 		}
 	}
 
 	// 0.1 Match qualitative priority sweeps locally
-	if (text.includes('prioritize debt') || text.includes('pay off debt') || text.includes('debt reduction')) {
-		return 'reorder debt, hysa, match401k, hsa, ira, max401k, brokerage; set checking ceiling 2000';
-	}
-	if (text.includes('prioritize savings') || text.includes('emergency savings') || text.includes('save more')) {
-		return 'reorder hysa, match401k, debt, hsa, ira, max401k, brokerage; set checking ceiling 4000';
-	}
-	if (text.includes('prioritize invest') || text.includes('stock market') || text.includes('investing')) {
-		return 'reorder match401k, hysa, hsa, ira, max401k, brokerage, debt; set checking ceiling 3000';
+	if (results.length === 0) {
+		if (text.includes('prioritize debt') || text.includes('pay off debt') || text.includes('debt reduction')) {
+			results.push('reorder debt, hysa, match401k, hsa, ira, max401k, brokerage; set checking ceiling 2000');
+		} else if (text.includes('prioritize savings') || text.includes('emergency savings') || text.includes('save more')) {
+			results.push('reorder hysa, match401k, debt, hsa, ira, max401k, brokerage; set checking ceiling 4000');
+		} else if (text.includes('prioritize invest') || text.includes('stock market') || text.includes('investing')) {
+			results.push('reorder match401k, hysa, hsa, ira, max401k, brokerage, debt; set checking ceiling 3000');
+		}
 	}
 
 	let lastAccountId: string | null = null;
@@ -291,7 +293,6 @@ function localRegexParse(prompt: string): string | null {
 
 	// Split prompt into clauses by period, semicolon, newline, or words "and", "then"
 	const clauses = prompt.split(/[\.;\n]|\band\b|\bthen\b/i);
-	const results: string[] = [];
 	for (const clause of clauses) {
 		const res = parseSingleClause(clause);
 		if (res) {
