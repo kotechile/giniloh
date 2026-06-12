@@ -532,6 +532,13 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 			}
 		});
 
+		// Include personal funds currently in transit (settlement holds)
+		nextHoldings.forEach((holding) => {
+			if (['ACH', 'ACAT', 'T1'].includes(holding.type)) {
+				totalWealth += holding.amount;
+			}
+		});
+
 		const invSum = nextNodes
 			.filter(n => ['match401k', 'hsa', 'ira', 'max401k', 'brokerage'].includes(n.type))
 			.reduce((sum, n) => sum + n.balance, 0);
