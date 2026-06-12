@@ -289,7 +289,7 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 				>
 					{/* Grid lines */}
 					{yGridLines.map((line, idx) => (
-						<g key={`y-grid-${idx}`} className="opacity-40 [.light_&]:opacity-80">
+						<g key={`y-grid-${idx}`}>
 							<line
 								x1={margin.left}
 								y1={line.y}
@@ -298,13 +298,14 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 								stroke="#1e293b"
 								strokeWidth="1"
 								strokeDasharray="2, 4"
-								className="[.light_&]:stroke-slate-200"
+								className="opacity-40 [.light_&]:opacity-80 [.light_&]:stroke-slate-200"
 							/>
 							<text
 								x={margin.left - 8}
 								y={line.y + 3}
 								textAnchor="end"
-								fill="#64748b"
+								fill="#cbd5e1"
+								className="[.light_&]:fill-slate-500 font-medium"
 							>
 								{formatCurrency(line.val)}
 							</text>
@@ -312,7 +313,7 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 					))}
 
 					{xGridLines.map((line, idx) => (
-						<g key={`x-grid-${idx}`} className="opacity-40 [.light_&]:opacity-80">
+						<g key={`x-grid-${idx}`}>
 							<line
 								x1={line.x}
 								y1={margin.top}
@@ -321,13 +322,14 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 								stroke="#1e293b"
 								strokeWidth="1"
 								strokeDasharray="2, 4"
-								className="[.light_&]:stroke-slate-200"
+								className="opacity-40 [.light_&]:opacity-80 [.light_&]:stroke-slate-200"
 							/>
 							<text
 								x={line.x}
 								y={dimensions.height - margin.bottom + 14}
 								textAnchor="middle"
-								fill="#64748b"
+								fill="#cbd5e1"
+								className="[.light_&]:fill-slate-500 font-medium"
 							>
 								Day {line.day}
 							</text>
