@@ -430,6 +430,8 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 			} else if (source.type === 'brokerage' && target.type === 'checking') {
 				holdType = 'ACAT';
 				delay = 15;
+			} else if (source.type === 'hysa' && target.type === 'checking') {
+				delay = 0;
 			}
 
 			// Record transfer details
@@ -444,14 +446,22 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 				target.ytdContributions += amountToSweep;
 			}
 
-			nextHoldings.push({
-				amount: amountToSweep,
-				originAccountId: target.id,
-				releaseDay: nextDay + delay,
-				type: holdType
-			});
-
-			nextLog.push(`Day ${nextDay}: ${logMessage} (Enforced ${holdType} hold of ${delay} days).`);
+			if (delay === 0) {
+				if (target.type === 'debt' || target.type === 'mortgage') {
+					target.balance = Math.max(0, target.balance - amountToSweep);
+				} else {
+					target.balance += amountToSweep;
+				}
+				nextLog.push(`Day ${nextDay}: ${logMessage} (Settled instantly).`);
+			} else {
+				nextHoldings.push({
+					amount: amountToSweep,
+					originAccountId: target.id,
+					releaseDay: nextDay + delay,
+					type: holdType
+				});
+				nextLog.push(`Day ${nextDay}: ${logMessage} (Enforced ${holdType} hold of ${delay} days).`);
+			}
 		};
 
 		// Process monthly mortgage payment once every 30 days
