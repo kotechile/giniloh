@@ -15,32 +15,32 @@ interface MoneyFlowCanvasProps {
 // Layout positions (x, y) coordinates for Personal Mode
 const PERSONAL_NODE_COORDINATES: Record<string, { x: number; y: number }> = {
 	income: { x: 30, y: 50 },
-	taxes_paid: { x: 290, y: 50 },
-	checking: { x: 290, y: 180 },
-	hysa: { x: 550, y: 180 },
-	expenses: { x: 30, y: 310 },
-	mortgage: { x: 290, y: 310 },
-	debt: { x: 550, y: 310 },
-	match401k: { x: 290, y: 440 },
-	hsa: { x: 550, y: 440 },
-	ira: { x: 810, y: 440 },
-	max401k: { x: 1070, y: 440 },
-	brokerage: { x: 1330, y: 440 }
+	taxes_paid: { x: 300, y: 50 },
+	checking: { x: 300, y: 190 },
+	hysa: { x: 570, y: 190 },
+	expenses: { x: 30, y: 330 },
+	mortgage: { x: 300, y: 330 },
+	debt: { x: 570, y: 330 },
+	match401k: { x: 300, y: 470 },
+	hsa: { x: 570, y: 470 },
+	ira: { x: 840, y: 470 },
+	max401k: { x: 1110, y: 470 },
+	brokerage: { x: 1380, y: 470 }
 };
 
 // Layout positions (x, y) coordinates for Enterprise Mode (left-to-right cascade)
 const ENTERPRISE_NODE_COORDINATES: Record<string, { x: number; y: number }> = {
 	revenues: { x: 50, y: 100 },
-	receivables: { x: 350, y: 100 },
-	operating_cash_flow: { x: 350, y: 250 },
-	capex: { x: 650, y: 100 },
-	cogs: { x: 650, y: 250 },
-	hr_costs: { x: 650, y: 400 },
-	payables: { x: 950, y: 250 },
-	corp_taxes: { x: 950, y: 370 },
-	financing: { x: 950, y: 490 },
-	net_cash_flow: { x: 1250, y: 250 },
-	mfs: { x: 1550, y: 250 }
+	receivables: { x: 360, y: 100 },
+	operating_cash_flow: { x: 360, y: 260 },
+	capex: { x: 670, y: 100 },
+	cogs: { x: 670, y: 260 },
+	hr_costs: { x: 670, y: 420 },
+	payables: { x: 980, y: 260 },
+	corp_taxes: { x: 980, y: 387 },
+	financing: { x: 980, y: 520 },
+	net_cash_flow: { x: 1290, y: 260 },
+	mfs: { x: 1600, y: 260 }
 };
 
 // Styles mapping for Personal Mode
@@ -205,6 +205,7 @@ export default function MoneyFlowCanvas({
 }: MoneyFlowCanvasProps) {
 	const selectedNode = nodes.find((n) => n.id === selectedNodeId) || null;
 	const isEnterprise = mode === 'enterprise';
+	const canvasHeight = isEnterprise ? 640 : 580;
 
 	const [zoom, setZoom] = React.useState<number>(1.0);
 	const containerRef = React.useRef<HTMLDivElement>(null);
@@ -212,7 +213,7 @@ export default function MoneyFlowCanvas({
 	const handleZoomFit = () => {
 		if (containerRef.current) {
 			const containerWidth = containerRef.current.clientWidth;
-			const maxRight = isEnterprise ? 1850 : 1600;
+			const maxRight = isEnterprise ? 1900 : 1650;
 			const targetZoom = Math.min(1.0, Math.max(0.4, (containerWidth - 32) / maxRight));
 			setZoom(parseFloat(targetZoom.toFixed(2)));
 		}
@@ -254,14 +255,14 @@ export default function MoneyFlowCanvas({
 			startX = start.x + 120;
 			startY = dy > 0 ? start.y + 96 : start.y;
 			endX = end.x + 120;
-			endY = dy > 0 ? end.y : end.y + 96;
+			endY = dy > 0 ? end.y - 8 : end.y + 96 + 8; // Offset end by 8px to make room for arrow!
 			controlOffset = Math.max(40, Math.abs(endY - startY) / 2);
 			return `M ${startX} ${startY} C ${startX} ${startY + (dy > 0 ? controlOffset : -controlOffset)}, ${endX} ${endY + (dy > 0 ? -controlOffset : controlOffset)}, ${endX} ${endY}`;
 		} else if (dx < 0) {
 			// Target is to the left
 			startX = start.x;
 			startY = start.y + 48;
-			endX = end.x + 240;
+			endX = end.x + 240 + 8; // Offset end by 8px to make room for arrow!
 			endY = end.y + 48;
 			controlOffset = Math.max(40, Math.abs(endX - startX) / 2);
 			return `M ${startX} ${startY} C ${startX - controlOffset} ${startY}, ${endX + controlOffset} ${endY}, ${endX} ${endY}`;
@@ -269,7 +270,7 @@ export default function MoneyFlowCanvas({
 			// Target is to the right
 			startX = start.x + 240;
 			startY = start.y + 48;
-			endX = end.x;
+			endX = end.x - 8; // Offset end by 8px to make room for arrow!
 			endY = end.y + 48;
 			controlOffset = Math.max(40, Math.abs(endX - startX) / 2);
 			return `M ${startX} ${startY} C ${startX + controlOffset} ${startY}, ${endX - controlOffset} ${endY}, ${endX} ${endY}`;
@@ -373,15 +374,15 @@ export default function MoneyFlowCanvas({
 			{/* Visual canvas window */}
 			<div 
 				className="relative overflow-x-auto w-full scrollbar-thin scrollbar-thumb-slate-300 dark:scrollbar-thumb-slate-800 transition-all duration-200 ease-out"
-				style={{ height: `${540 * zoom}px`, minHeight: '350px' }}
+				style={{ height: `${canvasHeight * zoom}px`, minHeight: '350px' }}
 			>
 				<div 
 					className="h-full relative origin-top-left transition-transform duration-200 ease-out"
-					style={{ width: `${(isEnterprise ? 1850 : 1600) * zoom}px`, height: `${540 * zoom}px` }}
+					style={{ width: `${(isEnterprise ? 1900 : 1650) * zoom}px`, height: `${canvasHeight * zoom}px` }}
 				>
 					<div 
 						className="absolute top-0 left-0 origin-top-left"
-						style={{ transform: `scale(${zoom})`, width: isEnterprise ? '1850px' : '1600px', height: '540px' }}
+						style={{ transform: `scale(${zoom})`, width: isEnterprise ? '1900px' : '1650px', height: `${canvasHeight}px` }}
 					>
 					{/* Flow lines (SVG) */}
 					<svg className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
@@ -397,9 +398,18 @@ export default function MoneyFlowCanvas({
 								<stop offset="70%" stopColor="#6366f1" />
 								<stop offset="100%" stopColor="#3b82f6" />
 							</linearGradient>
-							<filter id="glow" x="-10%" y="-10%" width="120%" height="120%">
-								<feDropShadow dx="0" dy="0" stdDeviation="4" floodColor="#3b82f6" floodOpacity="0.5" />
+							<filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+								<feDropShadow dx="0" dy="0" stdDeviation="6" floodColor="#3b82f6" floodOpacity="0.5" />
 							</filter>
+							<marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+								<path d="M 0 0 L 10 5 L 0 10 z" fill="#475569" className="[.light_&]:fill-slate-300" />
+							</marker>
+							<marker id="activeArrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="18" markerHeight="18" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+								<path d="M 0 0 L 10 5 L 0 10 z" fill="#3b82f6" />
+							</marker>
+							<marker id="corpArrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="18" markerHeight="18" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+								<path d="M 0 0 L 10 5 L 0 10 z" fill="#10b981" />
+							</marker>
 						</defs>
 
 						{/* Inactive base structure linkages */}
@@ -414,6 +424,7 @@ export default function MoneyFlowCanvas({
 											fill="none"
 											className="stroke-slate-700/60 [.light_&]:stroke-slate-300"
 											strokeWidth="3"
+											markerEnd="url(#arrow)"
 										/>
 									);
 								})}
@@ -422,34 +433,36 @@ export default function MoneyFlowCanvas({
 									fill="none"
 									className="stroke-slate-700/60 [.light_&]:stroke-slate-300"
 									strokeWidth="3"
+									markerEnd="url(#arrow)"
 								/>
 								<path
 									d={calculateBezierPath('income', 'taxes_paid')}
 									fill="none"
 									className="stroke-slate-700/60 [.light_&]:stroke-slate-300"
 									strokeWidth="3"
+									markerEnd="url(#arrow)"
 								/>
 							</>
 						) : (
 							<>
 								{/* Revenues -> Receivables & Operating Cash Flow link */}
-								<path d={calculateBezierPath('revenues', 'operating_cash_flow')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
-								<path d={calculateBezierPath('revenues', 'receivables')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
-								<path d={calculateBezierPath('receivables', 'operating_cash_flow')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
+								<path d={calculateBezierPath('revenues', 'operating_cash_flow')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('revenues', 'receivables')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('receivables', 'operating_cash_flow')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
 
 								{/* Costs links */}
-								<path d={calculateBezierPath('operating_cash_flow', 'cogs')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
-								<path d={calculateBezierPath('operating_cash_flow', 'hr_costs')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
-								<path d={calculateBezierPath('operating_cash_flow', 'capex')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
-								<path d={calculateBezierPath('operating_cash_flow', 'corp_taxes')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
-								<path d={calculateBezierPath('cogs', 'payables')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
-								<path d={calculateBezierPath('hr_costs', 'payables')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
-								<path d={calculateBezierPath('capex', 'payables')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
+								<path d={calculateBezierPath('operating_cash_flow', 'cogs')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('operating_cash_flow', 'hr_costs')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('operating_cash_flow', 'capex')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('operating_cash_flow', 'corp_taxes')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('cogs', 'payables')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('hr_costs', 'payables')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('capex', 'payables')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
 
 								{/* Discharges */}
-								<path d={calculateBezierPath('payables', 'net_cash_flow')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
-								<path d={calculateBezierPath('financing', 'net_cash_flow')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
-								<path d={calculateBezierPath('net_cash_flow', 'mfs')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" />
+								<path d={calculateBezierPath('payables', 'net_cash_flow')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('financing', 'net_cash_flow')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('net_cash_flow', 'mfs')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
 							</>
 						)}
 
@@ -462,15 +475,16 @@ export default function MoneyFlowCanvas({
 										d={path}
 										fill="none"
 										stroke={isEnterprise ? "url(#corpGradient)" : "url(#activeGradient)"}
-										strokeWidth="4"
+										strokeWidth="8"
 										filter="url(#glow)"
 										className="opacity-70 [.light_&]:opacity-50"
+										markerEnd={isEnterprise ? "url(#corpArrow)" : "url(#activeArrow)"}
 									/>
 									<path
 										d={path}
 										fill="none"
 										stroke={isEnterprise ? "#10b981" : "#3b82f6"}
-										strokeWidth="3"
+										strokeWidth="5"
 										strokeDasharray="6, 24"
 										className="animate-[dash_1s_linear_infinite]"
 									/>
