@@ -15,32 +15,32 @@ interface MoneyFlowCanvasProps {
 // Layout positions (x, y) coordinates for Personal Mode
 const PERSONAL_NODE_COORDINATES: Record<string, { x: number; y: number }> = {
 	income: { x: 30, y: 50 },
-	taxes_paid: { x: 300, y: 50 },
-	checking: { x: 300, y: 190 },
-	hysa: { x: 570, y: 190 },
-	expenses: { x: 30, y: 330 },
-	mortgage: { x: 300, y: 330 },
-	debt: { x: 570, y: 330 },
-	match401k: { x: 300, y: 470 },
-	hsa: { x: 570, y: 470 },
-	ira: { x: 840, y: 470 },
-	max401k: { x: 1110, y: 470 },
-	brokerage: { x: 1380, y: 470 }
+	taxes_paid: { x: 315, y: 50 },
+	checking: { x: 315, y: 205 },
+	hysa: { x: 600, y: 205 },
+	expenses: { x: 30, y: 360 },
+	mortgage: { x: 315, y: 360 },
+	debt: { x: 600, y: 360 },
+	match401k: { x: 315, y: 515 },
+	hsa: { x: 600, y: 515 },
+	ira: { x: 885, y: 515 },
+	max401k: { x: 1170, y: 515 },
+	brokerage: { x: 1455, y: 515 }
 };
 
 // Layout positions (x, y) coordinates for Enterprise Mode (left-to-right cascade)
 const ENTERPRISE_NODE_COORDINATES: Record<string, { x: number; y: number }> = {
 	revenues: { x: 50, y: 100 },
-	receivables: { x: 360, y: 100 },
-	operating_cash_flow: { x: 360, y: 260 },
-	capex: { x: 670, y: 100 },
-	cogs: { x: 670, y: 260 },
-	hr_costs: { x: 670, y: 420 },
-	payables: { x: 980, y: 260 },
-	corp_taxes: { x: 980, y: 387 },
-	financing: { x: 980, y: 520 },
-	net_cash_flow: { x: 1290, y: 260 },
-	mfs: { x: 1600, y: 260 }
+	receivables: { x: 375, y: 100 },
+	operating_cash_flow: { x: 375, y: 275 },
+	capex: { x: 700, y: 100 },
+	cogs: { x: 700, y: 275 },
+	hr_costs: { x: 700, y: 450 },
+	payables: { x: 1025, y: 275 },
+	corp_taxes: { x: 1025, y: 417 },
+	financing: { x: 1025, y: 565 },
+	net_cash_flow: { x: 1350, y: 275 },
+	mfs: { x: 1675, y: 275 }
 };
 
 // Styles mapping for Personal Mode
@@ -205,7 +205,7 @@ export default function MoneyFlowCanvas({
 }: MoneyFlowCanvasProps) {
 	const selectedNode = nodes.find((n) => n.id === selectedNodeId) || null;
 	const isEnterprise = mode === 'enterprise';
-	const canvasHeight = isEnterprise ? 640 : 580;
+	const canvasHeight = isEnterprise ? 690 : 640;
 
 	const [zoom, setZoom] = React.useState<number>(1.0);
 	const containerRef = React.useRef<HTMLDivElement>(null);
@@ -213,7 +213,7 @@ export default function MoneyFlowCanvas({
 	const handleZoomFit = () => {
 		if (containerRef.current) {
 			const containerWidth = containerRef.current.clientWidth;
-			const maxRight = isEnterprise ? 1900 : 1650;
+			const maxRight = isEnterprise ? 1950 : 1725;
 			const targetZoom = Math.min(1.0, Math.max(0.4, (containerWidth - 32) / maxRight));
 			setZoom(parseFloat(targetZoom.toFixed(2)));
 		}
@@ -378,11 +378,11 @@ export default function MoneyFlowCanvas({
 			>
 				<div 
 					className="h-full relative origin-top-left transition-transform duration-200 ease-out"
-					style={{ width: `${(isEnterprise ? 1900 : 1650) * zoom}px`, height: `${canvasHeight * zoom}px` }}
+					style={{ width: `${(isEnterprise ? 1950 : 1725) * zoom}px`, height: `${canvasHeight * zoom}px` }}
 				>
 					<div 
 						className="absolute top-0 left-0 origin-top-left"
-						style={{ transform: `scale(${zoom})`, width: isEnterprise ? '1900px' : '1650px', height: `${canvasHeight}px` }}
+						style={{ transform: `scale(${zoom})`, width: isEnterprise ? '1950px' : '1725px', height: `${canvasHeight}px` }}
 					>
 					{/* Flow lines (SVG) */}
 					<svg className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
