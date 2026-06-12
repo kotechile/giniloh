@@ -226,6 +226,62 @@ export default function MoneyFlowSimulator() {
 		};
 	}, [isRunning, speedMs, dailyIncome, rules, state.isPaused, state.mode]);
 
+	// Synchronize Day 0 history point when node balances change at Day 0
+	useEffect(() => {
+		if (state.day === 0 && state.history.length > 0) {
+			let invSum = 0;
+			let checkingBal = 0;
+			let hysaBal = 0;
+			let ccDebt = 0;
+			let mortgageBal = 0;
+			let totalWealth = 0;
+
+			state.nodes.forEach((node) => {
+				if (node.type === 'debt' || node.type === 'mortgage') {
+					totalWealth -= node.balance;
+				} else if (['checking', 'hysa', 'match401k', 'hsa', 'ira', 'max401k', 'brokerage'].includes(node.type)) {
+					totalWealth += node.balance;
+				}
+				
+				if (['match401k', 'hsa', 'ira', 'max401k', 'brokerage'].includes(node.type)) {
+					invSum += node.balance;
+				}
+				if (node.id === 'checking') checkingBal = node.balance;
+				if (node.id === 'hysa') hysaBal = node.balance;
+				if (node.id === 'debt') ccDebt = node.balance;
+				if (node.id === 'mortgage') mortgageBal = node.balance;
+			});
+
+			const hist0 = state.history[0];
+			if (
+				hist0.checking !== checkingBal ||
+				hist0.hysa !== hysaBal ||
+				hist0.debt !== ccDebt ||
+				hist0.mortgage !== mortgageBal ||
+				hist0.investments !== invSum ||
+				hist0.netWorth !== totalWealth
+			) {
+				setState((current) => {
+					if (current.day !== 0) return current;
+					const updatedHistory = [...current.history];
+					updatedHistory[0] = {
+						...updatedHistory[0],
+						netWorth: totalWealth,
+						checking: checkingBal,
+						hysa: hysaBal,
+						investments: invSum,
+						debt: ccDebt,
+						mortgage: mortgageBal
+					};
+					return {
+						...current,
+						history: updatedHistory
+					};
+				});
+			}
+		}
+	}, [state.nodes, state.day, state.history]);
+
 	// Single step trigger
 	const handleStep = () => {
 		setState((current) => {
