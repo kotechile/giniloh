@@ -5,14 +5,15 @@ WORKDIR /app
 # Install curl for debugging
 RUN apk add --no-cache curl
 
+COPY package*.json ./
+RUN npm ci
+
+COPY . .
+
 ARG PUBLIC_WORDPRESS_API_BASE
 ENV PUBLIC_WORDPRESS_API_BASE=$PUBLIC_WORDPRESS_API_BASE
 # This helps if the server has trouble with its own SSL certificate during build
 ENV NODE_TLS_REJECT_UNAUTHORIZED=0
-
-COPY package*.json ./
-RUN npm install
-COPY . .
 
 # Debug: Try to connect to WordPress before building
 RUN echo "Checking connection to $PUBLIC_WORDPRESS_API_BASE..." && \
