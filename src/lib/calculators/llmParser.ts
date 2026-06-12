@@ -96,7 +96,44 @@ function localRegexParse(prompt: string): string | null {
 		return 'help';
 	}
 
-	// 0. Match qualitative priority sweeps locally
+	// 0. Match dynamic custom waterfall priority reordering
+	const isPrioritizationIntent = /(?:prioritize|reorder|first|then|after|order|priority|waterfall|pay\s+off\s+.*?\s+first|build\s+.*?\s+first)/i.test(text);
+	if (isPrioritizationIntent) {
+		const mentions: Array<{ id: string; index: number }> = [];
+		const lowerText = text.toLowerCase();
+		const validWaterfallTypes = ['hysa', 'match401k', 'debt', 'hsa', 'ira', 'max401k', 'brokerage', 'mortgage'];
+		
+		for (const [alias, id] of Object.entries(ACCOUNT_ALIASES)) {
+			if (!validWaterfallTypes.includes(id)) continue;
+			
+			let pos = lowerText.indexOf(alias);
+			while (pos !== -1) {
+				const beforeChar = pos > 0 ? lowerText[pos - 1] : ' ';
+				const afterChar = pos + alias.length < lowerText.length ? lowerText[pos + alias.length] : ' ';
+				
+				const isWordBoundary = /[^a-z0-9]/.test(beforeChar) && /[^a-z0-9]/.test(afterChar);
+				if (isWordBoundary) {
+					mentions.push({ id, index: pos });
+					break;
+				}
+				pos = lowerText.indexOf(alias, pos + 1);
+			}
+		}
+		
+		mentions.sort((a, b) => a.index - b.index);
+		const uniqueIds: string[] = [];
+		mentions.forEach((m) => {
+			if (!uniqueIds.includes(m.id)) {
+				uniqueIds.push(m.id);
+			}
+		});
+		
+		if (uniqueIds.length >= 2) {
+			return `reorder ${uniqueIds.join(', ')}`;
+		}
+	}
+
+	// 0.1 Match qualitative priority sweeps locally
 	if (text.includes('prioritize debt') || text.includes('pay off debt') || text.includes('debt reduction')) {
 		return 'reorder debt, hysa, match401k, hsa, ira, max401k, brokerage; set checking ceiling 2000';
 	}
