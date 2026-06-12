@@ -141,6 +141,14 @@ export default function MoneyFlowSimulator() {
 	const [rules, setRules] = useState<ScriptRule[]>(createDefaultRules);
 
 	const timerRef = useRef<NodeJS.Timeout | null>(null);
+	const logsEndRef = useRef<HTMLDivElement>(null);
+
+	// Auto-scroll logs to bottom
+	useEffect(() => {
+		if (logsEndRef.current) {
+			logsEndRef.current.scrollIntoView({ behavior: 'smooth' });
+		}
+	}, [state.log]);
 
 	// Reset to defaults based on current active mode
 	const handleReset = (targetMode?: 'personal' | 'enterprise') => {
@@ -957,15 +965,6 @@ export default function MoneyFlowSimulator() {
 							))}
 						</div>
 
-						{/* Mini Log section */}
-						<div className="border-t border-slate-800/80 pt-3">
-							<p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider mb-2">Audit Trails</p>
-							<div className="space-y-1 max-h-[100px] overflow-y-auto text-[10px] leading-relaxed text-slate-400">
-								{state.log.slice(-10).map((line, idx) => (
-									<div key={idx} className="truncate">&gt; {line}</div>
-								))}
-							</div>
-						</div>
 					</div>
 				</div>
 
@@ -1039,6 +1038,50 @@ export default function MoneyFlowSimulator() {
 						</div>
 					</div>
 				)}
+			</div>
+
+			{/* Dedicated System Audit Ledger & Console */}
+			<div className="rounded-[1.8rem] border border-slate-800 bg-slate-950/80 p-6 shadow-2xl backdrop-blur-md flex flex-col gap-4 font-mono text-xs animate-[fadeIn_0.3s_ease-out] [.light_&]:border-slate-200 [.light_&]:bg-white/95">
+				<div className="flex items-center justify-between border-b border-slate-900 pb-3 [.light_&]:border-slate-100">
+					<div className="flex items-center gap-2">
+						<span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+						<span className="font-bold text-slate-400 uppercase tracking-widest text-[10px] [.light_&]:text-slate-600">
+							System Audit Ledger & Console
+						</span>
+					</div>
+					<span className="text-[9px] text-slate-500">REAL-TIME SIMULATION ENGINE AUDIT TRAIL</span>
+				</div>
+				<div className="max-h-[185px] min-h-[130px] overflow-y-auto space-y-1.5 text-[11px] leading-relaxed font-mono scrollbar-thin scrollbar-thumb-slate-800 pr-2">
+					{state.log.length > 0 ? (
+						state.log.map((line, idx) => {
+							const isWarning = line.includes('WARNING') || line.includes('ALERT') || line.includes('ERROR');
+							const isPayday = line.includes('PAYDAY');
+							const isSweep = line.includes('sweep') || line.includes('swept') || line.includes('Routed');
+							const isDraw = line.includes('DRAW') || line.includes('pulling') || line.includes('Restored');
+							const isInterest = line.includes('interest') || line.includes('yield') || line.includes('earned') || line.includes('charged');
+							
+							const colorClass = isWarning 
+								? 'text-rose-400 font-bold' 
+								: isPayday 
+									? 'text-cyan-400 font-bold' 
+									: isSweep 
+										? 'text-emerald-400' 
+										: isDraw
+											? 'text-amber-400 font-bold'
+											: isInterest
+												? 'text-purple-400'
+												: 'text-slate-300 [.light_&]:text-slate-700';
+							return (
+								<div key={idx} className={colorClass}>
+									&gt; {line}
+								</div>
+							);
+						})
+					) : (
+						<div className="text-slate-600 italic">No transactions or events logged yet. Advance the clock to run.</div>
+					)}
+					<div ref={logsEndRef} />
+				</div>
 			</div>
 		</div>
 	);
