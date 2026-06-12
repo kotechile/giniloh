@@ -12,18 +12,48 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 
 	// Series visibility state
 	const [visibleSeries, setVisibleSeries] = useState<Record<string, boolean>>({
-		netWorth: true,
+		netWorth: false,
 		checking: true,
 		hysa: true,
 		investments: true,
 		debt: true,
-		mortgage: true,
-		// Enterprise series
-		operatingCash: true,
-		receivables: true,
-		payables: true,
-		mfs: true
+		mortgage: false,
+		operatingCash: false,
+		receivables: false,
+		payables: false,
+		mfs: false
 	});
+
+	// Reset default visibility when switching modes
+	useEffect(() => {
+		if (isEnterprise) {
+			setVisibleSeries({
+				netWorth: true,
+				checking: false,
+				hysa: false,
+				investments: false,
+				debt: false,
+				mortgage: false,
+				operatingCash: true,
+				receivables: true,
+				payables: true,
+				mfs: true
+			});
+		} else {
+			setVisibleSeries({
+				netWorth: false,
+				checking: true,
+				hysa: true,
+				investments: true,
+				debt: true,
+				mortgage: false,
+				operatingCash: false,
+				receivables: false,
+				payables: false,
+				mfs: false
+			});
+		}
+	}, [mode]);
 
 	// Toggle series visibility
 	const toggleSeries = (key: string) => {
