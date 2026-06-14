@@ -390,16 +390,18 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 				return;
 			}
 
-			// B. ENFORCE 60-DAY AML SWEEP RESTRICTION
-			const amlWindowStart = Math.max(0, nextDay - 60);
-			const incomingTransfers = nextTransferHistory.filter(
-				(record) => record.target === source.id && record.day >= amlWindowStart
-			);
-			if (incomingTransfers.length > 0) {
-				const isReturnToOrigin = incomingTransfers.some((record) => record.source === target.id);
-				if (!isReturnToOrigin) {
-					nextLog.push(`Day ${nextDay}: [AML RESTRICTION] Blocked sweep of $${amountToSweep.toFixed(2)} from ${source.name} to ${target.name}. Within 60 days, funds can only return to their originating account.`);
-					return;
+			// B. ENFORCE 60-DAY AML SWEEP RESTRICTION (Bypass transactional checking)
+			if (source.type !== 'checking') {
+				const amlWindowStart = Math.max(0, nextDay - 60);
+				const incomingTransfers = nextTransferHistory.filter(
+					(record) => record.target === source.id && record.day >= amlWindowStart
+				);
+				if (incomingTransfers.length > 0) {
+					const isReturnToOrigin = incomingTransfers.some((record) => record.source === target.id);
+					if (!isReturnToOrigin) {
+						nextLog.push(`Day ${nextDay}: [AML RESTRICTION] Blocked sweep of $${amountToSweep.toFixed(2)} from ${source.name} to ${target.name}. Within 60 days, funds can only return to their originating account.`);
+						return;
+					}
 				}
 			}
 
