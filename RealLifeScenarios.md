@@ -57,7 +57,7 @@ These scenarios demonstrate the dual-threshold mechanics (Ceilings and Floors), 
 
 ### Scenario 3: The Income Surge and Waterfall Overflow
 
-*   **Objective**: Following a major career promotion, a user sees their income surge to $500/day. Their emergency reserve is fully capitalized ($15,000) and they carry zero high-interest debt. They want to witness how the system automatically overflows surplus funds downstream.
+*   **Objective**: Following a major career promotion, a user sees their income surge to $500/day. Their emergency reserve is fully capitalized ($15,000) and they carry zero high-interest debt. They want to witness how the system automatically overflows surplus funds downstream based on the Financial Order of Operations (FOO) and responsive Market Scripting Rules.
 *   **Execution**:
     *   **Method A: AI Chat Console**
         Type the following command in the chat bar and hit **Send**:
@@ -68,13 +68,31 @@ These scenarios demonstrate the dual-threshold mechanics (Ceilings and Floors), 
         1.  Adjust the **Income/day** box in the top control bar to `500`.
         2.  Click the **HYSA (Emergency Fund)** node. Set **Balance** to `$15,000` and **Ceiling** to `$15,000`.
         3.  Click the **High-Interest Debt** node. Set **Balance** to `$0`.
+        4.  Go to the **Savings Waterfall Order** panel at the bottom right and configure the following priority order:
+            *   `match401k` (401k Match)
+            *   `hsa` (Pre-tax HSA)
+            *   `ira` (Roth IRA)
+            *   `max401k` (401k Voluntary Max)
+            *   `brokerage` (Taxable Brokerage)
+            *   `hysa` (HYSA)
+            *   `debt` (High-Interest Debt)
+*   **Integrating Scripting Rules (Advanced)**:
+    In the **Market Scripting Rules** panel, activate the following rules:
+    *   **Lifestyle Booster**: `IF debt == 0 THEN set checking ceiling 3500`
+        *(Leaves more discretionary cash in checking once you have zero toxic liabilities)*
+    *   **Emergency Fund Overflow**: `IF hysa >= 10000 THEN reorder match401k, hsa, ira, max401k, brokerage, hysa, debt`
+        *(Automatically pivots to wealth building when the cash safety buffer is fully capitalized)*
+    *   **Buy the Dip Indicator**: `IF sp500 < 4300 THEN checking [1200] brokerage`
+        *(Redirects extra checking surplus directly to stocks during a market correction)*
 *   **Execution Trigger**: Set the simulation speed to **5x (Fast)** and click **Start clock**.
 *   **Observations**:
     *   **Canvas Visualization**: Glowing flows light up, bypassing both HYSA and Debt. You will see cash routing into the pre-tax employer **401k Match** node, followed by the **Pre-tax HSA** and **Roth IRA** nodes.
     *   **Overflow Cascade**: When annual contribution limits on the tax-advantaged accounts (e.g., $7,000 for Roth IRA) are hit, the glowing paths shift dynamically, pouring all remaining overflow capital into the **Taxable Brokerage** node.
+    *   **Scripting Activation**: If you trigger a **Market Contraction (Crash)** scenario, as soon as the S&P 500 falls below 4300, the **Buy the Dip** sweep path glows and routes an extra $1,200 from checking to the brokerage node.
     *   **Audit Trail Log**:
         `Day X: Overbalance sweep: Routed $Y surplus to Pre-tax HSA.`
         `Day Y: Overbalance sweep: Routed $Z surplus to Roth IRA.`
+        `Day W: [SCRIPT RULE ACTIVE] Buy the Dip Indicator triggered: Routed $1200.00 from checking to taxable brokerage.`
 
 ---
 

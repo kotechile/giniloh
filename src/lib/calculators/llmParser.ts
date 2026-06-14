@@ -97,55 +97,6 @@ function localRegexParse(prompt: string): string | null {
 	}
 
 	const results: string[] = [];
-
-	// 0. Match dynamic custom waterfall priority reordering
-	const isPrioritizationIntent = /(?:prioritize|reorder|first|then|after|order|priority|waterfall|pay\s+off\s+.*?\s+first|build\s+.*?\s+first)/i.test(text);
-	if (isPrioritizationIntent) {
-		const mentions: Array<{ id: string; index: number }> = [];
-		const lowerText = text.toLowerCase();
-		const validWaterfallTypes = ['hysa', 'match401k', 'debt', 'hsa', 'ira', 'max401k', 'brokerage', 'mortgage'];
-		
-		for (const [alias, id] of Object.entries(ACCOUNT_ALIASES)) {
-			if (!validWaterfallTypes.includes(id)) continue;
-			
-			let pos = lowerText.indexOf(alias);
-			while (pos !== -1) {
-				const beforeChar = pos > 0 ? lowerText[pos - 1] : ' ';
-				const afterChar = pos + alias.length < lowerText.length ? lowerText[pos + alias.length] : ' ';
-				
-				const isWordBoundary = /[^a-z0-9]/.test(beforeChar) && /[^a-z0-9]/.test(afterChar);
-				if (isWordBoundary) {
-					mentions.push({ id, index: pos });
-					break;
-				}
-				pos = lowerText.indexOf(alias, pos + 1);
-			}
-		}
-		
-		mentions.sort((a, b) => a.index - b.index);
-		const uniqueIds: string[] = [];
-		mentions.forEach((m) => {
-			if (!uniqueIds.includes(m.id)) {
-				uniqueIds.push(m.id);
-			}
-		});
-		
-		if (uniqueIds.length >= 2) {
-			results.push(`reorder ${uniqueIds.join(', ')}`);
-		}
-	}
-
-	// 0.1 Match qualitative priority sweeps locally
-	if (results.length === 0) {
-		if (text.includes('prioritize debt') || text.includes('pay off debt') || text.includes('debt reduction')) {
-			results.push('reorder debt, hysa, match401k, hsa, ira, max401k, brokerage; set checking ceiling 2000');
-		} else if (text.includes('prioritize savings') || text.includes('emergency savings') || text.includes('save more')) {
-			results.push('reorder hysa, match401k, debt, hsa, ira, max401k, brokerage; set checking ceiling 4000');
-		} else if (text.includes('prioritize invest') || text.includes('stock market') || text.includes('investing')) {
-			results.push('reorder match401k, hysa, hsa, ira, max401k, brokerage, debt; set checking ceiling 3000');
-		}
-	}
-
 	let lastAccountId: string | null = null;
 
 	// Helper to resolve raw account name
@@ -160,6 +111,70 @@ function localRegexParse(prompt: string): string | null {
 
 	const parseSingleClause = (clause: string): { cmd: string; nodeId: string } | null => {
 		const cText = clause.trim();
+		if (!cText) return null;
+
+		// 0. Match dynamic custom waterfall priority reordering
+		const isPrioritizationIntent = /(?:prioritize|reorder|first|then|after|order|priority|waterfall|pay\s+off\s+.*?\s+first|build\s+.*?\s+first)/i.test(cText);
+		if (isPrioritizationIntent) {
+			const mentions: Array<{ id: string; index: number }> = [];
+			const lowerClause = cText.toLowerCase();
+			const validWaterfallTypes = ['hysa', 'match401k', 'debt', 'hsa', 'ira', 'max401k', 'brokerage', 'mortgage'];
+			
+			const colonIndex = lowerClause.indexOf(':');
+			const textToScan = colonIndex !== -1 ? lowerClause.substring(colonIndex + 1) : lowerClause;
+			const offset = colonIndex !== -1 ? colonIndex + 1 : 0;
+
+			for (const [alias, id] of Object.entries(ACCOUNT_ALIASES)) {
+				if (!validWaterfallTypes.includes(id)) continue;
+				
+				let pos = textToScan.indexOf(alias);
+				while (pos !== -1) {
+					const beforeChar = pos > 0 ? textToScan[pos - 1] : ' ';
+					const afterChar = pos + alias.length < textToScan.length ? textToScan[pos + alias.length] : ' ';
+					
+					const isWordBoundary = /[^a-z0-9]/.test(beforeChar) && /[^a-z0-9]/.test(afterChar);
+					if (isWordBoundary) {
+						mentions.push({ id, index: pos + offset });
+						break;
+					}
+					pos = textToScan.indexOf(alias, pos + 1);
+				}
+			}
+			
+			mentions.sort((a, b) => a.index - b.index);
+			const uniqueIds: string[] = [];
+			mentions.forEach((m) => {
+				if (!uniqueIds.includes(m.id)) {
+					uniqueIds.push(m.id);
+				}
+			});
+			
+			if (uniqueIds.length >= 2) {
+				return {
+					cmd: `reorder ${uniqueIds.join(', ')}`,
+					nodeId: ''
+				};
+			}
+		}
+
+		// 0.1 Match qualitative priority sweeps locally
+		if (cText.includes('prioritize debt') || cText.includes('pay off debt') || cText.includes('debt reduction')) {
+			return {
+				cmd: 'reorder debt, hysa, match401k, hsa, ira, max401k, brokerage; set checking ceiling 2000',
+				nodeId: ''
+			};
+		} else if (cText.includes('prioritize savings') || cText.includes('emergency savings') || cText.includes('save more')) {
+			return {
+				cmd: 'reorder hysa, match401k, debt, hsa, ira, max401k, brokerage; set checking ceiling 4000',
+				nodeId: ''
+			};
+		} else if (cText.includes('prioritize invest') || cText.includes('stock market') || cText.includes('investing')) {
+			return {
+				cmd: 'reorder match401k, hysa, hsa, ira, max401k, brokerage, debt; set checking ceiling 3000',
+				nodeId: ''
+			};
+		}
+
 		if (!cText) return null;
 
 		// 1. Match direct gross income setting (e.g. "set gross income to 10000" or "set income to 8000")

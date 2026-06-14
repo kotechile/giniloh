@@ -380,7 +380,7 @@ export function stepSimulation(state: SimulationState, dailyIncome: number = 200
 		nextHoldings = pendingHoldings;
 
 		// Sweep function with compliance rules
-		let pdtTradesToday = state.pdtTradesToday;
+		let pdtTradesToday = 0;
 		const executeSweep = (source: AccountNode, target: AccountNode, amountToSweep: number, logMessage: string) => {
 			if (amountToSweep <= 0) return;
 

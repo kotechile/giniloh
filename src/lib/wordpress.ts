@@ -62,6 +62,9 @@ export interface WordPressCategory {
 const HTML_ENTITY_MAP: Record<string, string> = {
 	'&amp;': '&',
 	'&quot;': '"',
+	'&lt;': '<',
+	'&gt;': '>',
+	'&apos;': "'",
 	'&#039;': "'",
 	'&#8217;': "'",
 	'&#8211;': '–',
@@ -78,10 +81,21 @@ function getWordPressApiBase() {
 }
 
 function decodeHtmlEntities(value: string) {
-	return value.replace(
-		/&amp;|&quot;|&#039;|&#8217;|&#8211;|&#8220;|&#8221;|&#8230;|&nbsp;/g,
-		(entity) => HTML_ENTITY_MAP[entity] ?? entity
-	);
+	if (!value) return '';
+	return value.replace(/&[#a-zA-Z0-9]+;/g, (entity) => {
+		if (entity in HTML_ENTITY_MAP) {
+			return HTML_ENTITY_MAP[entity];
+		}
+		if (entity.startsWith('&#x') || entity.startsWith('&#X')) {
+			const num = parseInt(entity.slice(3, -1), 16);
+			return !isNaN(num) ? String.fromCharCode(num) : entity;
+		}
+		if (entity.startsWith('&#')) {
+			const num = parseInt(entity.slice(2, -1), 10);
+			return !isNaN(num) ? String.fromCharCode(num) : entity;
+		}
+		return entity;
+	});
 }
 
 function stripHtml(value: string | undefined) {

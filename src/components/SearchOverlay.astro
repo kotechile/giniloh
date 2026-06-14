@@ -183,23 +183,54 @@ const apiBase = getConfiguredWordPressApiBase();
 			}
 
 			const data = (await response.json()) as SearchPostResponse[];
+
+			const namedEntities: Record<string, string> = {
+				'&amp;': '&',
+				'&quot;': '"',
+				'&lt;': '<',
+				'&gt;': '>',
+				'&apos;': "'",
+				'&#039;': "'",
+				'&#8217;': "'",
+				'&#8211;': '–',
+				'&#8220;': '"',
+				'&#8221;': '"',
+				'&#8230;': '…',
+				'&nbsp;': ' '
+			};
+
+			const decodeHtmlEntities = (value: string) => {
+				if (!value) return '';
+				return value.replace(/&[#a-zA-Z0-9]+;/g, (entity) => {
+					if (entity in namedEntities) {
+						return namedEntities[entity];
+					}
+					if (entity.startsWith('&#x') || entity.startsWith('&#X')) {
+						const num = parseInt(entity.slice(3, -1), 16);
+						return !isNaN(num) ? String.fromCharCode(num) : entity;
+					}
+					if (entity.startsWith('&#')) {
+						const num = parseInt(entity.slice(2, -1), 10);
+						return !isNaN(num) ? String.fromCharCode(num) : entity;
+					}
+					return entity;
+				});
+			};
+
+			const cleanText = (htmlStr: string) => {
+				return decodeHtmlEntities(
+					htmlStr
+						.replace(/<[^>]+>/g, ' ')
+						.replace(/\s+/g, ' ')
+						.trim()
+				);
+			};
+
 			const posts = data.map((post) => {
 				const category = (post?._embedded?.['wp:term'] ?? []).flat().find((term) => term?.name);
 				return {
-					title: (post?.title?.rendered ?? 'Untitled post')
-						.replace(/<[^>]+>/g, ' ')
-						.replace(/&amp;/g, '&')
-						.replace(/&#8217;/g, "'")
-						.replace(/&#8211;/g, '–')
-						.replace(/\s+/g, ' ')
-						.trim(),
-					excerpt: (post?.excerpt?.rendered ?? '')
-						.replace(/<[^>]+>/g, ' ')
-						.replace(/&amp;/g, '&')
-						.replace(/&#8217;/g, "'")
-						.replace(/&#8211;/g, '–')
-						.replace(/\s+/g, ' ')
-						.trim(),
+					title: cleanText(post?.title?.rendered ?? 'Untitled post'),
+					excerpt: cleanText(post?.excerpt?.rendered ?? ''),
 					link: post?.link ?? '#',
 					date: post?.date ?? null,
 					categoryLabel: category?.name ?? null
