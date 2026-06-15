@@ -6,7 +6,7 @@ import { CurrencyInput } from './fields/CurrencyInput';
 import { StepperInput } from './fields/StepperInput';
 
 const INITIAL_OFFER_A: OfferInput = {
-	name: 'Offer A (Public Tech)',
+	name: 'Offer A (Public Company)',
 	cash: {
 		baseSalary: 180000,
 		targetBonusPercent: 15,
@@ -32,7 +32,7 @@ const INITIAL_OFFER_A: OfferInput = {
 };
 
 const INITIAL_OFFER_B: OfferInput = {
-	name: 'Offer B (Startup)',
+	name: 'Offer B (Private / Partnership)',
 	cash: {
 		baseSalary: 155000,
 		targetBonusPercent: 10,
