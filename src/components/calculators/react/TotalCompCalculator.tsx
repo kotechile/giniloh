@@ -518,13 +518,13 @@ export default function TotalCompCalculator() {
 
 				{/* Floating Tooltip Data Panel */}
 				{hoveredData ? (
-					<div className="mt-4 bg-slate-900/90 border border-slate-800/90 rounded-2xl p-4 flex flex-col md:flex-row gap-6 text-xs font-mono justify-between animate-fadeIn">
-						<div className="flex items-center font-bold text-white pr-4 md:border-r border-slate-800 text-sm">
+					<div className="mt-4 bg-slate-900/90 border border-slate-800/90 rounded-2xl p-4 flex flex-col md:flex-row gap-6 text-xs font-mono justify-between animate-fadeIn [.light_&]:bg-slate-50/95 [.light_&]:border-slate-200/80">
+						<div className="flex items-center font-bold text-white pr-4 md:border-r border-slate-800 text-sm [.light_&]:text-slate-800! [.light_&]:border-slate-200">
 							📅 Year {hoveredData.year} Projections
 						</div>
 						<div className="flex-1 grid gap-4 sm:grid-cols-2">
 							{/* Offer A Tooltip */}
-							<div className="flex flex-col gap-1 border-b sm:border-b-0 sm:border-r border-slate-800/60 pb-3 sm:pb-0 pr-3">
+							<div className="flex flex-col gap-1 border-b sm:border-b-0 sm:border-r border-slate-800/60 pb-3 sm:pb-0 pr-3 [.light_&]:border-slate-200">
 								<p className="font-semibold text-cyan-400 text-[11px] truncate uppercase">{offerA.name}</p>
 								<div className="flex justify-between mt-1 text-[11px] text-slate-400">
 									<span>Base + Bonus Cash:</span>
@@ -544,24 +544,24 @@ export default function TotalCompCalculator() {
 								)}
 								<div className="flex justify-between text-[11px] text-slate-400">
 									<span>Perks (401k/ESPP):</span>
-									<span className="text-indigo-300 font-semibold">{formatCurrency(hoveredData.offerA.perksValue)}</span>
+									<span className="text-indigo-300 font-semibold [.light_&]:text-indigo-600!">{formatCurrency(hoveredData.offerA.perksValue)}</span>
 								</div>
-								<div className="flex justify-between text-[11px] text-rose-400/80">
+								<div className="flex justify-between text-[11px] text-rose-400/80 [.light_&]:text-rose-600!">
 									<span>Tax Drag:</span>
 									<span>-{formatCurrency(hoveredData.offerA.taxDrag)}</span>
 								</div>
 								{hoveredData.offerA.exerciseCost > 0 && (
-									<div className="flex justify-between text-[11px] text-amber-500">
+									<div className="flex justify-between text-[11px] text-amber-500 [.light_&]:text-amber-700!">
 										<span>Exercise Cost:</span>
 										<span>-{formatCurrency(hoveredData.offerA.exerciseCost)} {globalInputs.autoExercise ? '(Subtracted)' : '(Deferred)'}</span>
 									</div>
 								)}
-								<div className="flex justify-between border-t border-slate-800/80 mt-1 pt-1 text-white font-bold">
+								<div className="flex justify-between border-t border-slate-800/80 mt-1 pt-1 text-white font-bold [.light_&]:border-slate-200">
 									<span>Spendable Cash Flow:</span>
-									<span className="text-cyan-300">{formatCurrency(hoveredData.offerA.netSpendableCash)}</span>
+									<span className="text-cyan-300 [.light_&]:text-cyan-700!">{formatCurrency(hoveredData.offerA.netSpendableCash)}</span>
 								</div>
 								{hoveredData.offerA.isClawbackRisk && (
-									<div className="mt-2 text-[10px] text-amber-400 bg-amber-500/10 border border-amber-500/20 rounded p-1.5">
+									<div className="mt-2 text-[10px] text-amber-400 bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
 										⚠️ Clawback risk: {formatCurrency(hoveredData.offerA.clawbackAmount)} clawed back if departing before Month {offerA.cash.clawbackMonths}.
 									</div>
 								)}
@@ -569,7 +569,7 @@ export default function TotalCompCalculator() {
 							
 							{/* Offer B Tooltip */}
 							<div className="flex flex-col gap-1">
-								<p className="font-semibold text-purple-400 text-[11px] truncate uppercase">{offerB.name}</p>
+								<p className="font-semibold text-purple-400 text-[11px] truncate uppercase [.light_&]:text-purple-700!">{offerB.name}</p>
 								<div className="flex justify-between mt-1 text-[11px] text-slate-400">
 									<span>Base + Bonus Cash:</span>
 									<span className="text-white font-semibold">{formatCurrency(hoveredData.offerB.baseCash + hoveredData.offerB.bonusCash)}</span>
@@ -588,24 +588,24 @@ export default function TotalCompCalculator() {
 								)}
 								<div className="flex justify-between text-[11px] text-slate-400">
 									<span>Perks (401k/ESPP):</span>
-									<span className="text-indigo-300 font-semibold">{formatCurrency(hoveredData.offerB.perksValue)}</span>
+									<span className="text-indigo-300 font-semibold [.light_&]:text-indigo-600!">{formatCurrency(hoveredData.offerB.perksValue)}</span>
 								</div>
-								<div className="flex justify-between text-[11px] text-rose-400/80">
+								<div className="flex justify-between text-[11px] text-rose-400/80 [.light_&]:text-rose-600!">
 									<span>Tax Drag:</span>
 									<span>-{formatCurrency(hoveredData.offerB.taxDrag)}</span>
 								</div>
 								{hoveredData.offerB.exerciseCost > 0 && (
-									<div className="flex justify-between text-[11px] text-amber-500">
+									<div className="flex justify-between text-[11px] text-amber-500 [.light_&]:text-amber-700!">
 										<span>Exercise Cost:</span>
 										<span>-{formatCurrency(hoveredData.offerB.exerciseCost)} {globalInputs.autoExercise ? '(Subtracted)' : '(Deferred)'}</span>
 									</div>
 								)}
-								<div className="flex justify-between border-t border-slate-800/80 mt-1 pt-1 text-white font-bold">
+								<div className="flex justify-between border-t border-slate-800/80 mt-1 pt-1 text-white font-bold [.light_&]:border-slate-200">
 									<span>Spendable Cash Flow:</span>
-									<span className="text-purple-300">{formatCurrency(hoveredData.offerB.netSpendableCash)}</span>
+									<span className="text-purple-300 [.light_&]:text-purple-700!">{formatCurrency(hoveredData.offerB.netSpendableCash)}</span>
 								</div>
 								{hoveredData.offerB.isClawbackRisk && (
-									<div className="mt-2 text-[10px] text-amber-400 bg-amber-500/10 border border-amber-500/20 rounded p-1.5">
+									<div className="mt-2 text-[10px] text-amber-400 bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
 										⚠️ Clawback risk: {formatCurrency(hoveredData.offerB.clawbackAmount)} clawed back if departing before Month {offerB.cash.clawbackMonths}.
 									</div>
 								)}
@@ -613,7 +613,7 @@ export default function TotalCompCalculator() {
 						</div>
 					</div>
 				) : (
-					<div className="text-slate-500 text-center font-mono text-[10px] italic mt-4 py-2 bg-slate-950/20 border border-slate-900/40 rounded-xl">
+					<div className="text-slate-500 text-center font-mono text-[10px] italic mt-4 py-2 bg-slate-950/20 border border-slate-900/40 rounded-xl [.light_&]:bg-slate-100/60 [.light_&]:text-slate-700! [.light_&]:border-slate-200/80">
 						Hover mouse cursor over the chart columns to read exact yearly breakdowns.
 					</div>
 				)}
