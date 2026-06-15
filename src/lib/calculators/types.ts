@@ -101,3 +101,60 @@ export interface RemodelyticsBreakdown {
 	underwritingWarnings: string[];
 	engineScores: Record<RemodelyticsEngine, number>;
 }
+
+export interface OfferInput {
+	name: string;
+	cash: {
+		baseSalary: number;
+		targetBonusPercent: number;
+		signOnBonus: number;
+		clawbackMonths: number;
+	};
+	equity: {
+		type: 'PUBLIC_RSU' | 'PRIVATE_RSU' | 'ISO' | 'NSO';
+		totalGrantValue: number;
+		shareCount: number;
+		strikePrice: number;
+		currentFmv: number;
+		vestingYears: number;
+		hasOneYearCliff: boolean;
+	};
+	perks: {
+		kMatchPercent: number;
+		kMatchCapPercent: number;
+		monthlyHealthPremium: number;
+		esppContributionPercent: number;
+		esppDiscountPercent: number;
+	};
+}
+
+export interface TotalCompGlobalInputs {
+	taxState: string;
+	filingStatus: 'single' | 'married';
+	growthAssumption: number;
+	autoExercise: boolean;
+	useManualTax: boolean;
+	manualTaxRate: number;
+}
+
+export interface YearlyBreakdown {
+	year: number;
+	baseCash: number;
+	bonusCash: number;
+	liquidEquity: number;
+	perksValue: number;
+	taxDrag: number;
+	exerciseCost: number;
+	healthPremium: number;
+	netSpendableCash: number;
+	paperEquity: number;
+	isClawbackRisk: boolean;
+	clawbackAmount: number;
+}
+
+export interface OfferBreakdownSummary {
+	yearly: YearlyBreakdown[];
+	total4YearLiquidity: number;
+	totalPaperValue: number;
+	totalOutofPocketDrag: number;
+}

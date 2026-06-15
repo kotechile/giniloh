@@ -27,7 +27,7 @@ export const calculatorTools = [
 		title: 'Total Compensation & Equity Visualizer',
 		slug: 'total-comp',
 		href: '/calculators/total-comp/',
-		status: 'Proposed',
+		status: 'Live',
 		accent: 'indigo',
 		description:
 			'Model base salary, cash bonuses, and vesting RSUs or options with stock growth assumptions to evaluate tech offers.',

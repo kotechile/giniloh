@@ -1,11 +1,35 @@
 ---
 import CalculatorShell from '../../components/calculators/CalculatorShell.astro';
 import JsonLd from '../../components/JsonLd.astro';
+import TotalCompCalculator from '../../components/calculators/react/TotalCompCalculator';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
 
 const calculator = getCalculatorBySlug('total-comp');
 const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+
+const faqItems = [
+	{
+		question: 'How does the Equity Growth Engine work?',
+		answer:
+			'Vested equity is projected over a 4-year horizon. If a growth rate (10% or 20%) is selected, the stock or FMV value compounds annually: Value = Base Value * (1 + g)^(Year - 1). Growth is applied to both liquid RSUs and paper option assets.'
+	},
+	{
+		question: 'What is the difference between RSU and Options in the chart?',
+		answer:
+			'Public RSUs are treated as immediate liquidity. Once vested, their post-tax value is added directly to your Net Spendable Cash Flow line. Private RSUs and Options (ISOs/NSOs) are illiquid. They are tracked under "Paper Wealth" and do not boost your cash flow. However, if Auto-Exercise is enabled, the out-of-pocket cost to purchase option shares is subtracted from your cash line.'
+	},
+	{
+		question: 'How is the ESPP Yield Boost calculated?',
+		answer:
+			'If you participate in a quick-sale ESPP program, buying stock at a discount generates an immediate yield. The formula is: ESPP Yield = (Base Salary * Contribution %) * (Discount % / (1 - Discount %)). For example, contributing 10% on a $150k salary with a 15% discount yields a cash flow boost of $2,647 annually.'
+	},
+	{
+		question: 'Are retirement contributions and tax brackets accurate?',
+		answer:
+			'We calculate federal income taxes using progressive brackets (Single or Married filing jointly) applied to cash compensation plus liquid vested RSUs. State taxes are modeled as representative flat rates (e.g. CA: 9.3%, NY: 6.5%, MD: 4.75%). You can override this by inputting a custom effective tax rate manually.'
+	}
+];
 ---
 
 <BaseLayout
@@ -20,39 +44,72 @@ const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.
 		title="Total Compensation Visualizer"
 		description="Break down base salary, target bonuses, and vesting schedules (RSUs/Options) to model the true cash flow value of an offer."
 	>
-		<div slot="calculator" class="rounded-[2rem] border border-indigo-500/20 bg-slate-900/60 p-8 shadow-2xl backdrop-blur-md">
-			<div class="flex flex-col items-center justify-center py-12 text-center">
-				<div class="h-16 w-16 rounded-full bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center mb-6">
-					<svg class="w-8 h-8 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h2a2 2 0 002-2zm12 0v-30" />
-					</svg>
-				</div>
-				<h2 class="text-2xl font-bold text-white tracking-tight">Interactive Module Under Development</h2>
-				<p class="mt-3 text-slate-400 max-w-md text-sm leading-6">
-					The equity trajectory model and multi-offer comparison screen is currently scheduled for deployment in Phase 2.
-				</p>
-				
-				<div class="mt-8 p-6 rounded-xl border border-slate-800 bg-slate-950/50 w-full max-w-sm text-left">
-					<p class="font-mono text-xs uppercase tracking-widest text-slate-500">Upcoming Features</p>
-					<ul class="mt-3 space-y-2 text-xs font-mono text-slate-400">
-						<li>• 4-year vesting schedule projection with 1-year cliff</li>
-						<li>• Equity growth assumption adjustments (flat, 10%, 20% annual)</li>
-						<li>• Cash flow comparison: Offer A vs Offer B side-by-side</li>
-					</ul>
-				</div>
-				
-				<a href="/calculators/" class="mt-8 btn-primary">Back to Calculator Hub</a>
-			</div>
+		<div slot="calculator">
+			<TotalCompCalculator client:load />
 		</div>
 
 		<div slot="aside" class="grid gap-6">
+			
 			<article class="overflow-hidden rounded-[1.8rem] border border-indigo-500/20 bg-[linear-gradient(135deg,rgba(30,27,75,0.92),rgba(2,6,23,0.98)_70%,rgba(99,102,241,0.12))] p-6 shadow-[0_0_40px_rgba(99,102,241,0.08)]">
-				<p class="font-mono text-xs uppercase tracking-[0.28em] text-indigo-200/80">Evaluation note</p>
-				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white">Comparing Apples to RSUs</h2>
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-indigo-200/80">Strategy guide</p>
+				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white font-sans border-0 pl-0">Comparing Startup vs. Public Tech</h2>
 				<p class="mt-4 text-sm leading-7 text-slate-300">
-					Tech offers often inflate their metrics by showing a total RSU grant over 4 years alongside base salary. Visualizing the actual year-by-year cash distribution is critical to avoiding poor career moves.
+					Startups often match public tech offers on paper by quoting massive option grants based on high speculative FMVs. 
+					However, because startup options are illiquid and require out-of-pocket cash to exercise, their real-time cash flow footprint is negative. 
+					Use this visualizer to model:
+				</p>
+				<ul class="mt-4 space-y-2 text-sm text-slate-300 list-disc list-inside">
+					<li>How option exercise costs reduce your first 4 years of spendable cash.</li>
+					<li>How much of your wealth is locked up in paper assets vs. liquid bank balances.</li>
+					<li>The compound growth difference between a public stock and a private valuation.</li>
+				</ul>
+				<div class="mt-6 rounded-[1.3rem] border border-white/10 bg-white/5 p-4">
+					<p class="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">Pro Tip</p>
+					<p class="mt-2 text-sm leading-7 text-slate-200">
+						Toggle <strong>Auto-Exercise Options</strong> to see if your base salary and bonus can absorb the strike price cost of your options as they vest, or if exercising will require dipping into savings.
+					</p>
+				</div>
+			</article>
+
+			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-indigo-300/80">The Math Engine</p>
+				<div class="mt-4 space-y-4 font-mono text-xs leading-6 text-slate-200">
+					<div class="rounded-[1.2rem] border border-slate-800 bg-slate-950/60 p-4">
+						<p class="text-indigo-400 font-bold uppercase tracking-wider">Stock growth model</p>
+						<p class="mt-1">Value_t = Base_Value * (1 + growth_rate)^(t - 1)</p>
+					</div>
+					<div class="rounded-[1.2rem] border border-slate-800 bg-slate-950/60 p-4">
+						<p class="text-indigo-400 font-bold uppercase tracking-wider">ESPP yield boost</p>
+						<p class="mt-1">Yield = (Base * Contrib_%) * (Discount_% / (1 - Discount_%))</p>
+					</div>
+					<div class="rounded-[1.2rem] border border-slate-800 bg-slate-950/60 p-4">
+						<p class="text-indigo-400 font-bold uppercase tracking-wider">Net spendable cash</p>
+						<p class="mt-1">Cash_t = Salary + Bonus_t + Vested_Liquid_RSUs_t + ESPP_Yield_t - Tax_t - Exercise_Cost_t - Health_t</p>
+					</div>
+				</div>
+			</article>
+
+			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">FAQ</p>
+				<div class="mt-5 grid gap-4">
+					{faqItems.map((item) => (
+						<div class="rounded-[1.2rem] border border-slate-800 bg-slate-950/55 p-4">
+							<h3 class="text-sm font-semibold text-white">{item.question}</h3>
+							<p class="mt-2 text-xs leading-6 text-slate-400">{item.answer}</p>
+						</div>
+					))}
+				</div>
+			</article>
+
+			<article class="rounded-[1.8rem] border border-amber-400/15 bg-[linear-gradient(180deg,rgba(120,53,15,0.18),rgba(2,6,23,0.96))] p-6 shadow-[0_0_40px_rgba(245,158,11,0.08)]">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-amber-200/80">AMT Warning Tooltip</p>
+				<h2 class="mt-3 text-lg font-semibold text-white font-sans border-0 pl-0">Alternative Minimum Tax (AMT)</h2>
+				<p class="mt-3 text-sm leading-7 text-slate-300">
+					Exercising ISO options in a private startup can trigger Alternative Minimum Tax (AMT) on the spread between the strike price and FMV, even though the shares cannot be sold for cash. 
+					Consult a CPA to model your AMT exposure before exercising large blocks of options.
 				</p>
 			</article>
+
 		</div>
 	</CalculatorShell>
 </BaseLayout>
