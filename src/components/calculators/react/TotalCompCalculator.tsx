@@ -735,7 +735,7 @@ export default function TotalCompCalculator() {
 										onChange={(val) => updateOffer('A', 'equity', 'shareCount', val)}
 										helpText="Total number of stock option shares granted."
 									/>
-									<div className="grid gap-4 sm:grid-cols-2">
+									<div className="grid gap-4 xl:grid-cols-2">
 										<CurrencyInput
 											id={`${fieldId}-A-grantprice`}
 											label="Grant Price"
@@ -756,7 +756,7 @@ export default function TotalCompCalculator() {
 								</>
 							)}
 
-							<div className="grid gap-4 sm:grid-cols-2">
+							<div className="grid gap-4 xl:grid-cols-2">
 								<StepperInput
 									id={`${fieldId}-A-vesting`}
 									label="Vesting Horizon (Years)"
@@ -766,7 +766,7 @@ export default function TotalCompCalculator() {
 									onChange={(val) => updateOffer('A', 'equity', 'vestingYears', val)}
 									helpText="Standard horizon for full vesting."
 								/>
-								<label className="inline-flex items-center gap-3 cursor-pointer p-4 rounded-[1.5rem] border border-slate-800/80 bg-slate-950/45">
+								<label className="flex items-center gap-3 cursor-pointer p-4 rounded-[1.5rem] border border-slate-800/80 bg-slate-950/45 w-full">
 									<input
 										type="checkbox"
 										checked={offerA.equity.hasOneYearCliff}
@@ -782,7 +782,7 @@ export default function TotalCompCalculator() {
 
 					{activeASection === 'perks' && (
 						<div className="grid gap-4 animate-[fadeIn_0.15s_ease-out]">
-							<div className="grid gap-4 sm:grid-cols-2">
+							<div className="grid gap-4 xl:grid-cols-2">
 								<StepperInput
 									id={`${fieldId}-A-401k-match`}
 									label="401(k) Match (%)"
@@ -812,7 +812,7 @@ export default function TotalCompCalculator() {
 								onChange={(val) => updateOffer('A', 'perks', 'monthlyHealthPremium', val)}
 								helpText="Employee monthly out-of-pocket health insurance premium cost."
 							/>
-							<div className="grid gap-4 sm:grid-cols-2">
+							<div className="grid gap-4 xl:grid-cols-2">
 								<StepperInput
 									id={`${fieldId}-A-espp-contrib`}
 									label="ESPP Contribution (%)"
@@ -951,7 +951,7 @@ export default function TotalCompCalculator() {
 										onChange={(val) => updateOffer('B', 'equity', 'shareCount', val)}
 										helpText="Total number of stock option shares granted."
 									/>
-									<div className="grid gap-4 sm:grid-cols-2">
+									<div className="grid gap-4 xl:grid-cols-2">
 										<CurrencyInput
 											id={`${fieldId}-B-grantprice`}
 											label="Grant Price"
@@ -972,7 +972,7 @@ export default function TotalCompCalculator() {
 								</>
 							)}
 
-							<div className="grid gap-4 sm:grid-cols-2">
+							<div className="grid gap-4 xl:grid-cols-2">
 								<StepperInput
 									id={`${fieldId}-B-vesting`}
 									label="Vesting Horizon (Years)"
@@ -982,7 +982,7 @@ export default function TotalCompCalculator() {
 									onChange={(val) => updateOffer('B', 'equity', 'vestingYears', val)}
 									helpText="Standard horizon for full vesting."
 								/>
-								<label className="inline-flex items-center gap-3 cursor-pointer p-4 rounded-[1.5rem] border border-slate-800/80 bg-slate-950/45">
+								<label className="flex items-center gap-3 cursor-pointer p-4 rounded-[1.5rem] border border-slate-800/80 bg-slate-950/45 w-full">
 									<input
 										type="checkbox"
 										checked={offerB.equity.hasOneYearCliff}
@@ -998,7 +998,7 @@ export default function TotalCompCalculator() {
 
 					{activeBSection === 'perks' && (
 						<div className="grid gap-4 animate-[fadeIn_0.15s_ease-out]">
-							<div className="grid gap-4 sm:grid-cols-2">
+							<div className="grid gap-4 xl:grid-cols-2">
 								<StepperInput
 									id={`${fieldId}-B-401k-match`}
 									label="401(k) Match (%)"
@@ -1028,7 +1028,7 @@ export default function TotalCompCalculator() {
 								onChange={(val) => updateOffer('B', 'perks', 'monthlyHealthPremium', val)}
 								helpText="Employee monthly out-of-pocket health insurance premium cost."
 							/>
-							<div className="grid gap-4 sm:grid-cols-2">
+							<div className="grid gap-4 xl:grid-cols-2">
 								<StepperInput
 									id={`${fieldId}-B-espp-contrib`}
 									label="ESPP Contribution (%)"
