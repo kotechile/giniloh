@@ -107,15 +107,15 @@ export interface OfferInput {
 	cash: {
 		baseSalary: number;
 		targetBonusPercent: number;
-		signOnBonus: number;
+		upfrontCashIncentive: number;
 		clawbackMonths: number;
 	};
 	equity: {
-		type: 'PUBLIC_RSU' | 'PRIVATE_RSU' | 'ISO' | 'NSO';
+		type: 'PUBLIC_STOCK_UNIT' | 'PRIVATE_STOCK_UNIT' | 'ISO' | 'NSO';
 		totalGrantValue: number;
 		shareCount: number;
-		strikePrice: number;
-		currentFmv: number;
+		grantPrice: number;
+		currentValue: number;
 		vestingYears: number;
 		hasOneYearCliff: boolean;
 	};
@@ -141,13 +141,13 @@ export interface YearlyBreakdown {
 	year: number;
 	baseCash: number;
 	bonusCash: number;
-	liquidEquity: number;
+	liquidStockUnits: number;
 	perksValue: number;
 	taxDrag: number;
-	exerciseCost: number;
+	purchaseCost: number;
 	healthPremium: number;
 	netSpendableCash: number;
-	paperEquity: number;
+	paperLtip: number;
 	isClawbackRisk: boolean;
 	clawbackAmount: number;
 }

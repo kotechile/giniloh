@@ -10,14 +10,14 @@ const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.
 
 const faqItems = [
 	{
-		question: 'How does the Equity Growth Engine work?',
+		question: 'How does the LTIP / Stock Unit Growth Engine work?',
 		answer:
-			'Vested equity is projected over a 4-year horizon. If a growth rate (10% or 20%) is selected, the stock or FMV value compounds annually: Value = Base Value * (1 + g)^(Year - 1). Growth is applied to both liquid RSUs and paper option assets.'
+			'Vested stock units/LTIP are projected over a 4-year horizon. If a growth rate (10% or 20%) is selected, the stock or current value compounds annually: Value = Base Value * (1 + g)^(Year - 1). Growth is applied to both liquid stock units and paper stock units/options.'
 	},
 	{
-		question: 'What is the difference between RSU and Options in the chart?',
+		question: 'What is the difference between Stock Units and Options/Paper LTIP in the chart?',
 		answer:
-			'Public RSUs are treated as immediate liquidity. Once vested, their post-tax value is added directly to your Net Spendable Cash Flow line. Private RSUs and Options (ISOs/NSOs) are illiquid. They are tracked under "Paper Wealth" and do not boost your cash flow. However, if Auto-Exercise is enabled, the out-of-pocket cost to purchase option shares is subtracted from your cash line.'
+			'Public stock units are treated as immediate liquidity. Once vested, their post-tax value is added directly to your Net Spendable Cash Flow line. Private stock units and Options (ISOs/NSOs) are illiquid. They are tracked under "Paper Wealth" (Paper LTIP) and do not boost your cash flow. However, if Auto-Exercise is enabled, the out-of-pocket cost to purchase option shares is subtracted from your cash line.'
 	},
 	{
 		question: 'How is the ESPP Yield Boost calculated?',
@@ -27,14 +27,14 @@ const faqItems = [
 	{
 		question: 'Are retirement contributions and tax brackets accurate?',
 		answer:
-			'We calculate federal income taxes using progressive brackets (Single or Married filing jointly) applied to cash compensation plus liquid vested RSUs. State taxes are modeled as representative flat rates (e.g. CA: 9.3%, NY: 6.5%, MD: 4.75%). You can override this by inputting a custom effective tax rate manually.'
+			'We calculate federal income taxes using progressive brackets (Single or Married filing jointly) applied to cash compensation plus liquid vested stock units. State taxes are modeled as representative flat rates (e.g. CA: 9.3%, NY: 6.5%, MD: 4.75%). You can override this by inputting a custom effective tax rate manually.'
 	}
 ];
 ---
 
 <BaseLayout
 	title="Total Compensation & Equity Visualizer | Gini Loh"
-	description="Model base salary, cash bonuses, and vesting RSUs or options with stock growth assumptions to evaluate tech offers."
+	description="Model base salary, upfront cash incentives, and vesting stock units or options with stock growth assumptions to evaluate offers."
 >
 	<link slot="head" rel="canonical" href={new URL('/calculators/total-comp/', Astro.site).toString()} />
 	{schema ? <JsonLd slot="head" data={schema} /> : null}
@@ -42,7 +42,7 @@ const faqItems = [
 	<CalculatorShell
 		eyebrow="Compensation Calculator"
 		title="Total Compensation Visualizer"
-		description="Break down base salary, target bonuses, and vesting schedules (RSUs/Options) to model the true cash flow value of an offer."
+		description="Break down base salary, target bonuses, upfront cash incentives, and vesting schedules (Stock Units/Options) to model the true cash flow value of an offer."
 	>
 		<div slot="calculator">
 			<TotalCompCalculator client:load />
@@ -54,19 +54,19 @@ const faqItems = [
 				<p class="font-mono text-xs uppercase tracking-[0.28em] text-indigo-200/80 [.light_&]:text-indigo-600!">Strategy guide</p>
 				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white font-sans border-0 pl-0">Comparing Startup vs. Public Tech</h2>
 				<p class="mt-4 text-sm leading-7 text-slate-300">
-					Startups often match public tech offers on paper by quoting massive option grants based on high speculative FMVs. 
-					However, because startup options are illiquid and require out-of-pocket cash to exercise, their real-time cash flow footprint is negative. 
+					Startups often match public tech offers on paper by quoting massive option grants based on speculative current values. 
+					However, because startup options are illiquid and require out-of-pocket cash to exercise, their real-time cash flow footprint can be negative if auto-exercised. 
 					Use this visualizer to model:
 				</p>
 				<ul class="mt-4 space-y-2 text-sm text-slate-300 list-disc list-inside">
-					<li>How option exercise costs reduce your first 4 years of spendable cash.</li>
+					<li>How option purchase costs reduce your first 4 years of spendable cash.</li>
 					<li>How much of your wealth is locked up in paper assets vs. liquid bank balances.</li>
 					<li>The compound growth difference between a public stock and a private valuation.</li>
 				</ul>
 				<div class="mt-6 rounded-[1.3rem] border border-white/10 bg-white/5 p-4 [.light_&]:border-slate-200/80 [.light_&]:bg-slate-100/50">
 					<p class="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500 [.light_&]:text-slate-600!">Pro Tip</p>
 					<p class="mt-2 text-sm leading-7 text-slate-200">
-						Toggle <strong>Auto-Exercise Options</strong> to see if your base salary and bonus can absorb the strike price cost of your options as they vest, or if exercising will require dipping into savings.
+						Toggle <strong>Auto-Exercise Options</strong> to see if your base salary and bonus can absorb the grant price cost of your options as they vest, or if exercising will require dipping into savings.
 					</p>
 				</div>
 			</article>
@@ -84,7 +84,7 @@ const faqItems = [
 					</div>
 					<div class="rounded-[1.2rem] border border-slate-800 bg-slate-950/60 p-4 [.light_&]:bg-slate-100/60 [.light_&]:border-slate-200">
 						<p class="text-indigo-400 font-bold uppercase tracking-wider [.light_&]:text-indigo-600!">Net spendable cash</p>
-						<p class="mt-1">Cash_t = Salary + Bonus_t + Vested_Liquid_RSUs_t + ESPP_Yield_t - Tax_t - Exercise_Cost_t - Health_t</p>
+						<p class="mt-1">Cash_t = Salary + Bonus_t + Vested_Liquid_Stock_Units_t + ESPP_Yield_t - Tax_t - Purchase_Cost_t - Health_t</p>
 					</div>
 				</div>
 			</article>
@@ -105,8 +105,8 @@ const faqItems = [
 				<p class="font-mono text-xs uppercase tracking-[0.28em] text-amber-200/80 [.light_&]:text-amber-800!">AMT Warning Tooltip</p>
 				<h2 class="mt-3 text-lg font-semibold text-white font-sans border-0 pl-0">Alternative Minimum Tax (AMT)</h2>
 				<p class="mt-3 text-sm leading-7 text-slate-300">
-					Exercising ISO options in a private startup can trigger Alternative Minimum Tax (AMT) on the spread between the strike price and FMV, even though the shares cannot be sold for cash. 
-					Consult a CPA to model your AMT exposure before exercising large blocks of options.
+					Exercising ISO options in a private startup can trigger Alternative Minimum Tax (AMT) on the spread between the grant price and current value, even though the shares cannot be sold for cash. 
+					Consult a CPA to model your AMT exposure before purchasing large blocks of options.
 				</p>
 			</article>
 

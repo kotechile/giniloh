@@ -10,15 +10,15 @@ const INITIAL_OFFER_A: OfferInput = {
 	cash: {
 		baseSalary: 180000,
 		targetBonusPercent: 15,
-		signOnBonus: 20000,
+		upfrontCashIncentive: 20000,
 		clawbackMonths: 12
 	},
 	equity: {
-		type: 'PUBLIC_RSU',
+		type: 'PUBLIC_STOCK_UNIT',
 		totalGrantValue: 200000,
 		shareCount: 0,
-		strikePrice: 0,
-		currentFmv: 0,
+		grantPrice: 0,
+		currentValue: 0,
 		vestingYears: 4,
 		hasOneYearCliff: true
 	},
@@ -36,15 +36,15 @@ const INITIAL_OFFER_B: OfferInput = {
 	cash: {
 		baseSalary: 155000,
 		targetBonusPercent: 10,
-		signOnBonus: 10000,
+		upfrontCashIncentive: 10000,
 		clawbackMonths: 12
 	},
 	equity: {
 		type: 'ISO',
 		totalGrantValue: 0,
 		shareCount: 50000,
-		strikePrice: 2.0,
-		currentFmv: 5.0,
+		grantPrice: 2.0,
+		currentValue: 5.0,
 		vestingYears: 4,
 		hasOneYearCliff: true
 	},
@@ -125,8 +125,8 @@ export default function TotalCompCalculator() {
 
 	[summaryA, summaryB].forEach((summary) => {
 		summary.yearly.forEach((year) => {
-			const posSum = year.baseCash + year.bonusCash + year.liquidEquity + year.perksValue;
-			const negSum = year.taxDrag + (globalInputs.autoExercise ? year.exerciseCost : 0) + year.healthPremium;
+			const posSum = year.baseCash + year.bonusCash + year.liquidStockUnits + year.perksValue;
+			const negSum = year.taxDrag + (globalInputs.autoExercise ? year.purchaseCost : 0) + year.healthPremium;
 			if (posSum > maxPositive) maxPositive = posSum;
 			if (negSum > maxNegative) maxNegative = negSum;
 		});
@@ -369,7 +369,7 @@ export default function TotalCompCalculator() {
 								const posComponents = [
 									{ val: yearData.baseCash, color: 'rgba(15, 118, 110, 0.85)', name: 'Base Cash' }, // teal-700
 									{ val: yearData.bonusCash, color: 'rgba(6, 182, 212, 0.85)', name: 'Bonus Cash' }, // cyan-500
-									{ val: yearData.liquidEquity, color: 'rgba(16, 185, 129, 0.85)', name: 'Liquid Equity' }, // emerald-500
+									{ val: yearData.liquidStockUnits, color: 'rgba(16, 185, 129, 0.85)', name: 'Liquid Stock Units' }, // emerald-500
 									{ val: yearData.perksValue, color: 'rgba(99, 102, 241, 0.85)', name: 'Perks Value' } // indigo-500
 								];
 
@@ -396,7 +396,7 @@ export default function TotalCompCalculator() {
 								// 2. Negative Stacks (Top down from 0)
 								const negComponents = [
 									{ val: yearData.taxDrag, color: 'rgba(239, 68, 68, 0.75)', name: 'Tax Drag' }, // red-500
-									{ val: globalInputs.autoExercise ? yearData.exerciseCost : 0, color: 'rgba(245, 158, 11, 0.75)', name: 'Exercise Cost' }, // amber-500
+									{ val: globalInputs.autoExercise ? yearData.purchaseCost : 0, color: 'rgba(245, 158, 11, 0.75)', name: 'Option Purchase Cost' }, // amber-500
 									{ val: yearData.healthPremium, color: 'rgba(100, 116, 139, 0.75)', name: 'Health Premium' } // slate-500
 								];
 
@@ -422,9 +422,9 @@ export default function TotalCompCalculator() {
 
 								// If options auto-exercise is disabled, draw a dashed/hollow outline to represent "unrealized exercise liability"
 								let optionOutline = null;
-								if (!globalInputs.autoExercise && yearData.exerciseCost > 0) {
+								if (!globalInputs.autoExercise && yearData.purchaseCost > 0) {
 									const yStart = getY(-negRunning);
-									const totalLiability = negRunning + yearData.exerciseCost;
+									const totalLiability = negRunning + yearData.purchaseCost;
 									const yEnd = getY(-totalLiability);
 									const height = yEnd - yStart;
 									optionOutline = (
@@ -439,7 +439,7 @@ export default function TotalCompCalculator() {
 											strokeDasharray="2, 2"
 											className="cursor-pointer"
 										>
-											<title>Unrealized option exercise liability</title>
+											<title>Unrealized option purchase liability</title>
 										</rect>
 									);
 								}
@@ -530,16 +530,16 @@ export default function TotalCompCalculator() {
 									<span>Base + Bonus Cash:</span>
 									<span className="text-white font-semibold">{formatCurrency(hoveredData.offerA.baseCash + hoveredData.offerA.bonusCash)}</span>
 								</div>
-								{hoveredData.offerA.liquidEquity > 0 && (
+								{hoveredData.offerA.liquidStockUnits > 0 && (
 									<div className="flex justify-between text-[11px] text-slate-400">
-										<span>Vested Liquid Equity:</span>
-										<span className="text-emerald-400 font-semibold">{formatCurrency(hoveredData.offerA.liquidEquity)}</span>
+										<span>Vested Liquid Stock Units:</span>
+										<span className="text-emerald-400 font-semibold">{formatCurrency(hoveredData.offerA.liquidStockUnits)}</span>
 									</div>
 								)}
-								{hoveredData.offerA.paperEquity > 0 && (
+								{hoveredData.offerA.paperLtip > 0 && (
 									<div className="flex justify-between text-[11px] text-slate-500">
-										<span>Paper Wealth (Illiquid):</span>
-										<span className="text-slate-400 font-semibold">{formatCurrency(hoveredData.offerA.paperEquity)}</span>
+										<span>Paper LTIP Wealth (Illiquid):</span>
+										<span className="text-slate-400 font-semibold">{formatCurrency(hoveredData.offerA.paperLtip)}</span>
 									</div>
 								)}
 								<div className="flex justify-between text-[11px] text-slate-400">
@@ -550,10 +550,10 @@ export default function TotalCompCalculator() {
 									<span>Tax Drag:</span>
 									<span>-{formatCurrency(hoveredData.offerA.taxDrag)}</span>
 								</div>
-								{hoveredData.offerA.exerciseCost > 0 && (
+								{hoveredData.offerA.purchaseCost > 0 && (
 									<div className="flex justify-between text-[11px] text-amber-500 [.light_&]:text-amber-700!">
-										<span>Exercise Cost:</span>
-										<span>-{formatCurrency(hoveredData.offerA.exerciseCost)} {globalInputs.autoExercise ? '(Subtracted)' : '(Deferred)'}</span>
+										<span>Purchase Cost:</span>
+										<span>-{formatCurrency(hoveredData.offerA.purchaseCost)} {globalInputs.autoExercise ? '(Subtracted)' : '(Deferred)'}</span>
 									</div>
 								)}
 								<div className="flex justify-between border-t border-slate-800/80 mt-1 pt-1 text-white font-bold [.light_&]:border-slate-200">
@@ -574,16 +574,16 @@ export default function TotalCompCalculator() {
 									<span>Base + Bonus Cash:</span>
 									<span className="text-white font-semibold">{formatCurrency(hoveredData.offerB.baseCash + hoveredData.offerB.bonusCash)}</span>
 								</div>
-								{hoveredData.offerB.liquidEquity > 0 && (
+								{hoveredData.offerB.liquidStockUnits > 0 && (
 									<div className="flex justify-between text-[11px] text-slate-400">
-										<span>Vested Liquid Equity:</span>
-										<span className="text-emerald-400 font-semibold">{formatCurrency(hoveredData.offerB.liquidEquity)}</span>
+										<span>Vested Liquid Stock Units:</span>
+										<span className="text-emerald-400 font-semibold">{formatCurrency(hoveredData.offerB.liquidStockUnits)}</span>
 									</div>
 								)}
-								{hoveredData.offerB.paperEquity > 0 && (
+								{hoveredData.offerB.paperLtip > 0 && (
 									<div className="flex justify-between text-[11px] text-slate-500">
-										<span>Paper Wealth (Illiquid):</span>
-										<span className="text-slate-400 font-semibold">{formatCurrency(hoveredData.offerB.paperEquity)}</span>
+										<span>Paper LTIP Wealth (Illiquid):</span>
+										<span className="text-slate-400 font-semibold">{formatCurrency(hoveredData.offerB.paperLtip)}</span>
 									</div>
 								)}
 								<div className="flex justify-between text-[11px] text-slate-400">
@@ -594,10 +594,10 @@ export default function TotalCompCalculator() {
 									<span>Tax Drag:</span>
 									<span>-{formatCurrency(hoveredData.offerB.taxDrag)}</span>
 								</div>
-								{hoveredData.offerB.exerciseCost > 0 && (
+								{hoveredData.offerB.purchaseCost > 0 && (
 									<div className="flex justify-between text-[11px] text-amber-500 [.light_&]:text-amber-700!">
-										<span>Exercise Cost:</span>
-										<span>-{formatCurrency(hoveredData.offerB.exerciseCost)} {globalInputs.autoExercise ? '(Subtracted)' : '(Deferred)'}</span>
+										<span>Purchase Cost:</span>
+										<span>-{formatCurrency(hoveredData.offerB.purchaseCost)} {globalInputs.autoExercise ? '(Subtracted)' : '(Deferred)'}</span>
 									</div>
 								)}
 								<div className="flex justify-between border-t border-slate-800/80 mt-1 pt-1 text-white font-bold [.light_&]:border-slate-200">
@@ -647,7 +647,7 @@ export default function TotalCompCalculator() {
 							onClick={() => setActiveASection('equity')}
 							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeASection === 'equity' ? 'border-cyan-400 text-white' : 'border-transparent text-slate-500 hover:text-slate-300'}`}
 						>
-							📈 Equity
+							📈 LTIP
 						</button>
 						<button
 							onClick={() => setActiveASection('perks')}
@@ -679,12 +679,12 @@ export default function TotalCompCalculator() {
 								helpText="Expected annual target performance bonus percentage."
 							/>
 							<CurrencyInput
-								id={`${fieldId}-A-signon`}
-								label="Sign-on Bonus"
-								value={offerA.cash.signOnBonus}
+								id={`${fieldId}-A-upfront`}
+								label="Upfront Cash Incentive"
+								value={offerA.cash.upfrontCashIncentive}
 								step={1000}
-								onChange={(val) => updateOffer('A', 'cash', 'signOnBonus', val)}
-								helpText="One-time cash signing bonus received in year 1."
+								onChange={(val) => updateOffer('A', 'cash', 'upfrontCashIncentive', val)}
+								helpText="One-time upfront cash incentive received in Year 1."
 							/>
 							<StepperInput
 								id={`${fieldId}-A-clawback`}
@@ -693,7 +693,7 @@ export default function TotalCompCalculator() {
 								min={0}
 								suffix="Mos"
 								onChange={(val) => updateOffer('A', 'cash', 'clawbackMonths', val)}
-								helpText="Sign-on bonus return obligation threshold in case of early departure."
+								helpText="Upfront cash incentive return obligation threshold in case of early departure."
 							/>
 						</div>
 					)}
@@ -702,28 +702,28 @@ export default function TotalCompCalculator() {
 						<div className="grid gap-4 animate-[fadeIn_0.15s_ease-out]">
 							{/* Equity Type Selection */}
 							<label className="grid gap-2 rounded-[1.5rem] border border-slate-800/80 bg-slate-950/45 p-4">
-								<span className="text-sm font-semibold text-slate-100">Equity Type</span>
+								<span className="text-sm font-semibold text-slate-100">LTIP / Stock Unit Type</span>
 								<select
 									value={offerA.equity.type}
 									onChange={(e) => updateOffer('A', 'equity', 'type', e.target.value)}
 									className="rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white outline-none"
 								>
-									<option value="PUBLIC_RSU">Public RSU (Liquid immediately)</option>
-									<option value="PRIVATE_RSU">Private RSU (Illiquid Paper)</option>
-									<option value="ISO">ISO Options (Paper + Exercise Strike)</option>
-									<option value="NSO">NSO Options (Paper + Exercise Strike)</option>
+									<option value="PUBLIC_STOCK_UNIT">Public Stock Unit (Liquid immediately)</option>
+									<option value="PRIVATE_STOCK_UNIT">Private Stock Unit (Illiquid Paper)</option>
+									<option value="ISO">ISO Options (Paper + Purchase Grant Price)</option>
+									<option value="NSO">NSO Options (Paper + Purchase Grant Price)</option>
 								</select>
 							</label>
 
-							{/* Option fields vs RSU value fields */}
-							{(offerA.equity.type === 'PUBLIC_RSU' || offerA.equity.type === 'PRIVATE_RSU') ? (
+							{/* Option fields vs Stock Unit value fields */}
+							{(offerA.equity.type === 'PUBLIC_STOCK_UNIT' || offerA.equity.type === 'PRIVATE_STOCK_UNIT') ? (
 								<CurrencyInput
-									id={`${fieldId}-A-rsu-grant`}
-									label="Total Grant Value"
+									id={`${fieldId}-A-ltip-grant`}
+									label="Total LTIP Value"
 									value={offerA.equity.totalGrantValue}
 									step={5000}
 									onChange={(val) => updateOffer('A', 'equity', 'totalGrantValue', val)}
-									helpText="Combined target value of RSU grants distributed over the vesting schedule."
+									helpText="Combined target value of Stock Unit grants distributed over the vesting schedule."
 								/>
 							) : (
 								<>
@@ -737,20 +737,20 @@ export default function TotalCompCalculator() {
 									/>
 									<div className="grid gap-4 sm:grid-cols-2">
 										<CurrencyInput
-											id={`${fieldId}-A-strike`}
-											label="Strike Price"
-											value={offerA.equity.strikePrice}
+											id={`${fieldId}-A-grantprice`}
+											label="Grant Price"
+											value={offerA.equity.grantPrice}
 											step={0.5}
-											onChange={(val) => updateOffer('A', 'equity', 'strikePrice', val)}
-											helpText="Purchase price per option share."
+											onChange={(val) => updateOffer('A', 'equity', 'grantPrice', val)}
+											helpText="Purchase or grant price per option share."
 										/>
 										<CurrencyInput
-											id={`${fieldId}-A-fmv`}
-											label="Current FMV"
-											value={offerA.equity.currentFmv}
+											id={`${fieldId}-A-currentvalue`}
+											label="Current Value"
+											value={offerA.equity.currentValue}
 											step={0.5}
-											onChange={(val) => updateOffer('A', 'equity', 'currentFmv', val)}
-											helpText="Fair Market Value per share."
+											onChange={(val) => updateOffer('A', 'equity', 'currentValue', val)}
+											helpText="Current market value per share."
 										/>
 									</div>
 								</>
@@ -863,7 +863,7 @@ export default function TotalCompCalculator() {
 							onClick={() => setActiveBSection('equity')}
 							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeBSection === 'equity' ? 'border-purple-400 text-white' : 'border-transparent text-slate-500 hover:text-slate-300'}`}
 						>
-							📈 Equity
+							📈 LTIP
 						</button>
 						<button
 							onClick={() => setActiveBSection('perks')}
@@ -895,12 +895,12 @@ export default function TotalCompCalculator() {
 								helpText="Expected annual target performance bonus percentage."
 							/>
 							<CurrencyInput
-								id={`${fieldId}-B-signon`}
-								label="Sign-on Bonus"
-								value={offerB.cash.signOnBonus}
+								id={`${fieldId}-B-upfront`}
+								label="Upfront Cash Incentive"
+								value={offerB.cash.upfrontCashIncentive}
 								step={1000}
-								onChange={(val) => updateOffer('B', 'cash', 'signOnBonus', val)}
-								helpText="One-time cash signing bonus received in year 1."
+								onChange={(val) => updateOffer('B', 'cash', 'upfrontCashIncentive', val)}
+								helpText="One-time upfront cash incentive received in Year 1."
 							/>
 							<StepperInput
 								id={`${fieldId}-B-clawback`}
@@ -909,7 +909,7 @@ export default function TotalCompCalculator() {
 								min={0}
 								suffix="Mos"
 								onChange={(val) => updateOffer('B', 'cash', 'clawbackMonths', val)}
-								helpText="Sign-on bonus return obligation threshold in case of early departure."
+								helpText="Upfront cash incentive return obligation threshold in case of early departure."
 							/>
 						</div>
 					)}
@@ -918,28 +918,28 @@ export default function TotalCompCalculator() {
 						<div className="grid gap-4 animate-[fadeIn_0.15s_ease-out]">
 							{/* Equity Type Selection */}
 							<label className="grid gap-2 rounded-[1.5rem] border border-slate-800/80 bg-slate-950/45 p-4">
-								<span className="text-sm font-semibold text-slate-100">Equity Type</span>
+								<span className="text-sm font-semibold text-slate-100">LTIP / Stock Unit Type</span>
 								<select
 									value={offerB.equity.type}
 									onChange={(e) => updateOffer('B', 'equity', 'type', e.target.value)}
 									className="rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white outline-none"
 								>
-									<option value="PUBLIC_RSU">Public RSU (Liquid immediately)</option>
-									<option value="PRIVATE_RSU">Private RSU (Illiquid Paper)</option>
-									<option value="ISO">ISO Options (Paper + Exercise Strike)</option>
-									<option value="NSO">NSO Options (Paper + Exercise Strike)</option>
+									<option value="PUBLIC_STOCK_UNIT">Public Stock Unit (Liquid immediately)</option>
+									<option value="PRIVATE_STOCK_UNIT">Private Stock Unit (Illiquid Paper)</option>
+									<option value="ISO">ISO Options (Paper + Purchase Grant Price)</option>
+									<option value="NSO">NSO Options (Paper + Purchase Grant Price)</option>
 								</select>
 							</label>
 
-							{/* Option fields vs RSU value fields */}
-							{(offerB.equity.type === 'PUBLIC_RSU' || offerB.equity.type === 'PRIVATE_RSU') ? (
+							{/* Option fields vs Stock Unit value fields */}
+							{(offerB.equity.type === 'PUBLIC_STOCK_UNIT' || offerB.equity.type === 'PRIVATE_STOCK_UNIT') ? (
 								<CurrencyInput
-									id={`${fieldId}-B-rsu-grant`}
-									label="Total Grant Value"
+									id={`${fieldId}-B-ltip-grant`}
+									label="Total LTIP Value"
 									value={offerB.equity.totalGrantValue}
 									step={5000}
 									onChange={(val) => updateOffer('B', 'equity', 'totalGrantValue', val)}
-									helpText="Combined target value of RSU grants distributed over the vesting schedule."
+									helpText="Combined target value of Stock Unit grants distributed over the vesting schedule."
 								/>
 							) : (
 								<>
@@ -953,20 +953,20 @@ export default function TotalCompCalculator() {
 									/>
 									<div className="grid gap-4 sm:grid-cols-2">
 										<CurrencyInput
-											id={`${fieldId}-B-strike`}
-											label="Strike Price"
-											value={offerB.equity.strikePrice}
+											id={`${fieldId}-B-grantprice`}
+											label="Grant Price"
+											value={offerB.equity.grantPrice}
 											step={0.5}
-											onChange={(val) => updateOffer('B', 'equity', 'strikePrice', val)}
-											helpText="Purchase price per option share."
+											onChange={(val) => updateOffer('B', 'equity', 'grantPrice', val)}
+											helpText="Purchase or grant price per option share."
 										/>
 										<CurrencyInput
-											id={`${fieldId}-B-fmv`}
-											label="Current FMV"
-											value={offerB.equity.currentFmv}
+											id={`${fieldId}-B-currentvalue`}
+											label="Current Value"
+											value={offerB.equity.currentValue}
 											step={0.5}
-											onChange={(val) => updateOffer('B', 'equity', 'currentFmv', val)}
-											helpText="Fair Market Value per share."
+											onChange={(val) => updateOffer('B', 'equity', 'currentValue', val)}
+											helpText="Current market value per share."
 										/>
 									</div>
 								</>
@@ -1078,7 +1078,7 @@ export default function TotalCompCalculator() {
 						<div className="rounded-2xl border border-white/5 bg-slate-950/45 p-4 hover:border-cyan-500/20 transition">
 							<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">Total Paper Wealth</p>
 							<p className="mt-2 text-lg font-bold text-slate-300">{formatCurrency(summaryA.totalPaperValue)}</p>
-							<p className="text-[10px] text-slate-500 mt-1">Illiquid equity value</p>
+							<p className="text-[10px] text-slate-500 mt-1">Illiquid LTIP value</p>
 						</div>
 						<div className="rounded-2xl border border-white/5 bg-slate-950/45 p-4 hover:border-rose-500/20 transition">
 							<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">Out-of-Pocket Drag</p>
@@ -1107,7 +1107,7 @@ export default function TotalCompCalculator() {
 						<div className="rounded-2xl border border-white/5 bg-slate-950/45 p-4 hover:border-purple-500/20 transition">
 							<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">Total Paper Wealth</p>
 							<p className="mt-2 text-lg font-bold text-slate-300">{formatCurrency(summaryB.totalPaperValue)}</p>
-							<p className="text-[10px] text-slate-500 mt-1">Illiquid equity value</p>
+							<p className="text-[10px] text-slate-500 mt-1">Illiquid LTIP value</p>
 						</div>
 						<div className="rounded-2xl border border-white/5 bg-slate-950/45 p-4 hover:border-rose-500/20 transition">
 							<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">Out-of-Pocket Drag</p>

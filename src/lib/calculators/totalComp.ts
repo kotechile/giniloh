@@ -70,15 +70,16 @@ export function calculateOfferBreakdown(
 ): OfferBreakdownSummary {
 	const baseSalary = sanitizeNumber(offer.cash.baseSalary);
 	const targetBonusPercent = sanitizeNumber(offer.cash.targetBonusPercent);
-	const signOnBonus = sanitizeNumber(offer.cash.signOnBonus);
+	const upfrontCashIncentive = sanitizeNumber(offer.cash.upfrontCashIncentive);
 	const clawbackMonths = sanitizeNumber(offer.cash.clawbackMonths);
 
 	const equityType = offer.equity.type;
 	const totalGrantValue = sanitizeNumber(offer.equity.totalGrantValue);
 	const shareCount = sanitizeNumber(offer.equity.shareCount);
-	const strikePrice = sanitizeNumber(offer.equity.strikePrice);
-	const currentFmv = sanitizeNumber(offer.equity.currentFmv);
+	const grantPrice = sanitizeNumber(offer.equity.grantPrice);
+	const currentValue = sanitizeNumber(offer.equity.currentValue);
 	const vestingYears = sanitizeNumber(offer.equity.vestingYears) || 4;
+
 	const kMatchPercent = sanitizeNumber(offer.perks.kMatchPercent);
 	const kMatchCapPercent = sanitizeNumber(offer.perks.kMatchCapPercent);
 	const monthlyHealthPremium = sanitizeNumber(offer.perks.monthlyHealthPremium);
@@ -91,11 +92,11 @@ export function calculateOfferBreakdown(
 	for (let year = 1; year <= yearsToProject; year++) {
 		// 1. Cash Layer
 		const baseCash = baseSalary;
-		const bonusCash = baseSalary * (targetBonusPercent / 100) + (year === 1 ? signOnBonus : 0);
+		const bonusCash = baseSalary * (targetBonusPercent / 100) + (year === 1 ? upfrontCashIncentive : 0);
 		
 		// Clawback Risk evaluation
-		const isClawbackRisk = year === 1 && signOnBonus > 0 && clawbackMonths > 0;
-		const clawbackAmount = isClawbackRisk ? signOnBonus : 0;
+		const isClawbackRisk = year === 1 && upfrontCashIncentive > 0 && clawbackMonths > 0;
+		const clawbackAmount = isClawbackRisk ? upfrontCashIncentive : 0;
 
 		// 2. Equity Layer & Vesting
 		let yearVestingShares = 0;
@@ -103,37 +104,37 @@ export function calculateOfferBreakdown(
 			yearVestingShares = shareCount / vestingYears;
 		}
 
-		// Apply growth to stock/FMV values
+		// Apply growth to stock/current values
 		const growthMultiplier = Math.pow(1 + globalInputs.growthAssumption, year - 1);
 		
-		// RSUs are typically defined by grant value. If shareCount is provided, use shareCount * FMV.
+		// Stock Units are typically defined by grant value. If shareCount is provided, use shareCount * Current Value.
 		let unadjustedVestingEquityValue = 0;
-		if (equityType === 'PUBLIC_RSU' || equityType === 'PRIVATE_RSU') {
-			if (shareCount > 0 && currentFmv > 0) {
-				unadjustedVestingEquityValue = (shareCount * currentFmv) / vestingYears;
+		if (equityType === 'PUBLIC_STOCK_UNIT' || equityType === 'PRIVATE_STOCK_UNIT') {
+			if (shareCount > 0 && currentValue > 0) {
+				unadjustedVestingEquityValue = (shareCount * currentValue) / vestingYears;
 			} else {
 				unadjustedVestingEquityValue = totalGrantValue / vestingYears;
 			}
 		} else {
-			// ISO/NSO Option value (shares * FMV)
-			unadjustedVestingEquityValue = yearVestingShares * currentFmv;
+			// ISO/NSO Option value (shares * Current Value)
+			unadjustedVestingEquityValue = yearVestingShares * currentValue;
 		}
 
 		const vestingEquityValue = unadjustedVestingEquityValue * growthMultiplier;
 
-		let liquidEquity = 0;
-		let paperEquity = 0;
-		let exerciseCost = 0;
+		let liquidStockUnits = 0;
+		let paperLtip = 0;
+		let purchaseCost = 0;
 
-		if (equityType === 'PUBLIC_RSU') {
-			liquidEquity = vestingEquityValue;
-		} else if (equityType === 'PRIVATE_RSU') {
-			paperEquity = vestingEquityValue;
+		if (equityType === 'PUBLIC_STOCK_UNIT') {
+			liquidStockUnits = vestingEquityValue;
+		} else if (equityType === 'PRIVATE_STOCK_UNIT') {
+			paperLtip = vestingEquityValue;
 		} else {
 			// ISO or NSO Options
-			paperEquity = vestingEquityValue;
+			paperLtip = vestingEquityValue;
 			if (year <= vestingYears) {
-				exerciseCost = yearVestingShares * strikePrice;
+				purchaseCost = yearVestingShares * grantPrice;
 			}
 		}
 
@@ -152,7 +153,7 @@ export function calculateOfferBreakdown(
 		const perksValue = kMatchAmount + esppYield;
 
 		// 4. Tax Drag Calculations (Cash + Vested Liquid Equity)
-		const taxableIncome = baseCash + bonusCash + liquidEquity;
+		const taxableIncome = baseCash + bonusCash + liquidStockUnits;
 		let taxDrag = 0;
 
 		if (globalInputs.useManualTax) {
@@ -167,33 +168,33 @@ export function calculateOfferBreakdown(
 		// 5. Out of pocket cash costs
 		const healthPremium = monthlyHealthPremium * 12;
 		
-		// Subtract option exercise cost if auto-exercise is enabled
-		const subtractedExerciseCost = globalInputs.autoExercise ? exerciseCost : 0;
+		// Subtract option purchase cost if auto-exercise is enabled
+		const subtractedPurchaseCost = globalInputs.autoExercise ? purchaseCost : 0;
 
 		// Net Spendable Cash Flow
-		const netSpendableCash = baseCash + bonusCash + liquidEquity + esppYield - taxDrag - subtractedExerciseCost - healthPremium;
+		const netSpendableCash = baseCash + bonusCash + liquidStockUnits + esppYield - taxDrag - subtractedPurchaseCost - healthPremium;
 
 		yearly.push({
 			year,
 			baseCash,
 			bonusCash,
-			liquidEquity,
+			liquidStockUnits,
 			perksValue,
 			taxDrag,
-			exerciseCost,
+			purchaseCost,
 			healthPremium,
 			netSpendableCash,
-			paperEquity,
+			paperLtip,
 			isClawbackRisk,
 			clawbackAmount
 		});
 	}
 
 	const total4YearLiquidity = yearly.reduce((sum, y) => sum + y.netSpendableCash, 0);
-	const totalPaperValue = yearly.reduce((sum, y) => sum + y.paperEquity, 0);
+	const totalPaperValue = yearly.reduce((sum, y) => sum + y.paperLtip, 0);
 	
-	// Out-of-pocket drag is always exercise cost + health premiums
-	const totalOutofPocketDrag = yearly.reduce((sum, y) => sum + y.exerciseCost + y.healthPremium, 0);
+	// Out-of-pocket drag is always purchase cost + health premiums
+	const totalOutofPocketDrag = yearly.reduce((sum, y) => sum + y.purchaseCost + y.healthPremium, 0);
 
 	return {
 		yearly,
