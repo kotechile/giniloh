@@ -275,9 +275,10 @@ a {
 .prose th {
   padding: 1.5rem 1rem !important;
   font-family: ui-monospace, monospace !important;
-  font-size: 10px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.25em !important;
+  letter-spacing: 0.2em !important;
   color: #22d3ee !important; /* Bright Cyan Headers */
   text-align: left !important;
   border-bottom: 2px solid rgba(34, 211, 238, 0.2) !important;

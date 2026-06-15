@@ -47,6 +47,32 @@ AI Orchestration Chat & CLI (Bottom): You can configure pipelines using natural 
 6. [Real-World Configuration Scenarios](#6-real-world-configuration-scenarios)
 
 ---
+## 0. How is the Loh-Friction Philosophy implemented in this program?
+The Unified Loh-Friction Philosophy is the core architectural framework of this application. It is designed to eliminate the cognitive, emotional, and structural barriers that cause individuals to fail at wealth building. Traditional budgeting is retrospective—it forces you to categorize past mistakes, inducing guilt and decision fatigue. The Loh-Friction philosophy flips this, focusing on prospective, automated wealth routing.
+Here is how the philosophy is implemented practically across the app’s features and simulation engine:
+
+1. The Dynamic Buffer: Floors and Ceilings
+The engine manages your everyday checking account using two simple, automated triggers:
+The Overbalance Sweep (The Ceiling): You set an upper limit for your checking account—say, $3,500. The moment a paycheck drops and pushes you past that limit, the system automatically sweeps the extra money out of checking and routes it into your investments. This stops your money from sitting idle and earning 0% interest.
+The Underbalance Pull (The Floor): You also set a safety floor—say, $1,500. If a big mortgage payment or a string of bills drops your balance below this number, the system instantly pulls cash from your high-yield savings account to top you back up. It completely eliminates overdraft fees and the anxiety of a low balance.
+2. The Financial Waterfall: How Money Moves
+When you have extra cash, the system routes it step-by-step to make sure every dollar works as hard as possible. You can easily change this order in the UI or command line, but the default sequence follows the smartest financial playbook:
+Free Money First (match401k): It instantly captures your employer's 401(k) match.
+Kill High-Interest Debt (debt): It aggressively targets and wipes out toxic credit card balances.
+The Safety Net (hysa): It tops off your emergency fund until it hits your target comfort level (like $15,000).
+The Tax-Free Trifecta (hsa): It routes funds into your HSA for pre-tax, tax-free growth, and tax-free spending on healthcare.
+Retirement Maxing (ira / max401k): It fills up your Roth IRA and voluntary workplace contributions.
+The Wealth Compounder (brokerage): Any leftover overflow pours directly into a standard taxable brokerage account.
+3. Real-World Rules and Behavioral Guardrails
+To help you build actual financial discipline, the app mirrors the friction, restrictions, and rules of the real world:
+Locked Retirement Funds: The system locks down retirement accounts like your IRA, blocking you from easily sweeping money back out of them. It trains you to treat retirement money as strictly non-liquid.
+Day Trading Boundaries: If an account has less than $25,000 in equity, the system caps equity sweeps to twice a day, keeping you compliant with real SEC Pattern Day Trader rules.
+Realistic Transfer Latencies: Money doesn't move instantly in the real world. The app enforces real bank delays—like a 6-day hold for standard ACH transfers into your brokerage, or a 15-day hold for full ACAT account transfers.
+The "Panic Button" Safeguard: During a simulated market crash, the app deliberately pauses everything on Day 18 (right after a 10%+ drop). Before you can touch your portfolio, it forces you to walk through an emotional centering checklist. It’s a brilliant way to practice staying calm instead of panic-selling your assets.
+4. Zero-Friction Setup: The AI Assistant
+To keep you from getting bogged down in menus and settings, the app uses a smart AI console:
+You can just talk to it like a person: type things like "prioritize paying off debt" or "set my checking ceiling to 3500."
+The system parses your text, converts it into backend logic behind the scenes, and instantly rewires your financial waterfall right on the visual dashboard.
 
 ## 1. Why Automated Cash Flows Matter in Real Life
 
