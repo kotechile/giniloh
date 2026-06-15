@@ -735,7 +735,7 @@ export default function TotalCompCalculator() {
 										onChange={(val) => updateOffer('A', 'equity', 'shareCount', val)}
 										helpText="Total number of stock option shares granted."
 									/>
-									<div className="grid gap-4 xl:grid-cols-2">
+									<div className="grid gap-4">
 										<CurrencyInput
 											id={`${fieldId}-A-grantprice`}
 											label="Grant Price"
@@ -756,7 +756,7 @@ export default function TotalCompCalculator() {
 								</>
 							)}
 
-							<div className="grid gap-4 xl:grid-cols-2">
+							<div className="grid gap-4">
 								<StepperInput
 									id={`${fieldId}-A-vesting`}
 									label="Vesting Horizon (Years)"
@@ -782,7 +782,7 @@ export default function TotalCompCalculator() {
 
 					{activeASection === 'perks' && (
 						<div className="grid gap-4 animate-[fadeIn_0.15s_ease-out]">
-							<div className="grid gap-4 xl:grid-cols-2">
+							<div className="grid gap-4">
 								<StepperInput
 									id={`${fieldId}-A-401k-match`}
 									label="401(k) Match (%)"
@@ -812,7 +812,7 @@ export default function TotalCompCalculator() {
 								onChange={(val) => updateOffer('A', 'perks', 'monthlyHealthPremium', val)}
 								helpText="Employee monthly out-of-pocket health insurance premium cost."
 							/>
-							<div className="grid gap-4 xl:grid-cols-2">
+							<div className="grid gap-4">
 								<StepperInput
 									id={`${fieldId}-A-espp-contrib`}
 									label="ESPP Contribution (%)"
@@ -951,7 +951,7 @@ export default function TotalCompCalculator() {
 										onChange={(val) => updateOffer('B', 'equity', 'shareCount', val)}
 										helpText="Total number of stock option shares granted."
 									/>
-									<div className="grid gap-4 xl:grid-cols-2">
+									<div className="grid gap-4">
 										<CurrencyInput
 											id={`${fieldId}-B-grantprice`}
 											label="Grant Price"
@@ -972,7 +972,7 @@ export default function TotalCompCalculator() {
 								</>
 							)}
 
-							<div className="grid gap-4 xl:grid-cols-2">
+							<div className="grid gap-4">
 								<StepperInput
 									id={`${fieldId}-B-vesting`}
 									label="Vesting Horizon (Years)"
@@ -998,7 +998,7 @@ export default function TotalCompCalculator() {
 
 					{activeBSection === 'perks' && (
 						<div className="grid gap-4 animate-[fadeIn_0.15s_ease-out]">
-							<div className="grid gap-4 xl:grid-cols-2">
+							<div className="grid gap-4">
 								<StepperInput
 									id={`${fieldId}-B-401k-match`}
 									label="401(k) Match (%)"
@@ -1028,7 +1028,7 @@ export default function TotalCompCalculator() {
 								onChange={(val) => updateOffer('B', 'perks', 'monthlyHealthPremium', val)}
 								helpText="Employee monthly out-of-pocket health insurance premium cost."
 							/>
-							<div className="grid gap-4 xl:grid-cols-2">
+							<div className="grid gap-4">
 								<StepperInput
 									id={`${fieldId}-B-espp-contrib`}
 									label="ESPP Contribution (%)"
