@@ -207,7 +207,7 @@ export default function TotalCompCalculator() {
 									updateGlobal('taxState', val);
 								}
 							}}
-							className="rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white outline-none focus:border-cyan-400"
+							className="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white outline-none focus:border-cyan-400"
 						>
 							<option value="CA">California (CA - 9.3%)</option>
 							<option value="NY">New York (NY - 6.5%)</option>
@@ -239,7 +239,7 @@ export default function TotalCompCalculator() {
 								id={`${fieldId}-filing-status`}
 								value={globalInputs.filingStatus}
 								onChange={(e) => updateGlobal('filingStatus', e.target.value as any)}
-								className="rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white outline-none focus:border-cyan-400"
+								className="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white outline-none focus:border-cyan-400"
 							>
 								<option value="single">Single Filer</option>
 								<option value="married">Married Filing Jointly</option>
@@ -254,7 +254,7 @@ export default function TotalCompCalculator() {
 							id={`${fieldId}-growth`}
 							value={globalInputs.growthAssumption}
 							onChange={(e) => updateGlobal('growthAssumption', Number(e.target.value))}
-							className="rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white outline-none focus:border-cyan-400"
+							className="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white outline-none focus:border-cyan-400"
 						>
 							<option value="0">0% (Flat stock value)</option>
 							<option value="0.1">10% Annual Growth</option>
@@ -706,7 +706,7 @@ export default function TotalCompCalculator() {
 								<select
 									value={offerA.equity.type}
 									onChange={(e) => updateOffer('A', 'equity', 'type', e.target.value)}
-									className="rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white outline-none"
+									className="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white outline-none focus:border-cyan-400"
 								>
 									<option value="PUBLIC_STOCK_UNIT">Public Stock Unit (Liquid immediately)</option>
 									<option value="PRIVATE_STOCK_UNIT">Private Stock Unit (Illiquid Paper)</option>
@@ -922,7 +922,7 @@ export default function TotalCompCalculator() {
 								<select
 									value={offerB.equity.type}
 									onChange={(e) => updateOffer('B', 'equity', 'type', e.target.value)}
-									className="rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white outline-none"
+									className="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white outline-none focus:border-purple-400"
 								>
 									<option value="PUBLIC_STOCK_UNIT">Public Stock Unit (Liquid immediately)</option>
 									<option value="PRIVATE_STOCK_UNIT">Private Stock Unit (Illiquid Paper)</option>
