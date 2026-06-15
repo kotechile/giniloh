@@ -60,6 +60,19 @@ function getStateTaxRate(state: string): number {
 	}
 }
 
+function getMarginalFederalTaxRate(income: number, status: 'single' | 'married'): number {
+	if (income <= 0) return 0.10;
+	const brackets = status === 'single' ? FEDERAL_BRACKETS_SINGLE : FEDERAL_BRACKETS_MARRIED;
+	let lastRate = 0.10;
+	for (const bracket of brackets) {
+		if (income <= bracket.limit) {
+			return bracket.rate;
+		}
+		lastRate = bracket.rate;
+	}
+	return lastRate;
+}
+
 function sanitizeNumber(value: number): number {
 	return Number.isFinite(value) && value > 0 ? value : 0;
 }
@@ -85,6 +98,8 @@ export function calculateOfferBreakdown(
 	const monthlyHealthPremium = sanitizeNumber(offer.perks.monthlyHealthPremium);
 	const esppContributionPercent = sanitizeNumber(offer.perks.esppContributionPercent);
 	const esppDiscountPercent = sanitizeNumber(offer.perks.esppDiscountPercent);
+	const unusedPtoDays = sanitizeNumber(offer.perks.unusedPtoDays);
+	const annualWorkingDays = sanitizeNumber(offer.perks.annualWorkingDays) || 260;
 
 	const yearly: YearlyBreakdown[] = [];
 	const yearsToProject = 4;
@@ -150,7 +165,11 @@ export function calculateOfferBreakdown(
 			esppYield = contributionAmount * (discountRate / (1 - discountRate));
 		}
 		
-		const perksValue = kMatchAmount + esppYield;
+		// PTO Valuation
+		const dailyWage = baseSalary / annualWorkingDays;
+		const ptoValue = dailyWage * unusedPtoDays;
+		
+		const perksValue = kMatchAmount + esppYield + ptoValue;
 
 		// 4. Tax Drag Calculations (Cash + Vested Liquid Equity)
 		const taxableIncome = baseCash + bonusCash + liquidStockUnits;
@@ -174,6 +193,14 @@ export function calculateOfferBreakdown(
 		// Net Spendable Cash Flow
 		const netSpendableCash = baseCash + bonusCash + liquidStockUnits + esppYield - taxDrag - subtractedPurchaseCost - healthPremium;
 
+		// RSU federal tax shortfall (underwithholding estimation)
+		let rsuTaxShortfall = 0;
+		let mtrFed = 0;
+		if (equityType === 'PUBLIC_STOCK_UNIT' && liquidStockUnits > 0) {
+			mtrFed = getMarginalFederalTaxRate(taxableIncome, globalInputs.filingStatus);
+			rsuTaxShortfall = Math.max(0, liquidStockUnits * (mtrFed - 0.22));
+		}
+
 		yearly.push({
 			year,
 			baseCash,
@@ -186,7 +213,9 @@ export function calculateOfferBreakdown(
 			netSpendableCash,
 			paperLtip,
 			isClawbackRisk,
-			clawbackAmount
+			clawbackAmount,
+			rsuTaxShortfall,
+			mtrFed
 		});
 	}
 
@@ -196,10 +225,14 @@ export function calculateOfferBreakdown(
 	// Out-of-pocket drag is always purchase cost + health premiums
 	const totalOutofPocketDrag = yearly.reduce((sum, y) => sum + y.purchaseCost + y.healthPremium, 0);
 
+	// Exit Readiness Number is the sum of option purchase costs
+	const exitReadinessNumber = yearly.reduce((sum, y) => sum + y.purchaseCost, 0);
+
 	return {
 		yearly,
 		total4YearLiquidity,
 		totalPaperValue,
-		totalOutofPocketDrag
+		totalOutofPocketDrag,
+		exitReadinessNumber
 	};
 }

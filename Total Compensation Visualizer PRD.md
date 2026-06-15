@@ -34,10 +34,12 @@ Module 3: Localization & Tax Estimator
 Inputs: State of Residence (Dropdown, e.g., MD, CA, NY, TX), Tax Filing Status (Single, Married).
 Logic: Run a baseline heuristic tax calculation.
 Simplification for V1: Apply standard federal brackets + selected state income tax rate to Cash (Base + Bonus) and Liquid Vested Stock Units.
+RSU Tax Underwithholding Estimations: Supplemental wages (like RSUs) are withheld at a flat 22% rate. Calculate the ordinary income on vesting public stock units (OI_rsu = Shares_vest × Current Value) and estimate the tax shortfall: TS_fed = OI_rsu × (MTR_fed - 0.22), where MTR_fed is the user's marginal federal tax rate based on total taxable income. Flag any TS_fed > 0 as a shortfall warning tooltip on the Liquid Stock Units stack.
 Module 4: Perks & Wealth Subsidies
-Inputs: 401(k) Match % (e.g., 50% match up to 6%), Health Insurance Premium Employee Cost (Monthly), ESPP Contribution % (Max 15%) & Discount (Default 15%).
+Inputs: 401(k) Match % (e.g., 50% match up to 6%), Health Insurance Premium Employee Cost (Monthly), ESPP Contribution % (Max 15%) & Discount (Default 15%), Unused PTO Days, Annual Working Days (default 260).
 Logic: ESPP creates an immediate cash flow yield boost calculated as:
 ESPP Yield = (Base × Contribution %) × (Discount % / (1 - Discount %))
+PTO Valuation: Monetize accrued unused leave: PTO Value = (Base Salary / Annual Working Days) × Unused PTO Days. Add this to the Perks Value positive stack.
 4. Technical Architecture & Data Models
 To ensure clean code development, the data state should explicitly separate inputs from compiled analytical outputs.
 4.1 Input Schema (TypeScript Interface Example)
@@ -65,6 +67,8 @@ interface OfferInput {
     kMatchCapPercent: number;
     monthlyHealthPremium: number;
     esppContributionPercent: number;
+    unusedPtoDays: number;
+    annualWorkingDays: number;
   };
 }
 4.2 Core Calculation Engine Rules
@@ -84,6 +88,7 @@ Metric Callout Cards: Highlighting the big-picture outcomes:
 Total 4-Year Liquidity Value: Real money you can spend.
 Total Paper Value: Unrealized LTIP / Stock Unit wealth.
 Out-of-Pocket Drag: Total cost to purchase options + health premiums.
+Exit Readiness Number: Cumulative option purchase costs: ERN = ∑(Shares_vested × Grant Price). Must include warning tooltip that Alternative Minimum Tax (AMT) liabilities are excluded.
 6. Out of Scope for V1 (Future Iterations)
 Alternative Minimum Tax (AMT) complex calculations (provide a generic warning tooltip instead).
 Refresher grant modeling logic.

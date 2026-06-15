@@ -125,6 +125,8 @@ export interface OfferInput {
 		monthlyHealthPremium: number;
 		esppContributionPercent: number;
 		esppDiscountPercent: number;
+		unusedPtoDays: number;
+		annualWorkingDays: number;
 	};
 }
 
@@ -150,6 +152,8 @@ export interface YearlyBreakdown {
 	paperLtip: number;
 	isClawbackRisk: boolean;
 	clawbackAmount: number;
+	rsuTaxShortfall: number;
+	mtrFed: number;
 }
 
 export interface OfferBreakdownSummary {
@@ -157,4 +161,5 @@ export interface OfferBreakdownSummary {
 	total4YearLiquidity: number;
 	totalPaperValue: number;
 	totalOutofPocketDrag: number;
+	exitReadinessNumber: number;
 }

@@ -27,7 +27,9 @@ const INITIAL_OFFER_A: OfferInput = {
 		kMatchCapPercent: 6,
 		monthlyHealthPremium: 150,
 		esppContributionPercent: 10,
-		esppDiscountPercent: 15
+		esppDiscountPercent: 15,
+		unusedPtoDays: 0,
+		annualWorkingDays: 260
 	}
 };
 
@@ -53,7 +55,9 @@ const INITIAL_OFFER_B: OfferInput = {
 		kMatchCapPercent: 4,
 		monthlyHealthPremium: 100,
 		esppContributionPercent: 0,
-		esppDiscountPercent: 15
+		esppDiscountPercent: 15,
+		unusedPtoDays: 0,
+		annualWorkingDays: 260
 	}
 };
 
@@ -389,7 +393,11 @@ export default function TotalCompCalculator() {
 											height={height}
 											fill={comp.color}
 											className="transition-all duration-300 hover:opacity-100 opacity-90 cursor-pointer"
-										/>
+										>
+											{comp.name === 'Liquid Stock Units' && yearData.rsuTaxShortfall > 0 ? (
+												<title>{`Warning: ${formatCurrency(yearData.rsuTaxShortfall)} estimated federal tax shortfall due to flat 22% sell-to-cover withholding vs your estimated ${Math.round(yearData.mtrFed * 100)}% marginal rate.`}</title>
+											) : null}
+										</rect>
 									);
 								});
 
@@ -565,6 +573,11 @@ export default function TotalCompCalculator() {
 										⚠️ Clawback risk: {formatCurrency(hoveredData.offerA.clawbackAmount)} clawed back if departing before Month {offerA.cash.clawbackMonths}.
 									</div>
 								)}
+								{hoveredData.offerA.rsuTaxShortfall > 0 && (
+									<div className="mt-2 text-[10px] text-amber-400 bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
+										⚠️ RSU Underwithholding: Est. federal tax shortfall of {formatCurrency(hoveredData.offerA.rsuTaxShortfall)} due to flat 22% sell-to-cover rate vs your estimated {Math.round(hoveredData.offerA.mtrFed * 100)}% marginal rate.
+									</div>
+								)}
 							</div>
 							
 							{/* Offer B Tooltip */}
@@ -607,6 +620,11 @@ export default function TotalCompCalculator() {
 								{hoveredData.offerB.isClawbackRisk && (
 									<div className="mt-2 text-[10px] text-amber-400 bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
 										⚠️ Clawback risk: {formatCurrency(hoveredData.offerB.clawbackAmount)} clawed back if departing before Month {offerB.cash.clawbackMonths}.
+									</div>
+								)}
+								{hoveredData.offerB.rsuTaxShortfall > 0 && (
+									<div className="mt-2 text-[10px] text-amber-400 bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
+										⚠️ RSU Underwithholding: Est. federal tax shortfall of {formatCurrency(hoveredData.offerB.rsuTaxShortfall)} due to flat 22% sell-to-cover rate vs your estimated {Math.round(hoveredData.offerB.mtrFed * 100)}% marginal rate.
 									</div>
 								)}
 							</div>
@@ -834,6 +852,24 @@ export default function TotalCompCalculator() {
 									helpText="ESPP share purchase discount rate (Default 15%)."
 								/>
 							</div>
+							<StepperInput
+								id={`${fieldId}-A-pto-days`}
+								label="Unused PTO Days"
+								value={offerA.perks.unusedPtoDays}
+								min={0}
+								max={365}
+								onChange={(val) => updateOffer('A', 'perks', 'unusedPtoDays', val)}
+								helpText="Annual accrued unused PTO days to monetize."
+							/>
+							<StepperInput
+								id={`${fieldId}-A-working-days`}
+								label="Annual Working Days"
+								value={offerA.perks.annualWorkingDays}
+								min={1}
+								max={365}
+								onChange={(val) => updateOffer('A', 'perks', 'annualWorkingDays', val)}
+								helpText="Total annual working days (default 260)."
+							/>
 						</div>
 					)}
 				</div>
@@ -1050,6 +1086,24 @@ export default function TotalCompCalculator() {
 									helpText="ESPP share purchase discount rate (Default 15%)."
 								/>
 							</div>
+							<StepperInput
+								id={`${fieldId}-B-pto-days`}
+								label="Unused PTO Days"
+								value={offerB.perks.unusedPtoDays}
+								min={0}
+								max={365}
+								onChange={(val) => updateOffer('B', 'perks', 'unusedPtoDays', val)}
+								helpText="Annual accrued unused PTO days to monetize."
+							/>
+							<StepperInput
+								id={`${fieldId}-B-working-days`}
+								label="Annual Working Days"
+								value={offerB.perks.annualWorkingDays}
+								min={1}
+								max={365}
+								onChange={(val) => updateOffer('B', 'perks', 'annualWorkingDays', val)}
+								helpText="Total annual working days (default 260)."
+							/>
 						</div>
 					)}
 				</div>
@@ -1069,7 +1123,7 @@ export default function TotalCompCalculator() {
 							</span>
 						)}
 					</div>
-					<div className="grid gap-4 sm:grid-cols-3">
+					<div className="grid gap-4 grid-cols-2 lg:grid-cols-4">
 						<div className="rounded-2xl border border-white/5 bg-slate-950/45 p-4 hover:border-cyan-500/20 transition">
 							<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">4-Yr Spendable Cash</p>
 							<p className="mt-2 text-lg font-bold text-white">{formatCurrency(summaryA.total4YearLiquidity)}</p>
@@ -1083,7 +1137,15 @@ export default function TotalCompCalculator() {
 						<div className="rounded-2xl border border-white/5 bg-slate-950/45 p-4 hover:border-rose-500/20 transition">
 							<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">Out-of-Pocket Drag</p>
 							<p className="mt-2 text-lg font-bold text-rose-300">-{formatCurrency(summaryA.totalOutofPocketDrag)}</p>
-							<p className="text-[10px] text-slate-500 mt-1">Exercise cost + health</p>
+							<p className="text-[10px] text-slate-500 mt-1">Purchase cost + health</p>
+						</div>
+						<div className="rounded-2xl border border-white/5 bg-slate-950/45 p-4 hover:border-amber-500/20 transition">
+							<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">Exit Readiness No.</p>
+							<p className="mt-2 text-lg font-bold text-amber-300">{formatCurrency(summaryA.exitReadinessNumber)}</p>
+							<div className="text-[10px] text-slate-500 mt-1">
+								Option purchase cost
+								<p className="text-[9px] text-amber-500/90 mt-0.5" title="Alternative Minimum Tax (AMT) liabilities are not included in this figure">⚠️ Excludes AMT</p>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -1098,7 +1160,7 @@ export default function TotalCompCalculator() {
 							</span>
 						)}
 					</div>
-					<div className="grid gap-4 sm:grid-cols-3">
+					<div className="grid gap-4 grid-cols-2 lg:grid-cols-4">
 						<div className="rounded-2xl border border-white/5 bg-slate-950/45 p-4 hover:border-purple-500/20 transition">
 							<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">4-Yr Spendable Cash</p>
 							<p className="mt-2 text-lg font-bold text-white">{formatCurrency(summaryB.total4YearLiquidity)}</p>
@@ -1112,7 +1174,15 @@ export default function TotalCompCalculator() {
 						<div className="rounded-2xl border border-white/5 bg-slate-950/45 p-4 hover:border-rose-500/20 transition">
 							<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">Out-of-Pocket Drag</p>
 							<p className="mt-2 text-lg font-bold text-rose-300">-{formatCurrency(summaryB.totalOutofPocketDrag)}</p>
-							<p className="text-[10px] text-slate-500 mt-1">Exercise cost + health</p>
+							<p className="text-[10px] text-slate-500 mt-1">Purchase cost + health</p>
+						</div>
+						<div className="rounded-2xl border border-white/5 bg-slate-950/45 p-4 hover:border-purple-500/20 transition">
+							<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">Exit Readiness No.</p>
+							<p className="mt-2 text-lg font-bold text-amber-300">{formatCurrency(summaryB.exitReadinessNumber)}</p>
+							<div className="text-[10px] text-slate-500 mt-1">
+								Option purchase cost
+								<p className="text-[9px] text-amber-500/90 mt-0.5" title="Alternative Minimum Tax (AMT) liabilities are not included in this figure">⚠️ Excludes AMT</p>
+							</div>
 						</div>
 					</div>
 				</div>

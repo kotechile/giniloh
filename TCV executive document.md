@@ -58,13 +58,16 @@ $$\text{Purchase Cost}_t = \text{Vesting Shares}_t \times \text{Grant Price}$$
 ---
 
 ### C. Perks Layer
-TCV models two primary wealth-boosting perks:
+TCV models three primary wealth-boosting perks:
 1. **401(k) Matching**: Calculated using the match rate and match cap:
    $$\text{401(k) Match} = \text{Base Salary} \times \frac{\text{Match \%}}{100} \times \frac{\text{Cap \%}}{100}$$
 2. **ESPP Yield Boost**: For firms offering Employee Stock Purchase Plans with quick-sale programs, the discount creates a cash flow yield:
    $$\text{ESPP Yield} = \left(\text{Base Salary} \times \text{Contribution \%}\right) \times \frac{\text{Discount \%}}{1 - \text{Discount \%}}$$
+3. **PTO Valuation**: Monetization of accrued unused paid leave:
+   $$\text{Daily Wage} = \frac{\text{Base Salary}}{\text{Annual Working Days}}$$
+   $$\text{PTO Value} = \text{Daily Wage} \times \text{Unused PTO Days}$$
 
-$$\text{Perks Value}_t = \text{401(k) Match} + \text{ESPP Yield}$$
+$$\text{Perks Value}_t = \text{401(k) Match} + \text{ESPP Yield} + \text{PTO Value}$$
 
 ---
 
@@ -72,6 +75,9 @@ $$\text{Perks Value}_t = \text{401(k) Match} + \text{ESPP Yield}$$
 Taxes are subtracted from taxable income (Base Salary + Bonus + Liquid Stock Units):
 * **Automatic progressive estimator**: Applies standard 2025/2026 Federal tax brackets (Single or Married filing jointly) plus a representative flat state income tax rate (CA: 9.3%, NY: 6.5%, MD: 4.75%, TX/WA: 0.0%, other: 5.0%).
 * **Manual override**: Bypasses progressive estimators and applies a flat effective rate (e.g., 30%) directly to taxable income.
+* **RSU Tax Underwithholding Estimations**: Supplemental wages (RSUs) are typically withheld at a flat 22% rate. If the user's marginal federal tax rate ($MTR_{fed}$) is higher, a tax season shortfall is generated:
+  $$\text{Tax Shortfall} = \text{Liquid Vested RSUs} \times (MTR_{fed} - 0.22)$$
+  The tool calculates this shortfall and displays a warning tooltip in the interface to highlight the out-of-pocket tax liability.
 
 ---
 
@@ -101,6 +107,7 @@ $$\text{Net Spendable Cash}_t = \text{Base Cash}_t + \text{Bonus Cash}_t + \text
    * **4-Yr Spendable Cash**: Your total post-tax liquid money.
    * **Total Paper Wealth**: Illiquid value locked in stock options or private units.
    * **Out-of-Pocket Drag**: Total cash required to exercise options and pay premiums.
+   * **Exit Readiness Number (ERN)**: Cumulative cost to purchase all vested options if you leave: $ERN = \sum (\text{Vested Shares} \times \text{Grant Price})$. Note: AMT tax calculations are excluded from this metric.
 
 ---
 
