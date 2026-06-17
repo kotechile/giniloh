@@ -51,7 +51,7 @@ export const calculatorTools = [
 		title: 'Career Relocation Cost & Payback Calculator',
 		slug: 'relocation-cost',
 		href: '/calculators/relocation-cost/',
-		status: 'Proposed',
+		status: 'Live',
 		accent: 'blue',
 		description:
 			'Find out how many months of a new salary bump it takes to break even on moving costs, lease breaks, and new deposits.',

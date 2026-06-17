@@ -1,57 +1,80 @@
 ---
 import CalculatorShell from '../../components/calculators/CalculatorShell.astro';
 import JsonLd from '../../components/JsonLd.astro';
+import RelocationCalculator from '../../components/calculators/react/RelocationCalculator';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
 
 const calculator = getCalculatorBySlug('relocation-cost');
 const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+
+const faqItems = [
+	{
+		question: 'What is OBBBA tax alignment?',
+		answer:
+			'The One Big Beautiful Bill Act (OBBBA) permanent rules treat civilian relocation benefits reimbursed by employers as fully taxable supplemental compensation. This tool calculates federal, FICA, state, and local taxes on benefits.'
+	},
+	{
+		question: 'How does California AB 692 compliance work?',
+		answer:
+			'If you relocate to California, state law prohibits cliff repayment schedules and caps stay durations at 24 months. This calculator automatically triggers guardrails to enforce California compliance.'
+	},
+	{
+		question: 'What are qualified moving costs?',
+		answer:
+			'Certain states (like CA, NY, NJ) exclude physical transit and packing expenses from state income tax calculations, even if they are taxed federally. This modeler handles these state exclusions dynamically.'
+	}
+];
 ---
 
 <BaseLayout
-	title="Career Relocation Cost & Payback Calculator | Gini Loh"
-	description="Find out how many months of a new salary bump it takes to break even on moving costs, lease breaks, and new deposits."
+	title="Geographic Relocation & Tax Adjustment Modeler | Gini Loh"
+	description="Model moving costs, deposit offsets, lease breaks, and multi-jurisdictional tax gross-ups against a salary bump to find your net-of-tax payback period."
 >
 	<link slot="head" rel="canonical" href={new URL('/calculators/relocation-cost/', Astro.site).toString()} />
 	{schema ? <JsonLd slot="head" data={schema} /> : null}
 
 	<CalculatorShell
-		eyebrow="Relocation Calculator"
-		title="Career Relocation Cost &amp; Payback Calculator"
-		description="Model moving costs, deposit offsets, and lease break fees against a prospective job bump to find your precise break-even period."
+		eyebrow="Relocation Modeler"
+		title="Relocation Payback &amp; Tax Adjustment Modeler"
+		description="Analyze net-of-tax break-even, prorate lease termination liabilities, optimize corporate gross-ups, and generate compliant retention contracts."
 	>
-		<div slot="calculator" class="rounded-[2rem] border border-blue-500/20 bg-slate-900/60 p-8 shadow-2xl backdrop-blur-md">
-			<div class="flex flex-col items-center justify-center py-12 text-center">
-				<div class="h-16 w-16 rounded-full bg-blue-500/10 border border-blue-500/30 flex items-center justify-center mb-6">
-					<svg class="w-8 h-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-					</svg>
-				</div>
-				<h2 class="text-2xl font-bold text-white tracking-tight">Interactive Module Under Development</h2>
-				<p class="mt-3 text-slate-400 max-w-md text-sm leading-6">
-					The relocation break-even modeler and tax adjustment tool is scheduled for deployment in Phase 4.
-				</p>
-				
-				<div class="mt-8 p-6 rounded-xl border border-slate-800 bg-slate-950/50 w-full max-w-sm text-left">
-					<p class="font-mono text-xs uppercase tracking-widest text-slate-500">Upcoming Features</p>
-					<ul class="mt-3 space-y-2 text-xs font-mono text-slate-400">
-						<li>• Full moving expense checklist (packers, transport, setup)</li>
-						<li>• Lease break penalty integration</li>
-						<li>• Net-of-tax salary increase break-even amortization</li>
-					</ul>
-				</div>
-				
-				<a href="/calculators/" class="mt-8 btn-primary">Back to Calculator Hub</a>
-			</div>
+		<div slot="calculator">
+			<RelocationCalculator client:load />
 		</div>
 
 		<div slot="aside" class="grid gap-6">
 			<article class="overflow-hidden rounded-[1.8rem] border border-blue-500/20 bg-[linear-gradient(135deg,rgba(15,23,42,0.92),rgba(2,6,23,0.98)_70%,rgba(59,130,246,0.12))] p-6 shadow-[0_0_40px_rgba(59,130,246,0.08)]">
-				<p class="font-mono text-xs uppercase tracking-[0.28em] text-blue-200/80">Amortization note</p>
-				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white">Relocation Payback</h2>
-				<p class="mt-4 text-sm leading-7 text-slate-300">
-					A $20,000 raise is exciting, but if relocating costs $10,000 out of pocket (including double-rent or lease breaks), it will take you over half a year of post-tax earning just to break even. Calculating this helps you negotiate better sign-on bonuses.
-				</p>
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-blue-200/80">Operator notes</p>
+				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white">How to use this modeler</h2>
+				<ol class="mt-5 grid gap-4 text-sm leading-7 text-slate-300">
+					<li>1. Enter your origin and proposed destination salaries and tax jurisdictions.</li>
+					<li>2. Input your physical transit and origin/destination services in the Expense Ledger.</li>
+					<li>3. Detail your lease termination fees and security deposit offsets in the Lease Break tab.</li>
+					<li>4. Review your net-of-tax payback projection, gross-up models, and clawback agreements.</li>
+				</ol>
+			</article>
+
+			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">Formulas</p>
+				<div class="mt-4 rounded-[1.3rem] border border-slate-800/90 bg-slate-950/60 p-5 font-mono text-xs leading-6 text-slate-200">
+					<p class="font-semibold text-cyan-300">Payback Period:</p>
+					<p>T_break = C_out_of_pocket / I_monthly_gain</p>
+					<p class="mt-3 font-semibold text-cyan-300">Net Lease Break Cost:</p>
+					<p>F_net = R_prorated + F_flat + D_lost - A_mitigation</p>
+				</div>
+			</article>
+
+			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">FAQ</p>
+				<div class="mt-5 grid gap-4">
+					{faqItems.map((item) => (
+						<div class="rounded-[1.2rem] border border-slate-800/80 bg-slate-950/55 p-4">
+							<h2 class="text-sm font-semibold text-white">{item.question}</h2>
+							<p class="mt-2 text-xs leading-6 text-slate-400">{item.answer}</p>
+						</div>
+					))}
+				</div>
 			</article>
 		</div>
 	</CalculatorShell>
