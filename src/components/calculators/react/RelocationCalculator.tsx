@@ -229,7 +229,7 @@ export default function RelocationCalculator() {
 						<p className="mt-4 max-w-2xl text-sm leading-7 text-slate-300">
 							Model moving costs, lease breaks, multi-jurisdictional tax changes, and stays-or-pay agreements under the 2026 OBBBA tax guidelines.
 						</p>
-						<div className="mt-6 flex flex-wrap gap-2.5">
+						<div className="mt-6 flex flex-wrap gap-2.5 items-center">
 							<span className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-200">
 								OBBBA 2026 Compliant
 							</span>
@@ -239,6 +239,12 @@ export default function RelocationCalculator() {
 							<span className="rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-200">
 								CA AB 692 Guardrails
 							</span>
+							<button
+								onClick={() => window.print()}
+								className="rounded-full border border-blue-400 bg-blue-600/10 px-4 py-1.5 font-mono text-[0.68rem] uppercase tracking-[0.24em] text-blue-300 transition hover:bg-blue-600 hover:text-white cursor-pointer ml-auto print:hidden"
+							>
+								Print PDF Summary
+							</button>
 						</div>
 					</div>
 					

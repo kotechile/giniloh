@@ -1232,3 +1232,32 @@ html.light .bg-cyan-500\/8 {
 html.light .text-cyan-200\/80 {
   color: #0369a1 !important; /* darker cyan */
 }
+
+/* Print Stylesheet overrides for Relocation & Tax dashboard */
+@media print {
+	nav, 
+	header, 
+	footer, 
+	.print\:hidden,
+	[slot="aside"],
+	.site-background,
+	.orb {
+		display: none !important;
+	}
+	
+	body, 
+	html {
+		background: #ffffff !important;
+		color: #000000 !important;
+	}
+	
+	main,
+	.calculator-shell,
+	.calculator-shell-grid {
+		width: 100% !important;
+		max-width: 100% !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		display: block !important;
+	}
+}
