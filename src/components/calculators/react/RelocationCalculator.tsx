@@ -1,21 +1,42 @@
 import { useState, useId, useMemo, useRef, useEffect } from 'react';
-import { calculateRelocation, calculateTaxForYear, doesStateExcludeQualifiedRelocation, calculateFederalTax, calculateFicaTax } from '../../../lib/calculators/relocation';
+import { calculateRelocation, calculateTaxForYear, doesStateExcludeQualifiedRelocation, calculateFederalTax, calculateFicaTax, getRecommendedLocalTaxRate } from '../../../lib/calculators/relocation';
 import { formatCurrency, formatPercent } from '../../../lib/calculators/format';
 import type { RelocationInputs, RelocationExpense, TaxYearSummary } from '../../../lib/calculators/types';
 
 const US_STATES = [
-	{ code: 'CA', name: 'California' },
-	{ code: 'NY', name: 'New York' },
-	{ code: 'NJ', name: 'New Jersey' },
-	{ code: 'MD', name: 'Maryland' },
-	{ code: 'VA', name: 'Virginia' },
-	{ code: 'MA', name: 'Massachusetts' },
-	{ code: 'PA', name: 'Pennsylvania' },
-	{ code: 'AR', name: 'Arkansas' },
-	{ code: 'HI', name: 'Hawaii' },
-	{ code: 'TX', name: 'Texas (No Income Tax)' },
-	{ code: 'FL', name: 'Florida (No Income Tax)' },
-	{ code: 'WA', name: 'Washington (No Income Tax)' },
+	// Group 1: No State Income Tax
+	{ code: 'AK', name: 'Alaska (No Tax)' },
+	{ code: 'FL', name: 'Florida (No Tax)' },
+	{ code: 'NV', name: 'Nevada (No Tax)' },
+	{ code: 'NH', name: 'New Hampshire (No Tax)' },
+	{ code: 'SD', name: 'South Dakota (No Tax)' },
+	{ code: 'TN', name: 'Tennessee (No Tax)' },
+	{ code: 'TX', name: 'Texas (No Tax)' },
+	{ code: 'WA', name: 'Washington (No Wage Tax)' },
+	{ code: 'WY', name: 'Wyoming (No Tax)' },
+
+	// Group 2: Moving Deductions Preserved
+	{ code: 'CA', name: 'California (Moving Excl.)' },
+	{ code: 'NY', name: 'New York (Moving Excl.)' },
+	{ code: 'NJ', name: 'New Jersey (Moving Excl.)' },
+	{ code: 'MA', name: 'Massachusetts (Moving Excl.)' },
+	{ code: 'PA', name: 'Pennsylvania (Moving Excl.)' },
+	{ code: 'AR', name: 'Arkansas (Moving Excl.)' },
+	{ code: 'HI', name: 'Hawaii (Moving Excl.)' },
+
+	// Group 3: Updated 2026 / Other Key States
+	{ code: 'IN', name: 'Indiana (2.95% flat)' },
+	{ code: 'KY', name: 'Kentucky (3.5% flat)' },
+	{ code: 'MD', name: 'Maryland (Progressive)' },
+	{ code: 'MS', name: 'Mississippi (4% flat)' },
+	{ code: 'MT', name: 'Montana (5.65% max)' },
+	{ code: 'NE', name: 'Nebraska (4.55% max)' },
+	{ code: 'NC', name: 'North Carolina (3.99% flat)' },
+	{ code: 'OH', name: 'Ohio (2.75% flat)' },
+	{ code: 'OK', name: 'Oklahoma (4.5% max)' },
+	{ code: 'UT', name: 'Utah (4.5% flat)' },
+	{ code: 'VA', name: 'Virginia (Progressive)' },
+
 	{ code: 'OTHER', name: 'Other State (5% flat est.)' }
 ];
 
@@ -62,6 +83,16 @@ export default function RelocationCalculator() {
 	const [clawbackDeferralOption, setClawbackDeferralOption] = useState('payroll_deduction');
 	const [employeeName, setEmployeeName] = useState('Alex Rivers');
 	const [companyName, setCompanyName] = useState('Acme Technologies Inc.');
+
+	const handleOriginStateChange = (state: string) => {
+		setOriginState(state);
+		setOriginLocalRate(getRecommendedLocalTaxRate(state));
+	};
+
+	const handleDestStateChange = (state: string) => {
+		setDestState(state);
+		setDestLocalRate(getRecommendedLocalTaxRate(state));
+	};
 
 	// Ensure CA stays compliant
 	useEffect(() => {
@@ -306,7 +337,7 @@ export default function RelocationCalculator() {
 								<label className="block text-xs text-slate-400 mb-1">Origin State</label>
 								<select
 									value={originState}
-									onChange={(e) => setOriginState(e.target.value)}
+									onChange={(e) => handleOriginStateChange(e.target.value)}
 									className="w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm text-white"
 								>
 									{US_STATES.map((s) => (
@@ -315,7 +346,12 @@ export default function RelocationCalculator() {
 								</select>
 							</div>
 							<div>
-								<label className="block text-xs text-slate-400 mb-1">Local Tax Rate (%)</label>
+								<div className="flex justify-between items-center mb-1">
+									<label className="block text-xs text-slate-400">Local Tax Rate (%)</label>
+									{getRecommendedLocalTaxRate(originState) > 0 && (
+										<span className="text-[10px] text-blue-400 font-mono">Rec: {getRecommendedLocalTaxRate(originState)}%</span>
+									)}
+								</div>
 								<input
 									type="number"
 									step={0.05}
@@ -345,7 +381,7 @@ export default function RelocationCalculator() {
 								<label className="block text-xs text-slate-400 mb-1">Destination State</label>
 								<select
 									value={destState}
-									onChange={(e) => setDestState(e.target.value)}
+									onChange={(e) => handleDestStateChange(e.target.value)}
 									className="w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm text-white"
 								>
 									{US_STATES.map((s) => (
@@ -354,7 +390,12 @@ export default function RelocationCalculator() {
 								</select>
 							</div>
 							<div>
-								<label className="block text-xs text-slate-400 mb-1">Local Tax Rate (%)</label>
+								<div className="flex justify-between items-center mb-1">
+									<label className="block text-xs text-slate-400">Local Tax Rate (%)</label>
+									{getRecommendedLocalTaxRate(destState) > 0 && (
+										<span className="text-[10px] text-blue-400 font-mono">Rec: {getRecommendedLocalTaxRate(destState)}%</span>
+									)}
+								</div>
 								<input
 									type="number"
 									step={0.05}

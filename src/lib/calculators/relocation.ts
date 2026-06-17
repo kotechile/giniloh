@@ -41,13 +41,33 @@ const STATE_DEDUCTIONS: Record<string, { single: number; married: number; hoh: n
 	MA: { single: 4400, married: 8800, hoh: 4400 },
 	PA: { single: 0, married: 0, hoh: 0 },
 	AR: { single: 2300, married: 4600, hoh: 2300 },
-	HI: { single: 2200, married: 4400, hoh: 4400 }
+	HI: { single: 2200, married: 4400, hoh: 4400 },
+	IN: { single: 1000, married: 2000, hoh: 1000 },
+	KY: { single: 3160, married: 3160, hoh: 3160 },
+	MS: { single: 2300, married: 4600, hoh: 2300 },
+	MT: { single: 5240, married: 10480, hoh: 5240 },
+	NE: { single: 8500, married: 17000, hoh: 8500 },
+	NC: { single: 12750, married: 25500, hoh: 12750 },
+	OH: { single: 2400, married: 4800, hoh: 2400 },
+	OK: { single: 6350, married: 12700, hoh: 6350 },
+	UT: { single: 0, married: 0, hoh: 0 }
 };
 
 // State marginal tax rates (Simplified brackets or flat rate)
 const STATE_TAX_RATES: Record<string, (taxable: number, filingStatus: 'single' | 'married' | 'hoh') => number> = {
+	// Group 1: No Tax States
+	AK: () => 0,
+	FL: () => 0,
+	NV: () => 0,
+	NH: () => 0,
+	SD: () => 0,
+	TN: () => 0,
+	TX: () => 0,
+	WA: () => 0,
+	WY: () => 0,
+
+	// Group 2: Moving Deductions Allowed
 	CA: (taxable) => {
-		// CA progressive brackets up to 12.3%
 		if (taxable <= 10412) return taxable * 0.01;
 		if (taxable <= 24684) return 104.12 + (taxable - 10412) * 0.02;
 		if (taxable <= 38959) return 389.56 + (taxable - 24684) * 0.04;
@@ -56,10 +76,10 @@ const STATE_TAX_RATES: Record<string, (taxable: number, filingStatus: 'single' |
 		if (taxable <= 348696) return 3004.06 + (taxable - 68263) * 0.093;
 		if (taxable <= 418424) return 29084.33 + (taxable - 348696) * 0.103;
 		if (taxable <= 697364) return 36266.32 + (taxable - 418424) * 0.113;
-		return 67786.54 + (taxable - 697364) * 0.123;
+		if (taxable <= 1000000) return 67786.54 + (taxable - 697364) * 0.123;
+		return 105010.77 + (taxable - 1000000) * 0.133; // CA top rate 13.30%
 	},
 	NY: (taxable) => {
-		// NY progressive brackets up to 10.9%
 		if (taxable <= 8500) return taxable * 0.04;
 		if (taxable <= 11700) return 340 + (taxable - 8500) * 0.045;
 		if (taxable <= 13900) return 484 + (taxable - 11700) * 0.0525;
@@ -71,7 +91,6 @@ const STATE_TAX_RATES: Record<string, (taxable: number, filingStatus: 'single' |
 		return 2510499 + (taxable - 25000000) * 0.109;
 	},
 	NJ: (taxable) => {
-		// NJ progressive brackets up to 10.75%
 		if (taxable <= 20000) return taxable * 0.014;
 		if (taxable <= 35000) return 280 + (taxable - 20000) * 0.0175;
 		if (taxable <= 40000) return 542.5 + (taxable - 35000) * 0.035;
@@ -80,40 +99,18 @@ const STATE_TAX_RATES: Record<string, (taxable: number, filingStatus: 'single' |
 		if (taxable <= 1000000) return 29723.75 + (taxable - 500000) * 0.0897;
 		return 74573.75 + (taxable - 1000000) * 0.1075;
 	},
-	MD: (taxable) => {
-		// MD progressive brackets up to 5.75%
-		if (taxable <= 1000) return taxable * 0.02;
-		if (taxable <= 2000) return 20 + (taxable - 1000) * 0.03;
-		if (taxable <= 3000) return 50 + (taxable - 2000) * 0.04;
-		if (taxable <= 100000) return 90 + (taxable - 3000) * 0.0475;
-		if (taxable <= 125000) return 4697.5 + (taxable - 100000) * 0.05;
-		if (taxable <= 150000) return 5947.5 + (taxable - 125000) * 0.0525;
-		if (taxable <= 250000) return 7260 + (taxable - 150000) * 0.055;
-		return 12760 + (taxable - 250000) * 0.0575;
-	},
-	VA: (taxable) => {
-		// VA progressive brackets up to 5.75%
-		if (taxable <= 3000) return taxable * 0.02;
-		if (taxable <= 5000) return 60 + (taxable - 3000) * 0.03;
-		if (taxable <= 17000) return 120 + (taxable - 5000) * 0.05;
-		return 720 + (taxable - 17000) * 0.0575;
-	},
 	MA: (taxable) => {
-		// MA flat 5%
-		return taxable * 0.05;
+		// MA graduated structure: 5% up to 1M, 9% above (4% surtax)
+		return taxable <= 1000000 ? taxable * 0.05 : 50000 + (taxable - 1000000) * 0.09;
 	},
 	PA: (taxable) => {
-		// PA flat 3.07%
-		return taxable * 0.0307;
+		return taxable * 0.0307; // flat 3.07%
 	},
 	AR: (taxable) => {
-		// AR progressive brackets up to 4.7%
-		if (taxable <= 4900) return taxable * 0.02;
-		if (taxable <= 9900) return 98 + (taxable - 4900) * 0.03;
-		return 248 + (taxable - 9900) * 0.047;
+		// AR two-bracket structure with top rate 3.90%
+		return taxable <= 8600 ? taxable * 0.02 : 172 + (taxable - 8600) * 0.039;
 	},
 	HI: (taxable) => {
-		// HI progressive brackets up to 11%
 		if (taxable <= 2400) return taxable * 0.014;
 		if (taxable <= 4800) return 33.6 + (taxable - 2400) * 0.032;
 		if (taxable <= 9600) return 110.4 + (taxable - 4800) * 0.055;
@@ -126,12 +123,76 @@ const STATE_TAX_RATES: Record<string, (taxable: number, filingStatus: 'single' |
 		if (taxable <= 175000) return 11628.6 + (taxable - 150000) * 0.09;
 		if (taxable <= 200000) return 13878.6 + (taxable - 175000) * 0.10;
 		return 16378.6 + (taxable - 200000) * 0.11;
+	},
+
+	// Group 3: Other Key States with 2026 Structural/Rate Updates
+	IN: (taxable) => {
+		return taxable * 0.0295; // flat 2.95%
+	},
+	KY: (taxable) => {
+		return taxable * 0.035; // flat 3.50%
+	},
+	MD: (taxable) => {
+		// MD progressive brackets with top rate 6.50% over 1M
+		if (taxable <= 1000) return taxable * 0.02;
+		if (taxable <= 2000) return 20 + (taxable - 1000) * 0.03;
+		if (taxable <= 3000) return 50 + (taxable - 2000) * 0.04;
+		if (taxable <= 100000) return 90 + (taxable - 3000) * 0.0475;
+		if (taxable <= 125000) return 4697.5 + (taxable - 100000) * 0.05;
+		if (taxable <= 150000) return 5947.5 + (taxable - 125000) * 0.0525;
+		if (taxable <= 250000) return 7260 + (taxable - 150000) * 0.055;
+		if (taxable <= 1000000) return 12760 + (taxable - 250000) * 0.0575;
+		return 55885 + (taxable - 1000000) * 0.065;
+	},
+	MS: (taxable) => {
+		return taxable * 0.04; // flat 4.00%
+	},
+	MT: (taxable) => {
+		// MT graduated with reduced top rate of 5.65%
+		return taxable <= 20500 ? taxable * 0.047 : 963.5 + (taxable - 20500) * 0.0565;
+	},
+	NE: (taxable) => {
+		// NE graduated with reduced top rate of 4.55%
+		if (taxable <= 3800) return taxable * 0.0246;
+		if (taxable <= 19600) return 93.48 + (taxable - 3800) * 0.0351;
+		if (taxable <= 35800) return 648.1 + (taxable - 19600) * 0.0400;
+		return 1296.1 + (taxable - 35800) * 0.0455;
+	},
+	NC: (taxable) => {
+		return taxable * 0.0399; // flat 3.99%
+	},
+	OH: (taxable) => {
+		// OH flat 2.75% for income exceeding $26,050
+		return taxable > 26050 ? (taxable - 26050) * 0.0275 : 0;
+	},
+	OK: (taxable) => {
+		// OK three tiers with top rate of 4.50%
+		if (taxable <= 1000) return taxable * 0.005;
+		if (taxable <= 5000) return 5 + (taxable - 1000) * 0.025;
+		return 105 + (taxable - 5000) * 0.045;
+	},
+	UT: (taxable) => {
+		return taxable * 0.045; // flat 4.50%
+	},
+	VA: (taxable) => {
+		if (taxable <= 3000) return taxable * 0.02;
+		if (taxable <= 5000) return 60 + (taxable - 3000) * 0.03;
+		if (taxable <= 17000) return 120 + (taxable - 5000) * 0.05;
+		return 720 + (taxable - 17000) * 0.0575;
 	}
 };
 
 // Exclude relocation expenses from state income calculation if conformant
 export function doesStateExcludeQualifiedRelocation(state: string): boolean {
 	return ['CA', 'NY', 'NJ', 'MA', 'PA', 'AR', 'HI'].includes(state);
+}
+
+// Recommended local county/city tax rate by state
+export function getRecommendedLocalTaxRate(state: string): number {
+	if (state === 'MD') return 3.00; // Maryland county taxes (range 2.25% to 3.30%, recommend 3.0%)
+	if (state === 'IN') return 1.50; // Indiana local tax
+	if (state === 'NY') return 3.876; // NYC local tax
+	return 0.00; // Default
 }
 
 // Prorate Rent Calculations (Epic 2)
