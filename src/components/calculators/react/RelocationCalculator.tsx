@@ -86,12 +86,14 @@ export default function RelocationCalculator() {
 
 	const handleOriginStateChange = (state: string) => {
 		setOriginState(state);
-		setOriginLocalRate(getRecommendedLocalTaxRate(state));
+		const recRate = getRecommendedLocalTaxRate(state);
+		setOriginLocalRate(recRate);
 	};
 
 	const handleDestStateChange = (state: string) => {
 		setDestState(state);
-		setDestLocalRate(getRecommendedLocalTaxRate(state));
+		const recRate = getRecommendedLocalTaxRate(state);
+		setDestLocalRate(recRate);
 	};
 
 	// Ensure CA stays compliant
