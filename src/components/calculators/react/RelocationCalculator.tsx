@@ -4,39 +4,33 @@ import { formatCurrency, formatPercent } from '../../../lib/calculators/format';
 import type { RelocationInputs, RelocationExpense, TaxYearSummary } from '../../../lib/calculators/types';
 
 const US_STATES = [
-	// Group 1: No State Income Tax
 	{ code: 'AK', name: 'Alaska (No Tax)' },
-	{ code: 'FL', name: 'Florida (No Tax)' },
-	{ code: 'NV', name: 'Nevada (No Tax)' },
-	{ code: 'NH', name: 'New Hampshire (No Tax)' },
-	{ code: 'SD', name: 'South Dakota (No Tax)' },
-	{ code: 'TN', name: 'Tennessee (No Tax)' },
-	{ code: 'TX', name: 'Texas (No Tax)' },
-	{ code: 'WA', name: 'Washington (No Wage Tax)' },
-	{ code: 'WY', name: 'Wyoming (No Tax)' },
-
-	// Group 2: Moving Deductions Preserved
-	{ code: 'CA', name: 'California (Moving Excl.)' },
-	{ code: 'NY', name: 'New York (Moving Excl.)' },
-	{ code: 'NJ', name: 'New Jersey (Moving Excl.)' },
-	{ code: 'MA', name: 'Massachusetts (Moving Excl.)' },
-	{ code: 'PA', name: 'Pennsylvania (Moving Excl.)' },
 	{ code: 'AR', name: 'Arkansas (Moving Excl.)' },
+	{ code: 'CA', name: 'California (Moving Excl.)' },
+	{ code: 'FL', name: 'Florida (No Tax)' },
 	{ code: 'HI', name: 'Hawaii (Moving Excl.)' },
-
-	// Group 3: Updated 2026 / Other Key States
 	{ code: 'IN', name: 'Indiana (2.95% flat)' },
 	{ code: 'KY', name: 'Kentucky (3.5% flat)' },
 	{ code: 'MD', name: 'Maryland (Progressive)' },
+	{ code: 'MA', name: 'Massachusetts (Moving Excl.)' },
 	{ code: 'MS', name: 'Mississippi (4% flat)' },
 	{ code: 'MT', name: 'Montana (5.65% max)' },
 	{ code: 'NE', name: 'Nebraska (4.55% max)' },
+	{ code: 'NV', name: 'Nevada (No Tax)' },
+	{ code: 'NH', name: 'New Hampshire (No Tax)' },
+	{ code: 'NJ', name: 'New Jersey (Moving Excl.)' },
+	{ code: 'NY', name: 'New York (Moving Excl.)' },
 	{ code: 'NC', name: 'North Carolina (3.99% flat)' },
 	{ code: 'OH', name: 'Ohio (2.75% flat)' },
 	{ code: 'OK', name: 'Oklahoma (4.5% max)' },
+	{ code: 'PA', name: 'Pennsylvania (Moving Excl.)' },
+	{ code: 'SD', name: 'South Dakota (No Tax)' },
+	{ code: 'TN', name: 'Tennessee (No Tax)' },
+	{ code: 'TX', name: 'Texas (No Tax)' },
 	{ code: 'UT', name: 'Utah (4.5% flat)' },
 	{ code: 'VA', name: 'Virginia (Progressive)' },
-
+	{ code: 'WA', name: 'Washington (No Wage Tax)' },
+	{ code: 'WY', name: 'Wyoming (No Tax)' },
 	{ code: 'OTHER', name: 'Other State (5% flat est.)' }
 ];
 
@@ -692,19 +686,19 @@ export default function RelocationCalculator() {
 							<table className="w-full border-collapse text-left text-sm">
 								<thead>
 									<tr className="border-b border-slate-800/80 [.light_&]:border-slate-200">
-										<th className="pb-3.5 font-mono text-[0.68rem] uppercase tracking-[0.2em] text-slate-500">Item Description</th>
-										<th className="pb-3.5 font-mono text-[0.68rem] uppercase tracking-[0.2em] text-slate-500">Category</th>
-										<th className="pb-3.5 font-mono text-[0.68rem] uppercase tracking-[0.2em] text-slate-500">Amount</th>
-										<th className="pb-3.5 text-center font-mono text-[0.68rem] uppercase tracking-[0.2em] text-slate-500">Reimbursed</th>
-										<th className="pb-3.5 text-center font-mono text-[0.68rem] uppercase tracking-[0.2em] text-slate-500">Grossed-Up</th>
-										<th className="pb-3.5 text-center font-mono text-[0.68rem] uppercase tracking-[0.2em] text-slate-500">Qualified (Exclusion)</th>
-										<th className="pb-3.5 text-right font-mono text-[0.68rem] uppercase tracking-[0.2em] text-slate-500">Actions</th>
+										<th className="pb-3.5 pr-4 font-mono text-[0.68rem] uppercase tracking-wider text-slate-500 w-[30%]">Item Description</th>
+										<th className="pb-3.5 px-4 font-mono text-[0.68rem] uppercase tracking-wider text-slate-500 w-[20%]">Category</th>
+										<th className="pb-3.5 px-4 font-mono text-[0.68rem] uppercase tracking-wider text-slate-500 w-[15%]">Amount</th>
+										<th className="pb-3.5 px-4 text-center font-mono text-[0.68rem] uppercase tracking-wider text-slate-500 w-[12%]">Reimbursed</th>
+										<th className="pb-3.5 px-4 text-center font-mono text-[0.68rem] uppercase tracking-wider text-slate-500 w-[12%]">Grossed-Up</th>
+										<th className="pb-3.5 px-4 text-center font-mono text-[0.68rem] uppercase tracking-wider text-slate-500 w-[12%]">Qualified (Exclusion)</th>
+										<th className="pb-3.5 pl-4 text-right font-mono text-[0.68rem] uppercase tracking-wider text-slate-500 w-[9%]">Actions</th>
 									</tr>
 								</thead>
 								<tbody className="divide-y divide-slate-900/60 [.light_&]:divide-slate-100">
 									{expenses.map((exp) => (
 										<tr key={exp.id} className="group hover:bg-slate-900/10 [.light_&]:hover:bg-slate-50">
-											<td className="py-3.5 font-medium text-white">
+											<td className="py-3.5 pr-4 font-medium text-white">
 												<input
 													type="text"
 													value={exp.name}
@@ -712,7 +706,7 @@ export default function RelocationCalculator() {
 													className="bg-transparent text-white outline-none border-b border-transparent focus:border-slate-700 w-full"
 												/>
 											</td>
-											<td className="py-3.5">
+											<td className="py-3.5 px-4">
 												<select
 													value={exp.category}
 													onChange={(e) => updateExpense(exp.id, { category: e.target.value as any })}
@@ -723,7 +717,7 @@ export default function RelocationCalculator() {
 													<option value="destination" className="bg-slate-950">Destination setup</option>
 												</select>
 											</td>
-											<td className="py-3.5 font-mono text-white">
+											<td className="py-3.5 px-4 font-mono text-white">
 												<div className="flex items-center gap-1">
 													<span>$</span>
 													<input
@@ -734,7 +728,7 @@ export default function RelocationCalculator() {
 													/>
 												</div>
 											</td>
-											<td className="py-3.5 text-center">
+											<td className="py-3.5 px-4 text-center">
 												<input
 													type="checkbox"
 													checked={exp.isReimbursed}
@@ -742,7 +736,7 @@ export default function RelocationCalculator() {
 													className="h-4 w-4 rounded border-slate-700 bg-slate-900 text-blue-600 outline-none"
 												/>
 											</td>
-											<td className="py-3.5 text-center">
+											<td className="py-3.5 px-4 text-center">
 												<input
 													type="checkbox"
 													checked={exp.isGrossedUp}
@@ -751,7 +745,7 @@ export default function RelocationCalculator() {
 													className="h-4 w-4 rounded border-slate-700 bg-slate-900 text-blue-600 outline-none disabled:opacity-30"
 												/>
 											</td>
-											<td className="py-3.5 text-center">
+											<td className="py-3.5 px-4 text-center">
 												<input
 													type="checkbox"
 													checked={exp.isQualifiedMovingCost}
@@ -759,7 +753,7 @@ export default function RelocationCalculator() {
 													className="h-4 w-4 rounded border-slate-700 bg-slate-900 text-blue-600 outline-none"
 												/>
 											</td>
-											<td className="py-3.5 text-right">
+											<td className="py-3.5 pl-4 text-right">
 												<button
 													onClick={() => removeExpense(exp.id)}
 													className="text-rose-400 hover:text-rose-300 font-mono text-xs uppercase"
