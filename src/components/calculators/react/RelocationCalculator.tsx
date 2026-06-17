@@ -252,6 +252,132 @@ export default function RelocationCalculator() {
 				</div>
 			</div>
 
+			{/* Core Geographic & Salary Profile */}
+			<div className="rounded-[1.8rem] border border-slate-800 bg-slate-950/30 p-6 shadow-2xl backdrop-blur-md [.light_&]:border-slate-200 [.light_&]:bg-white">
+				<div className="border-b border-slate-900 pb-4 mb-5 [.light_&]:border-slate-100">
+					<span className="font-mono text-xs uppercase tracking-[0.24em] text-blue-400">Core Modeler Settings</span>
+					<h3 className="mt-1.5 text-xl font-semibold text-white">Demographics &amp; Salary Profile</h3>
+				</div>
+
+				<div className="grid gap-5 md:grid-cols-3">
+					<div className="rounded-xl border border-slate-900 bg-slate-950/45 p-4 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
+						<label className="block text-xs font-mono uppercase tracking-[0.2em] text-slate-500 mb-2">Filing Status</label>
+						<select
+							value={filingStatus}
+							onChange={(e) => setFilingStatus(e.target.value as any)}
+							className="w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm text-white"
+						>
+							<option value="single">Single</option>
+							<option value="married">Married (Filing Jointly)</option>
+							<option value="hoh">Head of Household</option>
+						</select>
+					</div>
+
+					<div className="rounded-xl border border-slate-900 bg-slate-950/45 p-4 flex items-center justify-between [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
+						<div>
+							<label className="block text-xs font-mono uppercase tracking-[0.2em] text-slate-500">Military Exemption</label>
+							<p className="text-[11px] text-slate-500 mt-1">IRC Section 132(g) Rules</p>
+						</div>
+						<input
+							type="checkbox"
+							checked={isMilitaryOrIntel}
+							onChange={(e) => setIsMilitaryOrIntel(e.target.checked)}
+							className="h-5 w-5 rounded border-slate-700 bg-slate-900 text-blue-600 outline-none"
+						/>
+					</div>
+
+					<div className="rounded-xl border border-slate-900 bg-slate-950/45 p-4 flex items-center justify-between [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
+						<div>
+							<label className="block text-xs font-mono uppercase tracking-[0.2em] text-slate-500">State Exceptions Engine</label>
+							<p className="text-[11px] text-slate-500 mt-1">
+								{doesStateExcludeQualifiedRelocation(destState) ? `${destState} Excludes moving costs` : 'No state exemptions'}
+							</p>
+						</div>
+						<span className={`h-2 w-2 rounded-full ${doesStateExcludeQualifiedRelocation(destState) ? 'bg-emerald-400 animate-pulse' : 'bg-slate-600'}`} />
+					</div>
+				</div>
+
+				<div className="grid gap-6 md:grid-cols-2 mt-6">
+					{/* Origin State Profile */}
+					<div className="space-y-4 border border-slate-800/80 rounded-[1.5rem] p-5 bg-slate-900/10 [.light_&]:border-slate-200 [.light_&]:bg-slate-50/50">
+						<h4 className="font-mono text-xs uppercase tracking-[0.24em] text-blue-300">Origin Location</h4>
+						<div className="grid gap-4">
+							<div>
+								<label className="block text-xs text-slate-400 mb-1">Origin State</label>
+								<select
+									value={originState}
+									onChange={(e) => setOriginState(e.target.value)}
+									className="w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm text-white"
+								>
+									{US_STATES.map((s) => (
+										<option key={s.code} value={s.code}>{s.name}</option>
+									))}
+								</select>
+							</div>
+							<div>
+								<label className="block text-xs text-slate-400 mb-1">Local Tax Rate (%)</label>
+								<input
+									type="number"
+									step={0.05}
+									value={originLocalRate}
+									onChange={(e) => setOriginLocalRate(Math.max(0, Number(e.target.value)))}
+									className="w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm font-mono text-white"
+								/>
+							</div>
+							<div>
+								<label className="block text-xs text-slate-400 mb-1">Base Annual Salary ($)</label>
+								<input
+									type="number"
+									step={1000}
+									value={originSalary}
+									onChange={(e) => setOriginSalary(Math.max(0, Number(e.target.value)))}
+									className="w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm font-mono text-white"
+								/>
+							</div>
+						</div>
+					</div>
+
+					{/* Destination State Profile */}
+					<div className="space-y-4 border border-slate-800/80 rounded-[1.5rem] p-5 bg-slate-900/10 [.light_&]:border-slate-200 [.light_&]:bg-slate-50/50">
+						<h4 className="font-mono text-xs uppercase tracking-[0.24em] text-blue-300">Destination Location</h4>
+						<div className="grid gap-4">
+							<div>
+								<label className="block text-xs text-slate-400 mb-1">Destination State</label>
+								<select
+									value={destState}
+									onChange={(e) => setDestState(e.target.value)}
+									className="w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm text-white"
+								>
+									{US_STATES.map((s) => (
+										<option key={s.code} value={s.code}>{s.name}</option>
+									))}
+								</select>
+							</div>
+							<div>
+								<label className="block text-xs text-slate-400 mb-1">Local Tax Rate (%)</label>
+								<input
+									type="number"
+									step={0.05}
+									value={destLocalRate}
+									onChange={(e) => setDestLocalRate(Math.max(0, Number(e.target.value)))}
+									className="w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm font-mono text-white"
+								/>
+							</div>
+							<div>
+								<label className="block text-xs text-slate-400 mb-1">Base Annual Salary ($)</label>
+								<input
+									type="number"
+									step={1000}
+									value={destSalary}
+									onChange={(e) => setDestSalary(Math.max(0, Number(e.target.value)))}
+									className="w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm font-mono text-white"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			{/* Sub-module Navigation Tabs */}
 			<div className="flex flex-wrap gap-1 rounded-2xl border border-slate-800 bg-slate-950/40 p-1 backdrop-blur-sm [.light_&]:border-slate-200 [.light_&]:bg-slate-100">
 				{[
@@ -752,132 +878,6 @@ export default function RelocationCalculator() {
 				{/* TAB 4: TAX ENGINE (Epic 3 & Section 5) */}
 				{activeTab === 'tax' && (
 					<div className="grid gap-6">
-						{/* Tax Inputs & Settings */}
-						<div className="rounded-[1.8rem] border border-slate-800 bg-slate-950/30 p-6 shadow-2xl backdrop-blur-md [.light_&]:border-slate-200 [.light_&]:bg-white">
-							<div className="border-b border-slate-900 pb-4 mb-5 [.light_&]:border-slate-100">
-								<span className="font-mono text-xs uppercase tracking-[0.24em] text-blue-400">Epic 3 Multi-Jurisdictional Tax Settings</span>
-								<h3 className="mt-1.5 text-xl font-semibold text-white">Demographics & Salary Profile</h3>
-							</div>
-
-							<div className="grid gap-5 md:grid-cols-3">
-								<div className="rounded-xl border border-slate-900 bg-slate-950/45 p-4 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
-									<label className="block text-xs font-mono uppercase tracking-[0.2em] text-slate-500 mb-2">Filing Status</label>
-									<select
-										value={filingStatus}
-										onChange={(e) => setFilingStatus(e.target.value as any)}
-										className="w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm text-white"
-									>
-										<option value="single">Single</option>
-										<option value="married">Married (Filing Jointly)</option>
-										<option value="hoh">Head of Household</option>
-									</select>
-								</div>
-
-								<div className="rounded-xl border border-slate-900 bg-slate-950/45 p-4 flex items-center justify-between [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
-									<div>
-										<label className="block text-xs font-mono uppercase tracking-[0.2em] text-slate-500">Military Exemption</label>
-										<p className="text-[11px] text-slate-500 mt-1">IRC Section 132(g) Rules</p>
-									</div>
-									<input
-										type="checkbox"
-										checked={isMilitaryOrIntel}
-										onChange={(e) => setIsMilitaryOrIntel(e.target.checked)}
-										className="h-5 w-5 rounded border-slate-700 bg-slate-900 text-blue-600 outline-none"
-									/>
-								</div>
-
-								<div className="rounded-xl border border-slate-900 bg-slate-950/45 p-4 flex items-center justify-between [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
-									<div>
-										<label className="block text-xs font-mono uppercase tracking-[0.2em] text-slate-500">State Exceptions Engine</label>
-										<p className="text-[11px] text-slate-500 mt-1">
-											{doesStateExcludeQualifiedRelocation(destState) ? `${destState} Excludes moving costs` : 'No state exemptions'}
-										</p>
-									</div>
-									<span className={`h-2 w-2 rounded-full ${doesStateExcludeQualifiedRelocation(destState) ? 'bg-emerald-400 animate-pulse' : 'bg-slate-600'}`} />
-								</div>
-							</div>
-
-							<div className="grid gap-6 md:grid-cols-2 mt-6">
-								{/* Origin State Profile */}
-								<div className="space-y-4 border border-slate-800/80 rounded-[1.5rem] p-5 bg-slate-900/10 [.light_&]:border-slate-200 [.light_&]:bg-slate-50/50">
-									<h4 className="font-mono text-xs uppercase tracking-[0.24em] text-blue-300">Origin Location</h4>
-									<div className="grid gap-4">
-										<div>
-											<label className="block text-xs text-slate-400 mb-1">Origin State</label>
-											<select
-												value={originState}
-												onChange={(e) => setOriginState(e.target.value)}
-												className="w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm text-white"
-											>
-												{US_STATES.map((s) => (
-													<option key={s.code} value={s.code}>{s.name}</option>
-												))}
-											</select>
-										</div>
-										<div>
-											<label className="block text-xs text-slate-400 mb-1">Local Tax Rate (%)</label>
-											<input
-												type="number"
-												step={0.05}
-												value={originLocalRate}
-												onChange={(e) => setOriginLocalRate(Math.max(0, Number(e.target.value)))}
-												className="w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm font-mono text-white"
-											/>
-										</div>
-										<div>
-											<label className="block text-xs text-slate-400 mb-1">Base Annual Salary ($)</label>
-											<input
-												type="number"
-												step={1000}
-												value={originSalary}
-												onChange={(e) => setOriginSalary(Math.max(0, Number(e.target.value)))}
-												className="w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm font-mono text-white"
-											/>
-										</div>
-									</div>
-								</div>
-
-								{/* Destination State Profile */}
-								<div className="space-y-4 border border-slate-800/80 rounded-[1.5rem] p-5 bg-slate-900/10 [.light_&]:border-slate-200 [.light_&]:bg-slate-50/50">
-									<h4 className="font-mono text-xs uppercase tracking-[0.24em] text-blue-300">Destination Location</h4>
-									<div className="grid gap-4">
-										<div>
-											<label className="block text-xs text-slate-400 mb-1">Destination State</label>
-											<select
-												value={destState}
-												onChange={(e) => setDestState(e.target.value)}
-												className="w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm text-white"
-											>
-												{US_STATES.map((s) => (
-													<option key={s.code} value={s.code}>{s.name}</option>
-												))}
-											</select>
-										</div>
-										<div>
-											<label className="block text-xs text-slate-400 mb-1">Local Tax Rate (%)</label>
-											<input
-												type="number"
-												step={0.05}
-												value={destLocalRate}
-												onChange={(e) => setDestLocalRate(Math.max(0, Number(e.target.value)))}
-												className="w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm font-mono text-white"
-											/>
-										</div>
-										<div>
-											<label className="block text-xs text-slate-400 mb-1">Base Annual Salary ($)</label>
-											<input
-												type="number"
-												step={1000}
-												value={destSalary}
-												onChange={(e) => setDestSalary(Math.max(0, Number(e.target.value)))}
-												className="w-full rounded-lg border border-slate-800 bg-slate-950 px-3 py-2 text-sm font-mono text-white"
-											/>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
 						{/* Side-by-side Tax Comparison */}
 						<div className="rounded-[1.8rem] border border-slate-800 bg-slate-950/30 p-6 shadow-2xl backdrop-blur-md [.light_&]:border-slate-200 [.light_&]:bg-white">
 							<h3 className="text-lg font-semibold text-white mb-5 border-b border-slate-900 pb-3 [.light_&]:border-slate-100">Annual Tax Engine Analysis</h3>
