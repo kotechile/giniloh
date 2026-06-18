@@ -15,7 +15,7 @@ export const calculatorTools = [
 		title: 'Raise & Job-Hop Velocity Calculator',
 		slug: 'raise-velocity',
 		href: '/calculators/raise-velocity/',
-		status: 'Proposed',
+		status: 'Live',
 		accent: 'cyan',
 		description:
 			'Compare traditional 3% annual raises vs. strategic job-hops yielding 15-20% bumps, projecting 10-year cumulative earnings.',

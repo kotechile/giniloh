@@ -1,16 +1,35 @@
 ---
 import CalculatorShell from '../../components/calculators/CalculatorShell.astro';
 import JsonLd from '../../components/JsonLd.astro';
+import RaiseVelocityCalculator from '../../components/calculators/react/RaiseVelocityCalculator';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
 
 const calculator = getCalculatorBySlug('raise-velocity');
 const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+
+const faqItems = [
+	{
+		question: 'What is the "Loyalty Tax"?',
+		answer:
+			'The loyalty tax is the economic penalty paid by long-term employees. Because corporate talent acquisition budgets are significantly larger than internal merit raise pools, external hires are priced dynamically to market demand, regularly leaving loyal employees earning up to 50% less over their lifetime.'
+	},
+	{
+		question: 'Why do switcher transitions result in a temporary net worth deficit?',
+		answer:
+			'Transitioning between companies triggers immediate job-hopping frictions, such as unvested 401(k) matching forfeiture, unvested performance bonus cuts due to timing, and COBRA gap healthcare coverage. In the short term, this friction can outweigh the salary bump, though the higher base salary compounds to a massive net positive by Year 10.'
+	},
+	{
+		question: 'How does the portfolio compounding integration work?',
+		answer:
+			'The calculator isolates the "Raise Delta"—the net take-home pay difference between staying and job-hopping—and models investing that capital directly into an index portfolio compounding at a specified market return rate (default 8%).'
+	}
+];
 ---
 
 <BaseLayout
 	title="Raise & Job-Hop Velocity Calculator | Gini Loh"
-	description="Compare traditional 3% annual raises vs. strategic job-hops yielding 15-20% bumps, projecting 10-year cumulative earnings."
+	description="Model the compounding differences between standard cost-of-living raises and strategic career hopping over a 10-year horizon."
 >
 	<link slot="head" rel="canonical" href={new URL('/calculators/raise-velocity/', Astro.site).toString()} />
 	{schema ? <JsonLd slot="head" data={schema} /> : null}
@@ -20,38 +39,41 @@ const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.
 		title="Raise & Job-Hop Velocity Calculator"
 		description="Model the compounding differences between standard cost-of-living raises and strategic career hopping over a 10-year horizon."
 	>
-		<div slot="calculator" class="rounded-[2rem] border border-cyan-500/20 bg-slate-900/60 p-8 shadow-2xl backdrop-blur-md">
-			<div class="flex flex-col items-center justify-center py-12 text-center">
-				<div class="h-16 w-16 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center mb-6">
-					<svg class="w-8 h-8 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-					</svg>
-				</div>
-				<h2 class="text-2xl font-bold text-white tracking-tight">Interactive Module Under Development</h2>
-				<p class="mt-3 text-slate-400 max-w-md text-sm leading-6">
-					This salary trajectory simulator is currently scheduled for deployment in Phase 2 of the system release.
-				</p>
-				
-				<div class="mt-8 p-6 rounded-xl border border-slate-800 bg-slate-950/50 w-full max-w-sm text-left">
-					<p class="font-mono text-xs uppercase tracking-widest text-slate-500">Upcoming Features</p>
-					<ul class="mt-3 space-y-2 text-xs font-mono text-slate-400">
-						<li>• Cumulative 10-year salary trajectory projection</li>
-						<li>• Job-hopping tax/fringe benefit comparison</li>
-						<li>• Portfolio compounding integration based on raise delta</li>
-					</ul>
-				</div>
-				
-				<a href="/calculators/" class="mt-8 btn-primary">Back to Calculator Hub</a>
-			</div>
+		<div slot="calculator">
+			<RaiseVelocityCalculator client:load />
 		</div>
 
 		<div slot="aside" class="grid gap-6">
 			<article class="overflow-hidden rounded-[1.8rem] border border-cyan-500/20 bg-[linear-gradient(135deg,rgba(8,47,73,0.92),rgba(2,6,23,0.98)_70%,rgba(6,182,212,0.12))] p-6 shadow-[0_0_40px_rgba(34,211,238,0.08)]">
 				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-200/80">Strategy note</p>
-				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white">The Loyalty Penalty</h2>
+				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white font-sans">The Loyalty Penalty</h2>
 				<p class="mt-4 text-sm leading-7 text-slate-300">
-					Studies show that staying at the same company for more than two years can cost you up to 50% in lifetime earnings compared to strategic job-hopping. This simulator aims to illustrate that math clearly.
+					Studies show that staying at the same company for more than two years can cost you up to 50% in lifetime earnings compared to strategic job-hopping. This simulator compiles all cash-flow sources (base, bonus, match, tax, location, and hours) to visualize the true financial divergence.
 				</p>
+			</article>
+
+			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">Formulas</p>
+				<div class="mt-4 rounded-[1.3rem] border border-slate-800/90 bg-slate-950/60 p-5 font-mono text-xs leading-6 text-slate-200">
+					<p class="font-semibold text-cyan-300">Raise Delta:</p>
+					<p class="text-slate-400">ΔN_t = N_switcher,t - N_stayer,t</p>
+					<p class="mt-3 font-semibold text-cyan-300">Compounded Portfolio:</p>
+					<p class="text-slate-400">P_t = P_t-1 * (1 + R_p) + ΔN_t</p>
+					<p class="mt-3 font-semibold text-cyan-300">Effective Hourly Rate:</p>
+					<p class="text-slate-400">Rate = Comp_CoL / (Hours_Year)</p>
+				</div>
+			</article>
+
+			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">FAQ</p>
+				<div class="mt-5 grid gap-4">
+					{faqItems.map((item) => (
+						<div class="rounded-[1.2rem] border border-slate-800/80 bg-slate-950/55 p-4">
+							<h2 class="text-sm font-semibold text-white font-sans">{item.question}</h2>
+							<p class="mt-2 text-xs leading-6 text-slate-400 font-mono">{item.answer}</p>
+						</div>
+					))}
+				</div>
 			</article>
 		</div>
 	</CalculatorShell>
