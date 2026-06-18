@@ -60,6 +60,8 @@ export default function RelocationCalculator() {
 	const [destSalary, setDestSalary] = useState(120000);
 
 	const [expenses, setExpenses] = useState<RelocationExpense[]>(DEFAULT_EXPENSES);
+	const [showOriginInfo, setShowOriginInfo] = useState(false);
+	const [showDestInfo, setShowDestInfo] = useState(false);
 
 	// Lease Break Form State
 	const [leaseMonthlyRent, setLeaseMonthlyRent] = useState(2200);
@@ -349,11 +351,28 @@ export default function RelocationCalculator() {
 							</div>
 							<div>
 								<div className="flex justify-between items-center mb-1">
-									<label className="block text-xs text-slate-400">Local Tax Rate (%)</label>
+									<div className="flex items-center gap-1">
+										<label className="block text-xs text-slate-400">Local Tax Rate (%)</label>
+										<button
+											type="button"
+											onClick={() => setShowOriginInfo(!showOriginInfo)}
+											className="text-slate-500 hover:text-blue-400 transition focus:outline-none cursor-pointer"
+											title="Learn more about local tax rate"
+										>
+											<svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+												<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+											</svg>
+										</button>
+									</div>
 									{getRecommendedLocalTaxRate(originState) > 0 && (
 										<span className="text-[10px] text-blue-400 font-mono">Rec: {getRecommendedLocalTaxRate(originState)}%</span>
 									)}
 								</div>
+								{showOriginInfo && (
+									<div className="mb-2 p-2.5 rounded-lg border border-blue-500/20 bg-slate-950 text-[11px] leading-5 text-slate-300">
+										<strong>About Local Income Tax:</strong> Represents municipal, city, or county-level wage taxes (e.g. Maryland county income taxes, NYC local resident tax) levied <em>on top</em> of federal &amp; state income tax. Leave as 0% if your specific municipality does not levy local income tax. State income taxes are calculated automatically under the hood.
+									</div>
+								)}
 								<input
 									type="number"
 									step={0.05}
@@ -393,11 +412,28 @@ export default function RelocationCalculator() {
 							</div>
 							<div>
 								<div className="flex justify-between items-center mb-1">
-									<label className="block text-xs text-slate-400">Local Tax Rate (%)</label>
+									<div className="flex items-center gap-1">
+										<label className="block text-xs text-slate-400">Local Tax Rate (%)</label>
+										<button
+											type="button"
+											onClick={() => setShowDestInfo(!showDestInfo)}
+											className="text-slate-500 hover:text-blue-400 transition focus:outline-none cursor-pointer"
+											title="Learn more about local tax rate"
+										>
+											<svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+												<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+											</svg>
+										</button>
+									</div>
 									{getRecommendedLocalTaxRate(destState) > 0 && (
 										<span className="text-[10px] text-blue-400 font-mono">Rec: {getRecommendedLocalTaxRate(destState)}%</span>
 									)}
 								</div>
+								{showDestInfo && (
+									<div className="mb-2 p-2.5 rounded-lg border border-blue-500/20 bg-slate-950 text-[11px] leading-5 text-slate-300">
+										<strong>About Local Income Tax:</strong> Represents municipal, city, or county-level wage taxes (e.g. Maryland county income taxes, NYC local resident tax) levied <em>on top</em> of federal &amp; state income tax. Leave as 0% if your specific municipality does not levy local income tax. State income taxes are calculated automatically under the hood.
+									</div>
+								)}
 								<input
 									type="number"
 									step={0.05}
