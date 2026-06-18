@@ -565,13 +565,13 @@ export default function RaiseVelocityCalculator() {
 
 				{/* Floating tooltip data details */}
 				{hoveredData ? (
-					<div className="mt-5 rounded-2xl border border-slate-800 bg-slate-950/80 p-4 flex flex-col md:flex-row gap-6 text-xs font-mono justify-between animate-fadeIn">
-						<div className="flex items-center font-bold text-white pr-4 md:border-r border-slate-800 text-sm">
+					<div className="mt-5 rounded-2xl border border-slate-800 bg-slate-950/80 p-4 flex flex-col md:flex-row gap-6 text-xs font-mono justify-between animate-fadeIn [.light_&]:bg-slate-50/95 [.light_&]:border-slate-200/80">
+						<div className="flex items-center font-bold text-white pr-4 md:border-r border-slate-800 text-sm [.light_&]:text-slate-800! [.light_&]:border-slate-200">
 							📅 Year {hoveredData.year} Projections
 						</div>
 						<div className="flex-1 grid gap-4 sm:grid-cols-2">
 							{/* Stayer Details */}
-							<div className="flex flex-col gap-1.5 border-b sm:border-b-0 sm:border-r border-slate-800/60 pb-3 sm:pb-0 pr-3">
+							<div className="flex flex-col gap-1.5 border-b sm:border-b-0 sm:border-r border-slate-800/60 pb-3 sm:pb-0 pr-3 [.light_&]:border-slate-200">
 								<p className="font-semibold text-slate-400 text-[11px] uppercase tracking-wide">
 									Stayer (Annual merit updates)
 								</p>
@@ -583,7 +583,7 @@ export default function RaiseVelocityCalculator() {
 									<span>Effective Hourly Rate:</span>
 									<span className="text-slate-300 font-semibold">{formatCurrency(hoveredData.stayerEffectiveHourlyRate)}/hr</span>
 								</div>
-								<div className="flex justify-between text-[11px] text-slate-400 border-t border-slate-900 pt-1 mt-1 font-semibold text-slate-300">
+								<div className="flex justify-between text-[11px] text-slate-400 border-t border-slate-900 pt-1 mt-1 font-semibold text-slate-300 [.light_&]:border-slate-200">
 									<span>Take-home Cash Flow:</span>
 									<span>{formatCurrency(hoveredData.stayerNetAnnualCashFlow)}</span>
 								</div>
@@ -602,12 +602,12 @@ export default function RaiseVelocityCalculator() {
 									<span>Effective Hourly Rate:</span>
 									<span className="text-slate-300 font-semibold">{formatCurrency(hoveredData.switcherEffectiveHourlyRate)}/hr</span>
 								</div>
-								<div className="flex justify-between text-[11px] text-slate-400 border-t border-slate-900 pt-1 mt-1 font-semibold text-cyan-300">
+								<div className="flex justify-between text-[11px] text-slate-400 border-t border-slate-900 pt-1 mt-1 font-semibold text-cyan-300 [.light_&]:border-slate-200 [.light_&]:text-cyan-700!">
 									<span>Take-home Cash Flow:</span>
 									<span>{formatCurrency(hoveredData.switcherNetAnnualCashFlow)}</span>
 								</div>
 								{hoveredData.year > 1 && hoveredData.year % switcherConfig.hopIntervalYears === 0 && (
-									<div className="mt-1.5 text-[10px] text-amber-300 bg-amber-500/10 border border-amber-500/25 rounded p-1.5 leading-4">
+									<div className="mt-1.5 text-[10px] text-amber-300 bg-amber-500/10 border border-amber-500/25 rounded p-1.5 leading-4 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
 										⚠️ Transition Friction applied: COBRA health cost, matching forfeitures, bonus timing cuts, offset by new hire signing bonus.
 									</div>
 								)}
@@ -615,31 +615,31 @@ export default function RaiseVelocityCalculator() {
 						</div>
 					</div>
 				) : (
-					<div className="text-slate-500 text-center font-mono text-[10px] italic mt-5 py-2.5 bg-slate-950/20 border border-slate-900/40 rounded-xl">
+					<div className="text-slate-500 text-center font-mono text-[10px] italic mt-5 py-2.5 bg-slate-950/20 border border-slate-900/40 rounded-xl [.light_&]:bg-slate-100/60 [.light_&]:text-slate-600! [.light_&]:border-slate-200/80">
 						Hover mouse cursor over the chart nodes to view detailed yearly projections.
 					</div>
 				)}
 			</div>
 
 			{/* Configuration Input Panels */}
-			<div className="rounded-[1.8rem] border border-slate-800 bg-slate-950/25 p-5 shadow-2xl backdrop-blur-md">
+			<div className="rounded-[1.8rem] border border-slate-800 bg-slate-950/35 p-5 shadow-2xl backdrop-blur-md [.light_&]:border-slate-200/80">
 				{/* Tab bar selection */}
-				<div className="flex border-b border-slate-900 mb-6 text-xs font-mono">
+				<div className="flex border-b border-slate-900 mb-6 text-xs font-mono [.light_&]:border-slate-200">
 					<button
 						onClick={() => setActiveConfigTab('core')}
-						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'core' ? 'border-cyan-400 text-white' : 'border-transparent text-slate-500 hover:text-slate-300'}`}
+						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'core' ? 'border-cyan-400 text-white [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-slate-500 hover:text-slate-300 [.light_&]:text-slate-400 [.light_&]:hover:text-slate-700'}`}
 					>
 						⚙️ Core parameters
 					</button>
 					<button
 						onClick={() => setActiveConfigTab('stayer')}
-						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'stayer' ? 'border-cyan-400 text-white' : 'border-transparent text-slate-500 hover:text-slate-300'}`}
+						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'stayer' ? 'border-cyan-400 text-white [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-slate-500 hover:text-slate-300 [.light_&]:text-slate-400 [.light_&]:hover:text-slate-700'}`}
 					>
 						🏠 Stayer settings
 					</button>
 					<button
 						onClick={() => setActiveConfigTab('switcher')}
-						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'switcher' ? 'border-cyan-400 text-white' : 'border-transparent text-slate-500 hover:text-slate-300'}`}
+						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'switcher' ? 'border-cyan-400 text-white [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-slate-500 hover:text-slate-300 [.light_&]:text-slate-400 [.light_&]:hover:text-slate-700'}`}
 					>
 						🚗 Switcher details
 					</button>
