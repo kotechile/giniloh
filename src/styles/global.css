@@ -1261,3 +1261,98 @@ html.light .text-cyan-200\/80 {
 		display: block !important;
 	}
 }
+
+/* ============================================================
+   RELOCATION MODELER (LIGHT MODE OVERRIDES)
+   ============================================================ */
+
+/* Main Header Gradient Card */
+html.light .bg-\[linear-gradient\(135deg\,rgba\(15\,23\,42\,0\.9\)\,rgba\(2\,6\,23\,0\.96\)_65\%\,rgba\(59\,130\,246\,0\.1\)\)\] {
+  background: linear-gradient(135deg, rgba(219, 234, 254, 0.9), rgba(255, 255, 255, 0.95) 65%, rgba(186, 230, 253, 0.3)) !important;
+  border-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Sidebar Operator notes card */
+html.light .bg-\[linear-gradient\(135deg\,rgba\(15\,23\,42\,0\.92\)\,rgba\(2\,6\,23\,0\.98\)_70\%\,rgba\(59\,130\,246\,0\.12\)\)\] {
+  background: linear-gradient(135deg, rgba(219, 234, 254, 0.8), rgba(255, 255, 255, 0.9) 70%, rgba(186, 230, 253, 0.2)) !important;
+  border-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Ensure text on Operator notes card is dark slate */
+html.light .text-blue-200\/80 {
+  color: #1e3a8a !important; /* Deep dark blue */
+}
+
+html.light h2.text-white {
+  color: #0f172a !important;
+}
+
+html.light ol.text-slate-300 li {
+  color: #334155 !important;
+}
+
+/* Text on header info card */
+html.light .text-blue-300 {
+  color: #1d4ed8 !important; /* Dark blue */
+}
+
+html.light h2.text-white {
+  color: #0f172a !important;
+}
+
+html.light p.text-slate-300 {
+  color: #475569 !important;
+}
+
+html.light .bg-white\/5 {
+  background-color: rgba(15, 23, 42, 0.05) !important;
+  color: #334155 !important;
+  border-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+/* Formula code block background */
+html.light .bg-slate-950\/60 {
+  background-color: #f8fafc !important;
+  border-color: rgba(15, 23, 42, 0.1) !important;
+  color: #0f172a !important;
+}
+
+html.light .text-cyan-300\/70,
+html.light .text-cyan-300 {
+  color: #0891b2 !important;
+}
+
+/* Tabs inside calculator inputs */
+html.light select.bg-slate-950,
+html.light input.bg-slate-950 {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light select,
+html.light input {
+  color: #0f172a !important;
+}
+
+/* Geographic Location Boxes */
+html.light .bg-slate-900\/10 {
+  background-color: rgba(241, 245, 249, 0.6) !important;
+  border-color: #e2e8f0 !important;
+}
+
+html.light h4.text-blue-300 {
+  color: #2563eb !important;
+}
+
+html.light label.text-slate-400 {
+  color: #475569 !important;
+}
+
+/* Info Tooltip */
+html.light .bg-slate-950 {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+  border-color: #cbd5e1 !important;
+}
+
