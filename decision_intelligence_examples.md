@@ -168,7 +168,7 @@ This document outlines four consumer (personal) and four enterprise (business) r
   * **Software Index ($I_{\text{software}}$):** 5 years × $7,200 = 36,000
   * **Threshold:** 5,000
 * **Verdict:** **REPLACE (BUY SaaS)**
-* **Rationale:** Codebase tech debt index of 36,000 exceeds the 5,000 threshold. Refactoring a custom security pipeline is a high liability; migrating to standard SaaS is mathematically superior.
+* **Rationale:** Codebase tech debt index of 36,000 exceeds the 5,000 threshold. Refactoring a custom security pipeline is a high liability; migrating to SaaS is mathematically superior.
 
 
 # More Examples
@@ -191,44 +191,32 @@ Investing in a $3,000 premium dual-boiler espresso setup versus spending $6.00 d
 ### Step 1: Calculate Total Cost of Ownership (TCO)
 
 Add:
-
 - Espresso machine and grinder: $3,000
 - Beans, milk, filters, descaling products, electricity (3 years): $1,500
 
 **Total TCO:**
-
-\[
-TCO = \$4,500
-\]
+$$TCO = \$3,000 + \$1,500 = \$4,500$$
 
 ### Step 2: Estimate Lifetime Uses
 
 Assume:
-
 - 5 coffees per week
 - 52 weeks per year
 - 3 years
 
-\[
-U_{lifetime}=5 \times 52 \times 3 = 780
-\]
+$$U_{\text{lifetime}} = 5 \text{ drinks/week} \times 52 \text{ weeks/year} \times 3 \text{ years} = 780 \text{ uses}$$
 
 ### Step 3: Calculate Cost Per Use
 
-\[
-CPU=\frac{TCO}{U_{lifetime}}
-\]
-
-\[
-CPU=\frac{4500}{780}\approx\$5.77
-\]
+$$CPU_{\text{personal}} = \frac{\text{TCO}}{U_{\text{lifetime}}}$$
+$$CPU_{\text{personal}} = \frac{\$4,500}{780} \approx \$5.77 / \text{use}$$
 
 ### Verdict
 
-- Home Latte: **$5.77**
-- Café Latte: **$6.00**
+* **Home Latte:** $\$5.77 / \text{use}$
+* **Café Latte:** $\$6.00 / \text{use}$
 
-Because the savings are minimal and do not include cleaning time, the engine issues a **SKIP / CAFE** recommendation unless consumption exceeds five drinks per week.
+Because the savings are minimal and do not include cleaning time/friction, the engine issues a **SKIP / OUTSOURCE** recommendation unless consumption exceeds five drinks per week.
 
 ---
 
@@ -242,46 +230,29 @@ Spend $450 repairing a four-year-old laptop or purchase a replacement.
 **Consumer 1,500 Rule**
 
 ### Step 1: Define Asset Age
-
-\[
-A_{asset}=4
-\]
+$$A_{\text{asset}} = 4 \text{ years}$$
 
 ### Step 2: Input Repair Cost
-
-\[
-C_{repair}=450
-\]
+$$C_{\text{repair}} = \$450$$
 
 ### Step 3: Calculate Asset Index
-
-\[
-I_{asset}=A_{asset}\times C_{repair}
-\]
-
-\[
-I_{asset}=4\times450=1800
-\]
+$$I_{\text{asset}} = A_{\text{asset}} \times C_{\text{repair}}$$
+$$I_{\text{asset}} = 4 \times \$450 = 1,800$$
 
 ### Verdict
 
-Electronics threshold:
-
-\[
-Threshold = 1500
-\]
+Electronics replacement threshold:
+$$Threshold = 1,500$$
 
 Since:
-
-\[
-1800 > 1500
-\]
+$$1,800 \ge 1,500$$
 
 The engine issues a **REPLACE** recommendation.
 
 ---
 
 ## Use Case 3: Local Deep Learning Rig vs. Cloud GPU Compute
+### Hardware Ownership vs. Cloud GPU Renting
 
 **The Dilemma:**  
 Build a local workstation ($2,200) or rent cloud GPUs at $0.74/hour.
@@ -290,53 +261,29 @@ Build a local workstation ($2,200) or rent cloud GPUs at $0.74/hour.
 **True Break-Even Horizon**
 
 ### Step 1: Calculate Local Hardware Cost
-
-\[
-C_{hardware}=2200
-\]
+$$C_{\text{hardware}} = \$2,200$$
 
 ### Step 2: Calculate Hidden Local Costs
 
-Assume:
-
-- Electricity
-- Cooling
-- Driver maintenance
-- Environment troubleshooting
-
-Estimated:
-
-\[
-C_{hidden}=275/month
-\]
+Assume electricity, cooling, driver maintenance, and environment troubleshooting:
+$$C_{\text{hidden}} = \$275 / \text{month}$$
 
 ### Step 3: Calculate Cloud Costs
 
-Assume:
-
-- Compute
-- Storage
-- Data transfer
-
-\[
-C_{cloud}=175/month
-\]
+Assume compute, storage, and network data transfer:
+$$C_{\text{cloud}} = \$175 / \text{month}$$
 
 ### Step 4: Evaluate Break-Even
 
-Since:
+Calculate monthly savings delta:
+$$\Delta C = C_{\text{cloud}} - C_{\text{hidden}} = \$175 - \$275 = -\$100 / \text{month}$$
 
-\[
-C_{hidden}>C_{cloud}
-\]
-
-the workstation never reaches break-even.
+Since $\Delta C \le 0$ (running the local workstation costs $100/mo more than cloud compute), the break-even months calculation yields:
+$$\text{Horizon} = \infty$$
 
 ### Verdict
 
-**INFINITE CLOUD**
-
-Cloud infrastructure remains economically superior.
+**SKIP / OUTSOURCE** (Infinite Cloud TCO advantage). Cloud GPU infrastructure remains economically superior.
 
 ---
 
@@ -350,34 +297,20 @@ Purchase $10 generic smart plugs or $35 Matter/HomeKit-certified devices.
 **Personal Tinkering Tax Test**
 
 ### Step 1: Estimate Monthly Tinkering Time
-
-\[
-H_{monthly}=3
-\]
-
-hours per month.
+$$H_{\text{monthly}} = 3 \text{ hours/month}$$
 
 ### Step 2: Estimate Time Value
-
-\[
-R_{time}=45/hour
-\]
+$$R_{\text{time}} = \$45 / \text{hour}$$
 
 ### Step 3: Calculate Tinkering Tax
-
-\[
-C_{tinker}=H_{monthly}\times R_{time}
-\]
-
-\[
-C_{tinker}=3\times45=135/month
-\]
+$$C_{\text{tinker}} = H_{\text{monthly}} \times R_{\text{time}}$$
+$$C_{\text{tinker}} = 3 \text{ hours} \times \$45/\text{hour} = \$135 / \text{month}$$
 
 ### Verdict
 
-A recurring $135 monthly productivity drain far exceeds the one-time premium hardware upgrade cost.
+A recurring $135 monthly productivity drain ($4,860 over 3 years) far exceeds the one-time premium hardware upgrade cost ($350 for 10 plugs).
 
-**Recommendation: BUY PREMIUM**
+**Recommendation: BUY / UPGRADE** (to Matter-certified plugs).
 
 ---
 
@@ -391,49 +324,20 @@ Purchase a $2,500 commuter e-bike versus continuing traditional commuting expens
 **Cost-Per-Use Reality Check**
 
 ### Step 1: Calculate Total Ownership Cost
-
-Including:
-
-- Bike
-- Lock
-- Gear
-- Maintenance
-- Battery reserve
-
-\[
-TCO=3200
-\]
+Including e-bike purchase, lock, commuter gear, tuneups, and battery reserve:
+$$TCO = \$3,200$$
 
 ### Step 2: Estimate Commute Volume
-
-Assume:
-
-- 3 commuting days/week
-- 45 work weeks/year
-- 3 years
-
-\[
-U_{lifetime}=3\times45\times3=405
-\]
+Assume 3 commuting days/week, 45 work weeks/year over 3 years:
+$$U_{\text{lifetime}} = 3 \text{ days/week} \times 45 \text{ weeks/year} \times 3 \text{ years} = 405 \text{ roundtrips}$$
 
 ### Step 3: Calculate CPU
-
-\[
-CPU=\frac{3200}{405}
-\]
-
-\[
-CPU\approx7.90
-\]
+$$CPU = \frac{TCO}{U_{\text{lifetime}}}$$
+$$CPU = \frac{\$3,200}{405} \approx \$7.90 / \text{roundtrip}$$
 
 ### Verdict
 
-Compared to:
-
-- Parking: $15/day
-- Fuel costs
-
-The bike delivers substantial savings.
+Compared to city parking ($15.00/day) and fuel costs, the e-bike delivers substantial daily savings.
 
 **Recommendation: BUY E-BIKE**
 
@@ -450,43 +354,22 @@ The bike delivers substantial savings.
 **Multi-Year TCO Projection**
 
 ### Step 1: Estimate Build Cost
-
-Assume:
-
-- 480 engineering hours
-- $83/hour loaded cost
-
-\[
-C_{build}=480\times83
-\]
-
-\[
-C_{build}=39,840
-\]
+Assume 480 engineering hours at an $83/hour loaded cost:
+$$C_{\text{build}} = 480 \text{ hours} \times \$83/\text{hour} = \$39,840$$
 
 ### Step 2: Add Annual Maintenance
-
-\[
-C_{maintenance}=90,000/year
-\]
+$$C_{\text{maintenance}} = \$90,000 / \text{year}$$
 
 ### Step 3: Add Compliance Costs
-
-\[
-C_{compliance}=75,000/year
-\]
+$$C_{\text{compliance}} = \$75,000 / \text{year}$$
 
 ### Step 4: Compare Three-Year TCO
-
-Custom build:
-
-\[
-TCO_{3yr}=534,840
-\]
+$$\text{TCO}_{\text{custom}} = C_{\text{build}} + (3 \times C_{\text{maintenance}}) + (3 \times C_{\text{compliance}})$$
+$$\text{TCO}_{\text{custom}} = \$39,840 + \$270,000 + \$225,000 = \$534,840$$
 
 ### Verdict
 
-Unless the company has a dedicated security team:
+Unless the company has a dedicated security infrastructure team:
 
 **BUY CLERK / AUTH0**
 
@@ -501,48 +384,27 @@ Unless the company has a dedicated security team:
 **Software 5,000 Rule**
 
 ### Step 1: Determine System Age
-
-\[
-A_{codebase}=6
-\]
+$$A_{\text{codebase}} = 6 \text{ years}$$
 
 ### Step 2: Estimate Remediation Cost
-
-\[
-C_{remediation}=120\times83
-\]
-
-\[
-C_{remediation}=9,960
-\]
+Assume 120 hours of senior developer refactoring:
+$$C_{\text{remediation}} = 120 \text{ hours} \times \$83/\text{hour} = \$9,960$$
 
 ### Step 3: Calculate Software Index
-
-\[
-I_{software}=A_{codebase}\times C_{remediation}
-\]
-
-\[
-I_{software}=6\times9960=59,760
-\]
+$$I_{\text{software}} = A_{\text{codebase}} \times C_{\text{remediation}}$$
+$$I_{\text{software}} = 6 \times \$9,960 = 59,760$$
 
 ### Verdict
 
-Threshold:
-
-\[
-5000
-\]
+Software tech debt threshold:
+$$Threshold = 5,000$$
 
 Since:
-
-\[
-59,760 > 5,000
-\]
+$$59,760 \ge 5,000$$
 
 The engine issues:
 
-**REPLACE / MIGRATE**
+**REPLACE / MIGRATE** (to managed Cloud database).
 
 ---
 
@@ -554,29 +416,11 @@ The engine issues:
 **Decision-Intelligence Tool Rule:**  
 **Opportunity Cost & Time-to-Market Analysis**
 
-### In-House Build Costs
+### In-House Build TCO (3 Years)
+$$\text{TCO}_{\text{custom}} = \$371,000 - \$630,000$$
 
-Estimated:
-
-\[
-181,000 - 310,000
-\]
-
-### Vendor Cost (3 Years)
-
-Estimated:
-
-\[
-150,000 - 360,000
-\]
-
-### Custom Build Cost (3 Years)
-
-Estimated:
-
-\[
-371,000 - 630,000
-\]
+### Vendor TCO (3 Years)
+$$\text{TCO}_{\text{vendor}} = \$150,000 - \$360,000$$
 
 ### Verdict
 
@@ -593,20 +437,13 @@ Unless analytics is your primary product differentiator:
 **The Frankenstein Upgrade Test**
 
 ### Evaluation Criteria
-
-- Data fidelity
-- API breakage frequency
-- Monthly troubleshooting effort
-- Workflow scaling costs
+* Data format degradation rate
+* API breakage frequency
+* Monthly manual troubleshooting effort
+* Workflow scaling fees
 
 ### Trigger Threshold
-
-If:
-
-- Manual maintenance exceeds 8 hours/month
-- Data integrity issues become common
-
-### Verdict
+If manual maintenance exceeds 8 hours/month or data integration synchronization failures become regular:
 
 **MIGRATE TO HUBSPOT**
 
@@ -619,37 +456,15 @@ If:
 **True Break-Even Horizon**
 
 ### Step 1: Calculate Workstation Cost
-
 Production-grade 4-GPU workstation:
-
-\[
-C_{workstation}=12,000
-\]
+$$C_{\text{workstation}} = \$12,000$$
 
 ### Step 2: Include Infrastructure Costs
+Include electricity, air conditioning cooling, idle power draw, and administration overhead:
+$$C_{\text{admin}} = 5 \text{ hours/month}$$
 
-- Electricity
-- Cooling
-- Idle power draw
-- Air conditioning
-
-### Step 3: Include Administration Costs
-
-Assume:
-
-\[
-5 \text{ hours/month}
-\]
-
-for maintenance and support.
-
-### Step 4: Compare Against Cloud Costs
-
-Model:
-
-- AWS compute
-- Storage
-- Networking
+### Step 3: Compare Against Cloud Costs
+Factor AWS instance compute rates, persistent storage, and data egress fees.
 
 ### Verdict
 
@@ -657,4 +472,4 @@ For organizations running continuous inference workloads:
 
 **BUILD WORKSTATION**
 
-Typical break-even occurs within approximately **10 months**.
+Typical TCO break-even occurs within approximately **10 months**.
