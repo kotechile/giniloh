@@ -50,9 +50,9 @@ const MODE_PRESETS = {
 	},
 	bike: {
 		cpuStickerPrice: 2500,
-		cpuSecondaryCost: 0.1,
-		cpuOutsourceCost: 15, // spin class rental or bike share
-		cpuWeeklyUses: 2,
+		cpuSecondaryCost: 1.73,
+		cpuOutsourceCost: 15,
+		cpuWeeklyUses: 3,
 		cpuLifespanYears: 3
 	},
 	gpu: {
