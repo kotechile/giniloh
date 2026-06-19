@@ -58,6 +58,18 @@ export const calculatorTools = [
 		utility: 'Calculate relocation payback period',
 		category: 'FinanceApplication',
 		keywords: ['relocation calculator', 'moving cost payback', 'lease break move']
+	},
+	{
+		title: 'Decision Intelligence CIAM Builder',
+		slug: 'decision-intelligence',
+		href: '/calculators/decision-intelligence/',
+		status: 'Live',
+		accent: 'indigo',
+		description:
+			'Evaluate the true 3-year total cost of ownership (TCO) comparing custom user authentication against premium SaaS providers.',
+		utility: 'Analyze user auth build vs. buy costs',
+		category: 'FinanceApplication',
+		keywords: ['ciam build vs buy', 'user auth calculator', 'auth0 vs clerk cost']
 	}
 ] as const;
 
