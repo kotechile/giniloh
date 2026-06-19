@@ -10,34 +10,34 @@ const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.
 
 const faqItems = [
 	{
-		question: 'What is the "Opportunity Cost" in this model?',
+		question: 'What is the difference between Enterprise and Personal TCO?',
 		answer:
-			'Opportunity cost represents the lost revenue and business value caused by diverting senior engineers away from building core product differentiators to manage commoditized plumbing like user authentication.'
+			'Enterprise TCO evaluates loaded developer salaries, compliance certification audits, and roadmap opportunity costs. Personal TCO translates these same concepts into personal financial and lifestyle metrics, such as billable/leisure time value, home utility expenses, physical maintenance upkeep, and asset depreciation.'
 	},
 	{
-		question: 'How does the "Adapted 5,000 Rule" work?',
+		question: 'How do the different Repair-vs-Replace thresholds work?',
 		answer:
-			'Adapted from the HVAC industry, it multiplies the structural age of a custom codebase (in years) by the immediate labor cost required to remediate tech debt. If the result is $5,000 or more, rebuilding or buying a standard managed solution is mathematically superior to continuing to patch it.'
+			'The Adapted Consumer "5,000 Rule" uses an asset debt index (structural age multiplied by immediate repair cost). For major home infrastructure (HVAC systems, roofs, cars), a score of 5,000 or higher triggers a replace verdict. For personal electronics (laptops, phones), the threshold is scaled down to 1,500.'
 	},
 	{
-		question: 'What does "FTE" stand for in maintenance overhead?',
+		question: 'How is "Tinkering Tax" calculated?',
 		answer:
-			'FTE stands for Full-Time Equivalent. A 50% FTE upkeep burden means that ongoing package updates, API endpoints maintenance, and security patch tasks consume roughly half of a developer\'s total monthly hours (80 hours).'
+			'It multiplies the hours you spend troubleshooting, manual copy-pasting, or fixing fragile workarounds per month by your personal opportunity value of time. If this monthly labor value exceeds a paid integrated app subscription fee, you are paying a hidden "tinkering tax" by using a "free" stack.'
 	}
 ];
 ---
 
 <BaseLayout
-	title="Decision Intelligence CIAM Builder | Gini Loh"
-	description="Evaluate the true total cost of ownership (TCO) comparing custom user authentication against premium SaaS providers like Clerk and Auth0."
+	title="Decision Intelligence Calculator | Gini Loh"
+	description="Stress-test high-value decisions. Compare upfront CapEx against multi-year hidden OpEx for user authentication pipelines, personal espresso machines, asset repairs, and tinkering taxes."
 >
 	<link slot="head" rel="canonical" href={new URL('/calculators/decision-intelligence/', Astro.site).toString()} />
 	{schema ? <JsonLd slot="head" data={schema} /> : null}
 
 	<CalculatorShell
 		eyebrow="Decision Intelligence Framework"
-		title="CIAM Build vs. Buy Calculator"
-		description="Stress-test your operational strategy. Compare upfront engineering CapEx against the multi-year hidden OpEx of security maintenance, regulatory audits, and developer opportunity cost."
+		title="Build vs. Buy & Life Decision Engine"
+		description="Stop guessing. Transition from subjective, unstructured assessments to mathematically sound, objective decisions for both your software platform and your lifestyle assets."
 	>
 		<div slot="calculator">
 			<DecisionIntelligenceCalculator client:load />
@@ -46,39 +46,43 @@ const faqItems = [
 		<div slot="aside" class="grid gap-6">
 			<article class="overflow-hidden rounded-[1.8rem] border border-cyan-500/20 bg-[linear-gradient(135deg,rgba(8,47,73,0.92),rgba(2,6,23,0.98)_70%,rgba(16,185,129,0.12))] p-6 shadow-[0_0_40px_rgba(34,211,238,0.08)]">
 				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-200/80">Operator notes</p>
-				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white">How to use this estimate well</h2>
+				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white">How to use this engine</h2>
 				<ol class="mt-5 grid gap-4 text-sm leading-7 text-slate-300">
-					<li>1. Set your expected **Monthly Active Users (MAUs)** to match your current scale or target scaling horizon.</li>
-					<li>2. Adjust the **Loaded Developer Rate** and **Initial Custom Build Time** based on your regional hiring cost.</li>
-					<li>3. Select your target **Compliance Level Goal** (like SOC 2 Type II) to model hidden audit prep overheads.</li>
-					<li>4. Toggle the **Strategic Risk Assessment** checkboxes to highlight Sunk Cost biases or Key-Person liabilities.</li>
+					<li>1. **Select your Mode:** Choose between **Enterprise CIAM**, **Cost-Per-Use**, **Repair vs Replace**, or **Tinkering Tax** tabs at the top.</li>
+					<li>2. **Input your Specifics:** Adjust the sliders to match your operational scales, loaded developer rates, personal time value, or repair quotes.</li>
+					<li>3. **Observe the Matrix:** Review the **Visible vs. Invisible Cost Matrix** to analyze the "iceberg" costs of the decision.</li>
+					<li>4. **Stress-Test Risk Biases:** Complete the step-4 checklists to flag Sunk Cost Fallacies or Key-Person Turnover risks.</li>
 				</ol>
 				<div class="mt-6 rounded-[1.3rem] border border-white/10 bg-white/5 p-4">
-					<p class="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">Best use case</p>
+					<p class="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">Decision Rationale</p>
 					<p class="mt-2 text-sm leading-7 text-slate-200">
-						Compare your current custom authentication maintenance velocity against a standard SaaS platform's volume pricing to justify your migration roadmap to internal stakeholders.
+						Whether building custom authentication middleware or buying a premium home espresso maker, the engine normalizes capital allocation into utilization metrics to highlight the financial break-even point.
 					</p>
 				</div>
 			</article>
 
 			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
-				<p class="font-mono text-xs uppercase tracking-[0.28em] text-emerald-300/80">Formulas</p>
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-emerald-300/80">Mathematical Formulas</p>
 				<div class="mt-4 rounded-[1.3rem] border border-slate-800/90 bg-slate-950/60 p-5 font-mono text-[11px] leading-6 text-slate-200 grid gap-4">
 					<div>
 						<p class="text-emerald-400 font-bold">Custom Build TCO Model:</p>
 						<p>TCO = Build + 3×Compliance + 36×Maintenance + Opportunity Cost</p>
 					</div>
 					<div>
-						<p class="text-cyan-400 font-bold">SaaS Managed TCO Model:</p>
-						<p>TCO = Integration Labor + 36×Monthly Subscription</p>
+						<p class="text-cyan-400 font-bold">Personal CPU TCO Model:</p>
+						<p>TCO = Sticker Price + Operating Cost + Upkeep Cost</p>
 					</div>
 					<div>
-						<p class="text-indigo-400 font-bold">Software Debt Index:</p>
-						<p>Index = Codebase Age × Remediation Labor Cost</p>
+						<p class="text-indigo-400 font-bold">Asset Tech Debt Index:</p>
+						<p>Index = Age × Immediate Repair Cost</p>
+					</div>
+					<div>
+						<p class="text-rose-400 font-bold">Monthly Tinkering Time Tax:</p>
+						<p>Tinkering Cost = Troubleshoot Hours × Value of Time</p>
 					</div>
 				</div>
 				<p class="mt-4 text-xs leading-5 text-slate-400">
-					The engine factors in a baseline developer opportunity cost ($150,000 over 3 years) representing the lost engineering hours that could have been spent developing core features.
+					All calculations run client-side instantly via React hooks and can be bookmarked or saved locally on your device automatically.
 				</p>
 			</article>
 
