@@ -9,6 +9,13 @@ This document outlines twelve real-life decision scenarios. Each example models 
 ### Use Case 1: Premium Espresso Machine vs. Café Lattes
 * **Dilemma:** Investing in a $3,000 premium dual-boiler espresso setup versus spending $6.00 daily at local coffee shops.
 * **Decision-Intelligence Tool Rule:** **Cost-Per-Use (CPU) Reality Check**
+* **How to Enter in the App:**
+  1. Select the **Cost-Per-Use** tab at the top.
+  2. In the **Sticker Price (Upfront Cost)** field, type `3000` (or adjust the slider).
+  3. In **Weekly Usage Frequency**, type `5` (or adjust the slider).
+  4. In **Outsourced / Alternative Cost**, type `6.00` (or adjust the slider).
+  5. In **Upkeep / Internal Cost (Per Use)**, type `1.50` (or adjust the slider).
+  6. Set the **Target Lifespan Horizon (Years)** stepper to `3 years`.
 * **Input Parameters:**
   * **Sticker Price ($):** $3,000
   * **Secondary Cost per use ($):** $1.50 (coffee beans, milk, water filters, descaling chemical)
@@ -34,6 +41,13 @@ This document outlines twelve real-life decision scenarios. Each example models 
 ### Use Case 2: Local Deep Learning Rig vs. Cloud GPU Compute
 * **Dilemma:** Building a local PC deep learning computer for $3,500 versus renting cloud GPU compute at $1.80/hour.
 * **Decision-Intelligence Tool Rule:** **True Break-Even Horizon**
+* **How to Enter in the App:**
+  1. Select the **Cost-Per-Use** tab at the top.
+  2. In the **Sticker Price (Upfront Cost)** field, type `3500` (or adjust the slider).
+  3. In **Weekly Usage Frequency** (weekly active compute hours), type `12` (or adjust the slider).
+  4. In **Outsourced / Alternative Cost** (cloud GPU hourly fee), type `1.80` (or adjust the slider).
+  5. In **Upkeep / Internal Cost (Per Use)** (electricity cost per hour), type `0.45` (or adjust the slider).
+  6. Set the **Target Lifespan Horizon (Years)** stepper to `3 years`.
 * **Input Parameters:**
   * **Sticker Price ($):** $3,500
   * **Secondary Cost per use ($):** $0.45 / hour (electricity draw at 750W load under local utility rate)
@@ -59,6 +73,11 @@ This document outlines twelve real-life decision scenarios. Each example models 
 ### Use Case 3: Cracked Laptop Screen Repair vs. Replacement
 * **Dilemma:** Your 4-year-old laptop has a cracked display. The manufacturer quotes $450 for a screen replacement.
 * **Decision-Intelligence Tool Rule:** **Consumer 1,500 Rule**
+* **How to Enter in the App:**
+  1. Select the **Repair vs Replace** tab at the top.
+  2. Under **Asset Classification**, select the **Consumer Electronics (Phones, Laptops)** tab.
+  3. Adjust the **Asset Age (Years)** slider (or type) to `4`.
+  4. Adjust the **Immediate Repair Quote** slider (or type) to `450`.
 * **Input Parameters:**
   * **Asset Category:** Personal Electronics (Phone / Laptop)
   * **Asset Age ($A_{\text{asset}}$):** 4 Years
@@ -77,6 +96,11 @@ This document outlines twelve real-life decision scenarios. Each example models 
 ### Use Case 4: Task Tracker Spreadsheet vs. Paid Integrated App
 * **Dilemma:** Manually copy-pasting notes and tasks across 5 free spreadsheets versus paying $15/month for a unified task tracker app.
 * **Decision-Intelligence Tool Rule:** **Personal Tinkering Tax Test**
+* **How to Enter in the App:**
+  1. Select the **Tinkering Tax** tab at the top.
+  2. In the **Monthly Troubleshooting Time** field, type `4` hours (or adjust the slider).
+  3. In **Opportunity Value of Time**, type `50` (or adjust the slider).
+  4. In **Subscription Cost of Paid App**, type `15` (or adjust the slider).
 * **Input Parameters:**
   * **Tinkering/Troubleshooting time:** 4 hours / month
   * **Opportunity Value of Time ($R_{\text{time}}$):** $50 / hour
@@ -98,6 +122,11 @@ This document outlines twelve real-life decision scenarios. Each example models 
 ### Use Case 5: Smart Home Ecosystem (Generic Smart Plugs vs. Certified Devices)
 * **Dilemma:** Purchase $10 generic smart plugs or $35 Matter/HomeKit-certified devices.
 * **Decision-Intelligence Tool Rule:** **Personal Tinkering Tax Test**
+* **How to Enter in the App:**
+  1. Select the **Tinkering Tax** tab at the top.
+  2. In the **Monthly Troubleshooting Time** field (spent fixing disconnects), type `3` hours (or adjust the slider).
+  3. In **Opportunity Value of Time**, type `45` (or adjust the slider).
+  4. In **Subscription Cost of Paid App**, type the monthly CapEx offset difference `6.94` (calculated as `($350 premium - $100 generic) / 36 months`).
 * **Input Parameters:**
   * **Tinkering/Troubleshooting time:** 3 hours / month (troubleshooting disconnects)
   * **Opportunity Value of Time ($R_{\text{time}}$):** $45 / hour
@@ -120,6 +149,13 @@ This document outlines twelve real-life decision scenarios. Each example models 
 ### Use Case 6: The Daily Commute (Premium E-Bike vs. Rideshares & Parking)
 * **Dilemma:** Purchasing a $2,500 electric commuter bike versus relying on a combination of city parking fees, fuel, and rideshares.
 * **Decision-Intelligence Tool Rule:** **Cost-Per-Use (CPU) Reality Check**
+* **How to Enter in the App:**
+  1. Select the **Cost-Per-Use** tab at the top.
+  2. In the **Sticker Price (Upfront Cost)** field, type `2500` (or adjust the slider).
+  3. In **Weekly Usage Frequency** (hybrid commute trips per week), type `3` (or adjust the slider).
+  4. In **Outsourced / Alternative Cost** (daily parking fee), type `15.00` (or adjust the slider).
+  5. In **Upkeep / Internal Cost (Per Use)** (electricity, gear, tune-ups amortized per trip), type `1.73` (or adjust the slider).
+  6. Set the **Target Lifespan Horizon (Years)** stepper to `3 years`.
 * **Input Parameters:**
   * **Sticker Price ($):** $2,500
   * **Secondary Cost per roundtrip ($):** $1.73 (commuter gear, lock, tune-ups, battery reserve divided by 405 roundtrips)
@@ -145,6 +181,13 @@ This document outlines twelve real-life decision scenarios. Each example models 
 ### Use Case 7: Developer User Authentication (Custom vs. Clerk/Auth0)
 * **Dilemma:** Building custom user logins, session tokens, and admin dashboards versus paying a managed CIAM platform (Clerk).
 * **Decision-Intelligence Tool Rule:** **Multi-Year TCO Projection**
+* **How to Enter in the App:**
+  1. Select the **CIAM Auth** tab at the top.
+  2. In **Monthly Active Users (MAUs)**, type `25000` (or adjust the slider).
+  3. In **Developer Loaded Rate ($/hr)**, type `85` (or adjust the slider).
+  4. In **Custom Build Time (Months)**, set the stepper to `3`.
+  5. In **Maintenance Overhead (FTE %)**, set the stepper to `50`.
+  6. Under **Compliance Target Target**, select the **SOC 2 Type II** badge.
 * **Input Parameters:**
   * **Monthly Active Users (MAUs):** 25,000
   * **Developer Loaded Hourly Rate ($R_{\text{dev}}$):** $85 / hour
@@ -178,6 +221,13 @@ This document outlines twelve real-life decision scenarios. Each example models 
 ### Use Case 8: Startup MVP Authentication vs. Supabase Free Tier
 * **Dilemma:** Custom coding auth for a tiny validation MVP versus integrating a free open-source authentication tier.
 * **Decision-Intelligence Tool Rule:** **Multi-Year TCO Projection**
+* **How to Enter in the App:**
+  1. Select the **CIAM Auth** tab at the top.
+  2. In **Monthly Active Users (MAUs)**, type `500` (or adjust the slider).
+  3. In **Developer Loaded Rate ($/hr)**, type `60` (or adjust the slider).
+  4. In **Custom Build Time (Months)**, set the stepper to `1`.
+  5. In **Maintenance Overhead (FTE %)**, set the stepper to `10`.
+  6. Under **Compliance Target Target**, select the **None** badge.
 * **Input Parameters:**
   * **Monthly Active Users (MAUs):** 500
   * **Developer Loaded Hourly Rate ($R_{\text{dev}}$):** $60 / hour
@@ -204,6 +254,11 @@ This document outlines twelve real-life decision scenarios. Each example models 
 ### Use Case 9: Legacy Database Refactoring vs. Cloud Migration
 * **Dilemma:** Refactoring a 6-year-old custom database system to fix performance vulnerabilities versus migrating to a managed cloud database.
 * **Decision-Intelligence Tool Rule:** **Software 5,000 Rule**
+* **How to Enter in the App:**
+  1. Select the **Repair vs Replace** tab at the top.
+  2. Under **Asset Classification**, select the **Major Infrastructure (HVAC, Roof, Cars, Software)** tab.
+  3. Adjust the **Asset Age (Years)** slider (or type) to `6`.
+  4. Adjust the **Immediate Repair Quote** slider (or type senior refactoring cost) to `9960`.
 * **Input Parameters:**
   * **Codebase Age ($A_{\text{codebase}}$):** 6 years
   * **Remediation Hours Required:** 120 hours of senior developer refactoring
