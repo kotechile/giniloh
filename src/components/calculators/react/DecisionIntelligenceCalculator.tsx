@@ -210,15 +210,15 @@ export default function DecisionIntelligenceCalculator() {
 					{inputs.activeMode === 'personal_cpu' && (
 						<div className="mt-4 grid gap-4 grid-cols-2 sm:grid-cols-4 border-t border-slate-800/80 pt-6 animate-fadeIn">
 							<div>
-								<p className="font-mono text-[0.64rem] uppercase tracking-[0.2] text-slate-500">Home Owner TCO</p>
+								<p className="font-mono text-[0.64rem] uppercase tracking-[0.2] text-slate-500">Ownership TCO</p>
 								<p className="mt-1 text-lg font-bold text-slate-400">{formatCurrency(outputs.personalCpuHomeTco)}</p>
 							</div>
 							<div>
-								<p className="font-mono text-[0.64rem] uppercase tracking-[0.2] text-slate-500">Cafe/Outsource TCO</p>
+								<p className="font-mono text-[0.64rem] uppercase tracking-[0.2] text-slate-500">Outsourced / Alternative TCO</p>
 								<p className="mt-1 text-lg font-bold text-slate-300">{formatCurrency(outputs.personalCpuOutsourceTco)}</p>
 							</div>
 							<div>
-								<p className="font-mono text-[0.64rem] uppercase tracking-[0.2] text-slate-500">Home Cost/Use</p>
+								<p className="font-mono text-[0.64rem] uppercase tracking-[0.2] text-slate-500">Unit Cost/Use</p>
 								<p className={`mt-1 text-lg font-bold ${outputs.verdict === 'BUY' ? 'text-emerald-400' : 'text-rose-400'}`}>
 									{formatCurrency(outputs.personalCpuHomePerUse)}
 								</p>
