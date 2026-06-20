@@ -364,16 +364,22 @@ export default function DecisionIntelligenceCalculator() {
 						{/* Sticker Price */}
 						<div className="grid gap-3 rounded-[1.5rem] border border-slate-800/80 bg-slate-950/45 p-4">
 							<div className="flex items-center justify-between gap-4">
-								<span className="block text-sm font-semibold tracking-wide text-slate-100">Sticker Price (Upfront CapEx)</span>
-								<span className="rounded-full border border-cyan-500/15 bg-cyan-500/10 px-3 py-1 font-mono text-[0.7rem] font-semibold text-cyan-300">
-									{formatCurrency(inputs.cpuStickerPrice)}
-								</span>
+								<span className="block text-sm font-semibold tracking-wide text-slate-100">Sticker Price (Upfront Cost)</span>
+								<div className="flex items-center gap-1 bg-slate-950/60 rounded-lg px-2 py-1 border border-slate-800 focus-within:border-cyan-500/50">
+									<span className="text-xs text-slate-400">$</span>
+									<input
+										type="number"
+										value={inputs.cpuStickerPrice}
+										onChange={(e) => updateInput('cpuStickerPrice', Number(e.target.value))}
+										className="w-16 bg-transparent text-right font-mono text-xs font-semibold text-cyan-300 focus:outline-none border-none p-0"
+									/>
+								</div>
 							</div>
 							<div className="mt-3">
 								<input
 									type="range"
-									min="100"
-									max="5000"
+									min="10"
+									max="20000"
 									step="50"
 									value={inputs.cpuStickerPrice}
 									onChange={(e) => updateInput('cpuStickerPrice', Number(e.target.value))}
@@ -385,16 +391,22 @@ export default function DecisionIntelligenceCalculator() {
 						{/* Usage Frequency */}
 						<div className="grid gap-3 rounded-[1.5rem] border border-slate-800/80 bg-slate-950/45 p-4">
 							<div className="flex items-center justify-between gap-4">
-								<span className="block text-sm font-semibold tracking-wide text-slate-100">Weekly Usage density</span>
-								<span className="rounded-full border border-cyan-500/15 bg-cyan-500/10 px-3 py-1 font-mono text-[0.7rem] font-semibold text-cyan-300">
-									{inputs.cpuWeeklyUses} times / week
-								</span>
+								<span className="block text-sm font-semibold tracking-wide text-slate-100">Weekly Usage Frequency</span>
+								<div className="flex items-center gap-1 bg-slate-950/60 rounded-lg px-2 py-1 border border-slate-800 focus-within:border-cyan-500/50">
+									<input
+										type="number"
+										value={inputs.cpuWeeklyUses}
+										onChange={(e) => updateInput('cpuWeeklyUses', Number(e.target.value))}
+										className="w-10 bg-transparent text-right font-mono text-xs font-semibold text-cyan-300 focus:outline-none border-none p-0"
+									/>
+									<span className="text-[10px] font-mono text-slate-400">/ wk</span>
+								</div>
 							</div>
 							<div className="mt-3">
 								<input
 									type="range"
 									min="1"
-									max="28"
+									max="100"
 									step="1"
 									value={inputs.cpuWeeklyUses}
 									onChange={(e) => updateInput('cpuWeeklyUses', Number(e.target.value))}
@@ -406,16 +418,26 @@ export default function DecisionIntelligenceCalculator() {
 						{/* Outsource Price */}
 						<div className="grid gap-3 rounded-[1.5rem] border border-slate-800/80 bg-slate-950/45 p-4">
 							<div className="flex items-center justify-between gap-4">
-								<span className="block text-sm font-semibold tracking-wide text-slate-100">Outsourced Cost (e.g. Café Price)</span>
-								<span className="rounded-full border border-cyan-500/15 bg-cyan-500/10 px-3 py-1 font-mono text-[0.7rem] font-semibold text-cyan-300">
-									{formatCurrency(inputs.cpuOutsourceCost)}
-								</span>
+								<div>
+									<span className="block text-sm font-semibold tracking-wide text-slate-100">Outsourced / Alternative Cost</span>
+									<span className="text-[10px] text-slate-400 block mt-0.5">e.g. Café price, rideshare rate, or cloud rent per use</span>
+								</div>
+								<div className="flex items-center gap-1 bg-slate-950/60 rounded-lg px-2 py-1 border border-slate-800 focus-within:border-cyan-500/50">
+									<span className="text-xs text-slate-400">$</span>
+									<input
+										type="number"
+										step="0.01"
+										value={inputs.cpuOutsourceCost}
+										onChange={(e) => updateInput('cpuOutsourceCost', Number(e.target.value))}
+										className="w-12 bg-transparent text-right font-mono text-xs font-semibold text-cyan-300 focus:outline-none border-none p-0"
+									/>
+								</div>
 							</div>
 							<div className="mt-3">
 								<input
 									type="range"
-									min="2.00"
-									max="15.00"
+									min="0.50"
+									max="200.00"
 									step="0.50"
 									value={inputs.cpuOutsourceCost}
 									onChange={(e) => updateInput('cpuOutsourceCost', Number(e.target.value))}
@@ -427,16 +449,26 @@ export default function DecisionIntelligenceCalculator() {
 						{/* Secondary Cost */}
 						<div className="grid gap-3 rounded-[1.5rem] border border-slate-800/80 bg-slate-950/45 p-4">
 							<div className="flex items-center justify-between gap-4">
-								<span className="block text-sm font-semibold tracking-wide text-slate-100">Home Cost/Drink (Beans, Milk)</span>
-								<span className="rounded-full border border-cyan-500/15 bg-cyan-500/10 px-3 py-1 font-mono text-[0.7rem] font-semibold text-cyan-300">
-									{formatCurrency(inputs.cpuSecondaryCost)}
-								</span>
+								<div>
+									<span className="block text-sm font-semibold tracking-wide text-slate-100">Upkeep / Internal Cost (Per Use)</span>
+									<span className="text-[10px] text-slate-400 block mt-0.5">e.g. Coffee beans/milk, charging, tune-up reserve</span>
+								</div>
+								<div className="flex items-center gap-1 bg-slate-950/60 rounded-lg px-2 py-1 border border-slate-800 focus-within:border-cyan-500/50">
+									<span className="text-xs text-slate-400">$</span>
+									<input
+										type="number"
+										step="0.01"
+										value={inputs.cpuSecondaryCost}
+										onChange={(e) => updateInput('cpuSecondaryCost', Number(e.target.value))}
+										className="w-12 bg-transparent text-right font-mono text-xs font-semibold text-cyan-300 focus:outline-none border-none p-0"
+									/>
+								</div>
 							</div>
 							<div className="mt-3">
 								<input
 									type="range"
-									min="0.20"
-									max="5.00"
+									min="0.00"
+									max="50.00"
 									step="0.10"
 									value={inputs.cpuSecondaryCost}
 									onChange={(e) => updateInput('cpuSecondaryCost', Number(e.target.value))}
