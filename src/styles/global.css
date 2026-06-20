@@ -1356,3 +1356,198 @@ html.light .bg-slate-950 {
   border-color: #cbd5e1 !important;
 }
 
+/* ============================================================
+   DECISION-INTELLIGENCE CALCULATOR (LIGHT MODE OVERRIDES)
+   ============================================================ */
+
+/* 1. Mode Switcher */
+html.light .decision-intelligence-calculator .bg-slate-950\/80 {
+  background-color: rgba(241, 245, 249, 0.9) !important;
+  border-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+html.light .decision-intelligence-calculator button.text-slate-400 {
+  color: #475569 !important;
+}
+
+html.light .decision-intelligence-calculator button.text-slate-400:hover {
+  color: #0f172a !important;
+}
+
+html.light .decision-intelligence-calculator button.bg-cyan-500\/10 {
+  background-color: #ffffff !important;
+  border-color: rgba(6, 182, 212, 0.3) !important;
+  color: #0891b2 !important;
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.1) !important;
+}
+
+/* 2. Verdict Banner Cards (Emerald, Indigo, Rose) */
+html.light .decision-intelligence-calculator .border-emerald-500\/30 {
+  background: linear-gradient(135deg, rgba(209, 250, 229, 0.8), rgba(255, 255, 255, 0.9) 65%, rgba(16, 185, 129, 0.1)) !important;
+  border-color: rgba(16, 185, 129, 0.3) !important;
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.08) !important;
+}
+
+html.light .decision-intelligence-calculator .border-indigo-500\/30 {
+  background: linear-gradient(135deg, rgba(224, 231, 255, 0.8), rgba(255, 255, 255, 0.9) 65%, rgba(99, 102, 241, 0.1)) !important;
+  border-color: rgba(99, 102, 241, 0.3) !important;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.08) !important;
+}
+
+html.light .decision-intelligence-calculator .border-rose-500\/30 {
+  background: linear-gradient(135deg, rgba(254, 226, 226, 0.8), rgba(255, 255, 255, 0.9) 65%, rgba(244, 63, 94, 0.1)) !important;
+  border-color: rgba(244, 63, 94, 0.3) !important;
+  box-shadow: 0 10px 30px rgba(244, 63, 94, 0.08) !important;
+}
+
+/* Verdict Text color fixes */
+html.light .decision-intelligence-calculator .border-rose-500\/30 p,
+html.light .decision-intelligence-calculator .border-rose-500\/30 span,
+html.light .decision-intelligence-calculator .border-rose-500\/30 div {
+  color: #881337 !important;
+}
+html.light .decision-intelligence-calculator .border-rose-500\/30 h3 {
+  color: #be123c !important;
+}
+
+html.light .decision-intelligence-calculator .border-emerald-500\/30 p,
+html.light .decision-intelligence-calculator .border-emerald-500\/30 span,
+html.light .decision-intelligence-calculator .border-emerald-500\/30 div {
+  color: #064e3b !important;
+}
+html.light .decision-intelligence-calculator .border-emerald-500\/30 h3 {
+  color: #047857 !important;
+}
+
+html.light .decision-intelligence-calculator .border-indigo-500\/30 p,
+html.light .decision-intelligence-calculator .border-indigo-500\/30 span,
+html.light .decision-intelligence-calculator .border-indigo-500\/30 div {
+  color: #1e1b4b !important;
+}
+html.light .decision-intelligence-calculator .border-indigo-500\/30 h3 {
+  color: #4338ca !important;
+}
+
+/* 3. Step 2 & 3 Input Parameter Cards */
+html.light .decision-intelligence-calculator .bg-slate-950\/20 {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
+}
+
+html.light .decision-intelligence-calculator .bg-slate-950\/45 {
+  background-color: rgba(248, 250, 252, 0.9) !important;
+  border-color: rgba(15, 23, 42, 0.06) !important;
+}
+
+/* Tab Selection in Asset Classification */
+html.light .decision-intelligence-calculator .bg-slate-950\/85 {
+  background-color: rgba(241, 245, 249, 0.85) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+html.light .decision-intelligence-calculator .bg-slate-950\/85 button {
+  color: #475569 !important;
+}
+
+html.light .decision-intelligence-calculator .bg-slate-950\/85 button.bg-cyan-500\/10 {
+  background-color: #ffffff !important;
+  color: #0891b2 !important;
+  border-color: rgba(6, 182, 212, 0.25) !important;
+  box-shadow: 0 4px 10px rgba(6, 182, 212, 0.08) !important;
+}
+
+/* Sliders and badging */
+html.light .decision-intelligence-calculator .bg-cyan-500\/10.font-mono {
+  background-color: rgba(6, 182, 212, 0.06) !important;
+  color: #0891b2 !important;
+  border-color: rgba(6, 182, 212, 0.2) !important;
+}
+
+html.light .decision-intelligence-calculator input[type="range"] {
+  background-color: #cbd5e1 !important;
+}
+
+/* Stepper inputs */
+html.light .decision-intelligence-calculator .bg-slate-950\/60 {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+html.light .decision-intelligence-calculator .bg-slate-950\/60 button {
+  color: #475569 !important;
+}
+
+html.light .decision-intelligence-calculator .bg-slate-950\/60 button:hover {
+  background-color: rgba(15, 23, 42, 0.05) !important;
+  color: #0f172a !important;
+}
+
+/* CPU Presets Buttons */
+html.light .decision-intelligence-calculator .bg-slate-900 {
+  background-color: rgba(241, 245, 249, 0.95) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  color: #475569 !important;
+}
+
+html.light .decision-intelligence-calculator .bg-slate-900:hover {
+  background-color: #ffffff !important;
+  border-color: rgba(6, 182, 212, 0.3) !important;
+  color: #0891b2 !important;
+}
+
+/* 4. Bottom Matrix Cards */
+html.light .decision-intelligence-calculator .border-cyan-500\/25 {
+  background: linear-gradient(135deg, rgba(224, 242, 254, 0.8), rgba(255, 255, 255, 0.95) 80%, rgba(34, 211, 238, 0.05)) !important;
+  border-color: rgba(6, 182, 212, 0.25) !important;
+  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.04) !important;
+}
+
+html.light .decision-intelligence-calculator .border-rose-500\/20 {
+  background: linear-gradient(135deg, rgba(254, 242, 242, 0.8), rgba(255, 255, 255, 0.95) 80%, rgba(244, 63, 94, 0.05)) !important;
+  border-color: rgba(244, 63, 94, 0.2) !important;
+  box-shadow: 0 10px 30px rgba(244, 63, 94, 0.04) !important;
+}
+
+/* Inner sub-cards in matrices */
+html.light .decision-intelligence-calculator .bg-slate-950\/65 {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+html.light .decision-intelligence-calculator .text-slate-500 {
+  color: #475569 !important;
+}
+html.light .decision-intelligence-calculator .text-slate-400 {
+  color: #334155 !important;
+}
+html.light .decision-intelligence-calculator .text-slate-300 {
+  color: #1e293b !important;
+}
+html.light .decision-intelligence-calculator .text-slate-200 {
+  color: #0f172a !important;
+}
+html.light .decision-intelligence-calculator .text-white {
+  color: #0f172a !important;
+}
+
+/* Sidebar Notes Info Card on decision-intelligence page */
+html.light .bg-\[linear-gradient\(135deg\,rgba\(8\,47\,73\,0\.92\)\,rgba\(2\,6\,23\,0\.98\)_70\%\,rgba\(16\,185\,129\,0\.12\)\)\] {
+  background: linear-gradient(135deg, rgba(224, 242, 254, 0.9), rgba(255, 255, 255, 0.95) 70%, rgba(16, 185, 129, 0.05)) !important;
+  border-color: rgba(14, 165, 233, 0.25) !important;
+}
+
+html.light .bg-white\/5.p-4 {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+html.light .text-cyan-200\/80 {
+  color: #0369a1 !important;
+}
+
+html.light .text-slate-200 {
+  color: #1e293b !important;
+}
+
+

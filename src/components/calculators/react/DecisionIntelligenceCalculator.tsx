@@ -115,7 +115,7 @@ export default function DecisionIntelligenceCalculator() {
 	};
 
 	return (
-		<div className="grid gap-8">
+		<div className="decision-intelligence-calculator grid gap-8">
 			{/* MODE SWITCHER */}
 			<div className="grid grid-cols-2 lg:grid-cols-4 rounded-3xl bg-slate-950/80 border border-slate-800/80 p-1">
 				{(
