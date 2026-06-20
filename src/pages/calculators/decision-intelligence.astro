@@ -28,16 +28,16 @@ const faqItems = [
 ---
 
 <BaseLayout
-	title="Decision Intelligence Calculator | Gini Loh"
-	description="Stress-test high-value decisions. Compare upfront CapEx against multi-year hidden OpEx for user authentication pipelines, personal espresso machines, asset repairs, and tinkering taxes."
+	title="Strategic Decision-Intelligence Engine | Gini Loh"
+	description="Evaluate high-value business and lifestyle decisions. Compare custom codebases vs. SaaS CIAM, e-bike commutes vs. parking/rideshares, asset repair index thresholds, and tinkering time taxes."
 >
 	<link slot="head" rel="canonical" href={new URL('/calculators/decision-intelligence/', Astro.site).toString()} />
 	{schema ? <JsonLd slot="head" data={schema} /> : null}
 
 	<CalculatorShell
 		eyebrow="Decision Intelligence Framework"
-		title="Build vs. Buy & Life Decision Engine"
-		description="Stop guessing. Transition from subjective, unstructured assessments to mathematically sound, objective decisions for both your software platform and your lifestyle assets."
+		title="Strategic Decision-Intelligence Engine"
+		description="An analytical framework designed to transition high-value choices from subjective, emotional assessments to mathematically sound, objective decisions. Compare custom software builds vs. SaaS, calculate personal asset cost-per-use, evaluate repair-vs-replace thresholds, and audit tinkering time taxes."
 	>
 		<div slot="calculator">
 			<DecisionIntelligenceCalculator client:load />

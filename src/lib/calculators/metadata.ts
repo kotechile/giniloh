@@ -60,16 +60,16 @@ export const calculatorTools = [
 		keywords: ['relocation calculator', 'moving cost payback', 'lease break move']
 	},
 	{
-		title: 'Decision Intelligence CIAM Builder',
+		title: 'Strategic Decision-Intelligence Engine',
 		slug: 'decision-intelligence',
 		href: '/calculators/decision-intelligence/',
 		status: 'Live',
 		accent: 'indigo',
 		description:
-			'Evaluate the true 3-year total cost of ownership (TCO) comparing custom user authentication against premium SaaS providers.',
-		utility: 'Analyze user auth build vs. buy costs',
+			'Evaluate complex business and lifestyle trade-offs—from enterprise software build-vs-buy TCO to personal asset repairs, espresso machine cost-per-use, and time tinkering taxes.',
+		utility: 'Analyze build vs. buy & personal asset TCO',
 		category: 'FinanceApplication',
-		keywords: ['ciam build vs buy', 'user auth calculator', 'auth0 vs clerk cost']
+		keywords: ['decision intelligence', 'build vs buy calculator', 'espresso machine cpu', 'repair vs replace hvac', 'tinkering tax']
 	}
 ] as const;
 
