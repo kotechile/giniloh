@@ -1611,4 +1611,55 @@ html.light .text-slate-200 {
   color: #1e293b !important;
 }
 
+/* Force light mode variables for Tailwind Typography code blocks */
+html.light {
+  --tw-prose-pre-bg: #f1f5f9 !important;
+  --tw-prose-pre-code: #0f172a !important;
+  --tw-prose-code: #0f766e !important;
+  --tw-prose-invert-pre-bg: #f1f5f9 !important;
+  --tw-prose-invert-pre-code: #0f172a !important;
+  --tw-prose-invert-code: #0f766e !important;
+}
+
+/* Fallback explicit overrides for pre & code elements */
+html.light pre,
+html.light pre *,
+html.light code,
+html.light .prose pre,
+html.light .prose code,
+html.light .article-body pre,
+html.light .article-body code {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-color: rgba(15, 23, 42, 0.1) !important;
+}
+
+html.light code,
+html.light .prose code,
+html.light .article-body code {
+  color: #0f766e !important;
+  background-color: rgba(13, 148, 136, 0.1) !important;
+}
+
+html.light pre code,
+html.light .prose pre code,
+html.light .article-body pre code {
+  color: #0f172a !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+}
+
+/* Ensure code blocks wrap text and do not get cut off */
+pre,
+code,
+.prose pre,
+.prose code,
+.article-body pre,
+.article-body code {
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
+
 
