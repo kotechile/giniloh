@@ -23,11 +23,117 @@ const topCategories = await getTopLevelCategories();
 					<svg class="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
 					<p class="font-mono text-xs uppercase tracking-widest text-emerald-400">Mental Model of the Week</p>
 				</div>
-				<h3 class="font-bold text-slate-200">Inversion</h3>
+				<h3 id="mental-model-title" class="font-bold text-slate-200">Inversion</h3>
 				<p class="mt-2 text-sm text-slate-400 font-mono">
-					"Instead of asking how to achieve a goal, ask how you could guarantee failure. Then avoid those actions." <br/>— <span class="text-slate-500">Carl Jacobi</span>
+					<span id="mental-model-quote">"Instead of asking how to achieve a goal, ask how you could guarantee failure. Then avoid those actions."</span> <br/>— <span id="mental-model-author" class="text-slate-500">Carl Jacobi</span>
 				</p>
 			</div>
+
+			<script>
+				const mentalModels = [
+					{
+						title: "Inversion",
+						quote: '"Instead of asking how to achieve a goal, ask how you could guarantee failure. Then avoid those actions."',
+						author: "Carl Jacobi"
+					},
+					{
+						title: "First-Principles Thinking",
+						quote: '"Boil a problem down to its most fundamental truths, then reason up from there instead of reasoning by analogy."',
+						author: "Aristotle"
+					},
+					{
+						title: "Second-Order Thinking",
+						quote: '"Every action has a consequence, and each consequence has a subsequent consequence. Always ask yourself: \'And then what?\'"',
+						author: "Howard Marks"
+					},
+					{
+						title: "Hanlon’s Razor",
+						quote: '"Never attribute to malice that which is adequately explained by carelessness or stupidity."',
+						author: "Robert J. Hanlon"
+					},
+					{
+						title: "Map vs. Territory",
+						quote: '"The description of reality is not reality itself. The abstraction is always simpler than the messy truth it represents."',
+						author: "Alfred Korzybski"
+					},
+					{
+						title: "Occam’s Razor",
+						quote: '"When presented with competing hypotheses that make identical predictions, the simplest explanation is usually the correct one."',
+						author: "William of Ockham"
+					},
+					{
+						title: "Regulatory Capture",
+						quote: '"A form of corruption where a regulatory agency, created to act in the public interest, instead advances the commercial or political concerns of the industry it is charged with regulating."',
+						author: "George Stigler"
+					},
+					{
+						title: "Circle of Competence",
+						quote: '"Know the limits of your valuable knowledge. Operating inside your circle minimizes risk; operating outside of it guarantees failure."',
+						author: "Warren Buffett"
+					},
+					{
+						title: "Survivorship Bias",
+						quote: '"The logical error of focusing on the people or things that \'survived\' a process while inadvertently overlooking those that did not, leading to false conclusions."',
+						author: "Abraham Wald"
+					},
+					{
+						title: "Regret Minimization Framework",
+						quote: '"Project yourself forward to age 80 and look back on your life. Make the decision that minimizes the number of regrets you will have."',
+						author: "Jeff Bezos"
+					},
+					{
+						title: "The Lindy Effect",
+						quote: '"The future life expectancy of a non-perishable technology or idea is proportional to its current age. If it has survived for 100 years, it will likely survive another 100."',
+						author: "Albert Allen"
+					},
+					{
+						title: "Pareto Principle",
+						quote: '"In many systems, roughly 80% of the consequences come from 20% of the causes. Focus on the vital few, ignore the trivial many."',
+						author: "Joseph M. Juran"
+					},
+					{
+						title: "Parkinson’s Law",
+						quote: '"Work expands so as to fill the time available for its completion. To get things done efficiently, set aggressive, artificial constraints."',
+						author: "C. Northcote Parkinson"
+					},
+					{
+						title: "High-Agency",
+						quote: '"A refusal to accept a bad situation as unchangeable. High-agency individuals look at a wall and bend reality until a door appears."',
+						author: "Nivi"
+					},
+					{
+						title: "Chesterton’s Fence",
+						quote: '"Do not remove a fence or reform a rule until you fully understand the original reason why it was put there in the first place."',
+						author: "G.K. Chesterton"
+					},
+					{
+						title: "Normal Accident Theory",
+						quote: '"In highly complex, tightly coupled systems, unexpected failures are completely inevitable. The system itself makes a catastrophe \'normal\'."',
+						author: "Charles Perrow"
+					}
+				];
+
+				function getWeekIndex() {
+					const now = new Date();
+					// Use January 1, 2026 as reference base
+					const baseDate = new Date(2026, 0, 1);
+					const millisecondsPerWeek = 7 * 24 * 60 * 60 * 1000;
+					return Math.floor((now.getTime() - baseDate.getTime()) / millisecondsPerWeek);
+				}
+
+				const weekIndex = Math.abs(getWeekIndex());
+				const model = mentalModels[weekIndex % mentalModels.length];
+
+				const titleEl = document.getElementById("mental-model-title");
+				const quoteEl = document.getElementById("mental-model-quote");
+				const authorEl = document.getElementById("mental-model-author");
+
+				if (titleEl && quoteEl && authorEl) {
+					titleEl.textContent = model.title;
+					quoteEl.textContent = model.quote;
+					authorEl.textContent = model.author;
+				}
+			</script>
 		</div>
 
 		<div class="grid gap-8 sm:grid-cols-2 lg:ml-12">
