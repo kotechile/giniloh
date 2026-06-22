@@ -108,7 +108,7 @@ export const calculatorTools = [
 		keywords: ['tinkering tax calculator', 'no-code workaround', 'hubspot crm price']
 	},
 	{
-		title: 'Deep Learning Rig vs. Cloud GPU Calculator',
+		title: 'Local GPU vs. Cloud GPU Calculator',
 		slug: 'gpu-compute',
 		href: '/calculators/gpu-compute/',
 		status: 'Live',
