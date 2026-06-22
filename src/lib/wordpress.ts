@@ -126,6 +126,19 @@ function normalizePost(post: WordPressPostResponse): WordPressPost {
 		.replace(/<div class="article-context"[^>]*>[\s\S]*?<\/div>\s*<\/div>/ig, '')
 		.replace(/<h2[^>]*>\s*Short Answer\s*<\/h2>\s*<p[^>]*>[\s\S]*?<\/p>/ig, '');
 
+	// Clean up wpautop formatting inside LaTeX blocks so KaTeX doesn't choke on <br> tags
+	// Matches $$...$$ or \[...\]
+	htmlContent = htmlContent.replace(/(\$\$|\\\[)([\s\S]*?)(\$\$|\\\])/g, (match, open, content, close) => {
+		// Strip all HTML tags inside the math block and decode HTML entities that might break LaTeX
+		let cleanContent = content
+			.replace(/<[^>]+>/g, '') 
+			.replace(/&nbsp;/g, ' ')
+			.replace(/&amp;/g, '&')
+			.replace(/&lt;/g, '<')
+			.replace(/&gt;/g, '>');
+		return `${open}${cleanContent}${close}`;
+	});
+
 	return {
 		id: post.id,
 		title: stripHtml(post.title?.rendered) || 'Untitled post',
