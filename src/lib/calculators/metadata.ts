@@ -70,6 +70,42 @@ export const calculatorTools = [
 		utility: 'Analyze build vs. buy & personal asset TCO',
 		category: 'FinanceApplication',
 		keywords: ['decision intelligence', 'build vs buy calculator', 'espresso machine cpu', 'repair vs replace hvac', 'tinkering tax']
+	},
+	{
+		title: 'Coffee Equipment Arbitrage Calculator',
+		slug: 'coffee-arbitrage',
+		href: '/calculators/coffee-arbitrage/',
+		status: 'Live',
+		accent: 'emerald',
+		description:
+			'Determine if investing in a premium home espresso setup beats your daily café runs. Real-time cost-per-use calculator.',
+		utility: 'Evaluate espresso machine cost-per-use',
+		category: 'FinanceApplication',
+		keywords: ['coffee arbitrage calculator', 'espresso machine cpu', 'coffee cost calculator']
+	},
+	{
+		title: 'Tech Debt Screen Striker (Repair vs. Replace)',
+		slug: 'tech-debt-repair',
+		href: '/calculators/tech-debt-repair/',
+		status: 'Live',
+		accent: 'indigo',
+		description:
+			'Calculate if repairing a 3-to-5-year-old laptop or phone is a smart fix or a financial liability. Uses the adapted consumer 1,500 index rule.',
+		utility: 'Calculate repair vs replace index score',
+		category: 'FinanceApplication',
+		keywords: ['repair vs replace calculator', 'tech debt screen striker', 'laptop screen repair cost']
+	},
+	{
+		title: 'No-Code Workaround Terminator',
+		slug: 'no-code-terminator',
+		href: '/calculators/no-code-terminator/',
+		status: 'Live',
+		accent: 'cyan',
+		description:
+			'Calculate the hidden tinkering tax of manual workarounds and sheets vs. upgrading to a centralized HubSpot CRM.',
+		utility: 'Calculate time tax vs premium software cost',
+		category: 'FinanceApplication',
+		keywords: ['tinkering tax calculator', 'no-code workaround', 'hubspot crm price']
 	}
 ] as const;
 

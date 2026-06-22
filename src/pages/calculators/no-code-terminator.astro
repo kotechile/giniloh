@@ -1,0 +1,100 @@
+---
+import CalculatorShell from '../../components/calculators/CalculatorShell.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import TimeDrainTemplate from '../../components/calculators/react/TimeDrainTemplate';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+
+const calculator = getCalculatorBySlug('no-code-terminator');
+const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+
+const config = {
+	title: 'No-Code Workaround Terminator',
+	description: 'Determine if managing business pipelines with a fragile web of Notion and Zapier beats upgrading to HubSpot.',
+	eyebrow: 'Time & Focus Audit',
+
+	hoursLabel: 'Monthly Troubleshooting Time',
+	hoursHelp: 'Hours spent fixing broken integrations, syncing contacts, and resolving data discrepancies.',
+	hoursDefault: 8,
+	hoursUnit: 'hrs / mo',
+	hoursMin: 1,
+	hoursMax: 80,
+	hoursStep: 1,
+
+	timeValueLabel: 'Loaded Opportunity Rate',
+	timeValueHelp: 'The average hourly labor value of the person troubleshooting these sheets and API disconnects.',
+	timeValueDefault: 75,
+
+	premiumLabel: 'Unified Platform Premium Cost',
+	premiumHelp: 'The incremental monthly fee of upgrading to a centralized CRM platform (like HubSpot).',
+	premiumDefault: 450,
+
+	buyVerdictTitle: 'Upgrade to Centralized Platform',
+	buyVerdictSubtitle: 'Adopting a unified CRM is mathematically superior. Your monthly time-drag cost exceeds the platform subscription premium, eliminating the tinkering tax.',
+	waitVerdictTitle: 'Keep the Fragile Setup',
+	waitVerdictSubtitle: 'Continue using the current workaround. Your monthly time-drain cost is lower than the premium subscription price. Keep monitoring scaling friction.'
+};
+
+const faqItems = [
+	{
+		question: 'What is the "Tinkering Tax"?',
+		answer: 'The tinkering tax is the hidden cost of human error, manual checks, and labor hours spent maintaining fragile workflows. It often feels free because there is no invoice, but it eats up valuable focus and hours.'
+	},
+	{
+		question: 'How do I model data accuracy risk?',
+		answer: 'If data duplication or integration errors cause lost customer sales, add the monthly value of those lost sales directly into the Opportunity Rate or add estimated hours lost dealing with upset clients.'
+	},
+	{
+		question: 'What if we have developer resource constraints?',
+		answer: 'Using a unified platform reduces the developer overhead required to maintain custom API wrappers, allowing your engineering team to focus entirely on core product features.'
+	}
+];
+---
+
+<BaseLayout
+	title="No-Code Workaround Terminator | Gini Loh"
+	description="Calculate the hidden tinkering tax of manual workarounds and sheets vs upgrading to HubSpot CRM. Focus optimization calculator."
+>
+	<link slot="head" rel="canonical" href={new URL('/calculators/no-code-terminator/', Astro.site).toString()} />
+	{schema ? <JsonLd slot="head" data={schema} /> : null}
+
+	<CalculatorShell
+		eyebrow={config.eyebrow}
+		title={config.title}
+		description={config.description}
+	>
+		<div slot="calculator">
+			<TimeDrainTemplate client:load config={config} />
+		</div>
+
+		<div slot="aside" class="grid gap-6">
+			<article class="overflow-hidden rounded-[1.8rem] border border-cyan-500/20 bg-[linear-gradient(135deg,rgba(8,47,73,0.92),rgba(2,6,23,0.98)_70%,rgba(16,185,129,0.12))] p-6 shadow-[0_0_40px_rgba(34,211,238,0.08)]">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-200/80">Tinkering audit</p>
+				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white">How to evaluate</h2>
+				<ol class="mt-5 grid gap-4 text-sm leading-7 text-slate-300">
+					<li>1. Estimate the average hours spent per month keeping integrations alive.</li>
+					<li>2. Put in the hourly rate of the person doing the troubleshooting.</li>
+					<li>3. Input the net monthly subscription increase to see your verdict.</li>
+				</ol>
+				<div class="mt-6 rounded-[1.3rem] border border-white/10 bg-white/5 p-4">
+					<p class="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">Tax Formula</p>
+					<p class="mt-2 text-xs leading-6 text-slate-300 font-mono">
+						Time Tax = Troubleshooting Hours × Hourly Value Rate
+					</p>
+				</div>
+			</article>
+
+			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">FAQ</p>
+				<div class="mt-5 grid gap-4">
+					{faqItems.map((item) => (
+						<div class="rounded-[1.2rem] border border-slate-800/80 bg-slate-950/55 p-4">
+							<h2 class="text-base font-semibold text-white">{item.question}</h2>
+							<p class="mt-2 text-sm leading-7 text-slate-400">{item.answer}</p>
+						</div>
+					))}
+				</div>
+			</article>
+		</div>
+	</CalculatorShell>
+</BaseLayout>

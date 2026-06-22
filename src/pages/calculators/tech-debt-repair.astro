@@ -1,0 +1,99 @@
+---
+import CalculatorShell from '../../components/calculators/CalculatorShell.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import RxRTemplate from '../../components/calculators/react/RxRTemplate';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+
+const calculator = getCalculatorBySlug('tech-debt-repair');
+const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+
+const config = {
+	title: 'Tech Debt Screen Striker (Repair vs. Replace)',
+	description: 'Determine if repairing a 3-to-5-year-old laptop or phone makes financial sense vs. buying a replacement.',
+	eyebrow: 'Asset Horizon / RxR',
+
+	ageLabel: 'Device Age',
+	ageHelp: 'How many years old the phone or laptop is.',
+	ageDefault: 4,
+	ageUnit: 'Yrs Old',
+	ageMin: 1,
+	ageMax: 10,
+
+	repairLabel: 'Immediate Repair Quote',
+	repairHelp: 'The technician/manufacturer repair estimate for screen, battery, or keyboard fixes.',
+	repairDefault: 450,
+	repairMin: 50,
+	repairStep: 25,
+
+	threshold: 1500, // Consumer electronics threshold
+
+	repairVerdictTitle: 'Repair the Device',
+	repairVerdictSubtitle: 'Your device index is in the safe zone. Patching this unit is mathematically efficient compared to paying for a full modern replacement.',
+	replaceVerdictTitle: 'Replace the Device',
+	replaceVerdictSubtitle: 'Your device index exceeds the 1,500 threshold. Depreciating tech stack assets become financial money pits; upgrade to a modern baseline instead.'
+};
+
+const faqItems = [
+	{
+		question: 'What is the 1,500 threshold?',
+		answer: 'This is the standard index limit for consumer electronics (phones, laptops). It is calculated by multiplying the device age in years by the repair cost. If the score exceeds 1,500, a replacement is mathematically superior.'
+	},
+	{
+		question: 'Why does age matter so much?',
+		answer: 'As electronic devices age, their residual value depreciates rapidly, and battery health, OS support, and security compatibility decline. Investing repair capital into an obsolete device offers poor ROI.'
+	},
+	{
+		question: 'What if I can repair it myself?',
+		answer: 'If you can safely DIY the repair for a fraction of the cost, adjust the Repair Quote field to reflect only the price of parts. This will lower your index score, making repair far more attractive.'
+	}
+];
+---
+
+<BaseLayout
+	title="Tech Debt Screen Striker | Gini Loh"
+	description="Calculate if repairing an old laptop or phone is a smart fix or a financial liability. Uses the adapted consumer 1,500 index rule."
+>
+	<link slot="head" rel="canonical" href={new URL('/calculators/tech-debt-repair/', Astro.site).toString()} />
+	{schema ? <JsonLd slot="head" data={schema} /> : null}
+
+	<CalculatorShell
+		eyebrow={config.eyebrow}
+		title={config.title}
+		description={config.description}
+	>
+		<div slot="calculator">
+			<RxRTemplate client:load config={config} />
+		</div>
+
+		<div slot="aside" class="grid gap-6">
+			<article class="overflow-hidden rounded-[1.8rem] border border-cyan-500/20 bg-[linear-gradient(135deg,rgba(8,47,73,0.92),rgba(2,6,23,0.98)_70%,rgba(16,185,129,0.12))] p-6 shadow-[0_0_40px_rgba(34,211,238,0.08)]">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-200/80">RxR logic</p>
+				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white">How to evaluate</h2>
+				<ol class="mt-5 grid gap-4 text-sm leading-7 text-slate-300">
+					<li>1. Input the age of your current device.</li>
+					<li>2. Input the repair quote you received.</li>
+					<li>3. Review the index score and verdict below.</li>
+				</ol>
+				<div class="mt-6 rounded-[1.3rem] border border-white/10 bg-white/5 p-4">
+					<p class="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">Index Rule</p>
+					<p class="mt-2 text-xs leading-6 text-slate-300 font-mono">
+						Device Index = Age × Repair Quote
+					</p>
+				</div>
+			</article>
+
+			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">FAQ</p>
+				<div class="mt-5 grid gap-4">
+					{faqItems.map((item) => (
+						<div class="rounded-[1.2rem] border border-slate-800/80 bg-slate-950/55 p-4">
+							<h2 class="text-base font-semibold text-white">{item.question}</h2>
+							<p class="mt-2 text-sm leading-7 text-slate-400">{item.answer}</p>
+						</div>
+					))}
+				</div>
+			</article>
+		</div>
+	</CalculatorShell>
+</BaseLayout>

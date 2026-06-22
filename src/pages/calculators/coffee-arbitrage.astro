@@ -1,0 +1,111 @@
+---
+import CalculatorShell from '../../components/calculators/CalculatorShell.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import AmortizerTemplate from '../../components/calculators/react/AmortizerTemplate';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+
+const calculator = getCalculatorBySlug('coffee-arbitrage');
+const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+
+const config = {
+	title: 'Coffee Equipment Arbitrage Calculator',
+	description: 'Compare the TCO of a premium espresso setup against daily café runs.',
+	eyebrow: 'Asset Arbitrage',
+
+	stickerLabel: 'Sticker Price (Upfront Cost)',
+	stickerHelp: 'The initial cost of your espresso machine, grinder, and initial accessories.',
+	stickerDefault: 3000,
+
+	frequencyLabel: 'Weekly Usage Frequency',
+	frequencyHelp: 'How many espresso drinks you expect to make at home each week.',
+	frequencyUnit: 'drinks / wk',
+	frequencyDefault: 5,
+	frequencyStep: 1,
+	frequencyMin: 1,
+	frequencyMax: 42,
+
+	outsourceLabel: 'Outsourced Cost (Café Price)',
+	outsourceHelp: 'The average price you pay per drink at your local coffee shop.',
+	outsourceDefault: 6.00,
+
+	secondaryLabel: 'Upkeep / Internal Cost (Per Use)',
+	secondaryHelp: 'Cost of coffee beans, milk, water filters, and descaling chemicals per drink.',
+	secondaryDefault: 1.50,
+
+	lifespanLabel: 'Target Lifespan Horizon',
+	lifespanHelp: 'How many years you expect to own and use this setup.',
+	lifespanDefault: 3,
+
+	buyVerdictTitle: 'Invest in the Setup',
+	buyVerdictSubtitle: 'Ownership is financially superior. Your home drink cost is lower than the local café rate, successfully amortizing the CapEx.',
+	skipVerdictTitle: 'Keep Visiting the Café',
+	skipVerdictSubtitle: 'Café runs are financially superior. Your weekly coffee density is not high enough to amortize the setup and maintenance costs.',
+
+	aspirationalThreshold: 14,
+	aspirationalWarning: 'Optimistic frequency alert: Preparing 14+ drinks/week at home requires significant cleaning, maintenance, and dial-in labor. Ensure this aligns with your routine.'
+};
+
+const faqItems = [
+	{
+		question: 'What upkeep costs are modeled?',
+		answer: 'Operating costs include premium beans, milk/oat milk, water filtration, and periodic cleaning supplies. We also amortize an annual 5% maintenance budget for parts and servicing.'
+	},
+	{
+		question: 'What is the depreciation rate?',
+		answer: 'We assume a 35% hardware value depreciation over the lifespan of the machine. The calculator factors this into the ownership TCO.'
+	},
+	{
+		question: 'Should I buy a cheaper machine?',
+		answer: 'Yes, if your weekly usage is low, a cheaper setup ($500-$1,000) lowers the break-even threshold significantly, but may sacrifice drink consistency and durability.'
+	}
+];
+---
+
+<BaseLayout
+	title="Coffee Equipment Arbitrage Calculator | Gini Loh"
+	description="Determine if investing in a premium home espresso setup beats your daily café runs. Real-time cost-per-use calculator."
+>
+	<link slot="head" rel="canonical" href={new URL('/calculators/coffee-arbitrage/', Astro.site).toString()} />
+	{schema ? <JsonLd slot="head" data={schema} /> : null}
+
+	<CalculatorShell
+		eyebrow={config.eyebrow}
+		title={config.title}
+		description={config.description}
+	>
+		<div slot="calculator">
+			<AmortizerTemplate client:load config={config} />
+		</div>
+
+		<div slot="aside" class="grid gap-6">
+			<article class="overflow-hidden rounded-[1.8rem] border border-cyan-500/20 bg-[linear-gradient(135deg,rgba(8,47,73,0.92),rgba(2,6,23,0.98)_70%,rgba(16,185,129,0.12))] p-6 shadow-[0_0_40px_rgba(34,211,238,0.08)]">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-200/80">Arbitrage logic</p>
+				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white">How to evaluate</h2>
+				<ol class="mt-5 grid gap-4 text-sm leading-7 text-slate-300">
+					<li>1. Input the sticker price of the setup you are eyeing.</li>
+					<li>2. Estimate your weekly usage (realistically!).</li>
+					<li>3. Input your local café drink cost to see if owning pays off.</li>
+				</ol>
+				<div class="mt-6 rounded-[1.3rem] border border-white/10 bg-white/5 p-4">
+					<p class="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">TCO Formula</p>
+					<p class="mt-2 text-xs leading-6 text-slate-300 font-mono">
+						Home TCO = Sticker + (Uses × Upkeep) + (5% Annual Maintenance)
+					</p>
+				</div>
+			</article>
+
+			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">FAQ</p>
+				<div class="mt-5 grid gap-4">
+					{faqItems.map((item) => (
+						<div class="rounded-[1.2rem] border border-slate-800/80 bg-slate-950/55 p-4">
+							<h2 class="text-base font-semibold text-white">{item.question}</h2>
+							<p class="mt-2 text-sm leading-7 text-slate-400">{item.answer}</p>
+						</div>
+					))}
+				</div>
+			</article>
+		</div>
+	</CalculatorShell>
+</BaseLayout>
