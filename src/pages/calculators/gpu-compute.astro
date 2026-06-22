@@ -1,0 +1,111 @@
+---
+import CalculatorShell from '../../components/calculators/CalculatorShell.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import AmortizerTemplate from '../../components/calculators/react/AmortizerTemplate';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+
+const calculator = getCalculatorBySlug('gpu-compute');
+const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+
+const config = {
+	title: 'Deep Learning Rig vs. Cloud GPU Calculator',
+	description: 'Compare the TCO of building a local deep learning GPU workstation against renting cloud GPU compute instances.',
+	eyebrow: 'Asset Arbitrage',
+
+	stickerLabel: 'GPU Workstation Price (CapEx)',
+	stickerHelp: 'The initial cost of your GPU, CPU, motherboard, cooling, casing, and power supply.',
+	stickerDefault: 3500,
+
+	frequencyLabel: 'Weekly Compute Hours',
+	frequencyHelp: 'Active hours per week you expect to run machine learning training, fine-tuning, or inference workloads.',
+	frequencyUnit: 'hours / wk',
+	frequencyDefault: 12,
+	frequencyStep: 1,
+	frequencyMin: 1,
+	frequencyMax: 168,
+
+	outsourceLabel: 'Cloud GPU Hourly Fee (OpEx)',
+	outsourceHelp: 'The hourly cost of renting a similar GPU instance on cloud providers (e.g. RunPod, Lambda Labs, AWS).',
+	outsourceDefault: 1.80,
+
+	secondaryLabel: 'Electricity Cost per Hour',
+	secondaryHelp: 'Estimated electricity cost per hour under load (e.g. 750W system draw at average local utility rates).',
+	secondaryDefault: 0.45,
+
+	lifespanLabel: 'Target Hardware Lifespan',
+	lifespanHelp: 'How many years you expect this GPU rig to remain performant and competitive before requiring an upgrade.',
+	lifespanDefault: 3,
+
+	buyVerdictTitle: 'Build the Local Rig',
+	buyVerdictSubtitle: 'Building your own rig is financially superior. Your high weekly compute hours successfully amortize the hardware CapEx compared to renting.',
+	skipVerdictTitle: 'Rent Cloud GPU Compute',
+	skipVerdictSubtitle: 'Cloud GPU renting is financially superior. Your weekly compute density is not high enough to amortize the workstation hardware and electricity costs.',
+
+	aspirationalThreshold: 40,
+	aspirationalWarning: 'High utilization alert: Running 40+ hours of full-load compute per week at home creates significant heat, noise, and potential cooling challenges.'
+};
+
+const faqItems = [
+	{
+		question: 'How is electricity cost calculated?',
+		answer: 'Under full training load, a modern workstation with a high-end GPU (like an RTX 4090) draws around 700-800W. At an average utility rate of $0.15 to $0.20 per kWh, this equates to roughly $0.45 per hour.'
+	},
+	{
+		question: 'Does this account for system maintenance?',
+		answer: 'Yes. The template automatically factors in an annual maintenance budget of 5% of the sticker price for replacing fans, thermal paste, or other components.'
+	},
+	{
+		question: 'What are the non-financial trade-offs?',
+		answer: 'Renting on the cloud allows you to easily scale up to multi-GPU clusters (e.g., 8x H100s) and offers zero hardware setup time. A local rig has zero network data transfer times (egress fees) and total data privacy.'
+	}
+];
+---
+
+<BaseLayout
+	title="Deep Learning Rig vs. Cloud GPU Calculator | Gini Loh"
+	description="Calculate if building a local deep learning PC rig makes financial sense compared to renting cloud GPU compute. Real-time TCO solver."
+>
+	<link slot="head" rel="canonical" href={new URL('/calculators/gpu-compute/', Astro.site).toString()} />
+	{schema ? <JsonLd slot="head" data={schema} /> : null}
+
+	<CalculatorShell
+		eyebrow={config.eyebrow}
+		title={config.title}
+		description={config.description}
+	>
+		<div slot="calculator">
+			<AmortizerTemplate client:load config={config} />
+		</div>
+
+		<div slot="aside" class="grid gap-6">
+			<article class="overflow-hidden rounded-[1.8rem] border border-cyan-500/20 bg-[linear-gradient(135deg,rgba(8,47,73,0.92),rgba(2,6,23,0.98)_70%,rgba(16,185,129,0.12))] p-6 shadow-[0_0_40px_rgba(34,211,238,0.08)]">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-200/80">Arbitrage logic</p>
+				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white">How to evaluate</h2>
+				<ol class="mt-5 grid gap-4 text-sm leading-7 text-slate-300">
+					<li>1. Input the sticker price of the local workstation parts.</li>
+					<li>2. Estimate your weekly active runtime (exclude idle time).</li>
+					<li>3. Input your target cloud instance rental fee to compare.</li>
+				</ol>
+				<div class="mt-6 rounded-[1.3rem] border border-white/10 bg-white/5 p-4">
+					<p class="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">TCO Formula</p>
+					<p class="mt-2 text-xs leading-6 text-slate-300 font-mono">
+						Local TCO = Hardware Price + (Run Hours × Power Cost) + Maintenance
+					</p>
+				</div>
+			</article>
+
+			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">FAQ</p>
+				<div class="mt-5 grid gap-4">
+					{faqItems.map((item) => (
+						<div class="rounded-[1.2rem] border border-slate-800/80 bg-slate-950/55 p-4">
+							<h2 class="text-base font-semibold text-white">{item.question}</h2>
+							<p class="mt-2 text-sm leading-7 text-slate-400">{item.answer}</p>
+						</div>
+					))}
+				</div>
+			</article>
+		</div>
+	</CalculatorShell>
+</BaseLayout>

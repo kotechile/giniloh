@@ -106,6 +106,18 @@ export const calculatorTools = [
 		utility: 'Calculate time tax vs premium software cost',
 		category: 'FinanceApplication',
 		keywords: ['tinkering tax calculator', 'no-code workaround', 'hubspot crm price']
+	},
+	{
+		title: 'Deep Learning Rig vs. Cloud GPU Calculator',
+		slug: 'gpu-compute',
+		href: '/calculators/gpu-compute/',
+		status: 'Live',
+		accent: 'violet',
+		description:
+			'Compare the TCO of building a local deep learning GPU workstation against renting cloud GPU compute instances.',
+		utility: 'Evaluate local GPU vs cloud GPU TCO',
+		category: 'FinanceApplication',
+		keywords: ['gpu compute calculator', 'local rig vs cloud gpu', 'rtx 4090 power cost']
 	}
 ] as const;
 
