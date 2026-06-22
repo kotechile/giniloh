@@ -160,7 +160,7 @@ export default function LocalVsCloudGpuCalculator() {
 							step="1"
 							value={hoursPerDay}
 							onChange={(e) => setHoursPerDay(Number(e.target.value))}
-							className="w-full h-2 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-slate-800"
+							className="w-full h-2 bg-slate-950 [.light_&]:bg-slate-200 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-slate-800 [.light_&]:border-slate-300"
 						/>
 						<div className="flex justify-between text-[10px] text-slate-500 font-mono">
 							<span>1 hour</span>
@@ -181,7 +181,7 @@ export default function LocalVsCloudGpuCalculator() {
 							step="1"
 							value={daysPerMonth}
 							onChange={(e) => setDaysPerMonth(Number(e.target.value))}
-							className="w-full h-2 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-slate-800"
+							className="w-full h-2 bg-slate-950 [.light_&]:bg-slate-200 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-slate-800 [.light_&]:border-slate-300"
 						/>
 						<div className="flex justify-between text-[10px] text-slate-500 font-mono">
 							<span>1 day</span>
@@ -202,7 +202,7 @@ export default function LocalVsCloudGpuCalculator() {
 							step="1"
 							value={timePeriodMonths}
 							onChange={(e) => setTimePeriodMonths(Number(e.target.value))}
-							className="w-full h-2 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-slate-800"
+							className="w-full h-2 bg-slate-950 [.light_&]:bg-slate-200 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-slate-800 [.light_&]:border-slate-300"
 						/>
 						<div className="flex justify-between text-[10px] text-slate-500 font-mono">
 							<span>1 month</span>
@@ -211,7 +211,7 @@ export default function LocalVsCloudGpuCalculator() {
 					</div>
 
 					{/* Computed Monthly Hours Summary */}
-					<div className="rounded-[1.4rem] border border-cyan-500/15 bg-cyan-950/20 p-4">
+					<div className="rounded-[1.4rem] border border-cyan-500/15 [.light_&]:border-cyan-200 bg-cyan-950/20 [.light_&]:bg-cyan-50/70 p-4">
 						<p className="font-mono text-xs uppercase tracking-wider text-slate-400">Monthly Usage</p>
 						<p className="text-3xl font-black text-cyan-400 mt-1 font-mono">{calculations.monthlyHours} hours</p>
 					</div>
@@ -230,7 +230,7 @@ export default function LocalVsCloudGpuCalculator() {
 							id="gpu-select"
 							value={selectedGpuId}
 							onChange={(e) => setSelectedGpuId(e.target.value)}
-							className="w-full rounded-xl border border-slate-700/80 bg-slate-950 px-4 py-3.5 text-base font-semibold text-white outline-none focus:border-cyan-400"
+							className="w-full rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-slate-950 [.light_&]:bg-white px-4 py-3.5 text-base font-semibold text-white [.light_&]:text-slate-800 outline-none focus:border-cyan-400"
 						>
 							{GPU_MODELS.map(g => (
 								<option key={g.id} value={g.id}>{g.name}</option>
@@ -240,18 +240,18 @@ export default function LocalVsCloudGpuCalculator() {
 
 					{/* GPU Metric displays */}
 					<div className="grid grid-cols-2 gap-4">
-						<div className="rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
+						<div className="rounded-xl border border-slate-800/80 [.light_&]:border-slate-200 bg-slate-950/40 [.light_&]:bg-slate-50/50 p-4">
 							<p className="text-xs text-slate-500">Hardware Cost</p>
 							<p className="text-lg font-bold text-emerald-400 mt-0.5 font-mono">{formatCurrency(activeGpu.cost)}</p>
 						</div>
-						<div className="rounded-xl border border-slate-800/80 bg-slate-950/40 p-4">
+						<div className="rounded-xl border border-slate-800/80 [.light_&]:border-slate-200 bg-slate-950/40 [.light_&]:bg-slate-50/50 p-4">
 							<p className="text-xs text-slate-500">Power Draw (TDP)</p>
 							<p className="text-lg font-bold text-amber-400 mt-0.5 font-mono">{activeGpu.tdp}W</p>
 						</div>
 					</div>
 
 					{/* System components price slider */}
-					<div className="space-y-2 border-t border-slate-800/60 pt-4">
+					<div className="space-y-2 border-t border-slate-800/60 [.light_&]:border-slate-200/80 pt-4">
 						<div className="flex justify-between text-sm font-semibold text-slate-300">
 							<span>System components (CPU, RAM, Motherboard, etc.)</span>
 							<span className="text-emerald-400 font-mono">{formatCurrency(systemCost)}</span>
@@ -263,7 +263,7 @@ export default function LocalVsCloudGpuCalculator() {
 							step="50"
 							value={systemCost}
 							onChange={(e) => setSystemCost(Number(e.target.value))}
-							className="w-full h-2 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-slate-800"
+							className="w-full h-2 bg-slate-950 [.light_&]:bg-slate-200 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-slate-800 [.light_&]:border-slate-300"
 						/>
 						<div className="flex justify-between text-[10px] text-slate-500 font-mono">
 							<span>$500</span>
@@ -272,7 +272,7 @@ export default function LocalVsCloudGpuCalculator() {
 					</div>
 
 					{/* Electricity Rate Slider */}
-					<div className="space-y-2 border-t border-slate-800/60 pt-4">
+					<div className="space-y-2 border-t border-slate-800/60 [.light_&]:border-slate-200/80 pt-4">
 						<div className="flex justify-between text-sm font-semibold text-slate-300">
 							<span>Local Electricity Rate</span>
 							<span className="text-cyan-400 font-mono">${electricityRate.toFixed(2)}/kWh</span>
@@ -284,7 +284,7 @@ export default function LocalVsCloudGpuCalculator() {
 							step="0.01"
 							value={electricityRate}
 							onChange={(e) => setElectricityRate(Number(e.target.value))}
-							className="w-full h-2 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-slate-800"
+							className="w-full h-2 bg-slate-950 [.light_&]:bg-slate-200 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-slate-800 [.light_&]:border-slate-300"
 						/>
 						<div className="flex justify-between text-[10px] text-slate-500 font-mono">
 							<span>$0.05/kWh</span>
@@ -310,8 +310,8 @@ export default function LocalVsCloudGpuCalculator() {
 									onClick={() => setSelectedProviderId(p.id)}
 									className={`flex flex-col items-start gap-1 p-4 rounded-xl border text-left transition duration-150 cursor-pointer ${
 										isSelected
-											? 'border-cyan-500 bg-cyan-950/30 shadow-[0_0_15px_rgba(34,211,238,0.15)]'
-											: 'border-slate-800 bg-slate-950/60 hover:border-slate-700'
+											? 'border-cyan-500 bg-cyan-950/30 [.light_&]:border-cyan-400 [.light_&]:bg-cyan-50/40 shadow-[0_0_15px_rgba(34,211,238,0.15)]'
+											: 'border-slate-800 bg-slate-950/60 [.light_&]:border-slate-200 [.light_&]:bg-white hover:border-slate-700 [.light_&]:hover:border-slate-300'
 									}`}
 								>
 									<div className="flex items-center justify-between w-full">
@@ -328,7 +328,7 @@ export default function LocalVsCloudGpuCalculator() {
 					</div>
 
 					{/* Persistent Cloud Storage Slider */}
-					<div className="space-y-2 border-t border-slate-800/60 pt-4">
+					<div className="space-y-2 border-t border-slate-800/60 [.light_&]:border-slate-200/80 pt-4">
 						<div className="flex justify-between text-sm font-semibold text-slate-300">
 							<span>Cloud Storage Size</span>
 							<span className="text-cyan-400 font-mono">{storageSizeGb} GB</span>
@@ -340,7 +340,7 @@ export default function LocalVsCloudGpuCalculator() {
 							step="10"
 							value={storageSizeGb}
 							onChange={(e) => setStorageSizeGb(Number(e.target.value))}
-							className="w-full h-2 bg-slate-950 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-slate-800"
+							className="w-full h-2 bg-slate-950 [.light_&]:bg-slate-200 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-slate-800 [.light_&]:border-slate-300"
 						/>
 						<div className="flex justify-between text-[10px] text-slate-500 font-mono">
 							<span>10 GB</span>
@@ -361,7 +361,7 @@ export default function LocalVsCloudGpuCalculator() {
 					</div>
 
 					{/* Local Hardware Breakdown */}
-					<div className="space-y-3 pb-5 border-b border-slate-800/80">
+					<div className="space-y-3 pb-5 border-b border-slate-800/80 [.light_&]:border-slate-200">
 						<p className="text-sm font-bold text-slate-200 uppercase tracking-wide">Local Hardware</p>
 						<div className="flex justify-between text-sm text-slate-400">
 							<span>GPU Cost ({activeGpu.vram}):</span>
@@ -379,7 +379,7 @@ export default function LocalVsCloudGpuCalculator() {
 							<span>Maintenance budget:</span>
 							<span className="font-mono text-white">{formatCurrency(calculations.maintenanceCost)}</span>
 						</div>
-						<div className="flex justify-between items-center text-base font-bold text-white pt-2 border-t border-slate-800/40">
+						<div className="flex justify-between items-center text-base font-bold text-white pt-2 border-t border-slate-800/40 [.light_&]:border-slate-100">
 							<span>Total Cost:</span>
 							<span className="text-2xl text-amber-400 font-mono">{formatCurrency(calculations.localTco)}</span>
 						</div>
@@ -404,7 +404,7 @@ export default function LocalVsCloudGpuCalculator() {
 							<span>Storage ({timePeriodMonths} months):</span>
 							<span className="font-mono text-white">{formatCurrency(calculations.cloudStorageCost)}</span>
 						</div>
-						<div className="flex justify-between items-center text-base font-bold text-white pt-2 border-t border-slate-800/40">
+						<div className="flex justify-between items-center text-base font-bold text-white pt-2 border-t border-slate-800/40 [.light_&]:border-slate-100">
 							<span>Total Cost:</span>
 							<span className="text-2xl text-cyan-400 font-mono">{formatCurrency(calculations.cloudTco)}</span>
 						</div>
@@ -419,8 +419,8 @@ export default function LocalVsCloudGpuCalculator() {
 				<div 
 					className={`panel-soft rounded-[2rem] border transition duration-300 ${
 						calculations.localWins 
-							? 'border-emerald-500/35 bg-gradient-to-br from-slate-900/90 to-emerald-950/20 shadow-[0_0_50px_rgba(16,185,129,0.15)]' 
-							: 'border-cyan-500/35 bg-gradient-to-br from-slate-900/90 to-cyan-950/20 shadow-[0_0_50px_rgba(34,211,238,0.15)]'
+							? 'border-emerald-500/35 bg-gradient-to-br from-slate-900/90 to-emerald-950/20 shadow-[0_0_50px_rgba(16,185,129,0.15)] [.light_&]:border-emerald-200/60 [.light_&]:bg-[linear-gradient(135deg,rgba(240,253,250,0.8),rgba(209,250,229,0.4))] [.light_&]:shadow-[0_15px_30px_rgba(16,185,129,0.06)]' 
+							: 'border-cyan-500/35 bg-gradient-to-br from-slate-900/90 to-cyan-950/20 shadow-[0_0_50px_rgba(34,211,238,0.15)] [.light_&]:border-cyan-200/60 [.light_&]:bg-[linear-gradient(135deg,rgba(236,254,255,0.8),rgba(207,250,254,0.4))] [.light_&]:shadow-[0_15px_30px_rgba(34,211,238,0.06)]'
 					}`}
 				>
 					<div className="p-6 sm:p-8">
@@ -449,7 +449,7 @@ export default function LocalVsCloudGpuCalculator() {
 				</div>
 
 				{/* Recommendation Card */}
-				<div className="panel-soft rounded-[2rem] border border-pink-500/35 bg-gradient-to-br from-slate-900/90 to-pink-950/15 p-6 shadow-[0_0_40px_rgba(236,72,153,0.15)] flex flex-col gap-4">
+				<div className="panel-soft rounded-[2rem] border border-pink-500/35 [.light_&]:border-pink-200/60 bg-gradient-to-br from-slate-900/90 to-pink-950/15 [.light_&]:bg-[linear-gradient(135deg,rgba(253,242,248,0.85),rgba(252,231,243,0.4))] p-6 shadow-[0_0_40px_rgba(236,72,153,0.15)] [.light_&]:shadow-[0_15px_30px_rgba(236,72,153,0.05)] flex flex-col gap-4">
 					<div>
 						<p className="font-mono text-xs uppercase tracking-[0.24em] text-pink-400 font-bold">
 							🎯 Recommendation
@@ -505,7 +505,7 @@ export default function LocalVsCloudGpuCalculator() {
 							href="https://runpod.io"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="py-2.5 px-4 font-semibold text-xs text-slate-300 hover:text-white rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900 transition"
+							className="py-2.5 px-4 font-semibold text-xs text-slate-300 [.light_&]:text-slate-700 hover:text-white [.light_&]:hover:text-slate-900 rounded-lg border border-slate-800 [.light_&]:border-slate-200 bg-slate-950/60 [.light_&]:bg-white hover:bg-slate-900 [.light_&]:hover:bg-slate-50 transition"
 						>
 							RunPod Tutorial
 						</a>
@@ -513,7 +513,7 @@ export default function LocalVsCloudGpuCalculator() {
 							href="https://vast.ai"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="py-2.5 px-4 font-semibold text-xs text-slate-300 hover:text-white rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900 transition"
+							className="py-2.5 px-4 font-semibold text-xs text-slate-300 [.light_&]:text-slate-700 hover:text-white [.light_&]:hover:text-slate-900 rounded-lg border border-slate-800 [.light_&]:border-slate-200 bg-slate-950/60 [.light_&]:bg-white hover:bg-slate-900 [.light_&]:hover:bg-slate-50 transition"
 						>
 							Vast.ai Guide
 						</a>

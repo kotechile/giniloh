@@ -72,13 +72,13 @@ export default function RxRTemplate({ config }: RxRTemplateProps) {
 
 				<div className="grid gap-6 sm:grid-cols-2">
 					{/* Asset Age */}
-					<div className="flex flex-col gap-2 rounded-2xl border border-slate-800/80 bg-slate-950/40 p-4">
+					<div className="flex flex-col gap-2 rounded-2xl border border-slate-800/80 [.light_&]:border-slate-200 bg-slate-950/40 [.light_&]:bg-slate-50 p-4">
 						<span className="text-sm font-semibold text-slate-200">{config.ageLabel}</span>
-						<div className="flex items-center rounded-xl border border-slate-700/80 bg-slate-950 mt-1">
+						<div className="flex items-center rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-slate-950 [.light_&]:bg-white mt-1">
 							<button
 								type="button"
 								onClick={() => setAssetAge(prev => Math.max(config.ageMin || 0, prev - 1))}
-								className="h-12 w-12 text-lg text-slate-400 hover:bg-slate-900 rounded-l-xl border-r border-slate-800"
+								className="h-12 w-12 text-lg text-slate-400 hover:bg-slate-900 rounded-l-xl border-r border-slate-800 cursor-pointer"
 							>
 								−
 							</button>
@@ -88,7 +88,7 @@ export default function RxRTemplate({ config }: RxRTemplateProps) {
 							<button
 								type="button"
 								onClick={() => setAssetAge(prev => Math.min(config.ageMax || 100, prev + 1))}
-								className="h-12 w-12 text-lg text-slate-400 hover:bg-slate-900 rounded-r-xl border-l border-slate-800"
+								className="h-12 w-12 text-lg text-slate-400 hover:bg-slate-900 rounded-r-xl border-l border-slate-800 cursor-pointer"
 							>
 								+
 							</button>
@@ -97,7 +97,7 @@ export default function RxRTemplate({ config }: RxRTemplateProps) {
 					</div>
 
 					{/* Repair Cost Quote */}
-					<div className="flex flex-col gap-2 rounded-2xl border border-slate-800/80 bg-slate-950/40 p-4">
+					<div className="flex flex-col gap-2 rounded-2xl border border-slate-800/80 [.light_&]:border-slate-200 bg-slate-950/40 [.light_&]:bg-slate-50 p-4">
 						<span className="text-sm font-semibold text-slate-200">{config.repairLabel}</span>
 						<div className="relative mt-1">
 							<span className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-slate-500">{currencySymbol}</span>
@@ -107,7 +107,7 @@ export default function RxRTemplate({ config }: RxRTemplateProps) {
 								step={config.repairStep || 50}
 								value={repairCost}
 								onChange={(e) => setRepairCost(Math.max(0, Number(e.target.value)))}
-								className="w-full rounded-xl border border-slate-700/80 bg-slate-950 px-10 py-3 text-base font-semibold text-white outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+								className="w-full rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-slate-950 [.light_&]:bg-white px-10 py-3 text-base font-semibold text-white [.light_&]:text-slate-800 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 							/>
 						</div>
 						<span className="text-xs text-slate-500 mt-1">{config.repairHelp}</span>
@@ -121,20 +121,20 @@ export default function RxRTemplate({ config }: RxRTemplateProps) {
 				<div 
 					className={`panel-soft overflow-hidden rounded-[1.8rem] border transition duration-300 ${
 						calculations.isReplace 
-							? 'border-red-500/30 shadow-[0_0_50px_rgba(239,68,68,0.15)] bg-gradient-to-br from-slate-900/90 to-red-950/20' 
-							: 'border-emerald-500/30 shadow-[0_0_50px_rgba(16,185,129,0.15)] bg-gradient-to-br from-slate-900/90 to-emerald-950/20'
+							? 'border-red-500/30 shadow-[0_0_50px_rgba(239,68,68,0.15)] bg-gradient-to-br from-slate-900/90 to-red-950/20 [.light_&]:border-red-200/60 [.light_&]:bg-[linear-gradient(135deg,rgba(254,242,242,0.8),rgba(254,226,226,0.4))] [.light_&]:shadow-[0_15px_30px_rgba(239,68,68,0.06)]' 
+							: 'border-emerald-500/30 shadow-[0_0_50px_rgba(16,185,129,0.15)] bg-gradient-to-br from-slate-900/90 to-emerald-950/20 [.light_&]:border-emerald-200/60 [.light_&]:bg-[linear-gradient(135deg,rgba(240,253,250,0.8),rgba(209,250,229,0.4))] [.light_&]:shadow-[0_15px_30px_rgba(16,185,129,0.06)]'
 					}`}
 				>
 					<div className="p-6 sm:p-8">
 						<span className={`inline-flex rounded-full px-3 py-1 font-mono text-[0.68rem] uppercase tracking-[0.24em] font-semibold ${
 							calculations.isReplace 
-								? 'bg-red-500/10 text-red-400 border border-red-500/20' 
-								: 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20'
+								? 'bg-red-500/10 text-red-400 border border-red-500/20 font-bold' 
+								: 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold'
 						}`}>
 							Verdict: {calculations.isReplace ? 'REPLACE' : 'PATCH / REPAIR'}
 						</span>
 
-						<h3 className="mt-4 text-2xl font-bold tracking-tight text-white">
+						<h3 className="mt-4 text-2xl font-bold tracking-tight text-white leading-tight">
 							{calculations.isReplace ? config.replaceVerdictTitle : config.repairVerdictTitle}
 						</h3>
 
@@ -142,14 +142,14 @@ export default function RxRTemplate({ config }: RxRTemplateProps) {
 							{calculations.isReplace ? config.replaceVerdictSubtitle : config.repairVerdictSubtitle}
 						</p>
 
-						<div className="mt-6 border-t border-slate-800/80 pt-6">
+						<div className="mt-6 border-t border-slate-800/80 [.light_&]:border-slate-200 pt-6">
 							<p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">
 								Asset Debt Index Score
 							</p>
 							<p className={`mt-1 text-3xl font-extrabold tracking-tight ${calculations.isReplace ? 'text-red-400' : 'text-emerald-400'}`}>
 								{calculations.repairIndex.toLocaleString()}
 							</p>
-							<p className="mt-1 text-xs text-slate-400">
+							<p className="mt-1 text-xs text-slate-400 font-mono">
 								Threshold limit for this category is {config.threshold.toLocaleString()}.
 							</p>
 						</div>

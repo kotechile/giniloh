@@ -199,14 +199,14 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 
 				<div className="space-y-6">
 					{/* Usage Frequency Stepper */}
-					<div className="flex flex-col gap-2 rounded-2xl border border-slate-800/85 bg-slate-950/40 p-5">
+					<div className="flex flex-col gap-2 rounded-2xl border border-slate-800/85 [.light_&]:border-slate-200 bg-slate-950/40 [.light_&]:bg-slate-50 p-5">
 						<div className="flex items-center justify-between">
 							<span className="text-base font-semibold text-slate-200">{config.frequencyLabel}</span>
 							<span className="rounded-full border border-cyan-500/15 bg-cyan-500/10 px-3 py-1 font-mono text-xs font-semibold text-cyan-300">
 								{frequency} {config.frequencyUnit}
 							</span>
 						</div>
-						<div className="flex items-center rounded-xl border border-slate-700/80 bg-slate-950 mt-2">
+						<div className="flex items-center rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-slate-950 [.light_&]:bg-white mt-2">
 							<button
 								type="button"
 								onClick={() =>
@@ -235,14 +235,14 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 					</div>
 
 					{/* Lifespan Stepper */}
-					<div className="flex flex-col gap-2 rounded-2xl border border-slate-800/85 bg-slate-950/40 p-5">
+					<div className="flex flex-col gap-2 rounded-2xl border border-slate-800/85 [.light_&]:border-slate-200 bg-slate-950/40 [.light_&]:bg-slate-50 p-5">
 						<div className="flex items-center justify-between">
 							<span className="text-base font-semibold text-slate-200">{config.lifespanLabel}</span>
 							<span className="rounded-full border border-cyan-500/15 bg-cyan-500/10 px-3 py-1 font-mono text-xs font-semibold text-cyan-300">
 								{lifespanYears} Years
 							</span>
 						</div>
-						<div className="flex items-center rounded-xl border border-slate-700/80 bg-slate-950 mt-2">
+						<div className="flex items-center rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-slate-950 [.light_&]:bg-white mt-2">
 							<button
 								type="button"
 								onClick={() => setLifespanYears((prev) => Math.max(1, prev - 1))}
@@ -266,12 +266,12 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 
 					{/* Predefined Local Product Dropdown (if provided) */}
 					{config.localProducts && config.localProducts.length > 0 && (
-						<div className="flex flex-col gap-2 rounded-2xl border border-slate-800/85 bg-slate-950/40 p-5">
+						<div className="flex flex-col gap-2 rounded-2xl border border-slate-800/85 [.light_&]:border-slate-200 bg-slate-950/40 [.light_&]:bg-slate-50 p-5">
 							<span className="text-base font-semibold text-slate-200">Select Hardware Option</span>
 							<select
 								value={selectedLocalId}
 								onChange={(e) => setSelectedLocalId(e.target.value)}
-								className="mt-2 w-full rounded-xl border border-slate-700/80 bg-slate-950 px-4 py-3.5 text-base text-white outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+								className="mt-2 w-full rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-slate-950 [.light_&]:bg-white px-4 py-3.5 text-base text-white [.light_&]:text-slate-800 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 							>
 								{config.localProducts.map((p) => (
 									<option key={p.id} value={p.id}>
@@ -285,7 +285,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 					{/* Manual Sticker & Secondary Inputs (rendered only if no presets are set, or as a customization fallback) */}
 					{!config.localProducts && (
 						<div className="grid gap-6 sm:grid-cols-2">
-							<div className="flex flex-col gap-2 rounded-2xl border border-slate-800/85 bg-slate-950/40 p-5">
+							<div className="flex flex-col gap-2 rounded-2xl border border-slate-800/85 [.light_&]:border-slate-200 bg-slate-950/40 [.light_&]:bg-slate-50 p-5">
 								<span className="text-sm font-semibold text-slate-200">{config.stickerLabel}</span>
 								<div className="relative mt-1">
 									<span className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-slate-500">
@@ -296,13 +296,13 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 										min="0"
 										value={stickerPrice}
 										onChange={(e) => setStickerPrice(Math.max(0, Number(e.target.value)))}
-										className="w-full rounded-xl border border-slate-700/80 bg-slate-950 px-10 py-3 text-base font-semibold text-white outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+										className="w-full rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-slate-950 [.light_&]:bg-white px-10 py-3 text-base font-semibold text-white [.light_&]:text-slate-800 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 									/>
 								</div>
 								<span className="text-xs text-slate-500 mt-1">{config.stickerHelp}</span>
 							</div>
 
-							<div className="flex flex-col gap-2 rounded-2xl border border-slate-800/85 bg-slate-950/40 p-5">
+							<div className="flex flex-col gap-2 rounded-2xl border border-slate-800/85 [.light_&]:border-slate-200 bg-slate-950/40 [.light_&]:bg-slate-50 p-5">
 								<span className="text-sm font-semibold text-slate-200">{config.secondaryLabel}</span>
 								<div className="relative mt-1">
 									<span className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-slate-500">
@@ -314,7 +314,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 										min="0"
 										value={secondaryCost}
 										onChange={(e) => setSecondaryCost(Math.max(0, Number(e.target.value)))}
-										className="w-full rounded-xl border border-slate-700/80 bg-slate-950 px-10 py-3 text-base font-semibold text-white outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+										className="w-full rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-slate-950 [.light_&]:bg-white px-10 py-3 text-base font-semibold text-white [.light_&]:text-slate-800 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 									/>
 								</div>
 								<span className="text-xs text-slate-500 mt-1">{config.secondaryHelp}</span>
@@ -324,7 +324,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 
 					{/* Predefined Outsource Providers Cards (if provided) */}
 					{config.outsourceProducts && config.outsourceProducts.length > 0 && (
-						<div className="flex flex-col gap-3 rounded-2xl border border-slate-800/85 bg-slate-950/40 p-5">
+						<div className="flex flex-col gap-3 rounded-2xl border border-slate-800/85 [.light_&]:border-slate-200 bg-slate-950/40 [.light_&]:bg-slate-50 p-5">
 							<span className="text-base font-semibold text-slate-200">Select Alternative/Cloud Provider</span>
 							<div className="grid gap-3 sm:grid-cols-2">
 								{config.outsourceProducts.map((p) => {
@@ -336,8 +336,8 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 											onClick={() => setSelectedOutsourceId(p.id)}
 											className={`flex flex-col items-start gap-1 p-4 rounded-xl border text-left transition duration-150 cursor-pointer ${
 												isSelected
-													? 'border-cyan-500 bg-cyan-950/30 shadow-[0_0_15px_rgba(34,211,238,0.15)]'
-													: 'border-slate-800 bg-slate-950/60 hover:border-slate-700'
+													? 'border-cyan-500 bg-cyan-950/30 [.light_&]:border-cyan-400 [.light_&]:bg-cyan-50/40 shadow-[0_0_15px_rgba(34,211,238,0.15)]'
+													: 'border-slate-800 bg-slate-950/60 [.light_&]:border-slate-200 [.light_&]:bg-white hover:border-slate-700 [.light_&]:hover:border-slate-300'
 											}`}
 										>
 											<div className="flex items-center justify-between w-full">
@@ -357,7 +357,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 
 					{/* Manual Outsource Inputs (if no presets exist) */}
 					{!config.outsourceProducts && (
-						<div className="flex flex-col gap-2 rounded-2xl border border-slate-800/85 bg-slate-950/40 p-5">
+						<div className="flex flex-col gap-2 rounded-2xl border border-slate-800/85 [.light_&]:border-slate-200 bg-slate-950/40 [.light_&]:bg-slate-50 p-5">
 							<span className="text-sm font-semibold text-slate-200">{config.outsourceLabel}</span>
 							<div className="relative mt-1">
 								<span className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-slate-500">
@@ -369,7 +369,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 									min="0"
 									value={outsourceCost}
 									onChange={(e) => setOutsourceCost(Math.max(0, Number(e.target.value)))}
-									className="w-full rounded-xl border border-slate-700/80 bg-slate-950 px-10 py-3 text-base font-semibold text-white outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+									className="w-full rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-slate-950 [.light_&]:bg-white px-10 py-3 text-base font-semibold text-white [.light_&]:text-slate-800 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 								/>
 							</div>
 							<span className="text-xs text-slate-500 mt-1">{config.outsourceHelp}</span>
@@ -384,8 +384,8 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 				<div
 					className={`panel-soft overflow-hidden rounded-[2rem] border transition duration-300 ${
 						calculations.isBuy
-							? 'border-emerald-500/30 shadow-[0_0_60px_rgba(16,185,129,0.2)] bg-gradient-to-br from-slate-900/90 to-emerald-950/20'
-							: 'border-cyan-500/30 shadow-[0_0_60px_rgba(56,189,248,0.2)] bg-gradient-to-br from-slate-900/90 to-cyan-950/20'
+							? 'border-emerald-500/35 bg-gradient-to-br from-slate-900/90 to-emerald-950/20 shadow-[0_0_60px_rgba(16,185,129,0.2)] [.light_&]:border-emerald-200/60 [.light_&]:bg-[linear-gradient(135deg,rgba(240,253,250,0.8),rgba(209,250,229,0.4))] [.light_&]:shadow-[0_15px_30px_rgba(16,185,129,0.06)]'
+							: 'border-cyan-500/35 bg-gradient-to-br from-slate-900/90 to-cyan-950/20 shadow-[0_0_60px_rgba(56,189,248,0.2)] [.light_&]:border-cyan-200/60 [.light_&]:bg-[linear-gradient(135deg,rgba(236,254,255,0.8),rgba(207,250,254,0.4))] [.light_&]:shadow-[0_15px_30px_rgba(34,211,238,0.06)]'
 					}`}
 				>
 					<div className="p-6 sm:p-8">
@@ -396,7 +396,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 									: 'bg-cyan-500/10 text-cyan-400 border border-cyan-500/20'
 							}`}
 						>
-							Verdict: {calculations.isBuy ? 'LOCAL WINS!' : 'OUTSOURCE / CLOUD WINS!'}
+							Verdict: {calculations.isBuy ? 'OWN / BUY' : 'OUTSOURCE'}
 						</span>
 
 						<h3 className="mt-5 text-3xl font-extrabold tracking-tight text-white leading-tight">
@@ -408,17 +408,17 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 						</p>
 
 						{calculations.netSavings !== 0 && (
-							<div className="mt-8 border-t border-slate-800/80 pt-6">
+							<div className="mt-8 border-t border-slate-800/80 [.light_&]:border-slate-200 pt-6">
 								<p className="font-mono text-xs uppercase tracking-[0.24em] text-slate-500">
-									Net Savings Impact
+									Net Financial Impact
 								</p>
 								<p
 									className={`mt-2 text-4xl font-black tracking-tight ${
 										calculations.isBuy ? 'text-emerald-400' : 'text-cyan-400'
 									}`}
 								>
-									{calculations.isBuy ? 'Local saves ' : 'Outsourcing saves '}
-									{formatCurrency(calculations.absSavings)}
+									{calculations.isBuy ? '+' : ''}
+									{formatCurrency(calculations.netSavings)}
 								</p>
 								<p className="mt-1 text-xs text-slate-400">
 									Calculated over the target {lifespanYears}-year lifespan.
@@ -430,7 +430,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 
 				{/* Affiliate CTA Box (integrated dynamically when outsource provider is selected) */}
 				{selectedOutsourceProduct?.affiliateUrl && (
-					<div className="panel-soft rounded-[2rem] border border-pink-500/35 bg-gradient-to-br from-slate-900/90 to-pink-950/15 p-6 shadow-[0_0_40px_rgba(236,72,153,0.15)] flex flex-col gap-4">
+					<div className="panel-soft rounded-[2rem] border border-pink-500/35 [.light_&]:border-pink-200/60 bg-gradient-to-br from-slate-900/90 to-pink-950/15 [.light_&]:bg-[linear-gradient(135deg,rgba(253,242,248,0.85),rgba(252,231,243,0.4))] p-6 shadow-[0_0_40px_rgba(236,72,153,0.15)] [.light_&]:shadow-[0_15px_30px_rgba(236,72,153,0.05)] flex flex-col gap-4">
 						<div>
 							<p className="font-mono text-xs uppercase tracking-[0.24em] text-pink-400 font-bold">
 								Special Partner Offer
@@ -446,7 +446,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 							href={selectedOutsourceProduct.affiliateUrl}
 							target="_blank"
 							rel="noopener noreferrer"
-							className="w-full text-center py-3.5 px-6 font-bold text-white rounded-xl bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 shadow-lg shadow-pink-500/20 transform hover:-translate-y-0.5 transition duration-150 cursor-pointer"
+							className="w-full text-center py-3.5 px-6 font-bold text-white rounded-xl bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 shadow-lg transition duration-150 cursor-pointer"
 						>
 							{selectedOutsourceProduct.ctaText || `Try ${selectedOutsourceProduct.name} (No Upfront Cost) →`}
 						</a>
@@ -477,7 +477,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 						Cost breakdown
 					</p>
 
-					<div className="grid grid-cols-2 gap-4 border-b border-slate-800/80 pb-4">
+					<div className="grid grid-cols-2 gap-4 border-b border-slate-800/80 [.light_&]:border-slate-200 pb-4">
 						<div>
 							<p className="text-xs text-slate-500">Ownership Cost/Unit</p>
 							<p className="text-lg font-bold text-white mt-0.5 font-mono">{formatCurrency(calculations.homePerUse)}</p>
@@ -488,9 +488,9 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 						</div>
 					</div>
 
-					<div className="grid grid-cols-2 gap-4 border-b border-slate-800/80 pb-4">
+					<div className="grid grid-cols-2 gap-4 border-b border-slate-800/80 [.light_&]:border-slate-200 pb-4">
 						<div>
-							<p className="text-xs text-slate-500">Local TCO (Sticker + Power)</p>
+							<p className="text-xs text-slate-500">Local TCO (Sticker + Upkeep)</p>
 							<p className="text-sm font-semibold text-slate-300 font-mono">{formatCurrency(calculations.homeTco)}</p>
 						</div>
 						<div>
@@ -543,7 +543,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 									href={t.url}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="py-2.5 px-4 font-semibold text-xs text-slate-300 hover:text-white rounded-lg border border-slate-800 bg-slate-950/60 hover:bg-slate-900 transition"
+									className="py-2.5 px-4 font-semibold text-xs text-slate-300 [.light_&]:text-slate-700 hover:text-white [.light_&]:hover:text-slate-900 rounded-lg border border-slate-800 [.light_&]:border-slate-200 bg-slate-950/60 [.light_&]:bg-white hover:bg-slate-900 [.light_&]:hover:bg-slate-50 transition"
 								>
 									{t.label}
 								</a>
