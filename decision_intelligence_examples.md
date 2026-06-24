@@ -39,34 +39,40 @@ This document outlines twelve real-life decision scenarios. Each example models 
 ---
 
 ### Use Case 2: Local Deep Learning Rig vs. Cloud GPU Compute
-* **Dilemma:** Building a local PC deep learning computer for $3,500 versus renting cloud GPU compute at $1.80/hour.
+* **Dilemma:** Building a local PC deep learning computer for $4,200 (RTX 4090 GPU + $2,600 system parts) versus renting cloud GPU compute at $2.16/hour.
 * **Decision-Intelligence Tool Rule:** **True Break-Even Horizon**
 * **How to Enter in the App:**
-  1. Select the **Cost-Per-Use** tab at the top.
-  2. In the **Sticker Price (Upfront Cost)** field, type `3500` (or adjust the slider).
-  3. In **Weekly Usage Frequency** (weekly active compute hours), type `12` (or adjust the slider).
-  4. In **Outsourced / Alternative Cost** (cloud GPU hourly fee), type `1.80` (or adjust the slider).
-  5. In **Upkeep / Internal Cost (Per Use)** (electricity cost per hour), type `0.45` (or adjust the slider).
-  6. Set the **Target Lifespan Horizon (Years)** stepper to `3 years`.
+  1. Navigate to the dedicated **GPU Cost Calculator** page (`/calculators/gpu-compute`).
+  2. Under **Your Usage Pattern**:
+     - Type (or slide) **Hours per Day** to `2`.
+     - Type (or slide) **Days per Month** to `26` (this yields 52 hours/month, which corresponds to the 12 active compute hours/week frequency).
+     - Type (or slide) **Time Period (Months)** to `36`.
+  3. Under **Select GPU**:
+     - Select **RTX 4090 - $1599 - 24GB VRAM** from the dropdown menu.
+     - In the **System components (CPU, RAM, Motherboard, etc.)** number field, type `2600` (making the total hardware setup cost $4,199).
+     - In the **Local Electricity Rate** number field, type `0.60` (representing utility rate for modeling high compute draw).
+  4. Under **Select Cloud Provider**:
+     - Select **Paperspace** (or type a custom alternative rate of `2.16`/hr).
+     - In the **Cloud Storage Size** number field, type `100` GB.
 * **Input Parameters:**
-  * **Sticker Price ($):** $3,500
-  * **Secondary Cost per use ($):** $0.45 / hour (electricity draw at 750W load under local utility rate)
-  * **Outsource Price per use ($):** $1.80 / hour
+  * **Sticker Price ($):** $4,199 (RTX 4090 @ $1,599 + $2,600 components)
+  * **Secondary Cost per use ($):** $0.54 / hour (electricity draw at 750W load under $0.60/kWh rate)
+  * **Outsource Price per use ($):** $2.16 / hour
   * **Weekly usage:** 12 active compute hours / week
   * **Lifespan Horizon:** 3 years
 * **TCO Calculations:**
   * **Total Uses:** 
     $$U_{\text{lifetime}} = 12 \text{ hours/week} \times 52 \text{ weeks/year} \times 3 \text{ years} = 1,872 \text{ run hours}$$
   * **Outsource TCO (Cloud GPU):** 
-    $$\text{TCO}_{\text{outsource}} = 1,872 \text{ hours} \times \$1.80 = \$3,370$$
+    $$\text{TCO}_{\text{outsource}} = 1,872 \text{ hours} \times \$2.16 \approx \$4,044$$
   * **Local Maintenance & Parts (5% of sticker/year):** 
-    $$C_{\text{maintenance}} = \$3,500 \times 0.05 \times 3 = \$525$$
+    $$C_{\text{maintenance}} = \$4,199 \times 0.05 \times 3 \approx \$630$$
   * **Home TCO (Local GPU Rig):** 
-    $$\text{TCO}_{\text{home}} = \$3,500 \text{ (sticker)} + (1,872 \times \$0.45) + \$525 = \$4,867$$
+    $$\text{TCO}_{\text{home}} = \$4,199 \text{ (sticker)} + (1,872 \times \$0.54) + \$630 \approx \$5,840$$
   * **Home Cost-Per-Use (CPU):** 
-    $$\text{CPU}_{\text{personal}} = \frac{\text{TCO}_{\text{home}}}{U_{\text{lifetime}}} = \frac{\$4,867}{1,872} \approx \$2.60 / \text{hour}$$
+    $$\text{CPU}_{\text{personal}} = \frac{\text{TCO}_{\text{home}}}{U_{\text{lifetime}}} = \frac{\$5,840}{1,872} \approx \$3.12 / \text{hour}$$
 * **Verdict:** **SKIP / OUTSOURCE**
-* **Rationale:** Cloud GPU renting remains financially superior. Your local rig cost is $2.60/hr compared to the $1.80/hr renting rate because your weekly compute density (12 hours) is not high enough to amortize the hardware CapEx.
+* **Rationale:** Cloud GPU renting remains financially superior. Your local rig cost is $3.12/hr compared to the $2.16/hr renting rate because your weekly compute density (12 hours) is not high enough to amortize the hardware CapEx.
 
 ---
 

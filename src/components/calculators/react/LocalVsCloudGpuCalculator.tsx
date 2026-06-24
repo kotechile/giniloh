@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { formatCurrency } from '../../../lib/calculators/format';
 
 interface GpuModel {
@@ -7,6 +7,8 @@ interface GpuModel {
 	cost: number;
 	tdp: number; // in Watts
 	vram: string;
+	tier: string;
+	isTurnKey: boolean;
 }
 
 interface CloudProvider {
@@ -20,10 +22,26 @@ interface CloudProvider {
 }
 
 const GPU_MODELS: GpuModel[] = [
-	{ id: 'rtx3070', name: 'RTX 3070 - $499 - 8GB VRAM', cost: 499, tdp: 220, vram: '8GB' },
-	{ id: 'rtx4070', name: 'RTX 4070 - $599 - 12GB VRAM', cost: 599, tdp: 200, vram: '12GB' },
-	{ id: 'rtx4080', name: 'RTX 4080 - $1199 - 16GB VRAM', cost: 1199, tdp: 320, vram: '16GB' },
-	{ id: 'rtx4090', name: 'RTX 4090 - $1599 - 24GB VRAM', cost: 1599, tdp: 450, vram: '24GB' }
+	// TIER 1: Apple Silicon (Unified Memory)
+	{ id: 'mac-mini-m4-pro-48', name: 'Mac Mini M4 Pro (48GB) - $1,499', cost: 1499, tdp: 65, vram: '48GB', tier: 'Apple Silicon', isTurnKey: true },
+	{ id: 'mac-mini-m4-pro-64', name: 'Mac Mini M4 Pro (64GB) - $1,799', cost: 1799, tdp: 65, vram: '64GB', tier: 'Apple Silicon', isTurnKey: true },
+	{ id: 'mac-studio-m4-max-128', name: 'Mac Studio M4 Max (128GB) - $3,699', cost: 3699, tdp: 120, vram: '128GB', tier: 'Apple Silicon', isTurnKey: true },
+
+	// TIER 2: AMD Mini PCs (Budget Always-On)
+	{ id: 'beelink-ser9-64', name: 'Beelink SER9 (64GB DDR5) - $799', cost: 799, tdp: 25, vram: '64GB Shared', tier: 'AMD Mini PC', isTurnKey: true },
+	{ id: 'gmktec-evo-x2-128', name: 'GMKtec EVO-X2 (AMD Strix Halo 128GB) - $2,849', cost: 2849, tdp: 85, vram: '128GB Shared', tier: 'AMD Mini PC', isTurnKey: true },
+
+	// TIER 3: Professional CUDA Powerhouse
+	{ id: 'rtx-5090-diy', name: 'Custom RTX 5090 DIY Workstation (32GB VRAM) - $7,500', cost: 7500, tdp: 650, vram: '32GB', tier: 'NVIDIA CUDA Workstation', isTurnKey: true },
+	{ id: 'prebuilt-boox-rtx-5090', name: 'BOXX / Puget Workstation (RTX 5090 32GB) - $5,850', cost: 5850, tdp: 700, vram: '32GB', tier: 'NVIDIA CUDA Workstation', isTurnKey: true },
+
+	// TIER 4: Consumer & Used NVIDIA Hardware
+	{ id: 'rtx3070', name: 'RTX 3070 (8GB VRAM) - $499', cost: 499, tdp: 220, vram: '8GB', tier: 'NVIDIA CUDA GPU', isTurnKey: false },
+	{ id: 'rtx4070', name: 'RTX 4070 (12GB VRAM) - $599', cost: 599, tdp: 200, vram: '12GB', tier: 'NVIDIA CUDA GPU', isTurnKey: false },
+	{ id: 'rtx4080', name: 'RTX 4080 (16GB VRAM) - $1,199', cost: 1199, tdp: 320, vram: '16GB', tier: 'NVIDIA CUDA GPU', isTurnKey: false },
+	{ id: 'rtx4090', name: 'RTX 4090 (24GB VRAM) - $1,599', cost: 1599, tdp: 450, vram: '24GB', tier: 'NVIDIA CUDA GPU', isTurnKey: false },
+	{ id: 'used-rtx-3090', name: 'Used Single RTX 3090 (24GB VRAM) - $699', cost: 699, tdp: 350, vram: '24GB', tier: 'NVIDIA CUDA GPU', isTurnKey: false },
+	{ id: 'used-dual-rtx-3090', name: 'DIY Dual Used RTX 3090s (48GB VRAM) - $1,398', cost: 1398, tdp: 700, vram: '48GB', tier: 'NVIDIA CUDA GPU', isTurnKey: false }
 ];
 
 const CLOUD_PROVIDERS: CloudProvider[] = [
@@ -78,8 +96,20 @@ export default function LocalVsCloudGpuCalculator() {
 	const [selectedGpuId, setSelectedGpuId] = useState<string>('rtx4090');
 	const [selectedProviderId, setSelectedProviderId] = useState<string>('runpod');
 
+	// Auto-adjust system cost based on turnkey hardware selection
+	useEffect(() => {
+		const selectedOption = GPU_MODELS.find(g => g.id === selectedGpuId);
+		if (selectedOption) {
+			if (selectedOption.isTurnKey) {
+				setSystemCost(0);
+			} else if (systemCost === 0) {
+				setSystemCost(1000); // Default DIY system components cost
+			}
+		}
+	}, [selectedGpuId]);
+
 	// Find active items
-	const activeGpu = useMemo(() => GPU_MODELS.find(g => g.id === selectedGpuId) || GPU_MODELS[3], [selectedGpuId]);
+	const activeGpu = useMemo(() => GPU_MODELS.find(g => g.id === selectedGpuId) || GPU_MODELS[0], [selectedGpuId]);
 	const activeProvider = useMemo(() => CLOUD_PROVIDERS.find(p => p.id === selectedProviderId) || CLOUD_PROVIDERS[0], [selectedProviderId]);
 
 	// 3. Mathematical Calculations
@@ -149,9 +179,19 @@ export default function LocalVsCloudGpuCalculator() {
 
 					{/* Hours per Day Slider */}
 					<div className="space-y-2">
-						<div className="flex justify-between text-sm font-semibold text-slate-300">
+						<div className="flex justify-between items-center text-sm font-semibold text-slate-300">
 							<span>Hours per Day</span>
-							<span className="text-cyan-400 font-mono text-base">{hoursPerDay} hours</span>
+							<div className="flex items-center gap-1 bg-slate-950/60 [.light_&]:bg-white rounded-lg px-2 py-0.5 border border-slate-800/80 [.light_&]:border-slate-200 focus-within:border-cyan-500/50">
+								<input
+									type="number"
+									min="1"
+									max="24"
+									value={hoursPerDay}
+									onChange={(e) => setHoursPerDay(Math.min(24, Math.max(1, Number(e.target.value))))}
+									className="w-8 bg-transparent text-right font-mono text-sm font-semibold text-cyan-400 focus:outline-none border-none p-0"
+								/>
+								<span className="text-[10px] text-slate-500 font-mono">hrs</span>
+							</div>
 						</div>
 						<input
 							type="range"
@@ -170,9 +210,19 @@ export default function LocalVsCloudGpuCalculator() {
 
 					{/* Days per Month Slider */}
 					<div className="space-y-2">
-						<div className="flex justify-between text-sm font-semibold text-slate-300">
+						<div className="flex justify-between items-center text-sm font-semibold text-slate-300">
 							<span>Days per Month</span>
-							<span className="text-cyan-400 font-mono text-base">{daysPerMonth} days</span>
+							<div className="flex items-center gap-1 bg-slate-950/60 [.light_&]:bg-white rounded-lg px-2 py-0.5 border border-slate-800/80 [.light_&]:border-slate-200 focus-within:border-cyan-500/50">
+								<input
+									type="number"
+									min="1"
+									max="30"
+									value={daysPerMonth}
+									onChange={(e) => setDaysPerMonth(Math.min(30, Math.max(1, Number(e.target.value))))}
+									className="w-8 bg-transparent text-right font-mono text-sm font-semibold text-cyan-400 focus:outline-none border-none p-0"
+								/>
+								<span className="text-[10px] text-slate-500 font-mono">days</span>
+							</div>
 						</div>
 						<input
 							type="range"
@@ -191,9 +241,19 @@ export default function LocalVsCloudGpuCalculator() {
 
 					{/* Time Period Months Slider */}
 					<div className="space-y-2">
-						<div className="flex justify-between text-sm font-semibold text-slate-300">
+						<div className="flex justify-between items-center text-sm font-semibold text-slate-300">
 							<span>Time Period (Months)</span>
-							<span className="text-cyan-400 font-mono text-base">{timePeriodMonths} months</span>
+							<div className="flex items-center gap-1 bg-slate-950/60 [.light_&]:bg-white rounded-lg px-2 py-0.5 border border-slate-800/80 [.light_&]:border-slate-200 focus-within:border-cyan-500/50">
+								<input
+									type="number"
+									min="1"
+									max="36"
+									value={timePeriodMonths}
+									onChange={(e) => setTimePeriodMonths(Math.min(36, Math.max(1, Number(e.target.value))))}
+									className="w-8 bg-transparent text-right font-mono text-sm font-semibold text-cyan-400 focus:outline-none border-none p-0"
+								/>
+								<span className="text-[10px] text-slate-500 font-mono">mo</span>
+							</div>
 						</div>
 						<input
 							type="range"
@@ -232,9 +292,26 @@ export default function LocalVsCloudGpuCalculator() {
 							onChange={(e) => setSelectedGpuId(e.target.value)}
 							className="w-full rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-slate-950 [.light_&]:bg-white px-4 py-3.5 text-base font-semibold text-white [.light_&]:text-slate-800 outline-none focus:border-cyan-400"
 						>
-							{GPU_MODELS.map(g => (
-								<option key={g.id} value={g.id}>{g.name}</option>
-							))}
+							<optgroup label="Tier 1: Apple Silicon (Unified Memory)">
+								{GPU_MODELS.filter(g => g.tier === 'Apple Silicon').map(g => (
+									<option key={g.id} value={g.id}>{g.name}</option>
+								))}
+							</optgroup>
+							<optgroup label="Tier 2: AMD Mini PCs (Budget Always-On)">
+								{GPU_MODELS.filter(g => g.tier === 'AMD Mini PC').map(g => (
+									<option key={g.id} value={g.id}>{g.name}</option>
+								))}
+							</optgroup>
+							<optgroup label="Tier 3: Professional CUDA Workstations">
+								{GPU_MODELS.filter(g => g.tier === 'NVIDIA CUDA Workstation').map(g => (
+									<option key={g.id} value={g.id}>{g.name}</option>
+								))}
+							</optgroup>
+							<optgroup label="Tier 4: Consumer & Used NVIDIA GPUs">
+								{GPU_MODELS.filter(g => g.tier === 'NVIDIA CUDA GPU').map(g => (
+									<option key={g.id} value={g.id}>{g.name}</option>
+								))}
+							</optgroup>
 						</select>
 					</div>
 
@@ -252,14 +329,25 @@ export default function LocalVsCloudGpuCalculator() {
 
 					{/* System components price slider */}
 					<div className="space-y-2 border-t border-slate-800/60 [.light_&]:border-slate-200/80 pt-4">
-						<div className="flex justify-between text-sm font-semibold text-slate-300">
+						<div className="flex justify-between items-center text-sm font-semibold text-slate-300">
 							<span>System components (CPU, RAM, Motherboard, etc.)</span>
-							<span className="text-emerald-400 font-mono">{formatCurrency(systemCost)}</span>
+							<div className="flex items-center gap-0.5 bg-slate-950/60 [.light_&]:bg-white rounded-lg px-2 py-0.5 border border-slate-800/80 [.light_&]:border-slate-200 focus-within:border-cyan-500/50">
+								<span className="text-xs text-slate-500 font-mono">$</span>
+								<input
+									type="number"
+									min="500"
+									max="2400"
+									step="50"
+									value={systemCost}
+									onChange={(e) => setSystemCost(Math.min(2400, Math.max(500, Number(e.target.value))))}
+									className="w-12 bg-transparent text-right font-mono text-sm font-semibold text-emerald-400 focus:outline-none border-none p-0"
+								/>
+							</div>
 						</div>
 						<input
 							type="range"
 							min="500"
-							max="2000"
+							max="2400"
 							step="50"
 							value={systemCost}
 							onChange={(e) => setSystemCost(Number(e.target.value))}
@@ -267,20 +355,32 @@ export default function LocalVsCloudGpuCalculator() {
 						/>
 						<div className="flex justify-between text-[10px] text-slate-500 font-mono">
 							<span>$500</span>
-							<span>$2,000</span>
+							<span>$2,400</span>
 						</div>
 					</div>
 
 					{/* Electricity Rate Slider */}
 					<div className="space-y-2 border-t border-slate-800/60 [.light_&]:border-slate-200/80 pt-4">
-						<div className="flex justify-between text-sm font-semibold text-slate-300">
+						<div className="flex justify-between items-center text-sm font-semibold text-slate-300">
 							<span>Local Electricity Rate</span>
-							<span className="text-cyan-400 font-mono">${electricityRate.toFixed(2)}/kWh</span>
+							<div className="flex items-center gap-0.5 bg-slate-950/60 [.light_&]:bg-white rounded-lg px-2 py-0.5 border border-slate-800/80 [.light_&]:border-slate-200 focus-within:border-cyan-500/50">
+								<span className="text-xs text-slate-500 font-mono">$</span>
+								<input
+									type="number"
+									min="0.05"
+									max="0.60"
+									step="0.01"
+									value={electricityRate}
+									onChange={(e) => setElectricityRate(Math.min(0.60, Math.max(0.05, Number(e.target.value))))}
+									className="w-12 bg-transparent text-right font-mono text-sm font-semibold text-cyan-400 focus:outline-none border-none p-0"
+								/>
+								<span className="text-xs text-slate-500 font-mono">/kWh</span>
+							</div>
 						</div>
 						<input
 							type="range"
 							min="0.05"
-							max="0.50"
+							max="0.60"
 							step="0.01"
 							value={electricityRate}
 							onChange={(e) => setElectricityRate(Number(e.target.value))}
@@ -288,7 +388,7 @@ export default function LocalVsCloudGpuCalculator() {
 						/>
 						<div className="flex justify-between text-[10px] text-slate-500 font-mono">
 							<span>$0.05/kWh</span>
-							<span>$0.50/kWh</span>
+							<span>$0.60/kWh</span>
 						</div>
 					</div>
 				</div>
@@ -329,14 +429,25 @@ export default function LocalVsCloudGpuCalculator() {
 
 					{/* Persistent Cloud Storage Slider */}
 					<div className="space-y-2 border-t border-slate-800/60 [.light_&]:border-slate-200/80 pt-4">
-						<div className="flex justify-between text-sm font-semibold text-slate-300">
+						<div className="flex justify-between items-center text-sm font-semibold text-slate-300">
 							<span>Cloud Storage Size</span>
-							<span className="text-cyan-400 font-mono">{storageSizeGb} GB</span>
+							<div className="flex items-center gap-1 bg-slate-950/60 [.light_&]:bg-white rounded-lg px-2 py-0.5 border border-slate-800/80 [.light_&]:border-slate-200 focus-within:border-cyan-500/50">
+								<input
+									type="number"
+									min="10"
+									max="1200"
+									step="10"
+									value={storageSizeGb}
+									onChange={(e) => setStorageSizeGb(Math.min(1200, Math.max(10, Number(e.target.value))))}
+									className="w-12 bg-transparent text-right font-mono text-sm font-semibold text-cyan-400 focus:outline-none border-none p-0"
+								/>
+								<span className="text-[10px] text-slate-500 font-mono">GB</span>
+							</div>
 						</div>
 						<input
 							type="range"
 							min="10"
-							max="1000"
+							max="1200"
 							step="10"
 							value={storageSizeGb}
 							onChange={(e) => setStorageSizeGb(Number(e.target.value))}
@@ -344,7 +455,7 @@ export default function LocalVsCloudGpuCalculator() {
 						/>
 						<div className="flex justify-between text-[10px] text-slate-500 font-mono">
 							<span>10 GB</span>
-							<span>1,000 GB</span>
+							<span>1,200 GB</span>
 						</div>
 						<p className="text-[10px] text-slate-500">Persistent storage priced at $0.15 / GB / month</p>
 					</div>
@@ -417,10 +528,10 @@ export default function LocalVsCloudGpuCalculator() {
 
 				{/* Verdict Card */}
 				<div 
-					className={`panel-soft rounded-[2rem] border transition duration-300 ${
+					className={`panel-soft rounded-[2rem] transition duration-300 border-2 ${
 						calculations.localWins 
-							? 'border-emerald-500/35 bg-gradient-to-br from-slate-900/90 to-emerald-950/20 shadow-[0_0_50px_rgba(16,185,129,0.15)] [.light_&]:border-emerald-200/60 [.light_&]:bg-[linear-gradient(135deg,rgba(240,253,250,0.8),rgba(209,250,229,0.4))] [.light_&]:shadow-[0_15px_30px_rgba(16,185,129,0.06)]' 
-							: 'border-cyan-500/35 bg-gradient-to-br from-slate-900/90 to-cyan-950/20 shadow-[0_0_50px_rgba(34,211,238,0.15)] [.light_&]:border-cyan-200/60 [.light_&]:bg-[linear-gradient(135deg,rgba(236,254,255,0.8),rgba(207,250,254,0.4))] [.light_&]:shadow-[0_15px_30px_rgba(34,211,238,0.06)]'
+							? 'border-emerald-500 bg-gradient-to-br from-emerald-950/60 via-slate-950/80 to-emerald-900/40 shadow-[0_0_40px_rgba(16,185,129,0.25)] [.light_&]:border-emerald-500 [.light_&]:bg-[linear-gradient(135deg,rgba(167,243,208,0.65),rgba(209,250,229,0.95))] [.light_&]:shadow-[0_15px_35px_rgba(16,185,129,0.15)]' 
+							: 'border-cyan-500 bg-gradient-to-br from-cyan-950/60 via-slate-950/80 to-cyan-900/40 shadow-[0_0_40px_rgba(34,211,238,0.25)] [.light_&]:border-cyan-500 [.light_&]:bg-[linear-gradient(135deg,rgba(165,243,252,0.65),rgba(207,250,254,0.95))] [.light_&]:shadow-[0_15px_35px_rgba(34,211,238,0.15)]'
 					}`}
 				>
 					<div className="p-6 sm:p-8">

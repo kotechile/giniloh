@@ -8,7 +8,7 @@ import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/
 const calculator = getCalculatorBySlug('gpu-compute');
 const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
 
-const title = "Local GPU vs. Cloud GPU Calculator";
+const title = "GPU Cost Calculator";
 const description = "Compare the TCO of building a local deep learning GPU workstation against renting cloud GPU compute instances.";
 const eyebrow = "Asset Arbitrage";
 
@@ -29,7 +29,7 @@ const faqItems = [
 ---
 
 <BaseLayout
-	title="Local GPU vs. Cloud GPU Calculator | Gini Loh"
+	title="GPU Cost Calculator | Gini Loh"
 	description={description}
 >
 	<link slot="head" rel="canonical" href={new URL('/calculators/gpu-compute/', Astro.site).toString()} />

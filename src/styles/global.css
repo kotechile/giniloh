@@ -1661,5 +1661,76 @@ code,
   word-break: break-word !important;
 }
 
+/* Premium range slider handle styles for all calculators */
+.panel-soft input[type="range"] {
+  overflow: visible !important;
+}
+
+.panel-soft input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 9999px !important;
+  background-color: #4a4a4a !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4) !important;
+  cursor: pointer !important;
+  transition: transform 0.1s ease, background-color 0.1s ease !important;
+}
+
+.panel-soft input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: #333333 !important;
+  transform: scale(1.15) !important;
+}
+
+.panel-soft input[type="range"]::-webkit-slider-thumb:active {
+  background-color: #222222 !important;
+  transform: scale(0.95) !important;
+}
+
+.panel-soft input[type="range"]::-moz-range-thumb {
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 9999px !important;
+  background-color: #4a4a4a !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4) !important;
+  cursor: pointer !important;
+  transition: transform 0.1s ease, background-color 0.1s ease !important;
+}
+
+.panel-soft input[type="range"]::-moz-range-thumb:hover {
+  background-color: #333333 !important;
+  transform: scale(1.15) !important;
+}
+
+.panel-soft input[type="range"]::-moz-range-thumb:active {
+  background-color: #222222 !important;
+  transform: scale(0.95) !important;
+}
+
+html.light .panel-soft input[type="range"]::-webkit-slider-thumb {
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.3) !important;
+}
+
+html.light .panel-soft input[type="range"]::-moz-range-thumb {
+  border: 2px solid #ffffff !important;
+  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.3) !important;
+}
+
+/* Hide number input spin buttons for cleaner UI */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0 !important;
+}
+input[type=number] {
+  -moz-appearance: textfield !important;
+}
+
+
+
 
 
