@@ -39,7 +39,7 @@ This document outlines twelve real-life decision scenarios. Each example models 
 ---
 
 ### Use Case 2: Local Deep Learning Rig vs. Cloud GPU Compute
-* **Dilemma:** Building a local PC deep learning computer for $4,200 (RTX 4090 GPU + $2,600 system parts) versus renting cloud GPU compute at $2.16/hour.
+* **Dilemma:** Building a local PC deep learning computer for $4,199 (RTX 4090 GPU + $2,600 system parts) versus renting cloud GPU compute (Paperspace) at $2.30/hour.
 * **Decision-Intelligence Tool Rule:** **True Break-Even Horizon**
 * **How to Enter in the App:**
   1. Navigate to the dedicated **GPU Cost Calculator** page (`/calculators/gpu-compute`).
@@ -48,31 +48,31 @@ This document outlines twelve real-life decision scenarios. Each example models 
      - Type (or slide) **Days per Month** to `26` (this yields 52 hours/month, which corresponds to the 12 active compute hours/week frequency).
      - Type (or slide) **Time Period (Months)** to `36`.
   3. Under **Select GPU**:
-     - Select **RTX 4090 - $1599 - 24GB VRAM** from the dropdown menu.
+     - Select **RTX 4090 (24GB VRAM) - $1,599** from the dropdown menu.
      - In the **System components (CPU, RAM, Motherboard, etc.)** number field, type `2600` (making the total hardware setup cost $4,199).
      - In the **Local Electricity Rate** number field, type `0.60` (representing utility rate for modeling high compute draw).
   4. Under **Select Cloud Provider**:
-     - Select **Paperspace** (or type a custom alternative rate of `2.16`/hr).
+     - Select **Paperspace** (which has an hourly rate of `$2.30`/hr).
      - In the **Cloud Storage Size** number field, type `100` GB.
 * **Input Parameters:**
   * **Sticker Price ($):** $4,199 (RTX 4090 @ $1,599 + $2,600 components)
-  * **Secondary Cost per use ($):** $0.54 / hour (electricity draw at 750W load under $0.60/kWh rate)
-  * **Outsource Price per use ($):** $2.16 / hour
+  * **Secondary Cost per use ($):** $0.42 / hour (electricity draw at 700W total load under $0.60/kWh rate)
+  * **Outsource Price per use ($):** $2.30 / hour (plus persistent storage fees)
   * **Weekly usage:** 12 active compute hours / week
-  * **Lifespan Horizon:** 3 years
+  * **Lifespan Horizon:** 3 years (36 months)
 * **TCO Calculations:**
   * **Total Uses:** 
     $$U_{\text{lifetime}} = 12 \text{ hours/week} \times 52 \text{ weeks/year} \times 3 \text{ years} = 1,872 \text{ run hours}$$
   * **Outsource TCO (Cloud GPU):** 
-    $$\text{TCO}_{\text{outsource}} = 1,872 \text{ hours} \times \$2.16 \approx \$4,044$$
+    $$\text{TCO}_{\text{outsource}} = (1,872 \text{ hours} \times \$2.30) + (100 \text{ GB} \times \$0.15 \times 36 \text{ months}) = \$4,306 + \$540 = \$4,846$$
   * **Local Maintenance & Parts (5% of sticker/year):** 
     $$C_{\text{maintenance}} = \$4,199 \times 0.05 \times 3 \approx \$630$$
   * **Home TCO (Local GPU Rig):** 
-    $$\text{TCO}_{\text{home}} = \$4,199 \text{ (sticker)} + (1,872 \times \$0.54) + \$630 \approx \$5,840$$
+    $$\text{TCO}_{\text{home}} = \$4,199 \text{ (sticker)} + (1,872 \text{ hours} \times \$0.42) + \$630 = \$4,199 + \$786 + \$630 = \$5,615$$
   * **Home Cost-Per-Use (CPU):** 
-    $$\text{CPU}_{\text{personal}} = \frac{\text{TCO}_{\text{home}}}{U_{\text{lifetime}}} = \frac{\$5,840}{1,872} \approx \$3.12 / \text{hour}$$
-* **Verdict:** **SKIP / OUTSOURCE**
-* **Rationale:** Cloud GPU renting remains financially superior. Your local rig cost is $3.12/hr compared to the $2.16/hr renting rate because your weekly compute density (12 hours) is not high enough to amortize the hardware CapEx.
+    $$\text{CPU}_{\text{personal}} = \frac{\text{TCO}_{\text{home}}}{U_{\text{lifetime}}} = \frac{\$5,615}{1,872} \approx \$3.00 / \text{hour}$$
+* **Verdict:** **SKIP / OUTSOURCE** (Cloud saves `$769` over 3 years, costing `$2.59/hr` vs local hardware costing `$3.00/hr`).
+* **Rationale:** Cloud GPU renting remains financially superior. Your local rig cost is $3.00/hr compared to the Paperspace cloud rate (including storage) of $2.59/hr because your weekly compute density (12 hours) is not high enough to amortize the hardware CapEx.
 
 ---
 
