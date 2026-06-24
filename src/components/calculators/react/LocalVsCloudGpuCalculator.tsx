@@ -54,7 +54,21 @@ const GPU_MODELS: GpuModel[] = [
 	{ id: 'rtx4080', name: 'RTX 4080 (16GB VRAM) - $1,199', cost: 1199, tdp: 320, vram: '16GB', tier: 'NVIDIA CUDA GPU', isTurnKey: false },
 	{ id: 'rtx4090', name: 'RTX 4090 (24GB VRAM) - $1,599', cost: 1599, tdp: 450, vram: '24GB', tier: 'NVIDIA CUDA GPU', isTurnKey: false },
 	{ id: 'used-rtx-3090', name: 'Used Single RTX 3090 (24GB VRAM) - $699', cost: 699, tdp: 350, vram: '24GB', tier: 'NVIDIA CUDA GPU', isTurnKey: false },
-	{ id: 'used-dual-rtx-3090', name: 'DIY Dual Used RTX 3090s (48GB VRAM) - $1,398', cost: 1398, tdp: 700, vram: '48GB', tier: 'NVIDIA CUDA GPU', isTurnKey: false }
+	{ id: 'used-dual-rtx-3090', name: 'DIY Dual Used RTX 3090s (48GB VRAM) - $1,398', cost: 1398, tdp: 700, vram: '48GB', tier: 'NVIDIA CUDA GPU', isTurnKey: false },
+
+	// TIER 5: Enterprise AI Workstations & Servers (H100, H200, B200, L40S, etc.)
+	{ id: 'nvidia-l4', name: 'NVIDIA L4 PCIe Workstation GPU (24GB) - $1,250', cost: 1250, tdp: 75, vram: '24GB', tier: 'Enterprise AI Hardware', isTurnKey: false },
+	{ id: 'rtx-6000-ada', name: 'NVIDIA RTX 6000 Ada Workstation (48GB) - $8,500', cost: 8500, tdp: 300, vram: '48GB', tier: 'Enterprise AI Hardware', isTurnKey: true },
+	{ id: 'dual-rtx-6000-ada', name: 'Dual NVIDIA RTX 6000 Ada Workstation (96GB) - $17,500', cost: 17500, tdp: 600, vram: '96GB', tier: 'Enterprise AI Hardware', isTurnKey: true },
+	{ id: 'nvidia-l40s-pcie', name: 'NVIDIA L40S PCIe Workstation (48GB) - $12,500', cost: 12500, tdp: 350, vram: '48GB', tier: 'Enterprise AI Hardware', isTurnKey: true },
+	{ id: 'quad-nvidia-l40s', name: '4x NVIDIA L40S Workstation Node (192GB) - $48,000', cost: 48000, tdp: 1400, vram: '192GB', tier: 'Enterprise AI Hardware', isTurnKey: true },
+	{ id: 'quad-rtx-4090-node', name: '4x RTX 4090 DIY Deep Learning Node (96GB) - $10,500', cost: 10500, tdp: 1800, vram: '96GB', tier: 'Enterprise AI Hardware', isTurnKey: true },
+	{ id: 'nvidia-h100-pcie', name: 'NVIDIA H100 PCIe Workstation (80GB) - $35,000', cost: 35000, tdp: 350, vram: '80GB', tier: 'Enterprise AI Hardware', isTurnKey: true },
+	{ id: 'nvidia-h200-sxm', name: 'NVIDIA H200 SXM Workstation (141GB) - $48,000', cost: 48000, tdp: 700, vram: '141GB', tier: 'Enterprise AI Hardware', isTurnKey: true },
+	{ id: 'nvidia-b200-sxm', name: 'NVIDIA B200 SXM Workstation (180GB) - $55,000', cost: 55000, tdp: 1000, vram: '180GB', tier: 'Enterprise AI Hardware', isTurnKey: true },
+	{ id: 'octa-nvidia-h100', name: '8x NVIDIA H100 SXM HGX Server (640GB) - $320,000', cost: 320000, tdp: 10200, vram: '640GB', tier: 'Enterprise AI Hardware', isTurnKey: true },
+	{ id: 'octa-nvidia-h200', name: '8x NVIDIA H200 SXM HGX Server (1128GB) - $420,000', cost: 420000, tdp: 11000, vram: '1128GB', tier: 'Enterprise AI Hardware', isTurnKey: true },
+	{ id: 'octa-nvidia-b200', name: '8x NVIDIA B200 HGX Server (1440GB) - $510,000', cost: 510000, tdp: 12000, vram: '1440GB', tier: 'Enterprise AI Hardware', isTurnKey: true }
 ];
 
 const CLOUD_PROVIDERS_EXPLORER: CloudProviderDetail[] = [
@@ -543,6 +557,11 @@ export default function LocalVsCloudGpuCalculator() {
 							</optgroup>
 							<optgroup label="Tier 4: Consumer & Used NVIDIA GPUs">
 								{GPU_MODELS.filter(g => g.tier === 'NVIDIA CUDA GPU').map(g => (
+									<option key={g.id} value={g.id}>{g.name}</option>
+								))}
+							</optgroup>
+							<optgroup label="Tier 5: Enterprise AI Workstations & Servers">
+								{GPU_MODELS.filter(g => g.tier === 'Enterprise AI Hardware').map(g => (
 									<option key={g.id} value={g.id}>{g.name}</option>
 								))}
 							</optgroup>
