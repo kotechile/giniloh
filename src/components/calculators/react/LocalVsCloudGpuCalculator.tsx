@@ -335,27 +335,27 @@ export default function LocalVsCloudGpuCalculator() {
 								<span className="text-xs text-slate-500 font-mono">$</span>
 								<input
 									type="number"
-									min="500"
-									max="2400"
+									min="0"
+									max="5000"
 									step="50"
 									value={systemCost}
-									onChange={(e) => setSystemCost(Math.min(2400, Math.max(500, Number(e.target.value))))}
-									className="w-12 bg-transparent text-right font-mono text-sm font-semibold text-emerald-400 focus:outline-none border-none p-0"
+									onChange={(e) => setSystemCost(Math.min(5000, Math.max(0, Number(e.target.value))))}
+									className="w-14 bg-transparent text-right font-mono text-sm font-semibold text-emerald-400 focus:outline-none border-none p-0"
 								/>
 							</div>
 						</div>
 						<input
 							type="range"
-							min="500"
-							max="2400"
+							min="0"
+							max="5000"
 							step="50"
 							value={systemCost}
 							onChange={(e) => setSystemCost(Number(e.target.value))}
 							className="w-full h-2 bg-slate-950 [.light_&]:bg-slate-200 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-slate-800 [.light_&]:border-slate-300"
 						/>
 						<div className="flex justify-between text-[10px] text-slate-500 font-mono">
-							<span>$500</span>
-							<span>$2,400</span>
+							<span>$0</span>
+							<span>$5,000</span>
 						</div>
 					</div>
 
