@@ -10,6 +10,9 @@ interface Props {
 }
 
 const { title, description = 'Headless editorial front end for Gini Loh powered by Astro and WordPress.' } = Astro.props;
+
+const analyticsSrc = import.meta.env.PUBLIC_ANALYTICS_SRC;
+const analyticsWebsiteId = import.meta.env.PUBLIC_ANALYTICS_WEBSITE_ID;
 ---
 
 <!doctype html>
@@ -39,6 +42,9 @@ const { title, description = 'Headless editorial front end for Gini Loh powered 
 				<meta http-equiv="Pragma" content="no-cache" />
 				<meta http-equiv="Expires" content="0" />
 			</>
+		)}
+		{analyticsSrc && analyticsWebsiteId && (
+			<script async defer data-website-id={analyticsWebsiteId} src={analyticsSrc}></script>
 		)}
 		<title>{title}</title>
 		<slot name="head" />
