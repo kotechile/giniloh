@@ -9,9 +9,9 @@ const calculator = getCalculatorBySlug('tech-debt-repair');
 const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
 
 const config = {
-	title: 'Tech Debt Screen Striker (Repair vs. Replace)',
+	title: 'Tech Repair vs. Replace Optimizer',
 	description: 'Determine if repairing a 3-to-5-year-old laptop or phone makes financial sense vs. buying a replacement.',
-	eyebrow: 'Asset Horizon / RxR',
+	eyebrow: 'Repair vs. Replace',
 
 	ageLabel: 'Device Age',
 	ageHelp: 'How many years old the phone or laptop is.',
@@ -51,7 +51,7 @@ const faqItems = [
 ---
 
 <BaseLayout
-	title="Tech Debt Screen Striker | Gini Loh"
+	title="Tech Repair vs. Replace Optimizer | Gini Loh"
 	description="Calculate if repairing an old laptop or phone is a smart fix or a financial liability. Uses the adapted consumer 1,500 index rule."
 >
 	<link slot="head" rel="canonical" href={new URL('/calculators/tech-debt-repair/', Astro.site).toString()} />

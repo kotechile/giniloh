@@ -11,17 +11,17 @@ graph TD
     classDef category fill:#1e1b4b,stroke:#818cf8,stroke-width:2px,color:#fff;
     classDef tool fill:#0f172a,stroke:#38bdf8,stroke-width:1px,color:#cbd5e1;
 
-    C1[Career & Comp Strategy]:::category --> T1(Raise & Job-Hop Velocity):::tool
+    C1[Career & Comp Strategy]:::category --> T1(Job-Hop vs. Retention Comp):::tool
     C1 --> T2(Total Comp & Equity):::tool
     C1 --> T3(Career Relocation Cost):::tool
 
-    C2[Wealth & Investment Automation]:::category --> T4(Frictionless Money Flow):::tool
+    C2[Wealth & Investment Automation]:::category --> T4(Automated Income Waterfall):::tool
 
-    C3[Decision-Intelligence & TCO]:::category --> T5(Strategic Decision Engine):::tool
-    C3 --> T6(Coffee Equipment Arbitrage):::tool
-    C3 --> T7(Tech Debt Screen Striker):::tool
-    C3 --> T8(No-Code Workaround Terminator):::tool
-    C3 --> T9(GPU Cost Calculator):::tool
+    C3[Decision-Intelligence & TCO]:::category --> T5(Master Asset & Software TCO):::tool
+    C3 --> T6(Home Espresso Cost-per-Use):::tool
+    C3 --> T7(Tech Repair vs. Replace Optimizer):::tool
+    C3 --> T8(Tinkering Tax vs. SaaS Upgrade):::tool
+    C3 --> T9(Local vs. Cloud GPU TCO Analyzer):::tool
 
     C4[Housing & Rental Strategy]:::category --> T10(Lease Break Calculator):::tool
 ```
@@ -30,7 +30,7 @@ graph TD
 
 ## Category 1: Career & Compensation Strategy
 
-### 1. Raise & Job-Hop Velocity Calculator
+### 1. Job-Hop vs. Retention Compensation Calculator
 * **Slug:** `raise-velocity`
 * **Route:** `/calculators/raise-velocity/`
 * **Visual Accent:** Cyan
@@ -88,7 +88,7 @@ graph TD
 
 ## Category 2: Wealth & Investment Automation
 
-### 4. Frictionless Money Flow Simulator
+### 4. Automated Income Waterfall Simulator
 * **Slug:** `money-flow`
 * **Route:** `/calculators/money-flow/`
 * **Visual Accent:** Violet
@@ -111,7 +111,7 @@ graph TD
 
 ## Category 3: Decision-Intelligence & TCO Analysis
 
-### 5. Strategic Decision-Intelligence Engine
+### 5. Master Asset & Software TCO Calculator
 * **Slug:** `decision-intelligence`
 * **Route:** `/calculators/decision-intelligence/`
 * **Visual Accent:** Indigo
@@ -126,7 +126,7 @@ graph TD
 * **Mathematical Logic:**
   * Evaluates and returns corresponding verdicts based on GiniLoh's threshold parameters (e.g., Software 5,000 Rule, Consumer 1,500 Rule, Opportunity Reclaimed Horizonal projections).
 
-### 6. Coffee Equipment Arbitrage Calculator
+### 6. Home Espresso Cost-per-Use Calculator
 * **Slug:** `coffee-arbitrage`
 * **Route:** `/calculators/coffee-arbitrage/`
 * **Visual Accent:** Emerald
@@ -148,7 +148,7 @@ graph TD
     $$\text{CPU} = \frac{\text{TCO}_{\text{home}}}{\text{Uses}_{\text{lifetime}}}$$
   * **Verdict:** BUY if $\text{CPU} < \text{Cost}_{\text{cafe}}$, else SKIP.
 
-### 7. Tech Debt Screen Striker (Repair vs. Replace)
+### 7. Tech Repair vs. Replace Optimizer
 * **Slug:** `tech-debt-repair`
 * **Route:** `/calculators/tech-debt-repair/`
 * **Visual Accent:** Indigo
@@ -166,7 +166,7 @@ graph TD
     * If $\text{Index} \ge 1,500 \implies$ **REPLACE** (Outdated asset is a depreciating money pit).
     * If $\text{Index} < 1,500 \implies$ **REPAIR** (Patching is mathematically efficient).
 
-### 8. No-Code Workaround Terminator
+### 8. Tinkering Tax vs. SaaS Upgrade Calculator
 * **Slug:** `no-code-terminator`
 * **Route:** `/calculators/no-code-terminator/`
 * **Visual Accent:** Cyan
@@ -184,7 +184,7 @@ graph TD
     $$\text{Savings}_{3\text{yr}} = (\text{Cost}_{\text{monthly-time}} - \text{Platform Premium}) \times 36 \text{ months}$$
   * **Verdict:** UPGRADE if $\text{Cost}_{\text{monthly-time}} > \text{Platform Premium}$, else SKIP.
 
-### 9. GPU Cost Calculator
+### 9. Local vs. Cloud GPU TCO Analyzer
 * **Slug:** `gpu-compute`
 * **Route:** `/calculators/gpu-compute/`
 * **Visual Accent:** Violet

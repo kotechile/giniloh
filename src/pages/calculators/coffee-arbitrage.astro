@@ -9,9 +9,9 @@ const calculator = getCalculatorBySlug('coffee-arbitrage');
 const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
 
 const config = {
-	title: 'Coffee Equipment Arbitrage Calculator',
+	title: 'Home Espresso Cost-per-Use Calculator',
 	description: 'Compare the TCO of a premium espresso setup against daily café runs or capsule systems.',
-	eyebrow: 'Asset Arbitrage',
+	eyebrow: 'Asset Cost-per-Use',
 
 	stickerLabel: 'Sticker Price (Upfront Cost)',
 	stickerHelp: 'The initial cost of your espresso machine, grinder, and initial accessories.',
@@ -106,7 +106,7 @@ const faqItems = [
 ---
 
 <BaseLayout
-	title="Coffee Equipment Arbitrage Calculator | Gini Loh"
+	title="Home Espresso Cost-per-Use Calculator | Gini Loh"
 	description="Determine if investing in a premium home espresso setup beats your daily café runs. Real-time cost-per-use calculator."
 >
 	<link slot="head" rel="canonical" href={new URL('/calculators/coffee-arbitrage/', Astro.site).toString()} />

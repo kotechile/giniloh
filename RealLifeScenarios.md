@@ -1,6 +1,6 @@
-# Giniloh Money Flow Simulator: Real-Life Practice Scenarios
+# Giniloh Automated Income Waterfall Simulator: Real-Life Practice Scenarios
 
-This reference document outlines real-world scenarios you can run in the **Frictionless Money Flow Simulator** to stress-test personal savings strategies and enterprise treasury distributions.
+This reference document outlines real-world scenarios you can run in the **Automated Income Waterfall Simulator** to stress-test personal savings strategies and enterprise treasury distributions.
 
 The simulator is implemented in [MoneyFlowSimulator.tsx](file:///Users/jorgefernandezilufi/Documents/_giniloh_front_end/src/components/calculators/react/MoneyFlowSimulator.tsx), renders at [money-flow.astro](file:///Users/jorgefernandezilufi/Documents/_giniloh_front_end/src/pages/calculators/money-flow.astro), and runs on the rule engine defined in [moneyFlowEngine.ts](file:///Users/jorgefernandezilufi/Documents/_giniloh_front_end/src/lib/calculators/moneyFlowEngine.ts).
 

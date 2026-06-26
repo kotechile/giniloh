@@ -33,14 +33,14 @@ graph TD
   * **Standard Thresholds**:
     * Consumer Electronics: `1,500`
     * Vehicles, HVAC, Real Estate, Enterprise Software: `5,000`
-* **Examples**: Tech Debt Screen Striker, Lemon Car Indicator, Legacy Codebase Migrator.
+* **Examples**: Tech Repair vs. Replace Optimizer, Lemon Car Indicator, Legacy Codebase Migrator.
 
 ### 3. The Time-Drain Audit (`TimeDrainTemplate.tsx`)
 * **Use Case**: Evaluating if paying a recurring subscription for specialized software/services is worth it to avoid wasting hours troubleshooting manual workarounds (the "Tinkering Tax").
 * **Math Engine**:
   * $\text{Monthly Time Cost} = \text{Wasted Hours} \times \text{Opportunity Hourly Value}$
   * $\text{3-Year Net Savings} = (\text{Monthly Time Cost} \times 36) - (\text{Subscription Cost} \times 36)$
-* **Examples**: Personal Life Tracker, Smart Home Plug Stabilizer, No-Code Workaround Terminator.
+* **Examples**: Personal Life Tracker, Smart Home Plug Stabilizer, Tinkering Tax vs. SaaS Upgrade Calculator.
 
 ---
 

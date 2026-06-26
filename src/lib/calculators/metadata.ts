@@ -12,7 +12,7 @@ export const calculatorTools = [
 		keywords: ['lease break calculator', 'early lease termination', 'rent calculator']
 	},
 	{
-		title: 'Raise & Job-Hop Velocity Calculator',
+		title: 'Job-Hop vs. Retention Compensation Calculator',
 		slug: 'raise-velocity',
 		href: '/calculators/raise-velocity/',
 		status: 'Live',
@@ -36,7 +36,7 @@ export const calculatorTools = [
 		keywords: ['total compensation calculator', 'rsu calculator', 'equity visualizer']
 	},
 	{
-		title: 'Frictionless Money Flow Simulator',
+		title: 'Automated Income Waterfall Simulator',
 		slug: 'money-flow',
 		href: '/calculators/money-flow/',
 		status: 'Proposed',
@@ -60,7 +60,7 @@ export const calculatorTools = [
 		keywords: ['relocation calculator', 'moving cost payback', 'lease break move']
 	},
 	{
-		title: 'Strategic Decision-Intelligence Engine',
+		title: 'Master Asset & Software TCO Calculator',
 		slug: 'decision-intelligence',
 		href: '/calculators/decision-intelligence/',
 		status: 'Live',
@@ -72,7 +72,7 @@ export const calculatorTools = [
 		keywords: ['decision intelligence', 'build vs buy calculator', 'espresso machine cpu', 'repair vs replace hvac', 'tinkering tax']
 	},
 	{
-		title: 'Coffee Equipment Arbitrage Calculator',
+		title: 'Home Espresso Cost-per-Use Calculator',
 		slug: 'coffee-arbitrage',
 		href: '/calculators/coffee-arbitrage/',
 		status: 'Live',
@@ -81,10 +81,10 @@ export const calculatorTools = [
 			'Determine if investing in a premium home espresso setup beats your daily café runs. Real-time cost-per-use calculator.',
 		utility: 'Evaluate espresso machine cost-per-use',
 		category: 'FinanceApplication',
-		keywords: ['coffee arbitrage calculator', 'espresso machine cpu', 'coffee cost calculator']
+		keywords: ['home espresso cost-per-use', 'espresso machine cpu', 'coffee cost calculator']
 	},
 	{
-		title: 'Tech Debt Screen Striker (Repair vs. Replace)',
+		title: 'Tech Repair vs. Replace Optimizer',
 		slug: 'tech-debt-repair',
 		href: '/calculators/tech-debt-repair/',
 		status: 'Live',
@@ -93,10 +93,10 @@ export const calculatorTools = [
 			'Calculate if repairing a 3-to-5-year-old laptop or phone is a smart fix or a financial liability. Uses the adapted consumer 1,500 index rule.',
 		utility: 'Calculate repair vs replace index score',
 		category: 'FinanceApplication',
-		keywords: ['repair vs replace calculator', 'tech debt screen striker', 'laptop screen repair cost']
+		keywords: ['repair vs replace calculator', 'tech repair vs replace', 'laptop screen repair cost']
 	},
 	{
-		title: 'No-Code Workaround Terminator',
+		title: 'Tinkering Tax vs. SaaS Upgrade Calculator',
 		slug: 'no-code-terminator',
 		href: '/calculators/no-code-terminator/',
 		status: 'Live',
@@ -108,7 +108,7 @@ export const calculatorTools = [
 		keywords: ['tinkering tax calculator', 'no-code workaround', 'hubspot crm price']
 	},
 	{
-		title: 'GPU Cost Calculator',
+		title: 'Local vs. Cloud GPU TCO Analyzer',
 		slug: 'gpu-compute',
 		href: '/calculators/gpu-compute/',
 		status: 'Live',

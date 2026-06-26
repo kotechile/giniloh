@@ -9,9 +9,9 @@ const calculator = getCalculatorBySlug('no-code-terminator');
 const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
 
 const config = {
-	title: 'No-Code Workaround Terminator',
+	title: 'Tinkering Tax vs. SaaS Upgrade Calculator',
 	description: 'Determine if managing business pipelines with a fragile web of Notion and Zapier beats upgrading to HubSpot.',
-	eyebrow: 'Time & Focus Audit',
+	eyebrow: 'Tinkering Tax Audit',
 
 	hoursLabel: 'Monthly Troubleshooting Time',
 	hoursHelp: 'Hours spent fixing broken integrations, syncing contacts, and resolving data discrepancies.',
@@ -52,7 +52,7 @@ const faqItems = [
 ---
 
 <BaseLayout
-	title="No-Code Workaround Terminator | Gini Loh"
+	title="Tinkering Tax vs. SaaS Upgrade Calculator | Gini Loh"
 	description="Calculate the hidden tinkering tax of manual workarounds and sheets vs upgrading to HubSpot CRM. Focus optimization calculator."
 >
 	<link slot="head" rel="canonical" href={new URL('/calculators/no-code-terminator/', Astro.site).toString()} />

@@ -1,6 +1,6 @@
-Giniloh Money Flow Simulator
+Giniloh Automated Income Waterfall Simulator
 
-The **Frictionless Money Flow Simulator** is an interactive financial modeling playground designed to help you visualize, configure, and backtest automated cash flow pipelines. 
+The **Automated Income Waterfall Simulator** is an interactive financial modeling playground designed to help you visualize, configure, and backtest automated cash flow pipelines. 
 
 By simulating daily transactions and monthly interest cycles, this tool shows how a forward-looking "waterfall" routing system can automatically optimize your net worth. It replaces stressful manual monthly budgeting with a zero-friction system that deposits income, fills emergency reserves, wipes out high-interest debt, maximizes tax-advantaged accounts, and channels leftover surpluses into long-term wealth generators—all automatically.
 
@@ -11,7 +11,7 @@ The frictionless approach flips this into prospective expense management
 . By planning with intention and creating a pre-determined allocation of resources, money is automatically routed to its highest-utility destination—whether that is paying off debt, capturing 401(k) matches, or investing—the moment it enters your financial ecosystem
 . It eliminates the willpower needed to save and protects you from behavioral mistakes (like panic-selling during a crash) and structural friction (like login fatigue, which is bypassed using modern FIDO biometric standards)
 .
-How the Giniloh.com Simulator Works The Giniloh Frictionless Money Flow Simulator is an interactive modeling playground that brings this theoretical orchestrator to life
+How the Giniloh.com Simulator Works The Giniloh Automated Income Waterfall Simulator is an interactive modeling playground that brings this theoretical orchestrator to life
 . Under the hood, the engine simulates daily transactions, monthly interest cycles, and market returns to help you backtest automated cash flow pipelines
 .
 The core of the system relies on dual-threshold account mechanics (Overbalance and Underbalance rules)
@@ -159,7 +159,7 @@ To model real-life compliance and protect users from destructive financial behav
 
 ## 5. Orchestrator CLI Command Syntax Reference
 
-In the Frictionless Moneyflow Simulator, the Natural Language / LLM configuration chat operates as an intelligent translation layer. It bridges everyday speech (e.g., "sweep 500 from checking to emergency fund") and the simulator's strict internal syntax (e.g., `checking [500] hysa`).
+In the Automated Income Waterfall Simulator, the Natural Language / LLM configuration chat operates as an intelligent translation layer. It bridges everyday speech (e.g., "sweep 500 from checking to emergency fund") and the simulator's strict internal syntax (e.g., `checking [500] hysa`).
 
 Here is a detailed breakdown of how the parser translates user requests, what commands are generated under the hood, and how users should format their instructions.
 
