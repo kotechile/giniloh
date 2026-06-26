@@ -319,3 +319,30 @@ This document outlines twelve real-life decision scenarios. Each example models 
   * Factor in electricity draw, air conditioning, hardware depreciation, and admin hourly rates against AWS compute, storage, and networking data egress tariffs.
 * **Verdict:** **BUILD WORKSTATION**
 * **Rationale:** For continuous inference workloads (high compute duty cycles), local hardware offsets cloud hourly bills. The break-even horizon is reached within approximately **10 months**.
+
+---
+
+### Use Case 13: E-Commerce Ops Sync (Notion + Zapier Workaround vs. Centralized CRM Upgrade)
+* **Dilemma:** A growing digital brand uses a web of Notion databases and Zapier steps to sync e-commerce customer info, orders, and sales emails. They lose hours weekly resolving broken integrations, duplicated records, and sync timeouts, and are debating whether to upgrade to a unified platform like HubSpot CRM.
+* **Decision-Intelligence Tool Rule:** **Tinkering Tax vs. Unified Platform Premium**
+* **How to Enter in the App:**
+  1. Navigate to the **No-Code Workaround Terminator** page (`/calculators/no-code-terminator`).
+  2. Under **Configure Parameters**:
+     - Adjust the **Monthly Troubleshooting Time** stepper to `12` hours.
+     - In the **Loaded Opportunity Rate** field, type `85` (representing the average hourly value of the operations manager's time).
+     - In the **Unified Platform Premium Cost** field, type `500` (the net monthly subscription increase for the CRM upgrade).
+* **Input Parameters:**
+  * **Troubleshooting Time ($H_{\text{trouble}}$):** 12 hours / month
+  * **Opportunity Value Rate ($R_{\text{opportunity}}$):** $85 / hour
+  * **Platform Premium Cost ($C_{\text{premium}}$):** $500 / month
+* **TCO Calculations:**
+  * **Monthly Time Cost (Tinkering Tax):**
+    $$\text{Cost}_{\text{monthly-time}} = 12 \text{ hours} \times \$85/\text{hour} = \$1,020/\text{month}$$
+  * **3-Year Time-Drain Cost:**
+    $$\text{TCO}_{\text{time-drain}} = \$1,020/\text{month} \times 36 \text{ months} = \$36,720$$
+  * **3-Year Unified Platform Cost:**
+    $$\text{TCO}_{\text{premium}} = \$500/\text{month} \times 36 \text{ months} = \$18,000$$
+  * **3-Year Net Opportunity Reclaimed:**
+    $$\text{Net Savings} = \text{TCO}_{\text{time-drain}} - \text{TCO}_{\text{premium}} = \$36,720 - \$18,000 = \$18,720$$
+* **Verdict:** **UPGRADE / BUY** (Unified CRM saves $18,720 over 3 years)
+* **Rationale:** The monthly tinkering tax of $1,020 exceeds the $500 platform premium. Upgrading recovers 12 hours of monthly operations time and eliminates the stress of fragile data plumbing.
