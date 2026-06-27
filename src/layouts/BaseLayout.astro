@@ -44,7 +44,35 @@ const analyticsWebsiteId = import.meta.env.PUBLIC_ANALYTICS_WEBSITE_ID;
 			</>
 		)}
 		{analyticsSrc && analyticsWebsiteId && (
-			<script async defer data-website-id={analyticsWebsiteId} src={analyticsSrc}></script>
+			<>
+				<script 
+					async 
+					defer 
+					data-website-id={analyticsWebsiteId} 
+					src={analyticsSrc}
+					data-auto-track="false"
+				></script>
+				<script is:inline>
+					(function() {
+						window.__lastTrackedUrl = null;
+						function trackUmami() {
+							const currentUrl = window.location.pathname;
+							if (window.umami && window.__lastTrackedUrl !== currentUrl) {
+								window.__lastTrackedUrl = currentUrl;
+								window.umami.track(function(props) {
+									return Object.assign({}, props, { url: currentUrl });
+								});
+							}
+						}
+						if (document.readyState === 'complete') {
+							trackUmami();
+						} else {
+							window.addEventListener('load', trackUmami, { once: true });
+						}
+						document.addEventListener('astro:page-load', trackUmami);
+					})();
+				</script>
+			</>
 		)}
 		<title>{title}</title>
 		<slot name="head" />
