@@ -42,7 +42,7 @@ This document outlines twelve real-life decision scenarios. Each example models 
 * **Dilemma:** Building a local PC deep learning computer for $4,199 (RTX 4090 GPU + $2,600 system parts) versus renting cloud GPU compute (Paperspace) at $2.30/hour.
 * **Decision-Intelligence Tool Rule:** **True Break-Even Horizon**
 * **How to Enter in the App:**
-  1. Navigate to the dedicated **Local vs. Cloud GPU TCO Analyzer** page (`/calculators/gpu-compute`).
+  1. Navigate to the dedicated **GPU TCO Calculator** page (`/calculators/gpu-compute`).
   2. Under **Your Usage Pattern**:
      - Type (or slide) **Hours per Day** to `2`.
      - Type (or slide) **Days per Month** to `26` (this yields 52 hours/month, which corresponds to the 12 active compute hours/week frequency).
