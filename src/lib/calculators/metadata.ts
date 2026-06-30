@@ -108,7 +108,7 @@ export const calculatorTools = [
 		keywords: ['tinkering tax calculator', 'no-code workaround', 'hubspot crm price']
 	},
 	{
-		title: 'GPU TCO Calculator',
+		title: 'GPU TCO Analyzer',
 		slug: 'gpu-compute',
 		href: '/calculators/gpu-compute/',
 		status: 'Live',

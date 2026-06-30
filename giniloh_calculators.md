@@ -21,7 +21,7 @@ graph TD
     C3 --> T6(Home Espresso Cost-per-Use):::tool
     C3 --> T7(Tech Repair vs. Replace Optimizer):::tool
     C3 --> T8(Tinkering Tax vs. SaaS Upgrade):::tool
-    C3 --> T9(GPU TCO Calculator):::tool
+    C3 --> T9(GPU TCO Analyzer):::tool
 
     C4[Housing & Rental Strategy]:::category --> T10(Lease Break Calculator):::tool
 ```
@@ -184,7 +184,7 @@ graph TD
     $$\text{Savings}_{3\text{yr}} = (\text{Cost}_{\text{monthly-time}} - \text{Platform Premium}) \times 36 \text{ months}$$
   * **Verdict:** UPGRADE if $\text{Cost}_{\text{monthly-time}} > \text{Platform Premium}$, else SKIP.
 
-### 9. GPU TCO Calculator
+### 9. GPU TCO Analyzer
 * **Slug:** `gpu-compute`
 * **Route:** `/calculators/gpu-compute/`
 * **Visual Accent:** Violet
