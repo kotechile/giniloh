@@ -58,6 +58,11 @@ const GPU_MODELS: GpuModel[] = [
 
 	// TIER 5: Enterprise AI Workstations & Servers (H100, H200, B200, L40S, etc.)
 	{ id: 'nvidia-l4', name: 'NVIDIA L4 PCIe Workstation GPU (24GB) - $1,250', cost: 1250, tdp: 75, vram: '24GB', tier: 'Enterprise AI Hardware', isTurnKey: false },
+	{ id: 'rtx-pro-2000-blackwell', name: 'RTX Pro 2000 Blackwell (16GB) - $994', cost: 994, tdp: 70, vram: '16GB', tier: 'Enterprise AI Hardware', isTurnKey: false },
+	{ id: 'rtx-pro-4000-blackwell', name: 'RTX Pro 4000 Blackwell (Standard/SFF 24GB) - $2,600', cost: 2600, tdp: 140, vram: '24GB', tier: 'Enterprise AI Hardware', isTurnKey: false },
+	{ id: 'rtx-pro-4500-blackwell', name: 'RTX Pro 4500 Blackwell (32GB) - $3,750', cost: 3750, tdp: 200, vram: '32GB', tier: 'Enterprise AI Hardware', isTurnKey: true },
+	{ id: 'rtx-pro-5000-blackwell', name: 'RTX Pro 5000 Blackwell (48GB/72GB) - $6,500', cost: 6500, tdp: 300, vram: '48GB/72GB', tier: 'Enterprise AI Hardware', isTurnKey: true },
+	{ id: 'rtx-pro-6000-blackwell', name: 'RTX Pro 6000 Blackwell (Workstation/Max-Q 96GB) - $12,400', cost: 12400, tdp: 600, vram: '96GB', tier: 'Enterprise AI Hardware', isTurnKey: true },
 	{ id: 'rtx-6000-ada', name: 'NVIDIA RTX 6000 Ada Workstation (48GB) - $8,500', cost: 8500, tdp: 300, vram: '48GB', tier: 'Enterprise AI Hardware', isTurnKey: true },
 	{ id: 'dual-rtx-6000-ada', name: 'Dual NVIDIA RTX 6000 Ada Workstation (96GB) - $17,500', cost: 17500, tdp: 600, vram: '96GB', tier: 'Enterprise AI Hardware', isTurnKey: true },
 	{ id: 'nvidia-l40s-pcie', name: 'NVIDIA L40S PCIe Workstation (48GB) - $12,500', cost: 12500, tdp: 350, vram: '48GB', tier: 'Enterprise AI Hardware', isTurnKey: true },
