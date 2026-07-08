@@ -63,8 +63,8 @@
       "id": "14701",
       "text": "Maintain understanding of current Web technologies or programming practices through continuing education, reading, or participation in professional conferences, workshops, or groups.",
       "type": "Core",
-      "risk": "high",
-      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
     },
     {
       "id": "14702",
@@ -207,7 +207,7 @@
       "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
     }
   ],
-  "risk_score": 26,
+  "risk_score": 22,
   "salary": 92650,
   "demand": "Medium"
 }

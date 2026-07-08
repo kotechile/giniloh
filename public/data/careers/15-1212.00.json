@@ -56,8 +56,8 @@
       "id": "5315",
       "text": "Confer with users to discuss issues such as computer data access needs, security violations, and programming changes.",
       "type": "Core",
-      "risk": "high",
-      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
     },
     {
       "id": "5319",
@@ -81,7 +81,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 41,
+  "risk_score": 32,
   "salary": 129180,
   "demand": "High"
 }

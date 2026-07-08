@@ -84,8 +84,8 @@
       "id": "22888",
       "text": "Resolve or clarify codes or diagnoses with conflicting, missing, or unclear information by consulting with doctors or others or by participating in the coding team's regular meetings.",
       "type": "n/a",
-      "risk": "high",
-      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
     },
     {
       "id": "22889",
@@ -123,7 +123,7 @@
       "rationale": "Routine cognitive or manual task with high vulnerability to automation."
     }
   ],
-  "risk_score": 50,
+  "risk_score": 44,
   "salary": 51140,
   "demand": "High"
 }

@@ -1529,14 +1529,14 @@
     "code": "15-1211.00",
     "title": "Computer Systems Analysts",
     "description": "Analyze science, engineering, business, and other data processing problems to develop and implement solutions to complex applications problems, system administration issues, or network concerns. Perform systems management and integration functions, improve existing computer systems, and review computer system capabilities, workflow, and schedule limitations. May analyze or recommend commercially available software.",
-    "risk_score": 36,
+    "risk_score": 32,
     "tasks_count": 22,
     "salary": 105850,
     "demand": "Very High",
     "category_distribution": {
-      "high": 4,
+      "high": 3,
       "medium": 8,
-      "low": 10
+      "low": 11
     }
   },
   {
@@ -1557,14 +1557,14 @@
     "code": "15-1212.00",
     "title": "Information Security Analysts",
     "description": "Plan, implement, upgrade, or monitor security measures for the protection of computer networks and information. Assess system vulnerabilities for security risks and propose and implement risk mitigation strategies. May ensure appropriate security controls are in place that will safeguard digital files and vital electronic infrastructure. May respond to computer security breaches and viruses.",
-    "risk_score": 41,
+    "risk_score": 32,
     "tasks_count": 11,
     "salary": 129180,
     "demand": "High",
     "category_distribution": {
-      "high": 1,
+      "high": 0,
       "medium": 7,
-      "low": 3
+      "low": 4
     }
   },
   {
@@ -1697,28 +1697,28 @@
     "code": "15-1251.00",
     "title": "Computer Programmers",
     "description": "Create, modify, and test the code and scripts that allow computer applications to run. Work from specifications drawn up by software and web developers or other individuals. May develop and write computer programs to store, locate, and retrieve specific documents, data, and information.",
-    "risk_score": 56,
+    "risk_score": 44,
     "tasks_count": 17,
     "salary": 100390,
     "demand": "Medium",
     "category_distribution": {
-      "high": 8,
+      "high": 6,
       "medium": 3,
-      "low": 6
+      "low": 8
     }
   },
   {
     "code": "15-1252.00",
     "title": "Software Developers",
     "description": "Research, design, and develop computer and network software or specialized utility programs. Analyze user needs and develop software solutions, applying principles and techniques of computer science, engineering, and mathematical analysis. Update software or enhance existing software capabilities. May work with computer hardware engineers to integrate hardware and software systems, and develop specifications and performance requirements. May maintain databases within an application area, working individually or coordinating database development as part of a team.",
-    "risk_score": 38,
+    "risk_score": 32,
     "tasks_count": 17,
     "salary": 135980,
     "demand": "Very High",
     "category_distribution": {
-      "high": 4,
+      "high": 3,
       "medium": 5,
-      "low": 8
+      "low": 9
     }
   },
   {
@@ -1739,28 +1739,28 @@
     "code": "15-1254.00",
     "title": "Web Developers",
     "description": "Develop and implement websites, web applications, application databases, and interactive web interfaces. Evaluate code to ensure that it is properly structured, meets industry standards, and is compatible with browsers and devices. Optimize website performance, scalability, and server-side code and processes. May develop website infrastructure and integrate websites with other computer applications.",
-    "risk_score": 26,
+    "risk_score": 22,
     "tasks_count": 29,
     "salary": 92650,
     "demand": "Medium",
     "category_distribution": {
-      "high": 3,
+      "high": 2,
       "medium": 9,
-      "low": 17
+      "low": 18
     }
   },
   {
     "code": "15-1255.00",
     "title": "Web and Digital Interface Designers",
     "description": "Design digital user interfaces or websites. Develop and test layouts, interfaces, functionality, and navigation menus to ensure compatibility and usability across browsers or devices. May use web framework applications as well as client-side code and processes. May evaluate web design following web and accessibility standards, and may analyze web use metrics and optimize websites for marketability and search engine ranking. May design and test interfaces that facilitate the human-computer interaction and maximize the usability of digital devices, websites, and software with a focus on aesthetics and design. May create graphics used in websites and manage website content and links.",
-    "risk_score": 25,
+    "risk_score": 22,
     "tasks_count": 30,
     "salary": 104000,
     "demand": "High",
     "category_distribution": {
-      "high": 3,
+      "high": 2,
       "medium": 9,
-      "low": 18
+      "low": 19
     }
   },
   {
@@ -1809,14 +1809,14 @@
     "code": "15-1299.02",
     "title": "Geographic Information Systems Technologists and Technicians",
     "description": "Assist scientists or related professionals in building, maintaining, modifying, or using geographic information systems (GIS) databases. May also perform some custom application development or provide user support.",
-    "risk_score": 31,
+    "risk_score": 28,
     "tasks_count": 29,
     "salary": 116580,
     "demand": "Very High",
     "category_distribution": {
-      "high": 2,
+      "high": 1,
       "medium": 14,
-      "low": 13
+      "low": 14
     }
   },
   {
@@ -2047,14 +2047,14 @@
     "code": "15-2099.01",
     "title": "Bioinformatics Technicians",
     "description": "Apply principles and methods of bioinformatics to assist scientists in areas such as pharmaceuticals, medical technology, biotechnology, computational biology, proteomics, computer information science, biology and medical informatics. Apply bioinformatics tools to visualize, analyze, manipulate or interpret molecular data. May build and maintain databases for processing and analyzing genomic or other biological information.",
-    "risk_score": 32,
+    "risk_score": 26,
     "tasks_count": 19,
     "salary": 81490,
     "demand": "Low",
     "category_distribution": {
-      "high": 2,
+      "high": 1,
       "medium": 8,
-      "low": 9
+      "low": 10
     }
   },
   {
@@ -6905,14 +6905,14 @@
     "code": "29-2072.00",
     "title": "Medical Records Specialists",
     "description": "Compile, process, and maintain medical records of hospital and clinic patients in a manner consistent with medical, administrative, ethical, legal, and regulatory requirements of the healthcare system. Classify medical and healthcare concepts, including diagnosis, procedures, medical services, and equipment, into the healthcare industry's numerical coding system. Includes medical coders.",
-    "risk_score": 50,
+    "risk_score": 44,
     "tasks_count": 17,
     "salary": 51140,
     "demand": "High",
     "category_distribution": {
-      "high": 6,
+      "high": 5,
       "medium": 5,
-      "low": 6
+      "low": 7
     }
   },
   {
@@ -7017,14 +7017,14 @@
     "code": "29-9021.00",
     "title": "Health Information Technologists and Medical Registrars",
     "description": "Apply knowledge of healthcare and information systems to assist in the design, development, and continued modification and analysis of computerized healthcare systems. Abstract, collect, and analyze treatment and followup information of patients. May educate staff and assist in problem solving to promote the implementation of the healthcare information system. May design, develop, test, and implement databases with complete history, diagnosis, treatment, and health status to help monitor diseases.",
-    "risk_score": 34,
+    "risk_score": 28,
     "tasks_count": 16,
     "salary": 68020,
     "demand": "Medium",
     "category_distribution": {
-      "high": 3,
+      "high": 2,
       "medium": 5,
-      "low": 8
+      "low": 9
     }
   },
   {
@@ -10853,14 +10853,14 @@
     "code": "49-2011.00",
     "title": "Computer, Automated Teller, and Office Machine Repairers",
     "description": "Repair, maintain, or install computers, word processing systems, automated teller machines, and electronic office machines, such as duplicating and fax machines.",
-    "risk_score": 54,
+    "risk_score": 50,
     "tasks_count": 25,
     "salary": 47810,
     "demand": "Medium",
     "category_distribution": {
-      "high": 3,
+      "high": 2,
       "medium": 21,
-      "low": 1
+      "low": 2
     }
   },
   {

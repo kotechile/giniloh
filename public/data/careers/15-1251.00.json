@@ -63,8 +63,8 @@
       "id": "1278",
       "text": "Consult with and assist computer operators or system analysts to define and resolve problems in running computer programs.",
       "type": "Core",
-      "risk": "high",
-      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
     },
     {
       "id": "1277",
@@ -119,11 +119,11 @@
       "id": "1280",
       "text": "Collaborate with computer manufacturers and other users to develop new programming methods.",
       "type": "Supplemental",
-      "risk": "high",
-      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
     }
   ],
-  "risk_score": 56,
+  "risk_score": 44,
   "salary": 100390,
   "demand": "Medium"
 }

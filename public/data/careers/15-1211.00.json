@@ -126,8 +126,8 @@
       "id": "3467",
       "text": "Confer with clients regarding the nature of the information processing or computation needs a computer program is to address.",
       "type": "Core",
-      "risk": "high",
-      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
     },
     {
       "id": "3478",
@@ -158,7 +158,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 36,
+  "risk_score": 32,
   "salary": 105850,
   "demand": "Very High"
 }

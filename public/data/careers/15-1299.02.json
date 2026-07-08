@@ -14,8 +14,8 @@
       "id": "21716",
       "text": "Design or prepare graphic representations of Geographic Information Systems (GIS) data, using GIS hardware or software applications.",
       "type": "Core",
-      "risk": "high",
-      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
     },
     {
       "id": "21717",
@@ -207,7 +207,7 @@
       "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
     }
   ],
-  "risk_score": 31,
+  "risk_score": 28,
   "salary": 116580,
   "demand": "Very High"
 }

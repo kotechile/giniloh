@@ -12,12 +12,17 @@ def classify_task(task_text):
     text = task_text.lower()
     
     # Force coding, programming, debugging, and software development tasks to High Risk
+    # but exclude human-centric communication, consulting, and collaboration
     coding_keywords = [
         "write code", "writing code", "computer program", "programming", 
         "debugging", "develop software", "software development", "coding",
         "software application", "software system"
     ]
-    if any(keyword in text for keyword in coding_keywords):
+    human_centric_keywords = [
+        "consult", "negotiate", "collaborate", "confer", "counsel", "advise",
+        "liaison", "teach", "mentor", "represent", "lobby", "mediator"
+    ]
+    if any(k in text for k in coding_keywords) and not any(h in text for h in human_centric_keywords):
         return "high", "Software coding, programming, or application development task highly susceptible to automated generation."
     
     # Low Risk (High Resilience) indicators: Strategic, leadership, interpersonal, high empathy, unstructured, highly creative
