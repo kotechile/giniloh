@@ -1,0 +1,129 @@
+{
+  "code": "11-3051.02",
+  "title": "Geothermal Production Managers",
+  "description": "Manage operations at geothermal power generation facilities. Maintain and monitor geothermal plant equipment for efficient and safe plant operations.",
+  "tasks": [
+    {
+      "id": "15446",
+      "text": "Supervise employees in geothermal power plants or well fields.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15447",
+      "text": "Oversee geothermal plant operations, maintenance, and repairs to ensure compliance with applicable standards or regulations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15434",
+      "text": "Communicate geothermal plant conditions to employees.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15443",
+      "text": "Identify and evaluate equipment, procedural, or conditional inefficiencies involving geothermal plant systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15439",
+      "text": "Perform or direct the performance of preventative maintenance on geothermal plant equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15448",
+      "text": "Inspect geothermal plant or injection well fields to verify proper equipment operations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15445",
+      "text": "Develop or manage budgets for geothermal operations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15433",
+      "text": "Select and implement corrosion control or mitigation systems for geothermal plants.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15444",
+      "text": "Develop operating plans and schedules for geothermal operations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15436",
+      "text": "Record, review, or maintain daily logs, reports, maintenance, and other records associated with geothermal operations.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "15441",
+      "text": "Monitor geothermal operations, using programmable logic controllers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15432",
+      "text": "Conduct well field site assessments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15442",
+      "text": "Identify opportunities to improve plant electrical equipment, controls, or process control methodologies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15437",
+      "text": "Prepare environmental permit applications or compliance reports.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15440",
+      "text": "Negotiate interconnection agreements with other utilities.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15438",
+      "text": "Obtain permits for constructing, upgrading, or operating geothermal power plants.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15435",
+      "text": "Troubleshoot and make minor repairs to geothermal plant instrumentation or electrical systems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 15,
+  "salary": 126060,
+  "demand": "High"
+}

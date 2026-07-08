@@ -1,0 +1,178 @@
+{
+  "code": "15-1255.01",
+  "title": "Video Game Designers",
+  "description": "Design core features of video games. Specify innovative game and role-play mechanics, story lines, and character biographies. Create and maintain design documentation. Guide and collaborate with production staff to produce games as designed.",
+  "tasks": [
+    {
+      "id": "16199",
+      "text": "Balance and adjust gameplay experiences to ensure the critical and commercial success of the product.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16208",
+      "text": "Devise missions, challenges, or puzzles to be encountered in game play.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16217",
+      "text": "Create core game features, including storylines, role-play mechanics, and character biographies for a new video game or game franchise.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16201",
+      "text": "Solicit, obtain, and integrate feedback from design and technical staff into original game design.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16214",
+      "text": "Conduct regular design reviews throughout the game development process.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16209",
+      "text": "Develop and maintain design level documentation, including mechanics, guidelines, and mission outlines.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16216",
+      "text": "Document all aspects of formal game design, using mock-up screenshots, sample menu layouts, gameplay flowcharts, and other graphical devices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16198",
+      "text": "Provide feedback to designers and other colleagues regarding game design features.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16212",
+      "text": "Create and manage documentation, production schedules, prototyping goals, and communication plans in collaboration with production staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16202",
+      "text": "Provide feedback to production staff regarding technical game qualities or adherence to original design.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16211",
+      "text": "Create gameplay prototypes for presentation to creative and technical staff and management.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16207",
+      "text": "Guide design discussions between development teams.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16206",
+      "text": "Oversee gameplay testing to ensure intended gaming experience and game adherence to original vision.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16204",
+      "text": "Present new game design concepts to management and technical colleagues, including artists, animators, and programmers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16203",
+      "text": "Prepare two-dimensional concept layouts or three-dimensional mock-ups.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16196",
+      "text": "Keep abreast of game design technology and techniques, industry trends, or audience interests, reactions, and needs by reviewing current literature, talking with colleagues, participating in educational programs, attending meetings or workshops, or participating in professional organizations or conferences.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16194",
+      "text": "Review or evaluate competitive products, film, music, television, and other art forms to generate new game design ideas.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16215",
+      "text": "Collaborate with artists to achieve appropriate visual style.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16200",
+      "text": "Write or supervise the writing of game text and dialogue.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16213",
+      "text": "Consult with multiple stakeholders to define requirements and implement online features.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16210",
+      "text": "Determine supplementary virtual features, such as currency, item catalog, menu design, and audio direction.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16205",
+      "text": "Prepare and revise initial game sketches using two- and three-dimensional graphical design software.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16197",
+      "text": "Create gameplay test plans for internal and external test groups.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16195",
+      "text": "Provide test specifications to quality assurance staff.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 10,
+  "salary": 104000,
+  "demand": "High"
+}

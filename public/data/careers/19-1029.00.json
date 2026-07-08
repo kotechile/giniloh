@@ -1,0 +1,17 @@
+{
+  "code": "19-1029.00",
+  "title": "Biological Scientists, All Other",
+  "description": "All biological scientists not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Biological Scientists, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 98920,
+  "demand": "Medium"
+}

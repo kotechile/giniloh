@@ -1,0 +1,129 @@
+{
+  "code": "29-1214.00",
+  "title": "Emergency Medicine Physicians",
+  "description": "Make immediate medical decisions and act to prevent death or further disability. Provide immediate recognition, evaluation, care, stabilization, and disposition of patients. May direct emergency medical staff in an emergency department.",
+  "tasks": [
+    {
+      "id": "22730",
+      "text": "Select, request, perform, or interpret diagnostic procedures, such as laboratory tests, electrocardiograms, emergency ultrasounds, and radiographs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22723",
+      "text": "Evaluate patients' vital signs or laboratory data to determine emergency intervention needs and priority of treatment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22726",
+      "text": "Perform emergency resuscitations on patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22731",
+      "text": "Stabilize patients in critical condition.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22727",
+      "text": "Perform such medical procedures as emergent cricothyrotomy, endotracheal intubation, and emergency thoracotomy.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22715",
+      "text": "Analyze records, examination information, or test results to diagnose medical conditions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22720",
+      "text": "Consult with hospitalists and other professionals, such as social workers, regarding patients' hospital admission, continued observation, transition of care, or discharge.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22719",
+      "text": "Conduct primary patient assessments that include information from prior medical care.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22718",
+      "text": "Communicate likely outcomes of medical diseases or traumatic conditions to patients or their representatives.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22725",
+      "text": "Monitor patients' conditions, and reevaluate treatments, as necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22721",
+      "text": "Direct and coordinate activities of nurses, assistants, specialists, residents, and other medical staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22729",
+      "text": "Select and prescribe medications to address patient needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22717",
+      "text": "Collect and record patient information, such as medical history or examination results, in electronic or handwritten medical records.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22722",
+      "text": "Discuss patients' treatment plans with physicians and other medical professionals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22724",
+      "text": "Identify factors that may affect patient management, such as age, gender, barriers to communication, and underlying disease.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22716",
+      "text": "Assess patients' pain levels or sedation requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22728",
+      "text": "Refer patients to specialists or other practitioners.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 6,
+  "salary": 335550,
+  "demand": "Medium"
+}

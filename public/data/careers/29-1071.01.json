@@ -1,0 +1,122 @@
+{
+  "code": "29-1071.01",
+  "title": "Anesthesiologist Assistants",
+  "description": "Assist anesthesiologists in the administration of anesthesia for surgical and non-surgical procedures. Monitor patient status and provide patient care during surgical treatment.",
+  "tasks": [
+    {
+      "id": "17301",
+      "text": "Provide airway management interventions including tracheal intubation, fiber optics, or ventilary support.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17302",
+      "text": "Respond to emergency situations by providing cardiopulmonary resuscitation (CPR), basic cardiac life support (BLS), advanced cardiac life support (ACLS), or pediatric advanced life support (PALS).",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17296",
+      "text": "Verify availability of operating room supplies, medications, and gases.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17304",
+      "text": "Pretest and calibrate anesthesia delivery systems and monitors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17299",
+      "text": "Participate in seminars, workshops, or other professional activities to keep abreast of developments in anesthesiology.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17310",
+      "text": "Control anesthesia levels during procedures.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17305",
+      "text": "Assist anesthesiologists in monitoring of patients, including electrocardiogram (EKG), direct arterial pressure, central venous pressure, arterial blood gas, hematocrit, or routine measurement of temperature, respiration, blood pressure or heart rate.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17309",
+      "text": "Administer blood, blood products, or supportive fluids.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17300",
+      "text": "Collect and document patients' pre-anesthetic health histories.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17306",
+      "text": "Assist in the provision of advanced life support techniques including those procedures using high frequency ventilation or intra-arterial cardiovascular assistance devices.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17303",
+      "text": "Monitor and document patients' progress during post-anesthesia period.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17311",
+      "text": "Administer anesthetic, adjuvant, or accessory drugs under the direction of an anesthesiologist.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17307",
+      "text": "Assist anesthesiologists in performing anesthetic procedures, such as epidural or spinal injections.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17297",
+      "text": "Provide clinical instruction, supervision or training to staff in areas such as anesthesia practices.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17308",
+      "text": "Assist in the application of monitoring techniques, such as pulmonary artery catheterization, electroencephalographic spectral analysis, echocardiography, or evoked potentials.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17298",
+      "text": "Collect samples or specimens for diagnostic testing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 25,
+  "salary": 135880,
+  "demand": "High"
+}

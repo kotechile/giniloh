@@ -1,0 +1,185 @@
+{
+  "code": "49-2011.00",
+  "title": "Computer, Automated Teller, and Office Machine Repairers",
+  "description": "Repair, maintain, or install computers, word processing systems, automated teller machines, and electronic office machines, such as duplicating and fax machines.",
+  "tasks": [
+    {
+      "id": "11624",
+      "text": "Reassemble machines after making repairs or replacing parts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11623",
+      "text": "Converse with customers to determine details of equipment problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11639",
+      "text": "Disassemble machines to examine parts, such as wires, gears, or bearings for wear or defects, using hand or power tools and measuring devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11627",
+      "text": "Advise customers concerning equipment operation, maintenance, or programming.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11635",
+      "text": "Align, adjust, or calibrate equipment according to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11637",
+      "text": "Repair, adjust, or replace electrical or mechanical components or parts, using hand tools, power tools, or soldering or welding equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11625",
+      "text": "Travel to customers' stores or offices to service machines or to provide emergency repair service.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11633",
+      "text": "Maintain parts inventories and order any additional parts needed for repairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11630",
+      "text": "Operate machines to test functioning of parts or mechanisms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11626",
+      "text": "Reinstall software programs or adjust settings on existing software to fix machine malfunctions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11640",
+      "text": "Clean, oil, or adjust mechanical parts to maintain machines' operating efficiency and to prevent breakdowns.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11631",
+      "text": "Maintain records of equipment maintenance work or repairs.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11628",
+      "text": "Test new systems to ensure that they are in working order.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11638",
+      "text": "Complete repair bills, shop records, time cards, or expense reports.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11632",
+      "text": "Install and configure new equipment, including operating software or peripheral equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11644",
+      "text": "Analyze equipment performance records to assess equipment functioning.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11642",
+      "text": "Read specifications, such as blueprints, charts, or schematics, to determine machine settings or adjustments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11634",
+      "text": "Update existing equipment, performing tasks such as installing updated circuit boards or additional memory.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11636",
+      "text": "Test components or circuits of faulty equipment to locate defects, using oscilloscopes, signal generators, ammeters, voltmeters, or special diagnostic software programs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11629",
+      "text": "Assemble machines according to specifications, using hand or power tools and measuring devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11643",
+      "text": "Lay cable and hook up electrical connections between machines, power sources, and phone lines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11641",
+      "text": "Enter information into computers to copy programs from one electronic component to another or to draw, modify, or store schematics.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11645",
+      "text": "Fill machines with toners, inks, or other duplicating fluids.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11646",
+      "text": "Train new repairers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11647",
+      "text": "Calibrate testing instruments.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 47810,
+  "demand": "Medium"
+}

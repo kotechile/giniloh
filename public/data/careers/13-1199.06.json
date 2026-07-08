@@ -1,0 +1,248 @@
+{
+  "code": "13-1199.06",
+  "title": "Online Merchants",
+  "description": "Conduct retail activities of businesses operating exclusively online. May perform duties such as preparing business strategies, buying merchandise, managing inventory, implementing marketing activities, fulfilling and shipping online orders, and balancing financial records.",
+  "tasks": [
+    {
+      "id": "15718",
+      "text": "Fill customer orders by packaging sold items and documentation for direct shipping or by transferring orders to manufacturers or third-party distributors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15731",
+      "text": "Receive and process payments from customers, using electronic transaction services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15710",
+      "text": "Create, manage, or automate orders or invoices, using order management or invoicing software.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15709",
+      "text": "Deliver e-mail confirmation of completed transactions and shipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15728",
+      "text": "Correspond with online customers via electronic mail, telephone, or other electronic messaging to address questions or complaints about products, policies, or shipping methods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15733",
+      "text": "Purchase new or used items from online or physical sources for resale via retail or auction Web site.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15707",
+      "text": "Determine and set product prices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15730",
+      "text": "Calculate purchase subtotals, taxes, and shipping costs for submission to customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15734",
+      "text": "Compose descriptions of merchandise for posting to online storefront, auction sites, or other shopping Web sites.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15729",
+      "text": "Compose images of products, using video or still cameras, lighting equipment, props, or photo or video editing software.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15703",
+      "text": "Upload digital media, such as photos, video, or scanned images to online storefront, auction sites, or other shopping Web sites.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15735",
+      "text": "Calculate revenue, sales, and expenses, using financial accounting or spreadsheet software.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15714",
+      "text": "Cancel orders based on customer requests or inventory or delivery problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15732",
+      "text": "Prepare or organize online storefront marketing material, including product descriptions or subject lines, optimizing content to search engine criteria.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15704",
+      "text": "Order or purchase merchandise to maintain optimal inventory levels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15726",
+      "text": "Determine location for product listings to maximize exposure to online traffic.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15711",
+      "text": "Create or maintain database of customer accounts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15717",
+      "text": "Promote products in online communities through weblog or discussion-forum postings, e-mail marketing programs, or online advertising.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15713",
+      "text": "Collaborate with search engine shopping specialists to place marketing content in desired online locations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15721",
+      "text": "Investigate products or markets to determine areas for opportunity or viability for merchandising specific products, using online or offline sources.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15705",
+      "text": "Maintain inventory of shipping supplies, such as boxes, labels, tape, bubble wrap, loose packing materials, or tape guns.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15719",
+      "text": "Measure and analyze Web site usage data to maximize search engine returns or refine customer interfaces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15725",
+      "text": "Develop or revise business plans for online business, emphasizing factors such as product line, pricing, inventory, or marketing strategy.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15708",
+      "text": "Disclose merchant information and terms and policies of transactions in online or offline materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15727",
+      "text": "Design customer interface of online storefront, using web programming or e-commerce software.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15716",
+      "text": "Select and purchase technical web services, such as web hosting services, online merchant accounts, shopping cart software, payment gateway software, or spyware.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15715",
+      "text": "Transfer digital media, such as music, video, or software, to customers via the Internet.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15724",
+      "text": "Devise, select, or purchase domain name and web address.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15722",
+      "text": "Initiate online auctions through auction hosting sites or auction management software.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15723",
+      "text": "Implement security practices to preserve assets, minimize liabilities, or ensure customer privacy, using parallel servers, hardware redundancy, fail-safe technology, information encryption, or firewalls.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15720",
+      "text": "Investigate sources, such as auctions, estate sales, liquidators, wholesalers, or trade shows for new items, used items, or collectibles.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15702",
+      "text": "Participate in online forums or conferences to stay abreast of online retailing trends, techniques, or security threats.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15706",
+      "text": "Integrate online retailing strategy with physical or catalogue retailing operations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15712",
+      "text": "Create or distribute offline promotional material, such as brochures, pamphlets, business cards, stationary, or signage.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 35,
+  "salary": 83050,
+  "demand": "Very High"
+}

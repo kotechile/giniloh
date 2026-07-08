@@ -1,0 +1,115 @@
+{
+  "code": "27-3042.00",
+  "title": "Technical Writers",
+  "description": "Write technical materials, such as equipment manuals, appendices, or operating and maintenance instructions. May assist in layout work.",
+  "tasks": [
+    {
+      "id": "3966",
+      "text": "Organize material and complete writing assignment according to set standards regarding order, clarity, conciseness, style, and terminology.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3967",
+      "text": "Maintain records and files of work and revisions.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "3968",
+      "text": "Edit, standardize, or make changes to material prepared by other writers or establishment personnel.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3971",
+      "text": "Select photographs, drawings, sketches, diagrams, and charts to illustrate material.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3973",
+      "text": "Interview production and engineering personnel and read journals and other material to become familiar with product technologies and production methods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20243",
+      "text": "Develop or maintain online help documentation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3976",
+      "text": "Assist in laying out material for publication.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3972",
+      "text": "Study drawings, specifications, mockups, and product samples to integrate and delineate technology, operating procedure, and production sequence and detail.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3975",
+      "text": "Arrange for typing, duplication, and distribution of material.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "3974",
+      "text": "Observe production, developmental, and experimental activities to determine operating procedure and detail.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3978",
+      "text": "Review manufacturer's and trade catalogs, drawings and other data relative to operation, maintenance, and service of equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3977",
+      "text": "Analyze developments in specific field to determine need for revisions in previously published materials and development of new material.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3979",
+      "text": "Draw sketches to illustrate specified materials or assembly sequence.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3970",
+      "text": "Review published materials and recommend revisions or changes in scope, format, content, and methods of reproduction and binding.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3969",
+      "text": "Confer with customer representatives, vendors, plant executives, or publisher to establish technical specifications and to determine subject material to be developed for publication.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 37,
+  "salary": 90390,
+  "demand": "Medium"
+}

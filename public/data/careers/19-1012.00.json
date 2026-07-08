@@ -1,0 +1,101 @@
+{
+  "code": "19-1012.00",
+  "title": "Food Scientists and Technologists",
+  "description": "Use chemistry, microbiology, engineering, and other sciences to study the principles underlying the processing and deterioration of foods; analyze food content to determine levels of vitamins, fat, sugar, and protein; discover new food sources; research ways to make processed foods safe, palatable, and healthful; and apply food science knowledge to determine best ways to process, package, preserve, store, and distribute food.",
+  "tasks": [
+    {
+      "id": "7494",
+      "text": "Inspect food processing areas to ensure compliance with government regulations and standards for sanitation, safety, quality, and waste management.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7486",
+      "text": "Check raw ingredients for maturity or stability for processing, and finished products for safety, quality, and nutritional value.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7489",
+      "text": "Study methods to improve aspects of foods, such as chemical composition, flavor, color, texture, nutritional value, and convenience.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7492",
+      "text": "Develop food standards and production specifications, safety and sanitary regulations, and waste management and water supply specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18612",
+      "text": "Stay up to date on new regulations and current events regarding food science by reviewing scientific literature.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7490",
+      "text": "Study the structure and composition of food or the changes foods undergo in storage and processing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7487",
+      "text": "Confer with process engineers, plant operators, flavor experts, and packaging and marketing specialists to resolve problems in product development.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7485",
+      "text": "Test new products for flavor, texture, color, nutritional content, and adherence to government and industry standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18611",
+      "text": "Develop new food items for production, based on consumer feedback.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7491",
+      "text": "Develop new or improved ways of preserving, processing, packaging, storing, and delivering foods, using knowledge of chemistry, microbiology, and other sciences.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7488",
+      "text": "Evaluate food processing and storage operations and assist in the development of quality assurance programs for such operations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7493",
+      "text": "Demonstrate products to clients.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7495",
+      "text": "Seek substitutes for harmful or undesirable additives, such as nitrites.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 31,
+  "salary": 88720,
+  "demand": "Low"
+}

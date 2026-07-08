@@ -1,0 +1,17 @@
+{
+  "code": "55-1019.00",
+  "title": "Military Officer Special and Tactical Operations Leaders, All Other",
+  "description": "All military officer special and tactical operations leaders not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Military Officer Special and Tactical Operations Leaders, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 47734,
+  "demand": "Medium"
+}

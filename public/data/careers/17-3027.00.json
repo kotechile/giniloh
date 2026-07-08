@@ -1,0 +1,220 @@
+{
+  "code": "17-3027.00",
+  "title": "Mechanical Engineering Technologists and Technicians",
+  "description": "Apply theory and principles of mechanical engineering to modify, develop, test, or adjust machinery and equipment under direction of engineering staff or physical scientists.",
+  "tasks": [
+    {
+      "id": "22072",
+      "text": "Assemble or disassemble complex mechanical systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22082",
+      "text": "Interpret engineering sketches, specifications, or drawings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1485",
+      "text": "Calculate required capacities for equipment of proposed system to obtain specified performance and submit data to engineering personnel for approval.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1476",
+      "text": "Review project instructions and blueprints to ascertain test specifications, procedures, and objectives, and test nature of technical problems such as redesign.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22086",
+      "text": "Provide technical support to other employees regarding mechanical design, fabrication, testing, or documentation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22087",
+      "text": "Test machines, components, materials, or products to determine characteristics such as performance, strength, or response to stress.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1475",
+      "text": "Draft detail drawing or sketch for drafting room completion or to request parts fabrication by machine, sheet or wood shops.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1482",
+      "text": "Analyze test results in relation to design or rated specifications and test objectives, and modify or adjust equipment to meet specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1486",
+      "text": "Record test procedures and results, numerical and graphical data, and recommendations for changes in product or test methods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22085",
+      "text": "Prepare specifications, designs, or sketches for machines, components, or systems related to the generation, transmission, or use of mechanical or fluid energy.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1487",
+      "text": "Read dials and meters to determine amperage, voltage, electrical output and input at specific operating temperature to analyze parts performance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22077",
+      "text": "Design molds, tools, dies, jigs, or fixtures for use in manufacturing processes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1477",
+      "text": "Review project instructions and specifications to identify, modify and plan requirements fabrication, assembly and testing.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22078",
+      "text": "Design specialized or customized equipment, machines, or structures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22075",
+      "text": "Conduct failure analyses, document results, and recommend corrective actions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1480",
+      "text": "Set up and conduct tests of complete units and components under operational conditions to investigate proposals for improving equipment performance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22073",
+      "text": "Assist engineers to design, develop, test, or manufacture industrial machinery, consumer products, or other equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22084",
+      "text": "Prepare layouts of machinery, tools, plants, or equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22083",
+      "text": "Prepare equipment inspection schedules, reliability schedules, work plans, or other records.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1489",
+      "text": "Set up prototype and test apparatus and operate test controlling equipment to observe and record prototype test results.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "1483",
+      "text": "Evaluate tool drawing designs by measuring drawing dimensions and comparing with original specifications for form and function using engineering skills.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22070",
+      "text": "Analyze energy requirements and distribution systems to maximize the use of intermittent or inflexible renewable energy sources, such as wind or nuclear.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1474",
+      "text": "Prepare parts sketches and write work orders and purchase requests to be furnished by outside contractors.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1488",
+      "text": "Estimate cost factors including labor and material for purchased and fabricated parts and costs for assembly, testing, or installing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22074",
+      "text": "Assist mechanical engineers in product testing through activities such as setting up instrumentation for automobile crash tests.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22076",
+      "text": "Conduct statistical studies to analyze or compare production costs for sustainable and nonsustainable designs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22071",
+      "text": "Analyze or estimate production costs, such as labor, equipment, and plant space.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22079",
+      "text": "Devise, fabricate, or assemble new or modified mechanical components for products such as industrial machinery or equipment, and measuring instruments.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22080",
+      "text": "Discuss changes in design, method of manufacture and assembly, or drafting techniques and procedures with staff and coordinate corrections.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23944",
+      "text": "Monitor, inspect, or test mechanical equipment.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 23,
+  "salary": 74510,
+  "demand": "Medium"
+}

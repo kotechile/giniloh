@@ -1,0 +1,178 @@
+{
+  "code": "29-1141.02",
+  "title": "Advanced Practice Psychiatric Nurses",
+  "description": "Assess, diagnose, and treat individuals and families with mental health or substance use disorders or the potential for such disorders. Apply therapeutic activities, including the prescription of medication, per state regulations, and the administration of psychotherapy.",
+  "tasks": [
+    {
+      "id": "17331",
+      "text": "Assess patients' mental and physical status, based on the presenting symptoms and complaints.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17334",
+      "text": "Diagnose psychiatric disorders and mental health conditions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17329",
+      "text": "Document patients' medical and psychological histories, physical assessment results, diagnoses, treatment plans, prescriptions, or outcomes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17327",
+      "text": "Educate patients and family members about mental health and medical conditions, preventive health measures, medications, or treatment plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17319",
+      "text": "Write prescriptions for psychotropic medications as allowed by state regulations and collaborative practice agreements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17326",
+      "text": "Monitor patients' medication usage and results.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17324",
+      "text": "Evaluate patients' behavior to formulate diagnoses or assess treatments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17328",
+      "text": "Distinguish between physiologically- and psychologically-based disorders, and diagnose appropriately.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17325",
+      "text": "Develop and implement treatment plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17335",
+      "text": "Conduct individual, group, or family psychotherapy for those with chronic or acute mental disorders.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17313",
+      "text": "Participate in activities aimed at professional growth and development, including conferences or continuing education activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17332",
+      "text": "Collaborate with interdisciplinary team members, including psychiatrists, psychologists, or nursing staff, to develop, implement, or evaluate treatment plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17330",
+      "text": "Consult with psychiatrists or other professionals when unusual or complex cases are encountered.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17320",
+      "text": "Refer patients requiring more specialized or complex treatment to psychiatrists, primary care physicians, or other medical specialists.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17322",
+      "text": "Participate in treatment team conferences regarding diagnosis or treatment of difficult cases.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17323",
+      "text": "Interpret diagnostic or laboratory tests, such as electrocardiograms (EKGs) and renal functioning tests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17316",
+      "text": "Develop practice protocols for mental health problems, based on review and evaluation of published research.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17321",
+      "text": "Provide routine physical health screenings to detect or monitor problems such as heart disease and diabetes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17333",
+      "text": "Administer medications, including those administered by injection.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17317",
+      "text": "Develop, implement, or evaluate programs such as outreach activities, community mental health programs, and crisis situation response activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17315",
+      "text": "Monitor the use and status of medical and pharmaceutical supplies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17318",
+      "text": "Treat patients for routine physical health problems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17314",
+      "text": "Direct or provide home health services.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17312",
+      "text": "Teach classes in mental health topics, such as stress reduction.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 10,
+  "salary": 97550,
+  "demand": "Very High"
+}

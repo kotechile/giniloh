@@ -1,0 +1,94 @@
+{
+  "code": "41-9041.00",
+  "title": "Telemarketers",
+  "description": "Solicit donations or orders for goods or services over the telephone.",
+  "tasks": [
+    {
+      "id": "4619",
+      "text": "Contact businesses or private individuals by telephone to solicit sales for goods or services, or to request donations for charitable causes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4621",
+      "text": "Obtain customer information such as name, address, and payment method, and enter orders into computers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4620",
+      "text": "Explain products or services and prices, and answer questions from customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4622",
+      "text": "Record names, addresses, purchases, and reactions of prospects contacted.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "4627",
+      "text": "Maintain records of contacts, accounts, and orders.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "4625",
+      "text": "Answer telephone calls from potential customers who have been solicited through advertisements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4618",
+      "text": "Deliver prepared sales talks, reading from scripts that describe products or services, to persuade potential customers to purchase a product or service or to make a donation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4626",
+      "text": "Telephone or write letters to respond to correspondence from customers or to follow up initial sales contacts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4623",
+      "text": "Adjust sales scripts to better target the needs and interests of specific individuals.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4624",
+      "text": "Obtain names and telephone numbers of potential customers from sources such as telephone directories, magazine reply cards, and lists purchased from other organizations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4628",
+      "text": "Schedule appointments for sales representatives to meet with prospective customers or for customers to attend sales presentations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4629",
+      "text": "Conduct client or market surveys to obtain information about potential customers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 35450,
+  "demand": "Medium"
+}

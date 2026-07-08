@@ -1,0 +1,220 @@
+{
+  "code": "41-3031.00",
+  "title": "Securities, Commodities, and Financial Services Sales Agents",
+  "description": "Buy and sell securities or commodities in investment and trading firms, or provide financial services to businesses and individuals. May advise customers about stocks, bonds, mutual funds, commodities, and market conditions.",
+  "tasks": [
+    {
+      "id": "23192",
+      "text": "Make bids or offers to buy or sell securities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23193",
+      "text": "Monitor markets or positions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23194",
+      "text": "Agree on buying or selling prices at optimal levels for clients.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23195",
+      "text": "Keep accurate records of transactions.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23196",
+      "text": "Buy or sell stocks, bonds, commodity futures, foreign currencies, or other securities on behalf of investment dealers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23197",
+      "text": "Complete sales order tickets and submit for processing of client-requested transactions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23198",
+      "text": "Report all positions or trading results.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23199",
+      "text": "Interview clients to determine clients' assets, liabilities, cash flow, insurance coverage, tax status, or financial objectives.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23200",
+      "text": "Discuss financial options with clients and keep them informed about transactions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23203",
+      "text": "Identify opportunities or develop channels for purchase or sale of securities or commodities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23204",
+      "text": "Develop financial plans, based on analysis of clients' financial status.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23205",
+      "text": "Review all securities transactions to ensure accuracy of information and conformance to governing agency regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23207",
+      "text": "Devise trading, option, or hedge strategies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23201",
+      "text": "Determine customers' financial services needs and prepare proposals to sell services that address these needs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23208",
+      "text": "Track and analyze factors that affect price movement, such as trade policies, weather conditions, political developments, or supply and demand changes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23209",
+      "text": "Inform other traders, managers, or customers of market conditions, including volume, price, competition, or dynamics.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23210",
+      "text": "Offer advice on the purchase or sale of particular securities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23206",
+      "text": "Contact prospective customers to present information and explain available services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23212",
+      "text": "Explain stock market terms or trading practices to clients.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23213",
+      "text": "Calculate costs for billings or commissions.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23214",
+      "text": "Prepare financial reports to monitor client or corporate finances.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23215",
+      "text": "Supply the latest price quotes on any security, as well as information on the activities or financial positions of the corporations issuing these securities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23216",
+      "text": "Supervise support staff and ensure proper execution of contracts.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23217",
+      "text": "Relay buy or sell orders to securities exchanges or to firm trading departments.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23211",
+      "text": "Evaluate costs and revenue of agreements to determine continued profitability.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23202",
+      "text": "Sell services or equipment, such as trusts, investments, or check processing services.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23218",
+      "text": "Negotiate prices or contracts for securities or commodities sales or purchases.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23219",
+      "text": "Prepare and send requests for price quotations to all companies in a particular market.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23220",
+      "text": "Price securities or commodities based on market conditions.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23221",
+      "text": "Purchase or sell financial derivatives for customers.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 43,
+  "salary": 78660,
+  "demand": "Very High"
+}

@@ -1,0 +1,115 @@
+{
+  "code": "17-3013.00",
+  "title": "Mechanical Drafters",
+  "description": "Prepare detailed working diagrams of machinery and mechanical devices, including dimensions, fastening methods, and other engineering information.",
+  "tasks": [
+    {
+      "id": "1447",
+      "text": "Develop detailed design drawings and specifications for mechanical equipment, dies, tools, and controls, using computer-assisted drafting (CAD) equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20964",
+      "text": "Produce three-dimensional models, using computer-aided design (CAD) software.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1455",
+      "text": "Lay out and draw schematic, orthographic, or angle views to depict functional relationships of components, assemblies, systems, and machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1452",
+      "text": "Modify and revise designs to correct operating deficiencies or to reduce production problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1449",
+      "text": "Review and analyze specifications, sketches, drawings, ideas, and related data to assess factors affecting component designs and the procedures and instructions to be followed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1454",
+      "text": "Check dimensions of materials to be used and assign numbers to the materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1453",
+      "text": "Design scale or full-size blueprints of specialty items, such as furniture and automobile body or chassis components.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1450",
+      "text": "Compute mathematical formulas to develop and design detailed specifications for components or machinery, using computer-assisted equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1448",
+      "text": "Coordinate with and consult other workers to design, lay out, or detail components and systems and to resolve design or other problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1456",
+      "text": "Confer with customer representatives to review schematics and answer questions pertaining to installation of systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1451",
+      "text": "Position instructions and comments onto drawings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1458",
+      "text": "Supervise and train other drafters, technologists, and technicians.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1459",
+      "text": "Lay out, draw, and reproduce illustrations for reference manuals and technical publications to describe operation and maintenance of mechanical systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1457",
+      "text": "Draw freehand sketches of designs, trace finished drawings onto designated paper for the reproduction of blueprints, and reproduce working drawings on copy machines.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1460",
+      "text": "Shade or color drawings to clarify and emphasize details and dimensions or eliminate background, using ink, crayon, airbrush, and overlays.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 17,
+  "salary": 71550,
+  "demand": "Medium"
+}

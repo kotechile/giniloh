@@ -1,0 +1,157 @@
+{
+  "code": "35-1011.00",
+  "title": "Chefs and Head Cooks",
+  "description": "Direct and may participate in the preparation, seasoning, and cooking of salads, soups, fish, meats, vegetables, desserts, or other foods. May plan and price menu items, order supplies, and keep records and accounts.",
+  "tasks": [
+    {
+      "id": "11129",
+      "text": "Monitor sanitation practices to ensure that employees follow standards and regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11135",
+      "text": "Instruct cooks or other workers in the preparation, cooking, garnishing, or presentation of food.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11132",
+      "text": "Supervise or coordinate activities of cooks or workers engaged in food preparation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11131",
+      "text": "Order or requisition food or other supplies needed to ensure efficient operation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11133",
+      "text": "Inspect supplies, equipment, or work areas to ensure conformance to established standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11130",
+      "text": "Check the quantity and quality of received products.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11128",
+      "text": "Check the quality of raw or cooked food products to ensure that standards are met.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11136",
+      "text": "Estimate amounts and costs of required supplies, such as food and ingredients.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11148",
+      "text": "Coordinate planning, budgeting, or purchasing for all the food operations within establishments such as clubs, hotels, or restaurant chains.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11138",
+      "text": "Analyze recipes to assign prices to menu items, based on food, labor, and overhead costs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11147",
+      "text": "Plan, direct, or supervise food preparation or cooking activities of multiple kitchens or restaurants in an establishment such as a restaurant chain, hospital, or hotel.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11134",
+      "text": "Determine how food should be presented and create decorative food displays.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11139",
+      "text": "Prepare and cook foods of all types, either on a regular basis or for special guests or functions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11140",
+      "text": "Determine production schedules and staff requirements necessary to ensure timely delivery of services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11142",
+      "text": "Meet with customers to discuss menus for special occasions, such as weddings, parties, or banquets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11141",
+      "text": "Recruit and hire staff, such as cooks and other kitchen workers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11146",
+      "text": "Record production or operational data on specified forms.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11144",
+      "text": "Meet with sales representatives to negotiate prices or order supplies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11145",
+      "text": "Arrange for equipment purchases or repairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11143",
+      "text": "Demonstrate new cooking techniques or equipment to staff.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11137",
+      "text": "Collaborate with other personnel to plan and develop recipes or menus, taking into account such factors as seasonal availability of ingredients or the likely number of customers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 38,
+  "salary": 62470,
+  "demand": "High"
+}

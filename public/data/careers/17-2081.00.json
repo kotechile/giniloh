@@ -1,0 +1,213 @@
+{
+  "code": "17-2081.00",
+  "title": "Environmental Engineers",
+  "description": "Research, design, plan, or perform engineering duties in the prevention, control, and remediation of environmental hazards using various engineering disciplines. Work may include waste treatment, site remediation, or pollution control technology.",
+  "tasks": [
+    {
+      "id": "15210",
+      "text": "Design, or supervise the design of, systems, processes, or equipment for control, management, or remediation of water, air, or soil quality.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1377",
+      "text": "Assess the existing or potential environmental impact of land use projects on air, water, or land.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20195",
+      "text": "Collaborate with environmental scientists, planners, hazardous waste technicians, engineers, experts in law or business, or other specialists to address environmental problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1374",
+      "text": "Advise corporations or government agencies of procedures to follow in cleaning up contaminated sites to protect people and the environment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1373",
+      "text": "Develop proposed project objectives and targets and report to management on progress in attaining them.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1370",
+      "text": "Monitor progress of environmental improvement programs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1366",
+      "text": "Prepare, review, or update environmental investigation or recommendation reports.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20197",
+      "text": "Prepare, maintain, or revise quality assurance documentation or procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1379",
+      "text": "Develop site-specific health and safety protocols, such as spill contingency plans or methods for loading or transporting waste.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1369",
+      "text": "Provide technical support for environmental remediation or litigation projects, including remediation system design or determination of regulatory applicability.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19625",
+      "text": "Prepare or present public briefings on the status of environmental engineering projects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1378",
+      "text": "Assist in budget implementation, forecasts, or administration.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1380",
+      "text": "Coordinate or manage environmental protection programs or projects, assigning or evaluating work.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1375",
+      "text": "Advise industries or government agencies about environmental policies and standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1368",
+      "text": "Obtain, update, or maintain plans, permits, or standard operating procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19624",
+      "text": "Direct installation or operation of environmental monitoring devices or supervise related data collection programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1371",
+      "text": "Inspect industrial or municipal facilities or programs to evaluate operational effectiveness or ensure compliance with environmental regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1389",
+      "text": "Request bids from suppliers or consultants.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1376",
+      "text": "Inform company employees or other interested parties of environmental issues.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1381",
+      "text": "Serve as liaison with federal, state, or local agencies or officials on issues pertaining to solid or hazardous waste program requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1372",
+      "text": "Provide administrative support for projects by collecting data, providing project documentation, training staff, or performing other general administrative duties.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1390",
+      "text": "Provide environmental engineering assistance in network analysis, regulatory analysis, or planning or reviewing database development.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1385",
+      "text": "Develop or present environmental compliance training or orientation sessions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20196",
+      "text": "Provide assistance with planning, quality assurance, safety inspection protocols, or sampling as part of a team conducting multimedia inspections at complex facilities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1387",
+      "text": "Develop, implement, or manage plans or programs related to conservation or management of natural resources.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1383",
+      "text": "Prepare hazardous waste manifests or land disposal restriction notifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23987",
+      "text": "Attend professional conferences to share information.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19626",
+      "text": "Write reports or articles for Web sites or newsletters related to environmental engineering issues.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1388",
+      "text": "Assess, sort, characterize, or pack known or unknown materials.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 17,
+  "salary": 107110,
+  "demand": "Medium"
+}

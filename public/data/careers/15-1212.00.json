@@ -1,0 +1,87 @@
+{
+  "code": "15-1212.00",
+  "title": "Information Security Analysts",
+  "description": "Plan, implement, upgrade, or monitor security measures for the protection of computer networks and information. Assess system vulnerabilities for security risks and propose and implement risk mitigation strategies. May ensure appropriate security controls are in place that will safeguard digital files and vital electronic infrastructure. May respond to computer security breaches and viruses.",
+  "tasks": [
+    {
+      "id": "5314",
+      "text": "Develop plans to safeguard computer files against accidental or unauthorized modification, destruction, or disclosure and to meet emergency data processing needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5316",
+      "text": "Monitor current reports of computer viruses to determine when to update virus protection systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5321",
+      "text": "Encrypt data transmissions and erect firewalls to conceal confidential information as it is being transmitted and to keep out tainted digital transfers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5320",
+      "text": "Perform risk assessments and execute tests of data processing system to ensure functioning of data processing activities and security measures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5317",
+      "text": "Modify computer security files to incorporate new software, correct errors, or change individual access status.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5323",
+      "text": "Review violations of computer security procedures and discuss procedures with violators to ensure violations are not repeated.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5322",
+      "text": "Document computer security and emergency measures policies, procedures, and tests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5315",
+      "text": "Confer with users to discuss issues such as computer data access needs, security violations, and programming changes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5319",
+      "text": "Monitor use of data files and regulate access to safeguard information in computer files.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5318",
+      "text": "Coordinate implementation of computer system plan with establishment personnel and outside vendors.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5313",
+      "text": "Train users and promote security awareness to ensure system security and to improve server and network efficiency.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 32,
+  "salary": 129180,
+  "demand": "High"
+}

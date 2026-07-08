@@ -1,0 +1,129 @@
+{
+  "code": "43-4061.00",
+  "title": "Eligibility Interviewers, Government Programs",
+  "description": "Determine eligibility of persons applying to receive assistance from government programs and agency resources, such as welfare, unemployment benefits, social security, and public housing.",
+  "tasks": [
+    {
+      "id": "9744",
+      "text": "Compute and authorize amounts of assistance for programs, such as grants, monetary payments, and food stamps.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9739",
+      "text": "Keep records of assigned cases, and prepare required reports.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "9736",
+      "text": "Compile, record, and evaluate personal and financial data to verify completeness and accuracy, and to determine eligibility status.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "9737",
+      "text": "Interview and investigate applicants for public assistance to gather information pertinent to their applications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9733",
+      "text": "Interview benefits recipients at specified intervals to certify their eligibility for continuing benefits.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9734",
+      "text": "Interpret and explain information such as eligibility requirements, application details, payment methods, and applicants' legal rights.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9735",
+      "text": "Initiate procedures to grant, modify, deny, or terminate assistance, or refer applicants to other agencies for assistance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9738",
+      "text": "Check with employers or other references to verify answers and obtain further information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9732",
+      "text": "Answer applicants' questions about benefits and claim procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9743",
+      "text": "Provide social workers with pertinent information gathered during applicant interviews.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9742",
+      "text": "Refer applicants to job openings or to interviews with other staff, in accordance with administrative guidelines or office procedures.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9740",
+      "text": "Schedule benefits claimants for adjudication interviews to address questions of eligibility.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9746",
+      "text": "Provide applicants with assistance in completing application forms, such as those for job referrals or unemployment compensation claims.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9741",
+      "text": "Prepare applications and forms for applicants for such purposes as school enrollment, employment, and medical services.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9747",
+      "text": "Investigate claimants for the possibility of fraud or abuse.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9748",
+      "text": "Conduct annual, interim, and special housing reviews and home visits to ensure conformance to regulations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9745",
+      "text": "Monitor the payments of benefits throughout the duration of a claim.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 44,
+  "salary": 54210,
+  "demand": "High"
+}

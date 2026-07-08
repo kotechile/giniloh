@@ -1,0 +1,157 @@
+{
+  "code": "13-1121.00",
+  "title": "Meeting, Convention, and Event Planners",
+  "description": "Coordinate activities of staff, convention personnel, or clients to make arrangements for group meetings, events, or conventions.",
+  "tasks": [
+    {
+      "id": "1209",
+      "text": "Consult with customers to determine objectives and requirements for events, such as meetings, conferences, and conventions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1212",
+      "text": "Review event bills for accuracy and approve payment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1214",
+      "text": "Coordinate services for events, such as accommodation and transportation for participants, facilities, catering, signage, displays, special needs requirements, printing and event security.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1215",
+      "text": "Arrange the availability of audio-visual equipment, transportation, displays, and other event needs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1211",
+      "text": "Confer with staff at a chosen event site to coordinate details.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1216",
+      "text": "Inspect event facilities to ensure that they conform to customer requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1217",
+      "text": "Maintain records of event aspects, including financial details.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "1210",
+      "text": "Monitor event activities to ensure compliance with applicable regulations and laws, satisfaction of participants, and resolution of any problems that arise.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1219",
+      "text": "Negotiate contracts with such service providers and suppliers as hotels, convention centers, and speakers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1222",
+      "text": "Evaluate and select providers of services according to customer requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1213",
+      "text": "Plan and develop programs, agendas, budgets, and services according to customer requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1226",
+      "text": "Hire, train, and supervise volunteers and support staff required for events.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1218",
+      "text": "Conduct post-event evaluations to determine how future events could be improved.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1221",
+      "text": "Direct administrative details, such as financial operations, dissemination of promotional materials, and responses to inquiries.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1220",
+      "text": "Meet with sponsors and organizing committees to plan scope and format of events, to establish and monitor budgets, or to review administrative procedures and event progress.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1223",
+      "text": "Read trade publications, attend seminars, and consult with other meeting professionals to keep abreast of meeting management standards and trends.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1224",
+      "text": "Organize registration of event participants.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1229",
+      "text": "Develop event topics and choose featured speakers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1228",
+      "text": "Promote conference, convention and trades show services by performing tasks such as meeting with professional and trade associations, and producing brochures and other publications.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1225",
+      "text": "Design and implement efforts to publicize events and promote sponsorships.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1227",
+      "text": "Obtain permits from fire and health departments to erect displays and exhibits and serve food at events.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 24,
+  "salary": 61160,
+  "demand": "High"
+}

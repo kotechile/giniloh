@@ -1,0 +1,129 @@
+{
+  "code": "11-9031.00",
+  "title": "Education and Childcare Administrators, Preschool and Daycare",
+  "description": "Plan, direct, or coordinate academic or nonacademic activities of preschools or childcare centers and programs, including before- and after-school care.",
+  "tasks": [
+    {
+      "id": "5193",
+      "text": "Confer with parents and staff to discuss educational activities and policies and students' behavioral or learning problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5196",
+      "text": "Monitor students' progress and provide students and teachers with assistance in resolving any problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5198",
+      "text": "Recruit, hire, train, and evaluate primary and supplemental staff and recommend personnel actions for programs and services.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5204",
+      "text": "Teach classes or courses or provide direct care to children.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5195",
+      "text": "Set educational standards and goals and help establish policies, procedures, and programs to carry them out.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5202",
+      "text": "Determine the scope of educational program offerings and prepare drafts of program schedules and descriptions to estimate staffing and facility requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5197",
+      "text": "Determine allocations of funds for staff, supplies, materials, and equipment and authorize purchases.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5199",
+      "text": "Direct and coordinate activities of teachers or administrators at daycare centers, schools, public agencies, or institutions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5194",
+      "text": "Prepare and maintain attendance, activity, planning, accounting, or personnel reports and records for officials and agencies, or direct preparation and maintenance activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5200",
+      "text": "Plan, direct, and monitor instructional methods and content of educational, vocational, or student activity programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5201",
+      "text": "Review and interpret government codes and develop procedures to meet codes and to ensure facility safety, security, and maintenance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5203",
+      "text": "Review and evaluate new and current programs to determine their efficiency, effectiveness, and compliance with state, local, and federal regulations and recommend any necessary modifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5207",
+      "text": "Collect and analyze survey data, regulatory information, and demographic and employment trends to forecast enrollment patterns and the need for curriculum changes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5208",
+      "text": "Inform businesses, community groups, and governmental agencies about educational needs, available programs, and program policies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5206",
+      "text": "Write articles, manuals, and other publications and assist in the distribution of promotional literature about programs and facilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5205",
+      "text": "Prepare and submit budget requests or grant proposals to solicit program funding.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5209",
+      "text": "Organize and direct committees of specialists, volunteers, and staff to provide technical and advisory assistance for programs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 15,
+  "salary": 59300,
+  "demand": "Medium"
+}

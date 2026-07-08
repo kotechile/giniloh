@@ -1,0 +1,17 @@
+{
+  "code": "17-3019.00",
+  "title": "Drafters, All Other",
+  "description": "All drafters not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Drafters, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 63520,
+  "demand": "Low"
+}

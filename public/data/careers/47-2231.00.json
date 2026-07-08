@@ -1,0 +1,192 @@
+{
+  "code": "47-2231.00",
+  "title": "Solar Photovoltaic Installers",
+  "description": "Assemble, install, or maintain solar photovoltaic (PV) systems on roofs or other structures in compliance with site assessment and schematics. May include measuring, cutting, assembling, and bolting structural framing and solar modules. May perform minor electrical work such as current checks.",
+  "tasks": [
+    {
+      "id": "17742",
+      "text": "Install photovoltaic (PV) systems in accordance with codes and standards, using drawings, schematics, and instructions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17746",
+      "text": "Check electrical installation for proper wiring, polarity, grounding, or integrity of terminations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17753",
+      "text": "Identify electrical, environmental, and safety hazards associated with photovoltaic (PV) installations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17754",
+      "text": "Identify installation locations with proper orientation, area, solar access, or structural integrity for photovoltaic (PV) arrays.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17740",
+      "text": "Assemble solar modules, panels, or support structures, as specified.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17745",
+      "text": "Apply weather sealing to array, building, or support mechanisms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17756",
+      "text": "Install module array interconnect wiring, implementing measures to disable arrays during installation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17757",
+      "text": "Install required labels on solar system components and hardware.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17750",
+      "text": "Diagram layouts and locations for photovoltaic (PV) arrays and equipment, including existing building or site features.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17765",
+      "text": "Determine materials, equipment, and installation sequences necessary to maximize installation efficiency.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17761",
+      "text": "Test operating voltages to ensure operation within acceptable limits for power conditioning equipment, such as inverters and controllers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17747",
+      "text": "Determine appropriate sizes, ratings, and locations for all system overcurrent devices, disconnect devices, grounding equipment, and surge suppression equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17744",
+      "text": "Activate photovoltaic (PV) systems to verify system functionality and conformity to performance expectations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17752",
+      "text": "Identify and resolve any deficiencies in photovoltaic (PV) system installation or materials.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17762",
+      "text": "Visually inspect and test photovoltaic (PV) modules or systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17751",
+      "text": "Examine designs to determine current requirements for all parts of the photovoltaic (PV) system electrical circuit.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17764",
+      "text": "Demonstrate system functionality and performance, including start-up, shut-down, normal operation, and emergency or bypass operations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17755",
+      "text": "Identify methods for laying out, orienting, and mounting modules or arrays to ensure efficient installation, electrical configuration, or system maintenance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17758",
+      "text": "Measure and analyze system performance and operating parameters to assess operating condition of systems or equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17759",
+      "text": "Program, adjust, or configure inverters and controls for desired set points and operating modes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17748",
+      "text": "Determine connection interfaces for additional subpanels or for connecting photovoltaic (PV) systems with utility services or other power generation sources.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17749",
+      "text": "Determine photovoltaic (PV) system designs or configurations based on factors such as customer needs, expectations, and site conditions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17760",
+      "text": "Select mechanical designs, installation equipment, or installation plans that conform to environmental, architectural, structural, site, and code requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17743",
+      "text": "Perform routine photovoltaic (PV) system maintenance on modules, arrays, batteries, power conditioning equipment, safety systems, structural systems, weather sealing, or balance of systems equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17763",
+      "text": "Compile or maintain records of system operation, performance, and maintenance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17741",
+      "text": "Install active solar systems, including solar collectors, concentrators, pumps, or fans.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 35,
+  "salary": 53140,
+  "demand": "Medium"
+}

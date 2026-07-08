@@ -1,0 +1,17 @@
+{
+  "code": "11-9199.00",
+  "title": "Managers, All Other",
+  "description": "All managers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Managers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 141900,
+  "demand": "Very High"
+}

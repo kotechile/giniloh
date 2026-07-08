@@ -1,0 +1,17 @@
+{
+  "code": "19-3039.00",
+  "title": "Psychologists, All Other",
+  "description": "All psychologists not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Psychologists, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 110840,
+  "demand": "Low"
+}

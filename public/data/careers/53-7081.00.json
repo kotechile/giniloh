@@ -1,0 +1,108 @@
+{
+  "code": "53-7081.00",
+  "title": "Refuse and Recyclable Material Collectors",
+  "description": "Collect and dump refuse or recyclable materials from containers into truck. May drive truck.",
+  "tasks": [
+    {
+      "id": "7170",
+      "text": "Inspect trucks prior to beginning routes to ensure safe operating condition.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7174",
+      "text": "Drive trucks, following established routes, through residential streets or alleys or through business or industrial areas.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7171",
+      "text": "Refuel trucks or add other fluids, such as oil or brake fluid.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20313",
+      "text": "Dump refuse or recyclable materials at disposal sites.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7172",
+      "text": "Fill out defective equipment reports.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7176",
+      "text": "Operate automated or semi-automated hoisting devices that raise refuse bins and dump contents into openings in truck bodies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7177",
+      "text": "Dismount garbage trucks to collect garbage and remount trucks to ride to the next collection point.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7175",
+      "text": "Operate equipment that compresses collected refuse.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7178",
+      "text": "Communicate with dispatchers concerning delays, unsafe sites, accidents, equipment breakdowns, or other maintenance problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7179",
+      "text": "Check road or weather conditions to determine how routes will be affected.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7181",
+      "text": "Clean trucks or compactor bodies after routes have been completed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7180",
+      "text": "Tag garbage or recycling containers to inform customers of problems, such as excess garbage or inclusion of items that are not permitted.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19932",
+      "text": "Make special pickups of recyclable materials, such as food scraps, used oil, discarded computers, or other electronic items.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7183",
+      "text": "Organize schedules for refuse collection.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 46,
+  "salary": 49690,
+  "demand": "High"
+}

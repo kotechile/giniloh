@@ -1,0 +1,17 @@
+{
+  "code": "17-2199.00",
+  "title": "Engineers, All Other",
+  "description": "All engineers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Engineers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 122930,
+  "demand": "High"
+}

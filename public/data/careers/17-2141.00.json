@@ -1,0 +1,206 @@
+{
+  "code": "17-2141.00",
+  "title": "Mechanical Engineers",
+  "description": "Perform engineering duties in planning and designing tools, engines, machines, and other mechanically functioning equipment. Oversee installation, operation, maintenance, and repair of equipment such as centralized heat, gas, water, and steam systems.",
+  "tasks": [
+    {
+      "id": "1411",
+      "text": "Read and interpret blueprints, technical drawings, schematics, or computer-generated reports.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20733",
+      "text": "Research, design, evaluate, install, operate, or maintain mechanical products, equipment, systems or processes to meet requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20736",
+      "text": "Specify system components or direct modification of products to ensure conformance with engineering design, performance specifications, or environmental regulations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1412",
+      "text": "Confer with engineers or other personnel to implement operating procedures, resolve system malfunctions, or provide technical information.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20734",
+      "text": "Investigate equipment failures or difficulties to diagnose faulty operation and recommend remedial actions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1421",
+      "text": "Recommend design modifications to eliminate machine or system malfunctions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1413",
+      "text": "Research and analyze customer design proposals, specifications, manuals, or other data to evaluate the feasibility, cost, or maintenance requirements of designs or applications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20741",
+      "text": "Provide technical customer service.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1419",
+      "text": "Oversee installation, operation, maintenance, or repair to ensure that machines or equipment are installed and functioning according to specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20737",
+      "text": "Assist drafters in developing the structural design of products, using drafting tools or computer-assisted drafting equipment or software.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1420",
+      "text": "Conduct research that tests or analyzes the feasibility, design, operation, or performance of equipment, components, or systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20735",
+      "text": "Develop or test models of alternate designs or processing methods to assess feasibility, sustainability, operating condition effects, potential new applications, or necessity of modification.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1418",
+      "text": "Provide feedback to design engineers on customer problems or needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1429",
+      "text": "Write performance requirements for product development or engineering projects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20738",
+      "text": "Estimate costs or submit bids for engineering, construction, or extraction projects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1423",
+      "text": "Develop, coordinate, or monitor all aspects of production, including selection of manufacturing methods, fabrication, or operation of product designs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19628",
+      "text": "Design integrated mechanical or alternative systems, such as mechanical cooling systems with natural ventilation systems, to improve energy efficiency.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19627",
+      "text": "Calculate energy losses for buildings, using equipment such as computers, combustion analyzers, or pressure gauges.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19631",
+      "text": "Recommend the use of utility or energy services that minimize carbon footprints.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20739",
+      "text": "Perform personnel functions, such as supervision of production workers, technicians, technologists, or other engineers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1430",
+      "text": "Apply engineering principles or practices to emerging fields, such as robotics, waste management, or biomedical engineering.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19629",
+      "text": "Direct the installation, operation, maintenance, or repair of renewable energy equipment, such as heating, ventilating, and air conditioning (HVAC) or water systems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19632",
+      "text": "Select or install combined heat units, power units, cogeneration equipment, or trigeneration equipment that reduces energy use or pollution.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19630",
+      "text": "Evaluate mechanical designs or prototypes for energy performance or environmental impact.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20742",
+      "text": "Study industrial processes to maximize the efficiency of equipment applications, including equipment placement.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1431",
+      "text": "Design test control apparatus or equipment or develop procedures for testing products.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1427",
+      "text": "Establish or coordinate the maintenance or safety procedures, service schedule, or supply of materials required to maintain machines or equipment in the prescribed condition.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20740",
+      "text": "Solicit new business.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 12,
+  "salary": 104110,
+  "demand": "High"
+}

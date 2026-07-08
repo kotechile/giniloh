@@ -1,0 +1,129 @@
+{
+  "code": "51-2061.00",
+  "title": "Timing Device Assemblers and Adjusters",
+  "description": "Perform precision assembling or adjusting, within narrow tolerances, of timing devices such as digital clocks or timing devices with electrical or electronic components.",
+  "tasks": [
+    {
+      "id": "15003",
+      "text": "Assemble and install components of timepieces to complete mechanisms, using watchmakers' tools and loupes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15004",
+      "text": "Observe operation of timepiece parts and subassemblies to determine accuracy of movement, and to diagnose causes of defects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15005",
+      "text": "Test operation and fit of timepiece parts and subassemblies, using electronic testing equipment, tweezers, watchmakers' tools, and loupes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15006",
+      "text": "Replace specified parts to repair malfunctioning timepieces, using watchmakers' tools, loupes, and holding fixtures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15007",
+      "text": "Disassemble timepieces such as watches, clocks, and chronometers so that repairs can be made.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15008",
+      "text": "Clean and lubricate timepiece parts and assemblies, using solvents, buff sticks, and oil.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15009",
+      "text": "Examine components of timepieces such as watches, clocks, or chronometers for defects, using loupes or microscopes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15010",
+      "text": "Bend parts, such as hairsprings, pallets, barrel covers, and bridges, to correct deficiencies in truing or endshake, using tweezers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15011",
+      "text": "Change timing weights on balance wheels to correct deficient timing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15012",
+      "text": "Adjust sizes or positioning of timepiece parts to achieve specified fit or function, using calipers, fixtures, and loupes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15013",
+      "text": "Mount hairsprings and balance wheel assemblies between jaws of truing calipers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15014",
+      "text": "Estimate spaces between collets and first inner coils to determine if spaces are within acceptable limits.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15015",
+      "text": "Bend inner coils of springs away from or toward collets, using tweezers, to locate centers of collets in centers of springs, and to correct errors resulting from faulty colleting of coils.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15016",
+      "text": "Turn wheels of calipers and examine springs, using loupes, to determine if center coils appear as perfect circles.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15017",
+      "text": "Examine and adjust hairspring assemblies to ensure horizontal and circular alignment of hairsprings, using calipers, loupes, and watchmakers' tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15018",
+      "text": "Review blueprints, sketches, or work orders to gather information about tasks to be completed.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15019",
+      "text": "Tighten or replace loose jewels, using watchmakers' tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 47,
+  "salary": 62620,
+  "demand": "Low"
+}

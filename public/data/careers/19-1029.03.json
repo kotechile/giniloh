@@ -1,0 +1,178 @@
+{
+  "code": "19-1029.03",
+  "title": "Geneticists",
+  "description": "Research and study the inheritance of traits at the molecular, organism or population level. May evaluate or treat patients with genetic disorders.",
+  "tasks": [
+    {
+      "id": "16828",
+      "text": "Supervise or direct the work of other geneticists, biologists, technicians, or biometricians working on genetics research projects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16839",
+      "text": "Plan or conduct basic genomic and biological research related to areas such as regulation of gene expression, protein interactions, metabolic networks, and nucleic acid or protein complexes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16831",
+      "text": "Prepare results of experimental findings for presentation at professional conferences or in scientific journals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16832",
+      "text": "Maintain laboratory notebooks that record research methods, procedures, and results.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "16817",
+      "text": "Write grants and papers or attend fundraising events to seek research funds.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16830",
+      "text": "Search scientific literature to select and modify methods and procedures most appropriate for genetic research goals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16829",
+      "text": "Review, approve, or interpret genetic laboratory results.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16827",
+      "text": "Attend clinical and research conferences and read scientific literature to keep abreast of technological advances and current genetic research findings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16834",
+      "text": "Evaluate genetic data by performing appropriate mathematical or statistical calculations and analyses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16840",
+      "text": "Analyze determinants responsible for specific inherited traits, and devise methods for altering traits or producing new traits.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16833",
+      "text": "Extract deoxyribonucleic acid (DNA) or perform diagnostic tests involving processes such as gel electrophoresis, Southern blot analysis, and polymerase chain reaction analysis.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16826",
+      "text": "Collaborate with biologists and other professionals to conduct appropriate genetic and biochemical analyses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16822",
+      "text": "Instruct medical students, graduate students, or others in methods or procedures for diagnosis and management of genetic disorders.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16837",
+      "text": "Create or use statistical models for the analysis of genetic data.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16821",
+      "text": "Maintain laboratory safety programs and train personnel in laboratory safety techniques.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16818",
+      "text": "Verify that cytogenetic, molecular genetic, and related equipment and instrumentation is maintained in working condition to ensure accuracy and quality of experimental results.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16835",
+      "text": "Develop protocols to improve existing genetic techniques or to incorporate new diagnostic procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16825",
+      "text": "Confer with information technology specialists to develop computer applications for genetic data analysis.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16836",
+      "text": "Design sampling plans or coordinate the field collection of samples such as tissue specimens.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16823",
+      "text": "Evaluate, diagnose, or treat genetic diseases.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16838",
+      "text": "Conduct family medical studies to evaluate the genetic basis for traits or diseases.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16824",
+      "text": "Design and maintain genetics computer databases.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16820",
+      "text": "Participate in the development of endangered species breeding programs or species survival plans.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16819",
+      "text": "Plan curatorial programs for species collections that include acquisition, distribution, maintenance, or regeneration.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 21,
+  "salary": 98920,
+  "demand": "Medium"
+}

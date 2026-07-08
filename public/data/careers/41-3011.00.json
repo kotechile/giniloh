@@ -1,0 +1,150 @@
+{
+  "code": "41-3011.00",
+  "title": "Advertising Sales Agents",
+  "description": "Sell or solicit advertising space, time, or media in publications, signage, TV, radio, or Internet establishments or public spaces.",
+  "tasks": [
+    {
+      "id": "4579",
+      "text": "Prepare and deliver sales presentations to new and existing customers to sell new advertising programs and to protect and increase existing advertising.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4581",
+      "text": "Maintain assigned account bases while developing new accounts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4586",
+      "text": "Provide clients with estimates of the costs of advertising products or services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4585",
+      "text": "Locate and contact potential clients to offer advertising services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4580",
+      "text": "Explain to customers how specific types of advertising will help promote their products or services in the most effective way possible.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4589",
+      "text": "Obtain and study information about clients' products, needs, problems, advertising history, and business practices to offer effective sales presentations and appropriate product assistance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4592",
+      "text": "Prepare promotional plans, sales literature, media kits, and sales contracts, using computer.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4582",
+      "text": "Process all correspondence and paperwork related to accounts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4584",
+      "text": "Draw up contracts for advertising work, and collect payments due.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4583",
+      "text": "Deliver advertising or illustration proofs to customers for approval.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4588",
+      "text": "Inform customers of available options for advertisement artwork, and provide samples.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4587",
+      "text": "Recommend appropriate sizes and formats for advertising, depending on medium used.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4594",
+      "text": "Write copy as part of layout.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4590",
+      "text": "Determine advertising medium to be used, and prepare sample advertisements within the selected medium for presentation to customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4596",
+      "text": "Gather all relevant material for bid processes, and coordinate bidding and contract approval.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4591",
+      "text": "Consult with company officials, sales departments, and advertising agencies to develop promotional plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4593",
+      "text": "Identify new advertising markets, and propose products to serve them.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4597",
+      "text": "Arrange for commercial taping sessions, and accompany clients to sessions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4595",
+      "text": "Attend sales meetings, industry trade shows, and training seminars to gather information, promote products, expand network of contacts, and increase knowledge.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4598",
+      "text": "Write sales outlines for use by staff.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 38,
+  "salary": 64820,
+  "demand": "Medium"
+}

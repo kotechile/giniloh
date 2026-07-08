@@ -1,0 +1,94 @@
+{
+  "code": "23-2011.00",
+  "title": "Paralegals and Legal Assistants",
+  "description": "Assist lawyers by investigating facts, preparing legal documents, or researching legal precedent. Conduct research to support a legal proceeding, to formulate a defense, or to initiate legal action.",
+  "tasks": [
+    {
+      "id": "18491",
+      "text": "Prepare affidavits or other documents, such as legal correspondence, and organize and maintain documents in paper or electronic filing system.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23994",
+      "text": "Prepare, edit, or review legal documents, including legislation, briefs, pleadings, appeals, wills, contracts, and real estate closing statements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21062",
+      "text": "Investigate facts and law of cases and search pertinent sources, such as public records and internet sources, to determine causes of action and to prepare cases.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18492",
+      "text": "Prepare for trial by performing tasks such as organizing exhibits.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18493",
+      "text": "Meet with clients and other professionals to discuss details of cases.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1636",
+      "text": "Gather and analyze research data, such as statutes, decisions, and legal articles, codes, and documents.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18494",
+      "text": "File pleadings with court clerks.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1639",
+      "text": "Direct and coordinate law office activity, including delivery of subpoenas.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1638",
+      "text": "Call upon witnesses to testify at hearings.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18496",
+      "text": "Arbitrate disputes between parties and assist in the real estate closing process, such as by reviewing title searches.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1642",
+      "text": "Appraise and inventory real and personal property for estate planning.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1641",
+      "text": "Keep and monitor legal volumes to ensure that the law library is up-to-date.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 33,
+  "salary": 62890,
+  "demand": "Very High"
+}

@@ -1,0 +1,171 @@
+{
+  "code": "39-3093.00",
+  "title": "Locker Room, Coatroom, and Dressing Room Attendants",
+  "description": "Provide personal items to patrons or customers in locker rooms, dressing rooms, or coatrooms.",
+  "tasks": [
+    {
+      "id": "4476",
+      "text": "Provide towels and sheets to clients in public baths, steam rooms, and restrooms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4465",
+      "text": "Assign dressing room facilities, locker space, or clothing containers to patrons of athletic or bathing establishments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4467",
+      "text": "Check supplies to ensure adequate availability, and order new supplies when necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4472",
+      "text": "Monitor patrons' facility use to ensure that rules and regulations are followed, and safety and order are maintained.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20134",
+      "text": "Clean facilities such as floors or locker rooms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4466",
+      "text": "Answer customer inquiries or explain cost, availability, policies, and procedures of facilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4468",
+      "text": "Refer guest problems or complaints to supervisors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4484",
+      "text": "Maintain a lost-and-found collection.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4469",
+      "text": "Clean and polish footwear, using brushes, sponges, cleaning fluid, polishes, waxes, liquid or sole dressing, and daubers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4474",
+      "text": "Activate emergency action plans and administer first aid, as necessary.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4473",
+      "text": "Procure beverages, food, and other items as requested.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4477",
+      "text": "Collect soiled linen or clothing for laundering.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4475",
+      "text": "Store personal possessions for patrons, issue claim checks for articles stored, and return articles on receipt of checks.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4471",
+      "text": "Operate washing machines and dryers to clean soiled apparel and towels.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4482",
+      "text": "Maintain inventories of clothing or uniforms, accessories, equipment, or linens.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4479",
+      "text": "Attend to needs of athletic teams in clubhouses.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4480",
+      "text": "Provide assistance to patrons by performing duties such as opening doors or carrying bags.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4478",
+      "text": "Operate controls that regulate temperatures or room environments.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4483",
+      "text": "Issue gym clothes, uniforms, towels, athletic equipment, and special athletic apparel.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4486",
+      "text": "Provide or arrange for services such as clothes pressing, cleaning, or repair.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4470",
+      "text": "Report and document safety hazards, potentially hazardous conditions, and unsafe practices and procedures.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4481",
+      "text": "Stencil identifying information on equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4485",
+      "text": "Set up various apparatus or athletic equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 43,
+  "salary": 36300,
+  "demand": "Low"
+}

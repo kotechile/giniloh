@@ -1,0 +1,241 @@
+{
+  "code": "25-1123.00",
+  "title": "English Language and Literature Teachers, Postsecondary",
+  "description": "Teach courses in English language and literature, including linguistics and comparative literature. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+  "tasks": [
+    {
+      "id": "21127",
+      "text": "Teach writing or communication classes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6311",
+      "text": "Evaluate and grade students' class work, assignments, and papers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "6312",
+      "text": "Prepare course materials, such as syllabi, homework assignments, and handouts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6310",
+      "text": "Initiate, facilitate, and moderate classroom discussions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6314",
+      "text": "Maintain student attendance records, grades, and other required records.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "6315",
+      "text": "Plan, evaluate, and revise curricula, course content, course materials, and methods of instruction.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6313",
+      "text": "Prepare and deliver lectures to undergraduate or graduate students on topics such as poetry, novel structure, and translation and adaptation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20093",
+      "text": "Assist students who need extra help with their coursework outside of class.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6318",
+      "text": "Keep abreast of developments in the field by reading current literature, talking with colleagues, and participating in professional conferences.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6316",
+      "text": "Compile, administer, and grade examinations, or assign this work to others.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6317",
+      "text": "Maintain regularly scheduled office hours to advise and assist students.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6321",
+      "text": "Conduct research in a particular field of knowledge and publish findings in professional journals, books, or electronic media.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6320",
+      "text": "Advise students on academic and vocational curricula and on career issues.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20098",
+      "text": "Teach classes using online technology.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21128",
+      "text": "Schedule courses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6322",
+      "text": "Collaborate with colleagues to address teaching and research issues.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21129",
+      "text": "Write letters of recommendation for students.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6319",
+      "text": "Select and obtain materials and supplies, such as textbooks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6323",
+      "text": "Serve on academic or administrative committees that deal with institutional policies, departmental matters, and academic issues.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6324",
+      "text": "Participate in campus and community events.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6325",
+      "text": "Participate in student recruitment, registration, and placement activities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6326",
+      "text": "Compile bibliographies of specialized materials for outside reading assignments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20094",
+      "text": "Participate in cultural and literary activities, such as traveling abroad and attending performing arts events.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6327",
+      "text": "Supervise undergraduate or graduate teaching, internship, and research work.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6329",
+      "text": "Perform administrative duties, such as serving as department head.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20096",
+      "text": "Recruit, train, and supervise department personnel, such as faculty and student writing instructors.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6328",
+      "text": "Provide assistance to students in college writing centers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20097",
+      "text": "Conduct staff performance evaluations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20095",
+      "text": "Write original literary pieces.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6331",
+      "text": "Act as advisers to student organizations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6332",
+      "text": "Write grant proposals to procure external research funding.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21130",
+      "text": "Review manuscripts for publication in professional journals.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "6333",
+      "text": "Provide professional consulting services to government or industry.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 29,
+  "salary": 78760,
+  "demand": "Medium"
+}

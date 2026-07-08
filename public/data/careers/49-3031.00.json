@@ -1,0 +1,192 @@
+{
+  "code": "49-3031.00",
+  "title": "Bus and Truck Mechanics and Diesel Engine Specialists",
+  "description": "Diagnose, adjust, repair, or overhaul buses and trucks, or maintain and repair any type of diesel engines. Includes mechanics working primarily with automobile or marine diesel engines.",
+  "tasks": [
+    {
+      "id": "2981",
+      "text": "Use handtools, such as screwdrivers, pliers, wrenches, pressure gauges, or precision instruments, as well as power tools, such as pneumatic wrenches, lathes, welding equipment, or jacks and hoists.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2982",
+      "text": "Inspect brake systems, steering mechanisms, wheel bearings, and other important parts to ensure that they are in proper operating condition.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2985",
+      "text": "Raise trucks, buses, and heavy parts or equipment using hydraulic jacks or hoists.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2984",
+      "text": "Adjust and reline brakes, align wheels, tighten bolts and screws, and reassemble equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2991",
+      "text": "Attach test instruments to equipment, and read dials and gauges to diagnose malfunctions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2983",
+      "text": "Perform routine maintenance such as changing oil, checking batteries, and lubricating equipment and machinery.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2988",
+      "text": "Examine and adjust protective guards, loose bolts, and specified safety devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2987",
+      "text": "Inspect, test, and listen to defective equipment to diagnose malfunctions, using test instruments such as handheld computers, motor analyzers, chassis charts, or pressure gauges.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2992",
+      "text": "Rewire ignition systems, lights, and instrument panels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2986",
+      "text": "Test drive trucks and buses to diagnose malfunctions or to ensure that they are working properly.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18582",
+      "text": "Diagnose and repair vehicle heating and cooling systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2995",
+      "text": "Inspect, repair, and maintain automotive and mechanical equipment and machinery, such as pumps and compressors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2989",
+      "text": "Inspect and verify dimensions and clearances of parts to ensure conformance to factory specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2996",
+      "text": "Disassemble and overhaul internal combustion engines, pumps, generators, transmissions, clutches, and differential units.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19886",
+      "text": "Adjust or repair computer controlled exhaust emissions devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2997",
+      "text": "Rebuild gas or diesel engines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2990",
+      "text": "Specialize in repairing and maintaining parts of the engine, such as fuel injection systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2993",
+      "text": "Recondition and replace parts, pistons, bearings, gears, and valves.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20453",
+      "text": "Install or repair accessories.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20454",
+      "text": "Repair or adjust seats, doors, or windows.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23955",
+      "text": "Dismount, mount, and repair or replace tires.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2998",
+      "text": "Align front ends and suspension systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19888",
+      "text": "Maintain or repair vehicles with alternative fuel systems, including biodiesel, hybrid, or compressed natural gas vehicles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19889",
+      "text": "Measure vehicle emissions to determine whether they are within acceptable limits.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19887",
+      "text": "Follow green operational practices involving conservation of water or energy or reduction of solid waste.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2999",
+      "text": "Operate valve-grinding machines to grind and reset valves.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 40,
+  "salary": 61770,
+  "demand": "High"
+}

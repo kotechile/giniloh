@@ -1,0 +1,213 @@
+{
+  "code": "51-9124.00",
+  "title": "Coating, Painting, and Spraying Machine Setters, Operators, and Tenders",
+  "description": "Set up, operate, or tend spraying or rolling machines to coat or paint any of a wide variety of products, including glassware, cloth, ceramics, metal, plastic, paper, or wood, with lacquer, silver, copper, rubber, varnish, glaze, enamel, oil, or rust-proofing materials. Includes painters of transportation vehicles such as painters in auto body repair facilities.",
+  "tasks": [
+    {
+      "id": "23656",
+      "text": "Dispose of hazardous waste in an appropriate manner.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12522",
+      "text": "Hold or position spray guns to direct spray onto articles.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23664",
+      "text": "Spray prepared surfaces with specified amounts of primers and decorative or finish coatings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23659",
+      "text": "Monitor painting operations to identify flaws, such as blisters or streaks, and correct their causes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23655",
+      "text": "Disassemble, clean, and reassemble sprayers or power equipment, using solvents, wire brushes, and cloths.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12513",
+      "text": "Fill hoppers, reservoirs, troughs, or pans with material used to coat, paint, or spray, using conveyors or pails.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23654",
+      "text": "Clean equipment and work areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23652",
+      "text": "Apply rust-resistant undercoats and caulk and seal seams.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12509",
+      "text": "Start and stop operation of machines, using levers or buttons.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12504",
+      "text": "Determine paint flow, viscosity, and coating quality by performing visual inspections, or by using viscometers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12517",
+      "text": "Attach hoses or nozzles to machines, using wrenches and pliers, and make adjustments to obtain the proper dispersion of spray.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12508",
+      "text": "Turn dials, handwheels, valves, or switches to regulate conveyor speeds, machine temperature, air pressure and circulation, and the flow or spray of coatings or paints.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12503",
+      "text": "Observe machine gauges and equipment operation to detect defects or deviations from standards, and make adjustments as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12521",
+      "text": "Examine, measure, weigh, or test sample products to ensure conformance to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23653",
+      "text": "Buff and wax the finished paintwork.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23665",
+      "text": "Use brush to hand-paint areas in need of retouching or unreachable with a spray gun.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12516",
+      "text": "Thread or feed items or products through or around machine rollers and dryers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12505",
+      "text": "Weigh or measure chemicals, coatings, or paints before adding them to machines.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12512",
+      "text": "Operate auxiliary machines or equipment used in coating or painting processes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12518",
+      "text": "Remove materials, parts, or workpieces from painting or coating machines, using hand tools.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12510",
+      "text": "Record operational data on specified forms.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23660",
+      "text": "Operate lifting or moving devices to move equipment or materials to access areas to be painted.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23663",
+      "text": "Set up portable equipment, such as ventilators, exhaust units, ladders, or scaffolding.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23650",
+      "text": "Adjust controls on infrared ovens, heat lamps, portable ventilators, or exhaust units to speed the drying of surfaces between coats.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23651",
+      "text": "Apply primer over any repairs made to surfaces.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23657",
+      "text": "Fill small dents or scratches with body fillers and smooth surfaces to prepare for painting.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23658",
+      "text": "Mix paints to match color specifications or original colors, stirring or thinning paints, using spatulas or power mixing equipment.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23661",
+      "text": "Remove grease, dirt, paint, or rust from surfaces in preparation for paint application, using abrasives, solvents, brushes, blowtorches, washing tanks, or sandblasters.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23662",
+      "text": "Sand and apply sealer to properly dried finish.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 28,
+  "salary": 48250,
+  "demand": "High"
+}

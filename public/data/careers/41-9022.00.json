@@ -1,0 +1,241 @@
+{
+  "code": "41-9022.00",
+  "title": "Real Estate Sales Agents",
+  "description": "Rent, buy, or sell property for clients. Perform duties such as study property listings, interview prospective clients, accompany clients to property site, discuss conditions of sale, and draw up real estate contracts. Includes agents who represent buyer.",
+  "tasks": [
+    {
+      "id": "2443",
+      "text": "Prepare documents such as representation contracts, purchase agreements, closing statements, deeds, and leases.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2440",
+      "text": "Present purchase offers to sellers for consideration.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2445",
+      "text": "Act as an intermediary in negotiations between buyers and sellers, generally representing one or the other.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2449",
+      "text": "Generate lists of properties that are compatible with buyers' needs and financial resources.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2441",
+      "text": "Confer with escrow companies, lenders, home inspectors, and pest control operators to ensure that terms and conditions of purchase agreements are met before closing dates.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2446",
+      "text": "Promote sales of properties through advertisements, open houses, and participation in multiple listing services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2447",
+      "text": "Compare a property with similar properties that have recently sold to determine its competitive market price.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2444",
+      "text": "Coordinate property closings, overseeing signing of documents and disbursement of funds.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2442",
+      "text": "Interview clients to determine what kinds of properties they are seeking.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21155",
+      "text": "Contact previous clients for prospecting of referral business.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2460",
+      "text": "Review property listings, trade journals, and relevant literature, and attend conventions, seminars, and staff and association meetings, to remain knowledgeable about real estate markets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2453",
+      "text": "Answer clients' questions regarding construction work, financing, maintenance, repairs, and appraisals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2448",
+      "text": "Coordinate appointments to show homes to prospective buyers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2462",
+      "text": "Contact property owners and advertise services to solicit property sales listings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2456",
+      "text": "Advise sellers on how to make homes more appealing to potential buyers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2458",
+      "text": "Advise clients on market conditions, prices, mortgages, legal requirements, and related matters.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2450",
+      "text": "Display commercial, industrial, agricultural, and residential properties to clients and explain their features.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2455",
+      "text": "Accompany buyers during visits to and inspections of property, advising them on the suitability and value of the homes they are visiting.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2451",
+      "text": "Arrange for title searches to determine whether clients have clear property titles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2463",
+      "text": "Develop networks of attorneys, mortgage lenders, and contractors to whom clients may be referred.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2452",
+      "text": "Review plans for new construction with clients, enumerating and recommending available options and features.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2454",
+      "text": "Inspect condition of premises, and arrange for necessary maintenance or notify owners of maintenance needs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2464",
+      "text": "Visit properties to assess them before showing them to clients.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2461",
+      "text": "Investigate clients' financial and credit status to determine eligibility for financing.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2459",
+      "text": "Evaluate mortgage options to help clients obtain financing at the best prevailing rates and terms.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2467",
+      "text": "Appraise properties to determine loan values.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2465",
+      "text": "Contact utility companies for service hookups to clients' property.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2468",
+      "text": "Solicit and compile listings of available rental properties.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2466",
+      "text": "Conduct seminars and training sessions for sales agents to improve sales techniques.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2457",
+      "text": "Arrange meetings between buyers and sellers when details of transactions need to be negotiated.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2470",
+      "text": "Rent or lease properties on behalf of clients.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2469",
+      "text": "Secure construction or purchase financing with own firm or mortgage company.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2471",
+      "text": "Locate and appraise undeveloped areas for building sites, based on evaluations of area market conditions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 33,
+  "salary": 52830,
+  "demand": "High"
+}

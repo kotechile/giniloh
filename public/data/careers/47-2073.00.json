@@ -1,0 +1,192 @@
+{
+  "code": "47-2073.00",
+  "title": "Operating Engineers and Other Construction Equipment Operators",
+  "description": "Operate one or several types of power construction equipment, such as motor graders, bulldozers, scrapers, compressors, pumps, derricks, shovels, tractors, or front-end loaders to excavate, move, and grade earth, erect structures, or pour concrete or other hard surface pavement. May repair and maintain equipment in addition to other duties.",
+  "tasks": [
+    {
+      "id": "9849",
+      "text": "Learn and follow safety regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9850",
+      "text": "Take actions to avoid potential hazards or obstructions, such as utility lines, other equipment, other workers, or falling objects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9852",
+      "text": "Start engines, move throttles, switches, or levers, or depress pedals to operate machines, such as bulldozers, trench excavators, road graders, or backhoes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9858",
+      "text": "Coordinate machine actions with other activities, positioning or moving loads in response to hand or audio signals from crew members.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9855",
+      "text": "Align machines, cutterheads, or depth gauge makers with reference stakes and guidelines or ground or position equipment, following hand signals of other workers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9853",
+      "text": "Locate underground services, such as pipes or wires, prior to beginning work.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9868",
+      "text": "Signal operators to guide movement of tractor-drawn machines.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9860",
+      "text": "Repair and maintain equipment, making emergency adjustments or assisting with major repairs as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9856",
+      "text": "Load and move dirt, rocks, equipment, or other materials, using trucks, crawler tractors, power cranes, shovels, graders, or related equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9857",
+      "text": "Drive and maneuver equipment equipped with blades in successive passes over working areas to remove topsoil, vegetation, or rocks or to distribute and level earth or terrain.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9859",
+      "text": "Operate tractors or bulldozers to perform such tasks as clearing land, mixing sludge, trimming backfills, or building roadways or parking lots.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9854",
+      "text": "Monitor operations to ensure that health and safety standards are met.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9862",
+      "text": "Connect hydraulic hoses, belts, mechanical linkages, or power takeoff shafts to tractors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9864",
+      "text": "Select and fasten bulldozer blades or other attachments to tractors, using hitches.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9863",
+      "text": "Operate loaders to pull out stumps, rip asphalt or concrete, rough-grade properties, bury refuse, or perform general cleanup.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9875",
+      "text": "Operate equipment to demolish or remove debris or to remove snow from streets, roads, or parking lots.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9872",
+      "text": "Keep records of material or equipment usage or problems encountered.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "9851",
+      "text": "Adjust handwheels and depress pedals to control attachments, such as blades, buckets, scrapers, or swing booms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9861",
+      "text": "Check fuel supplies at sites to ensure adequate availability.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9867",
+      "text": "Talk to clients and study instructions, plans, or diagrams to establish work requirements.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9873",
+      "text": "Drive tractor-trailer trucks to move equipment from site to site.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9871",
+      "text": "Push other equipment when extra traction or assistance is required.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9869",
+      "text": "Operate road watering, oiling, or rolling equipment, or street sealing equipment, such as chip spreaders.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9866",
+      "text": "Operate compactors, scrapers, or rollers to level, compact, or cover refuse at disposal grounds.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9865",
+      "text": "Test atmosphere for adequate oxygen or explosive conditions when working in confined spaces.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9874",
+      "text": "Turn valves to control air or water output of compressors or pumps.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 40,
+  "salary": 59850,
+  "demand": "Very High"
+}

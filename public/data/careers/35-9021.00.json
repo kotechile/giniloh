@@ -1,0 +1,101 @@
+{
+  "code": "35-9021.00",
+  "title": "Dishwashers",
+  "description": "Clean dishes, kitchen, food preparation equipment, or utensils.",
+  "tasks": [
+    {
+      "id": "11186",
+      "text": "Wash dishes, glassware, flatware, pots, or pans, using dishwashers or by hand.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11188",
+      "text": "Maintain kitchen work areas, equipment, or utensils in clean and orderly condition.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11187",
+      "text": "Place clean dishes, utensils, or cooking equipment in storage areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11190",
+      "text": "Sweep or scrub floors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11189",
+      "text": "Stock supplies, such as food or utensils, in serving stations, cupboards, refrigerators, or salad bars.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11193",
+      "text": "Clean or prepare various foods for cooking or serving.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11192",
+      "text": "Sort and remove trash, placing it in designated pickup areas.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11195",
+      "text": "Transfer supplies or equipment between storage and work areas, by hand or using hand trucks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11196",
+      "text": "Receive and store supplies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11191",
+      "text": "Clean garbage cans with water or steam.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11198",
+      "text": "Load or unload trucks that deliver or pick up food or supplies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11197",
+      "text": "Prepare and package individual place settings.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11194",
+      "text": "Set up banquet tables.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 46,
+  "salary": 34810,
+  "demand": "Very High"
+}

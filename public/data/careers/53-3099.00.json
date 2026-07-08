@@ -1,0 +1,17 @@
+{
+  "code": "53-3099.00",
+  "title": "Motor Vehicle Operators, All Other",
+  "description": "All motor vehicle operators not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Motor Vehicle Operators, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 37180,
+  "demand": "Medium"
+}

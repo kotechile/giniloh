@@ -1,0 +1,164 @@
+{
+  "code": "19-4061.00",
+  "title": "Social Science Research Assistants",
+  "description": "Assist social scientists in laboratory, survey, and other social science research. May help prepare findings for publication and assist in laboratory analysis, quality control, or data management.",
+  "tasks": [
+    {
+      "id": "12963",
+      "text": "Design and create special programs for tasks such as statistical analysis and data entry and cleaning.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "12953",
+      "text": "Provide assistance with the preparation of project-related reports, manuscripts, and presentations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12957",
+      "text": "Prepare tables, graphs, fact sheets, and written reports summarizing research results.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12955",
+      "text": "Perform descriptive and multivariate statistical analyses of data, using computer software.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12956",
+      "text": "Verify the accuracy and validity of data entered in databases, correcting any errors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12959",
+      "text": "Develop and implement research quality control procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12952",
+      "text": "Prepare, manipulate, and manage extensive databases.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12962",
+      "text": "Perform data entry and other clerical work as required for project completion.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "12960",
+      "text": "Conduct internet-based and library research.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12961",
+      "text": "Present research findings to groups of people.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12954",
+      "text": "Obtain informed consent of research subjects or their guardians.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12967",
+      "text": "Administer standardized tests to research subjects, or interview them to collect research data.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12968",
+      "text": "Recruit and schedule research participants.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12966",
+      "text": "Screen potential subjects to determine their suitability as study participants.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12969",
+      "text": "Track research participants, and perform any necessary follow-up tasks.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12958",
+      "text": "Edit and submit protocols and other required research documentation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12964",
+      "text": "Code data in preparation for computer entry.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12972",
+      "text": "Track laboratory supplies and expenses such as participant reimbursement.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12965",
+      "text": "Provide assistance in the design of survey instruments such as questionnaires.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12971",
+      "text": "Supervise the work of survey interviewers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12973",
+      "text": "Perform needs assessments or consult with clients to determine the types of research and information required.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12970",
+      "text": "Allocate and manage laboratory space and resources.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 36,
+  "salary": 61990,
+  "demand": "Medium"
+}

@@ -1,0 +1,157 @@
+{
+  "code": "27-3041.00",
+  "title": "Editors",
+  "description": "Plan, coordinate, revise, or edit written material. May review proposals and drafts for possible publication.",
+  "tasks": [
+    {
+      "id": "1777",
+      "text": "Read copy or proof to detect and correct errors in spelling, punctuation, and syntax.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1780",
+      "text": "Verify facts, dates, and statistics, using standard reference sources.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1786",
+      "text": "Read, evaluate and edit manuscripts or other materials submitted for publication, and confer with authors regarding changes in content, style or organization, or publication.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1782",
+      "text": "Develop story or content ideas, considering reader or audience appeal.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1776",
+      "text": "Prepare, rewrite and edit copy to improve readability, or supervise others who do this work.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1783",
+      "text": "Oversee publication production, including artwork, layout, computer typesetting, and printing, ensuring adherence to deadlines and budget requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21000",
+      "text": "Write text, such as stories, articles, editorials, or newsletters.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1789",
+      "text": "Supervise and coordinate work of reporters and other editors.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1784",
+      "text": "Confer with management and editorial staff members regarding placement and emphasis of developing news stories.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1779",
+      "text": "Plan the contents of publications according to the publication's style, editorial policy, and publishing requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1781",
+      "text": "Review and approve proofs submitted by composing room prior to publication production.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1785",
+      "text": "Assign topics, events and stories to individual writers or reporters for coverage.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1788",
+      "text": "Meet frequently with artists, typesetters, layout personnel, marketing directors, and production managers to discuss projects and resolve problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1787",
+      "text": "Monitor news-gathering operations to ensure utilization of all news sources, such as press releases, telephone contacts, radio, television, wire services, and other reporters.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1791",
+      "text": "Select local, state, national, and international news items received from wire services, based on assessment of items' significance and interest value.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1778",
+      "text": "Allocate print space for story text, photos, and illustrations according to space parameters and copy significance, using knowledge of layout principles.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1790",
+      "text": "Make manuscript acceptance or revision recommendations to the publisher.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1793",
+      "text": "Direct the policies and departments of newspapers, magazines and other publishing establishments.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1794",
+      "text": "Arrange for copyright permissions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1792",
+      "text": "Interview and hire writers and reporters or negotiate contracts, royalties, and payments for authors or freelancers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1795",
+      "text": "Read material to determine index items and arrange them alphabetically or topically, indicating page or chapter location.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 24,
+  "salary": 77920,
+  "demand": "Medium"
+}

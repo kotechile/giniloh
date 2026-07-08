@@ -1,0 +1,94 @@
+{
+  "code": "33-9091.00",
+  "title": "Crossing Guards and Flaggers",
+  "description": "Guide or control vehicular or pedestrian traffic at such places as streets, schools, railroad crossings, or construction sites.",
+  "tasks": [
+    {
+      "id": "11117",
+      "text": "Direct or escort pedestrians across streets, stopping traffic, as necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11118",
+      "text": "Guide or control vehicular or pedestrian traffic at such places as street and railroad crossings and construction sites.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11116",
+      "text": "Monitor traffic flow to locate safe gaps through which pedestrians can cross streets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11119",
+      "text": "Communicate traffic and crossing rules and other information to students and adults.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11122",
+      "text": "Direct traffic movement or warn of hazards, using signs, flags, lanterns, and hand signals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11120",
+      "text": "Report unsafe behavior of children to school officials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11121",
+      "text": "Record license numbers of vehicles disregarding traffic signals, and report infractions to appropriate authorities.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11125",
+      "text": "Distribute traffic control signs and markers at designated points.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11124",
+      "text": "Stop speeding vehicles to warn drivers of traffic laws.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11123",
+      "text": "Learn the location and purpose of street traffic signs within assigned patrol areas.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11126",
+      "text": "Discuss traffic routing plans and control-point locations with superiors.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11127",
+      "text": "Inform drivers of detour routes through construction sites.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 33,
+  "salary": 38100,
+  "demand": "Medium"
+}

@@ -1,0 +1,94 @@
+{
+  "code": "13-1021.00",
+  "title": "Buyers and Purchasing Agents, Farm Products",
+  "description": "Purchase farm products either for further processing or resale. Includes tree farm contractors, grain brokers and market operators, grain buyers, and tobacco buyers. May negotiate contracts.",
+  "tasks": [
+    {
+      "id": "12878",
+      "text": "Purchase, for further processing or for resale, farm products, such as milk, grains, or Christmas trees.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12880",
+      "text": "Arrange for processing or resale of purchased products.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12879",
+      "text": "Negotiate contracts with farmers for the production or purchase of farm products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12881",
+      "text": "Arrange for transportation or storage of purchased products.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12883",
+      "text": "Maintain records of business transactions and product inventories, reporting data to companies or government agencies as necessary.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "12882",
+      "text": "Review orders to determine product types and quantities required to meet demand.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12884",
+      "text": "Examine or test crops or products to estimate their value, determine their grade, or locate any evidence of disease or insect damage.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12885",
+      "text": "Coordinate or direct activities of workers engaged in cutting, transporting, storing, or milling products and maintaining records.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12887",
+      "text": "Sell supplies, such as seed, feed, fertilizers, or insecticides, arranging for loans or financing as necessary.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12889",
+      "text": "Advise farm groups or growers on land preparation or livestock care techniques that will maximize the quantity and quality of production.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12886",
+      "text": "Calculate applicable government grain quotas.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12888",
+      "text": "Estimate land production possibilities, surveying property and studying factors such as crop rotation history, soil fertility, or irrigation facilities.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 74018,
+  "demand": "Very High"
+}

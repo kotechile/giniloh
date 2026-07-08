@@ -1,0 +1,164 @@
+{
+  "code": "53-1043.00",
+  "title": "First-Line Supervisors of Material-Moving Machine and Vehicle Operators",
+  "description": "Directly supervise and coordinate activities of material-moving machine and vehicle operators and helpers.",
+  "tasks": [
+    {
+      "id": "8584",
+      "text": "Enforce safety rules and regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8593",
+      "text": "Interpret transportation or tariff regulations, shipping orders, safety regulations, or company policies and procedures for workers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8588",
+      "text": "Resolve worker problems or collaborate with employees to assist in problem resolution.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8586",
+      "text": "Confer with customers, supervisors, contractors, or other personnel to exchange information or to resolve problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8585",
+      "text": "Plan work assignments and equipment allocations to meet transportation, operations or production goals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8603",
+      "text": "Examine, measure, or weigh cargo or materials to determine specific handling requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8594",
+      "text": "Explain and demonstrate work tasks to new workers or assign training tasks to experienced workers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8589",
+      "text": "Review orders, production schedules, blueprints, or shipping or receiving notices to determine work sequences and material shipping dates, types, volumes, or destinations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8605",
+      "text": "Drive vehicles or operate machines or equipment to complete work assignments or to assist workers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8599",
+      "text": "Inspect or test materials, stock, vehicles, equipment, or facilities to ensure that they are safe, free of defects, and consistent with specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8592",
+      "text": "Maintain or verify records of time, materials, expenditures, or crew activities.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "8597",
+      "text": "Requisition needed personnel, supplies, equipment, parts, or repair services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8591",
+      "text": "Recommend and implement measures to improve worker motivation, equipment performance, work methods, or customer services.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8595",
+      "text": "Prepare, compile, and submit reports on work activities, operations, production, or work-related accidents.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8601",
+      "text": "Dispatch personnel and vehicles in response to telephone or radio reports of emergencies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20455",
+      "text": "Monitor field work to ensure proper performance and use of materials.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8596",
+      "text": "Recommend or implement personnel actions, such as employee selection, evaluation, rewards, or disciplinary actions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8602",
+      "text": "Perform or schedule repairs or preventive maintenance of vehicles or other equipment.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8600",
+      "text": "Compute or estimate cash, payroll, transportation, personnel, or storage requirements.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23693",
+      "text": "Assist workers in tasks, such as loading vehicles.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23694",
+      "text": "Direct workers in transportation or related services, such as pumping, moving, storing, or loading or unloading of materials.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23695",
+      "text": "Plan and establish schedules.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 34,
+  "salary": 59985,
+  "demand": "Very High"
+}

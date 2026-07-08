@@ -1,0 +1,122 @@
+{
+  "code": "49-9041.00",
+  "title": "Industrial Machinery Mechanics",
+  "description": "Repair, install, adjust, or maintain industrial production and processing machinery or refinery and pipeline distribution systems. May also install, dismantle, or move machinery and heavy equipment according to plans.",
+  "tasks": [
+    {
+      "id": "11815",
+      "text": "Repair or maintain the operating condition of industrial production or processing machinery or equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11814",
+      "text": "Repair or replace broken or malfunctioning components of machinery or equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11820",
+      "text": "Clean, lubricate, or adjust parts, equipment, or machinery.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11813",
+      "text": "Disassemble machinery or equipment to remove parts and make repairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11817",
+      "text": "Reassemble equipment after completion of inspections, testing, or repairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11816",
+      "text": "Examine parts for defects, such as breakage or excessive wear.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11822",
+      "text": "Record repairs and maintenance performed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11819",
+      "text": "Operate newly repaired machinery or equipment to verify the adequacy of repairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11824",
+      "text": "Record parts or materials used and order or requisition new parts or materials, as necessary.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11818",
+      "text": "Observe and test the operation of machinery or equipment to diagnose malfunctions, using voltmeters or other testing devices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11821",
+      "text": "Analyze test results, machine error messages, or information obtained from operators to diagnose equipment problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11823",
+      "text": "Study blueprints or manufacturers' manuals to determine correct installation or operation of machinery.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11825",
+      "text": "Cut and weld metal to repair broken metal parts, fabricate new parts, or assemble new equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11827",
+      "text": "Enter codes and instructions to program computer-controlled machinery.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11826",
+      "text": "Demonstrate equipment functions and features to machine operators.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23935",
+      "text": "Assign schedules to work crews.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 47,
+  "salary": 64520,
+  "demand": "Very High"
+}

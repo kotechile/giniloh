@@ -1,0 +1,108 @@
+{
+  "code": "53-6031.00",
+  "title": "Automotive and Watercraft Service Attendants",
+  "description": "Service automobiles, buses, trucks, boats, and other automotive or marine vehicles with fuel, lubricants, and accessories. Collect payment for services and supplies. May lubricate vehicle, change motor oil, refill antifreeze, or replace lights or other accessories, such as windshield wiper blades or fan belts. May repair or replace tires.",
+  "tasks": [
+    {
+      "id": "10712",
+      "text": "Collect cash payments from customers, and make change or charge purchases to customers' credit cards, providing customers with receipts.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "20936",
+      "text": "Check tire pressure and levels of fuel, motor oil, transmission, radiator, battery, or other fluids, adding air or fluids as required.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10719",
+      "text": "Perform minor repairs, such as adjusting brakes, replacing spark plugs, or changing engine oil or filters.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10715",
+      "text": "Clean parking areas, offices, restrooms, or equipment, and remove trash.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10720",
+      "text": "Order stock, and price and shelve incoming goods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10725",
+      "text": "Sell and install accessories, such as batteries, windshield wiper blades, fan belts, bulbs, or headlamps.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10724",
+      "text": "Grease and lubricate vehicles or specified units, such as springs, universal joints, or steering knuckles, using grease guns or spray lubricants.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10721",
+      "text": "Rotate, test, and repair or replace tires.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10714",
+      "text": "Prepare daily reports of fuel, oil, and accessory sales.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20937",
+      "text": "Clean windshields.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10713",
+      "text": "Activate fuel pumps and fill fuel tanks of vehicles with gasoline or diesel fuel to specified levels.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10726",
+      "text": "Test and charge batteries.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10723",
+      "text": "Maintain customer records and follow up periodically with telephone, mail, or personal reminders of services due.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "10718",
+      "text": "Provide customers with information about local roads or highways.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 54,
+  "salary": 35670,
+  "demand": "High"
+}

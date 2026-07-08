@@ -9,6 +9,9 @@ export default defineConfig({
   site: process.env.PUBLIC_SITE_URL ?? 'https://giniloh.com',
   integrations: [react()],
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [tailwindcss()],
+    optimizeDeps: {
+      include: ['react', 'react-dom', 'react-dom/client']
+    }
   }
 });

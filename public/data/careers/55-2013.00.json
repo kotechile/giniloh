@@ -1,0 +1,17 @@
+{
+  "code": "55-2013.00",
+  "title": "First-Line Supervisors of All Other Tactical Operations Specialists",
+  "description": "Supervise and coordinate the activities of all other tactical operations specialists not classified separately above. Supervisors may also perform the same activities as the workers they supervise.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to First-Line Supervisors of All Other Tactical Operations Specialists.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 53141,
+  "demand": "Medium"
+}

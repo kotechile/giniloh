@@ -1,0 +1,129 @@
+{
+  "code": "11-9072.00",
+  "title": "Entertainment and Recreation Managers, Except Gambling",
+  "description": "Plan, direct, or coordinate entertainment and recreational activities and operations of a recreational facility, including cruise ships and parks.",
+  "tasks": [
+    {
+      "id": "21409",
+      "text": "Plan, organize, or lead group activities for customers, such as exercise routines, athletic events, or arts and crafts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21408",
+      "text": "Plan programs of events or schedules of activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21412",
+      "text": "Talk to coworkers using electronic devices, such as computers and radios.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21416",
+      "text": "Write budgets to plan recreational activities or programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21406",
+      "text": "Interview and hire associates to fill staff vacancies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21402",
+      "text": "Calculate and record department expenses and revenue.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "21413",
+      "text": "Talk to customers to convey information about events or activities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21404",
+      "text": "Explain rules and regulations of facilities and entertainment attractions to customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21400",
+      "text": "Administer first aid in emergency situations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21401",
+      "text": "Assign tasks and work hours to staff.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21410",
+      "text": "Resolve customer complaints regarding worker performance or services rendered.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21411",
+      "text": "Store and retrieve equipment, such as vehicles, radios, and ride components.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21414",
+      "text": "Train workers in company procedures or policy.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21415",
+      "text": "Write and present strategies for recreational facility programming using customer or employee data.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21405",
+      "text": "Inspect equipment, such as rides, games, and vehicles, to detect wear and damage.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21403",
+      "text": "Clean equipment and areas of amusement park, cruise ship, or other recreational facility.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21407",
+      "text": "Operate, drive, or explain the use of mechanical equipment in amusement parks, cruise ships, or other recreational facilities.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 41,
+  "salary": 79520,
+  "demand": "Medium"
+}

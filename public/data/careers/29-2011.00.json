@@ -1,0 +1,115 @@
+{
+  "code": "29-2011.00",
+  "title": "Medical and Clinical Laboratory Technologists",
+  "description": "Perform complex medical laboratory tests for diagnosis, treatment, and prevention of disease. May train or supervise staff.",
+  "tasks": [
+    {
+      "id": "1890",
+      "text": "Analyze samples of biological material for chemical content or reaction.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1886",
+      "text": "Analyze laboratory findings to check the accuracy of the results.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1887",
+      "text": "Conduct chemical analysis of body fluids, including blood, urine, or spinal fluid, to determine presence of normal or abnormal components.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1889",
+      "text": "Enter data from analysis of medical tests or clinical results into computer for storage.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15233",
+      "text": "Collect and study blood samples to determine the number of cells, their morphology, or their blood group, blood type, or compatibility for transfusion purposes, using microscopic techniques.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1892",
+      "text": "Set up, clean, and maintain laboratory equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1888",
+      "text": "Operate, calibrate, or maintain equipment used in quantitative or qualitative analysis, such as spectrophotometers, calorimeters, flame photometers, or computer-controlled analyzers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15232",
+      "text": "Establish or monitor quality assurance programs or activities to ensure the accuracy of laboratory results.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1894",
+      "text": "Supervise, train, or direct lab assistants, medical and clinical laboratory technicians or technologists, or other medical laboratory workers engaged in laboratory testing.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1899",
+      "text": "Select and prepare specimens and media for cell cultures, using aseptic technique and knowledge of medium components and cell requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1898",
+      "text": "Obtain, cut, stain, and mount biological material on slides for microscopic study and diagnosis, following standard laboratory procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1893",
+      "text": "Provide technical information about test results to physicians, family members, or researchers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1895",
+      "text": "Develop, standardize, evaluate, or modify procedures, techniques, or tests used in the analysis of specimens or in medical laboratory experiments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1896",
+      "text": "Cultivate, isolate, or assist in identifying microbial organisms or perform various tests on these microorganisms.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1901",
+      "text": "Harvest cell cultures at optimum time, based on knowledge of cell cycle differences and culture conditions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 37,
+  "salary": 64176,
+  "demand": "Very High"
+}

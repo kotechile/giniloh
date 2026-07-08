@@ -1,0 +1,178 @@
+{
+  "code": "27-1026.00",
+  "title": "Merchandise Displayers and Window Trimmers",
+  "description": "Plan and erect commercial displays, such as those in windows and interiors of retail stores and at trade exhibitions.",
+  "tasks": [
+    {
+      "id": "9263",
+      "text": "Plan commercial displays to entice and appeal to customers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9269",
+      "text": "Arrange properties, furniture, merchandise, backdrops, or other accessories, as shown in prepared sketches.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9265",
+      "text": "Change or rotate window displays, interior display areas, or signage to reflect changes in inventory or promotion.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9264",
+      "text": "Place prices or descriptive signs on backdrops, fixtures, merchandise, or floor.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20752",
+      "text": "Consult with store managers, buyers, sales associates, housekeeping staff, or engineering staff to determine appropriate placement of displays or products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20753",
+      "text": "Maintain props, products, or mannequins, inspecting them for imperfections, doing touch-ups, cleaning up after customers, or applying preservative coatings as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9267",
+      "text": "Develop ideas or plans for merchandise displays or window decorations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20754",
+      "text": "Assemble or set up displays, furniture, or products in store space, using colors, lights, pictures, or other accessories to display the product.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9281",
+      "text": "Install booths, exhibits, displays, carpets, or drapes, as guided by floor plan of building or specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9275",
+      "text": "Select themes, lighting, colors, or props to be used.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9268",
+      "text": "Consult with advertising or sales staff to determine type of merchandise to be featured and time and place for each display.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9276",
+      "text": "Attend training sessions or corporate planning meetings to obtain new ideas for product launches.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9271",
+      "text": "Collaborate with others to obtain products or other display items.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9270",
+      "text": "Construct or assemble displays or display components from fabric, glass, paper, or plastic, using hand tools or woodworking power tools, according to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9266",
+      "text": "Obtain plans from display designers or display managers and discuss their implementation with clients or supervisors.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9262",
+      "text": "Take photographs of displays or signage.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9273",
+      "text": "Dress mannequins for displays.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20755",
+      "text": "Supervise or train staff members on daily tasks, such as visual merchandising.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20756",
+      "text": "Store, pack, and maintain inventory records of props, products, or display items.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "9272",
+      "text": "Use computers to produce signage.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9279",
+      "text": "Prepare sketches, floor plans, or models of proposed displays.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9277",
+      "text": "Instruct sales staff in color coordination of clothing racks or counter displays.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9282",
+      "text": "Install decorations, such as flags, banners, festive lights, or bunting on or in building, street, exhibit hall, or booth.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9280",
+      "text": "Cut out designs on cardboard, hardboard, or plywood, according to motif of event.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 29,
+  "salary": 39390,
+  "demand": "High"
+}

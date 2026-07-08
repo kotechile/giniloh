@@ -1,0 +1,157 @@
+{
+  "code": "29-2031.00",
+  "title": "Cardiovascular Technologists and Technicians",
+  "description": "Conduct tests on pulmonary or cardiovascular systems of patients for diagnostic, therapeutic, or research purposes. May conduct or assist in electrocardiograms, cardiac catheterizations, pulmonary functions, lung capacity, and similar tests.",
+  "tasks": [
+    {
+      "id": "4132",
+      "text": "Conduct electrocardiogram (EKG), phonocardiogram, echocardiogram, stress testing, or other cardiovascular tests to record patients' cardiac activity, using specialized electronic test equipment, recording devices, or laboratory instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4129",
+      "text": "Explain testing procedures to patients to obtain cooperation and reduce anxiety.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4127",
+      "text": "Monitor patients' blood pressure and heart rate using electrocardiogram (EKG) equipment during diagnostic or therapeutic procedures to notify the physician if something appears wrong.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4134",
+      "text": "Obtain and record patient identification, medical history, or test results.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4128",
+      "text": "Monitor patients' comfort and safety during tests, alerting physicians to abnormalities or changes in patient responses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4133",
+      "text": "Prepare and position patients for testing.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4135",
+      "text": "Attach electrodes to the patients' chests, arms, and legs, connect electrodes to leads from the electrocardiogram (EKG) machine, and operate the EKG machine to obtain a reading.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4136",
+      "text": "Adjust equipment and controls according to physicians' orders or established protocol.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4137",
+      "text": "Check, test, and maintain cardiology equipment, making minor repairs when necessary, to ensure proper operation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4138",
+      "text": "Supervise or train other cardiology technologists or students.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4144",
+      "text": "Compare measurements of heart wall thickness and chamber sizes to standard norms to identify abnormalities.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15235",
+      "text": "Maintain a proper sterile field during surgical procedures.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4142",
+      "text": "Observe ultrasound display screen and listen to signals to record vascular information, such as blood pressure, limb volume changes, oxygen saturation, or cerebral circulation.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "15236",
+      "text": "Assist physicians in the diagnosis and treatment of cardiac or peripheral vascular treatments, such as implanting pacemakers or assisting with balloon angioplasties to treat blood vessel blockages.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4143",
+      "text": "Assess cardiac physiology and calculate valve areas from blood flow velocity measurements.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "4140",
+      "text": "Operate diagnostic imaging equipment to produce contrast enhanced radiographs of heart and cardiovascular system.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4131",
+      "text": "Observe gauges, recorder, and video screens of data analysis system during imaging of cardiovascular system.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "4141",
+      "text": "Inject contrast medium into patients' blood vessels.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15237",
+      "text": "Transcribe, type, and distribute reports of diagnostic procedures for interpretation by physician.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "15238",
+      "text": "Set up 24-hour Holter and event monitors, scan and interpret tapes, and report results to physicians.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15234",
+      "text": "Perform general administrative tasks, such as scheduling appointments or ordering supplies or equipment.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 31,
+  "salary": 74310,
+  "demand": "Medium"
+}

@@ -1,0 +1,150 @@
+{
+  "code": "25-9044.00",
+  "title": "Teaching Assistants, Postsecondary",
+  "description": "Assist faculty or other instructional staff in postsecondary institutions by performing instructional support activities, such as developing teaching materials, leading discussion groups, preparing and giving examinations, and grading examinations or papers.",
+  "tasks": [
+    {
+      "id": "10965",
+      "text": "Teach undergraduate-level courses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10956",
+      "text": "Evaluate and grade examinations, assignments, or papers, and record grades.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "10955",
+      "text": "Lead discussion sections, tutorials, or laboratory sections.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10967",
+      "text": "Develop teaching materials, such as syllabi, visual aids, answer keys, supplementary notes, or course Web sites.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10959",
+      "text": "Inform students of the procedures for completing and submitting class work, such as lab reports.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10957",
+      "text": "Return assignments to students in accordance with established deadlines.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10960",
+      "text": "Prepare or proctor examinations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20878",
+      "text": "Tutor or mentor students who need additional instruction.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10962",
+      "text": "Meet with supervisors to discuss students' grades or to complete required grade-related paperwork.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10958",
+      "text": "Schedule and maintain regular office hours to meet with students.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10971",
+      "text": "Order or obtain materials needed for classes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10963",
+      "text": "Copy and distribute classroom materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10961",
+      "text": "Notify instructors of errors or problems with assignments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10966",
+      "text": "Complete laboratory projects prior to assigning them to students so that any needed modifications can be made.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10968",
+      "text": "Provide assistance to faculty members or staff with laboratory or field research.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10964",
+      "text": "Demonstrate use of laboratory equipment and enforce laboratory rules.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20879",
+      "text": "Attend lectures given by the supervising instructor.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20880",
+      "text": "Arrange for supervisors to conduct teaching observations and provide feedback about teaching performance.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10972",
+      "text": "Provide instructors with assistance in the use of audiovisual equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10973",
+      "text": "Assist faculty members or staff with student conferences.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 35,
+  "salary": 42910,
+  "demand": "High"
+}

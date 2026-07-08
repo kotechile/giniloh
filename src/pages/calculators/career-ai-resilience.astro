@@ -1,0 +1,78 @@
+---
+import CalculatorShell from '../../components/calculators/CalculatorShell.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import CareerAiResilienceCalculator from '../../components/calculators/react/CareerAiResilienceCalculator';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+
+const calculator = getCalculatorBySlug('career-ai-resilience');
+const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+
+const title = "JobProof AI";
+const description = "Analyze the automation vulnerability of 1,000+ occupations at the task level. Drag sliders to simulate upskilling and see how task-shifting future-proofs your career.";
+const eyebrow = "Career & AI Alignment";
+
+const faqItems = [
+	{
+		question: "Where does the career and task data come from?",
+		answer: "The data is ingested directly from the official O*NET database (sponsored by the U.S. Department of Labor). It contains over 1,000 standardized occupations and their constituent tasks, which we parse and join dynamically."
+	},
+	{
+		question: "How is task-level AI risk classified?",
+		answer: "Tasks are categorized based on automation frameworks: High Risk represents routine cognitive or manual tasks (e.g., data entry, standard document prep). Medium Risk covers semi-structured cognitive tasks (e.g., basic financial analysis, code templating). Low Risk is assigned to unstructured physical adaptability, complex strategic planning, and high-empathy interpersonal leadership."
+	},
+	{
+		question: "How does the upskilling simulator protect my career?",
+		answer: "No career is 100% automated or 100% safe. By adjusting the sliders to represent a shift in your daily hours—reducing routine tasks (High Risk) and increasing strategic advisory or complex execution (Low Risk)—the simulator calculates a customized, lower career vulnerability score."
+	}
+];
+---
+
+<BaseLayout
+	title="JobProof AI | Gini Loh"
+	description={description}
+>
+	<link slot="head" rel="canonical" href={new URL('/calculators/career-ai-resilience/', Astro.site).toString()} />
+	{schema ? <JsonLd slot="head" data={schema} /> : null}
+
+	<CalculatorShell
+		eyebrow={eyebrow}
+		title={title}
+		description={description}
+	>
+		<div slot="calculator">
+			<CareerAiResilienceCalculator client:load />
+		</div>
+
+		<div slot="aside" class="grid gap-6">
+			<article class="overflow-hidden rounded-[1.8rem] border border-cyan-500/20 bg-[linear-gradient(135deg,rgba(8,47,73,0.92),rgba(2,6,23,0.98)_70%,rgba(16,185,129,0.12))] p-6 shadow-[0_0_40px_rgba(34,211,238,0.08)]">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-200/80">Simulator Guide</p>
+				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white">How to operate</h2>
+				<ol class="mt-5 grid gap-4 text-sm leading-7 text-slate-300">
+					<li>1. <strong>Search a Career:</strong> Search over 1,000 standard O*NET occupations using the auto-complete predictive search bar.</li>
+					<li>2. <strong>Inspect Task Mix:</strong> Hover over the task breakdown donut chart to see the percentage of your job dedicated to High, Medium, or Low risk activities.</li>
+					<li>3. <strong>Run the Simulator:</strong> Drag the sliders to simulate shifting your daily task distribution (e.g. automating routine tasks and upskilling to strategy).</li>
+					<li>4. <strong>Explore the Cluster Map:</strong> Switch to the scatter plot view to visually identify clusters of high-paying, low-vulnerability careers.</li>
+				</ol>
+				<div class="mt-6 rounded-[1.3rem] border border-white/10 bg-white/5 p-4">
+					<p class="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">Aesthetic Design</p>
+					<p class="mt-2 text-xs leading-6 text-slate-300">
+						Calculations run entirely client-side using custom responsive SVG charts and data structures. Shift your tasks to watch the AI Vulnerability Gauge drop in real time.
+					</p>
+				</div>
+			</article>
+
+			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">FAQ</p>
+				<div class="mt-5 grid gap-4">
+					{faqItems.map((item) => (
+						<div class="rounded-[1.2rem] border border-slate-800/80 bg-slate-950/55 p-4">
+							<h2 class="text-base font-semibold text-white">{item.question}</h2>
+							<p class="mt-2 text-sm leading-7 text-slate-400">{item.answer}</p>
+						</div>
+					))}
+				</div>
+			</article>
+		</div>
+	</CalculatorShell>
+</BaseLayout>

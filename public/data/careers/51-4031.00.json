@@ -1,0 +1,227 @@
+{
+  "code": "51-4031.00",
+  "title": "Cutting, Punching, and Press Machine Setters, Operators, and Tenders, Metal and Plastic",
+  "description": "Set up, operate, or tend machines to saw, cut, shear, slit, punch, crimp, notch, bend, or straighten metal or plastic material.",
+  "tasks": [
+    {
+      "id": "10110",
+      "text": "Measure completed workpieces to verify conformance to specifications, using micrometers, gauges, calipers, templates, or rulers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10111",
+      "text": "Examine completed workpieces for defects, such as chipped edges or marred surfaces and sort defective pieces according to types of flaws.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10112",
+      "text": "Read work orders or production schedules to determine specifications, such as materials to be used, locations of cutting lines, or dimensions and tolerances.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10115",
+      "text": "Start machines, monitor their operations, and record operational data.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "10114",
+      "text": "Set up, operate, or tend machines to saw, cut, shear, slit, punch, crimp, notch, bend, or straighten metal or plastic material.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10116",
+      "text": "Test and adjust machine speeds or actions, according to product specifications, using gauges and hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10113",
+      "text": "Load workpieces, plastic material, or chemical solutions into machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10131",
+      "text": "Turn controls to set cutting speeds, feed rates, or table angles for specified operations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20820",
+      "text": "Clean work area.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10128",
+      "text": "Lubricate workpieces with oil.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10117",
+      "text": "Install, align, and lock specified punches, dies, cutting blades, or other fixtures in rams or beds of machines, using gauges, templates, feelers, shims, and hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10122",
+      "text": "Adjust ram strokes of presses to specified lengths, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10119",
+      "text": "Position, align, and secure workpieces against fixtures or stops on machine beds or on dies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10127",
+      "text": "Set stops on machine beds, change dies, and adjust components, such as rams or power presses, when making multiple or successive passes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10118",
+      "text": "Clean and lubricate machines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10124",
+      "text": "Position guides, stops, holding blocks, or other fixtures to secure and direct workpieces, using hand tools and measuring devices.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10123",
+      "text": "Place workpieces on cutting tables, manually or using hoists, cranes, or sledges.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10129",
+      "text": "Replace defective blades or wheels, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10132",
+      "text": "Plan sequences of operations, applying knowledge of physical properties of workpiece materials.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10130",
+      "text": "Mark identifying data on workpieces.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10126",
+      "text": "Turn valves to start flow of coolant against cutting areas or to start airflow that blows cuttings away from kerfs.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10137",
+      "text": "Hone cutters with oilstones to remove nicks.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10136",
+      "text": "Remove housings, feed tubes, tool holders, or other accessories to replace worn or broken parts, such as springs or bushings.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10135",
+      "text": "Sharpen dulled blades, using bench grinders, abrasive wheels, or lathes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20821",
+      "text": "Operate forklifts to deliver materials.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10138",
+      "text": "Select, clean, and install spacers, rubber sleeves, or cutters on arbors.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10120",
+      "text": "Scribe reference lines on workpieces as guides for cutting operations, according to blueprints, templates, sample parts, or specifications.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10134",
+      "text": "Grind out burrs or sharp edges, using portable grinders, speed lathes, or polishing jacks.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10121",
+      "text": "Set blade tensions, heights, and angles to perform prescribed cuts, using wrenches.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "24012",
+      "text": "Use equipment designed to join sheet metal, such as spot welders.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10139",
+      "text": "Preheat workpieces, using heating furnaces or hand torches.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 44,
+  "salary": 46330,
+  "demand": "High"
+}

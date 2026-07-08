@@ -1,0 +1,17 @@
+{
+  "code": "27-4099.00",
+  "title": "Media and Communication Equipment Workers, All Other",
+  "description": "All media and communication equipment workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Media and Communication Equipment Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 70720,
+  "demand": "Low"
+}

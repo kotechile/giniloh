@@ -1,0 +1,143 @@
+{
+  "code": "19-3034.00",
+  "title": "School Psychologists",
+  "description": "Diagnose and implement individual or schoolwide interventions or strategies to address educational, behavioral, or developmental issues that adversely impact educational functioning in a school. May address student learning and behavioral problems and counsel students or families. May design and implement performance plans, and evaluate performance. May consult with other school-based personnel.",
+  "tasks": [
+    {
+      "id": "5446",
+      "text": "Compile and interpret students' test results, along with information from teachers and parents, to diagnose conditions and to help assess eligibility for special services.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5455",
+      "text": "Maintain student records, including special education reports, confidential records, records of services provided, and behavioral data.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "5447",
+      "text": "Report any pertinent information to the proper authorities in cases of child endangerment, neglect, or abuse.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5449",
+      "text": "Select, administer, and score psychological tests.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18619",
+      "text": "Interpret test results and prepare psychological reports for teachers, administrators, and parents.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5448",
+      "text": "Assess an individual child's needs, limitations, and potential, using observation, review of school records, and consultation with parents and school personnel.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5454",
+      "text": "Develop individualized educational plans in collaboration with teachers and other staff members.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5453",
+      "text": "Counsel children and families to help solve conflicts and problems in learning and adjustment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5461",
+      "text": "Collect and analyze data to evaluate the effectiveness of academic programs and other services, such as behavioral management systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5450",
+      "text": "Provide consultation to parents, teachers, administrators, and others on topics such as learning styles and behavior modification techniques.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5452",
+      "text": "Collaborate with other educational professionals to develop teaching strategies and school programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5458",
+      "text": "Design classes and programs to meet the needs of special students.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5451",
+      "text": "Promote an understanding of child development and its relationship to learning and behavior.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5457",
+      "text": "Attend workshops, seminars, or professional meetings to remain informed of new developments in school psychology.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5459",
+      "text": "Refer students and their families to appropriate community agencies for medical, vocational, or social services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5456",
+      "text": "Serve as a resource to help families and schools deal with crises, such as separation and loss.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5460",
+      "text": "Initiate and direct efforts to foster tolerance, understanding, and appreciation of diversity in school communities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5462",
+      "text": "Provide educational programs on topics such as classroom management, teaching strategies, or parenting skills.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5463",
+      "text": "Conduct research to generate new knowledge that can be used to address learning and behavior issues.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 18,
+  "salary": 95990,
+  "demand": "Medium"
+}

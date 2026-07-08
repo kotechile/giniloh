@@ -1,0 +1,108 @@
+{
+  "code": "53-7072.00",
+  "title": "Pump Operators, Except Wellhead Pumpers",
+  "description": "Tend, control, or operate power-driven, stationary, or portable pumps and manifold systems to transfer gases, oil, other liquids, slurries, or powdered materials to and from various vessels and processes.",
+  "tasks": [
+    {
+      "id": "14609",
+      "text": "Monitor gauges and flowmeters and inspect equipment to ensure that tank levels, temperatures, chemical amounts, and pressures are at specified levels, reporting abnormalities as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14610",
+      "text": "Record operating data such as products and quantities pumped, stocks used, gauging results, and operating times.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "14614",
+      "text": "Plan movement of products through lines to processing, storage, and shipping units, using knowledge of interconnections and capacities of pipelines, valve manifolds, pumps, and tankage.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14613",
+      "text": "Turn valves and start pumps to start or regulate flows of substances such as gases, liquids, slurries, or powdered materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14611",
+      "text": "Communicate with other workers, using signals, radios, or telephones, to start and stop flows of materials or substances.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14618",
+      "text": "Connect hoses and pipelines to pumps and vessels prior to material transfer, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14612",
+      "text": "Tend vessels that store substances such as gases, liquids, slurries, or powdered materials, checking levels of substances by using calibrated rods or by reading mercury gauges and tank charts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14616",
+      "text": "Clean, lubricate, and repair pumps and vessels, using hand tools and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14615",
+      "text": "Read operating schedules or instructions or receive verbal orders to determine amounts to be pumped.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14622",
+      "text": "Test materials and solutions, using testing equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14619",
+      "text": "Tend auxiliary equipment such as water treatment and refrigeration units, and heat exchangers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14620",
+      "text": "Add chemicals and solutions to tanks to ensure that specifications are met.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14617",
+      "text": "Collect and deliver sample solutions for laboratory analysis.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14621",
+      "text": "Pump two or more materials into one tank to blend mixtures.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 46,
+  "salary": 61770,
+  "demand": "Low"
+}

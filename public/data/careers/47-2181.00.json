@@ -1,0 +1,199 @@
+{
+  "code": "47-2181.00",
+  "title": "Roofers",
+  "description": "Cover roofs of structures with shingles, slate, asphalt, aluminum, wood, or related materials. May spray roofs, sidings, and walls with material to bind, seal, insulate, or soundproof sections of structures.",
+  "tasks": [
+    {
+      "id": "13574",
+      "text": "Inspect problem roofs to determine the best repair procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13586",
+      "text": "Remove snow, water, or debris from roofs prior to applying roofing materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13575",
+      "text": "Set up scaffolding to provide safe access to roofs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20793",
+      "text": "Estimate materials and labor required to complete roofing jobs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13578",
+      "text": "Cement or nail flashing strips of metal or shingle over joints to make them watertight.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13584",
+      "text": "Install partially overlapping layers of material over roof insulation surfaces, using chalk lines, gauges on shingling hatchets, or lines on shingles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13580",
+      "text": "Cut felt, shingles, or strips of flashing to fit angles formed by walls, vents, or intersecting roof surfaces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13592",
+      "text": "Apply plastic coatings, membranes, fiberglass, or felt over sloped roofs before applying shingles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13579",
+      "text": "Install, repair, or replace single-ply roofing systems, using waterproof sheet materials such as modified plastics, elastomeric, or other asphaltic compositions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20794",
+      "text": "Attach roofing paper to roofs in overlapping strips to form bases for other materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13585",
+      "text": "Cover roofs or exterior walls of structures with slate, asphalt, aluminum, wood, gravel, gypsum, or related materials, using brushes, knives, punches, hammers, or other tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13590",
+      "text": "Waterproof or damp-proof walls, floors, roofs, foundations, or basements by painting or spraying surfaces with waterproof coatings or by attaching waterproofing membranes to surfaces.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19851",
+      "text": "Apply reflective roof coatings, such as special paints or single-ply roofing sheets, to existing roofs to reduce solar heat absorption.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13587",
+      "text": "Apply alternate layers of hot asphalt or tar and roofing paper to roofs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13581",
+      "text": "Install vapor barriers or layers of insulation on flat roofs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13583",
+      "text": "Cover exposed nailheads with roofing cement or caulking to prevent water leakage or rust.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13593",
+      "text": "Smooth rough spots to prepare surfaces for waterproofing, using hammers, chisels, or rubbing bricks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13594",
+      "text": "Glaze top layers to make a smooth finish or embed gravel in the bitumen for rough surfaces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13591",
+      "text": "Mop or pour hot asphalt or tar onto roof bases.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19853",
+      "text": "Install attic ventilation systems, such as turbine vents, gable or ridge vents, or conventional or solar-powered exhaust fans.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19855",
+      "text": "Install skylights on roofs to increase natural light inside structures or to reduce energy costs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13595",
+      "text": "Apply gravel or pebbles over top layers of roofs, using rakes or stiff-bristled brooms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13589",
+      "text": "Spray roofs, sidings, or walls to bind, seal, insulate, or soundproof sections of structures, using spray guns, air compressors, or heaters.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19852",
+      "text": "Attach solar panels to existing roofs, according to specifications and without damaging roofing materials or the structural integrity of buildings.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13596",
+      "text": "Punch holes in slate, tile, terra cotta, or wooden shingles, using punches and hammers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19850",
+      "text": "Apply modular soil- and plant-containing grids over existing roof membranes to create green roofs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19854",
+      "text": "Install layers of vegetation-based green roofs, including protective membranes, drainage, aeration, water retention and filter layers, soil substrates, irrigation materials, and plants.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 43,
+  "salary": 55440,
+  "demand": "High"
+}

@@ -1,0 +1,143 @@
+{
+  "code": "35-3023.01",
+  "title": "Baristas",
+  "description": "Prepare or serve specialty coffee or other beverages. Serve food such as baked goods or sandwiches to patrons.",
+  "tasks": [
+    {
+      "id": "17588",
+      "text": "Receive and process customer payments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17581",
+      "text": "Prepare or serve hot or cold beverages, such as coffee, espresso drinks, blended coffees, or teas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17591",
+      "text": "Take customer orders and convey them to other employees for preparation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17582",
+      "text": "Clean or sanitize work areas, utensils, or equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17585",
+      "text": "Describe menu items to customers, or suggest products that might appeal to them.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17583",
+      "text": "Clean service or seating areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17589",
+      "text": "Serve prepared foods, such as muffins, biscotti, or bagels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17597",
+      "text": "Prepare or serve menu items, such as sandwiches or salads.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17598",
+      "text": "Set up or restock product displays.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17593",
+      "text": "Weigh, grind, or pack coffee beans for customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17590",
+      "text": "Stock customer service stations with paper products or beverage preparation items.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17594",
+      "text": "Wrap, label, or date food items for sale.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17587",
+      "text": "Provide customers with product details, such as coffee blend or preparation descriptions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17592",
+      "text": "Take out garbage.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17586",
+      "text": "Order, receive, or stock supplies or retail products.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17599",
+      "text": "Slice fruits, vegetables, desserts, or meats for use in food service.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17584",
+      "text": "Check temperatures of freezers, refrigerators, or heating equipment to ensure proper functioning.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17596",
+      "text": "Demonstrate the use of retail equipment, such as espresso machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17595",
+      "text": "Create signs to advertise store products or events.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 31200,
+  "demand": "Very High"
+}

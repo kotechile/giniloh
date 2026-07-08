@@ -1,0 +1,17 @@
+{
+  "code": "33-9099.00",
+  "title": "Protective Service Workers, All Other",
+  "description": "All protective service workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Protective Service Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 42540,
+  "demand": "Medium"
+}

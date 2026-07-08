@@ -1,0 +1,220 @@
+{
+  "code": "49-3023.00",
+  "title": "Automotive Service Technicians and Mechanics",
+  "description": "Diagnose, adjust, repair, or overhaul automotive vehicles.",
+  "tasks": [
+    {
+      "id": "23523",
+      "text": "Inspect vehicles for damage and record findings so that necessary repairs can be made.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23522",
+      "text": "Test drive vehicles and test components and systems, using equipment such as infrared engine analyzers, compression gauges, and computerized diagnostic devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23524",
+      "text": "Test and adjust repaired systems to meet manufacturers' performance specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23525",
+      "text": "Repair, reline, replace, and adjust brakes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23527",
+      "text": "Review work orders and discuss work with supervisors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23526",
+      "text": "Estimate costs of vehicle repair.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23529",
+      "text": "Confer with customers to obtain descriptions of vehicle problems and to discuss work to be performed and future repair requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23530",
+      "text": "Align vehicles' front ends.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23537",
+      "text": "Align wheels, axles, frames, torsion bars, and steering mechanisms of automobiles, using special alignment equipment and wheel-balancing machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23532",
+      "text": "Tear down, repair, and rebuild faulty assemblies, such as power systems, steering systems, and linkages.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23533",
+      "text": "Perform routine and scheduled maintenance services, such as oil changes, lubrications, and tune-ups.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23535",
+      "text": "Plan work procedures, using charts, technical manuals, and experience.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23534",
+      "text": "Follow checklists to ensure all important parts are examined, including belts, hoses, steering systems, spark plugs, brake and fuel systems, wheel bearings, and other potentially troublesome areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23536",
+      "text": "Maintain cleanliness of work area.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23542",
+      "text": "Change spark plugs, fuel filters, air filters, and batteries in hybrid electric vehicles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23540",
+      "text": "Repair and service air conditioning, heating, engine cooling, and electrical systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23541",
+      "text": "Disassemble units and inspect parts for wear, using micrometers, calipers, and gauges.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23531",
+      "text": "Test electronic computer components in automobiles to ensure proper operation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23543",
+      "text": "Overhaul or replace carburetors, blowers, generators, distributors, starters, and pumps.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23544",
+      "text": "Repair or replace parts such as pistons, rods, gears, valves, and bearings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23545",
+      "text": "Rewire ignition systems, lights, and instrument panels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23528",
+      "text": "Troubleshoot fuel, ignition, and emissions control systems, using electronic testing equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23538",
+      "text": "Tune automobile engines to ensure proper and efficient functioning.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23539",
+      "text": "Repair, replace, or adjust defective fuel injectors, carburetor parts, and gasoline filters.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23546",
+      "text": "Install, adjust, or repair hydraulic or electromagnetic automatic lift mechanisms used to raise and lower automobile windows, seats, and tops.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23548",
+      "text": "Conduct visual inspections of compressed natural gas fuel systems to identify cracks, gouges, abrasions, discoloration, broken fibers, loose brackets, damaged gaskets, or other problems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23547",
+      "text": "Rebuild parts, such as crankshafts and cylinder blocks.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23549",
+      "text": "Diagnose and replace or repair engine management systems or related sensors for flexible fuel vehicles (FFVs) with ignition timing, fuel rate, alcohol concentration, or air-to-fuel ratio malfunctions.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23550",
+      "text": "Repair or rebuild transmissions.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23551",
+      "text": "Retrofit vehicle fuel systems with aftermarket products, such as vapor transfer devices, evaporation control devices, swirlers, lean burn devices, and friction reduction devices, to enhance combustion and fuel efficiency.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 43,
+  "salary": 50620,
+  "demand": "Very High"
+}

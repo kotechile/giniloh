@@ -1,0 +1,178 @@
+{
+  "code": "29-1151.00",
+  "title": "Nurse Anesthetists",
+  "description": "Administer anesthesia, monitor patient's vital signs, and oversee patient recovery from anesthesia. May assist anesthesiologists, surgeons, other physicians, or dentists. Must be registered nurses who have specialized graduate education.",
+  "tasks": [
+    {
+      "id": "18361",
+      "text": "Manage patients' airway or pulmonary status, using techniques such as endotracheal intubation, mechanical ventilation, pharmacological support, respiratory therapy, and extubation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18365",
+      "text": "Respond to emergency situations by providing airway management, administering emergency fluids or drugs, or using basic or advanced cardiac life support techniques.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18362",
+      "text": "Monitor patients' responses, including skin color, pupil dilation, pulse, heart rate, blood pressure, respiration, ventilation, or urine output, using invasive and noninvasive techniques.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18366",
+      "text": "Select, order, or administer anesthetics, adjuvant drugs, accessory drugs, fluids or blood products as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18370",
+      "text": "Select, prepare, or use equipment, monitors, supplies, or drugs for the administration of anesthetics.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18367",
+      "text": "Assess patients' medical histories to predict anesthesia response.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18363",
+      "text": "Perform or manage regional anesthetic techniques, such as local, spinal, epidural, caudal, nerve blocks and intravenous blocks.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18368",
+      "text": "Develop anesthesia care plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18369",
+      "text": "Obtain informed consent from patients for anesthesia procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18364",
+      "text": "Prepare prescribed solutions and administer local, intravenous, spinal, or other anesthetics, following specified methods and procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18356",
+      "text": "Perform pre-anesthetic screenings, including physical evaluations and patient interviews, and document results.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18371",
+      "text": "Calibrate and test anesthesia equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18355",
+      "text": "Evaluate patients' post-surgical or post-anesthesia responses, taking appropriate corrective actions or requesting consultation if complications occur.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18354",
+      "text": "Administer post-anesthesia medications or fluids to support patients' cardiovascular systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18357",
+      "text": "Select and prescribe post-anesthesia medications or treatments to patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18360",
+      "text": "Perform or evaluate the results of diagnostic tests, such as radiographs (x-rays) and electrocardiograms (EKGs).",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18358",
+      "text": "Select, order, or administer pre-anesthetic medications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18374",
+      "text": "Insert peripheral or central intravenous catheters.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18373",
+      "text": "Insert arterial catheters or perform arterial punctures to obtain arterial blood samples.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18359",
+      "text": "Discharge patients from post-anesthesia care.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18376",
+      "text": "Read current literature, talk with colleagues, and participate in professional organizations or conferences to keep abreast of developments in nursing.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18377",
+      "text": "Request anesthesia equipment repairs, adjustments, or safety tests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18375",
+      "text": "Instruct nurses, residents, interns, students, or other staff on topics such as anesthetic techniques, pain management and emergency responses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18372",
+      "text": "Disassemble and clean anesthesia equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 17,
+  "salary": 236590,
+  "demand": "Medium"
+}

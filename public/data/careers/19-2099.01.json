@@ -1,0 +1,178 @@
+{
+  "code": "19-2099.01",
+  "title": "Remote Sensing Scientists and Technologists",
+  "description": "Apply remote sensing principles and methods to analyze data and solve problems in areas such as natural resource management, urban planning, or homeland security. May develop new sensor systems, analytical techniques, or new applications for existing systems.",
+  "tasks": [
+    {
+      "id": "18270",
+      "text": "Manage or analyze data obtained from remote sensing systems to obtain meaningful results.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18256",
+      "text": "Analyze data acquired from aircraft, satellites, or ground-based platforms, using statistical analysis software, image analysis software, or Geographic Information Systems (GIS).",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18258",
+      "text": "Integrate other geospatial data sources into projects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18260",
+      "text": "Organize and maintain geospatial data and associated documentation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18265",
+      "text": "Compile and format image data to increase its usefulness.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18259",
+      "text": "Prepare or deliver reports or presentations of geospatial project information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18267",
+      "text": "Discuss project goals, equipment requirements, or methodologies with colleagues or team members.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18261",
+      "text": "Process aerial or satellite imagery to create products such as land cover maps.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18262",
+      "text": "Design or implement strategies for collection, analysis, or display of geographic data.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18257",
+      "text": "Develop or build databases for remote sensing or related geospatial project information.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18264",
+      "text": "Collect supporting data, such as climatic or field survey data, to corroborate remote sensing data analyses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18271",
+      "text": "Monitor quality of remote sensing data collection operations to determine if procedural or equipment changes are necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18277",
+      "text": "Train technicians in the use of remote sensing technology.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18276",
+      "text": "Set up or maintain remote sensing data collection systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18263",
+      "text": "Direct all activity associated with implementation, operation, or enhancement of remote sensing hardware or software.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18273",
+      "text": "Attend meetings or seminars or read current literature to maintain knowledge of developments in the field of remote sensing.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18266",
+      "text": "Conduct research into the application or enhancement of remote sensing technology.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18275",
+      "text": "Recommend new remote sensing hardware or software acquisitions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19774",
+      "text": "Use remote sensing data for forest or carbon tracking activities to assess the impact of environmental change.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18268",
+      "text": "Develop automated routines to correct for the presence of image distorting artifacts, such as ground vegetation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18269",
+      "text": "Develop new analytical techniques or sensor systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18274",
+      "text": "Participate in fieldwork.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19773",
+      "text": "Apply remote sensing data or techniques, such as surface water modeling or dust cloud detection, to address environmental issues.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18272",
+      "text": "Direct installation or testing of new remote sensing hardware or software.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 31,
+  "salary": 122570,
+  "demand": "Low"
+}

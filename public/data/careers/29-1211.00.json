@@ -1,0 +1,136 @@
+{
+  "code": "29-1211.00",
+  "title": "Anesthesiologists",
+  "description": "Administer anesthetics and analgesics for pain management prior to, during, or after surgery.",
+  "tasks": [
+    {
+      "id": "7754",
+      "text": "Monitor patient before, during, and after anesthesia and counteract adverse reactions or complications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7756",
+      "text": "Record type and amount of anesthesia and patient condition throughout procedure.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7755",
+      "text": "Provide and maintain life support and airway management and help prepare patients for emergency surgery.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7753",
+      "text": "Administer anesthetic or sedation during medical procedures, using local, intravenous, spinal, or caudal methods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7757",
+      "text": "Examine patient, obtain medical history, and use diagnostic tests to determine risk during surgical, obstetrical, and other medical procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7758",
+      "text": "Position patient on operating table to maximize patient comfort and surgical accessibility.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7760",
+      "text": "Coordinate administration of anesthetics with surgeons during operation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7759",
+      "text": "Decide when patients have recovered or stabilized enough to be sent to another room or ward or to be sent home following outpatient surgery.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7761",
+      "text": "Confer with other medical professionals to determine type and method of anesthetic or sedation to render patient insensible to pain.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7763",
+      "text": "Order laboratory tests, x-rays, and other diagnostic procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7767",
+      "text": "Inform students and staff of types and methods of anesthesia administration, signs of complications, and emergency methods to counteract reactions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7766",
+      "text": "Provide medical care and consultation in many settings, prescribing medication and treatment and referring patients for surgery.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7765",
+      "text": "Manage anesthesiological services, coordinating them with other medical activities and formulating plans and procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7764",
+      "text": "Diagnose illnesses, using examinations, tests, and reports.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7762",
+      "text": "Coordinate and direct work of nurses, medical technicians, and other health care providers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7769",
+      "text": "Instruct individuals and groups on ways to preserve health and prevent disease.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7768",
+      "text": "Schedule and maintain use of surgical suite, including operating, wash-up, waiting rooms, or anesthetic and sterilizing equipment.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7770",
+      "text": "Conduct medical research to aid in controlling and curing disease, to investigate new medications, and to develop and test new medical techniques.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 14,
+  "salary": 391490,
+  "demand": "Medium"
+}

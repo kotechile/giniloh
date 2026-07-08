@@ -1,0 +1,220 @@
+{
+  "code": "29-1224.00",
+  "title": "Radiologists",
+  "description": "Diagnose and treat diseases and injuries using medical imaging techniques, such as x rays, magnetic resonance imaging (MRI), nuclear medicine, and ultrasounds. May perform minimally invasive medical procedures and tests.",
+  "tasks": [
+    {
+      "id": "17242",
+      "text": "Prepare comprehensive interpretive reports of findings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17254",
+      "text": "Perform or interpret the outcomes of diagnostic imaging procedures including magnetic resonance imaging (MRI), computer tomography (CT), positron emission tomography (PET), nuclear cardiology treadmill studies, mammography, or ultrasound.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17248",
+      "text": "Document the performance, interpretation, or outcomes of all procedures performed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17252",
+      "text": "Communicate examination results or diagnostic information to referring physicians, patients, or families.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17243",
+      "text": "Obtain patients' histories from electronic records, patient interviews, dictated reports, or by communicating with referring clinicians.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17239",
+      "text": "Review or transmit images and information using picture archiving or communications systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17245",
+      "text": "Confer with medical professionals regarding image-based diagnoses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17241",
+      "text": "Recognize or treat complications during and after procedures, including blood pressure problems, pain, oversedation, or bleeding.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17249",
+      "text": "Develop or monitor procedures to ensure adequate quality control of images.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17251",
+      "text": "Provide counseling to radiologic patients to explain the processes, risks, benefits, or alternative treatments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17236",
+      "text": "Establish or enforce standards for protection of patients or personnel.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17250",
+      "text": "Coordinate radiological services with other medical activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17246",
+      "text": "Instruct radiologic staff in desired techniques, positions, or projections.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17234",
+      "text": "Participate in continuing education activities to maintain and develop expertise.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17231",
+      "text": "Participate in quality improvement activities including discussions of areas where risk of error is high.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17253",
+      "text": "Perform interventional procedures such as image-guided biopsy, percutaneous transluminal angioplasty, transhepatic biliary drainage, or nephrostomy catheter placement.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17235",
+      "text": "Develop treatment plans for radiology patients.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22732",
+      "text": "Administer radioisotopes to clinical patients or research subjects.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22733",
+      "text": "Advise other physicians of the clinical indications, limitations, assessments, or risks of diagnostic and therapeutic applications of radioactive materials.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22734",
+      "text": "Calculate, measure, or prepare radioisotope dosages.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22735",
+      "text": "Check and approve the quality of diagnostic images before patients are discharged.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22736",
+      "text": "Compare nuclear medicine procedures with other types of procedures, such as computed tomography, ultrasonography, nuclear magnetic resonance imaging, and angiography.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22737",
+      "text": "Direct nuclear medicine technologists or technicians regarding desired dosages, techniques, positions, and projections.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22738",
+      "text": "Establish and enforce radiation protection standards for patients and staff.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22739",
+      "text": "Formulate plans and procedures for nuclear medicine departments.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22740",
+      "text": "Monitor handling of radioactive materials to ensure that established procedures are followed.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22741",
+      "text": "Prescribe radionuclides and dosages to be administered to individual patients.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22742",
+      "text": "Review procedure requests and patients' medical histories to determine applicability of procedures and radioisotopes to be used.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22743",
+      "text": "Teach nuclear medicine, diagnostic radiology, or other specialties at graduate educational level.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22744",
+      "text": "Test dosage evaluation instruments and survey meters to ensure they are operating properly.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 13,
+  "salary": 420860,
+  "demand": "Medium"
+}

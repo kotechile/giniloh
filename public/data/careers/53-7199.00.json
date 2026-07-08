@@ -1,0 +1,17 @@
+{
+  "code": "53-7199.00",
+  "title": "Material Moving Workers, All Other",
+  "description": "All material moving workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Material Moving Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 41800,
+  "demand": "Low"
+}

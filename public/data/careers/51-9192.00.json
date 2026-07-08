@@ -1,0 +1,87 @@
+{
+  "code": "51-9192.00",
+  "title": "Cleaning, Washing, and Metal Pickling Equipment Operators and Tenders",
+  "description": "Operate or tend machines to wash or clean products, such as barrels or kegs, glass items, tin plate, food, pulp, coal, plastic, or rubber, to remove impurities.",
+  "tasks": [
+    {
+      "id": "14368",
+      "text": "Add specified amounts of chemicals to equipment at required times to maintain solution levels and concentrations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14372",
+      "text": "Observe machine operations, gauges, or thermometers, and adjust controls to maintain specified conditions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14373",
+      "text": "Set controls to regulate temperature and length of cycles, and start conveyors, pumps, agitators, and machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14369",
+      "text": "Drain, clean, and refill machines or tanks at designated intervals, using cleaning solutions or water.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14367",
+      "text": "Operate or tend machines to wash and remove impurities from items such as barrels or kegs, glass products, tin plate surfaces, dried fruit, pulp, animal stock, coal, manufactured articles, plastic, or rubber.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14375",
+      "text": "Record gauge readings, materials used, processing times, or test results in production logs.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "14374",
+      "text": "Examine and inspect machines to detect malfunctions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14370",
+      "text": "Measure, weigh, or mix cleaning solutions, using measuring tanks, calibrated rods or suction tubes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14371",
+      "text": "Draw samples for laboratory analysis, or test solutions for conformance to specifications, such as acidity or specific gravity.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14376",
+      "text": "Adjust, clean, and lubricate mechanical parts of machines, using hand tools and grease guns.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14377",
+      "text": "Load machines with objects to be processed and unload them after cleaning, placing them on conveyors or racks.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 43530,
+  "demand": "Low"
+}

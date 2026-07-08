@@ -1,0 +1,136 @@
+{
+  "code": "51-4034.00",
+  "title": "Lathe and Turning Machine Tool Setters, Operators, and Tenders, Metal and Plastic",
+  "description": "Set up, operate, or tend lathe and turning machines to turn, bore, thread, form, or face metal or plastic materials, such as wire, rod, or bar stock.",
+  "tasks": [
+    {
+      "id": "11993",
+      "text": "Adjust machine controls and change tool settings to keep dimensions within specified tolerances.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11994",
+      "text": "Move controls to set cutting speeds and depths and feed rates, and to position tools in relation to workpieces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11992",
+      "text": "Study blueprints, layouts or charts, and job orders for information on specifications and tooling instructions, and to determine material requirements and operational sequences.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11991",
+      "text": "Inspect sample workpieces to verify conformance with specifications, using instruments such as gauges, micrometers, and dial indicators.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11999",
+      "text": "Replace worn tools, and sharpen dull cutting tools and dies, using bench grinders or cutter-grinding machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12003",
+      "text": "Move toolholders manually or by turning handwheels, or engage automatic feeding mechanisms to feed tools to and along workpieces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12001",
+      "text": "Compute unspecified dimensions and machine settings, using knowledge of metal properties and shop mathematics.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11997",
+      "text": "Crank machines through cycles, stopping to adjust tool positions and machine controls to ensure specified timing, clearances, and tolerances.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12000",
+      "text": "Position, secure, and align cutting tools in toolholders on machines, using hand tools, and verify their positions with measuring instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11995",
+      "text": "Start lathe or turning machines and observe operations to ensure that specifications are met.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23998",
+      "text": "Program computer numerical control machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20923",
+      "text": "Refill, change, and monitor the level of fluids, such as oil and coolant, in machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23999",
+      "text": "Clean work area.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11998",
+      "text": "Lift metal stock or workpieces manually or using hoists, and position and secure them in machines, using fasteners and hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12002",
+      "text": "Install holding fixtures, cams, gears, and stops to control stock and tool movement, using hand tools, power tools, and measuring instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11996",
+      "text": "Select cutting tools and tooling instructions, according to written specifications or knowledge of metal properties and shop mathematics.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12005",
+      "text": "Mount attachments, such as relieving or tracing attachments, to perform operations, such as duplicating contours of templates or trimming workpieces.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12004",
+      "text": "Turn valve handles to direct the flow of coolant onto work areas or to coat disks with spinning compounds.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 44,
+  "salary": 50620,
+  "demand": "Low"
+}

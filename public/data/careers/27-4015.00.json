@@ -1,0 +1,122 @@
+{
+  "code": "27-4015.00",
+  "title": "Lighting Technicians",
+  "description": "Set up, maintain, and dismantle light fixtures, lighting control devices, and the associated lighting electrical and rigging equipment used for photography, television, film, video, and live productions. May focus or operate light fixtures, or attach color filters or other lighting accessories.",
+  "tasks": [
+    {
+      "id": "22673",
+      "text": "Assess safety of wiring or equipment set-up to determine the risk of fire or electrical shock.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22674",
+      "text": "Consult with lighting director or production staff to determine lighting requirements.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22675",
+      "text": "Disassemble and store equipment after performances.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22676",
+      "text": "Install color effects or image patterns, such as color filters, onto lighting fixtures.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22677",
+      "text": "Install electrical cables or wire fixtures.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22678",
+      "text": "Load, unload, or position lighting equipment.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22679",
+      "text": "Match light fixture settings, such as brightness and color, to lighting design plans.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22680",
+      "text": "Notify supervisors when major lighting equipment repairs are needed.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22681",
+      "text": "Operate manual or automated systems to control lighting throughout productions.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22682",
+      "text": "Patch or wire lights to dimmers or other electronic consoles.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22683",
+      "text": "Perform minor repairs or routine maintenance on lighting equipment, such as replacing lamps or damaged color filters.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22684",
+      "text": "Program lighting consoles or load automated lighting control systems onto consoles.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22685",
+      "text": "Set up and focus light fixtures to meet requirements of television, theater, concerts, or other productions.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22686",
+      "text": "Set up scaffolding or cranes to assist with setting up of lighting equipment.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22687",
+      "text": "Test lighting equipment function and desired lighting effects.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22688",
+      "text": "Visit and assess structural and electrical layout of locations before setting up lighting equipment.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 38,
+  "salary": 68060,
+  "demand": "Low"
+}

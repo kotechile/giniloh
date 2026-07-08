@@ -1,0 +1,129 @@
+{
+  "code": "41-9021.00",
+  "title": "Real Estate Brokers",
+  "description": "Operate real estate office, or work for commercial real estate firm, overseeing real estate transactions. Other duties usually include selling real estate or renting properties and arranging loans.",
+  "tasks": [
+    {
+      "id": "4599",
+      "text": "Sell, for a fee, real estate owned by others.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4600",
+      "text": "Obtain agreements from property owners to place properties for sale with real estate firms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4603",
+      "text": "Act as an intermediary in negotiations between buyers and sellers over property prices and settlement details and during the closing of sales.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4604",
+      "text": "Generate lists of properties for sale, their locations, descriptions, and available financing options, using computers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4610",
+      "text": "Manage or operate real estate offices, handling associated business details.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4602",
+      "text": "Compare a property with similar properties that have recently sold to determine its competitive market price.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4605",
+      "text": "Maintain knowledge of real estate law, local economies, fair housing laws, types of available mortgages, financing options, and government programs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4601",
+      "text": "Monitor fulfillment of purchase contract terms to ensure that they are handled in a timely manner.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "4606",
+      "text": "Check work completed by loan officers, attorneys, or other professionals to ensure that it is performed properly.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4612",
+      "text": "Rent properties or manage rental properties.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4609",
+      "text": "Maintain awareness of current income tax regulations, local zoning, building and tax laws, and growth possibilities of a property's area.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4613",
+      "text": "Arrange for title searches of properties being sold.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4608",
+      "text": "Appraise property values, assessing income potential when relevant.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "4611",
+      "text": "Supervise agents who handle real estate transactions.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4607",
+      "text": "Arrange for financing of property purchases.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4614",
+      "text": "Give buyers virtual tours of properties in which they are interested, using computers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4615",
+      "text": "Review property details to ensure that environmental regulations are met.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 38,
+  "salary": 73220,
+  "demand": "Medium"
+}

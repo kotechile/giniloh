@@ -1,0 +1,192 @@
+{
+  "code": "25-1051.00",
+  "title": "Atmospheric, Earth, Marine, and Space Sciences Teachers, Postsecondary",
+  "description": "Teach courses in the physical sciences, except chemistry and physics. Includes both teachers primarily engaged in teaching, and those who do a combination of teaching and research.",
+  "tasks": [
+    {
+      "id": "5859",
+      "text": "Maintain student attendance records, grades, and other required records.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "5849",
+      "text": "Prepare and deliver lectures to undergraduate or graduate students on topics such as structural geology, micrometeorology, and atmospheric thermodynamics.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5851",
+      "text": "Evaluate and grade students' class work, assignments, and papers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5854",
+      "text": "Compile, administer, and grade examinations, or assign this work to others.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5850",
+      "text": "Supervise laboratory work and field work.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5855",
+      "text": "Plan, evaluate, and revise curricula, course content, and course materials and methods of instruction.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5852",
+      "text": "Prepare course materials, such as syllabi, homework assignments, and handouts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5856",
+      "text": "Initiate, facilitate, and moderate classroom discussions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5847",
+      "text": "Keep abreast of developments in the field by reading current literature, talking with colleagues, and participating in professional conferences.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5857",
+      "text": "Maintain regularly scheduled office hours to advise and assist students.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5858",
+      "text": "Advise students on academic and vocational curricula and on career issues.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5853",
+      "text": "Collaborate with colleagues to address teaching and research issues.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5862",
+      "text": "Select and obtain materials and supplies, such as textbooks and laboratory equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5863",
+      "text": "Serve on academic or administrative committees that deal with institutional policies, departmental matters, and academic issues.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5845",
+      "text": "Conduct research in a particular field of knowledge and publish findings in professional journals, books, or electronic media.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5848",
+      "text": "Supervise undergraduate or graduate teaching, internship, and research work.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5846",
+      "text": "Write grant proposals to procure external research funding.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5861",
+      "text": "Perform administrative duties, such as serving as department head.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20068",
+      "text": "Purchase and maintain equipment to support research projects.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5860",
+      "text": "Participate in student recruitment, registration, and placement activities.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5866",
+      "text": "Act as advisers to student organizations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5864",
+      "text": "Compile bibliographies of specialized materials for outside reading assignments.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5867",
+      "text": "Participate in campus and community events.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20070",
+      "text": "Answer questions from the public and media.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20069",
+      "text": "Review papers or serve on editorial boards for scientific journals, and review grant proposals for federal agencies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5865",
+      "text": "Provide professional consulting services to government or industry.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 33,
+  "salary": 103170,
+  "demand": "Low"
+}

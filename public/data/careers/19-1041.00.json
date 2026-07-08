@@ -1,0 +1,122 @@
+{
+  "code": "19-1041.00",
+  "title": "Epidemiologists",
+  "description": "Investigate and describe the determinants and distribution of disease, disability, or health outcomes. May develop the means for prevention and control.",
+  "tasks": [
+    {
+      "id": "15216",
+      "text": "Communicate research findings on various types of diseases to health practitioners, policy makers, and the public.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5421",
+      "text": "Oversee public health programs, including statistical analysis, health care planning, surveillance systems, and public health improvement.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5422",
+      "text": "Investigate diseases or parasites to determine cause and risk factors, progress, life cycle, or mode of transmission.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15217",
+      "text": "Educate healthcare workers, patients, and the public about infectious and communicable diseases, including disease transmission and prevention.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15215",
+      "text": "Monitor and report incidents of infectious diseases to local and state health agencies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5423",
+      "text": "Plan and direct studies to investigate human or animal disease, preventive methods, and treatments for disease.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5425",
+      "text": "Provide expertise in the design, management and evaluation of study protocols and health status questionnaires, sample selection, and analysis.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23961",
+      "text": "Write articles for publication in professional journals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5429",
+      "text": "Identify and analyze public health issues related to foodborne parasitic diseases and their impact on public policies, scientific studies, or surveys.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23962",
+      "text": "Write grant applications to fund epidemiologic research.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5424",
+      "text": "Plan, administer and evaluate health safety standards and programs to improve public health, conferring with health department, industry personnel, physicians, and others.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5426",
+      "text": "Conduct research to develop methodologies, instrumentation, and procedures for medical application, analyzing data and presenting findings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5427",
+      "text": "Consult with and advise physicians, educators, researchers, government health officials and others regarding medical applications of sciences, such as physics, biology, and chemistry.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5428",
+      "text": "Supervise professional, technical, and clerical personnel.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5430",
+      "text": "Teach principles of medicine and medical and laboratory procedures to physicians, residents, students, and technicians.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5432",
+      "text": "Prepare and analyze samples to study effects of drugs, gases, pesticides, or microorganisms on cell structure and tissue.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 19,
+  "salary": 87220,
+  "demand": "Low"
+}

@@ -1,0 +1,192 @@
+{
+  "code": "51-9041.00",
+  "title": "Extruding, Forming, Pressing, and Compacting Machine Setters, Operators, and Tenders",
+  "description": "Set up, operate, or tend machines, such as glass-forming machines, plodder machines, and tuber machines, to shape and form products such as glassware, food, rubber, soap, brick, tile, clay, wax, tobacco, or cosmetics.",
+  "tasks": [
+    {
+      "id": "12444",
+      "text": "Adjust machine components to regulate speeds, pressures, and temperatures, and amounts, dimensions, and flow of materials or ingredients.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12447",
+      "text": "Press control buttons to activate machinery and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12445",
+      "text": "Examine, measure, and weigh materials or products to verify conformance to standards, using measuring devices such as templates, micrometers, or scales.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12446",
+      "text": "Monitor machine operations and observe lights and gauges to detect malfunctions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12455",
+      "text": "Clear jams, and remove defective or substandard materials or products.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12452",
+      "text": "Notify supervisors when extruded filaments fail to meet standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12451",
+      "text": "Record and maintain production data, such as meter readings, and quantities, types, and dimensions of materials produced.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "12449",
+      "text": "Review work orders, specifications, or instructions to determine materials, ingredients, procedures, components, settings, and adjustments for extruding, forming, pressing, or compacting machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12448",
+      "text": "Turn controls to adjust machine functions, such as regulating air pressure, creating vacuums, and adjusting coolant flow.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12466",
+      "text": "Clean dies, arbors, compression chambers, and molds, using swabs, sponges, or air hoses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12453",
+      "text": "Synchronize speeds of sections of machines when producing products involving several steps or processes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12456",
+      "text": "Move materials, supplies, components, and finished products between storage and work areas, using work aids such as racks, hoists, and handtrucks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12459",
+      "text": "Activate machines to shape or form products, such as candy bars, light bulbs, balloons, or insulation panels.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12450",
+      "text": "Select and install machine components, such as dies, molds, and cutters, according to specifications, using hand tools and measuring devices.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12463",
+      "text": "Send product samples to laboratories for analysis.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12470",
+      "text": "Couple air and gas lines to machines to maintain plasticity of material and to regulate solidification of final products.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12468",
+      "text": "Pour, scoop, or dump specified ingredients, metal assemblies, or mixtures into sections of machine prior to starting machines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12462",
+      "text": "Measure, mix, cut, shape, soften, and join materials and ingredients, such as powder, cornmeal, or rubber to prepare them for machine processing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12461",
+      "text": "Remove materials or products from molds or from extruding, forming, pressing, or compacting machines, and stack or store them for additional processing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12454",
+      "text": "Feed products into machines by hand or conveyor.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12471",
+      "text": "Measure arbors and dies to verify sizes specified on work tickets.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12458",
+      "text": "Complete work tickets, and place them with products.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12467",
+      "text": "Disassemble equipment to repair it or to replace parts, such as nozzles, punches, and filters.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12460",
+      "text": "Remove molds, mold components, and feeder tubes from machinery after production is complete.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12457",
+      "text": "Swab molds with solutions to prevent products from sticking.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12469",
+      "text": "Install, align, and adjust neck rings, press plungers, and feeder tubes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 52,
+  "salary": 45760,
+  "demand": "Medium"
+}

@@ -1,0 +1,136 @@
+{
+  "code": "23-1012.00",
+  "title": "Judicial Law Clerks",
+  "description": "Assist judges in court or by conducting research or preparing legal documents.",
+  "tasks": [
+    {
+      "id": "19050",
+      "text": "Prepare briefs, legal memoranda, or statements of issues involved in cases, including appropriate suggestions or recommendations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19051",
+      "text": "Research laws, court decisions, documents, opinions, briefs, or other information related to cases before the court.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19047",
+      "text": "Draft or proofread judicial opinions, decisions, or citations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19046",
+      "text": "Confer with judges concerning legal questions, construction of documents, or granting of orders.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19052",
+      "text": "Review complaints, petitions, motions, or pleadings that have been filed to determine issues involved or basis for relief.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19048",
+      "text": "Keep abreast of changes in the law and inform judges when cases are affected by such changes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19044",
+      "text": "Attend court sessions to hear oral arguments or record necessary case information.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "19053",
+      "text": "Review dockets of pending litigation to ensure adequate progress.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19045",
+      "text": "Communicate with counsel regarding case management or procedural requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19061",
+      "text": "Respond to questions from judicial officers or court staff on general legal issues.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19057",
+      "text": "Enter information into computerized court calendar, filing, or case management systems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19054",
+      "text": "Verify that all files, complaints, or other papers are available and in the proper order.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19056",
+      "text": "Coordinate judges' meeting and appointment schedules.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19049",
+      "text": "Participate in conferences or discussions between trial attorneys and judges.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19060",
+      "text": "Prepare periodic reports on court proceedings, as required.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19062",
+      "text": "Supervise law students, volunteers, or other personnel assigned to the court.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19058",
+      "text": "Maintain judges' law libraries by assembling or updating appropriate documents.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19059",
+      "text": "Perform courtroom duties, including calling calendars, administering oaths, and swearing in jury panels and witnesses.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 31,
+  "salary": 64920,
+  "demand": "Low"
+}

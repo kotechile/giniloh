@@ -1,0 +1,220 @@
+{
+  "code": "51-9071.00",
+  "title": "Jewelers and Precious Stone and Metal Workers",
+  "description": "Design, fabricate, adjust, repair, or appraise jewelry, gold, silver, other precious metals, or gems.",
+  "tasks": [
+    {
+      "id": "23624",
+      "text": "Clean and polish metal items and jewelry pieces, using jewelers' tools, polishing wheels, and chemical baths.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23621",
+      "text": "Smooth soldered joints and rough spots, using hand files and emery paper, and polish smoothed areas with polishing wheels or buffing wire.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23622",
+      "text": "Create jewelry from materials such as gold, silver, platinum, and precious or semiprecious stones.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23625",
+      "text": "Cut and file pieces of jewelry such as rings, brooches, bracelets, and lockets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23628",
+      "text": "Examine assembled or finished products to ensure conformance to specifications, using magnifying glasses or precision measuring instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23623",
+      "text": "Make repairs, such as enlarging or reducing ring sizes, soldering pieces of jewelry together, and replacing broken clasps and mountings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23627",
+      "text": "Compute costs of labor and materials to determine production costs of products and articles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23620",
+      "text": "Position stones and metal pieces, and set, mount, and secure items in place, using setting and hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23635",
+      "text": "Grade stones based on their color, perfection, and quality of cut.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23626",
+      "text": "Select and acquire metals and gems for designs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23632",
+      "text": "Shape and straighten damaged or twisted articles by hand or using pliers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23638",
+      "text": "Create new jewelry designs and modify existing designs, using computers as necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23636",
+      "text": "Plate articles such as jewelry pieces and watch dials, using silver, gold, nickel, or other metals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23640",
+      "text": "Record the weights and processing times of finished pieces.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23630",
+      "text": "Construct preliminary models of wax, metal, clay, or plaster, and form sample castings in molds.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23637",
+      "text": "Write or modify design specifications such as the metal contents and weights of items.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23633",
+      "text": "Soften metal to be used in designs by heating it with a gas torch and shape it, using hammers and dies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23629",
+      "text": "Pierce and cut open designs in ornamentation, using hand drills and scroll saws.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23645",
+      "text": "Research and analyze reference materials, and consult with interested parties to develop new products or modify existing designs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23642",
+      "text": "Mark, engrave, or emboss designs on metal pieces such as castings, wire, or jewelry, following specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23631",
+      "text": "Pour molten metal alloys or other materials into molds to cast models of jewelry.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23639",
+      "text": "Buy and sell jewelry, or serve as agents between buyers and sellers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23634",
+      "text": "Determine appraised values of diamonds and other gemstones based on price guides, market fluctuations, and stone grades and rarity.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23641",
+      "text": "Lay out designs on metal stock, and cut along markings to fabricate pieces used to cast metal molds.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23644",
+      "text": "Design and fabricate molds, models, and machine accessories, and modify hand tools used to cast metal and jewelry pieces.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23643",
+      "text": "Cut designs in molds or other materials to be used as models in the fabrication of metal and jewelry products.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23649",
+      "text": "Rout out locations where parts are to be joined to items, using routing machines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23647",
+      "text": "Weigh, mix, and melt metal alloys or materials needed for jewelry models.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23646",
+      "text": "Anneal precious metal objects such as coffeepots, tea sets, and trays in gas ovens for prescribed times to soften metal for reworking.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23648",
+      "text": "Rotate molds to distribute alloys and to prevent formation of air pockets.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 33,
+  "salary": 52540,
+  "demand": "Low"
+}

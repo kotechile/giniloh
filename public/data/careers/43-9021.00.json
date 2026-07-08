@@ -1,0 +1,73 @@
+{
+  "code": "43-9021.00",
+  "title": "Data Entry Keyers",
+  "description": "Operate data entry device, such as keyboard or photo composing perforator. Duties may include verifying data and preparing materials for printing.",
+  "tasks": [
+    {
+      "id": "11405",
+      "text": "Locate and correct data entry errors, or report them to supervisors.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11402",
+      "text": "Compile, sort, and verify the accuracy of data before it is entered.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11403",
+      "text": "Compare data with source documents, or re-enter data in verification format to detect errors.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11404",
+      "text": "Store completed documents in appropriate locations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11407",
+      "text": "Select materials needed to complete work assignments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11401",
+      "text": "Read source documents such as canceled checks, sales reports, or bills, and enter data in specific data fields or onto tapes or disks for subsequent entry, using keyboards or scanners.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11406",
+      "text": "Maintain logs of activities and completed work.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11408",
+      "text": "Load machines with required input or output media, such as paper, cards, disks, tape, or Braille media.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11409",
+      "text": "Resolve garbled or indecipherable messages, using cryptographic procedures and equipment.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 61,
+  "salary": 41340,
+  "demand": "High"
+}

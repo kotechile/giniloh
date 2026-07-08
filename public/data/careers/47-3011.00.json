@@ -1,0 +1,115 @@
+{
+  "code": "47-3011.00",
+  "title": "Helpers--Brickmasons, Blockmasons, Stonemasons, and Tile and Marble Setters",
+  "description": "Help brickmasons, blockmasons, stonemasons, or tile and marble setters by performing duties requiring less skill. Duties include using, supplying, or holding materials or tools, and cleaning work area and equipment.",
+  "tasks": [
+    {
+      "id": "13600",
+      "text": "Mix mortar, plaster, and grout, manually or using machines, according to standard formulas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13598",
+      "text": "Erect scaffolding or other installation structures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13597",
+      "text": "Cut materials to specified sizes for installation, using power saws or tile cutters.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13603",
+      "text": "Modify material moving, mixing, grouting, grinding, polishing, or cleaning procedures, according to installation or material requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13606",
+      "text": "Transport materials, tools, or machines to installation sites, manually or using conveyance equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13604",
+      "text": "Provide assistance in the preparation, installation, repair, or rebuilding of tile, brick, or stone surfaces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13599",
+      "text": "Locate and supply materials to masons for installation, following drawings or numbered sequences.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13610",
+      "text": "Arrange or store materials, machines, tools, or equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13605",
+      "text": "Clean installation surfaces, equipment, tools, work sites, or storage areas, using water, chemical solutions, oxygen lances, or polishing machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13607",
+      "text": "Move or position materials such as marble slabs, using cranes, hoists, or dollies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13608",
+      "text": "Remove excess grout or residue from tile or brick joints, using sponges or trowels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13601",
+      "text": "Apply grout between joints of bricks or tiles, using grouting trowels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13611",
+      "text": "Apply caulk, sealants, or other agents to installed surfaces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13609",
+      "text": "Remove damaged tile, brick, or mortar, and clean or prepare surfaces, using pliers, hammers, chisels, drills, wire brushes, or metal wire anchors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13602",
+      "text": "Correct surface imperfections or fill chipped, cracked, or broken bricks or tiles, using fillers, adhesives, or grouting materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 47550,
+  "demand": "Low"
+}

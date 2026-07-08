@@ -1,0 +1,192 @@
+{
+  "code": "39-4011.00",
+  "title": "Embalmers",
+  "description": "Prepare bodies for interment in conformity with legal requirements.",
+  "tasks": [
+    {
+      "id": "4487",
+      "text": "Conform to laws of health and sanitation and ensure that legal requirements concerning embalming are met.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4488",
+      "text": "Apply cosmetics to impart lifelike appearance to the deceased.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4495",
+      "text": "Join lips, using needles and thread or wire.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4490",
+      "text": "Close incisions, using needles and sutures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4489",
+      "text": "Incise stomach and abdominal walls and probe internal organs, using trocar, to withdraw blood and waste matter from organs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23930",
+      "text": "Clean and disinfect areas in which bodies are prepared and embalmed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4493",
+      "text": "Dress bodies and place them in caskets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4492",
+      "text": "Make incisions in arms or thighs and drain blood from circulatory system and replace it with embalming fluid, using pump.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20257",
+      "text": "Remove the deceased from place of death and transport to funeral home.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4494",
+      "text": "Perform the duties of funeral directors, including coordinating funeral activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4497",
+      "text": "Attach trocar to pump-tube, start pump, and repeat probing to force embalming fluid into organs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4491",
+      "text": "Reshape or reconstruct disfigured or maimed bodies when necessary, using dermasurgery techniques and materials such as clay, cotton, plaster of Paris, and wax.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4504",
+      "text": "Pack body orifices with cotton saturated with embalming fluid to prevent escape of gases or waste matter.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4496",
+      "text": "Conduct interviews to arrange for the preparation of obituary notices, to assist with the selection of caskets or urns, and to determine the location and time of burials or cremations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4500",
+      "text": "Insert convex celluloid or cotton between eyeballs and eyelids to prevent slipping and sinking of eyelids.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4505",
+      "text": "Assist with placing caskets in hearses and organize cemetery processions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4499",
+      "text": "Maintain records, such as itemized lists of clothing or valuables delivered with body and names of persons embalmed.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "4501",
+      "text": "Wash and dry bodies, using germicidal soap and towels or hot air dryers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4502",
+      "text": "Arrange for transporting the deceased to another state for interment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4498",
+      "text": "Perform special procedures necessary for remains that are to be transported to other states or overseas, or where death was caused by infectious disease.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4503",
+      "text": "Supervise funeral attendants and other funeral home staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4506",
+      "text": "Serve as pallbearers, attend visiting rooms, and provide other assistance to the bereaved.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4507",
+      "text": "Direct casket and floral display placement and arrange guest seating.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4508",
+      "text": "Arrange funeral home equipment and perform general maintenance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4509",
+      "text": "Assist coroners at death scenes or at autopsies, file police reports, and testify at inquests or in court, if employed by a coroner.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4510",
+      "text": "Press diaphragm to evacuate air from lungs.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 38,
+  "salary": 58780,
+  "demand": "Low"
+}

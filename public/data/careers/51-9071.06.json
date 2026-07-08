@@ -1,0 +1,108 @@
+{
+  "code": "51-9071.06",
+  "title": "Gem and Diamond Workers",
+  "description": "Fabricate, finish, or evaluate the quality of gems and diamonds used in jewelry or industrial tools.",
+  "tasks": [
+    {
+      "id": "15092",
+      "text": "Examine gems during processing to ensure accuracy of angles and positions of cuts or bores, using magnifying glasses, loupes, or shadowgraphs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15093",
+      "text": "Assign polish, symmetry, and clarity grades to stones, according to established grading systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15094",
+      "text": "Estimate wholesale and retail value of gems, following pricing guides, market fluctuations, and other relevant economic factors.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15095",
+      "text": "Examine gem surfaces and internal structures, using polariscopes, refractometers, microscopes, and other optical instruments, to differentiate between stones, to identify rare specimens, or to detect flaws, defects, or peculiarities affecting gem values.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15096",
+      "text": "Identify and document stones' clarity characteristics, using plot diagrams.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15097",
+      "text": "Advise customers and others on the best use of gems to create attractive jewelry items.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15098",
+      "text": "Examine diamonds or gems to ascertain the shape, cut, and width of cut stones, or to select the cuts that will result in the biggest, best quality stones.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15099",
+      "text": "Immerse stones in prescribed chemical solutions to determine specific gravities and key properties of gemstones or substitutes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15100",
+      "text": "Hold stones, gems, dies, or styluses against rotating plates, wheels, saws, or slitters to cut, shape, slit, grind, or polish them.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15101",
+      "text": "Sort rough diamonds into categories based on shape, size, color, and quality.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15102",
+      "text": "Secure gems or diamonds in holders, chucks, dops, lapidary sticks, or blocks for cutting, polishing, grinding, drilling, or shaping.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15106",
+      "text": "Measure sizes of stones' bore holes and cuts to ensure adherence to specifications, using precision measuring instruments.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15107",
+      "text": "Select shaping wheels for tasks, and mix and apply abrasives, bort, or polishing compounds.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15112",
+      "text": "Dismantle lapping, boring, cutting, polishing, and shaping equipment and machinery to clean and lubricate it.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 39,
+  "salary": 52540,
+  "demand": "Low"
+}

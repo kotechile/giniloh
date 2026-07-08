@@ -1,0 +1,115 @@
+{
+  "code": "43-6013.00",
+  "title": "Medical Secretaries and Administrative Assistants",
+  "description": "Perform secretarial duties using specific knowledge of medical terminology and hospital, clinic, or laboratory procedures. Duties may include scheduling appointments, billing patients, and compiling and recording medical charts, reports, and correspondence.",
+  "tasks": [
+    {
+      "id": "777",
+      "text": "Answer telephones and direct calls to appropriate staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "775",
+      "text": "Schedule and confirm patient diagnostic appointments, surgeries, or medical consultations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "788",
+      "text": "Complete insurance or other claim forms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "779",
+      "text": "Greet visitors, ascertain purpose of visit, and direct them to appropriate staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "783",
+      "text": "Transmit correspondence or medical records by mail, e-mail, or fax.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "781",
+      "text": "Maintain medical records, technical library, or correspondence files.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "778",
+      "text": "Receive and route messages or documents, such as laboratory results, to appropriate staff.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "780",
+      "text": "Interview patients to complete documents, case histories, or forms, such as intake or insurance forms.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "782",
+      "text": "Operate office equipment, such as voice mail messaging systems, and use word processing, spreadsheet, or other software applications to prepare reports, invoices, financial statements, letters, case histories, or medical records.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "787",
+      "text": "Perform bookkeeping duties, such as credits or collections, preparing and sending financial statements or bills, and keeping financial records.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "784",
+      "text": "Perform various clerical or administrative functions, such as ordering and maintaining an inventory of supplies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "786",
+      "text": "Transcribe recorded messages or practitioners' diagnoses or recommendations into patients' medical records.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "776",
+      "text": "Compile and record medical charts, reports, or correspondence, using typewriter or personal computer.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "20438",
+      "text": "Schedule tests or procedures for patients, such as lab work or x-rays, based on physician orders.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "789",
+      "text": "Prepare correspondence or assist physicians or medical scientists with preparation of reports, speeches, articles, or conference proceedings.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 40,
+  "salary": 45930,
+  "demand": "Very High"
+}

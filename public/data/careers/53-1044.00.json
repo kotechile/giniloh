@@ -1,0 +1,143 @@
+{
+  "code": "53-1044.00",
+  "title": "First-Line Supervisors of Passenger Attendants",
+  "description": "Supervise and coordinate activities of passenger attendants.",
+  "tasks": [
+    {
+      "id": "23696",
+      "text": "Analyze and record personnel or operational data and write related activity reports.",
+      "type": "n/a",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23697",
+      "text": "Apply customer feedback to service improvement efforts.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23698",
+      "text": "Compute or estimate cash, payroll, transportation, or personnel requirements.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23699",
+      "text": "Confer with customers, supervisors, contractors, or other personnel to exchange information or to resolve problems.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23700",
+      "text": "Direct or coordinate the activities of workers, such as flight or car attendants.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23701",
+      "text": "Enforce safety rules and regulations.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23702",
+      "text": "Explain and demonstrate work tasks to new workers or assign training tasks to experienced workers.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23703",
+      "text": "Inform workers about interests or special needs of specific groups.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23704",
+      "text": "Inspect materials, stock, vehicles, equipment, or facilities to ensure that they are safe, free of defects, and consistent with specifications.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23705",
+      "text": "Inspect work areas or operating equipment to ensure conformance to established standards in areas such as cleanliness or maintenance.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23706",
+      "text": "Meet with managers or other supervisors to stay informed of changes affecting operations.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23707",
+      "text": "Observe and evaluate workers' appearance and performance to ensure quality service and compliance with specifications.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23708",
+      "text": "Participate in continuing education to stay abreast of industry trends and developments.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23709",
+      "text": "Recommend and implement measures to improve worker motivation, work methods, or customer services.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23710",
+      "text": "Recruit and hire staff members.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23711",
+      "text": "Requisition necessary supplies, equipment, or services.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23712",
+      "text": "Resolve customer complaints regarding worker performance or services rendered.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23713",
+      "text": "Take disciplinary action to address performance problems.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23714",
+      "text": "Train workers in proper operational procedures and functions and explain company policies.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 29,
+  "salary": 61130,
+  "demand": "Very High"
+}

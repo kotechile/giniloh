@@ -1,0 +1,213 @@
+{
+  "code": "29-1141.03",
+  "title": "Critical Care Nurses",
+  "description": "Provide specialized nursing care for patients in critical or coronary care units.",
+  "tasks": [
+    {
+      "id": "18327",
+      "text": "Evaluate patients' vital signs or laboratory data to determine emergency intervention needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18334",
+      "text": "Monitor patients for changes in status and indications of conditions such as sepsis or shock and institute appropriate interventions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18330",
+      "text": "Administer medications intravenously, by injection, orally, through gastric tubes, or by other methods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18333",
+      "text": "Monitor patients' fluid intake and output to detect emerging problems, such as fluid and electrolyte imbalances.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18344",
+      "text": "Prioritize nursing care for assigned critically ill patients, based on assessment data or identified needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18339",
+      "text": "Compile and analyze data obtained from monitoring or diagnostic tests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18340",
+      "text": "Conduct pulmonary assessments to identify abnormal respiratory patterns or breathing sounds that indicate problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18335",
+      "text": "Assess patients' pain levels or sedation requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18337",
+      "text": "Collaborate with other health care professionals to develop and revise treatment plans, based on identified needs and assessment data.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18341",
+      "text": "Document patients' medical histories and assessment findings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18338",
+      "text": "Collect specimens for laboratory tests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18332",
+      "text": "Set up and monitor medical equipment and devices such as cardiac monitors, mechanical ventilators and alarms, oxygen delivery devices, transducers, or pressure lines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18329",
+      "text": "Administer blood and blood products, monitoring patients for signs and symptoms related to transfusion reactions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18331",
+      "text": "Advocate for patients' and families' needs, or provide emotional support for patients and their families.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18348",
+      "text": "Assess family adaptation levels and coping skills to determine whether intervention is needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18328",
+      "text": "Perform approved therapeutic or diagnostic procedures, based upon patients' clinical status.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18345",
+      "text": "Assist physicians with procedures such as bronchoscopy, endoscopy, endotracheal intubation, or elective cardioversion.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18353",
+      "text": "Supervise and monitor unit nursing staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18347",
+      "text": "Identify malfunctioning equipment or devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18342",
+      "text": "Document patients' treatment plans, interventions, outcomes, or plan revisions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18343",
+      "text": "Identify patients at risk of complications due to nutritional status.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18336",
+      "text": "Assess patients' psychosocial status and needs, including areas such as sleep patterns, anxiety, grief, anger, and support systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18325",
+      "text": "Identify patients' age-specific needs and alter care plans as necessary to meet those needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18350",
+      "text": "Participate in professional organizations and continuing education to improve practice knowledge and skills.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18351",
+      "text": "Participate in the development, review, or evaluation of nursing practice protocols.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18349",
+      "text": "Coordinate patient care conferences.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18326",
+      "text": "Provide post-mortem care.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18352",
+      "text": "Plan, provide, or evaluate educational programs for nursing staff, interdisciplinary health care team members, or community members.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18346",
+      "text": "Ensure that equipment or devices are properly stored after use.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 19,
+  "salary": 97550,
+  "demand": "Very High"
+}

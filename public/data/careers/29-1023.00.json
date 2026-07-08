@@ -1,0 +1,87 @@
+{
+  "code": "29-1023.00",
+  "title": "Orthodontists",
+  "description": "Examine, diagnose, and treat dental malocclusions and oral cavity anomalies. Design and fabricate appliances to realign teeth and jaws to produce and maintain normal function and to improve appearance.",
+  "tasks": [
+    {
+      "id": "7734",
+      "text": "Diagnose teeth and jaw or other dental-facial abnormalities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7735",
+      "text": "Examine patients to assess abnormalities of jaw development, tooth position, and other dental-facial structures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7733",
+      "text": "Study diagnostic records, such as medical or dental histories, plaster models of the teeth, photos of a patient's face and teeth, and X-rays, to develop patient treatment plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7732",
+      "text": "Fit dental appliances in patients' mouths to alter the position and relationship of teeth and jaws or to realign teeth.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7737",
+      "text": "Adjust dental appliances to produce and maintain normal function.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7738",
+      "text": "Provide patients with proposed treatment plans and cost estimates.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23973",
+      "text": "Advise patients to comply with treatment plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7736",
+      "text": "Prepare diagnostic and treatment records.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7739",
+      "text": "Instruct dental officers and technical assistants in orthodontic procedures and techniques.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7740",
+      "text": "Coordinate orthodontic services with other dental and medical services.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7741",
+      "text": "Design and fabricate appliances, such as space maintainers, retainers, and labial and lingual arch wires.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 14,
+  "salary": 289140,
+  "demand": "Low"
+}

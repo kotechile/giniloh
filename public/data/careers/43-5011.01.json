@@ -1,0 +1,227 @@
+{
+  "code": "43-5011.01",
+  "title": "Freight Forwarders",
+  "description": "Research rates, routings, or modes of transport for shipment of products. Maintain awareness of regulations affecting the international movement of cargo. Make arrangements for additional services, such as storage or inland transportation.",
+  "tasks": [
+    {
+      "id": "17693",
+      "text": "Negotiate shipping rates with freight carriers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17684",
+      "text": "Arrange for special transport of sensitive cargoes, such as livestock, food, or medical supplies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17700",
+      "text": "Arrange for applicable duties, taxes, or paperwork for customs clearance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17689",
+      "text": "Inform clients of factors such as shipping options, timelines, transfers, or regulations affecting shipments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17687",
+      "text": "Prepare shipping documentation, such as bills of lading, packing lists, dock receipts, or certificates of origin.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "17701",
+      "text": "Complete customs paperwork.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17696",
+      "text": "Prepare invoices or cost quotations for freight transportation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17680",
+      "text": "Select shipment routes, based on nature of goods shipped, transit times, or security needs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17686",
+      "text": "Calculate weight, volume, or cost of goods to be moved.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17683",
+      "text": "Arrange delivery or storage of goods at destinations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19830",
+      "text": "Arrange for transport, using a variety of modes, such as rail, short sea shipping, air, or roadways, to minimize carbon emissions or other environmental impacts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17681",
+      "text": "Determine efficient and cost-effective methods of moving goods from one location to another.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17695",
+      "text": "Pay or arrange for payment of freight or insurance fees or other charges.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17692",
+      "text": "Monitor or record locations of goods in transit.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "17690",
+      "text": "Keep records of goods dispatched or received.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "17682",
+      "text": "Reserve necessary space on ships, aircraft, trains, or trucks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17694",
+      "text": "Obtain or arrange cargo insurance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17688",
+      "text": "Consolidate loads with a common destination to reduce costs to individual shippers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17703",
+      "text": "Provide detailed port information to importers or exporters.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17704",
+      "text": "Provide shipment status notification to exporters, consignees, or insurers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17698",
+      "text": "Verify proper packaging and labeling of exported goods.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "17699",
+      "text": "Verify adherence of documentation to customs, insurance, or regulatory requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17691",
+      "text": "Maintain current knowledge of relevant legislation, political situations, or other factors that could affect freight shipping.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17697",
+      "text": "Recommend or arrange appropriate merchandise packing methods, according to climate, terrain, weight, nature of goods, or costs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17705",
+      "text": "Refer exporters to experts in areas such as trade financing, international marketing, government export requirements, international banking, or marine insurance.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17702",
+      "text": "Make arrangements with customs brokers to facilitate the passage of goods through customs.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19832",
+      "text": "Recommend shipping solutions to minimize cost or environmental impacts.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19833",
+      "text": "Review the environmental records of freight carriers to inform shipping decisions.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "19829",
+      "text": "Analyze shipping routes to determine how to minimize environmental impact.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19831",
+      "text": "Consider environmental sustainability factors when determining merchandise packing methods.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17685",
+      "text": "Assist clients in obtaining insurance reimbursements.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 53,
+  "salary": 52260,
+  "demand": "Medium"
+}

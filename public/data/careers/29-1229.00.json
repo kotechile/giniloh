@@ -1,0 +1,17 @@
+{
+  "code": "29-1229.00",
+  "title": "Physicians, All Other",
+  "description": "All physicians not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Physicians, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 265930,
+  "demand": "Very High"
+}

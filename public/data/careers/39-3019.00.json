@@ -1,0 +1,17 @@
+{
+  "code": "39-3019.00",
+  "title": "Gambling Service Workers, All Other",
+  "description": "All gambling service workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Gambling Service Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 36310,
+  "demand": "Low"
+}

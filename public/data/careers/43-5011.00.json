@@ -1,0 +1,178 @@
+{
+  "code": "43-5011.00",
+  "title": "Cargo and Freight Agents",
+  "description": "Expedite and route movement of incoming and outgoing cargo and freight shipments in airline, train, and trucking terminals and shipping docks. Take orders from customers and arrange pickup of freight and cargo for delivery to loading platform. Prepare and examine bills of lading to determine shipping charges and tariffs.",
+  "tasks": [
+    {
+      "id": "8188",
+      "text": "Negotiate and arrange transport of goods with shipping or freight companies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8192",
+      "text": "Determine method of shipment and prepare bills of lading, invoices, and other shipping documents.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20271",
+      "text": "Track delivery progress of shipments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8190",
+      "text": "Advise clients on transportation and payment methods.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8194",
+      "text": "Estimate freight or postal rates and record shipment costs and weights.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "8201",
+      "text": "Keep records of all goods shipped, received, and stored.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "20272",
+      "text": "Notify consignees, passengers, or customers of freight or baggage arrival and arrange for delivery.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8196",
+      "text": "Retrieve stored items and trace lost shipments as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8195",
+      "text": "Enter shipping information into a computer by hand or by a hand-held scanner that reads bar codes on goods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20274",
+      "text": "Prepare manifests showing numbers of airplane passengers and baggage, mail, and freight weights, transmitting data to destinations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8203",
+      "text": "Arrange insurance coverage for goods.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8200",
+      "text": "Install straps, braces, and padding to loads to prevent shifting or damage during shipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20273",
+      "text": "Check import or export documentation to determine cargo contents and use tariff coding system to classify goods according to fee or tariff group.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8202",
+      "text": "Coordinate and supervise activities of workers engaged in packing and shipping merchandise.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20275",
+      "text": "Contact vendors or claims adjustment departments to resolve shipment problems or contact service depots to arrange for repairs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8199",
+      "text": "Inspect and count items received and check them against invoices or other documents, recording shortages and rejecting damaged goods.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "8208",
+      "text": "Route received goods to first available flight or to appropriate storage areas or departments, using forklifts, hand trucks, or other equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8198",
+      "text": "Direct delivery trucks to shipping doors or designated marshaling areas and help load and unload goods safely.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8210",
+      "text": "Assemble containers and crates used to transport items, such as machines or vehicles.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8209",
+      "text": "Maintain a supply of packing materials.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8204",
+      "text": "Direct or participate in cargo loading to ensure completeness of load and even distribution of weight.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8197",
+      "text": "Pack goods for shipping, using tools such as staplers, strapping machines, and hammers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8206",
+      "text": "Attach address labels, identification codes, and shipping instructions to containers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8205",
+      "text": "Open cargo containers and unwrap contents, using steel cutters, crowbars, or other hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 44,
+  "salary": 52260,
+  "demand": "Medium"
+}

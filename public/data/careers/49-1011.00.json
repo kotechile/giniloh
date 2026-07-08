@@ -1,0 +1,164 @@
+{
+  "code": "49-1011.00",
+  "title": "First-Line Supervisors of Mechanics, Installers, and Repairers",
+  "description": "Directly supervise and coordinate the activities of mechanics, installers, and repairers. May also advise customers on recommended services. Excludes team or work leaders.",
+  "tasks": [
+    {
+      "id": "2929",
+      "text": "Inspect, test, and measure completed work, using devices such as hand tools or gauges to verify conformance to standards or repair requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15263",
+      "text": "Inspect and monitor work areas, examine tools and equipment, and provide employee safety training to prevent, detect, and correct unsafe conditions or violations of procedures and safety rules.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2920",
+      "text": "Interpret specifications, blueprints, or job orders to construct templates and lay out reference points for workers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2914",
+      "text": "Monitor employees' work levels and review work performance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2925",
+      "text": "Perform skilled repair or maintenance operations, using equipment such as hand or power tools, hydraulic presses or shears, or welding equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2919",
+      "text": "Compute estimates and actual costs of factors such as materials, labor, or outside contractors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15262",
+      "text": "Monitor tool and part inventories and the condition and maintenance of shops to ensure adequate working conditions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2918",
+      "text": "Requisition materials and supplies, such as tools, equipment, or replacement parts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2923",
+      "text": "Confer with personnel, such as management, engineering, quality control, customer, or union workers' representatives, to coordinate work activities, resolve employee grievances, or identify and review resource needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2912",
+      "text": "Determine schedules, sequences, and assignments for work activities, based on work priority, quantity of equipment, and skill of personnel.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2915",
+      "text": "Examine objects, systems, or facilities and analyze information to determine needed installations, services, or repairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2917",
+      "text": "Counsel employees about work-related issues and assist employees to correct job-skill deficiencies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2924",
+      "text": "Recommend or initiate personnel actions, such as hires, promotions, transfers, discharges, or disciplinary measures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2922",
+      "text": "Investigate accidents or injuries and prepare reports of findings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2921",
+      "text": "Conduct or arrange for worker training in safety, repair, or maintenance techniques, operational procedures, or equipment use.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2927",
+      "text": "Develop, implement, or evaluate maintenance policies and procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2930",
+      "text": "Meet with vendors or suppliers to discuss products used in repair work.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2916",
+      "text": "Participate in budget preparation and administration, coordinating purchasing and documentation and monitoring departmental expenditures.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15264",
+      "text": "Review, evaluate, accept, and coordinate completion of work bid from contractors.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2926",
+      "text": "Compile operational or personnel records, such as time and production records, inventory data, repair or maintenance statistics, or test results.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "2931",
+      "text": "Develop or implement electronic maintenance programs or computer information management systems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2932",
+      "text": "Design equipment configurations to meet personnel needs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 30,
+  "salary": 79860,
+  "demand": "Very High"
+}

@@ -1,0 +1,17 @@
+{
+  "code": "35-2019.00",
+  "title": "Cooks, All Other",
+  "description": "All cooks not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Cooks, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 37690,
+  "demand": "Low"
+}

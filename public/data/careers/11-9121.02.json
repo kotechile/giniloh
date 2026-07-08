@@ -1,0 +1,157 @@
+{
+  "code": "11-9121.02",
+  "title": "Water Resource Specialists",
+  "description": "Design or implement programs and strategies related to water resource issues such as supply, quality, and regulatory compliance issues.",
+  "tasks": [
+    {
+      "id": "15618",
+      "text": "Perform hydrologic, hydraulic, or water quality modeling.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15633",
+      "text": "Analyze storm water systems to identify opportunities for water resource improvements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15631",
+      "text": "Conduct, or oversee the conduct of, investigations on matters such as water storage, wastewater discharge, pollutants, permits, or other compliance and regulatory issues.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15634",
+      "text": "Develop strategies for watershed operations to meet water supply and conservation goals or to ensure regulatory compliance with clean water laws or regulations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15630",
+      "text": "Conduct technical studies for water resources on topics such as pollutants and water treatment options.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15616",
+      "text": "Review or evaluate designs for water detention facilities, storm drains, flood control facilities, or other hydraulic structures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15624",
+      "text": "Present water resource proposals to government, public interest groups, or community groups.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15628",
+      "text": "Develop plans to protect watershed health or rehabilitate watersheds.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15621",
+      "text": "Write proposals, project reports, informational brochures, or other documents on wastewater purification, water supply and demand, or other water resource subjects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15632",
+      "text": "Conduct cost-benefit studies for watershed improvement projects or water management alternatives.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15623",
+      "text": "Provide technical expertise to assist communities in the development or implementation of storm water monitoring or other water programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15620",
+      "text": "Compile and maintain documentation on the health of a body of water.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15627",
+      "text": "Identify and characterize specific causes or sources of water pollution.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15635",
+      "text": "Conduct, or oversee the conduct of, chemical, physical, and biological water quality monitoring or sampling to ensure compliance with water quality standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15619",
+      "text": "Compile water resource data, using geographic information systems (GIS) or global position systems (GPS) software.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15622",
+      "text": "Recommend new or revised policies, procedures, or regulations to support water resource or conservation goals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15629",
+      "text": "Develop or implement standardized water monitoring and assessment methods.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15615",
+      "text": "Supervise teams of workers who capture water from wells and rivers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15617",
+      "text": "Negotiate for water rights with communities or water facilities to meet water supply demands.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15626",
+      "text": "Monitor water use, demand, or quality in a particular geographic area.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15625",
+      "text": "Identify methods for distributing purified wastewater into rivers, streams, or oceans.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 19,
+  "salary": 167220,
+  "demand": "High"
+}

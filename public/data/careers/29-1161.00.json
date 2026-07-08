@@ -1,0 +1,157 @@
+{
+  "code": "29-1161.00",
+  "title": "Nurse Midwives",
+  "description": "Diagnose and coordinate all aspects of the birthing process, either independently or as part of a healthcare team. May provide well-woman gynecological care. Must have specialized, graduate nursing education.",
+  "tasks": [
+    {
+      "id": "18442",
+      "text": "Provide prenatal, intrapartum, postpartum, or newborn care to patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18444",
+      "text": "Monitor fetal development by listening to fetal heartbeat, taking external uterine measurements, identifying fetal position, or estimating fetal size and weight.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18443",
+      "text": "Document patients' health histories, symptoms, physical conditions, or other diagnostic information.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18455",
+      "text": "Provide patients with direct family planning services, such as inserting intrauterine devices, dispensing oral contraceptives, and fitting cervical barriers, including cervical caps or diaphragms.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18454",
+      "text": "Prescribe medications as permitted by state regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18447",
+      "text": "Develop and implement individualized plans for health care management.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18449",
+      "text": "Explain procedures to patients, family members, staff members or others.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18453",
+      "text": "Order and interpret diagnostic or laboratory tests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18450",
+      "text": "Initiate emergency interventions to stabilize patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18448",
+      "text": "Document findings of physical examinations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18441",
+      "text": "Educate patients and family members regarding prenatal, intrapartum, postpartum, newborn, or interconception care.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18445",
+      "text": "Perform physical examinations by taking vital signs, checking neurological reflexes, examining breasts, or performing pelvic examinations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18456",
+      "text": "Write information in medical records or provide narrative summaries to communicate patient information to other health care providers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18452",
+      "text": "Provide primary health care, including pregnancy and childbirth, to women.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18446",
+      "text": "Consult with or refer patients to appropriate specialists when conditions exceed the scope of practice or expertise.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18459",
+      "text": "Read current literature, talk with colleagues, or participate in professional organizations or conferences to keep abreast of developments in midwifery.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23919",
+      "text": "Instruct student nurse midwives, medical students, or residents on the birthing process.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18458",
+      "text": "Establish practice guidelines for specialty areas such as primary health care of women, care of the childbearing family, and newborn care.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18460",
+      "text": "Plan, provide, or evaluate educational programs for nursing staff, health care teams, or the community.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18457",
+      "text": "Conduct clinical research on topics such as maternal or infant health care, contraceptive methods, breastfeeding, and gynecological care.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18451",
+      "text": "Manage newborn care during the first weeks of life.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 14,
+  "salary": 134040,
+  "demand": "Low"
+}

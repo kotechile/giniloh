@@ -1,0 +1,108 @@
+{
+  "code": "53-3052.00",
+  "title": "Bus Drivers, Transit and Intercity",
+  "description": "Drive bus or motor coach, including regular route operations, charters, and private carriage. May assist passengers with baggage. May collect fares or tickets.",
+  "tasks": [
+    {
+      "id": "18794",
+      "text": "Drive vehicles over specified routes or to specified destinations according to time schedules, complying with traffic regulations to ensure that passengers have a smooth and safe ride.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3146",
+      "text": "Park vehicles at loading areas so that passengers can board.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3144",
+      "text": "Inspect vehicles and check gas, oil, and water levels prior to departure.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21085",
+      "text": "Announce stops to passengers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18795",
+      "text": "Assist passengers, such as elderly or individuals with disabilities, on and off bus, ensure they are seated properly, help carry baggage, and answer questions about bus schedules or routes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18798",
+      "text": "Collect tickets or cash fares from passengers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18796",
+      "text": "Handle passenger emergencies or disruptions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3148",
+      "text": "Report delays or accidents.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3149",
+      "text": "Advise passengers to be seated and orderly while on vehicles.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3150",
+      "text": "Regulate heating, lighting, and ventilating systems for passenger comfort.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18797",
+      "text": "Record information, such as cash receipts and ticket fares, and maintain log book.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "18799",
+      "text": "Maintain cleanliness of bus or motor coach.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21086",
+      "text": "Read maps to plan bus routes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3151",
+      "text": "Load and unload baggage in baggage compartments.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 43,
+  "salary": 59050,
+  "demand": "High"
+}

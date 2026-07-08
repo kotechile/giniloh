@@ -1,0 +1,17 @@
+{
+  "code": "43-4199.00",
+  "title": "Information and Record Clerks, All Other",
+  "description": "All information and record clerks not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Information and Record Clerks, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 49500,
+  "demand": "High"
+}

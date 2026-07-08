@@ -1,0 +1,157 @@
+{
+  "code": "41-1011.00",
+  "title": "First-Line Supervisors of Retail Sales Workers",
+  "description": "Directly supervise and coordinate activities of retail sales workers in an establishment or department. Duties may include management functions, such as purchasing, budgeting, accounting, and personnel work, in addition to supervisory duties.",
+  "tasks": [
+    {
+      "id": "657",
+      "text": "Provide customer service by greeting and assisting customers and responding to customer inquiries and complaints.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "660",
+      "text": "Direct and supervise employees engaged in sales, inventory-taking, reconciling cash receipts, or in performing services for customers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "671",
+      "text": "Examine merchandise to ensure that it is correctly priced and displayed and that it functions as advertised.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "658",
+      "text": "Monitor sales activities to ensure that customers receive satisfactory service and quality goods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "668",
+      "text": "Instruct staff on how to handle difficult and complicated sales.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "659",
+      "text": "Assign employees to specific duties.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "662",
+      "text": "Keep records of purchases, sales, and requisitions.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "666",
+      "text": "Perform work activities of subordinates, such as cleaning and organizing shelves and displays and selling merchandise.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "672",
+      "text": "Plan and prepare work schedules and keep records of employees' work schedules and time cards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "673",
+      "text": "Review inventory and sales records to prepare reports for management and budget departments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "661",
+      "text": "Inventory stock and reorder when inventory drops to a specified level.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "667",
+      "text": "Establish and implement policies, goals, objectives, and procedures for the department.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "664",
+      "text": "Examine products purchased for resale or received for storage to assess the condition of each product or item.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "663",
+      "text": "Enforce safety, health, and security rules.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "670",
+      "text": "Estimate consumer demand and determine the types and amounts of goods to be sold.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "675",
+      "text": "Confer with company officials to develop methods and procedures to increase sales, expand markets, and promote business.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "669",
+      "text": "Formulate pricing policies for merchandise, according to profitability requirements.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "665",
+      "text": "Hire, train, and evaluate personnel in sales or marketing establishments, promoting or firing workers when appropriate.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "674",
+      "text": "Plan and coordinate advertising campaigns and sales promotions and prepare merchandise displays and advertising copy.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "676",
+      "text": "Establish credit policies and operating procedures.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "677",
+      "text": "Plan budgets and authorize payments and merchandise returns.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 31,
+  "salary": 48520,
+  "demand": "Very High"
+}

@@ -1,0 +1,17 @@
+{
+  "code": "45-4029.00",
+  "title": "Logging Workers, All Other",
+  "description": "All logging workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Logging Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 50840,
+  "demand": "Low"
+}

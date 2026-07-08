@@ -1,0 +1,108 @@
+{
+  "code": "13-1011.00",
+  "title": "Agents and Business Managers of Artists, Performers, and Athletes",
+  "description": "Represent and promote artists, performers, and athletes in dealings with current or prospective employers. May handle contract negotiation and other business matters for clients.",
+  "tasks": [
+    {
+      "id": "12865",
+      "text": "Collect fees, commissions, or other payments, according to contract terms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21163",
+      "text": "Send samples of clients' work and other promotional material to potential employers to obtain auditions, sponsorships, or endorsement deals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12870",
+      "text": "Keep informed of industry trends and deals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12872",
+      "text": "Conduct auditions or interviews to evaluate potential clients.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12869",
+      "text": "Negotiate with managers, promoters, union officials, and other persons regarding clients' contractual rights and obligations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12866",
+      "text": "Confer with clients to develop strategies for their careers, and to explain actions taken on their behalf.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12867",
+      "text": "Develop contacts with individuals and organizations, and apply effective strategies and techniques to ensure their clients' success.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12868",
+      "text": "Schedule promotional or performance engagements for clients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12873",
+      "text": "Arrange meetings concerning issues involving their clients.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12871",
+      "text": "Manage business and financial affairs for clients, such as arranging travel and lodging, selling tickets, and directing marketing and advertising activities.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12877",
+      "text": "Hire trainers or coaches to advise clients on performance matters, such as training techniques or performance presentations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12874",
+      "text": "Prepare periodic accounting statements for clients.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12876",
+      "text": "Obtain information about or inspect performance facilities, equipment, and accommodations to ensure that they meet specifications.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12875",
+      "text": "Advise clients on financial and legal matters, such as investments and taxes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 18,
+  "salary": 82890,
+  "demand": "Low"
+}

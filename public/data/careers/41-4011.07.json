@@ -1,0 +1,101 @@
+{
+  "code": "41-4011.07",
+  "title": "Solar Sales Representatives and Assessors",
+  "description": "Contact new or existing customers to determine their solar equipment needs, suggest systems or equipment, or estimate costs.",
+  "tasks": [
+    {
+      "id": "17655",
+      "text": "Prepare proposals, quotes, contracts, or presentations for potential solar customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17656",
+      "text": "Select solar energy products, systems, or services for customers based on electrical energy requirements, site conditions, price, or other factors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17663",
+      "text": "Provide customers with information, such as quotes, orders, sales, shipping, warranties, credit, funding options, incentives, or tax rebates.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17661",
+      "text": "Gather information from prospective customers to identify their solar energy needs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17658",
+      "text": "Calculate potential solar resources or solar array production for a particular site considering issues such as climate, shading, and roof orientation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17654",
+      "text": "Generate solar energy customer leads to develop new accounts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17664",
+      "text": "Provide technical information about solar power, solar systems, equipment, and services to potential customers or dealers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17657",
+      "text": "Assess sites to determine suitability for solar equipment, using equipment such as tape measures, compasses, and computer software.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17665",
+      "text": "Take quote requests or orders from dealers or customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17662",
+      "text": "Prepare or review detailed design drawings, specifications, or lists related to solar installations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17659",
+      "text": "Create customized energy management packages to satisfy customer needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17660",
+      "text": "Develop marketing or strategic plans for sales territories.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17666",
+      "text": "Demonstrate use of solar and related equipment to customers or dealers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 35,
+  "salary": 104920,
+  "demand": "High"
+}

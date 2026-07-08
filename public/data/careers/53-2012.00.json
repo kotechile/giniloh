@@ -1,0 +1,178 @@
+{
+  "code": "53-2012.00",
+  "title": "Commercial Pilots",
+  "description": "Pilot and navigate the flight of fixed-wing aircraft on nonscheduled air carrier routes, or helicopters. Requires Commercial Pilot certificate. Includes charter pilots with similar certification, and air ambulance and air tour pilots. Excludes regional, national, and international airline pilots.",
+  "tasks": [
+    {
+      "id": "10587",
+      "text": "Check aircraft prior to flights to ensure that the engines, controls, instruments, and other systems are functioning properly.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20831",
+      "text": "Co-pilot aircraft or perform captain's duties, as required.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10591",
+      "text": "Consider airport altitudes, outside temperatures, plane weights, and wind speeds and directions to calculate the speed needed to become airborne.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10595",
+      "text": "Use instrumentation to pilot aircraft when visibility is poor.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10590",
+      "text": "Monitor engine operation, fuel consumption, and functioning of aircraft systems during flights.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10592",
+      "text": "Order changes in fuel supplies, loads, routes, or schedules to ensure safety of flights.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10588",
+      "text": "Contact control towers for takeoff clearances, arrival instructions, and other information, using radio equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10594",
+      "text": "Plan flights according to government and company regulations, using aeronautical charts and navigation instruments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10589",
+      "text": "Start engines, operate controls, and pilot airplanes to transport passengers, mail, or freight according to flight plans, regulations, and procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10596",
+      "text": "Check baggage or cargo to ensure that it has been loaded correctly.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10593",
+      "text": "Obtain and review data such as load weights, fuel supplies, weather conditions, and flight schedules to determine flight plans and identify needed changes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10605",
+      "text": "Conduct in-flight tests and evaluations at specified altitudes and in all types of weather to determine the receptivity and other characteristics of equipment and systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10598",
+      "text": "Choose routes, altitudes, and speeds that will provide the fastest, safest, and smoothest flights.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10600",
+      "text": "Write specified information in flight records, such as flight times, altitudes flown, and fuel consumption.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "10599",
+      "text": "Coordinate flight activities with ground crews and air traffic control, and inform crew members of flight and test procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10608",
+      "text": "Perform minor aircraft maintenance and repair work, or arrange for major maintenance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10607",
+      "text": "Supervise other crew members.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10597",
+      "text": "Request changes in altitudes or routes as circumstances dictate.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10604",
+      "text": "File instrument flight plans with air traffic control so that flights can be coordinated with other air traffic.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10606",
+      "text": "Rescue and evacuate injured persons.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10602",
+      "text": "Instruct other pilots and student pilots in aircraft operations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10609",
+      "text": "Fly with other pilots or pilot-license applicants to evaluate their proficiency.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10610",
+      "text": "Plan and formulate flight activities and test schedules and prepare flight evaluation reports.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10601",
+      "text": "Teach company regulations and procedures to other pilots.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 21,
+  "salary": 123220,
+  "demand": "Medium"
+}

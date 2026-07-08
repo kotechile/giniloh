@@ -1,0 +1,171 @@
+{
+  "code": "51-6064.00",
+  "title": "Textile Winding, Twisting, and Drawing Out Machine Setters, Operators, and Tenders",
+  "description": "Set up, operate, or tend machines that wind or twist textiles; or draw out and combine sliver, such as wool, hemp, or synthetic fibers. Includes slubber machine and drawing frame operators.",
+  "tasks": [
+    {
+      "id": "14183",
+      "text": "Notify supervisors or mechanics of equipment malfunctions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14190",
+      "text": "Thread yarn, thread, or fabric through guides, needles, and rollers of machines.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14184",
+      "text": "Start machines, monitor operation, and make adjustments as needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14192",
+      "text": "Inspect machinery to determine whether repairs are needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14195",
+      "text": "Record production data such as numbers and types of bobbins wound.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "14188",
+      "text": "Replace depleted supply packages with full packages.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14196",
+      "text": "Stop machines when specified amount of products has been produced.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14186",
+      "text": "Inspect products to verify that they meet specifications and to determine whether machine adjustment is needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14187",
+      "text": "Tend machines that twist together two or more strands of yarn or insert additional twists into single strands of yarn to increase strength, smoothness, or uniformity of yarn.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14189",
+      "text": "Observe operations to detect defects, malfunctions, or supply shortages.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14191",
+      "text": "Operate machines for test runs to verify adjustments and to obtain product samples.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14202",
+      "text": "Observe bobbins as they are winding and cut threads to remove loaded bobbins, using knives.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14201",
+      "text": "Unwind lengths of yarn, thread, or twine from spools and wind onto bobbins.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14203",
+      "text": "Adjust machine settings such as speed or tension to produce products that meet specifications.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14197",
+      "text": "Study guides, samples, charts, and specification sheets, or confer with supervisors or engineering staff to determine setup requirements.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14200",
+      "text": "Tend spinning frames that draw out and twist roving or sliver into yarn.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14205",
+      "text": "Remove spindles from machines and bobbins from spindles.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14199",
+      "text": "Install, level, and align machine components such as gears, chains, guides, dies, cutters, or needles to set up machinery for operation.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14193",
+      "text": "Place bobbins on spindles and insert spindles into bobbin-winding machines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14185",
+      "text": "Tend machines with multiple winding units that wind thread onto shuttle bobbins for use on sewing machines or other kinds of bobbins for sole-stitching, knitting, or weaving machinery.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14206",
+      "text": "Repair or replace worn or defective parts or components, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14198",
+      "text": "Measure bobbins periodically, using gauges, and turn screws to adjust tension if bobbins are not of specified size.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14204",
+      "text": "Clean, oil, and lubricate machines, using air hoses, cleaning solutions, rags, oilcans, and grease guns.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 46,
+  "salary": 38670,
+  "demand": "Low"
+}

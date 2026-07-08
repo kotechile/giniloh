@@ -1,0 +1,199 @@
+{
+  "code": "11-9199.01",
+  "title": "Regulatory Affairs Managers",
+  "description": "Plan, direct, or coordinate production activities of an organization to ensure compliance with regulations and standard operating procedures.",
+  "tasks": [
+    {
+      "id": "18026",
+      "text": "Develop regulatory strategies and implementation plans for the preparation and submission of new products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18037",
+      "text": "Review all regulatory agency submission materials to ensure timeliness, accuracy, comprehensiveness, or compliance with regulatory standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18022",
+      "text": "Direct the preparation and submission of regulatory agency applications, reports, or correspondence.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18029",
+      "text": "Investigate product complaints and prepare documentation and submissions to appropriate regulatory agencies as necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18035",
+      "text": "Provide responses to regulatory agencies regarding product information or issues.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18036",
+      "text": "Represent organizations before domestic or international regulatory agencies on major policy matters or decisions regarding company products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18024",
+      "text": "Provide regulatory guidance to departments or development project teams regarding design, development, evaluation, or marketing of products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18031",
+      "text": "Manage activities such as audits, regulatory agency inspections, or product recalls.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18025",
+      "text": "Communicate regulatory information to multiple departments and ensure that information is interpreted correctly.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18030",
+      "text": "Maintain current knowledge of relevant regulations, including proposed and final rules.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18023",
+      "text": "Formulate or implement regulatory affairs policies and procedures to ensure that regulatory compliance is maintained or enhanced.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21087",
+      "text": "Direct documentation efforts to ensure compliance with domestic and international regulations and standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18038",
+      "text": "Review materials such as marketing literature or user manuals to ensure that regulatory agency requirements are met.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18034",
+      "text": "Participate in the development or implementation of clinical trial protocols.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18028",
+      "text": "Implement or monitor complaint processing systems to ensure effective and timely resolution of all complaint investigations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18043",
+      "text": "Establish procedures or systems for publishing document submissions in hardcopy or electronic formats.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18027",
+      "text": "Establish regulatory priorities or budgets and allocate resources and workloads.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18039",
+      "text": "Train staff in regulatory policies or procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18042",
+      "text": "Develop and maintain standard operating procedures or local working practices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18040",
+      "text": "Contribute to the development or implementation of business unit strategic and operating plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19531",
+      "text": "Monitor regulatory affairs activities to ensure their alignment with corporate sustainability or green initiatives.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18041",
+      "text": "Coordinate internal discoveries and depositions with legal department staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18032",
+      "text": "Monitor emerging trends regarding industry regulations to determine potential impacts on organizational processes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19529",
+      "text": "Develop relationships with state or federal environmental regulatory agencies to learn about and analyze the potential impacts of proposed environmental policy regulations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19532",
+      "text": "Monitor regulatory affairs trends related to environmental issues.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19530",
+      "text": "Evaluate regulatory affairs aspects that are specifically green, such as the use of toxic substances in packaging, carbon footprinting issues, or green policy implementation.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "18044",
+      "text": "Evaluate new software publishing systems and confer with regulatory agencies concerning news or updates on electronic publishing of submissions.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 22,
+  "salary": 141900,
+  "demand": "Very High"
+}

@@ -1,0 +1,185 @@
+{
+  "code": "51-3092.00",
+  "title": "Food Batchmakers",
+  "description": "Set up and operate equipment that mixes or blends ingredients used in the manufacturing of food products. Includes candy makers and cheese makers.",
+  "tasks": [
+    {
+      "id": "4919",
+      "text": "Record production and test data for each food product batch, such as the ingredients used, temperature, test results, and time cycle.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "4921",
+      "text": "Clean and sterilize vats and factory processing areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4924",
+      "text": "Set up, operate, and tend equipment that cooks, mixes, blends, or processes ingredients in the manufacturing of food products, according to formulas or recipes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4925",
+      "text": "Mix or blend ingredients, according to recipes, using a paddle or an agitator, or by controlling vats that heat and mix ingredients.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4926",
+      "text": "Follow recipes to produce food products of specified flavor, texture, clarity, bouquet, or color.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4931",
+      "text": "Give directions to other workers who are assisting in the batchmaking process.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4927",
+      "text": "Select and measure or weigh ingredients, using English or metric measures and balance scales.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4922",
+      "text": "Press switches and turn knobs to start, adjust, and regulate equipment, such as beaters, extruders, discharge pipes, and salt pumps.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4929",
+      "text": "Determine mixing sequences, based on knowledge of temperature effects and of the solubility of specific ingredients.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4923",
+      "text": "Observe and listen to equipment to detect possible malfunctions, such as leaks or plugging, and report malfunctions or undesirable tastes to supervisors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4920",
+      "text": "Observe gauges and thermometers to determine if the mixing chamber temperature is within specified limits, and turn valves to control the temperature.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4928",
+      "text": "Turn valve controls to start equipment and to adjust operation to maintain product quality.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4941",
+      "text": "Modify cooking and forming operations based on the results of sampling processes, adjusting time cycles and ingredients to achieve desired qualities, such as firmness or texture.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4934",
+      "text": "Examine, feel, and taste product samples during production to evaluate quality, color, texture, flavor, and bouquet, and document the results.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "4935",
+      "text": "Test food product samples for moisture content, acidity level, specific gravity, or butter-fat content, and continue processing until desired levels are reached.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4933",
+      "text": "Inspect vats after cleaning to ensure that fermentable residue has been removed.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "4930",
+      "text": "Fill processing or cooking containers, such as kettles, rotating cookers, pressure cookers, or vats, with ingredients, by opening valves, by starting pumps or injectors, or by hand.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4943",
+      "text": "Manipulate products, by hand or using machines, to separate, spread, knead, spin, cast, cut, pull, or roll products.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4939",
+      "text": "Cool food product batches on slabs or in water-cooled kettles.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4942",
+      "text": "Place products on carts or conveyors to transfer them to the next stage of processing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4932",
+      "text": "Homogenize or pasteurize material to prevent separation or to obtain prescribed butterfat content, using a homogenizing device.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4938",
+      "text": "Grade food products according to government regulations or according to type, color, bouquet, and moisture content.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4940",
+      "text": "Operate refining machines to reduce the particle size of cooked batches.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4936",
+      "text": "Formulate or modify recipes for specific kinds of food products.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4937",
+      "text": "Inspect and pack the final product.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 48,
+  "salary": 42290,
+  "demand": "High"
+}

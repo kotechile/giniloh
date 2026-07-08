@@ -1,0 +1,115 @@
+{
+  "code": "31-9093.00",
+  "title": "Medical Equipment Preparers",
+  "description": "Prepare, sterilize, install, or clean laboratory or healthcare equipment. May perform routine laboratory tasks and operate or inspect equipment.",
+  "tasks": [
+    {
+      "id": "4293",
+      "text": "Operate and maintain steam autoclaves, keeping records of loads completed, items in loads, and maintenance procedures performed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4292",
+      "text": "Clean instruments to prepare them for sterilization.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4294",
+      "text": "Record sterilizer test results.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "4291",
+      "text": "Organize and assemble routine or specialty surgical instrument trays or other sterilized supplies, filling special requests as needed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4297",
+      "text": "Examine equipment to detect leaks, worn or loose parts, or other indications of disrepair.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4298",
+      "text": "Report defective equipment to appropriate supervisors or staff.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18703",
+      "text": "Maintain records of inventory or equipment usage and order medical instruments or supplies when inventory is low.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "18702",
+      "text": "Stock crash carts or other medical supplies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4296",
+      "text": "Start equipment and observe gauges and equipment operation to detect malfunctions and to ensure equipment is operating to prescribed standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4299",
+      "text": "Check sterile supplies to ensure that they are not outdated.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4301",
+      "text": "Attend hospital in-service programs related to areas of work specialization.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4295",
+      "text": "Disinfect and sterilize equipment, such as respirators, hospital beds, or oxygen or dialysis equipment, using sterilizers, aerators, or washers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4302",
+      "text": "Purge wastes from equipment by connecting equipment to water sources and flushing water through systems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4303",
+      "text": "Deliver equipment to specified hospital locations or to patients' residences.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4304",
+      "text": "Assist hospital staff with patient care duties, such as providing transportation or setting up traction.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 47,
+  "salary": 47700,
+  "demand": "Medium"
+}

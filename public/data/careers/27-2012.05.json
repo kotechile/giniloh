@@ -1,0 +1,115 @@
+{
+  "code": "27-2012.05",
+  "title": "Media Technical Directors/Managers",
+  "description": "Coordinate activities of technical departments, such as taping, editing, engineering, and maintenance, to produce radio or television programs.",
+  "tasks": [
+    {
+      "id": "3904",
+      "text": "Switch between video sources in a studio or on multi-camera remotes, using equipment such as switchers, video slide projectors, and video effects generators.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3897",
+      "text": "Observe pictures through monitors and direct camera and video staff concerning shading and composition.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3899",
+      "text": "Supervise and assign duties to workers engaged in technical control and production of radio and television programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3896",
+      "text": "Monitor broadcasts to ensure that programs conform to station or network policies and regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3902",
+      "text": "Operate equipment to produce programs or broadcast live programs from remote locations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3895",
+      "text": "Test equipment to ensure proper operation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3903",
+      "text": "Train workers in use of equipment, such as switchers, cameras, monitors, microphones, and lights.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3898",
+      "text": "Act as liaisons between engineering and production departments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3906",
+      "text": "Collaborate with promotions directors to produce on-air station promotions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3901",
+      "text": "Confer with operations directors to formulate and maintain fair and attainable technical policies for programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3900",
+      "text": "Schedule use of studio and editing facilities for producers and engineering and maintenance staff.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3894",
+      "text": "Direct technical aspects of newscasts and other productions, checking and switching between video sources and taking responsibility for the on-air product, including camera shots and graphics.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3908",
+      "text": "Follow instructions from production managers and directors during productions, such as commands for camera cuts, effects, graphics, and takes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3905",
+      "text": "Set up and execute video transitions and special effects, such as fades, dissolves, cuts, keys, and supers, using computers to manipulate pictures as necessary.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3907",
+      "text": "Discuss filter options, lens choices, and the visual effects of objects being filmed with photography directors and video operators.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 23,
+  "salary": 90360,
+  "demand": "High"
+}

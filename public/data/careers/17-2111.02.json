@@ -1,0 +1,108 @@
+{
+  "code": "17-2111.02",
+  "title": "Fire-Prevention and Protection Engineers",
+  "description": "Research causes of fires, determine fire protection methods, and design or recommend materials or equipment such as structural components or fire-detection equipment to assist organizations in safeguarding life and property against fire, explosion, and related hazards.",
+  "tasks": [
+    {
+      "id": "8984",
+      "text": "Advise architects, builders, and other construction personnel on fire prevention equipment and techniques and on fire code and standard interpretation and compliance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8982",
+      "text": "Design fire detection equipment, alarm systems, and fire extinguishing devices and systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8983",
+      "text": "Inspect buildings or building designs to determine fire protection system requirements and potential problems in areas such as water supplies, exit locations, and construction materials.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "24004",
+      "text": "Review building plans to verify compliance with fire code.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20383",
+      "text": "Prepare and write reports detailing specific fire prevention and protection issues, such as work performed, revised codes or standards, and proposed review schedules.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8988",
+      "text": "Consult with authorities to discuss safety regulations and to recommend changes as necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8993",
+      "text": "Evaluate fire department performance and the laws and regulations affecting fire prevention or fire safety.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23902",
+      "text": "Direct the purchase, modification, installation, testing, maintenance, and operation of fire prevention and protection systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8991",
+      "text": "Attend workshops, seminars, or conferences to present or obtain information regarding fire prevention and protection.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8986",
+      "text": "Determine causes of fires and ways in which they could have been prevented.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8992",
+      "text": "Develop training materials and conduct training sessions on fire protection.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8990",
+      "text": "Study the relationships between ignition sources and materials to determine how fires start.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8989",
+      "text": "Develop plans for the prevention of destruction by fire, wind, and water.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8994",
+      "text": "Conduct research on fire retardants and the fire safety of materials and devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 11,
+  "salary": 115160,
+  "demand": "Low"
+}

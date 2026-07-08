@@ -1,0 +1,129 @@
+{
+  "code": "39-7012.00",
+  "title": "Travel Guides",
+  "description": "Plan, organize, and conduct long-distance travel, tours, and expeditions for individuals and groups.",
+  "tasks": [
+    {
+      "id": "13158",
+      "text": "Arrange for tour or expedition details such as accommodations, transportation, equipment, and the availability of medical personnel.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13155",
+      "text": "Plan tour itineraries, applying knowledge of travel routes and destination sites.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13156",
+      "text": "Resolve any problems with itineraries, service, or accommodations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13163",
+      "text": "Attend to special needs of tour participants.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13157",
+      "text": "Sell travel packages.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13159",
+      "text": "Evaluate services received on the tour, and report findings to tour organizers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13164",
+      "text": "Give advice on sightseeing and shopping.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13166",
+      "text": "Administer first aid to injured group participants.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13171",
+      "text": "Explain hunting and fishing laws to groups to ensure compliance.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13160",
+      "text": "Lead individuals or groups to tour site locations and describe points of interest.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13167",
+      "text": "Pilot airplanes or drive land and water vehicles to transport tourists to activity or tour sites.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13170",
+      "text": "Sell or rent equipment, clothing, and supplies related to expeditions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13162",
+      "text": "Pay bills and record checks issued.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "13161",
+      "text": "Verify amounts and quality of equipment prior to expeditions or tours.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13169",
+      "text": "Instruct novices in climbing techniques, mountaineering, and wilderness survival, and demonstrate use of hunting, fishing, and climbing equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13168",
+      "text": "Set up camps, and prepare meals for tour group members.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13165",
+      "text": "Provide tourists with assistance in obtaining permits and documents such as visas, passports, and health certificates, and in converting currency.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 44,
+  "salary": 39290,
+  "demand": "Medium"
+}

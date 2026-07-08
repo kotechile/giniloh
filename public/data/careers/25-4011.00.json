@@ -1,0 +1,101 @@
+{
+  "code": "25-4011.00",
+  "title": "Archivists",
+  "description": "Appraise, edit, and direct safekeeping of permanent records and historically valuable documents. Participate in research activities based on archival materials.",
+  "tasks": [
+    {
+      "id": "7631",
+      "text": "Organize archival records and develop classification systems to facilitate access to archival materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7633",
+      "text": "Provide reference services and assistance for users needing archival materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7635",
+      "text": "Prepare archival records, such as document descriptions, to allow easy access to information.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "7630",
+      "text": "Create and maintain accessible, retrievable computer archives and databases, incorporating current advances in electronic information storage technology.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7637",
+      "text": "Establish and administer policy guidelines concerning public access and use of materials.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7634",
+      "text": "Direct activities of workers who assist in arranging, cataloguing, exhibiting, and maintaining collections of valuable materials.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7636",
+      "text": "Preserve records, documents, and objects, copying records to film, videotape, audiotape, disk, or computer formats as necessary.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "7639",
+      "text": "Research and record the origins and historical significance of archival materials.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "7638",
+      "text": "Locate new materials and direct their acquisition and display.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7632",
+      "text": "Authenticate and appraise historical documents and archival materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7641",
+      "text": "Coordinate educational and public outreach programs, such as tours, workshops, lectures, and classes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7640",
+      "text": "Specialize in an area of history or technology, researching topics or items relevant to collections to determine what should be retained or acquired.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7642",
+      "text": "Select and edit documents for publication and display, applying knowledge of subject, literary expression, and presentation techniques.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 46,
+  "salary": 64550,
+  "demand": "Low"
+}

@@ -1,0 +1,157 @@
+{
+  "code": "51-9021.00",
+  "title": "Crushing, Grinding, and Polishing Machine Setters, Operators, and Tenders",
+  "description": "Set up, operate, or tend machines to crush, grind, or polish materials, such as coal, glass, grain, stone, food, or rubber.",
+  "tasks": [
+    {
+      "id": "12376",
+      "text": "Observe operation of equipment to ensure continuity of flow, safety, and efficient operation, and to detect malfunctions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12381",
+      "text": "Clean, adjust, and maintain equipment, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12389",
+      "text": "Tend accessory equipment, such as pumps and conveyors, to move materials or ingredients through production processes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12377",
+      "text": "Move controls to start, stop, or adjust machinery and equipment that crushes, grinds, polishes, or blends materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12382",
+      "text": "Notify supervisors of needed repairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12380",
+      "text": "Weigh or measure materials, ingredients, or products at specified intervals to ensure conformance to requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12378",
+      "text": "Record data from operations, testing, and production on specified forms.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "12384",
+      "text": "Reject defective products and readjust equipment to eliminate problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12388",
+      "text": "Inspect chains, belts, or scrolls for signs of wear.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12385",
+      "text": "Clean work areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12379",
+      "text": "Examine materials, ingredients, or products, visually or with hands, to ensure conformance to established standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12375",
+      "text": "Read work orders to determine production specifications and information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12387",
+      "text": "Dislodge and clear jammed materials or other items from machinery and equipment, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12390",
+      "text": "Test samples of materials or products to ensure compliance with specifications, using test equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12392",
+      "text": "Mark bins as to types of mixtures stored.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12386",
+      "text": "Transfer materials, supplies, and products between work areas, using moving equipment and hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12395",
+      "text": "Add or mix chemicals and ingredients for processing, using hand tools or other devices.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12391",
+      "text": "Collect samples of materials or products for laboratory testing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12394",
+      "text": "Load materials into machinery and equipment, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12393",
+      "text": "Turn valves to regulate the moisture contents of materials.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12383",
+      "text": "Set mill gauges to specified fineness of grind.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 48540,
+  "demand": "Medium"
+}

@@ -1,0 +1,150 @@
+{
+  "code": "15-1299.05",
+  "title": "Information Security Engineers",
+  "description": "Develop and oversee the implementation of information security procedures and policies. Build, maintain and upgrade security technology, such as firewalls, for the safe use of computer networks and the transmission and retrieval of information. Design and implement appropriate security controls to identify vulnerabilities and protect digital files and electronic infrastructures. Monitor and respond to computer security breaches, viruses, and intrusions, and perform forensic investigation. May oversee the assessment of information security systems.",
+  "tasks": [
+    {
+      "id": "21776",
+      "text": "Identify security system weaknesses, using penetration tests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21769",
+      "text": "Coordinate monitoring of networks or systems for security breaches or intrusions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21766",
+      "text": "Assess the quality of security controls, using performance indicators.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21783",
+      "text": "Train staff on, and oversee the use of, information security standards, policies, and best practices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21782",
+      "text": "Scan networks, using vulnerability assessment tools to identify vulnerabilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21774",
+      "text": "Develop response and recovery strategies for security breaches.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21767",
+      "text": "Conduct investigations of information security breaches to identify vulnerabilities and evaluate the damage.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21773",
+      "text": "Develop or install software, such as firewalls and data encryption programs, to protect sensitive information.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21777",
+      "text": "Oversee development of plans to safeguard computer files against accidental or unauthorized modification, destruction, or disclosure or to meet emergency data processing needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21775",
+      "text": "Identify or implement solutions to information security problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21771",
+      "text": "Develop information security standards and best practices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21780",
+      "text": "Recommend information security enhancements to management.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21778",
+      "text": "Oversee performance of risk assessment or execution of system tests to ensure the functioning of data processing activities or security measures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21770",
+      "text": "Coordinate vulnerability assessments or analysis of information security systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21781",
+      "text": "Review security assessments for computing environments or check for compliance with cybersecurity standards and regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21784",
+      "text": "Troubleshoot security and network problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21768",
+      "text": "Coordinate documentation of computer security or emergency measure policies, procedures, or tests.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21772",
+      "text": "Develop or implement software tools to assist in the detection, prevention, and analysis of security threats.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21785",
+      "text": "Write reports regarding investigations of information security breaches or network evaluations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21779",
+      "text": "Provide technical support to computer users for installation and use of security products.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 20,
+  "salary": 116580,
+  "demand": "Very High"
+}

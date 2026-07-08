@@ -1,0 +1,178 @@
+{
+  "code": "19-4092.00",
+  "title": "Forensic Science Technicians",
+  "description": "Collect, identify, classify, and analyze physical evidence related to criminal investigations. Perform tests on weapons or substances, such as fiber, hair, and tissue to determine significance to investigation. May testify as expert witnesses on evidence or crime laboratory techniques. May serve as specialists in area of expertise, such as ballistics, fingerprinting, handwriting, or biochemistry.",
+  "tasks": [
+    {
+      "id": "1577",
+      "text": "Collect evidence from crime scenes, storing it in conditions that preserve its integrity.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18478",
+      "text": "Keep records and prepare reports detailing findings, investigative methods, and laboratory techniques.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "20399",
+      "text": "Use photographic or video equipment to document evidence or crime scenes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1571",
+      "text": "Testify in court about investigative or analytical methods or findings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18479",
+      "text": "Use chemicals or other substances to examine latent fingerprint evidence and compare developed prints to those of known persons in databases.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23965",
+      "text": "Measure and sketch crime scenes to document evidence.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1584",
+      "text": "Visit morgues, examine scenes of crimes, or contact other sources to obtain evidence or information to be used in investigations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18481",
+      "text": "Train new technicians or other personnel on forensic science techniques.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1574",
+      "text": "Operate and maintain laboratory equipment and apparatus.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1582",
+      "text": "Collect impressions of dust from surfaces to obtain and identify fingerprints.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18482",
+      "text": "Examine and analyze blood stain patterns at crime scenes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1583",
+      "text": "Analyze gunshot residue and bullet paths to determine how shootings occurred.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1589",
+      "text": "Confer with ballistics, fingerprinting, handwriting, documents, electronics, medical, chemical, or metallurgical experts concerning evidence and its interpretation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1575",
+      "text": "Prepare solutions, reagents, or sample formulations needed for laboratory work.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23966",
+      "text": "Examine footwear, tire tracks, or other types of impressions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23967",
+      "text": "Examine physical evidence, such as hair, biological fluids, fiber, wood, or soil residues to obtain information about its source and composition.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1580",
+      "text": "Reconstruct crime scenes to determine relationships among pieces of evidence.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20401",
+      "text": "Determine types of bullets and specific weapons used in shootings.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20400",
+      "text": "Review forensic analysts' reports for technical merit.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1573",
+      "text": "Interpret laboratory findings or test results to identify and classify substances, materials, or other evidence collected at crime scenes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1590",
+      "text": "Compare objects, such as tools, with impression marks to determine whether a specific object is responsible for a specific mark.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1578",
+      "text": "Identify and quantify drugs or poisons found in biological fluids or tissues, in foods, or at crime scenes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1587",
+      "text": "Examine firearms to determine mechanical condition and legal status, performing restoration work on damaged firearms to obtain information, such as serial numbers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23969",
+      "text": "Analyze data from computers or other digital media sources for evidence related to criminal activity.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 46,
+  "salary": 72060,
+  "demand": "Low"
+}

@@ -1,0 +1,199 @@
+{
+  "code": "27-1027.00",
+  "title": "Set and Exhibit Designers",
+  "description": "Design special exhibits and sets for film, video, television, and theater productions. May study scripts, confer with directors, and conduct research to determine appropriate architectural styles.",
+  "tasks": [
+    {
+      "id": "9289",
+      "text": "Develop set designs, based on evaluation of scripts, budgets, research information, and available locations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9286",
+      "text": "Prepare rough drafts and scale working drawings of sets, including floor plans, scenery, and properties to be constructed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9294",
+      "text": "Prepare preliminary renderings of proposed exhibits, including detailed construction, layout, and material specifications, and diagrams relating to aspects such as special effects or lighting.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9305",
+      "text": "Read scripts to determine location, set, and design requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9293",
+      "text": "Submit plans for approval, and adapt plans to serve intended purposes, or to conform to budget or fabrication restrictions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9306",
+      "text": "Attend rehearsals and production meetings to obtain and share information related to sets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9287",
+      "text": "Confer with clients and staff to gather information about exhibit space, proposed themes and content, timelines, budgets, materials, or promotion requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9297",
+      "text": "Research architectural and stylistic elements appropriate to the time period to be depicted, consulting experts for information, as necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9303",
+      "text": "Observe sets during rehearsals in order to ensure that set elements do not interfere with performance aspects such as cast movement and camera angles.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9296",
+      "text": "Collaborate with those in charge of lighting and sound so that those production aspects can be coordinated with set designs or exhibit layouts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9300",
+      "text": "Select set props, such as furniture, pictures, lamps, and rugs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9304",
+      "text": "Design and build scale models of set designs, or miniature sets used in filming backgrounds or special effects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9284",
+      "text": "Examine objects to be included in exhibits to plan where and how to display them.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9302",
+      "text": "Assign staff to complete design ideas and prepare sketches, illustrations, and detailed drawings of sets, or graphics and animation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9291",
+      "text": "Inspect installed exhibits for conformance to specifications and satisfactory operation of special-effects components.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9288",
+      "text": "Estimate set- or exhibit-related costs, including materials, construction, and rental of props or locations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9292",
+      "text": "Plan for location-specific issues, such as space limitations, traffic flow patterns, and safety concerns.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9285",
+      "text": "Acquire, or arrange for acquisition of, specimens or graphics required to complete exhibits.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9298",
+      "text": "Design and produce displays and materials that can be used to decorate windows, interior displays, or event locations, such as streets and fairgrounds.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9290",
+      "text": "Direct and coordinate construction, erection, or decoration activities to ensure that sets or exhibits meet design, budget, and schedule requirements.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9310",
+      "text": "Coordinate the transportation of sets that are built off-site, and coordinate their setup at the site of use.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9301",
+      "text": "Confer with conservators to determine how to handle an exhibit's environmental aspects, such as lighting, temperature, and humidity, so that objects will be protected and exhibits will be enhanced.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9295",
+      "text": "Select and purchase lumber and hardware necessary for set construction.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9307",
+      "text": "Arrange for outside contractors to construct exhibit structures.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9309",
+      "text": "Incorporate security systems into exhibit layouts.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9299",
+      "text": "Coordinate the removal of sets, props, and exhibits after productions or events are complete.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9308",
+      "text": "Provide supportive materials for exhibits and displays, such as press kits, advertising, publicity notices, posters, brochures, catalogues, and invitations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 19,
+  "salary": 75240,
+  "demand": "Low"
+}

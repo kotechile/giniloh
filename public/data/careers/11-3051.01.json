@@ -1,0 +1,199 @@
+{
+  "code": "11-3051.01",
+  "title": "Quality Control Systems Managers",
+  "description": "Plan, direct, or coordinate quality assurance programs. Formulate quality control policies and control quality of laboratory and production efforts.",
+  "tasks": [
+    {
+      "id": "15405",
+      "text": "Stop production if serious product defects are present.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15415",
+      "text": "Review and update standard operating procedures or quality assurance manuals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15430",
+      "text": "Monitor performance of quality control systems to ensure effectiveness and efficiency.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15414",
+      "text": "Review quality documentation necessary for regulatory submissions and inspections.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15428",
+      "text": "Analyze quality control test results and provide feedback and interpretation to production management or staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15413",
+      "text": "Verify that raw materials, purchased parts or components, in-process samples, and finished products meet established testing and inspection standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15429",
+      "text": "Oversee workers including supervisors, inspectors, or laboratory workers engaged in testing activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15431",
+      "text": "Direct product testing activities throughout production cycles.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15421",
+      "text": "Instruct staff in quality control and analytical procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15424",
+      "text": "Direct the tracking of defects, test results, or other regularly reported quality control data.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15417",
+      "text": "Participate in the development of product specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15420",
+      "text": "Identify quality problems or areas for improvement and recommend solutions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15411",
+      "text": "Collect and analyze production samples to evaluate quality.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15416",
+      "text": "Produce reports regarding nonconformance of products or processes, daily production quality, root cause analyses, or quality trends.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15427",
+      "text": "Communicate quality control information to all relevant organizational departments, outside vendors, or contractors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15418",
+      "text": "Monitor development of new products to help identify possible problems for mass production.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15422",
+      "text": "Identify critical points in the manufacturing process and specify sampling procedures to be used at these points.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15425",
+      "text": "Create and implement inspection and testing criteria or procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15423",
+      "text": "Document testing procedures, methodologies, or criteria.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15407",
+      "text": "Review statistical studies, technological advances, or regulatory standards and trends to stay abreast of issues in the field of quality control.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15410",
+      "text": "Coordinate the selection and implementation of quality control equipment, such as inspection gauges.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15408",
+      "text": "Generate and maintain quality control operating budgets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15419",
+      "text": "Instruct vendors or contractors on quality guidelines, testing procedures, or ways to eliminate deficiencies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15426",
+      "text": "Confer with marketing and sales departments to define client requirements and expectations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15409",
+      "text": "Evaluate new testing and sampling methodologies or technologies to determine usefulness.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15406",
+      "text": "Review and approve quality plans submitted by contractors.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15412",
+      "text": "Audit and inspect subcontractor facilities including external laboratories.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 26,
+  "salary": 126060,
+  "demand": "High"
+}

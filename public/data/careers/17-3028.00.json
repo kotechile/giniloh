@@ -1,0 +1,115 @@
+{
+  "code": "17-3028.00",
+  "title": "Calibration Technologists and Technicians",
+  "description": "Execute or adapt procedures and techniques for calibrating measurement devices, by applying knowledge of measurement science, mathematics, physics, chemistry, and electronics, sometimes under the direction of engineering staff. Determine measurement standard suitability for calibrating measurement devices. May perform preventive maintenance on equipment. May perform corrective actions to address identified calibration problems.",
+  "tasks": [
+    {
+      "id": "22088",
+      "text": "Analyze test data to identify defects or determine calibration requirements.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22089",
+      "text": "Attend conferences, workshops, or other training sessions to learn about new tools or methods.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22090",
+      "text": "Calibrate devices by comparing measurements of pressure, temperature, humidity, or other environmental conditions to known standards.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22091",
+      "text": "Conduct calibration tests to determine performance or reliability of mechanical, structural, or electromechanical equipment.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22092",
+      "text": "Develop new calibration methods or techniques based on measurement science, analyses, or calibration requirements.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22093",
+      "text": "Disassemble and reassemble equipment for inspection.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22094",
+      "text": "Draw plans for developing jigs, fixtures, instruments, or other devices.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22095",
+      "text": "Maintain or repair measurement devices or equipment used for calibration testing.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22096",
+      "text": "Operate metalworking machines to fabricate housings, jigs, fittings, or fixtures.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22097",
+      "text": "Order replacement parts for malfunctioning equipment.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22098",
+      "text": "Plan sequences of calibration tests according to equipment specifications and scientific principles.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22099",
+      "text": "Read blueprints, schematics, diagrams, or technical orders.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22100",
+      "text": "Verify part dimensions or clearances using precision measuring instruments to ensure conformance to specifications.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22101",
+      "text": "Visually inspect equipment to detect surface defects.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22102",
+      "text": "Write and submit reports about the results of calibration tests.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 33,
+  "salary": 67820,
+  "demand": "Low"
+}

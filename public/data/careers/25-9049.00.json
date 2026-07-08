@@ -1,0 +1,17 @@
+{
+  "code": "25-9049.00",
+  "title": "Teaching Assistants, All Other",
+  "description": "All teaching assistants not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Teaching Assistants, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 35257,
+  "demand": "Very High"
+}

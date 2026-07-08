@@ -1,0 +1,87 @@
+{
+  "code": "49-2097.00",
+  "title": "Audiovisual Equipment Installers and Repairers",
+  "description": "Install, repair, or adjust audio or television receivers, stereo systems, camcorders, video systems, or other electronic entertainment equipment in homes or other venues. May perform routine maintenance.",
+  "tasks": [
+    {
+      "id": "13738",
+      "text": "Install, service, and repair electronic equipment or instruments such as televisions, radios, and videocassette recorders.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "13739",
+      "text": "Calibrate and test equipment, and locate circuit and component faults, using hand and power tools and measuring and testing instruments such as resistance meters and oscilloscopes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13740",
+      "text": "Confer with customers to determine the nature of problems or to explain repairs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13747",
+      "text": "Position or mount speakers, and wire speakers to consoles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13742",
+      "text": "Instruct customers on the safe and proper use of equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13746",
+      "text": "Make service calls to repair units in customers' homes, or return units to shops for major repairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13744",
+      "text": "Read and interpret electronic circuit diagrams, function block diagrams, specifications, engineering drawings, and service manuals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13741",
+      "text": "Tune or adjust equipment and instruments to obtain optimum visual or auditory reception, according to specifications, manuals, and drawings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13745",
+      "text": "Keep records of work orders and test and maintenance reports.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "13737",
+      "text": "Disassemble entertainment equipment and repair or replace loose, worn, or defective components and wiring, using hand tools and soldering irons.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13743",
+      "text": "Compute cost estimates for labor and materials.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 55,
+  "salary": 52600,
+  "demand": "Low"
+}

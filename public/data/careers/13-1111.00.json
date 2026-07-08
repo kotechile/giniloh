@@ -1,0 +1,87 @@
+{
+  "code": "13-1111.00",
+  "title": "Management Analysts",
+  "description": "Conduct organizational studies and evaluations, design systems and procedures, conduct work simplification and measurement studies, and prepare operations and procedures manuals to assist management in operating more efficiently and effectively. Includes program analysts and management consultants.",
+  "tasks": [
+    {
+      "id": "7276",
+      "text": "Gather and organize information on problems or procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7278",
+      "text": "Confer with personnel concerned to ensure successful functioning of newly implemented systems or procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7277",
+      "text": "Analyze data gathered and develop solutions or alternative methods of proceeding.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7282",
+      "text": "Document findings of study and prepare recommendations for implementation of new systems, procedures, or organizational changes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7285",
+      "text": "Plan study of work problems and procedures, such as organizational change, communications, information flow, integrated production methods, inventory control, or cost analysis.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7281",
+      "text": "Interview personnel and conduct on-site observation to ascertain unit functions, work performed, and methods, equipment, and personnel used.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7283",
+      "text": "Prepare manuals and train workers in use of new forms, reports, procedures or equipment, according to organizational policy.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7280",
+      "text": "Review forms and reports and confer with management and users about format, distribution, and purpose, identifying problems and improvements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7279",
+      "text": "Develop and implement records management program for filing, protection, and retrieval of records, and assure compliance with program.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7284",
+      "text": "Design, evaluate, recommend, and approve changes of forms and reports.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7286",
+      "text": "Recommend purchase of storage equipment and design area layout to locate equipment in space available.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 9,
+  "salary": 101860,
+  "demand": "Very High"
+}

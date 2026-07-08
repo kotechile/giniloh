@@ -1,0 +1,199 @@
+{
+  "code": "27-2022.00",
+  "title": "Coaches and Scouts",
+  "description": "Instruct or coach groups or individuals in the fundamentals of sports for the primary purpose of competition. Demonstrate techniques and methods of participation. May evaluate athletes' strengths and weaknesses as possible recruits or to improve the athletes' technique to prepare them for competition. Those required to hold teaching certifications should be reported in the appropriate teaching category.",
+  "tasks": [
+    {
+      "id": "1742",
+      "text": "Plan, organize, and conduct practice sessions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20109",
+      "text": "Provide training direction, encouragement, motivation, and nutritional advice to prepare athletes for games, competitive events, or tours.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1747",
+      "text": "Adjust coaching techniques, based on the strengths and weaknesses of athletes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1750",
+      "text": "Instruct individuals or groups in sports rules, game strategies, and performance principles, such as specific ways of moving the body, hands, or feet, to achieve desired results.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1745",
+      "text": "Plan strategies and choose team members for individual games or sports seasons.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20117",
+      "text": "Monitor the academic eligibility of student athletes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20115",
+      "text": "Counsel student athletes on academic, athletic, and personal issues.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1751",
+      "text": "Analyze the strengths and weaknesses of opposing teams to develop game strategies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20112",
+      "text": "Coordinate travel arrangements and travel with team to away contests.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1752",
+      "text": "Evaluate athletes' skills and review performance records to determine their fitness and potential in a particular area of athletics.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1754",
+      "text": "Monitor athletes' use of equipment to ensure safe and proper use.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1753",
+      "text": "Keep abreast of changing rules, techniques, technologies, and philosophies relevant to their sport.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1756",
+      "text": "Explain and enforce safety rules and regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20111",
+      "text": "Contact the parents of players to provide information and answer questions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1760",
+      "text": "Arrange and conduct sports-related activities, such as training camps, skill-improvement courses, clinics, and pre-season try-outs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1758",
+      "text": "Explain and demonstrate the use of sports and training equipment, such as trampolines or weights.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20116",
+      "text": "Perform activities that support a team or a specific sport, such as participating in community outreach activities, meeting with media representatives, and appearing at fundraising events.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1746",
+      "text": "Plan and direct physical conditioning programs that will enable athletes to achieve maximum performance.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20118",
+      "text": "Identify and recruit potential athletes by sending recruitment letters, meeting with recruits, and arranging and offering incentives, such as athletic scholarships.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20113",
+      "text": "Hire, supervise, and work with extended coaching staff.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1757",
+      "text": "Serve as organizer, leader, instructor, or referee for outdoor and indoor games, such as volleyball, football, and soccer.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20110",
+      "text": "Teach instructional courses and advise students.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20119",
+      "text": "Oversee the development and management of the sports program budget and fundraising activities.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1755",
+      "text": "Develop and arrange competition schedules and programs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20114",
+      "text": "Keep and review paper, computerized, and video records of athlete, team, and opposing team performance.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1748",
+      "text": "File scouting reports that detail player assessments, provide recommendations on athlete recruitment, and identify locations and individuals to be targeted for future recruitment efforts.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1761",
+      "text": "Select, acquire, store, and issue equipment and other materials as necessary.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 20,
+  "salary": 47320,
+  "demand": "High"
+}

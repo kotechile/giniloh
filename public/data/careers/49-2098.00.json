@@ -1,0 +1,122 @@
+{
+  "code": "49-2098.00",
+  "title": "Security and Fire Alarm Systems Installers",
+  "description": "Install, program, maintain, and repair security and fire alarm wiring and equipment. Ensure that work is in accordance with relevant codes.",
+  "tasks": [
+    {
+      "id": "11761",
+      "text": "Install, maintain, or repair security systems, alarm devices, or related equipment, following blueprints of electrical layouts and building plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11760",
+      "text": "Mount and fasten control panels, door and window contacts, sensors, or video cameras, and attach electrical and telephone wiring to connect components.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11767",
+      "text": "Demonstrate systems for customers and explain details, such as the causes and consequences of false alarms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11765",
+      "text": "Test and repair circuits and sensors, following wiring and system specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20799",
+      "text": "Feed cables through access holes, roof spaces, or cavity walls to reach fixture outlets, positioning and terminating cables, wires, or strapping.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11758",
+      "text": "Examine systems to locate problems, such as loose connections or broken insulation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20800",
+      "text": "Test backup batteries, keypad programming, sirens, or other security features to ensure proper functioning or to diagnose malfunctions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11766",
+      "text": "Drill holes for wiring in wall studs, joists, ceilings, or floors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11763",
+      "text": "Inspect installation sites and study work orders, building plans, and installation manuals to determine materials requirements and installation procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11768",
+      "text": "Consult with clients to assess risks and to determine security requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11770",
+      "text": "Mount raceways and conduits and fasten wires to wood framing, using staplers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11764",
+      "text": "Adjust sensitivity of units, based on room structures and manufacturers' recommendations, using programming keypads.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11769",
+      "text": "Keep informed of new products and developments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11773",
+      "text": "Order replacement parts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11772",
+      "text": "Prepare documents, such as invoices or warranties.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11771",
+      "text": "Provide customers with cost estimates for equipment installation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 31,
+  "salary": 60070,
+  "demand": "Medium"
+}

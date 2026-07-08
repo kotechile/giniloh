@@ -1,0 +1,157 @@
+{
+  "code": "39-3011.00",
+  "title": "Gambling Dealers",
+  "description": "Operate table games. Stand or sit behind table and operate games of chance by dispensing the appropriate number of cards or blocks to players, or operating other gambling equipment. Distribute winnings or collect players' money or chips. May compare the house's hand against players' hands.",
+  "tasks": [
+    {
+      "id": "4446",
+      "text": "Pay winnings or collect losing bets as established by the rules and procedures of a specific game.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21151",
+      "text": "Greet customers and make them feel welcome.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4445",
+      "text": "Exchange paper currency for playing chips or coin money.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4449",
+      "text": "Check to ensure that all players have placed bets before play begins.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4451",
+      "text": "Inspect cards and equipment to be used in games to ensure that they are in good condition.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "4447",
+      "text": "Deal cards to house hands, and compare these with players' hands to determine winners, as in black jack.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4450",
+      "text": "Stand behind a gaming table and deal the appropriate number of cards to each player.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4455",
+      "text": "Apply rule variations to card games such as poker, in which players bet on the value of their hands.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4456",
+      "text": "Receive, verify, and record patrons' cash wagers.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "4448",
+      "text": "Conduct gambling games, such as dice, roulette, cards, or keno, following all applicable rules and regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4459",
+      "text": "Work as part of a team of dealers in games, such as baccarat or craps.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4452",
+      "text": "Start and control games and gaming equipment, and announce winning numbers or colors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4454",
+      "text": "Compute amounts of players' wins or losses, or scan winning tickets presented by patrons to calculate the amount of money won.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4453",
+      "text": "Open and close cash floats and game tables.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4457",
+      "text": "Answer questions about game rules and casino policies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4458",
+      "text": "Refer patrons to gaming cashiers to collect winnings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20133",
+      "text": "Supervise staff and monitor gambling tables to ensure security of the game.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4461",
+      "text": "Seat patrons at gaming tables.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4464",
+      "text": "Train new dealers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4462",
+      "text": "Prepare collection reports for submission to supervisors.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4460",
+      "text": "Participate in games for gambling establishments to provide the minimum complement of players at a table.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 45,
+  "salary": 34320,
+  "demand": "Medium"
+}

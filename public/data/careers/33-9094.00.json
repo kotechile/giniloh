@@ -1,0 +1,136 @@
+{
+  "code": "33-9094.00",
+  "title": "School Bus Monitors",
+  "description": "Maintain order among students on a school bus. Duties include helping students safely board and exit and communicating behavioral problems. May perform pretrip and posttrip inspections and prepare for and assist in emergency evacuations.",
+  "tasks": [
+    {
+      "id": "23081",
+      "text": "Announce routes or stops.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23082",
+      "text": "Assist children with disabilities or children with psychological, emotional, or behavioral issues with boarding and exiting the school bus.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23083",
+      "text": "Buckle seatbelts or fasten wheelchair tie-down straps to secure passengers for transportation.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23084",
+      "text": "Clean school bus interiors by picking up waste, wiping down windows, or vacuuming.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23085",
+      "text": "Direct students boarding and exiting the school bus.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23086",
+      "text": "Direct students evacuating the bus during safety drills.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23087",
+      "text": "Escort young children across roads or highways.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23088",
+      "text": "Evacuate students from the school bus in emergency situations.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23089",
+      "text": "Guide the driver when the bus is moving in reverse gear.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23090",
+      "text": "Monitor for trains at railroad crossings and signal the bus driver when it is safe to proceed.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23091",
+      "text": "Monitor the conduct of students to maintain discipline and safety.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23092",
+      "text": "Open and close school bus doors for students.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23093",
+      "text": "Operate a wheelchair lift to load or unload wheelchairs.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23094",
+      "text": "Prevent or defuse altercations between students.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23095",
+      "text": "Report delays, accidents, or other traffic and transportation situations to dispatchers or other bus drivers, using phones or mobile two-way radios.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23096",
+      "text": "Respond to students' questions, requests, or complaints.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23097",
+      "text": "Talk to children's parents or guardians about problematic behaviors, emotional or developmental problems, or related issues.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23098",
+      "text": "Write and submit reports that include data such as the number of passengers or trips, hours worked, mileage driven, or fuel consumed.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 31,
+  "salary": 35100,
+  "demand": "Medium"
+}

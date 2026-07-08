@@ -1,0 +1,185 @@
+{
+  "code": "17-2141.02",
+  "title": "Automotive Engineers",
+  "description": "Develop new or improved designs for vehicle structural members, engines, transmissions, or other vehicle systems, using computer-assisted design technology. Direct building, modification, or testing of vehicle or components.",
+  "tasks": [
+    {
+      "id": "16438",
+      "text": "Conduct or direct system-level automotive testing.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16428",
+      "text": "Provide technical direction to other engineers or engineering support personnel.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16429",
+      "text": "Perform failure, variation, or root cause analyses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16434",
+      "text": "Calibrate vehicle systems, including control algorithms or other software systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16437",
+      "text": "Design or analyze automobile systems in areas such as aerodynamics, alternate fuels, ergonomics, hybrid power, brakes, transmissions, steering, calibration, safety, or diagnostics.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16423",
+      "text": "Prepare or present technical or project status reports.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16426",
+      "text": "Conduct research studies to develop new concepts in the field of automotive engineering.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16422",
+      "text": "Establish production or quality control standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16436",
+      "text": "Alter or modify designs to obtain specified functional or operational performance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19638",
+      "text": "Research or implement green automotive technologies involving alternative fuels, electric or hybrid cars, or lighter or more fuel-efficient vehicles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16432",
+      "text": "Develop calibration methodologies, test methodologies, or tools.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19633",
+      "text": "Create design alternatives for vehicle components, such as camless or dual-clutch engines or alternative air-conditioning systems, to increase fuel efficiency.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16424",
+      "text": "Develop or implement operating methods or procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16431",
+      "text": "Develop engineering specifications or cost estimates for automotive design concepts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16433",
+      "text": "Conduct automotive design reviews.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19635",
+      "text": "Design vehicles that use lighter materials, such as aluminum, magnesium alloy, or plastic, to improve fuel efficiency.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16425",
+      "text": "Write, review, or maintain engineering documentation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19636",
+      "text": "Develop specifications for vehicles powered by alternative fuels or alternative power methods.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16435",
+      "text": "Build models for algorithm or control feature verification testing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16427",
+      "text": "Coordinate production activities with other functional units, such as procurement, maintenance, or quality control.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16439",
+      "text": "Design control systems or algorithms for purposes such as automotive energy management, emissions management, or increased operational safety or performance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16430",
+      "text": "Develop or integrate control feature requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19637",
+      "text": "Research computerized automotive applications, such as telemetrics, intelligent transportation systems, artificial intelligence, or automatic control.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16421",
+      "text": "Read current literature, attend meetings or conferences, or talk with colleagues to stay abreast of new automotive technology or competitive products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19634",
+      "text": "Design vehicles for increased recyclability or use of natural, renewable, or recycled materials in vehicle construction.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 12,
+  "salary": 104110,
+  "demand": "High"
+}

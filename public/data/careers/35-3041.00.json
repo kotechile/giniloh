@@ -1,0 +1,108 @@
+{
+  "code": "35-3041.00",
+  "title": "Food Servers, Nonrestaurant",
+  "description": "Serve food to individuals outside of a restaurant environment, such as in hotel rooms, hospital rooms, residential care facilities, or cars.",
+  "tasks": [
+    {
+      "id": "11152",
+      "text": "Place food servings on plates or trays according to orders or instructions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11150",
+      "text": "Clean or sterilize dishes, kitchen utensils, equipment, or facilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11149",
+      "text": "Monitor food distribution, ensuring that meals are delivered to the correct recipients and that guidelines, such as those for special diets, are followed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11151",
+      "text": "Examine trays to ensure that they contain required items.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11153",
+      "text": "Load trays with accessories, such as eating utensils, napkins, or condiments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11154",
+      "text": "Take food orders and relay orders to kitchens or serving counters so they can be filled.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11158",
+      "text": "Monitor food preparation or serving techniques to ensure that proper procedures are followed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11156",
+      "text": "Remove trays and stack dishes for return to kitchen after meals are finished.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11159",
+      "text": "Carry food, silverware, or linen on trays or use carts to carry trays.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11161",
+      "text": "Record amounts and types of special food items served to customers.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11155",
+      "text": "Stock service stations with items, such as ice, napkins, or straws.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11157",
+      "text": "Prepare food items, such as sandwiches, salads, soups, or beverages.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11160",
+      "text": "Determine where patients or patrons would like to eat their meals and help them get situated.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11162",
+      "text": "Total checks, present them to customers, and accept payment for services.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 46,
+  "salary": 35360,
+  "demand": "High"
+}

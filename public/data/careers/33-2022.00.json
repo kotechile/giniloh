@@ -1,0 +1,122 @@
+{
+  "code": "33-2022.00",
+  "title": "Forest Fire Inspectors and Prevention Specialists",
+  "description": "Enforce fire regulations, inspect forest for fire hazards, and recommend forest fire prevention or control measures. May report forest fires and weather conditions.",
+  "tasks": [
+    {
+      "id": "11102",
+      "text": "Relay messages about emergencies, accidents, locations of crew and personnel, and fire hazard conditions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21143",
+      "text": "Conduct wildland firefighting training.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11104",
+      "text": "Estimate sizes and characteristics of fires, and report findings to base camps by radio or telephone.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11103",
+      "text": "Direct crews working on firelines during forest fires.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11107",
+      "text": "Locate forest fires on area maps, using azimuth sighters and known landmarks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11106",
+      "text": "Extinguish smaller fires with portable extinguishers, shovels, and axes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11112",
+      "text": "Patrol assigned areas, looking for forest fires, hazardous conditions, and weather phenomena.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11113",
+      "text": "Compile and report meteorological data, such as temperature, relative humidity, wind direction and velocity, and types of cloud formations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11109",
+      "text": "Examine and inventory firefighting equipment, such as axes, fire hoses, shovels, pumps, buckets, and fire extinguishers, to determine amount and condition.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21144",
+      "text": "Educate the public about fire safety and prevention.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11110",
+      "text": "Direct maintenance and repair of firefighting equipment, or requisition new equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11108",
+      "text": "Maintain records and logbooks.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11105",
+      "text": "Administer regulations regarding sanitation, fire prevention, violation corrections, and related forest regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11111",
+      "text": "Restrict public access and recreational use of forest lands during critical fire seasons.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11114",
+      "text": "Inspect camp sites to ensure that campers are in compliance with forest use regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11115",
+      "text": "Inspect forest tracts and logging areas for fire hazards such as accumulated wastes or mishandling of combustibles, and recommend appropriate fire prevention measures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 44,
+  "salary": 56870,
+  "demand": "Low"
+}

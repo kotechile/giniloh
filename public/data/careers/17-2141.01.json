@@ -1,0 +1,192 @@
+{
+  "code": "17-2141.01",
+  "title": "Fuel Cell Engineers",
+  "description": "Design, evaluate, modify, or construct fuel cell components or systems for transportation, stationary, or portable applications.",
+  "tasks": [
+    {
+      "id": "16408",
+      "text": "Plan or conduct experiments to validate new materials, optimize startup protocols, reduce conditioning time, or examine contaminant tolerance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16407",
+      "text": "Provide technical consultation or direction related to the development or production of fuel cell systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16417",
+      "text": "Characterize component or fuel cell performances by generating operating maps, defining operating conditions, identifying design refinements, or executing durability assessments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19946",
+      "text": "Plan or implement fuel cell cost reduction or product improvement projects in collaboration with other engineers, suppliers, support personnel, or customers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19950",
+      "text": "Conduct fuel cell testing projects, using fuel cell test stations, analytical instruments, or electrochemical diagnostics, such as cyclic voltammetry or impedance spectroscopy.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16419",
+      "text": "Analyze fuel cell or related test data, using statistical software.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16414",
+      "text": "Conduct post-service or failure analyses, using electromechanical diagnostic principles or procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19951",
+      "text": "Define specifications for fuel cell materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16406",
+      "text": "Recommend or implement changes to fuel cell system designs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16403",
+      "text": "Validate design of fuel cells, fuel cell components, or fuel cell systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16399",
+      "text": "Read current literature, attend meetings or conferences, or talk with colleagues to stay abreast of new technology or competitive products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19945",
+      "text": "Prepare test stations, instrumentation, or data acquisition systems for use in specific tests of fuel cell components or systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16413",
+      "text": "Develop fuel cell materials or fuel cell test equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16412",
+      "text": "Fabricate prototypes of fuel cell components, assemblies, stacks, or systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19949",
+      "text": "Manage fuel cell battery hybrid system architecture, including sizing of components, such as fuel cells, energy storage units, or electric drives.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16415",
+      "text": "Design or implement fuel cell testing or development programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16398",
+      "text": "Write technical reports or proposals related to engineering projects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16405",
+      "text": "Simulate or model fuel cell, motor, or other system information, using simulation software programs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16420",
+      "text": "Design fuel cell systems, subsystems, stacks, assemblies, or components, such as electric traction motors or power electronics.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16411",
+      "text": "Identify or define vehicle and system integration challenges for fuel cell vehicles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16418",
+      "text": "Calculate the efficiency or power output of a fuel cell system or process.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19947",
+      "text": "Coordinate fuel cell engineering or test schedules with departments outside engineering, such as manufacturing.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19948",
+      "text": "Authorize release of fuel cell parts, components, or subsystems for production.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19953",
+      "text": "Evaluate the power output, system cost, or environmental impact of new hydrogen or non-hydrogen fuel cell system designs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16410",
+      "text": "Integrate electric drive subsystems with other vehicle systems to optimize performance or mitigate faults.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19952",
+      "text": "Develop or evaluate systems or methods of hydrogen storage for fuel cell applications.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 19,
+  "salary": 104110,
+  "demand": "High"
+}

@@ -1,0 +1,171 @@
+{
+  "code": "53-2021.00",
+  "title": "Air Traffic Controllers",
+  "description": "Control air traffic on and within vicinity of airport, and movement of air traffic between altitude sectors and control centers, according to established procedures and policies. Authorize, regulate, and control commercial airline flights according to government or company regulations to expedite and ensure flight safety.",
+  "tasks": [
+    {
+      "id": "12731",
+      "text": "Inform pilots about nearby planes or potentially hazardous conditions, such as weather, speed and direction of wind, or visibility problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12728",
+      "text": "Issue landing and take-off authorizations or instructions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12735",
+      "text": "Transfer control of departing flights to traffic control centers and accept control of arriving flights.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12732",
+      "text": "Provide flight path changes or directions to emergency landing fields for pilots traveling in bad weather or in emergency situations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12733",
+      "text": "Alert airport emergency services in cases of emergency or when aircraft are experiencing difficulties.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12729",
+      "text": "Monitor or direct the movement of aircraft within an assigned air space or on the ground at airports to minimize delays and maximize safety.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12734",
+      "text": "Direct pilots to runways when space is available or direct them to maintain a traffic pattern until there is space for them to land.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12730",
+      "text": "Monitor aircraft within a specific airspace, using radar, computer equipment, or visual references.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12736",
+      "text": "Direct ground traffic, including taxiing aircraft, maintenance or baggage vehicles, or airport workers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12739",
+      "text": "Contact pilots by radio to provide meteorological, navigational, or other information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12738",
+      "text": "Maintain radio or telephone contact with adjacent control towers, terminal control units, or other area control centers to coordinate aircraft movement.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12737",
+      "text": "Determine the timing or procedures for flight vector changes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12740",
+      "text": "Initiate or coordinate searches for missing aircraft.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20691",
+      "text": "Provide on-the-job training to new air traffic controllers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12741",
+      "text": "Check conditions and traffic at different altitudes in response to pilots' requests for altitude changes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12742",
+      "text": "Relay air traffic information, such as courses, altitudes, or expected arrival times, to control centers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12744",
+      "text": "Inspect, adjust, or control radio equipment or airport lights.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12743",
+      "text": "Compile information about flights from flight plans, pilot reports, radar, or observations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12747",
+      "text": "Organize flight plans or traffic management plans to prepare for planes about to enter assigned airspace.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12748",
+      "text": "Review records or reports for clarity and completeness and maintain records or reports, as required under federal law.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "12749",
+      "text": "Complete daily activity reports and keep records of messages from aircraft.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "12745",
+      "text": "Conduct pre-flight briefings on weather conditions, suggested routes, altitudes, indications of turbulence, or other flight safety information.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12746",
+      "text": "Analyze factors such as weather reports, fuel requirements, or maps to determine air routes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 30,
+  "salary": 148080,
+  "demand": "Low"
+}

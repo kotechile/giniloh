@@ -1,0 +1,136 @@
+{
+  "code": "29-1241.00",
+  "title": "Ophthalmologists, Except Pediatric",
+  "description": "Diagnose and perform surgery to treat and help prevent disorders and diseases of the eye. May also provide vision services for treatment including glasses and contacts.",
+  "tasks": [
+    {
+      "id": "17175",
+      "text": "Perform comprehensive examinations of the visual system to determine the nature or extent of ocular disorders.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17176",
+      "text": "Diagnose or treat injuries, disorders, or diseases of the eye and eye structures including the cornea, sclera, conjunctiva, or eyelids.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17166",
+      "text": "Provide or direct the provision of postoperative care.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17162",
+      "text": "Develop or implement plans and procedures for ophthalmologic services.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17169",
+      "text": "Prescribe or administer topical or systemic medications to treat ophthalmic conditions and to manage pain.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17171",
+      "text": "Develop treatment plans based on patients' histories and goals, the nature and severity of disorders, and treatment risks and benefits.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17173",
+      "text": "Perform ophthalmic surgeries such as cataract, glaucoma, refractive, corneal, vitro-retinal, eye muscle, or oculoplastic surgeries.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17163",
+      "text": "Educate patients about maintenance and promotion of healthy vision.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17167",
+      "text": "Document or evaluate patients' medical histories.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17170",
+      "text": "Perform, order, or interpret the results of diagnostic or clinical tests.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17159",
+      "text": "Provide ophthalmic consultation to other medical professionals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17160",
+      "text": "Refer patients for more specialized treatments when conditions exceed the experience, expertise, or scope of practice of practitioner.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17172",
+      "text": "Perform laser surgeries to alter, remove, reshape, or replace ocular tissue.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17165",
+      "text": "Collaborate with multidisciplinary teams of health professionals to provide optimal patient care.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17168",
+      "text": "Prescribe corrective lenses such as glasses or contact lenses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17174",
+      "text": "Prescribe ophthalmologic treatments or therapies such as chemotherapy, cryotherapy, or low vision therapy.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17161",
+      "text": "Instruct interns, residents, or others in ophthalmologic procedures and techniques.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17164",
+      "text": "Conduct clinical or laboratory-based research in ophthalmology.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 6,
+  "salary": 300080,
+  "demand": "Low"
+}

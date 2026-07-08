@@ -1,0 +1,129 @@
+{
+  "code": "11-1021.00",
+  "title": "General and Operations Managers",
+  "description": "Plan, direct, or coordinate the operations of public or private sector organizations, overseeing multiple departments or locations. Duties and responsibilities include formulating policies, managing daily operations, and planning the use of materials and human resources, but are too diverse and general in nature to be classified in any one functional area of management or administration, such as personnel, purchasing, or administrative services. Usually manage through subordinate supervisors. Excludes First-Line Supervisors.",
+  "tasks": [
+    {
+      "id": "20699",
+      "text": "Review financial statements, sales or activity reports, or other performance data to measure productivity or goal achievement or to identify areas needing cost reduction or program improvement.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "933",
+      "text": "Direct and coordinate activities of businesses or departments concerned with the production, pricing, sales, or distribution of products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20700",
+      "text": "Direct administrative activities directly related to making products or providing services.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20701",
+      "text": "Prepare staff work schedules and assign specific duties.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20703",
+      "text": "Direct or coordinate financial or budget activities to fund operations, maximize investments, or increase efficiency.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20706",
+      "text": "Plan or direct activities, such as sales promotions, that require coordination with other department managers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20705",
+      "text": "Perform personnel functions, such as selection, training, or evaluation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20704",
+      "text": "Establish or implement departmental policies, goals, objectives, or procedures in conjunction with board members, organization officials, or staff members.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20702",
+      "text": "Monitor suppliers to ensure that they efficiently and effectively provide needed goods or services within budgetary limits.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20708",
+      "text": "Manage the movement of goods into and out of production facilities to ensure efficiency, effectiveness, or sustainability of operations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20707",
+      "text": "Set prices or credit terms for goods or services, based on forecasts of customer demand.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "944",
+      "text": "Perform sales floor work, such as greeting or assisting customers, stocking shelves, or taking inventory.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "945",
+      "text": "Develop or implement product-marketing strategies, including advertising campaigns or sales promotions.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "947",
+      "text": "Direct non-merchandising departments of businesses, such as advertising or purchasing.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19501",
+      "text": "Implement or oversee environmental management or sustainability programs addressing issues such as recycling, conservation, or waste management.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "949",
+      "text": "Plan store layouts or design displays.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "948",
+      "text": "Recommend locations for new facilities, or oversee the remodeling or renovating of current facilities.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 9,
+  "salary": 105770,
+  "demand": "Very High"
+}

@@ -1,0 +1,143 @@
+{
+  "code": "11-9071.00",
+  "title": "Gambling Managers",
+  "description": "Plan, direct, or coordinate gambling operations in a casino. May formulate house rules.",
+  "tasks": [
+    {
+      "id": "7185",
+      "text": "Resolve customer complaints regarding problems, such as payout errors.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7186",
+      "text": "Remove suspected cheaters, such as card counters or other players who may have systems that shift the odds of winning to their favor.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7196",
+      "text": "Track supplies of money to tables and perform any required paperwork.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7190",
+      "text": "Explain and interpret house rules, such as game rules or betting limits.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7193",
+      "text": "Prepare work schedules and station arrangements and keep attendance records.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "7191",
+      "text": "Monitor staffing levels to ensure that games and tables are adequately staffed for each shift, arranging for staff rotations and breaks and locating substitute employees as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7187",
+      "text": "Maintain familiarity with all games used at a facility, as well as strategies or tricks employed in those games.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7188",
+      "text": "Train new workers or evaluate their performance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20472",
+      "text": "Market or promote the casino to bring in business.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7192",
+      "text": "Interview and hire workers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7194",
+      "text": "Direct the distribution of complimentary hotel rooms, meals, or other discounts or free items given to players, based on their length of play and betting totals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7195",
+      "text": "Establish policies on issues, such as the type of gambling offered and the odds, the extension of credit, or the serving of food and beverages.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7189",
+      "text": "Circulate among gaming tables to ensure that operations are conducted properly, that dealers follow house rules, or that players are not cheating.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7197",
+      "text": "Set and maintain a bank and table limit for each game.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7201",
+      "text": "Direct the compilation of summary sheets that show wager amounts and payoffs for races or events.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7199",
+      "text": "Review operational expenses, budget estimates, betting accounts, or collection reports for accuracy.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7200",
+      "text": "Record, collect, or pay off bets, issuing receipts as necessary.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "7202",
+      "text": "Notify board attendants of table vacancies so that waiting patrons can play.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7198",
+      "text": "Monitor credit extended to players.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 39,
+  "salary": 93220,
+  "demand": "Low"
+}

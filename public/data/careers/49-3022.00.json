@@ -1,0 +1,136 @@
+{
+  "code": "49-3022.00",
+  "title": "Automotive Glass Installers and Repairers",
+  "description": "Replace or repair broken windshields and window glass in motor vehicles.",
+  "tasks": [
+    {
+      "id": "20645",
+      "text": "Prime all scratches on pinchwelds with primer and allow to dry.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8318",
+      "text": "Remove all dirt, foreign matter, and loose glass from damaged areas, apply primer along windshield or window edges, and allow primer to dry.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8320",
+      "text": "Allow all glass parts installed with urethane ample time to cure, taking temperature and humidity into account.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8324",
+      "text": "Apply a bead of urethane around the perimeter of each pinchweld and dress the remaining urethane on the pinchwelds so that it is of uniform level and thickness.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8325",
+      "text": "Select appropriate tools, safety equipment, and parts, according to job requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20646",
+      "text": "Install replacement glass in vehicles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8322",
+      "text": "Obtain windshields or windows for specific automobile makes and models from stock and examine them for defects prior to installation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8323",
+      "text": "Check for and remove moisture or contamination in damaged areas and keep areas dry until repairs are complete.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8327",
+      "text": "Replace all moldings, clips, windshield wipers, or other parts that were removed prior to glass replacement or repair.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8326",
+      "text": "Remove broken or damaged glass windshields or window glass from motor vehicles, using hand tools to remove screws from frames holding glass.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8328",
+      "text": "Remove moldings, clips, windshield wipers, screws, bolts, and inside A-pillar moldings and lower headliners in preparation for installation or repair work.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8329",
+      "text": "Install, repair, or replace safety glass and related materials, such as back glass heating elements, on vehicles or equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8335",
+      "text": "Cool or warm glass in the event of temperature extremes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8333",
+      "text": "Replace or adjust motorized or manual window-raising mechanisms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8334",
+      "text": "Install new foam dams on pinchwelds, if required.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8330",
+      "text": "Install rubber channeling strips around edges of glass or frames to weatherproof windows or to prevent rattling.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8331",
+      "text": "Hold cut or uneven edges of glass against automated abrasive belts to shape or smooth edges.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8332",
+      "text": "Cut flat safety glass according to specified patterns or perform precision pattern making and glass cutting to custom fit replacement windows.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 47,
+  "salary": 47630,
+  "demand": "Low"
+}

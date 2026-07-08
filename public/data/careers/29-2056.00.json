@@ -1,0 +1,227 @@
+{
+  "code": "29-2056.00",
+  "title": "Veterinary Technologists and Technicians",
+  "description": "Perform medical tests in a laboratory environment for use in the treatment and diagnosis of diseases in animals. Prepare vaccines and serums for prevention of diseases. Prepare tissue samples, take blood samples, and execute laboratory tests, such as urinalysis and blood counts. Clean and sterilize instruments and materials and maintain equipment and machines. May assist a veterinarian during surgery.",
+  "tasks": [
+    {
+      "id": "4176",
+      "text": "Administer anesthesia to animals, under the direction of a veterinarian, and monitor animals' responses to anesthetics so that dosages can be adjusted.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4177",
+      "text": "Care for and monitor the condition of animals recovering from surgery.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18548",
+      "text": "Maintain controlled drug inventory and related log books.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4179",
+      "text": "Perform laboratory tests on blood, urine, or feces, such as urinalyses or blood counts, to assist in the diagnosis and treatment of animal health problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4178",
+      "text": "Prepare and administer medications, vaccines, serums, or treatments, as prescribed by veterinarians.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20422",
+      "text": "Restrain animals during exams or procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4180",
+      "text": "Administer emergency first aid, such as performing emergency resuscitation or other life saving procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4182",
+      "text": "Clean and sterilize instruments, equipment, or materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4183",
+      "text": "Provide veterinarians with the correct equipment or instruments, as needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4193",
+      "text": "Perform dental work, such as cleaning, polishing, or extracting teeth.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4187",
+      "text": "Observe the behavior and condition of animals and monitor their clinical symptoms.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4190",
+      "text": "Give enemas and perform catheterizations, ear flushes, intravenous feedings, or gavages.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4184",
+      "text": "Fill prescriptions, measuring medications and labeling containers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4181",
+      "text": "Collect, prepare, and label samples for laboratory testing, culture, or microscopic examination.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4185",
+      "text": "Prepare animals for surgery, performing such tasks as shaving surgical areas.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4188",
+      "text": "Take and develop diagnostic radiographs, using x-ray equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20423",
+      "text": "Discuss medical health of pets with clients, such as post-operative status.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4194",
+      "text": "Clean kennels, animal holding areas, surgery suites, examination rooms, or animal loading or unloading facilities to control the spread of disease.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4186",
+      "text": "Take animals into treatment areas and assist with physical examinations by performing such duties as obtaining temperature, pulse, or respiration data.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4191",
+      "text": "Prepare treatment rooms for surgery.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4189",
+      "text": "Maintain laboratory, research, or treatment records, as well as inventories of pharmaceuticals, equipment, or supplies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4192",
+      "text": "Maintain instruments, equipment, or machinery to ensure proper working condition.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4197",
+      "text": "Dress and suture wounds and apply splints or other protective devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4196",
+      "text": "Provide assistance with animal euthanasia and the disposal of remains.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20424",
+      "text": "Schedule appointments and procedures for animals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4195",
+      "text": "Provide information or counseling regarding issues such as animal health care, behavior problems, or nutrition.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18550",
+      "text": "Monitor medical supplies and place orders when inventory is low.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18549",
+      "text": "Supervise or train veterinary students or other staff members.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4198",
+      "text": "Perform a variety of office, clerical, or accounting duties, such as reception, billing, bookkeeping, or selling products.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "4199",
+      "text": "Bathe animals, clip nails or claws, and brush or cut animals' hair.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4200",
+      "text": "Conduct specialized procedures, such as animal branding or tattooing or hoof trimming.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 29,
+  "salary": 47380,
+  "demand": "High"
+}

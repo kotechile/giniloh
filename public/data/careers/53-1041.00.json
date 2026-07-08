@@ -1,0 +1,52 @@
+{
+  "code": "53-1041.00",
+  "title": "Aircraft Cargo Handling Supervisors",
+  "description": "Supervise and coordinate the activities of ground crew in the loading, unloading, securing, and staging of aircraft cargo or baggage. May determine the quantity and orientation of cargo and compute aircraft center of gravity. May accompany aircraft as member of flight crew and monitor and handle cargo in flight, and assist and brief passengers on safety and emergency procedures. Includes loadmasters.",
+  "tasks": [
+    {
+      "id": "14435",
+      "text": "Determine the quantity and orientation of cargo, and compute an aircraft's center of gravity.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14434",
+      "text": "Direct ground crews in the loading, unloading, securing, or staging of aircraft cargo or baggage.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20933",
+      "text": "Train new employees in areas such as safety procedures or equipment operation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14432",
+      "text": "Distribute cargo to maximize use of space.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14433",
+      "text": "Calculate load weights for different aircraft compartments, using charts and computers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14436",
+      "text": "Accompany aircraft as a member of the flight crew to monitor and handle cargo in flight.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 25,
+  "salary": 58170,
+  "demand": "Low"
+}

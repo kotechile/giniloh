@@ -1,0 +1,122 @@
+{
+  "code": "29-1229.01",
+  "title": "Allergists and Immunologists",
+  "description": "Diagnose, treat, and help prevent allergic diseases and disease processes affecting the immune system.",
+  "tasks": [
+    {
+      "id": "17076",
+      "text": "Diagnose or treat allergic or immunologic conditions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17069",
+      "text": "Educate patients about diagnoses, prognoses, or treatments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17068",
+      "text": "Order or perform diagnostic tests such as skin pricks and intradermal, patch, or delayed hypersensitivity tests.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17066",
+      "text": "Prescribe medication such as antihistamines, antibiotics, and nasal, oral, topical, or inhaled glucocorticosteroids.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17070",
+      "text": "Interpret diagnostic test results to make appropriate differential diagnoses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17063",
+      "text": "Document patients' medical histories.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17071",
+      "text": "Develop individualized treatment plans for patients, considering patient preferences, clinical data, or the risks and benefits of therapies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17074",
+      "text": "Provide therapies, such as allergen immunotherapy or immunoglobin therapy, to treat immune conditions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17067",
+      "text": "Conduct physical examinations of patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17073",
+      "text": "Assess the risks and benefits of therapies for allergic and immunologic disorders.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17072",
+      "text": "Coordinate the care of patients with other health care professionals or support staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17075",
+      "text": "Perform allergen provocation tests such as nasal, conjunctival, bronchial, oral, food, or medication challenges.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17062",
+      "text": "Engage in self-directed learning and continuing education activities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17065",
+      "text": "Provide allergy or immunology consultation or education to physicians or other health care providers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17064",
+      "text": "Conduct laboratory or clinical research on allergy or immunology topics.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17061",
+      "text": "Present research findings at national meetings or in peer-reviewed journals.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 12,
+  "salary": 265930,
+  "demand": "Very High"
+}

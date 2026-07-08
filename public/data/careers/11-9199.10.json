@@ -1,0 +1,115 @@
+{
+  "code": "11-9199.10",
+  "title": "Wind Energy Development Managers",
+  "description": "Lead or manage the development and evaluation of potential wind energy business opportunities, including environmental studies, permitting, and proposals. May also manage construction of projects.",
+  "tasks": [
+    {
+      "id": "15836",
+      "text": "Coordinate or direct development, energy assessment, engineering, or construction activities to ensure that wind project needs and objectives are met.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15834",
+      "text": "Manage wind project costs to stay within budget limits.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15827",
+      "text": "Lead or support negotiations involving tax agreements or abatements, power purchase agreements, land use, or interconnection agreements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15838",
+      "text": "Create wind energy project plans, including project scope, goals, tasks, resources, schedules, costs, contingencies, or other project information.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15824",
+      "text": "Supervise the work of subcontractors or consultants to ensure quality and conformance to specifications or budgets.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15835",
+      "text": "Develop scope of work for wind project functions, such as design, site assessment, environmental studies, surveying, or field support services.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15830",
+      "text": "Provide verbal or written project status reports to project teams, management, subcontractors, customers, or owners.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15828",
+      "text": "Update schedules, estimates, forecasts, or budgets for wind projects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15837",
+      "text": "Prepare or assist in the preparation of applications for environmental, building, or other required permits.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15829",
+      "text": "Review or evaluate proposals or bids to make recommendations regarding awarding of contracts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15826",
+      "text": "Manage site assessments or environmental studies for wind fields.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15833",
+      "text": "Prepare wind project documentation, including diagrams or layouts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15831",
+      "text": "Review civil design, engineering, or construction technical documentation to ensure compliance with applicable government or industrial codes, standards, requirements, or regulations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15825",
+      "text": "Prepare requests for proposals (RFPs) for wind project construction or equipment acquisition.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15832",
+      "text": "Provide technical support for the design, construction, or commissioning of wind farm projects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 13,
+  "salary": 141900,
+  "demand": "Very High"
+}

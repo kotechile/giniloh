@@ -1,0 +1,129 @@
+{
+  "code": "47-2141.00",
+  "title": "Painters, Construction and Maintenance",
+  "description": "Paint walls, equipment, buildings, bridges, and other structural surfaces, using brushes, rollers, and spray guns. May remove old paint to prepare surface prior to painting. May mix colors or oils to obtain desired color or consistency.",
+  "tasks": [
+    {
+      "id": "11511",
+      "text": "Cover surfaces with dropcloths or masking tape and paper to protect surfaces during painting.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11516",
+      "text": "Read work orders or receive instructions from supervisors or homeowners to determine work requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11514",
+      "text": "Apply paint, stain, varnish, enamel, or other finishes to equipment, buildings, bridges, or other structures, using brushes, spray guns, or rollers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11512",
+      "text": "Fill cracks, holes, or joints with caulk, putty, plaster, or other fillers, using caulking guns or putty knives.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11523",
+      "text": "Smooth surfaces, using sandpaper, scrapers, brushes, steel wool, or sanding machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11517",
+      "text": "Erect scaffolding or swing gates, or set up ladders, to work above ground level.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11519",
+      "text": "Wash and treat surfaces with oil, turpentine, mildew remover, or other preparations, and sand rough spots to ensure that finishes will adhere properly.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11513",
+      "text": "Apply primers or sealers to prepare new surfaces, such as bare wood or metal, for finish coats.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11515",
+      "text": "Calculate amounts of required materials and estimate costs, based on surface measurements or work orders.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11521",
+      "text": "Remove old finishes by stripping, sanding, wire brushing, burning, or using water or abrasive blasting.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11518",
+      "text": "Remove fixtures such as pictures, door knobs, lamps, or electric switch covers prior to painting.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11525",
+      "text": "Use special finishing techniques such as sponging, ragging, layering, or faux finishing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11526",
+      "text": "Waterproof buildings, using waterproofers or caulking.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11522",
+      "text": "Select and purchase tools or finishes for surfaces to be covered, considering durability, ease of handling, methods of application, and customers' wishes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11520",
+      "text": "Mix and match colors of paint, stain, or varnish with oil or thinning and drying additives to obtain desired colors and consistencies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11524",
+      "text": "Polish final coats to specified finishes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11527",
+      "text": "Cut stencils and brush or spray lettering or decorations on surfaces.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 35,
+  "salary": 49400,
+  "demand": "High"
+}

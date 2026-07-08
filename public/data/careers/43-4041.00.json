@@ -1,0 +1,122 @@
+{
+  "code": "43-4041.00",
+  "title": "Credit Authorizers, Checkers, and Clerks",
+  "description": "Authorize credit charges against customers' accounts. Investigate history and credit standing of individuals or business establishments applying for credit. May interview applicants to obtain personal and financial data, determine credit worthiness, process applications, and notify customers of acceptance or rejection of credit.",
+  "tasks": [
+    {
+      "id": "23297",
+      "text": "Keep records of customers' charges and payments.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23298",
+      "text": "Compile and analyze credit information gathered by investigation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23299",
+      "text": "Obtain information about potential creditors from banks, credit bureaus, and other credit services, and provide reciprocal information if requested.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23300",
+      "text": "Interview credit applicants by telephone or in person to obtain personal and financial data needed to complete credit report.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23301",
+      "text": "Evaluate customers' computerized credit records and payment histories to decide whether to approve new credit, based on predetermined standards.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23302",
+      "text": "File sales slips in customers' ledgers for billing purposes.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23303",
+      "text": "Receive charge slips or credit applications by mail, or receive information from salespeople or merchants by telephone.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23304",
+      "text": "Mail charge statements to customers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23305",
+      "text": "Examine city directories and public records to verify residence property ownership, bankruptcies, liens, arrest record, or unpaid taxes of applicants.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23306",
+      "text": "Relay credit report information to subscribers by mail or by telephone.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23307",
+      "text": "Prepare credit cards or charge account plates.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23308",
+      "text": "Call customers to collect payment on delinquent accounts.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23309",
+      "text": "Consult with customers to resolve complaints or verify financial or credit transactions.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23310",
+      "text": "Contact former employers and other acquaintances to verify applicants' references, employment, health history, or social behavior.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23311",
+      "text": "Prepare reports of findings and recommendations.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23312",
+      "text": "Review individual or commercial customer files to identify and select delinquent accounts for collection.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 53,
+  "salary": 50080,
+  "demand": "Low"
+}

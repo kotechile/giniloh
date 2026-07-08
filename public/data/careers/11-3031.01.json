@@ -1,0 +1,164 @@
+{
+  "code": "11-3031.01",
+  "title": "Treasurers and Controllers",
+  "description": "Direct financial activities, such as planning, procurement, and investments for all or part of an organization.",
+  "tasks": [
+    {
+      "id": "8870",
+      "text": "Evaluate needs for procurement of funds and investment of surpluses and make appropriate recommendations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8858",
+      "text": "Delegate authority for the receipt, disbursement, banking, protection, and custody of funds, securities, and financial instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8864",
+      "text": "Develop and maintain relationships with banking, insurance, and external accounting personnel to facilitate financial activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20168",
+      "text": "Monitor financial activities and details, such as cash flow and reserve levels, to ensure that all legal and regulatory requirements are met.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8861",
+      "text": "Receive, record, and authorize requests for disbursements in accordance with company policies and procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8866",
+      "text": "Develop internal control policies, guidelines, and procedures for activities, such as budget administration, cash and credit management, and accounting.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8865",
+      "text": "Coordinate and direct the financial planning, budgeting, procurement, or investment activities of all or part of an organization.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8872",
+      "text": "Receive cash and checks and make deposits.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8856",
+      "text": "Prepare or direct preparation of financial statements, business activity reports, financial position forecasts, annual budgets, or reports required by regulatory agencies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8863",
+      "text": "Monitor and evaluate the performance of accounting and other financial staff, recommending and implementing personnel actions, such as promotions and dismissals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8867",
+      "text": "Analyze the financial details of past, present, and expected operations to identify development opportunities and areas where improvement is needed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8860",
+      "text": "Conduct or coordinate audits of company accounts and financial transactions to ensure compliance with state and federal requirements and statutes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8868",
+      "text": "Advise management on short-term and long-term financial objectives, policies, and actions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8859",
+      "text": "Maintain current knowledge of organizational policies and procedures, federal and state policies and directives, and current accounting standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8869",
+      "text": "Provide direction and assistance to other organizational units regarding accounting and budgeting policies and procedures and efficient control and utilization of financial resources.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8871",
+      "text": "Lead staff training and development in budgeting and financial management areas.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8855",
+      "text": "Prepare and file annual tax returns or prepare financial information so that outside accountants can complete tax returns.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8857",
+      "text": "Supervise employees performing financial reporting, accounting, billing, collections, payroll, and budgeting duties.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8874",
+      "text": "Perform tax planning work.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8873",
+      "text": "Compute, withhold, and account for all payroll deductions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20169",
+      "text": "Handle all aspects of employee insurance, benefits, and casualty programs, including monitoring changes in health insurance regulations and creating budgets for benefits and worker's compensation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8875",
+      "text": "Determine depreciation rates to apply to capitalized items and advise management on actions regarding the purchase, lease, or disposal of such items.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 16,
+  "salary": 166570,
+  "demand": "Very High"
+}

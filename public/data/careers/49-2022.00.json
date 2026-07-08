@@ -1,0 +1,283 @@
+{
+  "code": "49-2022.00",
+  "title": "Telecommunications Equipment Installers and Repairers, Except Line Installers",
+  "description": "Install, set up, rearrange, or remove switching, distribution, routing, and dialing equipment used in central offices or headends. Service or repair telephone, cable television, Internet, and other communications equipment on customers' property. May install communications equipment or communications wiring in buildings.",
+  "tasks": [
+    {
+      "id": "11655",
+      "text": "Demonstrate equipment to customers and explain its use, responding to any inquiries or complaints.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11649",
+      "text": "Test circuits and components of malfunctioning telecommunications equipment to isolate sources of malfunctions, using test meters, circuit diagrams, polarity probes, and other hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11650",
+      "text": "Test repaired, newly installed, or updated equipment to ensure that it functions properly and conforms to specifications, using test equipment and observation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11665",
+      "text": "Climb poles and ladders, use truck-mounted booms, and enter areas such as manholes and cable vaults to install, maintain, or inspect equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11660",
+      "text": "Assemble and install communication equipment such as data and telephone communication lines, wiring, switching equipment, wiring frames, power apparatus, computer systems, and networks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11668",
+      "text": "Run wires between components and to outside cable systems, connecting them to wires from telephone poles or underground cable accesses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11664",
+      "text": "Test connections to ensure that power supplies are adequate and that communications links function.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11648",
+      "text": "Note differences in wire and cable colors so that work can be performed correctly.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11652",
+      "text": "Inspect equipment on a regular basis to ensure proper functioning.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11662",
+      "text": "Collaborate with other workers to locate and correct malfunctions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11659",
+      "text": "Remove loose wires and other debris after work is completed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11653",
+      "text": "Repair or replace faulty equipment, such as defective and damaged telephones, wires, switching system components, and associated equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11674",
+      "text": "Maintain computer and manual records pertaining to facilities and equipment.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11661",
+      "text": "Communicate with bases, using telephones or two-way radios to receive instructions or technical advice, or to report equipment status.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11654",
+      "text": "Remove and remake connections to change circuit layouts, following work orders or diagrams.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11671",
+      "text": "Clean and maintain tools, test equipment, and motor vehicles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11677",
+      "text": "Perform database verifications, using computers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11658",
+      "text": "Request support from technical service centers when on-site procedures fail to solve installation or maintenance problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11656",
+      "text": "Analyze test readings, computer printouts, and trouble reports to determine equipment repair needs and required repair methods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11657",
+      "text": "Adjust or modify equipment to enhance equipment performance or to respond to customer requests.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11669",
+      "text": "Remove and replace plug-in circuit equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11666",
+      "text": "Refer to manufacturers' manuals to obtain maintenance instructions pertaining to specific malfunctions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11684",
+      "text": "Dig holes or trenches as necessary for equipment installation and access.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11663",
+      "text": "Review manufacturer's instructions, manuals, technical specifications, building permits, and ordinances to determine communication equipment requirements and procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11651",
+      "text": "Drive crew trucks to and from work areas.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11670",
+      "text": "Route and connect cables and lines to switches, switchboard equipment, and distributing frames, using wire-wrap guns or soldering irons to connect wires to terminals.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11667",
+      "text": "Designate cables available for use.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11673",
+      "text": "Diagnose and correct problems from remote locations, using special switchboards to find the sources of problems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11672",
+      "text": "Program computerized switches and switchboards to provide requested features.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11676",
+      "text": "Enter codes needed to correct electronic switching system programming.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11679",
+      "text": "Examine telephone transmission facilities to determine requirements for new or additional telephone services.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11682",
+      "text": "Measure distances from landmarks to identify exact installation sites for equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11675",
+      "text": "Install updated software and programs that maintain existing software or provide requested features, such as time-correlated call routing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11681",
+      "text": "Perform routine maintenance on equipment, including adjusting and lubricating components and painting worn or exposed areas.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11680",
+      "text": "Determine viability of sites through observation, and discuss site locations and construction requirements with customers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11685",
+      "text": "Install telephone station equipment, such as intercommunication systems, transmitters, receivers, relays, and ringers, and related apparatus, such as coin collectors, telephone booths, and switching-key equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11683",
+      "text": "Clean switches and replace contact points, using vacuum hoses, solvents, and hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11686",
+      "text": "Provide input into the design and manufacturing of new equipment.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11678",
+      "text": "Address special issues or situations, such as illegal or unauthorized use of equipment, or cases of electrical or acoustic shock.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 41,
+  "salary": 63890,
+  "demand": "High"
+}

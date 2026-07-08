@@ -1,0 +1,101 @@
+{
+  "code": "37-2021.00",
+  "title": "Pest Control Workers",
+  "description": "Apply or release chemical solutions or toxic gases and set traps to kill or remove pests and vermin that infest buildings and surrounding areas.",
+  "tasks": [
+    {
+      "id": "7974",
+      "text": "Record work activities performed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7975",
+      "text": "Inspect premises to identify infestation source and extent of damage to property, wall, or roof porosity and access to infested locations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20759",
+      "text": "Recommend treatment and prevention methods for pest problems to clients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7976",
+      "text": "Spray or dust chemical solutions, powders, or gases into rooms, onto clothing, furnishings, or wood, or over marshlands, ditches, or catch basins.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7977",
+      "text": "Clean work site after completion of job.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7979",
+      "text": "Drive truck equipped with power spraying equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20760",
+      "text": "Measure area dimensions requiring treatment, calculate fumigant requirements, and estimate cost for service.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7983",
+      "text": "Study preliminary reports or diagrams of infested area and determine treatment type required to eliminate and prevent recurrence of infestation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7978",
+      "text": "Direct, or assist other workers in, treatment or extermination processes to eliminate or control rodents, insects, or weeds.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7981",
+      "text": "Post warning signs and lock building doors to secure area to be fumigated.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7985",
+      "text": "Set mechanical traps, or place poisonous paste or bait in sewers, burrows, or ditches.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7982",
+      "text": "Cut or bore openings in building or surrounding concrete, access infested areas, insert nozzle, and inject pesticide to impregnate ground.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7986",
+      "text": "Clean and remove blockages from infested areas to facilitate spraying procedures and provide drainage, using brooms, mops, shovels, or rakes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 35,
+  "salary": 45250,
+  "demand": "High"
+}

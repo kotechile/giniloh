@@ -1,0 +1,108 @@
+{
+  "code": "17-2041.00",
+  "title": "Chemical Engineers",
+  "description": "Design chemical plant equipment and devise processes for manufacturing chemicals and products, such as gasoline, synthetic rubber, plastics, detergents, cement, paper, and pulp, by applying principles and technology of chemistry, physics, and engineering.",
+  "tasks": [
+    {
+      "id": "3552",
+      "text": "Develop safety procedures to be employed by workers operating equipment or working in close proximity to ongoing chemical reactions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18471",
+      "text": "Troubleshoot problems with chemical manufacturing processes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20955",
+      "text": "Monitor and analyze data from processes and experiments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18472",
+      "text": "Evaluate chemical equipment and processes to identify ways to optimize performance or to ensure compliance with safety and environmental regulations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3560",
+      "text": "Design and plan layout of equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3554",
+      "text": "Prepare estimate of production costs and production progress reports for management.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18473",
+      "text": "Perform tests and monitor performance of processes throughout stages of production to determine degree of control over variables such as temperature, density, specific gravity, and pressure.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3558",
+      "text": "Conduct research to develop new and improved chemical manufacturing processes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3553",
+      "text": "Determine most effective arrangement of operations such as mixing, crushing, heat transfer, distillation, and drying.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3557",
+      "text": "Develop processes to separate components of liquids or gases or generate electrical currents, using controlled chemical processes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3559",
+      "text": "Design measurement and control systems for chemical plants based on data collected in laboratory experiments and in pilot plant operations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3556",
+      "text": "Perform laboratory studies of steps in manufacture of new products and test proposed processes in small-scale operation, such as a pilot plant.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "24003",
+      "text": "Develop computer models of chemical processes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3555",
+      "text": "Direct activities of workers who operate or are engaged in constructing and improving absorption, evaporation, or electromagnetic equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 11,
+  "salary": 125040,
+  "demand": "Low"
+}

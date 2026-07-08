@@ -1,0 +1,17 @@
+{
+  "code": "21-1019.00",
+  "title": "Counselors, All Other",
+  "description": "All counselors not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Counselors, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 50860,
+  "demand": "Medium"
+}

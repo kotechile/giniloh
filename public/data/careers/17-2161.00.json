@@ -1,0 +1,150 @@
+{
+  "code": "17-2161.00",
+  "title": "Nuclear Engineers",
+  "description": "Conduct research on nuclear engineering projects or apply principles and theory of nuclear science to problems concerned with release, control, and use of nuclear energy and nuclear waste disposal.",
+  "tasks": [
+    {
+      "id": "5384",
+      "text": "Design or develop nuclear equipment, such as reactor cores, radiation shielding, or associated instrumentation or control mechanisms.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5380",
+      "text": "Monitor nuclear facility operations to identify any design, construction, or operation practices that violate safety regulations and laws or could jeopardize safe operations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5385",
+      "text": "Initiate corrective actions or order plant shutdowns in emergency situations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5379",
+      "text": "Examine accidents to obtain data for use in design of preventive measures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5389",
+      "text": "Direct operating or maintenance activities of nuclear power plants to ensure efficiency and conformity to safety standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5383",
+      "text": "Design or oversee construction or operation of nuclear reactors, power plants, or nuclear fuels reprocessing and reclamation systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19642",
+      "text": "Direct environmental compliance activities associated with nuclear plant operations or maintenance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5387",
+      "text": "Write operational instructions to be used in nuclear plant operation or nuclear fuel or waste handling and disposal.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20956",
+      "text": "Prepare technical reports of findings or recommendations, based on synthesized analyses of test results.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19643",
+      "text": "Prepare environmental impact statements, reports, or presentations for regulatory or other agencies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19641",
+      "text": "Develop or contribute to the development of plans to remediate or restore environments affected by nuclear radiation, such as waste disposal sites.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5388",
+      "text": "Conduct tests of nuclear fuel behavior and cycles or performance of nuclear machinery and equipment to optimize performance of existing plants.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19640",
+      "text": "Design fuel cycle models or processes to reduce the quantity of radioactive waste generated from nuclear activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20958",
+      "text": "Consult with other scientists to determine parameters of experimentation or suitability of analytical models.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5386",
+      "text": "Recommend preventive measures to be taken in the handling of nuclear technology, based on data obtained from operations monitoring or from evaluation of test results.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20959",
+      "text": "Discuss construction project proposals with interested parties, such as vendors, contractors, or nuclear facility review boards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5382",
+      "text": "Perform experiments that will provide information about acceptable methods of nuclear material usage, nuclear fuel reclamation, or waste disposal.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19639",
+      "text": "Conduct environmental studies on topics such as nuclear power generation, nuclear waste disposal, or nuclear weapon deployment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20957",
+      "text": "Design or direct nuclear research projects to develop, test, modify, or discover new uses for theoretical models.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5381",
+      "text": "Keep abreast of developments and changes in the nuclear field by reading technical journals or by independent study and research.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 8,
+  "salary": 133970,
+  "demand": "Low"
+}

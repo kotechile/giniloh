@@ -1,0 +1,94 @@
+{
+  "code": "29-1024.00",
+  "title": "Prosthodontists",
+  "description": "Diagnose, treat, rehabilitate, design, and fit prostheses that maintain oral function, health, and appearance for patients with clinical conditions associated with teeth, oral and maxillofacial tissues, or the jaw.",
+  "tasks": [
+    {
+      "id": "23996",
+      "text": "Examine patients to diagnose oral health conditions and diseases.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7743",
+      "text": "Fit prostheses to patients, making any necessary adjustments and modifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20246",
+      "text": "Replace missing teeth and associated oral structures with permanent fixtures, such as implant-supported prostheses, crowns and bridges, or removable fixtures, such as dentures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7745",
+      "text": "Measure and take impressions of patients' jaws and teeth to determine the shape and size of dental prostheses, using face bows, dental articulators, recording devices, and other materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7746",
+      "text": "Collaborate with general dentists, specialists, and other health professionals to develop solutions to dental and oral health concerns.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7744",
+      "text": "Design and fabricate dental prostheses, or supervise dental technicians and laboratory bench workers who construct the devices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7748",
+      "text": "Restore function and aesthetics to traumatic injury survivors, or to individuals with diseases or congenital disabilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7747",
+      "text": "Repair, reline, or rebase dentures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7749",
+      "text": "Use bonding technology on the surface of the teeth to change tooth shape or to close gaps.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7750",
+      "text": "Treat facial pain and jaw joint problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7751",
+      "text": "Place veneers onto teeth to conceal defects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7752",
+      "text": "Bleach discolored teeth to brighten and whiten them.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 29,
+  "salary": 311180,
+  "demand": "Low"
+}

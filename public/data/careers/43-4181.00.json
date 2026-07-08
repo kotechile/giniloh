@@ -1,0 +1,157 @@
+{
+  "code": "43-4181.00",
+  "title": "Reservation and Transportation Ticket Agents and Travel Clerks",
+  "description": "Make and confirm reservations for transportation or lodging, or sell transportation tickets. May check baggage and direct passengers to designated concourse, pier, or track; deliver tickets and contact individuals and groups to inform them of package tours; or provide tourists with travel or transportation information.",
+  "tasks": [
+    {
+      "id": "9758",
+      "text": "Examine passenger documentation to determine destinations and to assign boarding passes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9762",
+      "text": "Trace lost, delayed, or misdirected baggage for customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9760",
+      "text": "Check baggage and cargo and direct passengers to designated locations for loading.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9759",
+      "text": "Provide boarding or disembarking assistance to passengers needing special assistance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9757",
+      "text": "Confer with customers to determine their service requirements and travel preferences.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9761",
+      "text": "Announce arrival and departure information, using public address systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9754",
+      "text": "Determine whether space is available on travel dates requested by customers, assigning requested spaces when available.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9753",
+      "text": "Assemble and issue required documentation, such as tickets, travel insurance policies, or itineraries.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9756",
+      "text": "Maintain computerized inventories of available passenger space and provide information on space reserved or available.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9755",
+      "text": "Inform clients of essential travel information, such as travel times, transportation connections, or medical and visa requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9752",
+      "text": "Answer inquiries regarding information, such as schedules, accommodations, procedures, or policies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9749",
+      "text": "Plan routes, itineraries, and accommodation details, and compute fares and fees, using schedules, rate books, and computers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9750",
+      "text": "Make and confirm reservations for transportation and accommodations, using telephones, faxes, mail, and computers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20436",
+      "text": "Keep information facilities clean during operation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9764",
+      "text": "Provide clients with assistance in preparing required travel documents and forms.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9751",
+      "text": "Prepare customer invoices and accept payment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20437",
+      "text": "Open or close information facilities.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9766",
+      "text": "Provide customers with travel suggestions and information sources, such as guides, directories, brochures, or maps.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9767",
+      "text": "Contact customers or travel agents to advise them of travel conveyance changes or to confirm reservations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9763",
+      "text": "Promote particular destinations, tour packages, and other travel services.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9768",
+      "text": "Contact motel, hotel, resort, and travel operators to obtain current advertising literature.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 38,
+  "salary": 44390,
+  "demand": "High"
+}

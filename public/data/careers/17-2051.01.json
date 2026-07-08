@@ -1,0 +1,192 @@
+{
+  "code": "17-2051.01",
+  "title": "Transportation Engineers",
+  "description": "Develop plans for surface transportation projects, according to established engineering standards and state or federal construction policy. Prepare designs, specifications, or estimates for transportation facilities. Plan modifications of existing streets, highways, or freeways to improve traffic flow.",
+  "tasks": [
+    {
+      "id": "16323",
+      "text": "Design or prepare plans for new transportation systems or parts of systems, such as airports, commuter trains, highways, streets, bridges, drainage structures, or roadway lighting.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16320",
+      "text": "Check construction plans, design calculations, or cost estimations to ensure completeness, accuracy, or conformity to engineering standards or practices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16305",
+      "text": "Prepare administrative, technical, or statistical reports on traffic-operation matters, such as accidents, safety measures, or pedestrian volume or practices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16311",
+      "text": "Plan alteration or modification of existing transportation structures to improve safety or function.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16319",
+      "text": "Confer with contractors, utility companies, or government agencies to discuss plans, specifications, or work schedules.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16303",
+      "text": "Present data, maps, or other information at construction-related public hearings or meetings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16310",
+      "text": "Prepare final project layout drawings that include details such as stress calculations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16314",
+      "text": "Investigate traffic problems and recommend methods to improve traffic flow or safety.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16318",
+      "text": "Estimate transportation project costs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19612",
+      "text": "Design or engineer drainage, erosion, or sedimentation control systems for transportation projects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16307",
+      "text": "Evaluate traffic control devices or lighting systems to determine need for modification or expansion.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16309",
+      "text": "Prepare project budgets, schedules, or specifications for labor or materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16316",
+      "text": "Inspect completed transportation projects to ensure safety or compliance with applicable standards or regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16304",
+      "text": "Review development plans to determine potential traffic impact.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16306",
+      "text": "Evaluate transportation systems or traffic control devices or lighting systems to determine need for modification or expansion.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16321",
+      "text": "Analyze environmental impact statements for transportation projects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16322",
+      "text": "Supervise the maintenance or repair of transportation systems or system components.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16313",
+      "text": "Model transportation scenarios to evaluate the impacts of activities such as new development or to identify possible solutions to transportation problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19616",
+      "text": "Inspect completed transportation projects to ensure compliance with environmental regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16312",
+      "text": "Participate in contract bidding, negotiation, or administration.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19615",
+      "text": "Evaluate construction project materials for compliance with environmental standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16317",
+      "text": "Direct the surveying, staking, or laying-out of construction projects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19613",
+      "text": "Design transportation systems or structures with sustainable materials or products, such as porous pavement or bioretention structures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16315",
+      "text": "Investigate or test specific construction project materials to determine compliance to specifications or standards.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16308",
+      "text": "Develop or assist in the development of transportation-related computer software or computer processes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19614",
+      "text": "Develop plans to deconstruct damaged or obsolete roadways or other transportation structures in a manner that is environmentally sound or prepares the land for sustainable development.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 23,
+  "salary": 100840,
+  "demand": "Very High"
+}

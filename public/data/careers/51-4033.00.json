@@ -1,0 +1,136 @@
+{
+  "code": "51-4033.00",
+  "title": "Grinding, Lapping, Polishing, and Buffing Machine Tool Setters, Operators, and Tenders, Metal and Plastic",
+  "description": "Set up, operate, or tend grinding and related tools that remove excess material or burrs from surfaces, sharpen edges or corners, or buff, hone, or polish metal or plastic work pieces.",
+  "tasks": [
+    {
+      "id": "10140",
+      "text": "Inspect or measure finished workpieces to determine conformance to specifications, using measuring instruments, such as gauges or micrometers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10145",
+      "text": "Measure workpieces and lay out work, using precision measuring devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10143",
+      "text": "Observe machine operations to detect any problems, making necessary adjustments to correct problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10150",
+      "text": "Move machine controls to index workpieces, and to adjust machines for pre-selected operational settings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10147",
+      "text": "Study blueprints, work orders, or machining instructions to determine product specifications, tool requirements, and operational sequences.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10146",
+      "text": "Select machine tooling to be used, using knowledge of machine and production requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10148",
+      "text": "Mount and position tools in machine chucks, spindles, or other tool holding devices, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10149",
+      "text": "Activate machine start-up switches to grind, lap, hone, debar, shear, or cut workpieces, according to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10142",
+      "text": "Set up, operate, or tend grinding and related tools that remove excess material or burrs from surfaces, sharpen edges or corners, or buff, hone, or polish metal or plastic workpieces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10144",
+      "text": "Set and adjust machine controls according to product specifications, using knowledge of machine operation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10151",
+      "text": "Brush or spray lubricating compounds on workpieces, or turn valve handles and direct flow of coolant against tools and workpieces.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10141",
+      "text": "Lift and position workpieces, manually or with hoists, and secure them in hoppers or on machine tables, faceplates, or chucks, using clamps.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10156",
+      "text": "Repair or replace machine parts, using hand tools, or notify engineering personnel when corrective action is required.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10152",
+      "text": "Compute machine indexings and settings for specified dimensions and base reference points.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10157",
+      "text": "Maintain stocks of machine parts and machining tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10154",
+      "text": "Thread and hand-feed materials through machine cutters or abraders.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10155",
+      "text": "Adjust air cylinders and setting stops to set traverse lengths and feed arm strokes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10153",
+      "text": "Slide spacers between buffs on spindles to set spacing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 47,
+  "salary": 46550,
+  "demand": "Medium"
+}

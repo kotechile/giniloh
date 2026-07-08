@@ -1,0 +1,108 @@
+{
+  "code": "43-2021.00",
+  "title": "Telephone Operators",
+  "description": "Provide information by accessing alphabetical, geographical, or other directories. Assist customers with special billing requests, such as charges to a third party and credits or refunds for incorrectly dialed numbers or bad connections. May handle emergency calls and assist children or people with physical disabilities to make telephone calls.",
+  "tasks": [
+    {
+      "id": "13246",
+      "text": "Observe signal lights on switchboards, and dial or press buttons to make connections.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13247",
+      "text": "Operate telephone switchboards and systems to advance and complete connections, including those for local, long distance, pay telephone, mobile, person-to-person, and emergency calls.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13243",
+      "text": "Listen to customer requests, referring to alphabetical or geographical directories to answer questions and provide telephone information.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13257",
+      "text": "Update directory information.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13244",
+      "text": "Suggest and check alternate spellings, locations, or listing formats to customers lacking details or complete information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13251",
+      "text": "Perform clerical duties such as typing, proofreading, and sorting mail.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "13245",
+      "text": "Offer special assistance to persons such as those who are unable to dial or who are in emergency situations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13256",
+      "text": "Operate paging systems or other systems of bells or buzzers to notify recipients of incoming calls.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13250",
+      "text": "Monitor automated systems for placing collect calls and intervene for a callers needing assistance.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13253",
+      "text": "Interrupt busy lines if an emergency warrants.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13248",
+      "text": "Provide assistance for customers with special billing requests.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "13254",
+      "text": "Provide relay service for users who are deaf or hard of hearing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13258",
+      "text": "Keep records of calls placed and received, and of related toll charges.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "13255",
+      "text": "Promote company products, services, and savings plans when appropriate.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 41740,
+  "demand": "Low"
+}

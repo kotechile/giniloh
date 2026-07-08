@@ -1,0 +1,192 @@
+{
+  "code": "19-5012.00",
+  "title": "Occupational Health and Safety Technicians",
+  "description": "Collect data on work environments for analysis by occupational health and safety specialists. Implement and conduct evaluation of programs designed to limit chemical, physical, biological, and ergonomic risks to workers.",
+  "tasks": [
+    {
+      "id": "20249",
+      "text": "Evaluate situations or make determinations when a worker has refused to work on the grounds that danger or potential harm exists.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11083",
+      "text": "Supply, operate, or maintain personal protective equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19818",
+      "text": "Train workers in safety procedures related to green jobs, such as the use of fall protection devices or maintenance of proper ventilation during wind turbine construction.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11087",
+      "text": "Test workplaces for environmental hazards, such as exposure to radiation, chemical or biological hazards, or excessive noise.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11082",
+      "text": "Maintain all required environmental records and documentation.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "20253",
+      "text": "Provide consultation to organizations or agencies on the workplace application of safety principles, practices, or techniques.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20252",
+      "text": "Inspect fire suppression systems or portable fire systems to ensure proper working order.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20248",
+      "text": "Verify availability or monitor use of safety equipment, such as hearing protection or respirators.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20250",
+      "text": "Recommend corrective measures to be applied based on results of environmental contaminant analyses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11088",
+      "text": "Prepare or review specifications or orders for the purchase of safety equipment, ensuring that proper features are present and that items conform to health and safety standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11085",
+      "text": "Prepare or calibrate equipment used to collect or analyze samples.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20251",
+      "text": "Conduct worker studies to determine whether specific instances of disease or illness are job-related.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11098",
+      "text": "Plan emergency response drills.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11091",
+      "text": "Examine credentials, licenses, or permits to ensure compliance with licensing requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11096",
+      "text": "Review records or reports concerning laboratory results, staffing, floor plans, fire inspections, or sanitation to gather information for the development or enforcement of safety activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11093",
+      "text": "Educate the public about health issues or enforce health legislation to prevent disease, to promote health, or to help people understand health protection procedures and regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11097",
+      "text": "Prepare documents to be used in legal proceedings, testifying in such proceedings when necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19813",
+      "text": "Collect data regarding potential hazards from new equipment or products linked to green practices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11099",
+      "text": "Maintain logbooks of daily activities, including areas visited or activities performed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11100",
+      "text": "Help direct rescue or firefighting operations in the event of a fire or an explosion.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19817",
+      "text": "Test or balance newly installed HVAC systems to determine whether indoor air quality standards are met.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11101",
+      "text": "Confer with schools, state authorities, or community groups to develop health standards or programs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19814",
+      "text": "Collect data related to ecological or human health risks at brownfield sites.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11095",
+      "text": "Conduct interviews to obtain information or evidence regarding communicable diseases or violations of health or sanitation regulations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19816",
+      "text": "Perform tests to identify any potential hazards related to recycled products used at green building sites.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19815",
+      "text": "Examine practices at green building sites to determine whether adherence to green building standards alters risks to workers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 37,
+  "salary": 61560,
+  "demand": "Medium"
+}

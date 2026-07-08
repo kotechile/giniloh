@@ -1,0 +1,94 @@
+{
+  "code": "13-2082.00",
+  "title": "Tax Preparers",
+  "description": "Prepare tax returns for individuals or small businesses.",
+  "tasks": [
+    {
+      "id": "7358",
+      "text": "Compute taxes owed or overpaid, using adding machines or personal computers, and complete entries on forms, following tax form instructions and tax tables.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "7360",
+      "text": "Use all appropriate adjustments, deductions, and credits to keep clients' taxes to a minimum.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7363",
+      "text": "Furnish taxpayers with sufficient information and advice to ensure correct tax form completion.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7361",
+      "text": "Interview clients to obtain additional information on taxable income and deductible expenses and allowances.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7359",
+      "text": "Prepare or assist in preparing simple to complex tax returns for individuals or small businesses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7362",
+      "text": "Review financial records, such as income statements and documentation of expenditures to determine forms needed to prepare tax returns.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "7366",
+      "text": "Check data input or verify totals on forms prepared by others to detect errors in arithmetic, data entry, or procedures.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "20364",
+      "text": "Explain federal and state tax laws to individuals and companies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20363",
+      "text": "Answer questions and provide future tax planning to clients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7364",
+      "text": "Consult tax law handbooks or bulletins to determine procedures for preparation of atypical returns.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7365",
+      "text": "Calculate form preparation fees according to return complexity and processing time required.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21165",
+      "text": "Schedule appointments with clients.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 54,
+  "salary": 54920,
+  "demand": "Medium"
+}

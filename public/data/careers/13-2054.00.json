@@ -1,0 +1,220 @@
+{
+  "code": "13-2054.00",
+  "title": "Financial Risk Specialists",
+  "description": "Analyze and measure exposure to credit and market risk threatening the assets, earning capacity, or economic state of an organization. May make recommendations to limit risk.",
+  "tasks": [
+    {
+      "id": "21605",
+      "text": "Analyze areas of potential risk to the assets, earning capacity, or success of organizations.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21606",
+      "text": "Analyze new legislation to determine impact on risk exposure.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21607",
+      "text": "Conduct statistical analyses to quantify risk, using statistical analysis software or econometric models.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21608",
+      "text": "Confer with traders to identify and communicate risks associated with specific trading strategies or positions.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21609",
+      "text": "Consult financial literature to ensure use of the latest models or statistical techniques.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21610",
+      "text": "Contribute to development of risk management systems.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21611",
+      "text": "Determine potential environmental impacts of new products or processes on long-term growth and profitability.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21612",
+      "text": "Develop contingency plans to deal with emergencies.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21613",
+      "text": "Develop or implement risk-assessment models or methodologies.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21614",
+      "text": "Devise scenario analyses reflecting possible severe market events.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21615",
+      "text": "Devise systems or processes to monitor validity of risk assessments.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21616",
+      "text": "Document, and ensure communication of, key risks.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21617",
+      "text": "Draw charts and graphs, using computer spreadsheets, to illustrate technical reports.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21618",
+      "text": "Evaluate and compare the relative quality of various securities in a given industry.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21619",
+      "text": "Evaluate the risks and benefits involved in implementing green building technologies.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21620",
+      "text": "Evaluate the risks related to green investments, such as renewable energy company stocks.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21621",
+      "text": "Gather risk-related data from internal or external resources.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21622",
+      "text": "Identify key risks and mitigating factors of potential investments, such as asset types and values, legal and ownership structures, professional reputations, customer bases, or industry segments.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21623",
+      "text": "Inform financial decisions by analyzing financial information to forecast business, industry, or economic conditions.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21624",
+      "text": "Interpret data on price, yield, stability, future investment-risk trends, economic influences, and other factors affecting investment programs.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21625",
+      "text": "Maintain input or data quality of risk management systems.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21626",
+      "text": "Meet with clients to answer queries on subjects such as risk exposure, market scenarios, or values-at-risk calculations.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21627",
+      "text": "Monitor developments in the fields of industrial technology, business, finance, and economic theory.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21628",
+      "text": "Prepare plans of action for investment, using financial analyses.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21629",
+      "text": "Produce reports or presentations that outline findings, explain risk positions, or recommend changes.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21630",
+      "text": "Provide statistical modeling advice to other departments.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21631",
+      "text": "Recommend investments and investment timing to companies, investment firm staff, or the public.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21632",
+      "text": "Recommend ways to control or reduce risk.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21633",
+      "text": "Review or draft risk disclosures for offer documents.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21634",
+      "text": "Track, measure, or report on aspects of market risk for traded issues.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 30,
+  "salary": 117330,
+  "demand": "Medium"
+}

@@ -1,0 +1,87 @@
+{
+  "code": "33-3051.04",
+  "title": "Customs and Border Protection Officers",
+  "description": "Investigate and inspect persons, common carriers, goods, and merchandise, arriving in or departing from the United States or between states to detect violations of immigration and customs laws and regulations.",
+  "tasks": [
+    {
+      "id": "9450",
+      "text": "Examine immigration applications, visas, and passports and interview persons to determine eligibility for admission, residence, and travel in the U.S.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9451",
+      "text": "Detain persons found to be in violation of customs or immigration laws and arrange for legal action, such as deportation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9454",
+      "text": "Inspect cargo, baggage, and personal articles entering or leaving U.S. for compliance with revenue laws and U.S. customs regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9452",
+      "text": "Locate and seize contraband, undeclared merchandise, and vehicles, aircraft, or boats that contain such merchandise.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9453",
+      "text": "Interpret and explain laws and regulations to travelers, prospective immigrants, shippers, and manufacturers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9456",
+      "text": "Institute civil and criminal prosecutions and cooperate with other law enforcement agencies in the investigation and prosecution of those in violation of immigration or customs laws.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9457",
+      "text": "Testify regarding decisions at immigration appeals or in federal court.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9455",
+      "text": "Record and report job-related activities, findings, transactions, violations, discrepancies, and decisions.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "9458",
+      "text": "Determine duty and taxes to be paid on goods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9459",
+      "text": "Collect samples of merchandise for examination, appraisal, or testing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9460",
+      "text": "Investigate applications for duty refunds and petition for remission or mitigation of penalties when warranted.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 76210,
+  "demand": "Very High"
+}

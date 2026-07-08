@@ -1,0 +1,129 @@
+{
+  "code": "15-2031.00",
+  "title": "Operations Research Analysts",
+  "description": "Formulate and apply mathematical modeling and other optimizing methods to develop and interpret information that assists management with decisionmaking, policy formulation, or other managerial functions. May collect and analyze data and develop decision support software, services, or products. May develop and supply optimal time, cost, or logistics networks for program evaluation, review, or implementation.",
+  "tasks": [
+    {
+      "id": "20952",
+      "text": "Present the results of mathematical modeling and data analysis to management or other end users.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7382",
+      "text": "Define data requirements, and gather and validate information, applying judgment and statistical tests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7380",
+      "text": "Perform validation and testing of models to ensure adequacy, and reformulate models, as necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7384",
+      "text": "Prepare management reports defining and evaluating problems and recommending solutions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7378",
+      "text": "Collaborate with others in the organization to ensure successful implementation of chosen problem solutions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7377",
+      "text": "Formulate mathematical or simulation models of problems, relating constants and variables, restrictions, alternatives, conflicting objectives, and their numerical parameters.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7387",
+      "text": "Observe the current system in operation, and gather and analyze information about each of the component problems, using a variety of sources.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7379",
+      "text": "Analyze information obtained from management to conceptualize and define operational problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7383",
+      "text": "Study and analyze information about alternative courses of action to determine which plan will offer the best outcomes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7381",
+      "text": "Collaborate with senior managers and decision makers to identify and solve a variety of problems and to clarify management objectives.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7386",
+      "text": "Specify manipulative or computational methods to be applied to models.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7388",
+      "text": "Design, conduct, and evaluate experimental operational models in cases where models cannot be developed from existing data.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7389",
+      "text": "Develop and apply time and cost networks to plan, control, and review large projects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7385",
+      "text": "Break systems into their components, assign numerical values to each component, and examine the mathematical relationships between them.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20953",
+      "text": "Educate staff in the use of mathematical models.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7390",
+      "text": "Develop business methods and procedures, including accounting systems, file systems, office systems, logistics systems, and production schedules.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23986",
+      "text": "Review research literature.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 18,
+  "salary": 88940,
+  "demand": "High"
+}

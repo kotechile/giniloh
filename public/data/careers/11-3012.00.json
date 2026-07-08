@@ -1,0 +1,136 @@
+{
+  "code": "11-3012.00",
+  "title": "Administrative Services Managers",
+  "description": "Plan, direct, or coordinate one or more administrative services of an organization, such as records and information management, mail distribution, and other office support services.",
+  "tasks": [
+    {
+      "id": "21",
+      "text": "Prepare and review operational reports and schedules to ensure accuracy and efficiency.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20",
+      "text": "Set goals and deadlines for the department.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23",
+      "text": "Acquire, distribute and store supplies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22",
+      "text": "Analyze internal processes and recommend and implement procedural or policy changes to improve operations, such as supply changes or the disposal of records.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "30",
+      "text": "Conduct classes to teach procedures to staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "24",
+      "text": "Plan, administer, and control budgets for contracts, equipment, and supplies.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "26",
+      "text": "Hire and terminate clerical and administrative personnel.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19",
+      "text": "Direct or coordinate the supportive services department of a business, agency, or organization.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21262",
+      "text": "Communicate with and provide guidance for external vendors and service providers to ensure the organization, department, or work unit's business needs are met.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21263",
+      "text": "Develop operational standards and procedures for the work unit or department.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21264",
+      "text": "Establish work procedures or schedules to organize the daily work of administrative staff.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21265",
+      "text": "Learn to operate new office technologies as they are developed and implemented.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21266",
+      "text": "Manage paper or electronic filing systems by recording information, updating paperwork, or maintaining documents, such as attendance records or correspondence.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21267",
+      "text": "Meet with other departmental leaders to establish organizational goals, strategic plans, and objectives, as well as make decisions about personnel, resources, and space or equipment needs.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21268",
+      "text": "Oversee payroll functions, such as maintaining timekeeping information and processing and submitting payroll.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21269",
+      "text": "Read through contracts, regulations, and procedural guidelines to ensure comprehension and compliance.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21270",
+      "text": "Represent work unit at meetings or conferences and serve as liaison for requests or complaints.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21271",
+      "text": "Supervise administrative staff and provide training and orientation to new staff.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 19,
+  "salary": 114130,
+  "demand": "High"
+}

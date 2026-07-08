@@ -1,0 +1,241 @@
+{
+  "code": "51-4193.00",
+  "title": "Plating Machine Setters, Operators, and Tenders, Metal and Plastic",
+  "description": "Set up, operate, or tend plating machines to coat metal or plastic products with chromium, zinc, copper, cadmium, nickel, or other metal to protect or decorate surfaces. Typically, the product being coated is immersed in molten metal or an electrolytic solution.",
+  "tasks": [
+    {
+      "id": "10311",
+      "text": "Immerse workpieces in coating solutions or liquid metal or plastic for specified times.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10326",
+      "text": "Adjust dials to regulate flow of current and voltage supplied to terminals to control plating processes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10309",
+      "text": "Inspect coated or plated areas for defects, such as air bubbles or uneven coverage.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10312",
+      "text": "Set up, operate, or tend plating or coating machines to coat metal or plastic products with chromium, zinc, copper, cadmium, nickel, or other metal to protect or decorate surfaces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10319",
+      "text": "Observe gauges to ensure that machines are operating properly, making adjustments or stopping machines when problems occur.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10318",
+      "text": "Remove objects from solutions at periodic intervals and observe objects to verify conformance to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10316",
+      "text": "Maintain production records.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "10342",
+      "text": "Remove excess materials or impurities from objects, using air hoses or grinding machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10328",
+      "text": "Examine completed objects to determine thicknesses of metal deposits, or measure thicknesses by using instruments such as micrometers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10327",
+      "text": "Rinse coated objects in cleansing liquids and dry them with cloths, centrifugal driers, or by tumbling in sawdust-filled barrels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10323",
+      "text": "Determine sizes and compositions of objects to be plated, and amounts of electrical current and time required.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10314",
+      "text": "Test machinery to ensure that it is operating properly.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10329",
+      "text": "Measure or weigh materials, using rulers, calculators, and scales.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10331",
+      "text": "Measure, mark, and mask areas to be excluded from plating.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10310",
+      "text": "Immerse objects to be coated or plated into cleaning solutions, or spray objects with conductive solutions to prepare them for plating.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10335",
+      "text": "Read production schedules to determine setups of equipment and machines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10330",
+      "text": "Suspend objects, such as parts or molds from cathode rods, or negative terminals, and immerse objects in plating solutions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10324",
+      "text": "Suspend sticks or pieces of plating metal from anodes, or positive terminals, and immerse metal in plating solutions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10317",
+      "text": "Adjust controls to set temperatures of coating substances and speeds of machines and equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10325",
+      "text": "Monitor and measure thicknesses of electroplating on component parts to verify conformance to specifications, using micrometers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10315",
+      "text": "Operate hoists to place workpieces onto machine feed carriages or spindles.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10313",
+      "text": "Position and feed materials into processing machines, by hand or by using automated equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10337",
+      "text": "Position objects to be plated in frames, or suspend them from positive or negative terminals of power supplies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10345",
+      "text": "Operate sandblasting equipment to roughen and clean surfaces of workpieces.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10322",
+      "text": "Clean and maintain equipment, using water hoses and scrapers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10343",
+      "text": "Clean workpieces, using wire brushes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10332",
+      "text": "Mix and test solutions, and turn valves to fill tanks with solutions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10340",
+      "text": "Replace worn parts and adjust equipment components, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10333",
+      "text": "Place plated or coated materials on racks and transfer them to ovens to dry for specified periods of time.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10338",
+      "text": "Measure and set stops, rolls, brushes, and guides on automatic feeders and conveying equipment or coating machines, using micrometers, rules, and hand tools.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10320",
+      "text": "Position containers to receive parts, and load or unload materials in containers, using dollies or handtrucks.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10321",
+      "text": "Perform equipment maintenance, such as cleaning tanks and lubricating moving parts of conveyors.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10339",
+      "text": "Preheat workpieces in ovens.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 48,
+  "salary": 43960,
+  "demand": "Medium"
+}

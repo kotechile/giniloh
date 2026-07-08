@@ -1,0 +1,157 @@
+{
+  "code": "29-2081.00",
+  "title": "Opticians, Dispensing",
+  "description": "Design, measure, fit, and adapt lenses and frames for client according to written optical prescription or specification. Assist client with inserting, removing, and caring for contact lenses. Assist client with selecting frames. Measure customer for size of eyeglasses and coordinate frames with facial and eye measurements and optical prescription. Prepare work order for optical laboratory containing instructions for grinding and mounting lenses in frames. Verify exactness of finished lens spectacles. Adjust frame and lens position to fit client. May shape or reshape frames. Includes contact lens opticians.",
+  "tasks": [
+    {
+      "id": "4201",
+      "text": "Measure clients' bridge and eye size, temple length, vertex distance, pupillary distance, and optical centers of eyes, using measuring devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4202",
+      "text": "Verify that finished lenses are ground to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4210",
+      "text": "Evaluate prescriptions in conjunction with clients' vocational and avocational visual requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "4207",
+      "text": "Recommend specific lenses, lens coatings, and frames to suit client needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4204",
+      "text": "Assist clients in selecting frames according to style and color, and ensure that frames are coordinated with facial and eye measurements and optical prescriptions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4205",
+      "text": "Maintain records of customer prescriptions, work orders, and payments.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "4209",
+      "text": "Heat, shape, or bend plastic or metal frames to adjust eyeglasses to fit clients, using pliers and hands.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4213",
+      "text": "Show customers how to insert, remove, and care for their contact lenses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4212",
+      "text": "Determine clients' current lens prescriptions, when necessary, using lensometers or lens analyzers and clients' eyeglasses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "4203",
+      "text": "Prepare work orders and instructions for grinding lenses and fabricating eyeglasses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4215",
+      "text": "Obtain a customer's previous record, or verify a prescription with the examining optometrist or ophthalmologist.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "4208",
+      "text": "Sell goods such as contact lenses, spectacles, sunglasses, and goods related to eyes, in general.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4217",
+      "text": "Fabricate lenses to meet prescription specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4206",
+      "text": "Perform administrative duties, such as tracking inventory and sales, submitting patient insurance information, and performing simple bookkeeping.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4219",
+      "text": "Assemble eyeglasses by cutting and edging lenses, and fitting the lenses into frames.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4211",
+      "text": "Instruct clients in how to wear and care for eyeglasses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4220",
+      "text": "Supervise the training of student opticians.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18551",
+      "text": "Order and purchase frames and lenses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4218",
+      "text": "Grind lens edges, or apply coatings to lenses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4214",
+      "text": "Repair damaged frames.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4216",
+      "text": "Arrange and maintain displays of optical merchandise.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 45,
+  "salary": 47260,
+  "demand": "Medium"
+}

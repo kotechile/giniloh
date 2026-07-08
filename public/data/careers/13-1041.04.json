@@ -1,0 +1,101 @@
+{
+  "code": "13-1041.04",
+  "title": "Government Property Inspectors and Investigators",
+  "description": "Investigate or inspect government property to ensure compliance with contract agreements and government regulations.",
+  "tasks": [
+    {
+      "id": "12890",
+      "text": "Prepare correspondence, reports of inspections or investigations, or recommendations for action.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12891",
+      "text": "Examine records, reports, or other documents to establish facts or detect discrepancies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20843",
+      "text": "Inspect government property, such as construction sites or public housing, to ensure compliance with contract specifications or legal requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20844",
+      "text": "Investigate alleged license or permit violations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12894",
+      "text": "Inspect manufactured or processed products to ensure compliance with contract specifications or legal requirements.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12893",
+      "text": "Collect, identify, evaluate, or preserve case evidence.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12900",
+      "text": "Submit samples of products to government laboratories for testing, as required.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12898",
+      "text": "Inspect government-owned equipment or materials in the possession of private contractors to ensure compliance with contracts or regulations or to prevent misuse.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20845",
+      "text": "Investigate applications for special licenses or permits.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12899",
+      "text": "Recommend legal or administrative action to protect government property.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12896",
+      "text": "Testify in court or at administrative proceedings concerning investigation findings.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12895",
+      "text": "Coordinate with or assist law enforcement agencies in matters of mutual concern.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12892",
+      "text": "Monitor investigations of suspected offenders to ensure that they are conducted in accordance with constitutional requirements.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 31,
+  "salary": 80730,
+  "demand": "Very High"
+}

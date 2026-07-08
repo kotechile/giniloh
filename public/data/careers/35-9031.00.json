@@ -1,0 +1,150 @@
+{
+  "code": "35-9031.00",
+  "title": "Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop",
+  "description": "Welcome patrons, seat them at tables or in lounge, and help ensure quality of facilities and service.",
+  "tasks": [
+    {
+      "id": "2296",
+      "text": "Provide guests with menus.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2297",
+      "text": "Greet guests and seat them at tables or in waiting areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2302",
+      "text": "Maintain contact with kitchen staff, management, serving staff, and customers to ensure that dining details are handled properly and customers' concerns are addressed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18749",
+      "text": "Assign patrons to tables suitable for their needs and according to rotation so that servers receive an appropriate number of seatings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18750",
+      "text": "Speak with patrons to ensure satisfaction with food and service, to respond to complaints, or to make conversation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18752",
+      "text": "Inspect dining and serving areas to ensure cleanliness and proper setup.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2307",
+      "text": "Supervise and coordinate activities of dining room staff to ensure that patrons receive prompt and courteous service.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18751",
+      "text": "Answer telephone calls and respond to inquiries or transfer calls.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21070",
+      "text": "Assist other restaurant workers by serving food and beverages, or by bussing tables.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18753",
+      "text": "Inspect restrooms for cleanliness and availability of supplies, and clean restrooms when necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18754",
+      "text": "Take and prepare to-go orders.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2303",
+      "text": "Inform patrons of establishment specialties and features.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2301",
+      "text": "Receive and record patrons' dining reservations.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "2305",
+      "text": "Operate cash registers to accept payments for food and beverages.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2304",
+      "text": "Direct patrons to coatrooms and waiting areas, such as lounges.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2306",
+      "text": "Prepare cash receipts after establishments close, and make bank deposits.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2309",
+      "text": "Order or requisition supplies and equipment for tables and serving stations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2310",
+      "text": "Hire, train, and supervise food and beverage service staff.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2312",
+      "text": "Confer with other staff to help plan establishments' menus.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2313",
+      "text": "Perform marketing and advertising services.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 35,
+  "salary": 31200,
+  "demand": "Very High"
+}

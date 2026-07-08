@@ -1,0 +1,178 @@
+{
+  "code": "17-2199.08",
+  "title": "Robotics Engineers",
+  "description": "Research, design, develop, or test robotic applications.",
+  "tasks": [
+    {
+      "id": "16512",
+      "text": "Review or approve designs, calculations, or cost estimates.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16517",
+      "text": "Process or interpret signals or sensor data.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16521",
+      "text": "Debug robotics programs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21057",
+      "text": "Build, configure, or test robots or robotic applications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16516",
+      "text": "Create back-ups of robot programs or parameters.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16511",
+      "text": "Provide technical support for robotic systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16522",
+      "text": "Design end-of-arm tooling.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16530",
+      "text": "Design robotic systems, such as automatic vehicle control, autonomous vehicles, advanced displays, advanced sensing, robotic platforms, computer vision, or telematics systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16509",
+      "text": "Supervise technologists, technicians, or other engineers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16528",
+      "text": "Design software to control robotic systems for applications, such as military defense or manufacturing.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16523",
+      "text": "Conduct research on robotic technology to create new robotic systems or system capabilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16519",
+      "text": "Investigate mechanical failures or unexpected maintenance problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16510",
+      "text": "Integrate robotics with peripherals, such as welders, controllers, or other equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21058",
+      "text": "Evaluate robotic systems or prototypes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16520",
+      "text": "Install, calibrate, operate, or maintain robots.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16525",
+      "text": "Conduct research into the feasibility, design, operation, or performance of robotic mechanisms, components, or systems, such as planetary rovers, multiple mobile robots, reconfigurable robots, or man-machine interactions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16514",
+      "text": "Document robotic application development, maintenance, or changes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16527",
+      "text": "Design automated robotic systems to increase production volume or precision in high-throughput operations, such as automated ribonucleic acid (RNA) analysis or sorting, moving, or stacking production materials.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "16515",
+      "text": "Write algorithms or programming code for ad hoc robotic applications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16513",
+      "text": "Make system device lists or event timing charts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19667",
+      "text": "Design or program robotics systems for environmental clean-up applications to minimize human exposure to toxic or hazardous materials or to improve the quality or speed of clean-up operations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16518",
+      "text": "Plan mobile robot paths and teach path plans to robots.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19668",
+      "text": "Design robotics applications for manufacturers of green products, such as wind turbines or solar panels, to increase production time, eliminate waste, or reduce costs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16524",
+      "text": "Automate assays on laboratory robotics.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 29,
+  "salary": 122930,
+  "demand": "High"
+}

@@ -1,0 +1,164 @@
+{
+  "code": "11-3111.00",
+  "title": "Compensation and Benefits Managers",
+  "description": "Plan, direct, or coordinate compensation and benefits activities of an organization.",
+  "tasks": [
+    {
+      "id": "3267",
+      "text": "Direct preparation and distribution of written and verbal information to inform employees of benefits, compensation, and personnel policies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3272",
+      "text": "Design, evaluate, and modify benefits policies to ensure that programs are current, competitive, and in compliance with legal requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3276",
+      "text": "Fulfill all reporting requirements of all relevant government rules and regulations, including the Employee Retirement Income Security Act (ERISA).",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3273",
+      "text": "Analyze compensation policies, government regulations, and prevailing wage rates to develop competitive compensation plan.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3271",
+      "text": "Identify and implement benefits to increase the quality of life for employees by working with brokers and researching benefits issues.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3285",
+      "text": "Manage the design and development of tools to assist employees in benefits selection, and to guide managers through compensation decisions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3268",
+      "text": "Administer, direct, and review employee benefit programs, including the integration of benefit programs following mergers and acquisitions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3275",
+      "text": "Mediate between benefits providers and employees, such as by assisting in handling employees' benefits-related questions or taking suggestions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3270",
+      "text": "Plan, direct, supervise, and coordinate work activities of subordinates and staff relating to employment, compensation, labor relations, and employee relations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3283",
+      "text": "Prepare detailed job descriptions and classification systems and define job levels and families, in partnership with other managers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3279",
+      "text": "Develop methods to improve employment policies, processes, and practices, and recommend changes to management.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3274",
+      "text": "Formulate policies, procedures and programs for recruitment, testing, placement, classification, orientation, benefits and compensation, and labor and industrial relations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3290",
+      "text": "Study legislation, arbitration decisions, and collective bargaining contracts to assess industry trends.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3269",
+      "text": "Plan and conduct new-employee orientations to foster positive attitude toward organizational objectives.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3287",
+      "text": "Prepare budgets for personnel operations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3280",
+      "text": "Negotiate bargaining agreements.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3288",
+      "text": "Prepare personnel forecasts to project employment needs.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3277",
+      "text": "Maintain records and compile statistical reports concerning personnel-related data, such as hires, transfers, performance appraisals, and absenteeism rates.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3278",
+      "text": "Analyze statistical data and reports to identify and determine causes of personnel problems, and develop recommendations for improvement of organization's personnel policies and practices.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3289",
+      "text": "Contract with vendors to provide employee services, such as food services, transportation, or relocation service.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3266",
+      "text": "Advise management on such matters as equal employment opportunity, sexual harassment, and discrimination.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3282",
+      "text": "Represent organization at personnel-related hearings and investigations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 18,
+  "salary": 149230,
+  "demand": "Low"
+}

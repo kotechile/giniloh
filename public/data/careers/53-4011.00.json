@@ -1,0 +1,108 @@
+{
+  "code": "53-4011.00",
+  "title": "Locomotive Engineers",
+  "description": "Drive electric, diesel-electric, steam, or gas-turbine-electric locomotives to transport passengers or freight. Interpret train orders, electronic or manual signals, and railroad rules and regulations.",
+  "tasks": [
+    {
+      "id": "12752",
+      "text": "Interpret train orders, signals, or railroad rules and regulations that govern the operation of locomotives.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12754",
+      "text": "Confer with conductors or traffic control center personnel via radiophones to issue or receive information concerning stops, delays, or oncoming trains.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12753",
+      "text": "Receive starting signals from conductors and use controls such as throttles or air brakes to drive electric, diesel-electric, steam, or gas turbine-electric locomotives.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12750",
+      "text": "Monitor gauges or meters that measure speed, amperage, battery charge, or air pressure in brake lines or in main reservoirs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12751",
+      "text": "Observe tracks to detect obstructions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12758",
+      "text": "Call out train signals to assistants to verify meanings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12755",
+      "text": "Operate locomotives to transport freight or passengers between stations or to assemble or disassemble trains within rail yards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12757",
+      "text": "Check to ensure that brake examination tests are conducted at shunting stations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12756",
+      "text": "Respond to emergency conditions or breakdowns, following applicable safety procedures and rules.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12759",
+      "text": "Inspect locomotives to verify adequate fuel, sand, water, or other supplies before each run or to check for mechanical problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12762",
+      "text": "Inspect locomotives after runs to detect damaged or defective equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12760",
+      "text": "Prepare reports regarding any problems encountered, such as accidents, signaling problems, unscheduled stops, or delays.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12761",
+      "text": "Check to ensure that documentation, such as procedure manuals or logbooks, are in the driver's cab and available for staff use.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12764",
+      "text": "Monitor train loading procedures to ensure that freight or rolling stock are loaded or unloaded without damage.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 46,
+  "salary": 81410,
+  "demand": "Medium"
+}

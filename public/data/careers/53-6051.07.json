@@ -1,0 +1,108 @@
+{
+  "code": "53-6051.07",
+  "title": "Transportation Vehicle, Equipment and Systems Inspectors, Except Aviation",
+  "description": "Inspect and monitor transportation equipment, vehicles, or systems to ensure compliance with regulations and safety standards.",
+  "tasks": [
+    {
+      "id": "14569",
+      "text": "Inspect vehicles or other equipment for evidence of abuse, damage, or mechanical malfunction.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14570",
+      "text": "Inspect vehicles or equipment to ensure compliance with rules, standards, or regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14573",
+      "text": "Inspect repairs to transportation vehicles or equipment to ensure that repair work was performed properly.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19929",
+      "text": "Identify modifications to engines, fuel systems, emissions control equipment, or other vehicle systems to determine the impact of modifications on inspection procedures or conclusions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19926",
+      "text": "Conduct remote inspections of motor vehicles, using handheld controllers and remotely directed vehicle inspection devices.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14574",
+      "text": "Prepare reports on investigations or inspections and actions taken.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14575",
+      "text": "Issue notices and recommend corrective actions when infractions or problems are found.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19927",
+      "text": "Conduct visual inspections of emission control equipment and smoke emitted from gasoline or diesel vehicles.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14572",
+      "text": "Conduct vehicle or transportation equipment tests, using diagnostic equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14580",
+      "text": "Investigate incidents or violations, such as delays, accidents, and equipment failures.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14579",
+      "text": "Review commercial vehicle logs, shipping papers, or driver and equipment records to detect any problems or to ensure compliance with regulations.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "19924",
+      "text": "Attach onboard diagnostics (OBD) scanner cables to vehicles to conduct emissions inspections.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14576",
+      "text": "Investigate complaints regarding safety violations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14577",
+      "text": "Examine carrier operating rules, employee qualification guidelines, or carrier training and testing programs for compliance with regulations or safety standards.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 32,
+  "salary": 92100,
+  "demand": "Low"
+}

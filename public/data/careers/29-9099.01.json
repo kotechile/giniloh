@@ -1,0 +1,262 @@
+{
+  "code": "29-9099.01",
+  "title": "Midwives",
+  "description": "Provide prenatal care and childbirth assistance.",
+  "tasks": [
+    {
+      "id": "17466",
+      "text": "Monitor maternal condition during labor by checking vital signs, monitoring uterine contractions, or performing physical examinations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17479",
+      "text": "Identify tubal and ectopic pregnancies and refer patients for treatments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17486",
+      "text": "Provide necessary medical care for infants at birth, including emergency care such as resuscitation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17472",
+      "text": "Conduct ongoing prenatal health assessments, tracking changes in physical and emotional health.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17481",
+      "text": "Monitor fetal growth and well-being through heartbeat detection, body measurement, and palpation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17474",
+      "text": "Establish and follow emergency or contingency plans for mothers and newborns.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17478",
+      "text": "Identify, monitor, or treat pregnancy-related problems such as hypertension, gestational diabetes, pre-term labor, or retarded fetal growth.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17483",
+      "text": "Obtain complete health and medical histories from patients including medical, surgical, reproductive, or mental health histories.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17476",
+      "text": "Evaluate patients' laboratory and medical records, requesting assistance from other practitioners when necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17482",
+      "text": "Maintain documentation of all patients' contacts, reviewing and updating records as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17470",
+      "text": "Assess the status of post-date pregnancies to determine treatments and interventions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17468",
+      "text": "Set up or monitor the administration of oxygen or medications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17489",
+      "text": "Suture perineal lacerations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17484",
+      "text": "Perform post-partum health assessments of mothers and babies at regular intervals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17490",
+      "text": "Test patients' hemoglobin, hematocrit, and blood glucose levels.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17493",
+      "text": "Counsel women regarding the nutritional requirements of pregnancy.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17485",
+      "text": "Provide information about the physical and emotional processes involved in the pregnancy, labor, birth, and postpartum periods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17488",
+      "text": "Refer patients to specialists for procedures such as ultrasounds or biophysical profiles.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17465",
+      "text": "Assist maternal patients to find physical positions that will facilitate childbirth.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17469",
+      "text": "Assess birthing environments to ensure cleanliness, safety, and the availability of appropriate supplies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17495",
+      "text": "Incorporate research findings into practice as appropriate.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17475",
+      "text": "Estimate patients' due dates and re-evaluate as necessary based on examination results.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17467",
+      "text": "Provide comfort and relaxation measures for mothers in labor through interventions such as massage, breathing techniques, hydrotherapy, or music.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17487",
+      "text": "Provide, or refer patients to other providers for, education or counseling on topics such as genetic testing, newborn care, contraception, or breastfeeding.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23926",
+      "text": "Provide patients with contraceptive and family planning information.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17471",
+      "text": "Collect specimens for use in laboratory tests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17480",
+      "text": "Inform patients of how to prepare and supply birth sites.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17477",
+      "text": "Respond to breech birth presentations by applying methods such as exercises or external version.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23927",
+      "text": "Perform annual gynecologic exams, including pap smears and breast exams.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17473",
+      "text": "Develop, implement, or evaluate individualized plans for midwifery care.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17498",
+      "text": "Recommend the use of vitamin and mineral supplements to enhance the health of patients and children.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17496",
+      "text": "Provide information about community health and social resources.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17491",
+      "text": "Compile and evaluate clinical practice statistics.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17499",
+      "text": "Treat patients' symptoms with alternative health care methods such as herbs or hydrotherapy.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17492",
+      "text": "Complete birth certificates.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17494",
+      "text": "Collaborate in research studies.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 21,
+  "salary": 65790,
+  "demand": "Medium"
+}

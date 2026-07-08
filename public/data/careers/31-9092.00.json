@@ -1,0 +1,150 @@
+{
+  "code": "31-9092.00",
+  "title": "Medical Assistants",
+  "description": "Perform administrative and certain clinical duties under the direction of a physician. Administrative duties may include scheduling appointments, maintaining medical records, billing, and coding information for insurance purposes. Clinical duties may include taking and recording vital signs and medical histories, preparing patients for examination, drawing blood, and administering medications as directed by physician.",
+  "tasks": [
+    {
+      "id": "2024",
+      "text": "Interview patients to obtain medical information and measure their vital signs, weight, and height.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2033",
+      "text": "Clean and sterilize instruments and dispose of contaminated supplies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2026",
+      "text": "Record patients' medical history, vital statistics, or information such as test results in medical records.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2029",
+      "text": "Explain treatment procedures, medications, diets, or physicians' instructions to patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2032",
+      "text": "Prepare treatment rooms for patient examinations, keeping the rooms neat and clean.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2028",
+      "text": "Collect blood, tissue, or other laboratory specimens, log the specimens, and prepare them for testing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2025",
+      "text": "Show patients to examination rooms and prepare them for the physician.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2030",
+      "text": "Help physicians examine and treat patients, handing them instruments or materials or performing such tasks as giving injections or removing sutures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2040",
+      "text": "Perform routine laboratory tests and sample analyses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2036",
+      "text": "Greet and log in patients arriving at office or clinic.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2038",
+      "text": "Perform general office duties, such as answering telephones, taking dictation, or completing insurance forms.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2027",
+      "text": "Prepare and administer medications as directed by a physician.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2031",
+      "text": "Authorize drug refills and provide prescription information to pharmacies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2035",
+      "text": "Change dressings on wounds.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2034",
+      "text": "Schedule appointments for patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2039",
+      "text": "Inventory and order medical, lab, or office supplies or equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2037",
+      "text": "Contact medical facilities or departments to schedule patients for tests or admission.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2043",
+      "text": "Operate x-ray, electrocardiogram (EKG), or other equipment to administer routine diagnostic tests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2041",
+      "text": "Set up medical laboratory equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2042",
+      "text": "Keep financial records or perform other bookkeeping duties, such as handling credit or collections or mailing monthly statements to patients.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 20,
+  "salary": 45690,
+  "demand": "Very High"
+}

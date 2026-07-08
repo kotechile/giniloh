@@ -1,0 +1,171 @@
+{
+  "code": "39-3031.00",
+  "title": "Ushers, Lobby Attendants, and Ticket Takers",
+  "description": "Assist patrons at entertainment events by performing duties, such as collecting admission tickets and passes from patrons, assisting in finding seats, searching for lost articles, and helping patrons locate such facilities as restrooms and telephones.",
+  "tasks": [
+    {
+      "id": "5096",
+      "text": "Greet patrons attending entertainment events.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20764",
+      "text": "Sell or collect admission tickets, passes, or facility memberships from patrons at entertainment events.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20765",
+      "text": "Clean facilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5103",
+      "text": "Settle seating disputes or help solve other customer concerns.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5097",
+      "text": "Examine tickets or passes to verify authenticity, using criteria such as color or date issued.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5100",
+      "text": "Provide assistance with patrons' special needs, such as helping those with wheelchairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5098",
+      "text": "Guide patrons to exits or provide other instructions or assistance in case of emergency.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5102",
+      "text": "Refuse admittance to undesirable persons or persons without tickets or passes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20766",
+      "text": "Assist patrons by giving directions to points in or outside of the facility or providing information about local attractions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5104",
+      "text": "Assist patrons in finding seats, lighting the way with flashlights, if necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5099",
+      "text": "Maintain order and ensure adherence to safety rules.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5105",
+      "text": "Search for lost articles or for parents of lost children.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5107",
+      "text": "Operate refreshment stands during intermission or obtain refreshments for press box patrons during performances.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5106",
+      "text": "Count and record number of tickets collected.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "20767",
+      "text": "Lead tours and answer visitors' questions about the exhibits.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5112",
+      "text": "Manage inventory or sale of artist merchandise.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5108",
+      "text": "Verify credentials of patrons desiring entrance into press box and permit only authorized persons to enter.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5109",
+      "text": "Distribute programs to patrons.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5113",
+      "text": "Give door checks to patrons who are temporarily leaving establishments.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5114",
+      "text": "Manage informational kiosks or displays of event signs or posters.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5111",
+      "text": "Work with others to change advertising displays.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5115",
+      "text": "Page individuals wanted at the box office.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20768",
+      "text": "Schedule or manage staff, such as volunteer usher corps.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 33,
+  "salary": 32910,
+  "demand": "High"
+}

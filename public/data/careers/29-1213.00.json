@@ -1,0 +1,136 @@
+{
+  "code": "29-1213.00",
+  "title": "Dermatologists",
+  "description": "Diagnose and treat diseases relating to the skin, hair, and nails. May perform both medical and dermatological surgery functions.",
+  "tasks": [
+    {
+      "id": "17094",
+      "text": "Conduct complete skin examinations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17092",
+      "text": "Diagnose and treat pigmented lesions such as common acquired nevi, congenital nevi, dysplastic nevi, Spitz nevi, blue nevi, or melanoma.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17091",
+      "text": "Perform incisional biopsies to diagnose melanoma.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17090",
+      "text": "Perform skin surgery to improve appearance, make early diagnoses, or control diseases such as skin cancer.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17093",
+      "text": "Counsel patients on topics such as the need for annual dermatologic screenings, sun protection, skin cancer awareness, or skin and lymph node self-examinations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17095",
+      "text": "Diagnose and treat skin conditions such as acne, dandruff, athlete's foot, moles, psoriasis, or skin cancer.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17078",
+      "text": "Record patients' health histories.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17085",
+      "text": "Recommend diagnostic tests based on patients' histories and physical examination findings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17089",
+      "text": "Prescribe hormonal agents or topical treatments such as contraceptives, spironolactone, antiandrogens, oral corticosteroids, retinoids, benzoyl peroxide, or antibiotics.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17084",
+      "text": "Conduct or order diagnostic tests such as chest radiographs (x-rays), microbiologic tests, or endocrinologic tests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17081",
+      "text": "Read current literature, talk with colleagues, and participate in professional organizations or conferences to keep abreast of developments in dermatology.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17079",
+      "text": "Provide dermatologic consultation to other health professionals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17077",
+      "text": "Refer patients to other specialists, as needed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17082",
+      "text": "Instruct interns or residents in diagnosis and treatment of dermatological diseases.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17087",
+      "text": "Provide therapies such as intralesional steroids, chemical peels, or comodo removal to treat age spots, sun damage, rough skin, discolored skin, or oily skin.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17088",
+      "text": "Provide dermabrasion or laser abrasion to treat atrophic scars, elevated scars, or other skin conditions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17086",
+      "text": "Conduct clinical or basic research.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17083",
+      "text": "Evaluate patients to determine eligibility for cosmetic procedures such as liposuction, laser resurfacing, or microdermabrasion.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 8,
+  "salary": 328730,
+  "demand": "Low"
+}

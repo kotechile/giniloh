@@ -1,0 +1,185 @@
+{
+  "code": "17-2199.09",
+  "title": "Nanosystems Engineers",
+  "description": "Design, develop, or supervise the production of materials, devices, or systems of unique molecular or macromolecular composition, applying principles of nanoscale physics and electrical, chemical, or biological engineering.",
+  "tasks": [
+    {
+      "id": "16540",
+      "text": "Provide scientific or technical guidance or expertise to scientists, engineers, technologists, technicians, or others, using knowledge of chemical, analytical, or biological processes as applied to micro and nanoscale systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16532",
+      "text": "Supervise technologists or technicians engaged in nanotechnology research or production.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16546",
+      "text": "Conduct research related to a range of nanotechnology topics, such as packaging, heat transfer, fluorescence detection, nanoparticle dispersion, hybrid systems, liquid systems, nanocomposites, nanofabrication, optoelectronics, or nanolithography.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "16533",
+      "text": "Synthesize, process, or characterize nanomaterials, using advanced tools or techniques.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16537",
+      "text": "Prepare reports, deliver presentations, or participate in program review activities to communicate engineering results or recommendations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16542",
+      "text": "Design or conduct tests of new nanotechnology products, processes, or systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16545",
+      "text": "Create designs or prototypes for nanosystem applications, such as biomedical delivery systems or atomic force microscopes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16531",
+      "text": "Write proposals to secure external funding or to partner with other companies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16536",
+      "text": "Generate high-resolution images or measure force-distance curves, using techniques such as atomic force microscopy.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16539",
+      "text": "Develop processes or identify equipment needed for pilot or commercial nanoscale scale production.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16535",
+      "text": "Provide technical guidance or support to customers on topics such as nanosystem start-up, maintenance, or use.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16541",
+      "text": "Engineer production processes for specific nanotechnology applications, such as electroplating, nanofabrication, or epoxy.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19669",
+      "text": "Apply nanotechnology to improve the performance or reduce the environmental impact of energy products, such as fuel cells or solar cells.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16534",
+      "text": "Identify new applications for existing nanotechnologies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16544",
+      "text": "Design or engineer nanomaterials, nanodevices, nano-enabled products, or nanosystems, using three-dimensional computer-aided design (CAD) software.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19671",
+      "text": "Design nano-enabled products with reduced toxicity, increased durability, or improved energy efficiency.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16543",
+      "text": "Coordinate or supervise the work of suppliers or vendors in the designing, building, or testing of nanosystem devices, such as lenses or probes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19670",
+      "text": "Design nano-based manufacturing processes to minimize water, chemical, or energy use, as well as to reduce waste production.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19673",
+      "text": "Design nanosystems with components such as nanocatalysts or nanofiltration devices to clean specific pollutants from hazardous waste sites.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16538",
+      "text": "Prepare nanotechnology-related invention disclosures or patent applications.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19677",
+      "text": "Reengineer nanomaterials to improve biodegradability.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19676",
+      "text": "Integrate nanotechnology with antimicrobial properties into products, such as household or medical appliances, to reduce the development of bacteria or other microbes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19674",
+      "text": "Develop catalysis or other green chemistry methods to synthesize nanomaterials, such as nanotubes, nanocrystals, nanorods, or nanowires.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19672",
+      "text": "Design nanoparticle catalysts to detect or remove chemical or other pollutants from water, soil, or air.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19675",
+      "text": "Develop green building nanocoatings, such as self-cleaning, anti-stain, depolluting, anti-fogging, anti-icing, antimicrobial, moisture-resistant, or ultraviolet protectant coatings.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 22,
+  "salary": 122930,
+  "demand": "High"
+}

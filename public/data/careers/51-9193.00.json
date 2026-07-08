@@ -1,0 +1,136 @@
+{
+  "code": "51-9193.00",
+  "title": "Cooling and Freezing Equipment Operators and Tenders",
+  "description": "Operate or tend equipment such as cooling and freezing units, refrigerators, batch freezers, and freezing tunnels, to cool or freeze products, food, blood plasma, and chemicals.",
+  "tasks": [
+    {
+      "id": "8544",
+      "text": "Record temperatures, amounts of materials processed, or test results on report forms.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "8543",
+      "text": "Monitor pressure gauges, ammeters, flowmeters, thermometers, or products, and adjust controls to maintain specified conditions, such as feed rate, product consistency, temperature, air pressure, and machine speed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8545",
+      "text": "Read dials and gauges on panel control boards to ascertain temperatures, alkalinities, and densities of mixtures, and turn valves to obtain specified mixtures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8547",
+      "text": "Start machinery, such as pumps, feeders, or conveyors, and turn valves to heat, admit, or transfer products, refrigerants, or mixes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8546",
+      "text": "Correct machinery malfunctions by performing actions such as removing jams, and inform supervisors of malfunctions as necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8548",
+      "text": "Assemble equipment, and attach pipes, fittings, or valves, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8553",
+      "text": "Measure or weigh specified amounts of ingredients or materials, and load them into tanks, vats, hoppers, or other equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8542",
+      "text": "Adjust machine or freezer speed and air intake to obtain desired consistency and amount of product.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8550",
+      "text": "Weigh packages and adjust freezer air valves or switches on filler heads to obtain specified amounts of product in each container.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8557",
+      "text": "Inspect and flush lines with solutions or steam, and spray equipment with sterilizing solutions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8554",
+      "text": "Load and position wrapping paper, sticks, bags, or cartons into dispensing machines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8559",
+      "text": "Sample and test product characteristics such as specific gravity, acidity, and sugar content, using hydrometers, pH meters, or refractometers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8552",
+      "text": "Start agitators to blend contents, or start beater, scraper, and expeller blades to mix contents with air and prevent sticking.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8555",
+      "text": "Insert forming fixtures, and start machines that cut frozen products into measured portions or specified shapes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8556",
+      "text": "Place or position containers into equipment, and remove containers after completion of cooling or freezing processes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8549",
+      "text": "Scrape, dislodge, or break excess frost, ice, or frozen product from equipment to prevent accumulation, using hands and hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8560",
+      "text": "Activate mechanical rakes to regulate flow of ice from storage bins to vats.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8551",
+      "text": "Stir material with spoons or paddles to mix ingredients or allow even cooling and prevent coagulation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 41330,
+  "demand": "Low"
+}

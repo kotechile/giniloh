@@ -1,0 +1,17 @@
+{
+  "code": "55-2011.00",
+  "title": "First-Line Supervisors of Air Crew Members",
+  "description": "Supervise and coordinate the activities of air crew members. Supervisors may also perform the same activities as the workers they supervise.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to First-Line Supervisors of Air Crew Members.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 53181,
+  "demand": "Medium"
+}

@@ -1,0 +1,220 @@
+{
+  "code": "13-1081.01",
+  "title": "Logistics Engineers",
+  "description": "Design or analyze operational solutions for projects such as transportation optimization, network modeling, process and methods analysis, cost containment, capacity enhancement, routing and shipment optimization, or information management.",
+  "tasks": [
+    {
+      "id": "19997",
+      "text": "Identify cost-reduction or process-improvement logistic opportunities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15876",
+      "text": "Analyze or interpret logistics data involving customer service, forecasting, procurement, manufacturing, inventory, transportation, or warehousing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19999",
+      "text": "Prepare logistic strategies or conceptual designs for production facilities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15875",
+      "text": "Conduct logistics studies or analyses, such as time studies, zero-base analyses, rate analyses, network analyses, flow-path analyses, or supply chain analyses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19996",
+      "text": "Develop logistic metrics, internal analysis tools, or key performance indicators for business units.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15870",
+      "text": "Identify or develop business rules or standard operating procedures to streamline operating processes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15863",
+      "text": "Interview key staff or tour facilities to identify efficiency-improvement, cost-reduction, or service-delivery opportunities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15880",
+      "text": "Apply logistics modeling techniques to address issues, such as operational process improvement or facility design or layout.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15865",
+      "text": "Design plant distribution centers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15867",
+      "text": "Review contractual commitments, customer specifications, or related information to determine logistics or support requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19995",
+      "text": "Evaluate the use of inventory tracking technology, Web-based warehousing software, or intelligent conveyor systems to maximize plant or distribution center efficiency.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15861",
+      "text": "Propose logistics solutions for customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15872",
+      "text": "Develop or maintain cost estimates, forecasts, or cost models.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15868",
+      "text": "Prepare or validate documentation on automated logistics or maintenance-data reporting or management information systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20006",
+      "text": "Provide logistical facility or capacity planning analyses for distribution or transportation functions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15873",
+      "text": "Determine feasibility of designing new facilities or modifying existing facilities, based on factors such as cost, available space, schedule, technical requirements, or ergonomics.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20000",
+      "text": "Design comprehensive supply chains that minimize environmental impacts or costs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20003",
+      "text": "Create models or scenarios to predict the impact of changing circumstances, such as fuel costs, road pricing, energy taxes, or carbon emissions legislation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15874",
+      "text": "Determine logistics support requirements, such as facility details, staffing needs, or safety or maintenance plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15866",
+      "text": "Develop specifications for equipment, tools, facility layouts, or material-handling systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15877",
+      "text": "Provide logistics technology or information for effective and efficient support of product, equipment, or system manufacturing or service.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15879",
+      "text": "Evaluate effectiveness of current or future logistical processes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15864",
+      "text": "Direct the work of logistics analysts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19998",
+      "text": "Evaluate the use of technologies, such as global positioning systems (GPS), radio-frequency identification (RFID), route navigation software, or satellite linkup systems, to improve transportation efficiency.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20005",
+      "text": "Determine requirements for compliance with environmental certification standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20007",
+      "text": "Develop or document procedures to minimize or mitigate carbon output resulting from the movement of materials or products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20002",
+      "text": "Conduct environmental audits for logistics activities, such as storage, distribution, or transportation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20001",
+      "text": "Develop or document reverse logistics management processes to ensure maximal efficiency of product recycling, reuse, or final disposal.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20004",
+      "text": "Review global, national, or regional transportation or logistics reports for ways to improve efficiency or minimize the environmental impact of logistics activities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20008",
+      "text": "Assess the environmental impact or energy efficiency of logistics activities, using carbon mitigation software.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 23,
+  "salary": 82320,
+  "demand": "High"
+}

@@ -1,0 +1,157 @@
+{
+  "code": "29-1131.00",
+  "title": "Veterinarians",
+  "description": "Diagnose, treat, or research diseases and injuries of animals. Includes veterinarians who conduct research and development, inspect livestock, or care for pets and companion animals.",
+  "tasks": [
+    {
+      "id": "4107",
+      "text": "Treat sick or injured animals by prescribing medication, setting bones, dressing wounds, or performing surgery.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4108",
+      "text": "Inoculate animals against various diseases, such as rabies or distemper.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4106",
+      "text": "Examine animals to detect and determine the nature of diseases or injuries.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4109",
+      "text": "Collect body tissue, feces, blood, urine, or other body fluids for examination and analysis.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4110",
+      "text": "Operate diagnostic equipment, such as radiographic or ultrasound equipment, and interpret the resulting images.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4112",
+      "text": "Educate the public about diseases that can be spread from animals to humans.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20412",
+      "text": "Counsel clients about the deaths of their pets or about euthanasia decisions for their pets.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18532",
+      "text": "Advise animal owners regarding sanitary measures, feeding, general care, medical conditions, or treatment options.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4115",
+      "text": "Euthanize animals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18533",
+      "text": "Attend lectures, conferences, or continuing education courses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4113",
+      "text": "Train or supervise workers who handle or care for animals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18534",
+      "text": "Perform administrative or business management tasks, such as scheduling appointments, accepting payments from clients, budgeting, or maintaining business records.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4123",
+      "text": "Plan or execute animal nutrition or reproduction programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4117",
+      "text": "Conduct postmortem studies and analyses to determine the causes of animals' deaths.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4121",
+      "text": "Specialize in a particular type of treatment, such as dentistry, pathology, nutrition, surgery, microbiology, or internal medicine.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4119",
+      "text": "Direct the overall operations of animal hospitals, clinics, or mobile services to farms.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4122",
+      "text": "Inspect and test horses, sheep, poultry, or other animals to detect the presence of communicable diseases.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "4116",
+      "text": "Establish or conduct quarantine or testing procedures that prevent the spread of diseases to other animals or to humans and that comply with applicable government regulations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4124",
+      "text": "Research diseases to which animals could be susceptible.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4114",
+      "text": "Provide care to a wide range of animals or specialize in a particular species, such as horses or exotic birds.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4126",
+      "text": "Determine the effects of drug therapies, antibiotics, or new surgical techniques by testing them on animals.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 24,
+  "salary": 130100,
+  "demand": "Medium"
+}

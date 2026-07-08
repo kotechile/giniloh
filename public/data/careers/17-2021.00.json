@@ -1,0 +1,108 @@
+{
+  "code": "17-2021.00",
+  "title": "Agricultural Engineers",
+  "description": "Apply knowledge of engineering technology and biological science to agricultural problems concerned with power and machinery, electrification, structures, soil and water conservation, and processing of agricultural products.",
+  "tasks": [
+    {
+      "id": "5336",
+      "text": "Prepare reports, sketches, working drawings, specifications, proposals, and budgets for proposed sites or systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5325",
+      "text": "Visit sites to observe environmental problems, to consult with contractors, or to monitor construction activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5337",
+      "text": "Meet with clients, such as district or regional councils, farmers, and developers, to discuss their needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5331",
+      "text": "Discuss plans with clients, contractors, consultants, and other engineers so that they can be evaluated and necessary changes made.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5327",
+      "text": "Test agricultural machinery and equipment to ensure adequate performance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5334",
+      "text": "Plan and direct construction of rural electric-power distribution systems, and irrigation, drainage, and flood control systems for soil and water conservation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5329",
+      "text": "Provide advice on water quality and issues related to pollution management, river control, and ground and surface water resources.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5328",
+      "text": "Design structures for crop storage, animal shelter and loading, and animal and crop processing, and supervise their construction.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5330",
+      "text": "Conduct educational programs that provide farmers or farm cooperative members with information that can help them improve agricultural productivity.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5338",
+      "text": "Design sensing, measuring, and recording devices, and other instrumentation used to study plant or animal life.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5326",
+      "text": "Design agricultural machinery components and equipment, using computer-aided design (CAD) technology.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5333",
+      "text": "Design and supervise environmental and land reclamation projects in agriculture and related industries.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5335",
+      "text": "Design food processing plants and related mechanical systems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5332",
+      "text": "Supervise food processing or manufacturing plant operations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 7,
+  "salary": 98590,
+  "demand": "Low"
+}

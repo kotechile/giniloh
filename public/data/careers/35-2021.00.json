@@ -1,0 +1,227 @@
+{
+  "code": "35-2021.00",
+  "title": "Food Preparation Workers",
+  "description": "Perform a variety of food preparation duties other than cooking, such as preparing cold foods and shellfish, slicing meat, and brewing coffee or tea.",
+  "tasks": [
+    {
+      "id": "18728",
+      "text": "Clean and sanitize work areas, equipment, utensils, dishes, or silverware.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2204",
+      "text": "Assist cooks and kitchen staff with various tasks as needed, and provide cooks with needed items.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18730",
+      "text": "Take and record temperature of food and food storage areas, such as refrigerators and freezers.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "2210",
+      "text": "Carry food supplies, equipment, and utensils to and from storage and work areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2208",
+      "text": "Remove trash and clean kitchen garbage containers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2197",
+      "text": "Store food in designated containers and storage areas to prevent spoilage.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2203",
+      "text": "Weigh or measure ingredients.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18734",
+      "text": "Vacuum dining area and sweep and mop kitchen floor.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18732",
+      "text": "Inform supervisors when equipment is not working properly and when food and supplies are getting low, and order needed items.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18731",
+      "text": "Wash, peel, and cut various foods, such as fruits and vegetables, to prepare for cooking or serving.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18729",
+      "text": "Prepare a variety of foods, such as meats, vegetables, or desserts, according to customers' orders or supervisors' instructions, following approved procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21005",
+      "text": "Assemble meal trays with foods in accordance with patients' diets.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2207",
+      "text": "Stock cupboards and refrigerators, and tend salad bars and buffet meals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2213",
+      "text": "Use manual or electric appliances to clean, peel, slice, and trim foods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2217",
+      "text": "Load dishes, glasses, and tableware into dishwashing machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2200",
+      "text": "Portion and wrap food, or place it directly on plates for service to patrons.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2220",
+      "text": "Add cutlery, napkins, food, and other items to trays on assembly lines in hospitals, cafeterias, airline kitchens, and similar establishments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2201",
+      "text": "Place food trays over food warmers for immediate service, or store them in refrigerated storage cabinets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2209",
+      "text": "Prepare and serve a variety of beverages, such as coffee, tea, and soft drinks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2221",
+      "text": "Mix ingredients for green salads, molded fruit salads, vegetable salads, and pasta salads.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2206",
+      "text": "Receive and store food supplies, equipment, and utensils in refrigerators, cupboards, and other storage areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2214",
+      "text": "Stir and strain soups and sauces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2211",
+      "text": "Make special dressings and sauces as condiments for sandwiches.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2212",
+      "text": "Scrape leftovers from dishes into garbage containers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2215",
+      "text": "Distribute food to waiters and waitresses to serve to customers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18733",
+      "text": "Operate cash register, handle money, and give correct change.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2222",
+      "text": "Distribute menus to hospital patients, collect diet sheets, and deliver food trays and snacks to nursing units or directly to patients.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2199",
+      "text": "Package take-out foods or serve food to customers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2219",
+      "text": "Cut, slice or grind meat, poultry, and seafood to prepare for cooking.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2218",
+      "text": "Butcher and clean fowl, fish, poultry, and shellfish to prepare for cooking or serving.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2216",
+      "text": "Keep records of the quantities of food used.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    }
+  ],
+  "risk_score": 47,
+  "salary": 35320,
+  "demand": "Very High"
+}

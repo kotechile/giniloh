@@ -1,0 +1,108 @@
+{
+  "code": "17-3022.00",
+  "title": "Civil Engineering Technologists and Technicians",
+  "description": "Apply theory and principles of civil engineering in planning, designing, and overseeing construction and maintenance of structures and facilities under the direction of engineering staff or physical scientists.",
+  "tasks": [
+    {
+      "id": "1461",
+      "text": "Calculate dimensions, square footage, profile and component specifications, and material quantities, using calculator or computer.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1464",
+      "text": "Read and review project blueprints and structural specifications to determine dimensions of structure or system and material requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1462",
+      "text": "Draft detailed dimensional drawings and design layouts for projects to ensure conformance to specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1466",
+      "text": "Confer with supervisor to determine project details such as plan preparation, acceptance testing, and evaluation of field conditions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1463",
+      "text": "Analyze proposed site factors and design maps, graphs, tracings, and diagrams to illustrate findings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1465",
+      "text": "Prepare reports and document project activities and data.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1470",
+      "text": "Report maintenance problems occurring at project site to supervisor and negotiate changes to resolve system conflicts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1467",
+      "text": "Inspect project site and evaluate contractor work to detect design malfunctions and ensure conformance to design specifications and applicable codes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1471",
+      "text": "Conduct materials test and analysis, using tools and equipment and applying engineering knowledge.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1469",
+      "text": "Develop plans and estimate costs for installation of systems, utilization of facilities, or construction of structures.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20965",
+      "text": "Develop project budgets by estimating the cost of project activities.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1468",
+      "text": "Plan and conduct field surveys to locate new sites and analyze details of project sites.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1472",
+      "text": "Respond to public suggestions and complaints.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20966",
+      "text": "Negotiate with contractors on prices for new contracts or modifications to existing contracts.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 18,
+  "salary": 64950,
+  "demand": "Medium"
+}

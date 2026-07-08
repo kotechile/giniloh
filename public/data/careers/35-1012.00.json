@@ -1,0 +1,192 @@
+{
+  "code": "35-1012.00",
+  "title": "First-Line Supervisors of Food Preparation and Serving Workers",
+  "description": "Directly supervise and coordinate activities of workers engaged in preparing and serving food.",
+  "tasks": [
+    {
+      "id": "2145",
+      "text": "Resolve customer complaints regarding food service.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2146",
+      "text": "Train workers in food preparation, and in service, sanitation, and safety procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2150",
+      "text": "Assign duties, responsibilities, and work stations to employees in accordance with work requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2157",
+      "text": "Present bills and accept payments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18714",
+      "text": "Perform various financial activities, such as cash handling, deposit preparation, and payroll.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18715",
+      "text": "Supervise and participate in kitchen and dining area cleaning activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2155",
+      "text": "Recommend measures for improving work procedures and worker performance to increase service quality and enhance job safety.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2154",
+      "text": "Specify food portions and courses, production and time sequences, and workstation and equipment arrangements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2148",
+      "text": "Control inventories of food, equipment, smallware, and liquor, and report shortages to designated personnel.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18716",
+      "text": "Observe and evaluate workers and work procedures to ensure quality standards and service, and complete disciplinary write-ups.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2153",
+      "text": "Analyze operational problems, such as theft and wastage, and establish procedures to alleviate these problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2147",
+      "text": "Inspect supplies, equipment, and work areas to ensure efficient service and conformance to standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2156",
+      "text": "Greet and seat guests, and present menus and wine lists.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2167",
+      "text": "Evaluate new products for usefulness and suitability.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2144",
+      "text": "Compile and balance cash receipts at the end of the day or shift.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "2158",
+      "text": "Forecast staff, equipment, and supply requirements, based on a master menu.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18721",
+      "text": "Assess nutritional needs of patients, plan special menus, supervise the assembly of regular and special diet trays, and oversee the delivery of food trolleys to hospital patients.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18719",
+      "text": "Record production, operational, and personnel data on specified forms.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "18717",
+      "text": "Perform personnel actions, such as hiring and firing staff, providing employee orientation and training, and conducting supervisory activities, such as creating work schedules or organizing employee time sheets.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2151",
+      "text": "Estimate ingredients and supplies required to prepare a recipe.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2161",
+      "text": "Purchase or requisition supplies and equipment needed to ensure quality and timely delivery of services.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18718",
+      "text": "Perform food preparation and serving duties, such as carving meat, preparing flambe dishes, or serving wine and liquor.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2164",
+      "text": "Schedule parties and take reservations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2165",
+      "text": "Develop departmental objectives, budgets, policies, procedures, and strategies.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18720",
+      "text": "Conduct meetings and collaborate with other personnel for menu planning, serving arrangements, and related details.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2166",
+      "text": "Develop equipment maintenance schedules and arrange for repairs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 31,
+  "salary": 44080,
+  "demand": "Very High"
+}

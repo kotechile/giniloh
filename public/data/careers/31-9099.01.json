@@ -1,0 +1,87 @@
+{
+  "code": "31-9099.01",
+  "title": "Speech-Language Pathology Assistants",
+  "description": "Assist speech-language pathologists in the assessment and treatment of speech, language, voice, and fluency disorders. Implement speech and language programs or activities as planned and directed by speech-language pathologists. Monitor the use of alternative communication devices and systems.",
+  "tasks": [
+    {
+      "id": "17535",
+      "text": "Document clients' progress toward meeting established treatment objectives.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17532",
+      "text": "Implement treatment plans or protocols as directed by speech-language pathologists.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17534",
+      "text": "Collect and compile data to document clients' performance or assess program quality.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17539",
+      "text": "Perform support duties, such as preparing materials, keeping records, maintaining supplies, and scheduling activities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17533",
+      "text": "Assist speech-language pathologists in the remediation or development of speech and language skills.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17541",
+      "text": "Select or prepare speech-language instructional materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17531",
+      "text": "Assist speech-language pathologists in the conduct of client screenings or assessments of language, voice, fluency, articulation, or hearing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17540",
+      "text": "Prepare charts, graphs, or other visual displays to communicate clients' performance information.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17536",
+      "text": "Test or maintain equipment to ensure correct performance.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17538",
+      "text": "Conduct in-service training sessions, or family and community education programs.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17537",
+      "text": "Assist speech-language pathologists in the conduct of speech-language research projects.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 23,
+  "salary": 48430,
+  "demand": "High"
+}

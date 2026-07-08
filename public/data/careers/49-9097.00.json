@@ -1,0 +1,94 @@
+{
+  "code": "49-9097.00",
+  "title": "Signal and Track Switch Repairers",
+  "description": "Install, inspect, test, maintain, or repair electric gate crossings, signals, signal equipment, track switches, section lines, or intercommunications systems within a railroad system.",
+  "tasks": [
+    {
+      "id": "13906",
+      "text": "Inspect and test operation, mechanical parts, and circuitry of gate crossings, signals, and signal equipment such as interlocks and hotbox detectors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13910",
+      "text": "Inspect electrical units of railroad grade crossing gates and repair loose bolts and defective electrical connections and parts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23936",
+      "text": "Test and repair track circuits.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13908",
+      "text": "Drive motor vehicles to job sites.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13905",
+      "text": "Install, inspect, maintain, and repair various railroad service equipment on the road or in the shop, including railroad signal systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13909",
+      "text": "Tighten loose bolts, using wrenches, and test circuits and connections by opening and closing gates.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13907",
+      "text": "Inspect switch-controlling mechanisms on trolley wires and in track beds, using hand tools and test equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13911",
+      "text": "Replace defective wiring, broken lenses, or burned-out light bulbs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13913",
+      "text": "Inspect, maintain, and replace batteries as needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13912",
+      "text": "Record and report information about mileage or track inspected, repairs performed, and equipment requiring replacement.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13914",
+      "text": "Lubricate moving parts on gate-crossing mechanisms and swinging signals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13915",
+      "text": "Clean lenses of lamps with cloths and solvents.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 92460,
+  "demand": "Low"
+}

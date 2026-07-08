@@ -1,0 +1,94 @@
+{
+  "code": "47-4091.00",
+  "title": "Segmental Pavers",
+  "description": "Lay out, cut, and place segmental paving units. Includes installers of bedding and restraining materials for the paving units.",
+  "tasks": [
+    {
+      "id": "8285",
+      "text": "Prepare base for installation by removing unstable or unsuitable materials, compacting and grading the soil, draining or stabilizing weak or saturated soils and taking measures to prevent water penetration and migration of bedding sand.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8284",
+      "text": "Supply and place base materials, edge restraints, bedding sand and jointing sand.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8292",
+      "text": "Discuss the design with the client.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8287",
+      "text": "Set pavers, aligning and spacing them correctly.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8288",
+      "text": "Sweep sand into the joints and compact pavement until the joints are full.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8294",
+      "text": "Screed sand level to an even thickness, and recheck sand exposed to elements, raking and rescreeding if necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8293",
+      "text": "Cut paving stones to size and for edges, using a splitter and a masonry saw.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8289",
+      "text": "Compact bedding sand and pavers to finish the paved area, using a plate compactor.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8290",
+      "text": "Design paver installation layout pattern and create markings for directional references of joints and stringlines.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8286",
+      "text": "Sweep sand from the surface prior to opening to traffic.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8291",
+      "text": "Resurface an outside area with cobblestones, terracotta tiles, concrete or other materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8295",
+      "text": "Cement the edges of the paved area.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 50090,
+  "demand": "Medium"
+}

@@ -1,0 +1,129 @@
+{
+  "code": "51-4032.00",
+  "title": "Drilling and Boring Machine Tool Setters, Operators, and Tenders, Metal and Plastic",
+  "description": "Set up, operate, or tend drilling machines to drill, bore, ream, mill, or countersink metal or plastic work pieces.",
+  "tasks": [
+    {
+      "id": "11974",
+      "text": "Verify conformance of machined work to specifications, using measuring instruments, such as calipers, micrometers, or fixed or telescoping gauges.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11975",
+      "text": "Study machining instructions, job orders, or blueprints to determine dimensional or finish specifications, sequences of operations, setups, or tooling requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11980",
+      "text": "Move machine controls to lower tools to workpieces and to engage automatic feeds.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11988",
+      "text": "Verify that workpiece reference lines are parallel to the axis of table rotation, using dial indicators mounted in spindles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11983",
+      "text": "Establish zero reference points on workpieces, such as at the intersections of two edges or over hole locations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11978",
+      "text": "Change worn cutting tools, using wrenches.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11976",
+      "text": "Select and set cutting speeds, feed rates, depths of cuts, and cutting tools, according to machining instructions or knowledge of metal properties.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11979",
+      "text": "Position and secure workpieces on tables, using bolts, jigs, clamps, shims, or other holding devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11984",
+      "text": "Observe drilling or boring machine operations to detect any problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11985",
+      "text": "Lift workpieces onto work tables either manually or with hoists or direct crane operators to lift and position workpieces.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11981",
+      "text": "Turn valves and direct flow of coolants or cutting oil over cutting areas.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11977",
+      "text": "Install tools in spindles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11987",
+      "text": "Perform minor assembly, such as fastening parts with nuts, bolts, or screws, using power tools or hand tools.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11982",
+      "text": "Operate single- or multiple-spindle drill presses to bore holes so that machining operations can be performed on metal or plastic workpieces.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11986",
+      "text": "Lay out reference lines and machining locations on work, using layout tools, and applying knowledge of shop math and layout techniques.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11990",
+      "text": "Sharpen cutting tools, using bench grinders.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11989",
+      "text": "Operate tracing attachments to duplicate contours from templates or models.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 35,
+  "salary": 49080,
+  "demand": "Low"
+}

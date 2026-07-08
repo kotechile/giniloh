@@ -1,0 +1,136 @@
+{
+  "code": "47-3016.00",
+  "title": "Helpers--Roofers",
+  "description": "Help roofers by performing duties requiring less skill. Duties include using, supplying, or holding materials or tools, and cleaning work area and equipment.",
+  "tasks": [
+    {
+      "id": "14926",
+      "text": "Check to ensure that completed roofs are watertight.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14927",
+      "text": "Sweep and clean roofs to prepare them for the application of new roofing materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14928",
+      "text": "Locate worn or torn areas in roofs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14929",
+      "text": "Clean work areas and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14930",
+      "text": "Maintain tools and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14931",
+      "text": "Cover roofs with layers of roofing felt or asphalt strips before installing tile, slate, or composition materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14932",
+      "text": "Remove old roofing materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14933",
+      "text": "Unload materials and tools from work trucks, and unroll roofing as directed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14934",
+      "text": "Set ladders, scaffolds, and hoists in place for taking supplies to roofs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14935",
+      "text": "Place tiles, nail them to roof boards, and cover nailheads with roofing cement.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14936",
+      "text": "Provide assistance to skilled roofers installing and repairing roofs, flashings, and surfaces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14937",
+      "text": "Attach roofing paper and composition shingles, using nails.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14938",
+      "text": "Perform emergency leak repairs and general maintenance for a variety of roof types.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14939",
+      "text": "Attach sheets of metal to roof boards or building frameworks when installing metal roofs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14940",
+      "text": "Hoist tar and roofing materials to roofs, using ropes and pulleys, or carry materials up ladders.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14941",
+      "text": "Apply shingles, gravel, or asphalt over the top layer of tar to protect the roofing material.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14942",
+      "text": "Chop tar into small pieces, and heat chopped tar in kettles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14943",
+      "text": "Clear drains and downspouts and clean gutters.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 44,
+  "salary": 44160,
+  "demand": "Low"
+}

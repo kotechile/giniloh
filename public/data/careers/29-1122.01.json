@@ -1,0 +1,157 @@
+{
+  "code": "29-1122.01",
+  "title": "Low Vision Therapists, Orientation and Mobility Specialists, and Vision Rehabilitation Therapists",
+  "description": "Provide therapy to patients with visual impairments to improve their functioning in daily life activities. May train patients in activities such as computer use, communication skills, or home management skills.",
+  "tasks": [
+    {
+      "id": "17336",
+      "text": "Teach cane skills, including cane use with a guide, diagonal techniques, and two-point touches.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17355",
+      "text": "Recommend appropriate mobility devices or systems, such as human guides, dog guides, long canes, electronic travel aids (ETAs), and other adaptive mobility devices (AMDs).",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17352",
+      "text": "Train clients with visual impairments to use mobility devices or systems, such as human guides, dog guides, electronic travel aids (ETAs), and other adaptive mobility devices (AMDs).",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17350",
+      "text": "Develop rehabilitation or instructional plans collaboratively with clients, based on results of assessments, needs, and goals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17349",
+      "text": "Write reports or complete forms to document assessments, training, progress, or follow-up outcomes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17346",
+      "text": "Train clients to use tactile, auditory, kinesthetic, olfactory, and proprioceptive information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17351",
+      "text": "Assess clients' functioning in areas such as vision, orientation and mobility skills, social and emotional issues, cognition, physical abilities, and personal goals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17345",
+      "text": "Teach clients to travel independently, using a variety of actual or simulated travel situations or exercises.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23918",
+      "text": "Teach self-advocacy skills to clients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17338",
+      "text": "Provide consultation, support, or education to groups such as parents and teachers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17354",
+      "text": "Teach independent living skills or techniques, such as adaptive eating, medication management, diabetes management, and personal management.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17348",
+      "text": "Monitor clients' progress to determine whether changes in rehabilitation plans are needed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17353",
+      "text": "Identify visual impairments related to basic life skills in areas such as self care, literacy, communication, health management, home management, and meal preparation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17341",
+      "text": "Design instructional programs to improve communication, using devices such as slates and styluses, braillers, keyboards, adaptive handwriting devices, talking book machines, digital books, and optical character readers (OCRs).",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17347",
+      "text": "Train clients to use adaptive equipment, such as large print, reading stands, lamps, writing implements, software, and electronic devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17339",
+      "text": "Participate in professional development activities, such as reading literature, continuing education, attending conferences, and collaborating with colleagues.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17340",
+      "text": "Obtain, distribute, or maintain low vision devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17342",
+      "text": "Collaborate with specialists, such as rehabilitation counselors, speech pathologists, and occupational therapists, to provide client solutions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17337",
+      "text": "Refer clients to services, such as eye care, health care, rehabilitation, and counseling, to enhance visual and life functioning or when condition exceeds scope of practice.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17343",
+      "text": "Administer tests and interpret test results to develop rehabilitation plans for clients.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17344",
+      "text": "Train clients to read or write Braille.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 14,
+  "salary": 100330,
+  "demand": "High"
+}

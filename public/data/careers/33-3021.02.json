@@ -1,0 +1,122 @@
+{
+  "code": "33-3021.02",
+  "title": "Police Identification and Records Officers",
+  "description": "Collect evidence at crime scene, classify and identify fingerprints, and photograph evidence for use in criminal and civil cases.",
+  "tasks": [
+    {
+      "id": "2120",
+      "text": "Photograph crime or accident scenes for evidence records.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "18708",
+      "text": "Maintain records of evidence and write and review reports.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "18709",
+      "text": "Submit evidence to supervisors, crime labs, or court officials for legal proceedings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2121",
+      "text": "Testify in court and present evidence.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2123",
+      "text": "Look for trace evidence, such as fingerprints, hairs, fibers, or shoe impressions, using alternative light sources when necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2122",
+      "text": "Dust selected areas of crime scene and lift latent fingerprints, adhering to proper preservation procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21036",
+      "text": "Analyze and process evidence at crime scenes, during autopsies, or in the laboratory, wearing protective equipment and using powders and chemicals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2125",
+      "text": "Package, store and retrieve evidence.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2129",
+      "text": "Process film and prints from crime or accident scenes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "24007",
+      "text": "Take fingerprints.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2127",
+      "text": "Perform emergency work during off-hours.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18711",
+      "text": "Serve as technical advisor and coordinate with other law enforcement workers or legal personnel to exchange information on crime scene collection activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21037",
+      "text": "Create sketches and diagrams, by hand or computer software, to depict crime scenes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18712",
+      "text": "Coordinate or conduct instructional classes or in-services, such as citizen police academy classes and crime scene training for other officers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18710",
+      "text": "Identify, compare, classify, and file fingerprints, using systems such as Automated Fingerprint Identification System (AFIS) or the Henry Classification System.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18713",
+      "text": "Interview survivors, witnesses, suspects, and other law enforcement personnel.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 47,
+  "salary": 93790,
+  "demand": "High"
+}

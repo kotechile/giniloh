@@ -1,0 +1,164 @@
+{
+  "code": "19-1029.02",
+  "title": "Molecular and Cellular Biologists",
+  "description": "Research and study cellular molecules and organelles to understand cell function and organization.",
+  "tasks": [
+    {
+      "id": "16807",
+      "text": "Maintain accurate laboratory records and data.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "16813",
+      "text": "Design molecular or cellular laboratory experiments, oversee their execution, and interpret results.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23904",
+      "text": "Write grant applications to obtain funding.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16805",
+      "text": "Perform laboratory procedures following protocols including deoxyribonucleic acid (DNA) sequencing, cloning and extraction, ribonucleic acid (RNA) purification, or gel electrophoresis.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16815",
+      "text": "Conduct research on cell organization and function, including mechanisms of gene expression, cellular bioinformatics, cell signaling, or cell differentiation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23905",
+      "text": "Prepare or review reports, manuscripts, or meeting presentations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16808",
+      "text": "Instruct undergraduate and graduate students within the areas of cellular or molecular biology.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16810",
+      "text": "Direct, coordinate, organize, or prioritize biological laboratory activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16814",
+      "text": "Compile and analyze molecular or cellular experimental data and adjust experimental designs as necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16809",
+      "text": "Evaluate new technologies to enhance or complement current research.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16804",
+      "text": "Provide scientific direction for project teams regarding the evaluation or handling of devices, drugs, or cells for in vitro and in vivo disease models.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16802",
+      "text": "Supervise technical personnel and postdoctoral research fellows.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16806",
+      "text": "Monitor or operate specialized equipment, such as gas chromatographs and high pressure liquid chromatographs, electrophoresis units, thermocyclers, fluorescence activated cell sorters, and phosphorimagers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16816",
+      "text": "Conduct applied research aimed at improvements in areas such as disease testing, crop quality, pharmaceuticals, and the harnessing of microbes to recycle waste.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16799",
+      "text": "Develop guidelines for procedures such as the management of viruses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16811",
+      "text": "Develop assays that monitor cell characteristics.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16800",
+      "text": "Coordinate molecular or cellular research activities with scientists specializing in other fields.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16796",
+      "text": "Verify all financial, physical, and human resources assigned to research or development projects are used as planned.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16798",
+      "text": "Evaluate new supplies and equipment to ensure operability in specific laboratory settings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16797",
+      "text": "Participate in all levels of bioproduct development, including proposing new products, performing market analyses, designing and performing experiments, and collaborating with operations and quality control teams during product launches.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16801",
+      "text": "Confer with vendors to evaluate new equipment or reagents or to discuss the customization of product lines to meet user requirements.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16812",
+      "text": "Design databases, such as mutagenesis libraries.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 23,
+  "salary": 98920,
+  "demand": "Medium"
+}

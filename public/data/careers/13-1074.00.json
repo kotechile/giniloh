@@ -1,0 +1,59 @@
+{
+  "code": "13-1074.00",
+  "title": "Farm Labor Contractors",
+  "description": "Recruit and hire seasonal or temporary agricultural laborers. May transport, house, and provide meals for workers.",
+  "tasks": [
+    {
+      "id": "14838",
+      "text": "Pay wages of contracted farm laborers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14839",
+      "text": "Provide food, drinking water, and field sanitation facilities to contracted workers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14840",
+      "text": "Recruit and hire agricultural workers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14841",
+      "text": "Employ foremen to deal directly with workers when recruiting, hiring, instructing, assigning tasks, and enforcing work rules.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14842",
+      "text": "Supervise the work of contracted employees.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14843",
+      "text": "Furnish tools for employee use.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14844",
+      "text": "Direct and transport workers to appropriate work sites.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 29,
+  "salary": 58460,
+  "demand": "Low"
+}

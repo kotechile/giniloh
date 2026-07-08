@@ -1,0 +1,129 @@
+{
+  "code": "35-2012.00",
+  "title": "Cooks, Institution and Cafeteria",
+  "description": "Prepare and cook large quantities of food for institutions, such as schools, hospitals, or cafeterias.",
+  "tasks": [
+    {
+      "id": "21148",
+      "text": "Monitor and record food temperatures to ensure food safety.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "9488",
+      "text": "Cook foodstuffs according to menus, special dietary or nutritional restrictions, or numbers of portions to be served.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21149",
+      "text": "Rotate and store food supplies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9491",
+      "text": "Wash pots, pans, dishes, utensils, or other cooking equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9487",
+      "text": "Apportion and serve food to facility residents, employees, or patrons.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9486",
+      "text": "Clean and inspect galley equipment, kitchen appliances, and work areas to ensure cleanliness and functional operation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9489",
+      "text": "Clean, cut, and cook meat, fish, or poultry.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9493",
+      "text": "Direct activities of one or more workers who assist in preparing and serving meals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9495",
+      "text": "Train new employees.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9496",
+      "text": "Take inventory of supplies and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9499",
+      "text": "Requisition food supplies, kitchen equipment, and appliances, based on estimates of future needs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9494",
+      "text": "Bake breads, rolls, or other pastries.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9490",
+      "text": "Monitor use of government food commodities to ensure that proper procedures are followed.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9498",
+      "text": "Plan menus that are varied, nutritionally balanced, and appetizing, taking advantage of foods in season and local availability.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9497",
+      "text": "Monitor menus and spending to ensure that meals are prepared economically.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9492",
+      "text": "Compile and maintain records of food use and expenditures.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "9500",
+      "text": "Determine meal prices, based on calculations of ingredient prices.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 37450,
+  "demand": "Very High"
+}

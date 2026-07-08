@@ -1,0 +1,178 @@
+{
+  "code": "17-2112.03",
+  "title": "Manufacturing Engineers",
+  "description": "Design, integrate, or improve manufacturing systems or related processes. May work with commercial or industrial designers to refine product designs to increase producibility and decrease costs.",
+  "tasks": [
+    {
+      "id": "18181",
+      "text": "Troubleshoot new or existing product problems involving designs, materials, or processes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18177",
+      "text": "Investigate or resolve operational problems, such as material use variances or bottlenecks.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20960",
+      "text": "Identify opportunities or implement changes to improve manufacturing processes or products or to reduce costs, using knowledge of fabrication processes, tooling and production equipment, assembly methods, quality control standards, or product design, materials and parts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18167",
+      "text": "Apply continuous improvement methods, such as lean manufacturing, to enhance manufacturing quality, reliability, or cost-effectiveness.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18183",
+      "text": "Provide technical expertise or support related to manufacturing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20961",
+      "text": "Incorporate new manufacturing methods or processes to improve existing operations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18180",
+      "text": "Review product designs for manufacturability or completeness.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20962",
+      "text": "Determine root causes of failures or recommend changes in designs, tolerances, or processing methods, using statistical procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18182",
+      "text": "Prepare reports summarizing information or trends related to manufacturing performance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18178",
+      "text": "Prepare documentation for new manufacturing processes or engineering procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18168",
+      "text": "Design layout of equipment or workspaces to achieve maximum efficiency.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18170",
+      "text": "Communicate manufacturing capabilities, production schedules, or other information to facilitate production processes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18185",
+      "text": "Supervise technicians, technologists, analysts, administrative staff, or other engineers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18172",
+      "text": "Design, install, or troubleshoot manufacturing equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18175",
+      "text": "Evaluate manufactured products according to specifications and quality standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18174",
+      "text": "Estimate costs, production times, or staffing requirements for new designs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18186",
+      "text": "Train production personnel in new or existing methods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20963",
+      "text": "Design tests of finished products or process capabilities to establish standards or validate process requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19649",
+      "text": "Analyze the financial impacts of sustainable manufacturing processes or sustainable product manufacturing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19650",
+      "text": "Develop sustainable manufacturing technologies to reduce greenhouse gas emissions, minimize raw material use, replace toxic materials with non-toxic materials, replace non-renewable materials with renewable materials, or reduce waste.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18179",
+      "text": "Purchase equipment, materials, or parts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19651",
+      "text": "Evaluate current or proposed manufacturing processes or practices for environmental sustainability, considering factors such as greenhouse gas emissions, air pollution, water pollution, energy use, or waste creation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18184",
+      "text": "Read current literature, talk with colleagues, participate in educational programs, attend meetings or workshops, or participate in professional organizations or conferences to keep abreast of developments in the manufacturing field.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19652",
+      "text": "Redesign packaging for manufactured products to minimize raw material use or waste.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 23,
+  "salary": 102440,
+  "demand": "Very High"
+}

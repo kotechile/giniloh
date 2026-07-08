@@ -1,0 +1,143 @@
+{
+  "code": "39-7011.00",
+  "title": "Tour Guides and Escorts",
+  "description": "Escort individuals or groups on sightseeing tours or through places of interest, such as industrial establishments, public buildings, and art galleries.",
+  "tasks": [
+    {
+      "id": "4540",
+      "text": "Describe tour points of interest to group members, and respond to questions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4539",
+      "text": "Escort individuals or groups on cruises, sightseeing tours, or through places of interest, such as industrial establishments, public buildings, or art galleries.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4541",
+      "text": "Monitor visitors' activities to ensure compliance with establishment or tour regulations and safety practices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4538",
+      "text": "Conduct educational activities for school children.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20135",
+      "text": "Research various topics, including site history, environmental conditions, and clients' skills and abilities to plan appropriate expeditions, instruction, and commentary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4544",
+      "text": "Provide directions and other pertinent information to visitors.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4550",
+      "text": "Select travel routes and sites to be visited based on knowledge of specific areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4545",
+      "text": "Provide for physical safety of groups, performing such activities as providing first aid or directing emergency evacuations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4553",
+      "text": "Assemble and check the required supplies and equipment prior to departure.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4542",
+      "text": "Greet and register visitors, and issue any required identification badges or safety devices.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4543",
+      "text": "Distribute brochures, show audiovisual presentations, and explain establishment processes and operations at tour sites.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4554",
+      "text": "Drive motor vehicles to transport visitors to establishments and tour site locations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20136",
+      "text": "Train other guides and volunteers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4547",
+      "text": "Provide information about wildlife varieties and habitats, as well as any relevant regulations, such as those pertaining to hunting and fishing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4549",
+      "text": "Teach skills, such as proper climbing methods, and demonstrate and advise on the use of equipment.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4548",
+      "text": "Collect fees and tickets from group members.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4555",
+      "text": "Perform clerical duties, such as filing, typing, operating switchboards, or routing mail and messages.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4551",
+      "text": "Solicit tour patronage and sell souvenirs.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4552",
+      "text": "Speak foreign languages to communicate with foreign visitors.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 26,
+  "salary": 38515,
+  "demand": "Medium"
+}

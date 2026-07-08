@@ -1,0 +1,108 @@
+{
+  "code": "19-1042.00",
+  "title": "Medical Scientists, Except Epidemiologists",
+  "description": "Conduct research dealing with the understanding of human diseases and the improvement of human health. Engage in clinical investigation, research and development, or other related activities.",
+  "tasks": [
+    {
+      "id": "7514",
+      "text": "Follow strict safety procedures when handling toxic materials to avoid contamination.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7515",
+      "text": "Evaluate effects of drugs, gases, pesticides, parasites, and microorganisms at various levels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7513",
+      "text": "Plan and direct studies to investigate human or animal disease, preventive methods, and treatments for disease.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7517",
+      "text": "Prepare and analyze organ, tissue, and cell samples to identify toxicity, bacteria, or microorganisms or to study cell structure.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20200",
+      "text": "Conduct research to develop methodologies, instrumentation, and procedures for medical application, analyzing data and presenting findings to the scientific audience and general public.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7516",
+      "text": "Teach principles of medicine and medical and laboratory procedures to physicians, residents, students, and technicians.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20201",
+      "text": "Write and publish articles in scientific journals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23906",
+      "text": "Write applications for research grants.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7518",
+      "text": "Standardize drug dosages, methods of immunization, and procedures for manufacture of drugs and medicinal compounds.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7521",
+      "text": "Study animal and human health and physiological processes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7519",
+      "text": "Investigate cause, progress, life cycle, or mode of transmission of diseases or parasites.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7523",
+      "text": "Use equipment such as atomic absorption spectrometers, electron microscopes, flow cytometers, or chromatography systems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7520",
+      "text": "Confer with health departments, industry personnel, physicians, and others to develop health safety standards and public health improvement programs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7522",
+      "text": "Consult with and advise physicians, educators, researchers, and others regarding medical applications of physics, biology, and chemistry.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 29,
+  "salary": 103410,
+  "demand": "High"
+}

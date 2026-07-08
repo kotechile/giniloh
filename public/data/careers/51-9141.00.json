@@ -1,0 +1,150 @@
+{
+  "code": "51-9141.00",
+  "title": "Semiconductor Processing Technicians",
+  "description": "Perform any or all of the following functions in the manufacture of electronic semiconductors: load semiconductor material into furnace; saw formed ingots into segments; load individual segment into crystal growing chamber and monitor controls; locate crystal axis in ingot using x-ray equipment and saw ingots into wafers; and clean, polish, and load wafers into series of special purpose furnaces, chemical baths, and equipment used to form circuitry and change conductive properties.",
+  "tasks": [
+    {
+      "id": "12573",
+      "text": "Manipulate valves, switches, and buttons, or key commands into control panels to start semiconductor processing cycles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12574",
+      "text": "Maintain processing, production, and inspection information and reports.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12575",
+      "text": "Inspect materials, components, or products for surface defects and measure circuitry, using electronic test equipment, precision measuring instruments, microscope, and standard procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12576",
+      "text": "Clean semiconductor wafers using cleaning equipment, such as chemical baths, automatic wafer cleaners, or blow-off wands.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12577",
+      "text": "Study work orders, instructions, formulas, and processing charts to determine specifications and sequence of operations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12578",
+      "text": "Load and unload equipment chambers and transport finished product to storage or to area for further processing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12579",
+      "text": "Clean and maintain equipment, including replacing etching and rinsing solutions and cleaning bath containers and work area.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12580",
+      "text": "Place semiconductor wafers in processing containers or equipment holders, using vacuum wand or tweezers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12581",
+      "text": "Set, adjust, and readjust computerized or mechanical equipment controls to regulate power level, temperature, vacuum, and rotation speed of furnace, according to crystal growing specifications.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12582",
+      "text": "Etch, lap, polish, or grind wafers or ingots to form circuitry and change conductive properties, using etching, lapping, polishing, or grinding equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12583",
+      "text": "Load semiconductor material into furnace.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12584",
+      "text": "Monitor operation and adjust controls of processing machines and equipment to produce compositions with specific electronic properties, using computer terminals.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12585",
+      "text": "Count, sort, and weigh processed items.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12586",
+      "text": "Calculate etching time based on thickness of material to be removed from wafers or crystals.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12587",
+      "text": "Inspect equipment for leaks, diagnose malfunctions, and request repairs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12588",
+      "text": "Align photo mask pattern on photoresist layer, expose pattern to ultraviolet light, and develop pattern, using specialized equipment.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12589",
+      "text": "Stamp, etch, or scribe identifying information on finished component according to specifications.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12591",
+      "text": "Scribe or separate wafers into dice.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12592",
+      "text": "Connect reactor to computer, using hand tools and power tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12595",
+      "text": "Measure and weigh amounts of crystal growing materials, mix and grind materials, load materials into container, and monitor processing procedures to help identify crystal growing problems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 45,
+  "salary": 51430,
+  "demand": "Medium"
+}

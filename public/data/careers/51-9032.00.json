@@ -1,0 +1,185 @@
+{
+  "code": "51-9032.00",
+  "title": "Cutting and Slicing Machine Setters, Operators, and Tenders",
+  "description": "Set up, operate, or tend machines that cut or slice materials, such as glass, stone, cork, rubber, tobacco, food, paper, or insulating material.",
+  "tasks": [
+    {
+      "id": "12417",
+      "text": "Set up, operate, or tend machines that cut or slice materials, such as glass, stone, cork, rubber, tobacco, food, paper, or insulating material.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12419",
+      "text": "Review work orders, blueprints, specifications, or job samples to determine components, settings, and adjustments for cutting and slicing machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12416",
+      "text": "Examine, measure, and weigh materials or products to verify conformance to specifications, using measuring devices, such as rulers, micrometers, or scales.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12422",
+      "text": "Press buttons, pull levers, or depress pedals to start and operate cutting and slicing machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12426",
+      "text": "Start machines to verify setups, and make any necessary adjustments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12432",
+      "text": "Feed stock into cutting machines, onto conveyors, or under cutting blades, by threading, guiding, pushing, or turning handwheels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12425",
+      "text": "Monitor operation of cutting or slicing machines to detect malfunctions or to determine whether supplies need replenishment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12418",
+      "text": "Stack and sort cut material for packaging, further processing, or shipping, according to types and sizes of material.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "12423",
+      "text": "Adjust machine controls to alter position, alignment, speed, or pressure.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12427",
+      "text": "Remove completed materials or products from cutting or slicing machines, and stack or store them for additional processing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12424",
+      "text": "Maintain production records, such as quantities, types, and dimensions of materials produced.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "12421",
+      "text": "Remove defective or substandard materials from machines, and readjust machine components so that products meet standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12433",
+      "text": "Position stock along cutting lines, or against stops on beds of scoring or cutting machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12429",
+      "text": "Move stock or scrap to and from machines manually, or by using carts, handtrucks, or lift trucks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12428",
+      "text": "Select and install machine components, such as cutting blades, rollers, and templates, according to specifications, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12430",
+      "text": "Clean and lubricate cutting machines, conveyors, blades, saws, or knives, using steam hoses, scrapers, brushes, or oil cans.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12436",
+      "text": "Mark cutting lines or identifying information on stock, using marking pencils, rulers, or scribes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12420",
+      "text": "Type instructions on computer keyboards, push buttons to activate computer programs, or manually set cutting guides, clamps, and knives.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12435",
+      "text": "Change or replace saw blades, cables, cutter heads, and grinding wheels, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12438",
+      "text": "Position width gauge blocks between blades, and level blades and insert wedges into frames to secure blades to frames.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12439",
+      "text": "Direct workers on cutting teams.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12442",
+      "text": "Sharpen cutting blades, knives, or saws, using files, bench grinders, or honing stones.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12437",
+      "text": "Turn cranks or press buttons to activate winches that move cars under sawing cables or saw frames.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12440",
+      "text": "Tighten pulleys or add abrasives to maintain cutting speeds.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12441",
+      "text": "Cut stock manually to prepare for machine cutting, using tools such as knives, cleavers, handsaws, or hammers and chisels.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 46570,
+  "demand": "Medium"
+}

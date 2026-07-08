@@ -1,0 +1,143 @@
+{
+  "code": "39-9011.01",
+  "title": "Nannies",
+  "description": "Care for children in private households and provide support and expertise to parents in satisfying children's physical, emotional, intellectual, and social needs. Duties may include meal planning and preparation, laundry and clothing care, organization of play activities and outings, discipline, intellectual stimulation, language activities, and transportation.",
+  "tasks": [
+    {
+      "id": "2355",
+      "text": "Instruct children in safe behavior, such as seeking adult assistance when crossing the street and avoiding contact with unsafe objects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2368",
+      "text": "Remove hazards and develop appropriate boundaries and rules to create a safe environment for children.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2351",
+      "text": "Perform first aid or cardiopulmonary resuscitation (CPR) when required.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2365",
+      "text": "Instruct and assist children in the development of health and personal habits, such as eating, resting, and toilet behavior.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2352",
+      "text": "Regulate children's rest periods and nap schedules.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2367",
+      "text": "Teach and perform age-appropriate activities, such as lap play, reading, and arts and crafts, to encourage intellectual development of children.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2354",
+      "text": "Help prepare and serve nutritionally balanced meals and snacks for children.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2358",
+      "text": "Model appropriate social behaviors and encourage concern for others to cultivate development of interpersonal relationships and communication skills.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2356",
+      "text": "Organize and conduct age-appropriate recreational activities, such as games, arts and crafts, sports, walks, and play dates.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2362",
+      "text": "Assign appropriate chores and praise targeted behaviors to encourage development of self-control, self-confidence, and responsibility.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2357",
+      "text": "Observe children's behavior for irregularities, take temperature, transport children to doctor, or administer medications, as directed, to maintain children's health.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2359",
+      "text": "Work with parents to develop and implement discipline programs to promote desirable child behavior.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2364",
+      "text": "Perform housekeeping and cleaning duties related to children's care.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2353",
+      "text": "Meet regularly with parents to discuss children's activities and development.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2361",
+      "text": "Supervise and assist with homework.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2363",
+      "text": "Transport children to schools, social outings, and medical appointments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2366",
+      "text": "Keep records of play, meal schedules, and bill payment.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "2360",
+      "text": "Help develop or monitor family schedule.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21071",
+      "text": "Shop for groceries, clothing, and other items needed for children's care.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 18,
+  "salary": 34980,
+  "demand": "Very High"
+}

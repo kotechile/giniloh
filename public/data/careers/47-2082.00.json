@@ -1,0 +1,122 @@
+{
+  "code": "47-2082.00",
+  "title": "Tapers",
+  "description": "Seal joints between plasterboard or other wallboard to prepare wall surface for painting or papering.",
+  "tasks": [
+    {
+      "id": "13530",
+      "text": "Spread sealing compound between boards or panels or over cracks, holes, nail heads, or screw heads, using trowels, broadknives, or spatulas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13531",
+      "text": "Press paper tape over joints to embed tape into sealing compound and to seal joints.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13537",
+      "text": "Apply additional coats to fill in holes and make surfaces smooth.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13534",
+      "text": "Seal joints between plasterboard or other wallboard to prepare wall surfaces for painting or papering.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13533",
+      "text": "Spread and smooth cementing material over tape, using trowels or floating machines to blend joints with wall surfaces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13535",
+      "text": "Sand or patch nicks or cracks in plasterboard or wallboard.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13532",
+      "text": "Mix sealing compounds by hand or with portable electric mixers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20788",
+      "text": "Work on high ceilings, using scaffolding or other tools, such as stilts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13541",
+      "text": "Select the correct sealing compound or tape.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13540",
+      "text": "Countersink nails or screws below surfaces of walls before applying sealing compounds, using hammers or screwdrivers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13529",
+      "text": "Remove extra compound after surfaces have been covered sufficiently.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13538",
+      "text": "Install metal molding at wall corners to secure wallboard.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13542",
+      "text": "Apply texturizing compounds or primers to walls or ceilings before final finishing, using trowels, brushes, rollers, or spray guns.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13543",
+      "text": "Check adhesives to ensure that they will work and will remain durable.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13539",
+      "text": "Sand rough spots of dried cement between applications of compounds.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13536",
+      "text": "Use mechanical applicators that spread compounds and embed tape in one operation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 47,
+  "salary": 68270,
+  "demand": "Low"
+}

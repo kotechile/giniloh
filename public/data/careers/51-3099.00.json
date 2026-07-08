@@ -1,0 +1,17 @@
+{
+  "code": "51-3099.00",
+  "title": "Food Processing Workers, All Other",
+  "description": "All food processing workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Food Processing Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 39680,
+  "demand": "Medium"
+}

@@ -1,0 +1,206 @@
+{
+  "code": "25-9042.00",
+  "title": "Teaching Assistants, Preschool, Elementary, Middle, and Secondary School, Except Special Education",
+  "description": "Assist a preschool, elementary, middle, or secondary school teacher with instructional duties. Serve in a position for which a teacher has primary responsibility for the design and implementation of educational programs and services.",
+  "tasks": [
+    {
+      "id": "22478",
+      "text": "Supervise students in classrooms, halls, cafeterias, school yards, and gymnasiums, or on field trips.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22481",
+      "text": "Tutor and assist children individually or in small groups to help them master assignments and to reinforce learning concepts presented by teachers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22463",
+      "text": "Enforce administration policies and rules governing students.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22480",
+      "text": "Teach social skills to students.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22465",
+      "text": "Instruct and monitor students in the use and care of equipment and materials to prevent injuries and damage.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22460",
+      "text": "Discuss assigned duties with classroom teachers to coordinate instructional efforts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22476",
+      "text": "Present subject matter to students under the direction and guidance of teachers, using lectures, discussions, supervised role-playing methods, or by reading aloud.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22457",
+      "text": "Clean classrooms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22468",
+      "text": "Observe students' performance, and record relevant data to assess progress.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22470",
+      "text": "Organize and label materials and display students' work in a manner appropriate for their eye levels and perceptual skills.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22471",
+      "text": "Organize and supervise games and other recreational activities to promote physical, mental, and social development.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22456",
+      "text": "Attend staff meetings and serve on committees, as required.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22483",
+      "text": "Use computers, audio-visual aids, and other equipment and materials to supplement presentations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22474",
+      "text": "Prepare lesson materials, bulletin board displays, exhibits, equipment, and demonstrations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22459",
+      "text": "Conduct demonstrations to teach skills, such as sports, dancing, and handicrafts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22461",
+      "text": "Distribute teaching materials, such as textbooks, workbooks, papers, and pencils, to students.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22482",
+      "text": "Type, file, and duplicate materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22466",
+      "text": "Laminate teaching materials to increase their durability under repeated use.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22477",
+      "text": "Requisition and stock teaching materials and supplies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22479",
+      "text": "Take class attendance and maintain attendance records.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "22472",
+      "text": "Participate in teacher-parent conferences regarding students' progress or problems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22454",
+      "text": "Assist in bus loading and unloading.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "22467",
+      "text": "Maintain computers in classrooms and laboratories, and assist students with hardware and software use.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22464",
+      "text": "Grade homework and tests, and compute and record results, using answer sheets or electronic marking devices.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "22473",
+      "text": "Plan, prepare, and develop various teaching aids, such as bibliographies, charts, and graphs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22469",
+      "text": "Operate and maintain audio-visual equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22462",
+      "text": "Distribute tests and homework assignments and collect them when they are completed.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22458",
+      "text": "Collect money from students for school-related projects.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 34,
+  "salary": 35968,
+  "demand": "Very High"
+}

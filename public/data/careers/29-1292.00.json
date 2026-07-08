@@ -1,0 +1,122 @@
+{
+  "code": "29-1292.00",
+  "title": "Dental Hygienists",
+  "description": "Administer oral hygiene care to patients. Assess patient oral hygiene problems or needs and maintain health records. Advise patients on oral health maintenance and disease prevention. May provide advanced care such as providing fluoride treatment or administering topical anesthesia.",
+  "tasks": [
+    {
+      "id": "18536",
+      "text": "Record and review patient medical histories.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "417",
+      "text": "Feel and visually examine gums for sores and signs of disease.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "421",
+      "text": "Examine gums, using probes, to locate periodontal recessed gums and signs of gum disease.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "416",
+      "text": "Clean calcareous deposits, accretions, and stains from teeth and beneath margins of gums, using dental instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18537",
+      "text": "Provide clinical services or health education to improve and maintain the oral health of patients or the general public.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "418",
+      "text": "Chart conditions of decay and disease for diagnosis and treatment by dentist.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "422",
+      "text": "Expose and develop x-ray film.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23921",
+      "text": "Attend continuing education courses to maintain or update skills.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "420",
+      "text": "Apply fluorides or other cavity preventing agents to arrest dental decay.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18538",
+      "text": "Maintain dental equipment and sharpen and sterilize dental instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18539",
+      "text": "Maintain patient recall system.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "419",
+      "text": "Feel lymph nodes under patient's chin to detect swelling or tenderness that could indicate presence of oral cancer.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "427",
+      "text": "Administer local anesthetic agents.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "424",
+      "text": "Remove excess cement from coronal surfaces of teeth.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "428",
+      "text": "Conduct dental health clinics for community groups to augment services of dentist.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "425",
+      "text": "Make impressions for study casts.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 34,
+  "salary": 98100,
+  "demand": "High"
+}

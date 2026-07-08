@@ -1,0 +1,129 @@
+{
+  "code": "19-4021.00",
+  "title": "Biological Technicians",
+  "description": "Assist biological and medical scientists. Set up, operate, and maintain laboratory instruments and equipment, monitor experiments, collect data and samples, make observations, and calculate and record results. May analyze organic substances, such as blood, food, and drugs.",
+  "tasks": [
+    {
+      "id": "3741",
+      "text": "Conduct research, or assist in the conduct of research, including the collection of information and samples, such as blood, water, soil, plants and animals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3740",
+      "text": "Use computers, computer-interfaced equipment, robotics or high-technology industrial applications to perform work duties.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3749",
+      "text": "Monitor and observe experiments, recording production and test data for evaluation by research personnel.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "3747",
+      "text": "Analyze experimental data and interpret results to write reports and summaries of findings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3743",
+      "text": "Provide technical support and services for scientists and engineers working in fields such as agriculture, environmental science, resource management, biology, and health sciences.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3737",
+      "text": "Keep detailed logs of all work-related activities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20981",
+      "text": "Input data into databases.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3739",
+      "text": "Isolate, identify and prepare specimens for examination.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3742",
+      "text": "Set up, adjust, calibrate, clean, maintain, and troubleshoot laboratory and field equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3744",
+      "text": "Clean, maintain and prepare supplies and work areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3738",
+      "text": "Monitor laboratory work to ensure compliance with set standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20982",
+      "text": "Place orders for laboratory equipment and supplies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3745",
+      "text": "Participate in the research, development, or manufacturing of medicinal and pharmaceutical preparations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3752",
+      "text": "Feed livestock or laboratory animals.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3746",
+      "text": "Conduct standardized biological, microbiological or biochemical tests and laboratory analyses to evaluate the quantity or quality of physical or chemical substances in food or other products.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3750",
+      "text": "Examine animals and specimens to detect the presence of disease or other problems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3748",
+      "text": "Measure or weigh compounds and solutions for use in testing or animal feed.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 41,
+  "salary": 57510,
+  "demand": "Medium"
+}

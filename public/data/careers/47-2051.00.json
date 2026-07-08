@@ -1,0 +1,192 @@
+{
+  "code": "47-2051.00",
+  "title": "Cement Masons and Concrete Finishers",
+  "description": "Smooth and finish surfaces of poured concrete, such as floors, walks, sidewalks, roads, or curbs using a variety of hand and power tools. Align forms for sidewalks, curbs, or gutters; patch voids; and use saws to cut expansion joints.",
+  "tasks": [
+    {
+      "id": "7047",
+      "text": "Check the forms that hold the concrete to see that they are properly constructed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7048",
+      "text": "Set the forms that hold concrete to the desired pitch and depth, and align them.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7049",
+      "text": "Spread, level, and smooth concrete, using rake, shovel, hand or power trowel, hand or power screed, and float.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7051",
+      "text": "Monitor how the wind, heat, or cold affect the curing of the concrete throughout the entire process.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7050",
+      "text": "Mold expansion joints and edges, using edging tools, jointers, and straightedge.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7052",
+      "text": "Signal truck driver to position truck to facilitate pouring concrete, and move chute to direct concrete on forms.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7055",
+      "text": "Direct the casting of the concrete and supervise laborers who use shovels or special tools to spread it.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7053",
+      "text": "Produce rough concrete surface, using broom.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7061",
+      "text": "Apply hardening and sealing compounds to cure surface of concrete, and waterproof or restore surface.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7054",
+      "text": "Operate power vibrator to compact concrete.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7069",
+      "text": "Install anchor bolts, steel plates, door sills and other fixtures in freshly poured concrete or pattern or stamp the surface to provide a decorative finish.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7059",
+      "text": "Wet surface to prepare for bonding, fill holes and cracks with grout or slurry, and smooth, using trowel.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7068",
+      "text": "Waterproof or restore concrete surfaces, using appropriate compounds.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7056",
+      "text": "Mix cement, sand, and water to produce concrete, grout, or slurry, using hoe, trowel, tamper, scraper, or concrete-mixing machine.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7062",
+      "text": "Chip, scrape, and grind high spots, ridges, and rough projections to finish concrete, using pneumatic chisels, power grinders, or hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7057",
+      "text": "Cut out damaged areas, drill holes for reinforcing rods, and position reinforcing rods to repair concrete, using power saw and drill.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7058",
+      "text": "Wet concrete surface, and rub with stone to smooth surface and obtain specified finish.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7060",
+      "text": "Clean chipped area, using wire brush, and feel and observe surface to determine if it is rough or uneven.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7064",
+      "text": "Build wooden molds, and clamp molds around area to be repaired, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7065",
+      "text": "Sprinkle colored marble or stone chips, powdered steel, or coloring powder over surface to produce prescribed finish.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7067",
+      "text": "Fabricate concrete beams, columns, and panels.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7072",
+      "text": "Polish surface, using polishing or surfacing machine.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7066",
+      "text": "Cut metal division strips, and press them into terrazzo base so that top edges form desired design or pattern.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7071",
+      "text": "Push roller over surface to embed chips in surface.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7070",
+      "text": "Apply muriatic acid to clean surface, and rinse with water.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7063",
+      "text": "Spread roofing paper on surface of foundation, and spread concrete onto roofing paper with trowel to form terrazzo base.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 44,
+  "salary": 57020,
+  "demand": "High"
+}

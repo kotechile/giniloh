@@ -1,0 +1,66 @@
+{
+  "code": "51-8031.00",
+  "title": "Water and Wastewater Treatment Plant and System Operators",
+  "description": "Operate or control an entire process or system of machines, often through the use of control boards, to transfer or treat water or wastewater.",
+  "tasks": [
+    {
+      "id": "928",
+      "text": "Collect and test water and sewage samples, using test equipment and color analysis standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "926",
+      "text": "Operate and adjust controls on equipment to purify and clarify water, process or dispose of sewage, and generate power.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "929",
+      "text": "Record operational data, personnel attendance, or meter and gauge readings on specified forms.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "925",
+      "text": "Add chemicals, such as ammonia, chlorine, or lime, to disinfect and deodorize water and other liquids.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "927",
+      "text": "Inspect equipment or monitor operating conditions, meters, and gauges to determine load requirements and detect malfunctions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "932",
+      "text": "Direct and coordinate plant workers engaged in routine operations and maintenance activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18585",
+      "text": "Clean and maintain tanks, filter beds, and other work areas, using hand tools and power tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "930",
+      "text": "Maintain, repair, and lubricate equipment, using hand tools and power tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 60020,
+  "demand": "High"
+}

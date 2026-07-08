@@ -1,0 +1,129 @@
+{
+  "code": "49-3092.00",
+  "title": "Recreational Vehicle Service Technicians",
+  "description": "Diagnose, inspect, adjust, repair, or overhaul recreational vehicles including travel trailers. May specialize in maintaining gas, electrical, hydraulic, plumbing, or chassis/towing systems as well as repairing generators, appliances, and interior components. Includes workers who perform customized van conversions.",
+  "tasks": [
+    {
+      "id": "20804",
+      "text": "Diagnose and repair furnace or air conditioning systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10010",
+      "text": "Connect electrical systems to outside power sources, and activate switches to test the operation of appliances or light fixtures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10004",
+      "text": "Examine or test operation of parts or systems to ensure completeness of repairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10005",
+      "text": "Repair plumbing or propane gas lines, using caulking compounds and plastic or copper pipe.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10006",
+      "text": "Inspect recreational vehicles to diagnose problems and perform necessary adjustment, repair, or overhaul.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10007",
+      "text": "Locate and repair frayed wiring, broken connections, or incorrect wiring, using ohmmeters, soldering irons, tape, or hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10008",
+      "text": "Confer with customers, read work orders, or examine vehicles needing repair to determine the nature and extent of damage.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10014",
+      "text": "Repair leaks with caulking compound or replace pipes, using pipe wrenches.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20803",
+      "text": "Inspect, repair, or replace brake systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10011",
+      "text": "Connect water hoses to inlet pipes of plumbing systems, and test operation of toilets or sinks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10009",
+      "text": "List parts needed, estimate costs, and plan work procedures, using parts lists, technical manuals, or diagrams.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10012",
+      "text": "Remove damaged exterior panels, and repair and replace structural frame members.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10016",
+      "text": "Reset hardware, using chisels, mallets, and screwdrivers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10013",
+      "text": "Open and close doors, windows, or drawers to test their operation, trimming edges to fit, as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20802",
+      "text": "Explain proper operation of vehicle systems to customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10015",
+      "text": "Refinish wood surfaces on cabinets, doors, moldings, or floors, using power sanders, putty, spray equipment, brushes, paints, or varnishes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10017",
+      "text": "Seal open sides of modular units to prepare them for shipment, using polyethylene sheets, nails, and hammers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 35,
+  "salary": 52000,
+  "demand": "Low"
+}

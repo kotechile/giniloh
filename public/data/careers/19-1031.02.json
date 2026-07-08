@@ -1,0 +1,122 @@
+{
+  "code": "19-1031.02",
+  "title": "Range Managers",
+  "description": "Research or study range land management practices to provide sustained production of forage, livestock, and wildlife.",
+  "tasks": [
+    {
+      "id": "21169",
+      "text": "Regulate grazing, such as by issuing permits and checking for compliance with standards, and help ranchers plan and organize grazing systems to manage, improve, protect, and maximize the use of rangelands.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7500",
+      "text": "Manage forage resources through fire, herbicide use, or revegetation to maintain a sustainable yield from the land.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21170",
+      "text": "Coordinate with federal land managers and other agencies and organizations to manage and protect rangelands.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7497",
+      "text": "Measure and assess vegetation resources for biological assessment companies, environmental impact statements, and rangeland monitoring programs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7498",
+      "text": "Maintain soil stability and vegetation for non-grazing uses, such as wildlife habitats and outdoor recreation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7506",
+      "text": "Study grazing patterns to determine number and kind of livestock that can be most profitably grazed and to determine the best grazing seasons.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7502",
+      "text": "Offer advice to rangeland users on water management, forage production methods, and control of brush.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7503",
+      "text": "Plan and direct construction and maintenance of range improvements, such as fencing, corrals, stock-watering reservoirs, and soil-erosion control structures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7499",
+      "text": "Mediate agreements among rangeland users and preservationists as to appropriate land use and management.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7501",
+      "text": "Study rangeland management practices and research range problems to provide sustained production of forage, livestock, and wildlife.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7504",
+      "text": "Tailor conservation plans to landowners' goals, such as livestock support, wildlife, or recreation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7505",
+      "text": "Develop technical standards and specifications used to manage, protect, and improve the natural resources of range lands and related grazing lands.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7507",
+      "text": "Plan and implement revegetation of disturbed sites.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7508",
+      "text": "Study forage plants and their growth requirements to determine varieties best suited to particular range.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7509",
+      "text": "Develop methods for protecting range from fire and rodent damage and for controlling poisonous plants.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7511",
+      "text": "Develop new and improved instruments and techniques for activities, such as range reseeding.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 9,
+  "salary": 73010,
+  "demand": "Medium"
+}

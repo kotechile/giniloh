@@ -1,0 +1,143 @@
+{
+  "code": "51-8011.00",
+  "title": "Nuclear Power Reactor Operators",
+  "description": "Operate or control nuclear reactors. Move control rods, start and stop equipment, monitor and adjust controls, and record data in logs. Implement emergency procedures when needed. May respond to abnormalities, determine cause, and recommend corrective action.",
+  "tasks": [
+    {
+      "id": "19911",
+      "text": "Operate nuclear power reactors in accordance with policies and procedures to protect workers from radiation and to ensure environmental safety.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8506",
+      "text": "Adjust controls to position rod and to regulate flux level, reactor period, coolant temperature, or rate of power flow, following standard procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20680",
+      "text": "Develop or implement actions such as lockouts, tagouts, or clearances to allow equipment to be safely repaired.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8507",
+      "text": "Respond to system or unit abnormalities, diagnosing the cause, and recommending or taking corrective action.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8508",
+      "text": "Monitor all systems for normal running conditions, performing activities such as checking gauges to assess output or the effects of generator loading on other equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8511",
+      "text": "Monitor or operate boilers, turbines, wells, or auxiliary power plant equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8513",
+      "text": "Record operating data, such as the results of surveillance tests.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "8509",
+      "text": "Implement operational procedures, such as those controlling start-up or shut-down activities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8510",
+      "text": "Note malfunctions of equipment, instruments, or controls and report these conditions to supervisors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8514",
+      "text": "Participate in nuclear fuel element handling activities, such as preparation, transfer, loading, or unloading.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "8512",
+      "text": "Dispatch orders or instructions to personnel through radiotelephone or intercommunication systems to coordinate auxiliary equipment operation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20681",
+      "text": "Review and edit standard operating procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8515",
+      "text": "Conduct inspections or operations outside of control rooms as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8516",
+      "text": "Direct reactor operators in emergency situations, in accordance with emergency operating procedures.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8517",
+      "text": "Authorize maintenance activities on units or changes in equipment or system operational status.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19912",
+      "text": "Supervise technicians' work activities to ensure that equipment is operated in accordance with policies and procedures that protect workers from radiation and ensure environmental safety.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19907",
+      "text": "Authorize actions to correct identified operational inefficiencies or hazards so that operating efficiency is maximized and potential environmental issues are minimized.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19909",
+      "text": "Direct the collection and testing of air, water, gas, or solid samples to determine radioactivity levels or to ensure appropriate radioactive containment.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19908",
+      "text": "Direct measurement of the intensity or types of radiation in work areas, equipment, or materials.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 26,
+  "salary": 122890,
+  "demand": "Low"
+}

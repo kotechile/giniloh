@@ -1,0 +1,17 @@
+{
+  "code": "49-9069.00",
+  "title": "Precision Instrument and Equipment Repairers, All Other",
+  "description": "All precision instrument and equipment repairers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Precision Instrument and Equipment Repairers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 68990,
+  "demand": "Low"
+}

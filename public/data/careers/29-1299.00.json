@@ -1,0 +1,17 @@
+{
+  "code": "29-1299.00",
+  "title": "Healthcare Diagnosing or Treating Practitioners, All Other",
+  "description": "All healthcare diagnosing or treating practitioners not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Healthcare Diagnosing or Treating Practitioners, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 115210,
+  "demand": "Medium"
+}

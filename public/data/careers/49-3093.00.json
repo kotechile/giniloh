@@ -1,0 +1,178 @@
+{
+  "code": "49-3093.00",
+  "title": "Tire Repairers and Changers",
+  "description": "Repair and replace tires.",
+  "tasks": [
+    {
+      "id": "8364",
+      "text": "Raise vehicles, using hydraulic jacks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8365",
+      "text": "Remount wheels onto vehicles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20654",
+      "text": "Unbolt and remove wheels from vehicles, using lug wrenches or other hand or power tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8363",
+      "text": "Place wheels on balancing machines to determine counterweights required to balance wheels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20655",
+      "text": "Identify tire size and ply and inflate tires accordingly.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8369",
+      "text": "Replace valve stems and remove puncturing objects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8370",
+      "text": "Hammer required counterweights onto rims of wheels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8368",
+      "text": "Reassemble tires onto wheels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8373",
+      "text": "Seal punctures in tubeless tires by inserting adhesive material and expanding rubber plugs into punctures, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8372",
+      "text": "Inspect tire casings for defects, such as holes or tears.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8366",
+      "text": "Locate punctures in tubeless tires by visual inspection or by immersing inflated tires in water baths and observing air bubbles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8374",
+      "text": "Glue tire patches over ruptures in tire casings, using rubber cement.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20656",
+      "text": "Assist mechanics and perform various mechanical duties, such as changing oil or checking and replacing batteries.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8371",
+      "text": "Rotate tires to different positions on vehicles, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20657",
+      "text": "Clean and tidy up the shop.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8385",
+      "text": "Buff defective areas of inner tubes, using scrapers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8383",
+      "text": "Order replacements for tires or tubes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8376",
+      "text": "Separate tubed tires from wheels, using rubber mallets and metal bars or mechanical tire changers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8378",
+      "text": "Inflate inner tubes and immerse them in water to locate leaks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8379",
+      "text": "Clean sides of whitewall tires.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8382",
+      "text": "Prepare rims and wheel drums for reassembly by scraping, grinding, or sandblasting.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8380",
+      "text": "Apply rubber cement to buffed tire casings prior to vulcanization process.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8377",
+      "text": "Patch tubes with adhesive rubber patches or seal rubber patches to tubes, using hot vulcanizing plates.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8381",
+      "text": "Drive automobile or service trucks to industrial sites to provide services or respond to emergency calls.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 48,
+  "salary": 37710,
+  "demand": "High"
+}

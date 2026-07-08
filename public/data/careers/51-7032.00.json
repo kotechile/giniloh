@@ -1,0 +1,150 @@
+{
+  "code": "51-7032.00",
+  "title": "Patternmakers, Wood",
+  "description": "Plan, lay out, and construct wooden unit or sectional patterns used in forming sand molds for castings.",
+  "tasks": [
+    {
+      "id": "12230",
+      "text": "Read blueprints, drawings, or written specifications to determine sizes and shapes of patterns and required machine setups.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12235",
+      "text": "Fit, fasten, and assemble wood parts together to form patterns, models, or sections, using glue, nails, dowels, bolts, and screws.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12231",
+      "text": "Lay out patterns on wood stock and draw outlines of units, sectional patterns, or full-scale mock-ups of products, based on blueprint specifications and sketches, and using marking and measuring devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12234",
+      "text": "Trim, smooth, and shape surfaces, and plane, shave, file, scrape, and sand models to attain specified shapes, using hand tools.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12247",
+      "text": "Divide patterns into sections according to shapes of castings to facilitate removal of patterns from molds.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12232",
+      "text": "Verify dimensions of completed patterns, using templates, straightedges, calipers, or protractors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12236",
+      "text": "Correct patterns to compensate for defects in castings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12233",
+      "text": "Set up, operate, and adjust a variety of woodworking machines such as bandsaws and lathes to cut and shape sections, parts, and patterns, according to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12240",
+      "text": "Finish completed products or models with shellac, lacquer, wax, or paint.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12246",
+      "text": "Estimate costs for patternmaking jobs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12239",
+      "text": "Mark identifying information such as colors or codes on patterns, parts, and templates to indicate assembly methods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12243",
+      "text": "Repair broken or damaged patterns.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12244",
+      "text": "Maintain pattern records for reference.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "12241",
+      "text": "Glue fillets along interior angles of patterns.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12237",
+      "text": "Construct wooden models, templates, full scale mock-ups, jigs, or molds for shaping parts of products.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12238",
+      "text": "Compute dimensions, areas, volumes, and weights.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12242",
+      "text": "Select lumber to be used for patterns.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12249",
+      "text": "Collect and store patterns and lumber.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12245",
+      "text": "Inventory equipment and supplies, ordering parts and tools as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12248",
+      "text": "Issue patterns to designated machine operators.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 45,
+  "salary": 49630,
+  "demand": "Low"
+}

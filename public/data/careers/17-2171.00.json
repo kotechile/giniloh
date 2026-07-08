@@ -1,0 +1,171 @@
+{
+  "code": "17-2171.00",
+  "title": "Petroleum Engineers",
+  "description": "Devise methods to improve oil and gas extraction and production and determine the need for new or modified tool designs. Oversee drilling and offer technical advice.",
+  "tasks": [
+    {
+      "id": "3582",
+      "text": "Specify and supervise well modification and stimulation programs to maximize oil and gas recovery.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3580",
+      "text": "Monitor production rates, and plan rework processes to improve production.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3586",
+      "text": "Maintain records of drilling and production operations.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "3581",
+      "text": "Analyze data to recommend placement of wells and supplementary processes to enhance production.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3584",
+      "text": "Assist engineering and other personnel to solve operating problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3583",
+      "text": "Direct and monitor the completion and evaluation of wells, well testing, or well surveys.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3585",
+      "text": "Develop plans for oil and gas field drilling, and for product recovery and treatment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3579",
+      "text": "Assess costs and estimate the production capabilities and economic value of oil and gas wells, to evaluate the economic viability of potential drilling sites.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3587",
+      "text": "Confer with scientific, engineering, and technical personnel to resolve design, research, and testing problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3591",
+      "text": "Interpret drilling and testing information for personnel.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3598",
+      "text": "Coordinate activities of workers engaged in research, planning, and development.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3588",
+      "text": "Write technical reports for engineering and management personnel.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3589",
+      "text": "Evaluate findings to develop, design, or test equipment or processes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3600",
+      "text": "Test machinery and equipment to ensure that it is safe and conforms to performance specifications.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3590",
+      "text": "Assign work to staff to obtain maximum utilization of personnel.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3596",
+      "text": "Simulate reservoir performance for different recovery techniques, using computer models.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3592",
+      "text": "Design and implement environmental controls on oil and gas operations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3594",
+      "text": "Supervise the removal of drilling equipment, the removal of any waste, and the safe return of land to structural stability when wells or pockets are exhausted.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3595",
+      "text": "Inspect oil and gas wells to determine that installations are completed.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3593",
+      "text": "Coordinate the installation, maintenance, and operation of mining and oil field equipment.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3597",
+      "text": "Take samples to assess the amount and quality of oil, the depth at which resources lie, and the equipment needed to properly extract them.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3599",
+      "text": "Design or modify mining and oil field machinery and tools, applying engineering principles.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3601",
+      "text": "Conduct engineering research experiments to improve or modify mining and oil machinery and operations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 20,
+  "salary": 144910,
+  "demand": "Low"
+}

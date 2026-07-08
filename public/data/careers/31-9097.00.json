@@ -1,0 +1,171 @@
+{
+  "code": "31-9097.00",
+  "title": "Phlebotomists",
+  "description": "Draw blood for tests, transfusions, donations, or research. May explain the procedure to patients and assist in the recovery of patients with adverse reactions.",
+  "tasks": [
+    {
+      "id": "19375",
+      "text": "Dispose of contaminated sharps, in accordance with applicable laws, standards, and policies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19382",
+      "text": "Organize or clean blood-drawing trays, ensuring that all instruments are sterile and all needles, syringes, or related items are of first-time use.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19379",
+      "text": "Draw blood from veins by vacuum tube, syringe, or butterfly venipuncture methods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19381",
+      "text": "Match laboratory requisition forms to specimen tubes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19374",
+      "text": "Dispose of blood or other biohazard fluids or tissue, in accordance with applicable laws, standards, or policies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19387",
+      "text": "Conduct standards tests, such as blood alcohol, blood culture, oral glucose tolerance, glucose screening, blood smears, or peak and trough drug levels tests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19385",
+      "text": "Collect specimens at specific time intervals for tests, such as those assessing therapeutic drug levels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19392",
+      "text": "Process blood or other fluid samples for further analysis by other medical professionals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19393",
+      "text": "Provide sample analysis results to physicians to assist diagnosis.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19389",
+      "text": "Enter patient, specimen, insurance, or billing information into computer.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19376",
+      "text": "Document route of specimens from collection to laboratory analysis and diagnosis.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19378",
+      "text": "Draw blood from capillaries by dermal puncture, such as heel or finger stick methods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19386",
+      "text": "Conduct hemoglobin tests to ensure donor iron levels are normal.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19396",
+      "text": "Transport specimens or fluid samples from collection sites to laboratories.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19373",
+      "text": "Collect fluid or tissue samples, using appropriate collection procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19380",
+      "text": "Explain fluid or tissue collection procedures to patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19395",
+      "text": "Train other medical personnel in phlebotomy or laboratory techniques.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19383",
+      "text": "Administer subcutaneous or intramuscular injects, in accordance with licensing restrictions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19377",
+      "text": "Draw blood from arteries, using arterial collection techniques.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19390",
+      "text": "Monitor blood or plasma donors during and after procedures to ensure health, safety, and comfort.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19388",
+      "text": "Determine donor suitability, according to interview results, vital signs, and medical history.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19384",
+      "text": "Calibrate or maintain machines, such as those used for plasma collection.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19394",
+      "text": "Serve refreshments to donors to ensure absorption of sugar into their systems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 48,
+  "salary": 45230,
+  "demand": "High"
+}

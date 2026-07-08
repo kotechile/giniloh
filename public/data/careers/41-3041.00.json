@@ -1,0 +1,66 @@
+{
+  "code": "41-3041.00",
+  "title": "Travel Agents",
+  "description": "Plan and sell transportation and accommodations for customers. Determine destination, modes of transportation, travel dates, costs, and accommodations required. May also describe, plan, and arrange itineraries and sell tour packages. May assist in resolving clients' travel problems.",
+  "tasks": [
+    {
+      "id": "737",
+      "text": "Collect payment for transportation and accommodations from customer.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "741",
+      "text": "Plan, describe, arrange, and sell itinerary tour packages and promotional travel incentives offered by various travel carriers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "738",
+      "text": "Converse with customer to determine destination, mode of transportation, travel dates, financial considerations, and accommodations required.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "739",
+      "text": "Compute cost of travel and accommodations, using calculator, computer, carrier tariff books, and hotel rate books, or quote package tour's costs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20900",
+      "text": "Record and maintain information on clients, vendors, and travel packages.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "740",
+      "text": "Book transportation and hotel reservations, using computer or telephone.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "743",
+      "text": "Print or request transportation carrier tickets, using computer printer system or system link to travel carrier.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "742",
+      "text": "Provide customer with brochures and publications containing travel information, such as local customs, points of interest, or foreign country regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 50160,
+  "demand": "Medium"
+}

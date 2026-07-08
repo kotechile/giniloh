@@ -1,0 +1,122 @@
+{
+  "code": "15-2051.00",
+  "title": "Data Scientists",
+  "description": "Develop and implement a set of techniques or analytics applications to transform raw data into meaningful information using data-oriented programming languages and visualization software. Apply data mining, data modeling, natural language processing, and machine learning to extract and analyze information from large structured and unstructured datasets. Visualize, interpret, and report data findings. May create dynamic data reports.",
+  "tasks": [
+    {
+      "id": "21823",
+      "text": "Analyze, manipulate, or process large sets of data using statistical software.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21824",
+      "text": "Apply feature selection algorithms to models predicting outcomes of interest, such as sales, attrition, and healthcare use.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21825",
+      "text": "Apply sampling techniques to determine groups to be surveyed or use complete enumeration methods.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21826",
+      "text": "Clean and manipulate raw data using statistical software.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21827",
+      "text": "Compare models using statistical performance metrics, such as loss functions or proportion of explained variance.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21828",
+      "text": "Create graphs, charts, or other visualizations to convey the results of data analysis using specialized software.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21829",
+      "text": "Deliver oral or written presentations of the results of mathematical modeling and data analysis to management or other end users.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21830",
+      "text": "Design surveys, opinion polls, or other instruments to collect data.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21831",
+      "text": "Identify business problems or management objectives that can be addressed through data analysis.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21832",
+      "text": "Identify relationships and trends or any factors that could affect the results of research.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21833",
+      "text": "Identify solutions to business problems, such as budgeting, staffing, and marketing decisions, using the results of data analysis.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21834",
+      "text": "Propose solutions in engineering, the sciences, and other fields using mathematical theories and techniques.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21835",
+      "text": "Read scientific articles, conference papers, or other sources of research to identify emerging analytic trends and technologies.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21836",
+      "text": "Recommend data-driven solutions to key stakeholders.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21837",
+      "text": "Test, validate, and reformulate models to ensure accurate prediction of outcomes of interest.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21838",
+      "text": "Write new functions or applications in programming languages to conduct analyses.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 28,
+  "salary": 120230,
+  "demand": "High"
+}

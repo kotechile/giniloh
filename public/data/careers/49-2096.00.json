@@ -1,0 +1,94 @@
+{
+  "code": "49-2096.00",
+  "title": "Electronic Equipment Installers and Repairers, Motor Vehicles",
+  "description": "Install, diagnose, or repair communications, sound, security, or navigation equipment in motor vehicles.",
+  "tasks": [
+    {
+      "id": "13728",
+      "text": "Install equipment and accessories, such as stereos, navigation equipment, communication equipment, and security systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13727",
+      "text": "Inspect and test electrical or electronic systems to locate and diagnose malfunctions, using visual inspections and testing instruments, such as oscilloscopes and voltmeters.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13732",
+      "text": "Cut openings and drill holes for fixtures and equipment, using electric drills and routers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13725",
+      "text": "Splice wires with knives or cutting pliers, and solder connections to fixtures and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13726",
+      "text": "Diagnose or repair problems with electronic equipment, such as sound, navigation, communication, and security equipment, in motor vehicles.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13731",
+      "text": "Run new speaker and electrical cables.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13730",
+      "text": "Confer with customers to determine the nature of malfunctions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13734",
+      "text": "Remove seats, carpeting, and interiors of doors and add sound-absorbing material in empty spaces, reinstalling interior parts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13735",
+      "text": "Record results of diagnostic tests.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "13729",
+      "text": "Estimate costs of repairs, based on parts and labor charges.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13733",
+      "text": "Replace and clean electrical or electronic components.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13736",
+      "text": "Build fiberglass or wooden enclosures for sound components, and fit them to automobile dimensions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 48420,
+  "demand": "Low"
+}

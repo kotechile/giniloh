@@ -1,0 +1,150 @@
+{
+  "code": "15-1244.00",
+  "title": "Network and Computer Systems Administrators",
+  "description": "Install, configure, and maintain an organization's local area network (LAN), wide area network (WAN), data communications network, operating systems, and physical and virtual servers. Perform system monitoring and verify the integrity and availability of hardware, network, and server resources and systems. Review system and application logs and verify completion of scheduled jobs, including system backups. Analyze network and server resource consumption and control user access. Install and upgrade software and maintain software licenses. May assist in network modeling, analysis, planning, and coordination between network and data communications hardware and software.",
+  "tasks": [
+    {
+      "id": "1318",
+      "text": "Maintain and administer computer networks and related computing environments, including computer hardware, systems software, applications software, and all configurations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1317",
+      "text": "Perform data backups and disaster recovery operations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15205",
+      "text": "Diagnose, troubleshoot, and resolve hardware, software, or other network and system problems, and replace defective components when necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15206",
+      "text": "Configure, monitor, and maintain email applications or virus protection software.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1320",
+      "text": "Operate master consoles to monitor the performance of computer systems and networks and to coordinate computer network access and use.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1325",
+      "text": "Monitor network performance to determine whether adjustments are needed and where changes will be needed in the future.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1319",
+      "text": "Plan, coordinate, and implement network security measures to protect data, software, and hardware.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1329",
+      "text": "Analyze equipment performance records to determine the need for repair or replacement.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1324",
+      "text": "Confer with network users about solutions to existing system problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1323",
+      "text": "Recommend changes to improve systems and network configurations, and determine hardware or software requirements related to such changes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1322",
+      "text": "Design, configure, and test computer hardware, networking software and operating system software.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1321",
+      "text": "Perform routine network startup and shutdown procedures, and maintain control records.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1327",
+      "text": "Load computer tapes and disks, and install software and printer paper or forms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1326",
+      "text": "Train people in computer system use.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1330",
+      "text": "Maintain logs related to network functions, as well as maintenance and repair records.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "1328",
+      "text": "Gather data pertaining to customer needs, and use the information to identify, predict, interpret, and evaluate system and network requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1333",
+      "text": "Coordinate with vendors and with company personnel to facilitate purchases.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15208",
+      "text": "Implement and provide technical support for voice services and equipment, such as private branch exchange, voice mail system, and telecom system.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1332",
+      "text": "Maintain an inventory of parts for emergency repairs.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15207",
+      "text": "Research new technologies by attending seminars, reading trade articles, or taking classes, and implement or recommend the implementation of new technologies.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 28,
+  "salary": 99130,
+  "demand": "Very High"
+}

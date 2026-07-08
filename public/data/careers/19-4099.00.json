@@ -1,0 +1,17 @@
+{
+  "code": "19-4099.00",
+  "title": "Life, Physical, and Social Science Technicians, All Other",
+  "description": "All life, physical, and social science technicians not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Life, Physical, and Social Science Technicians, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 62280,
+  "demand": "Medium"
+}

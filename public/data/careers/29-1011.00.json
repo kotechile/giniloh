@@ -1,0 +1,87 @@
+{
+  "code": "29-1011.00",
+  "title": "Chiropractors",
+  "description": "Assess, treat, and care for patients by manipulation of spine and musculoskeletal system. May provide spinal adjustment or address sacral or pelvic misalignment.",
+  "tasks": [
+    {
+      "id": "6914",
+      "text": "Evaluate the functioning of the neuromuscularskeletal system and the spine using systems of chiropractic diagnosis.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "6915",
+      "text": "Diagnose health problems by reviewing patients' health and medical histories, questioning, observing, and examining patients and interpreting x-rays.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6913",
+      "text": "Perform a series of manual adjustments to the spine or other articulations of the body to correct the musculoskeletal system.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6918",
+      "text": "Obtain and record patients' medical histories.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6916",
+      "text": "Maintain accurate case histories of patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6917",
+      "text": "Advise patients about recommended courses of treatment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6919",
+      "text": "Analyze x-rays to locate the sources of patients' difficulties and to rule out fractures or diseases as sources of problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6920",
+      "text": "Counsel patients about nutrition, exercise, sleeping habits, stress management, or other matters.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6922",
+      "text": "Consult with or refer patients to appropriate health practitioners when necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20403",
+      "text": "Recommend and arrange for diagnostic procedures, such as blood chemistry tests, saliva tests, x-rays, or other imaging procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6923",
+      "text": "Suggest and apply the use of supports such as straps, tapes, bandages, or braces if necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 14,
+  "salary": 79200,
+  "demand": "Medium"
+}

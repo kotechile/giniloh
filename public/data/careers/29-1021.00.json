@@ -1,0 +1,150 @@
+{
+  "code": "29-1021.00",
+  "title": "Dentists, General",
+  "description": "Examine, diagnose, and treat diseases, injuries, and malformations of teeth and gums. May treat diseases of nerve, pulp, and other dental tissues affecting oral hygiene and retention of teeth. May fit dental appliances or provide preventive care.",
+  "tasks": [
+    {
+      "id": "20562",
+      "text": "Use masks, gloves, and safety glasses to protect patients and self from infectious diseases.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6926",
+      "text": "Examine teeth, gums, and related tissues, using dental instruments, x-rays, or other diagnostic equipment, to evaluate dental health, diagnose diseases or abnormalities, and plan appropriate treatments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6925",
+      "text": "Administer anesthetics to limit the amount of pain experienced by patients during procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20563",
+      "text": "Use dental air turbines, hand instruments, dental appliances, or surgical implements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6927",
+      "text": "Formulate plan of treatment for patient's teeth and mouth tissue.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6931",
+      "text": "Diagnose and treat diseases, injuries, or malformations of teeth, gums, or related oral structures and provide preventive or corrective services.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6933",
+      "text": "Write prescriptions for antibiotics or other medications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6929",
+      "text": "Advise or instruct patients regarding preventive dental care, the causes and treatment of dental problems, or oral health care services.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6930",
+      "text": "Design, make, or fit prosthodontic appliances, such as space maintainers, bridges, or dentures, or write fabrication instructions or prescriptions for denturists or dental technicians.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6932",
+      "text": "Fill pulp chamber and canal with endodontic materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6935",
+      "text": "Treat exposure of pulp by pulp capping, removal of pulp from pulp chamber, or root canal, using dental instruments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6938",
+      "text": "Remove diseased tissue, using surgical instruments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20564",
+      "text": "Manage business aspects such as employing or supervising staff or handling paperwork or insurance claims.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6934",
+      "text": "Analyze or evaluate dental needs to determine changes or trends in patterns of dental disease.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "6939",
+      "text": "Apply fluoride or sealants to teeth.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6936",
+      "text": "Eliminate irritating margins of fillings and correct occlusions, using dental instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6937",
+      "text": "Perform oral or periodontal surgery on the jaw or mouth.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6942",
+      "text": "Plan, organize, or maintain dental health programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6941",
+      "text": "Bleach, clean, or polish teeth to restore natural color.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6943",
+      "text": "Produce or evaluate dental health educational materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 18,
+  "salary": 170950,
+  "demand": "High"
+}

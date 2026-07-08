@@ -1,0 +1,115 @@
+{
+  "code": "49-2093.00",
+  "title": "Electrical and Electronics Installers and Repairers, Transportation Equipment",
+  "description": "Install, adjust, or maintain mobile electronics communication equipment, including sound, sonar, security, navigation, and surveillance systems on trains, watercraft, or other mobile equipment.",
+  "tasks": [
+    {
+      "id": "11727",
+      "text": "Inspect and test electrical systems and equipment to locate and diagnose malfunctions, using visual inspections, testing devices, and computer software.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11728",
+      "text": "Reassemble and test equipment after repairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11732",
+      "text": "Adjust, repair, or replace defective wiring and relays in ignition, lighting, air-conditioning, and safety control systems, using electrician's tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11729",
+      "text": "Splice wires with knives or cutting pliers, and solder connections to fixtures, outlets, and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11731",
+      "text": "Locate and remove or repair circuit defects such as blown fuses or malfunctioning transistors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11734",
+      "text": "Maintain equipment service records.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11733",
+      "text": "Refer to schematics and manufacturers' specifications that show connections and provide instructions on how to locate problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11738",
+      "text": "Install fixtures, outlets, terminal boards, switches, and wall boxes, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11730",
+      "text": "Install new fuses, electrical cables, or power sources as required.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11735",
+      "text": "Cut openings and drill holes for fixtures, outlet boxes, and fuse holders, using electric drills and routers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11740",
+      "text": "Confer with customers to determine the nature of malfunctions.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11737",
+      "text": "Install electrical equipment such as air-conditioning, heating, or ignition systems and components such as generator brushes and commutators, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11739",
+      "text": "Repair or rebuild equipment such as starters, generators, distributors, or door controls, using electrician's tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11741",
+      "text": "Estimate costs of repairs based on parts and labor requirements.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11736",
+      "text": "Measure, cut, and install frameworks and conduit to support and connect wiring, control panels, and junction boxes, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 47,
+  "salary": 84890,
+  "demand": "Low"
+}

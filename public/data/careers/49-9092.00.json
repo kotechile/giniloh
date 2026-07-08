@@ -1,0 +1,171 @@
+{
+  "code": "49-9092.00",
+  "title": "Commercial Divers",
+  "description": "Work below surface of water, using surface-supplied air or scuba equipment to inspect, repair, remove, or install equipment and structures. May use a variety of power and hand tools, such as drills, sledgehammers, torches, and welding equipment. May conduct tests or experiments, rig explosives, or photograph structures or marine life.",
+  "tasks": [
+    {
+      "id": "13855",
+      "text": "Take appropriate safety precautions, such as monitoring dive lengths and depths and registering with authorities before diving expeditions begin.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13856",
+      "text": "Check and maintain diving equipment, such as helmets, masks, air tanks, harnesses, or gauges.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13854",
+      "text": "Communicate with workers on the surface while underwater, using signal lines or telephones.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13857",
+      "text": "Descend into water with the aid of diver helpers, using scuba gear or diving suits.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13858",
+      "text": "Obtain information about diving tasks and environmental conditions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13871",
+      "text": "Supervise or train other divers, including hobby divers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20809",
+      "text": "Inspect the condition of underwater steel or wood structures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13859",
+      "text": "Inspect and test docks, ships, buoyage systems, plant intakes or outflows, or underwater pipelines, cables, or sewers, using closed circuit television, still photography, and testing equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13860",
+      "text": "Repair ships, bridge foundations, or other structures below the water line, using caulk, bolts, and hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13862",
+      "text": "Recover objects by placing rigging around sunken objects, hooking rigging to crane lines, and operating winches, derricks, or cranes to raise objects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13866",
+      "text": "Operate underwater video, sonar, recording, or related equipment to investigate underwater structures or marine life.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13864",
+      "text": "Take test samples or photographs to assess the condition of vessels or structures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13861",
+      "text": "Cut and weld steel, using underwater welding equipment, jigs, and supports.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13865",
+      "text": "Install, inspect, clean, or repair piping or valves.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13872",
+      "text": "Carry out non-destructive testing, such as tests for cracks on the legs of oil rigs at sea.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13863",
+      "text": "Install pilings or footings for piers or bridges.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13868",
+      "text": "Salvage wrecked ships or their cargo, using pneumatic power velocity and hydraulic tools and explosive charges, when necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13867",
+      "text": "Remove obstructions from strainers or marine railway or launching ways, using pneumatic or power hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13869",
+      "text": "Set or guide placement of pilings or sandbags to provide support for structures, such as docks, bridges, cofferdams, or platforms.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13870",
+      "text": "Perform activities related to underwater search and rescue, salvage, recovery, or cleanup operations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13875",
+      "text": "Perform offshore oil or gas exploration or extraction duties, such as conducting underwater surveys or repairing and maintaining drilling rigs or platforms.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13873",
+      "text": "Drill holes in rock and rig explosives for underwater demolitions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13874",
+      "text": "Remove rubbish or pollution from the sea.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 39,
+  "salary": 72990,
+  "demand": "Low"
+}

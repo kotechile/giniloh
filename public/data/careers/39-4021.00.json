@@ -1,0 +1,178 @@
+{
+  "code": "39-4021.00",
+  "title": "Funeral Attendants",
+  "description": "Perform a variety of tasks during funeral, such as placing casket in parlor or chapel prior to service, arranging floral offerings or lights around casket, directing or escorting mourners, closing casket, and issuing and storing funeral equipment.",
+  "tasks": [
+    {
+      "id": "4512",
+      "text": "Greet people at the funeral home.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4511",
+      "text": "Perform a variety of tasks during funerals to assist funeral directors and to ensure that services run smoothly and as planned.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4514",
+      "text": "Close caskets at appropriate point in services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4517",
+      "text": "Direct or escort mourners to parlors or chapels in which wakes or funerals are being held.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4518",
+      "text": "Place caskets in parlors or chapels prior to wakes or funerals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4513",
+      "text": "Offer assistance to mourners as they enter or exit limousines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4521",
+      "text": "Clean funeral parlors or chapels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4522",
+      "text": "Arrange floral offerings or lights around caskets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4519",
+      "text": "Clean and drive funeral vehicles, such as cars or hearses, in funeral processions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4527",
+      "text": "Act as pallbearers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20600",
+      "text": "Supervise funeral processions and assist with cemetery parking.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20601",
+      "text": "Deliver floral arrangements or other items to family members of the deceased.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4520",
+      "text": "Carry flowers to hearses or limousines for transportation to places of interment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20602",
+      "text": "Perform general maintenance tasks for funeral homes, such as maintaining equipment or caring for funeral grounds.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4525",
+      "text": "Issue and store funeral equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4523",
+      "text": "Provide advice to mourners on how to make charitable donations in honor of the deceased.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20603",
+      "text": "Embalm, dress, cosmeticize, and casket the deceased.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20607",
+      "text": "Prepare obituaries for newspapers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4516",
+      "text": "Obtain burial permits and register deaths.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20597",
+      "text": "Transport the deceased to the funeral home.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20605",
+      "text": "Obtain doctors' signatures on death certificate and complete other paperwork, such as insurance claims forms.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4526",
+      "text": "Assist with cremations and the processing and packaging of cremated remains.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "20598",
+      "text": "Attend to the needs of the bereaved, such as by offering comfort, counseling, or after-care programs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20599",
+      "text": "Perform various administrative tasks, such as typing documents or answering telephone calls.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 35680,
+  "demand": "Medium"
+}

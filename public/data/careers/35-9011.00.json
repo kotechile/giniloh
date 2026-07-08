@@ -1,0 +1,171 @@
+{
+  "code": "35-9011.00",
+  "title": "Dining Room and Cafeteria Attendants and Bartender Helpers",
+  "description": "Facilitate food service. Clean tables; remove dirty dishes; replace soiled table linens; set tables; replenish supply of clean linens, silverware, glassware, and dishes; supply service bar with food; and serve items such as water, condiments, and coffee to patrons.",
+  "tasks": [
+    {
+      "id": "11178",
+      "text": "Run cash registers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11169",
+      "text": "Serve ice water, coffee, rolls, or butter to patrons.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11165",
+      "text": "Scrape and stack dirty dishes and carry dishes and other tableware to kitchens for cleaning.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11163",
+      "text": "Wipe tables or seats with dampened cloths or replace dirty tablecloths.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11164",
+      "text": "Set tables with clean linens, condiments, or other supplies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23929",
+      "text": "Greet and seat customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11166",
+      "text": "Clean up spilled food or drink or broken dishes and remove empty bottles and trash.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11168",
+      "text": "Maintain adequate supplies of items, such as clean linens, silverware, glassware, dishes, or trays.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11172",
+      "text": "Locate items requested by customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11170",
+      "text": "Fill beverage or ice dispensers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11173",
+      "text": "Carry food, dishes, trays, or silverware from kitchens or supply departments to serving counters.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11167",
+      "text": "Perform serving, cleaning, or stocking duties in establishments, such as cafeterias or dining rooms, to facilitate customer service.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11176",
+      "text": "Carry trays from food counters to tables for cafeteria patrons.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11171",
+      "text": "Stock cabinets or serving areas with condiments and refill condiment containers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11174",
+      "text": "Serve food to customers when waiters or waitresses need assistance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11175",
+      "text": "Clean and polish counters, shelves, walls, furniture, or equipment in food service areas or other areas of restaurants and mop or vacuum floors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11177",
+      "text": "Replenish supplies of food or equipment at steam tables or service bars.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11179",
+      "text": "Wash glasses or other serving equipment at bars.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11181",
+      "text": "Carry linens to or from laundry areas.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11180",
+      "text": "Garnish foods and position them on tables to make them visible and accessible.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11183",
+      "text": "Mix and prepare flavors for mixed drinks.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11184",
+      "text": "Slice and pit fruit used to garnish drinks.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11182",
+      "text": "Stock refrigerating units with wines or bottled beer or replace empty beer kegs.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 48,
+  "salary": 33980,
+  "demand": "Very High"
+}

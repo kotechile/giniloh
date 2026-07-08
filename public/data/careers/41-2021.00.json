@@ -1,0 +1,122 @@
+{
+  "code": "41-2021.00",
+  "title": "Counter and Rental Clerks",
+  "description": "Receive orders, generally in person, for repairs, rentals, and services. May describe available options, compute cost, and accept payment.",
+  "tasks": [
+    {
+      "id": "678",
+      "text": "Compute charges for merchandise or services and receive payments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "689",
+      "text": "Receive orders for services, such as rentals, repairs, dry cleaning, and storage.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "687",
+      "text": "Explain rental fees, policies, and procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "691",
+      "text": "Provide information about rental items, such as availability, operation, or description.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "692",
+      "text": "Advise customers on use and care of merchandise.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "682",
+      "text": "Greet customers and discuss the type, quality, and quantity of merchandise sought for rental.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "681",
+      "text": "Answer telephones to provide information and receive orders.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "686",
+      "text": "Inspect and adjust rental items to meet needs of customer.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "684",
+      "text": "Prepare rental forms, obtaining customer signature and other information, such as required licenses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "690",
+      "text": "Rent items, arrange for provision of services to customers, and accept returns.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "683",
+      "text": "Keep records of transactions and of the number of customers entering an establishment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "685",
+      "text": "Receive, examine, and tag articles to be altered, cleaned, stored, or repaired.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "688",
+      "text": "Reserve items for requested times and keep records of items rented.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "679",
+      "text": "Prepare merchandise for display or for purchase or rental.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "680",
+      "text": "Recommend and provide advice on a wide variety of products and services.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "693",
+      "text": "Allocate equipment to participants in sporting events or recreational activities.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 47,
+  "salary": 41300,
+  "demand": "Very High"
+}

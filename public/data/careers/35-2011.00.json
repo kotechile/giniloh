@@ -1,0 +1,143 @@
+{
+  "code": "35-2011.00",
+  "title": "Cooks, Fast Food",
+  "description": "Prepare and cook food in a fast food restaurant with a limited menu. Duties of these cooks are limited to preparation of a few basic items and normally involve operating large-volume single-purpose cooking equipment.",
+  "tasks": [
+    {
+      "id": "5070",
+      "text": "Order and take delivery of supplies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5062",
+      "text": "Cook the exact number of items ordered by each customer, working on several different orders simultaneously.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5065",
+      "text": "Prepare specialty foods, such as pizzas, fish and chips, sandwiches, or tacos, following specific methods that usually require short preparation time.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5055",
+      "text": "Operate large-volume cooking equipment, such as grills, deep-fat fryers, or griddles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5059",
+      "text": "Wash, cut, and prepare foods designated for cooking.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5068",
+      "text": "Prepare and serve beverages, such as coffee or fountain drinks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5054",
+      "text": "Clean food preparation areas, cooking surfaces, and utensils.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5058",
+      "text": "Read food order slips or receive verbal instructions as to food required by patron, and prepare and cook food according to instructions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5063",
+      "text": "Serve orders to customers at windows, counters, or tables.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5064",
+      "text": "Clean, stock, and restock workstations and display cases.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5053",
+      "text": "Maintain sanitation, health, and safety standards in work areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5061",
+      "text": "Cook and package batches of food, such as hamburgers or fried chicken, prepared to order or kept warm until sold.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5066",
+      "text": "Prepare dough, following recipe.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5057",
+      "text": "Take food and drink orders and receive payment from customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5056",
+      "text": "Verify that prepared food meets requirements for quality and quantity.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5071",
+      "text": "Pre-cook items, such as bacon, to prepare them for later use.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5060",
+      "text": "Measure ingredients required for specific food items.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5069",
+      "text": "Mix ingredients, such as pancake or waffle batters.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5067",
+      "text": "Schedule activities and equipment use with managers, using information about daily menus to help coordinate cooking times.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 45,
+  "salary": 30890,
+  "demand": "Very High"
+}

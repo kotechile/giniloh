@@ -1,0 +1,220 @@
+{
+  "code": "39-9041.00",
+  "title": "Residential Advisors",
+  "description": "Coordinate activities in resident facilities in secondary school and college dormitories, group homes, or similar establishments. Order supplies and determine need for maintenance, repairs, and furnishings. May maintain household records and assign rooms. May assist residents with problem solving or refer them to counseling resources.",
+  "tasks": [
+    {
+      "id": "6974",
+      "text": "Communicate with other staff to resolve problems with individual students.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6977",
+      "text": "Observe students to detect and report unusual behavior.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20138",
+      "text": "Supervise, train, and evaluate residence hall staff, including resident assistants, participants in work-study programs, and other student workers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6971",
+      "text": "Provide emergency first aid and summon medical assistance when necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6976",
+      "text": "Make regular rounds to ensure that residents and areas are safe and secure.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6972",
+      "text": "Mediate interpersonal problems between residents.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6970",
+      "text": "Enforce rules and regulations to ensure the smooth and orderly operation of dormitory programs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6978",
+      "text": "Determine the need for facility maintenance and repair, and notify appropriate personnel.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6979",
+      "text": "Collaborate with counselors to develop counseling programs that address the needs of individual students.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20137",
+      "text": "Develop and coordinate educational programs for residents.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6980",
+      "text": "Develop program plans for individuals or assist in plan development.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6984",
+      "text": "Provide requested information on students' progress and the development of case plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6985",
+      "text": "Confer with medical personnel to better understand the backgrounds and needs of individual residents.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6973",
+      "text": "Administer, coordinate, or recommend disciplinary and corrective actions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6986",
+      "text": "Answer telephones, and route calls or deliver messages.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6975",
+      "text": "Counsel students in the handling of issues such as family, financial, and educational problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6981",
+      "text": "Hold regular meetings with each assigned unit.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6994",
+      "text": "Compile information such as residents' daily activities and the quantities of supplies used to prepare required reports.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6993",
+      "text": "Chaperone group-sponsored trips and social functions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6991",
+      "text": "Order supplies for facilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20139",
+      "text": "Oversee departmental budget.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6992",
+      "text": "Supervise students' housekeeping work to ensure that it is done properly.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6988",
+      "text": "Process contract cancellations for students who are unable to follow residence hall policies and procedures.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6995",
+      "text": "Accompany and supervise students during meals.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6990",
+      "text": "Supervise the activities of housekeeping personnel.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6983",
+      "text": "Assign rooms to students.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6996",
+      "text": "Provide transportation or escort for expeditions, such as shopping trips or visits to doctors or dentists.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6982",
+      "text": "Direct and participate in on- and off-campus recreational activities for residents of institutions, boarding schools, fraternities or sororities, children's homes, or similar establishments.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6989",
+      "text": "Sort and distribute mail.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6997",
+      "text": "Inventory, pack, and remove items left behind by former residents.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 27,
+  "salary": 42240,
+  "demand": "Medium"
+}

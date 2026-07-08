@@ -1,0 +1,87 @@
+{
+  "code": "13-2041.00",
+  "title": "Credit Analysts",
+  "description": "Analyze credit data and financial statements of individuals or firms to determine the degree of risk involved in extending credit or lending money. Prepare reports with credit information for use in decisionmaking.",
+  "tasks": [
+    {
+      "id": "1250",
+      "text": "Analyze credit data and financial statements to determine the degree of risk involved in extending credit or lending money.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1254",
+      "text": "Complete loan applications, including credit analyses and summaries of loan requests, and submit to loan committees for approval.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1255",
+      "text": "Generate financial ratios, using computer programs, to evaluate customers' financial status.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1251",
+      "text": "Prepare reports that include the degree of risk involved in extending credit or lending money.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1259",
+      "text": "Analyze financial data, such as income growth, quality of management, and market share to determine expected profitability of loans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1257",
+      "text": "Compare liquidity, profitability, and credit histories of establishments being evaluated with those of similar establishments in the same industries and geographic locations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1258",
+      "text": "Consult with customers to resolve complaints and verify financial and credit transactions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21164",
+      "text": "Contact customers to collect payments on delinquent accounts.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1252",
+      "text": "Evaluate customer records and recommend payment plans, based on earnings, savings data, payment history, and purchase activity.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1256",
+      "text": "Review individual or commercial customer files to identify and select delinquent accounts for collection.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1253",
+      "text": "Confer with credit association and other business representatives to exchange credit information.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 27,
+  "salary": 83510,
+  "demand": "Medium"
+}

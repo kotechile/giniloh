@@ -1,0 +1,150 @@
+{
+  "code": "47-2071.00",
+  "title": "Paving, Surfacing, and Tamping Equipment Operators",
+  "description": "Operate equipment used for applying concrete, asphalt, or other materials to road beds, parking lots, or airport runways and taxiways or for tamping gravel, dirt, or other materials. Includes concrete and asphalt paving machine operators, form tampers, tamping machine operators, and stone spreader operators.",
+  "tasks": [
+    {
+      "id": "4796",
+      "text": "Start machine, engage clutch, and push and move levers to guide machine along forms or guidelines and to control the operation of machine attachments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4809",
+      "text": "Fill tanks, hoppers, or machines with paving materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4807",
+      "text": "Control paving machines to push dump trucks and to maintain a constant flow of asphalt or other material into hoppers or screeds.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4805",
+      "text": "Observe distribution of paving material to adjust machine settings or material flow, and indicate low spots for workers to add material.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4800",
+      "text": "Coordinate truck dumping.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4804",
+      "text": "Drive machines onto truck trailers, and drive trucks to transport machines and material to and from job sites.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4797",
+      "text": "Inspect, clean, maintain, and repair equipment, using mechanics' hand tools, or report malfunctions to supervisors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "4801",
+      "text": "Set up and tear down equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4798",
+      "text": "Operate machines to spread, smooth, level, or steel-reinforce stone, concrete, or asphalt on road beds.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4806",
+      "text": "Light burners or start heating units of machines, and regulate screed temperatures and asphalt flow rates.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20143",
+      "text": "Control traffic.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4803",
+      "text": "Shovel blacktop.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4802",
+      "text": "Operate tamping machines or manually roll surfaces to compact earth fills, foundation forms, and finished road materials, according to grade specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4799",
+      "text": "Operate oil distributors, loaders, chip spreaders, dump trucks, and snow plows.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4814",
+      "text": "Place strips of material, such as cork, asphalt, or steel into joints, or place rolls of expansion-joint material on machines that automatically insert material.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4810",
+      "text": "Drive and operate curbing machines to extrude concrete or asphalt curbing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4813",
+      "text": "Operate machines that clean or cut expansion joints in concrete or asphalt and that rout out cracks in pavement.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4811",
+      "text": "Cut or break up pavement and drive guardrail posts, using machines equipped with interchangeable hammers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4812",
+      "text": "Install dies, cutters, and extensions to screeds onto machines, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4808",
+      "text": "Set up forms and lay out guidelines for curbs, according to written specifications, using string, spray paint, and concrete or water mixes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 53340,
+  "demand": "Medium"
+}

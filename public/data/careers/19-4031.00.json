@@ -1,0 +1,122 @@
+{
+  "code": "19-4031.00",
+  "title": "Chemical Technicians",
+  "description": "Conduct chemical and physical laboratory tests to assist scientists in making qualitative and quantitative analyses of solids, liquids, and gaseous materials for research and development of new products or processes, quality control, maintenance of environmental standards, and other work involving experimental, theoretical, or practical application of chemistry and related sciences.",
+  "tasks": [
+    {
+      "id": "1537",
+      "text": "Conduct chemical or physical laboratory tests to assist scientists in making qualitative or quantitative analyses of solids, liquids, or gaseous materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1541",
+      "text": "Maintain, clean, or sterilize laboratory instruments or equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1535",
+      "text": "Monitor product quality to ensure compliance with standards and specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1536",
+      "text": "Set up and conduct chemical experiments, tests, and analyses, using techniques such as chromatography, spectroscopy, physical or chemical separation techniques, or microscopy.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1540",
+      "text": "Prepare chemical solutions for products or processes, following standardized formulas, or create experimental formulas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1538",
+      "text": "Compile and interpret results of tests and analyses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18477",
+      "text": "Provide and maintain a safe work environment by participating in safety programs, committees, or teams and by conducting laboratory or plant safety audits.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1539",
+      "text": "Provide technical support or assistance to chemists or engineers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1544",
+      "text": "Develop or conduct programs of sampling and analysis to maintain quality standards of raw materials, chemical intermediates, or products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20538",
+      "text": "Train new employees on topics such as the proper operation of laboratory equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1542",
+      "text": "Write technical reports or prepare graphs or charts to document experimental results.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1543",
+      "text": "Order and inventory materials to maintain supplies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1546",
+      "text": "Operate experimental pilot plants, assisting with experimental design.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1545",
+      "text": "Direct or monitor other workers producing chemical products.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1548",
+      "text": "Design or fabricate experimental apparatus to develop new products or processes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1547",
+      "text": "Develop new chemical engineering processes or production techniques.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 31,
+  "salary": 60390,
+  "demand": "Medium"
+}

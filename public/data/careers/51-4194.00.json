@@ -1,0 +1,136 @@
+{
+  "code": "51-4194.00",
+  "title": "Tool Grinders, Filers, and Sharpeners",
+  "description": "Perform precision smoothing, sharpening, polishing, or grinding of metal objects.",
+  "tasks": [
+    {
+      "id": "10349",
+      "text": "Monitor machine operations to determine whether adjustments are necessary, stopping machines when problems occur.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10350",
+      "text": "Inspect, feel, and measure workpieces to ensure that surfaces and dimensions meet specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10358",
+      "text": "Study blueprints or layouts of metal workpieces to determine grinding procedures, and to plan machine setups and operational sequences.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10354",
+      "text": "Select and mount grinding wheels on machines, according to specifications, using hand tools and applying knowledge of abrasives and grinding procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10357",
+      "text": "Compute numbers, widths, and angles of cutting tools, micrometers, scales, and gauges, and adjust tools to produce specified cuts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10359",
+      "text": "Turn valves to direct flow of coolant against cutting wheels and workpieces during grinding.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10351",
+      "text": "Set up and operate grinding or polishing machines to grind metal workpieces, such as dies, parts, and tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10348",
+      "text": "Dress grinding wheels, according to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10353",
+      "text": "File or finish surfaces of workpieces, using prescribed hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10355",
+      "text": "Perform basic maintenance, such as cleaning and lubricating machine parts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10352",
+      "text": "Remove finished workpieces from machines and place them in boxes or on racks, setting aside pieces that are defective.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10356",
+      "text": "Remove and replace worn or broken machine parts, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20926",
+      "text": "Fit parts together in pre-assembly to ensure that dimensions are accurate.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10364",
+      "text": "Attach workpieces to grinding machines and form specified sections and repair cracks, using welding or brazing equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10362",
+      "text": "Duplicate workpiece contours, using tracer attachments.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10361",
+      "text": "Inspect dies to detect defects, assess wear, and verify specifications, using micrometers, steel gauge pins, and loupes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10365",
+      "text": "Place workpieces in electroplating solutions or apply pigments to surfaces of workpieces to highlight ridges and grooves.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10363",
+      "text": "Straighten workpieces and remove dents, using straightening presses and hammers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 50060,
+  "demand": "Low"
+}

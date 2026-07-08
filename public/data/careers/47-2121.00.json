@@ -1,0 +1,199 @@
+{
+  "code": "47-2121.00",
+  "title": "Glaziers",
+  "description": "Install glass in windows, skylights, store fronts, and display cases, or on surfaces, such as building fronts, interior walls, ceilings, and tabletops.",
+  "tasks": [
+    {
+      "id": "11484",
+      "text": "Read and interpret blueprints or specifications to determine size, shape, color, type, or thickness of glass, location of framing, installation procedures, or staging or scaffolding materials required.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11485",
+      "text": "Determine plumb of walls or ceilings, using plumb lines and levels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11496",
+      "text": "Install pre-assembled metal or wood frameworks for windows or doors to be fitted with glass panels, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11486",
+      "text": "Fabricate or install metal sashes or moldings for glass installation, using aluminum or steel framing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11504",
+      "text": "Operate cranes or hoists with suction cups to lift large, heavy pieces of glass.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11492",
+      "text": "Set glass doors into frames and bolt metal hinges, handles, locks, or other hardware to attach doors to frames and walls.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11490",
+      "text": "Cut, fit, install, repair, or replace glass or glass substitutes, such as plastic or aluminum, in building interiors or exteriors or in furniture or other products.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11495",
+      "text": "Drive trucks to installation sites and unload mirrors, glass equipment, or tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11499",
+      "text": "Load and arrange glass or mirrors onto delivery trucks, using suction cups or cranes to lift glass.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11487",
+      "text": "Measure mirrors and dimensions of areas to be covered to determine work procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11497",
+      "text": "Cut and attach mounting strips, metal or wood moldings, rubber gaskets, or metal clips to surfaces in preparation for mirror installation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11503",
+      "text": "Pack spaces between moldings and glass with glazing compounds and trim excess material with glazing knives.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11498",
+      "text": "Assemble, erect, or dismantle scaffolds, rigging, or hoisting equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11491",
+      "text": "Cut and remove broken glass prior to installing replacement glass.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11489",
+      "text": "Secure mirrors in position, using mastic cement, putty, bolts, or screws.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11500",
+      "text": "Measure and mark outlines or patterns on glass to indicate cutting lines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11501",
+      "text": "Grind or polish glass, smoothing edges when necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11488",
+      "text": "Fasten glass panes into wood sashes or frames with clips, points, or moldings, adding weather seals or putty around pane edges to seal joints.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11493",
+      "text": "Score glass with cutters' wheels, breaking off excess glass by hand or with notched tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11494",
+      "text": "Cut, assemble, fit, or attach metal-framed glass enclosures for showers, bathtubs, display cases, skylights, solariums, or other structures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11502",
+      "text": "Prepare glass for cutting by resting it on rack edges or against cutting tables and brushing thin layer of oil along cutting lines or dipping cutting tools in oil.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11507",
+      "text": "Move furniture to clear work sites and cover floors or furnishings with drop cloths.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11505",
+      "text": "Confer with customers to determine project requirements or to provide cost estimates.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11506",
+      "text": "Select the type or color of glass or mirror according to specifications.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11509",
+      "text": "Measure, cut, fit, and press anti-glare adhesive film to glass or spray glass with tinting solution to prevent light glare.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11508",
+      "text": "Assemble and cement sections of stained glass together.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11510",
+      "text": "Create patterns on glass by etching, sandblasting, or painting designs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 46,
+  "salary": 57080,
+  "demand": "Medium"
+}

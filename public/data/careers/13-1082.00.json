@@ -1,0 +1,150 @@
+{
+  "code": "13-1082.00",
+  "title": "Project Management Specialists",
+  "description": "Analyze and coordinate the schedule, timeline, procurement, staffing, and budget of a product or service on a per project basis. Lead and guide the work of technical staff. May serve as a point of contact for the client or customer.",
+  "tasks": [
+    {
+      "id": "21462",
+      "text": "Assign duties or responsibilities to project personnel.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21463",
+      "text": "Communicate with key stakeholders to determine project requirements and objectives.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21464",
+      "text": "Confer with project personnel to identify and resolve problems.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21465",
+      "text": "Create project status presentations for delivery to customers or project personnel.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21466",
+      "text": "Develop or update project plans including information such as objectives, technologies, schedules, funding, and staffing.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21467",
+      "text": "Identify project needs such as resources, staff, or finances by reviewing project objectives and schedules.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21468",
+      "text": "Identify, review, or select vendors or consultants to meet project needs.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21469",
+      "text": "Monitor costs incurred by project staff to identify budget issues.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21470",
+      "text": "Monitor project milestones and deliverables.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21471",
+      "text": "Monitor the performance of project team members to provide performance feedback.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21472",
+      "text": "Negotiate with project stakeholders or suppliers to obtain resources or materials.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21473",
+      "text": "Plan, schedule, or coordinate project activities to meet deadlines.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21474",
+      "text": "Prepare and submit budget estimates, progress reports, or cost tracking reports.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21475",
+      "text": "Produce and distribute project documents.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21476",
+      "text": "Propose, review, or approve modifications to project plans.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21477",
+      "text": "Recruit or hire project personnel.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21478",
+      "text": "Report project status, such as budget, resources, technical issues, or customer satisfaction, to managers.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21479",
+      "text": "Request and review project updates to ensure deadlines are met.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21480",
+      "text": "Schedule or facilitate project meetings.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21481",
+      "text": "Submit project deliverables to clients, ensuring adherence to quality standards.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 30,
+  "salary": 102320,
+  "demand": "Very High"
+}

@@ -1,0 +1,213 @@
+{
+  "code": "47-2031.00",
+  "title": "Carpenters",
+  "description": "Construct, erect, install, or repair structures and fixtures made of wood and comparable materials, such as concrete forms; building frameworks, including partitions, joists, studding, and rafters; and wood stairways, window and door frames, and hardwood floors. May also install cabinets, siding, drywall, and batt or roll insulation. Includes brattice builders who build doors or brattices (ventilation walls or partitions) in underground passageways.",
+  "tasks": [
+    {
+      "id": "23430",
+      "text": "Follow established safety rules and regulations and maintain a safe and clean environment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23432",
+      "text": "Measure and mark cutting lines on materials, using a ruler, pencil, chalk, and marking gauge.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23443",
+      "text": "Assemble and fasten materials to make frameworks or props, using hand tools and wood screws, nails, dowel pins, or glue.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23431",
+      "text": "Study specifications in blueprints, sketches, or building plans to prepare project layout and determine dimensions and materials required.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23433",
+      "text": "Shape or cut materials to specified measurements, using hand tools, machines, or power saws.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23435",
+      "text": "Verify trueness of structure, using plumb bob and level.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23442",
+      "text": "Inspect ceiling or floor tile, wall coverings, siding, glass, or woodwork to detect broken or damaged structures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23440",
+      "text": "Erect scaffolding or ladders for assembling structures above ground level.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23434",
+      "text": "Install structures or fixtures, such as windows, frames, floorings, trim, or hardware, using carpenters' hand or power tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23438",
+      "text": "Maintain records, document actions, and present written progress reports.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23446",
+      "text": "Remove damaged or defective parts or sections of structures and repair or replace, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23445",
+      "text": "Maintain job records and schedule work crew.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23441",
+      "text": "Anchor and brace forms and other structures in place, using nails, bolts, anchor rods, steel cables, planks, wedges, and timbers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23444",
+      "text": "Bore boltholes in timber, masonry or concrete walls, using power drill.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23447",
+      "text": "Install rough door and window frames, subflooring, fixtures, or temporary supports in structures undergoing construction or repair.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23458",
+      "text": "Dig or direct digging of post holes and set poles to support structures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23451",
+      "text": "Cover subfloors with building paper to keep out moisture and lay hardwood, parquet, or wood-strip-block floors by nailing floors to subfloor or cementing them to mastic or asphalt base.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23455",
+      "text": "Construct forms or chutes for pouring concrete.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23437",
+      "text": "Arrange for subcontractors to deal with special areas, such as heating or electrical wiring work.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23439",
+      "text": "Build or repair cabinets, doors, frameworks, floors, or other wooden fixtures used in buildings, using woodworking machines, carpenter's hand tools, or power tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23448",
+      "text": "Finish surfaces of woodwork or wallboard in houses or buildings, using paint, hand tools, or paneling.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23436",
+      "text": "Select and order lumber or other required materials.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23457",
+      "text": "Work with or remove hazardous material.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23452",
+      "text": "Fill cracks or other defects in plaster or plasterboard and sand patch, using patching plaster, trowel, and sanding tool.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23454",
+      "text": "Prepare cost estimates for clients or employers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23453",
+      "text": "Perform minor plumbing, welding, or concrete mixing work.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23450",
+      "text": "Apply shock-absorbing, sound-deadening, or decorative paneling to ceilings or walls.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23449",
+      "text": "Examine structural timbers and supports to detect decay, and replace timbers as required, using hand tools, nuts, and bolts.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23456",
+      "text": "Build sleds from logs and timbers for use in hauling camp buildings and machinery through wooded areas.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 43,
+  "salary": 60580,
+  "demand": "Very High"
+}

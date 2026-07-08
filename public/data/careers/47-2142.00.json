@@ -1,0 +1,150 @@
+{
+  "code": "47-2142.00",
+  "title": "Paperhangers",
+  "description": "Cover interior walls or ceilings of rooms with decorative wallpaper or fabric, or attach advertising posters on surfaces such as walls and billboards. May remove old materials or prepare surfaces to be papered.",
+  "tasks": [
+    {
+      "id": "14906",
+      "text": "Smooth strips or sections of paper with brushes or rollers to remove wrinkles and bubbles and to smooth joints.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14907",
+      "text": "Trim rough edges from strips, using straightedges and trimming knives.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14908",
+      "text": "Trim excess material at ceilings or baseboards, using knives.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14909",
+      "text": "Check finished wallcoverings for proper alignment, pattern matching, and neatness of seams.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14910",
+      "text": "Mark vertical guidelines on walls to align strips, using plumb bobs and chalk lines.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14911",
+      "text": "Cover interior walls and ceilings of rooms with decorative wallpaper or fabric, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14912",
+      "text": "Apply adhesives to the backs of paper strips, using brushes, or dunk strips of prepasted wallcovering in water, wiping off any excess adhesive.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14913",
+      "text": "Measure and cut strips from rolls of wallpaper or fabric, using shears or razors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14914",
+      "text": "Place strips or sections of paper on surfaces, aligning section edges and patterns.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14915",
+      "text": "Fill holes, cracks, and other surface imperfections preparatory to covering surfaces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14916",
+      "text": "Measure surfaces or review work orders to estimate the quantities of materials needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14917",
+      "text": "Apply sizing to seal surfaces and maximize adhesion of coverings to surfaces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14918",
+      "text": "Smooth rough spots on walls and ceilings, using sandpaper.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14919",
+      "text": "Set up equipment, such as pasteboards and scaffolds.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14920",
+      "text": "Remove old paper, using water, steam machines, or solvents and scrapers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14921",
+      "text": "Apply thinned glue to waterproof porous surfaces, using brushes, rollers, or pasting machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14922",
+      "text": "Mix paste, using paste powder and water, and brush paste onto surfaces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14923",
+      "text": "Staple or tack advertising posters onto fences, walls, billboards, or poles.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14924",
+      "text": "Remove paint, varnish, dirt, and grease from surfaces, using paint remover and water soda solutions.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14925",
+      "text": "Apply acetic acid to damp plaster to prevent lime from bleeding through paper.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 45,
+  "salary": 52140,
+  "demand": "Low"
+}

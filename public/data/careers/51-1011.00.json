@@ -1,0 +1,150 @@
+{
+  "code": "51-1011.00",
+  "title": "First-Line Supervisors of Production and Operating Workers",
+  "description": "Directly supervise and coordinate the activities of production and operating workers, such as inspectors, precision workers, machine setters and operators, assemblers, fabricators, and plant and system operators. Excludes team or work leaders.",
+  "tasks": [
+    {
+      "id": "8450",
+      "text": "Enforce safety and sanitation regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20155",
+      "text": "Keep records of employees' attendance and hours worked.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "8455",
+      "text": "Inspect materials, products, or equipment to detect defects or malfunctions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8452",
+      "text": "Read and analyze charts, work orders, production schedules, and other records and reports to determine production requirements and to evaluate current production estimates and outputs.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "8454",
+      "text": "Plan and establish work schedules, assignments, and production sequences to meet production goals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8453",
+      "text": "Confer with other supervisors to coordinate operations and activities within or between departments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8459",
+      "text": "Interpret specifications, blueprints, job orders, and company policies and procedures for workers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8457",
+      "text": "Observe work and monitor gauges, dials, and other indicators to ensure that operators conform to production or processing standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8451",
+      "text": "Direct and coordinate the activities of employees engaged in the production or processing of goods, such as inspectors, machine setters, or fabricators.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20154",
+      "text": "Conduct employee training in equipment operations or work and safety procedures, or assign employee training to experienced workers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21207",
+      "text": "Evaluate employee performance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8458",
+      "text": "Confer with management or subordinates to resolve worker problems, complaints, or grievances.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8462",
+      "text": "Determine standards, budgets, production goals, and rates, based on company policies, equipment and labor availability, and workloads.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8466",
+      "text": "Calculate labor and equipment requirements and production specifications, using standard formulas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8461",
+      "text": "Recommend or implement measures to motivate employees and to improve production methods, equipment performance, product quality, or efficiency.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8460",
+      "text": "Maintain operations data, such as time, production, and cost records, and prepare management reports of production results.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8463",
+      "text": "Requisition materials, supplies, equipment parts, or repair services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8465",
+      "text": "Set up and adjust machines and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20156",
+      "text": "Recommend or execute personnel actions, such as hirings, evaluations, or promotions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8467",
+      "text": "Plan and develop new products and production processes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 35,
+  "salary": 74450,
+  "demand": "Very High"
+}

@@ -1,0 +1,171 @@
+{
+  "code": "17-2199.05",
+  "title": "Mechatronics Engineers",
+  "description": "Research, design, develop, or test automation, intelligent systems, smart devices, or industrial systems control.",
+  "tasks": [
+    {
+      "id": "16467",
+      "text": "Create mechanical design documents for parts, assemblies, or finished products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16482",
+      "text": "Design advanced precision equipment for accurate or controlled applications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16474",
+      "text": "Design engineering systems for the automation of industrial tasks.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16470",
+      "text": "Implement or test design solutions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16468",
+      "text": "Maintain technical project files.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23946",
+      "text": "Identify materials appropriate for mechatronic system designs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16471",
+      "text": "Research, select, or apply sensors, communication technologies, or control devices for motion control, position sensing, pressure sensing, or electronic communication.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16483",
+      "text": "Apply mechatronic or automated solutions to the transfer of materials, components, or finished goods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16465",
+      "text": "Provide consultation or training on topics such as mechatronics or automated control.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16466",
+      "text": "Oversee the work of contractors in accordance with project requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16464",
+      "text": "Publish engineering reports documenting design details or qualification test results.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16479",
+      "text": "Upgrade the design of existing devices by adding mechatronic elements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23947",
+      "text": "Create mechanical models to simulate mechatronic design concepts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16469",
+      "text": "Analyze existing development or manufacturing procedures and suggest improvements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23948",
+      "text": "Determine the feasibility, costs, or performance benefits of new mechatronic equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16480",
+      "text": "Develop electronic, mechanical, or computerized processes to perform tasks in dangerous situations, such as underwater exploration or extraterrestrial mining.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19655",
+      "text": "Monitor or calibrate automated systems, industrial control systems, or system components to maximize efficiency of production.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16476",
+      "text": "Create embedded software design programs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16475",
+      "text": "Design advanced electronic control systems for mechanical systems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19654",
+      "text": "Design self-monitoring mechanical systems, such as gear systems that monitor loading or condition of systems to detect and prevent failures.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19653",
+      "text": "Design or develop automated control systems for environmental applications, such as waste processing, air quality, or water quality systems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16473",
+      "text": "Design, develop, or implement control circuits or algorithms for electromechanical or pneumatic devices or systems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16481",
+      "text": "Design mechatronics components for computer-controlled products, such as cameras, video recorders, automobiles, or airplanes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 11,
+  "salary": 122930,
+  "demand": "High"
+}

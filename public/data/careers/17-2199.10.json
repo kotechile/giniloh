@@ -1,0 +1,122 @@
+{
+  "code": "17-2199.10",
+  "title": "Wind Energy Engineers",
+  "description": "Design underground or overhead wind farm collector systems and prepare and develop site specifications.",
+  "tasks": [
+    {
+      "id": "16559",
+      "text": "Create or maintain wind farm layouts, schematics, or other visual documentation for wind farms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16549",
+      "text": "Recommend process or infrastructure changes to improve wind turbine performance, reduce operational costs, or comply with regulations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16560",
+      "text": "Create models to optimize the layout of wind farm access roads, crane pads, crane paths, collection systems, substations, switchyards, or transmission lines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16553",
+      "text": "Provide engineering technical support to designers of prototype wind turbines.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16550",
+      "text": "Investigate experimental wind turbines or wind turbine technologies for properties such as aerodynamics, production, noise, and load.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16558",
+      "text": "Develop active control algorithms, electronics, software, electromechanical, or electrohydraulic systems for wind turbines.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16557",
+      "text": "Develop specifications for wind technology components, such as gearboxes, blades, generators, frequency converters, or pad transformers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16552",
+      "text": "Test wind turbine components, using mechanical or electronic testing equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16548",
+      "text": "Oversee the work activities of wind farm consultants or subcontractors.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16551",
+      "text": "Test wind turbine equipment to determine effects of stress or fatigue.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16555",
+      "text": "Monitor wind farm construction to ensure compliance with regulatory standards or environmental requirements.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16556",
+      "text": "Direct balance of plant (BOP) construction, generator installation, testing, commissioning, or supervisory control and data acquisition (SCADA) to ensure compliance with specifications.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16562",
+      "text": "Analyze operation of wind farms or wind farm components to determine reliability, performance, and compliance with specifications.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16554",
+      "text": "Perform root cause analysis on wind turbine tower component failures.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16561",
+      "text": "Design underground or overhead wind farm collector systems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16547",
+      "text": "Write reports to document wind farm collector system test results.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 19,
+  "salary": 122930,
+  "demand": "High"
+}

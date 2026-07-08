@@ -1,0 +1,17 @@
+{
+  "code": "29-1249.00",
+  "title": "Surgeons, All Other",
+  "description": "All surgeons not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Surgeons, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 414010,
+  "demand": "Medium"
+}

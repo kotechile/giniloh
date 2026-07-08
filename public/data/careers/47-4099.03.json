@@ -1,0 +1,150 @@
+{
+  "code": "47-4099.03",
+  "title": "Weatherization Installers and Technicians",
+  "description": "Perform a variety of activities to weatherize homes and make them more energy efficient. Duties include repairing windows, insulating ducts, and performing heating, ventilating, and air-conditioning (HVAC) work. May perform energy audits and advise clients on energy conservation measures.",
+  "tasks": [
+    {
+      "id": "21204",
+      "text": "Test combustible appliances, such as gas appliances.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21205",
+      "text": "Determine amount of air leakage in buildings, using a blower door machine.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17789",
+      "text": "Test and diagnose air flow systems, using furnace efficiency analysis equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17792",
+      "text": "Install and seal air ducts, combustion air openings, or ventilation openings to improve heating and cooling efficiency.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17787",
+      "text": "Inspect buildings to identify required weatherization measures, including repair work, modification, or replacement.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17788",
+      "text": "Recommend weatherization techniques to clients in accordance with needs and applicable energy regulations, codes, policies, or statutes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17790",
+      "text": "Apply insulation materials, such as loose, blanket, board, and foam insulation to attics, crawl spaces, basements, or walls.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17794",
+      "text": "Make minor repairs using basic hand or power tools and materials, such as glass, lumber, and drywall.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17796",
+      "text": "Prepare cost estimates or specifications for rehabilitation or weatherization services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17801",
+      "text": "Contact residents or building owners to schedule appointments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17797",
+      "text": "Wrap air ducts and water lines with insulating materials, such as duct wrap and pipe insulation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17795",
+      "text": "Prepare and apply weather-stripping, glazing, caulking, or door sweeps to reduce energy losses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17800",
+      "text": "Clean and maintain tools and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17799",
+      "text": "Apply spackling, compounding, or other materials to repair holes in walls.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17802",
+      "text": "Explain recommendations, policies, procedures, requirements, or other related information to residents or building owners.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17803",
+      "text": "Maintain activity logs, financial transaction logs, or other records of weatherization work performed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17791",
+      "text": "Explain energy conservation measures, such as the use of low flow showerheads and energy-efficient lighting.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17804",
+      "text": "Prepare or assist in the preparation of bids, contracts, or written reports related to weatherization work.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17793",
+      "text": "Install storm windows or storm doors and verify proper fit.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17798",
+      "text": "Wrap water heaters with water heater blankets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 49303,
+  "demand": "Medium"
+}

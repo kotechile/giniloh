@@ -1,0 +1,108 @@
+{
+  "code": "43-5053.00",
+  "title": "Postal Service Mail Sorters, Processors, and Processing Machine Operators",
+  "description": "Prepare incoming and outgoing mail for distribution for the United States Postal Service (USPS). Examine, sort, and route mail. Load, operate, and occasionally adjust and repair mail processing, sorting, and canceling machinery. Keep records of shipments, pouches, and sacks, and perform other duties related to mail handling within the postal service. Includes postal service mail sorters and processors employed by USPS contractors.",
+  "tasks": [
+    {
+      "id": "8221",
+      "text": "Clear jams in sorting equipment.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "8219",
+      "text": "Operate various types of equipment, such as computer scanning equipment, addressographs, mimeographs, optical character readers, and bar-code sorters.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8227",
+      "text": "Sort odd-sized mail by hand, sort mail that other workers have been unable to sort, and segregate items requiring special handling.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8213",
+      "text": "Direct items according to established routing schemes, using computer-controlled keyboards or voice-recognition equipment.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8222",
+      "text": "Check items to ensure that addresses are legible and correct, that sufficient postage has been paid or the appropriate documentation is attached, and that items are in a suitable condition for processing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8214",
+      "text": "Bundle, label, and route sorted mail to designated areas, depending on destinations and according to established procedures and deadlines.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8226",
+      "text": "Move containers of mail, using equipment, such as forklifts and automated \"trains\".",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8223",
+      "text": "Open and label mail containers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8229",
+      "text": "Load and unload mail trucks, sometimes lifting containers of mail onto equipment that transports items to sorting stations.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "8218",
+      "text": "Distribute incoming mail into the correct boxes or pigeonholes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8224",
+      "text": "Rewrap soiled or broken parcels.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8217",
+      "text": "Train new workers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8220",
+      "text": "Search directories to find correct addresses for redirected mail.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8230",
+      "text": "Cancel letter or parcel post stamps by hand.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 46,
+  "salary": 58470,
+  "demand": "High"
+}

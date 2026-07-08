@@ -1,0 +1,143 @@
+{
+  "code": "25-3041.00",
+  "title": "Tutors",
+  "description": "Instruct individual students or small groups of students in academic subjects to support formal class instruction or to prepare students for standardized or admissions tests.",
+  "tasks": [
+    {
+      "id": "17027",
+      "text": "Provide feedback to students, using positive reinforcement techniques to encourage, motivate, or build confidence in students.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17026",
+      "text": "Review class material with students by discussing text, working solutions to problems, or reviewing worksheets or other assignments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17034",
+      "text": "Assess students' progress throughout tutoring sessions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17036",
+      "text": "Teach students study skills, note-taking skills, and test-taking strategies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17037",
+      "text": "Provide private instruction to individual or small groups of students to improve academic performance, improve occupational skills, or prepare for academic or occupational tests.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17023",
+      "text": "Participate in training and development sessions to improve tutoring practices or learn new tutoring techniques.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17033",
+      "text": "Collaborate with students, parents, teachers, school administrators, or counselors to determine student needs, develop tutoring plans, or assess student progress.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17025",
+      "text": "Monitor student performance or assist students in academic environments, such as classrooms, laboratories, or computing centers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17020",
+      "text": "Schedule tutoring appointments with students or their parents.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17024",
+      "text": "Organize tutoring environment to promote productivity and learning.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17032",
+      "text": "Communicate students' progress to students, parents, or teachers in written progress reports, in person, by phone, or by email.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17029",
+      "text": "Maintain records of students' assessment results, progress, feedback, or school performance, ensuring confidentiality of all records.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17030",
+      "text": "Identify, develop, or implement intervention strategies, tutoring plans, or individualized education plans (IEPs) for students.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17022",
+      "text": "Prepare and facilitate tutoring workshops, collaborative projects, or academic support sessions for small groups of students.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17028",
+      "text": "Prepare lesson plans or learning modules for tutoring sessions according to students' needs and goals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17031",
+      "text": "Develop teaching or training materials, such as handouts, study materials, or quizzes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17019",
+      "text": "Travel to students' homes, libraries, or schools to conduct tutoring sessions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17035",
+      "text": "Administer, proctor, or score academic or diagnostic assessments.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17021",
+      "text": "Research or recommend textbooks, software, equipment, or other learning materials to complement tutoring.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 21,
+  "salary": 43350,
+  "demand": "High"
+}

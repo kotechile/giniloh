@@ -1,0 +1,108 @@
+{
+  "code": "49-9095.00",
+  "title": "Manufactured Building and Mobile Home Installers",
+  "description": "Move or install mobile homes or prefabricated buildings.",
+  "tasks": [
+    {
+      "id": "13878",
+      "text": "Seal open sides of modular units to prepare them for shipment, using polyethylene sheets, nails, and hammers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13879",
+      "text": "Move and set up mobile homes or prefabricated buildings on owners' lots or at mobile home parks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13880",
+      "text": "Inspect, examine, and test the operation of parts or systems to evaluate operating condition and to determine if repairs are needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13881",
+      "text": "Connect water hoses to inlet pipes of plumbing systems, and test operation of plumbing fixtures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13882",
+      "text": "Remove damaged exterior panels, repair and replace structural frame members, and seal leaks, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13883",
+      "text": "List parts needed, estimate costs, and plan work procedures, using parts lists, technical manuals, and diagrams.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13884",
+      "text": "Confer with customers or read work orders to determine the nature and extent of damage to units.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13885",
+      "text": "Install, repair, and replace units, fixtures, appliances, and other items and systems in mobile and modular homes, prefabricated buildings, or travel trailers, using hand tools or power tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13886",
+      "text": "Reset hardware, using chisels, mallets, and screwdrivers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13887",
+      "text": "Repair leaks in plumbing or gas lines, using caulking compounds and plastic or copper pipe.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13888",
+      "text": "Locate and repair frayed wiring, broken connections, or incorrect wiring, using ohmmeters, soldering irons, tape, and hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13889",
+      "text": "Open and close doors, windows, and drawers to test their operation, trimming edges to fit, using jackplanes or drawknives.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13890",
+      "text": "Connect electrical systems to outside power sources and activate switches to test the operation of appliances and light fixtures.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13891",
+      "text": "Refinish wood surfaces on cabinets, doors, moldings, and floors, using power sanders, putty, spray equipment, brushes, paints, or varnishes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 39,
+  "salary": 45990,
+  "demand": "Low"
+}

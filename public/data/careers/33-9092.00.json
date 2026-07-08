@@ -1,0 +1,115 @@
+{
+  "code": "33-9092.00",
+  "title": "Lifeguards, Ski Patrol, and Other Recreational Protective Service Workers",
+  "description": "Monitor recreational areas, such as pools, beaches, or ski slopes, to provide assistance and protection to participants.",
+  "tasks": [
+    {
+      "id": "5041",
+      "text": "Patrol or monitor recreational areas, such as trails, slopes, or swimming areas, on foot, in vehicles, or from towers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5039",
+      "text": "Rescue distressed persons, using rescue techniques and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5040",
+      "text": "Contact emergency medical personnel in case of serious injury.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5042",
+      "text": "Examine injured persons and administer first aid or cardiopulmonary resuscitation, if necessary, using training and medical supplies and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5044",
+      "text": "Warn recreational participants of inclement weather, unsafe areas, or illegal conduct.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20129",
+      "text": "Maintain quality of pool water by testing chemical levels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5045",
+      "text": "Complete and maintain records of weather and beach conditions, emergency medical treatments performed, and other relevant incident information.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5043",
+      "text": "Instruct participants in skiing, swimming, or other recreational activities and provide safety precaution information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5046",
+      "text": "Inspect recreational equipment, such as rope tows, T-bars, J-bars, or chair lifts, for safety hazards and damage or wear.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5048",
+      "text": "Inspect recreational facilities for cleanliness.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5049",
+      "text": "Observe activities in assigned areas, using binoculars, to detect hazards, disturbances, or safety infractions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5051",
+      "text": "Operate underwater recovery units.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5047",
+      "text": "Provide assistance with staff selection, training, and supervision.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5050",
+      "text": "Provide assistance in the safe use of equipment, such as ski lifts.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5052",
+      "text": "Participate in recreational demonstrations to entertain resort guests.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 43,
+  "salary": 33580,
+  "demand": "High"
+}

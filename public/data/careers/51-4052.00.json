@@ -1,0 +1,122 @@
+{
+  "code": "51-4052.00",
+  "title": "Pourers and Casters, Metal",
+  "description": "Operate hand-controlled mechanisms to pour and regulate the flow of molten metal into molds to produce castings or ingots.",
+  "tasks": [
+    {
+      "id": "12007",
+      "text": "Pour and regulate the flow of molten metal into molds and forms to produce ingots or other castings, using ladles or hand-controlled mechanisms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12008",
+      "text": "Read temperature gauges and observe color changes, adjusting furnace flames, torches, or electrical heating units as necessary to melt metal to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12016",
+      "text": "Remove solidified steel or slag from pouring nozzles, using long bars or oxygen burners.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12009",
+      "text": "Examine molds to ensure they are clean, smooth, and properly coated.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12006",
+      "text": "Collect samples, or signal workers to sample metal for analysis.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12015",
+      "text": "Load specified amounts of metal and flux into furnaces or clay crucibles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12010",
+      "text": "Position equipment such as ladles, grinding wheels, pouring nozzles, or crucibles, or signal other workers to position equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12011",
+      "text": "Skim slag or remove excess metal from ingots or equipment, using hand tools, strainers, rakes, or burners, collecting scrap for recycling.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12019",
+      "text": "Transport metal ingots to storage areas, using forklifts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12017",
+      "text": "Assemble and embed cores in casting frames, using hand tools and equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12012",
+      "text": "Turn valves to circulate water through cores, or spray water on filled molds to cool and solidify metal.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12014",
+      "text": "Pull levers to lift ladle stoppers and to allow molten steel to flow into ingot molds to specified heights.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12018",
+      "text": "Remove metal ingots or cores from molds, using hand tools, cranes, and chain hoists.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12021",
+      "text": "Repair and maintain metal forms and equipment, using hand tools, sledges, and bars.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12013",
+      "text": "Add metal to molds to compensate for shrinkage.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12020",
+      "text": "Stencil identifying information on ingots and pigs, using special hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 51810,
+  "demand": "Low"
+}

@@ -1,0 +1,129 @@
+{
+  "code": "39-1022.00",
+  "title": "First-Line Supervisors of Personal Service Workers",
+  "description": "Supervise and coordinate activities of personal service workers.",
+  "tasks": [
+    {
+      "id": "13140",
+      "text": "Train workers in proper operational procedures and functions and explain company policies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13142",
+      "text": "Meet with managers or other supervisors to stay informed of changes affecting operations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13138",
+      "text": "Assign work schedules, following work requirements, to ensure quality and timely delivery of service.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13151",
+      "text": "Recruit and hire staff members.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13145",
+      "text": "Resolve customer complaints regarding worker performance or services rendered.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13150",
+      "text": "Take disciplinary action to address performance problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13139",
+      "text": "Inspect work areas or operating equipment to ensure conformance to established standards in areas such as cleanliness or maintenance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23179",
+      "text": "Investigate employee complaints and resolve problems following management rules and regulations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13141",
+      "text": "Observe and evaluate workers' appearance and performance to ensure quality service and compliance with specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23177",
+      "text": "Direct or coordinate the activities of workers, such as hotel staff or hair stylists.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13152",
+      "text": "Participate in continuing education to stay abreast of industry trends and developments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23178",
+      "text": "Inform management about problems, such as employee disputes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23176",
+      "text": "Arrange worker breaks to ensure services are adequately staffed throughout each shift.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20763",
+      "text": "Apply customer feedback to service improvement efforts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13143",
+      "text": "Inform workers about interests or special needs of specific groups.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13146",
+      "text": "Requisition necessary supplies, equipment, or services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13154",
+      "text": "Direct marketing, advertising, or other customer recruitment efforts.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 21,
+  "salary": 48590,
+  "demand": "High"
+}

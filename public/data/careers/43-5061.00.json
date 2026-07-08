@@ -1,0 +1,129 @@
+{
+  "code": "43-5061.00",
+  "title": "Production, Planning, and Expediting Clerks",
+  "description": "Coordinate and expedite the flow of work and materials within or between departments of an establishment according to production schedule. Duties include reviewing and distributing production, work, and shipment schedules; conferring with department supervisors to determine progress of work and completion dates; and compiling reports on progress of work, inventory levels, costs, and production problems.",
+  "tasks": [
+    {
+      "id": "11370",
+      "text": "Distribute production schedules or work orders to departments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11365",
+      "text": "Revise production schedules when required due to design changes, labor or material shortages, backlogs, or other interruptions, collaborating with management, marketing, sales, production, or engineering.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11363",
+      "text": "Review documents, such as production schedules, work orders, or staffing tables, to determine personnel or materials requirements or material priorities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11372",
+      "text": "Arrange for delivery, assembly, or distribution of supplies or parts to expedite flow of materials and meet production schedules.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11366",
+      "text": "Confer with establishment personnel, vendors, or customers to coordinate production or shipping activities and to resolve complaints or eliminate delays.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11368",
+      "text": "Requisition and maintain inventories of materials or supplies necessary to meet production demands.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11364",
+      "text": "Confer with department supervisors or other personnel to assess progress and discuss needed changes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11375",
+      "text": "Plan production commitments or timetables for business units, specific programs, or jobs, using sales forecasts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11371",
+      "text": "Compile information, such as production rates and progress, materials inventories, materials used, or customer information, so that status reports can be completed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11362",
+      "text": "Examine documents, materials, or products and monitor work processes to assess completeness, accuracy, and conformance to standards and specifications.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11377",
+      "text": "Compile and prepare documentation related to production sequences, transportation, personnel schedules, or purchase, maintenance, or repair orders.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11369",
+      "text": "Calculate figures, such as required amounts of labor or materials, manufacturing costs, or wages, using pricing schedules, adding machines, calculators, or computers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11373",
+      "text": "Contact suppliers to verify shipment details.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11367",
+      "text": "Record production data, including volume produced, consumption of raw materials, or quality control measures.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11376",
+      "text": "Establish and prepare product construction directions and locations and information on required tools, materials, equipment, numbers of workers needed, and cost projections.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11374",
+      "text": "Maintain files, such as maintenance records, bills of lading, or cost reports.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11378",
+      "text": "Provide documentation and information to account for delays, difficulties, or changes to cost estimates.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 41,
+  "salary": 59650,
+  "demand": "Very High"
+}

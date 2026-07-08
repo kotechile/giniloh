@@ -1,0 +1,17 @@
+{
+  "code": "17-3029.00",
+  "title": "Engineering Technologists and Technicians, Except Drafters, All Other",
+  "description": "All engineering technologists and technicians, except drafters, not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Engineering Technologists and Technicians, Except Drafters, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 78350,
+  "demand": "Medium"
+}

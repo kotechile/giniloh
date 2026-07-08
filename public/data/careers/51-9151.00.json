@@ -1,0 +1,199 @@
+{
+  "code": "51-9151.00",
+  "title": "Photographic Process Workers and Processing Machine Operators",
+  "description": "Perform work involved in developing and processing photographic images from film or digital media. May perform precision tasks such as editing photographic negatives and prints.",
+  "tasks": [
+    {
+      "id": "19484",
+      "text": "Select digital images for printing, specify number of images to be printed, and direct to printer, using computer software.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19465",
+      "text": "Create prints according to customer specifications and laboratory protocols.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19479",
+      "text": "Produce color or black-and-white photographs, negatives, or slides, applying standard photographic reproduction techniques and procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19486",
+      "text": "Set or adjust machine controls, according to specifications, type of operation, or material requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19483",
+      "text": "Review computer-processed digital images for quality.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19476",
+      "text": "Operate scanners or related computer equipment to digitize negatives, photographic prints, or other images.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19467",
+      "text": "Fill tanks of processing machines with solutions such as developer, dyes, stop-baths, fixers, bleaches, or washes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19473",
+      "text": "Measure and mix chemicals to prepare solutions for processing, according to formulas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19471",
+      "text": "Load digital images onto computers directly from cameras or from storage devices, such as flash memory cards or universal serial bus (USB) devices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19477",
+      "text": "Operate special equipment to perform tasks such as transferring film to videotape or producing photographic enlargements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19466",
+      "text": "Examine developed prints for defects, such as broken lines, spots, or blurs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19480",
+      "text": "Read work orders to determine required processes, techniques, materials, or equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19470",
+      "text": "Load circuit boards, racks or rolls of film, negatives, or printing paper into processing or printing machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19469",
+      "text": "Insert processed negatives and prints into envelopes for delivery to customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19481",
+      "text": "Reprint originals for enlargement or in sections to be pieced together.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19488",
+      "text": "Clean or maintain photoprocessing or darkroom equipment, using ultrasonic equipment or cleaning and rinsing solutions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19474",
+      "text": "Monitor equipment operation to detect malfunctions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19472",
+      "text": "Maintain records, such as quantities or types of processing completed, materials used, or customer charges.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "19468",
+      "text": "Immerse film, negatives, paper, or prints in developing solutions, fixing solutions, and water to complete photographic development processes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19492",
+      "text": "Examine quality of film fades or dissolves for potential color corrections, using color analyzers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19499",
+      "text": "Thread filmstrips through densitometers or sensitometers and expose film to light to determine density of film, necessary color corrections, or light sensitivity.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19491",
+      "text": "Examine drawings, negatives, or photographic prints to determine coloring, shading, accenting, or other changes required for retouching or restoration.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19478",
+      "text": "Place sensitized paper in frames of projection printers, photostats, or other reproduction machines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19500",
+      "text": "Upload digital images onto Web sites for customers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19496",
+      "text": "Produce timed prints with separate densities or color settings for each scene of a production.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19498",
+      "text": "Splice broken or separated film and mount film on reels.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19482",
+      "text": "Retouch photographic negatives or original prints to correct defects.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 41,
+  "salary": 40610,
+  "demand": "Low"
+}

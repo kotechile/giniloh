@@ -1,0 +1,220 @@
+{
+  "code": "53-5021.00",
+  "title": "Captains, Mates, and Pilots of Water Vessels",
+  "description": "Command or supervise operations of ships and water vessels, such as tugboats and ferryboats. Required to hold license issued by U.S. Coast Guard.",
+  "tasks": [
+    {
+      "id": "23802",
+      "text": "Direct courses and speeds of ships, based on specialized knowledge of local winds, weather, water depths, tides, currents, and hazards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23803",
+      "text": "Prevent ships under navigational control from engaging in unsafe operations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23804",
+      "text": "Serve as a vessel's docking master upon arrival at a port or at a berth.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23805",
+      "text": "Consult maps, charts, weather reports, or navigation equipment to determine and direct ship movements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23806",
+      "text": "Steer and operate vessels, using radios, depth finders, radars, lights, buoys, or lighthouses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23807",
+      "text": "Operate ship-to-shore radios to exchange information needed for ship operations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23808",
+      "text": "Dock or undock vessels, sometimes maneuvering through narrow spaces, such as locks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23809",
+      "text": "Stand watches on vessels during specified periods while vessels are under way.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23810",
+      "text": "Inspect vessels to ensure efficient and safe operation of vessels and equipment and conformance to regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23811",
+      "text": "Read gauges to verify sufficient levels of hydraulic fluid, air pressure, or oxygen.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23812",
+      "text": "Report to appropriate authorities any violations of federal or state pilotage laws.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23813",
+      "text": "Provide assistance in maritime rescue operations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23814",
+      "text": "Signal passing vessels, using whistles, flashing lights, flags, or radios.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23815",
+      "text": "Measure depths of water, using depth-measuring equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23817",
+      "text": "Signal crew members or deckhands to rig tow lines, open or close gates or ramps, or pull guard chains across entries.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23816",
+      "text": "Maintain boats or equipment on board, such as engines, winches, navigational systems, fire extinguishers, or life preservers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23819",
+      "text": "Maintain records of daily activities, personnel reports, ship positions and movements, ports of call, weather and sea conditions, pollution control efforts, or cargo or passenger status.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23818",
+      "text": "Advise ships' masters on harbor rules and customs procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23820",
+      "text": "Observe loading or unloading of cargo or equipment to ensure that handling and storage are performed according to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23821",
+      "text": "Calculate sightings of land, using electronic sounding devices and following contour lines on charts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23822",
+      "text": "Learn to operate new technology systems and procedures through instruction, simulators, or models.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23823",
+      "text": "Direct or coordinate crew members or workers performing activities such as loading or unloading cargo, steering vessels, operating engines, or operating, maintaining, or repairing ship equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23824",
+      "text": "Arrange for ships to be fueled, restocked with supplies, or repaired.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23825",
+      "text": "Supervise crews in cleaning or maintaining decks, superstructures, or bridges.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23826",
+      "text": "Purchase supplies or equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23827",
+      "text": "Tow and maneuver barges or signal tugboats to tow barges to destinations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23828",
+      "text": "Perform various marine duties, such as checking for oil spills or other pollutants around ports or harbors or patrolling beaches.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23829",
+      "text": "Assign watches or living quarters to crew members.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23830",
+      "text": "Interview and hire crew members.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23831",
+      "text": "Conduct safety drills such as man overboard or fire drills.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 92460,
+  "demand": "Medium"
+}

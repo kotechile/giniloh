@@ -1,0 +1,101 @@
+{
+  "code": "29-2099.08",
+  "title": "Patient Representatives",
+  "description": "Assist patients in obtaining services, understanding policies and making health care decisions.",
+  "tasks": [
+    {
+      "id": "17668",
+      "text": "Coordinate communication between patients, family members, medical staff, administrative staff, or regulatory agencies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17670",
+      "text": "Interview patients or their representatives to identify problems relating to care.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17671",
+      "text": "Refer patients to appropriate health care services or resources.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17678",
+      "text": "Maintain knowledge of community services and resources available to patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17667",
+      "text": "Explain policies, procedures, or services to patients using medical or administrative knowledge.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17669",
+      "text": "Investigate and direct patient inquiries or complaints to appropriate medical staff members and follow up to ensure satisfactory resolution.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17677",
+      "text": "Read current literature, talk with colleagues, continue education, or participate in professional organizations or conferences to keep abreast of developments in the field.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17674",
+      "text": "Develop and distribute newsletters, brochures, or other printed materials to share information with patients or medical staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17679",
+      "text": "Provide consultation or training to volunteers or staff on topics, such as guest relations, patients' rights, or medical issues.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17672",
+      "text": "Analyze patients' abilities to pay to determine charges on a sliding scale.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17676",
+      "text": "Identify and share research, recommendations, or other information regarding legal liabilities, risk management, or quality of care.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17673",
+      "text": "Collect and report data on topics, such as patient encounters or inter-institutional problems, making recommendations for change when appropriate.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17675",
+      "text": "Teach patients to use home health care equipment.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 0,
+  "salary": 50290,
+  "demand": "High"
+}

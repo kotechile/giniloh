@@ -1,0 +1,17 @@
+{
+  "code": "51-4199.00",
+  "title": "Metal Workers and Plastic Workers, All Other",
+  "description": "All metal workers and plastic workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Metal Workers and Plastic Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 45950,
+  "demand": "Low"
+}

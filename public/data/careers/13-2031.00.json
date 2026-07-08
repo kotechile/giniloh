@@ -1,0 +1,101 @@
+{
+  "code": "13-2031.00",
+  "title": "Budget Analysts",
+  "description": "Examine budget estimates for completeness, accuracy, and conformance with procedures and regulations. Analyze budgeting and accounting reports.",
+  "tasks": [
+    {
+      "id": "3394",
+      "text": "Analyze monthly department budgeting and accounting reports to maintain expenditure controls.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3398",
+      "text": "Provide advice and technical assistance with cost analysis, fiscal allocation, and budget preparation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3401",
+      "text": "Review operating budgets to analyze trends affecting budget needs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3405",
+      "text": "Compile and analyze accounting records and other data to determine the financial resources required to implement a program.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "3402",
+      "text": "Examine budget estimates for completeness, accuracy, and conformance with procedures and regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3399",
+      "text": "Summarize budgets and submit recommendations for the approval or disapproval of funds requests.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3396",
+      "text": "Consult with managers to ensure that budget adjustments are made in accordance with program changes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3395",
+      "text": "Direct the preparation of regular and special budget reports.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3404",
+      "text": "Interpret budget directives and establish policies for carrying out directives.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3403",
+      "text": "Perform cost-benefit analyses to compare operating programs, review financial requests, or explore alternative financing methods.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3397",
+      "text": "Match appropriations for specific programs with appropriations for broader programs, including items for emergency funds.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3400",
+      "text": "Seek new ways to improve efficiency and increase profits.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3406",
+      "text": "Testify before examining and fund-granting authorities, clarifying and promoting the proposed budgets.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 35,
+  "salary": 91640,
+  "demand": "Medium"
+}

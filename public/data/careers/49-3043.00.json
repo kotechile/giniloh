@@ -1,0 +1,150 @@
+{
+  "code": "49-3043.00",
+  "title": "Rail Car Repairers",
+  "description": "Diagnose, adjust, repair, or overhaul railroad rolling stock, mine cars, or mass transit rail cars.",
+  "tasks": [
+    {
+      "id": "9986",
+      "text": "Record conditions of cars, and repair and maintenance work performed or to be performed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9988",
+      "text": "Inspect components such as bearings, seals, gaskets, wheels, and coupler assemblies to determine if repairs are needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9984",
+      "text": "Repair or replace defective or worn parts such as bearings, pistons, and gears, using hand tools, torque wrenches, power tools, and welding equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9989",
+      "text": "Inspect the interior and exterior of rail cars coming into rail yards to identify defects and to determine the extent of wear and damage.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9987",
+      "text": "Remove locomotives, car mechanical units, or other components, using pneumatic hoists and jacks, pinch bars, hand tools, and cutting torches.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9985",
+      "text": "Test units for operability before and after repairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9990",
+      "text": "Adjust repaired or replaced units as needed to ensure proper operation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9992",
+      "text": "Repair, fabricate, and install steel or wood fittings, using blueprints, shop sketches, and instruction manuals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9991",
+      "text": "Perform scheduled maintenance, and clean units and components.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10000",
+      "text": "Examine car roofs for wear and damage, and repair defective sections, using roofing material, cement, nails, and waterproof paint.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10001",
+      "text": "Paint car exteriors, interiors, and fixtures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9993",
+      "text": "Repair and maintain electrical and electronic controls for propulsion and braking systems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9994",
+      "text": "Disassemble units such as water pumps, control valves, and compressors so that repairs can be made.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9995",
+      "text": "Measure diameters of axle wheel seats, using micrometers, and mark dimensions on axles so that wheels can be bored to specified dimensions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9998",
+      "text": "Test electrical systems of cars by operating systems and using testing equipment such as ammeters.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9997",
+      "text": "Replace defective wiring and insulation, and tighten electrical connections, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9999",
+      "text": "Install and repair interior flooring, fixtures, walls, plumbing, steps, and platforms.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10003",
+      "text": "Repair window sash frames, attach weather stripping and channels to frames, and replace window glass, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9996",
+      "text": "Align car sides for installation of car ends and crossties, using width gauges, turnbuckles, and wrenches.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10002",
+      "text": "Repair car upholstery.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 67530,
+  "demand": "Low"
+}

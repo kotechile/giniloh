@@ -1,0 +1,206 @@
+{
+  "code": "29-1031.00",
+  "title": "Dietitians and Nutritionists",
+  "description": "Plan and conduct food service or nutritional programs to assist in the promotion of health and control of disease. May supervise activities of a department providing quantity food services, counsel individuals, or conduct nutritional research.",
+  "tasks": [
+    {
+      "id": "314",
+      "text": "Assess nutritional needs, diet restrictions, and current health plans to develop and implement dietary-care plans and provide nutritional counseling.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23913",
+      "text": "Evaluate laboratory tests in preparing nutrition recommendations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "317",
+      "text": "Counsel individuals and groups on basic rules of good nutrition, healthy eating habits, and nutrition monitoring to improve their quality of life.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "316",
+      "text": "Advise patients and their families on nutritional principles, dietary plans, diet modifications, and food selection and preparation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23914",
+      "text": "Incorporate patient cultural, ethnic, or religious preferences and needs in the development of nutrition plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "315",
+      "text": "Consult with physicians and health care personnel to determine nutritional needs and diet restrictions of patient or client.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23915",
+      "text": "Record and evaluate patient and family health and food history, including symptoms, environmental toxic exposure, allergies, medication factors, and preventive health-care measures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23916",
+      "text": "Develop recipes and menus to address special nutrition needs, such as low glycemic, low histamine, or gluten- or allergen-free.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "327",
+      "text": "Coordinate diet counseling services.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "322",
+      "text": "Develop curriculum and prepare manuals, visual aids, course outlines, and other materials used in teaching.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "330",
+      "text": "Plan, conduct, and evaluate dietary, nutritional, and epidemiological research.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "331",
+      "text": "Plan and conduct training programs in dietetics, nutrition, and institutional management and administration for medical students, health-care personnel, and the general public.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "333",
+      "text": "Write research reports and other publications to document and communicate research findings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "325",
+      "text": "Select, train, and supervise workers who plan, prepare, and serve meals.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "332",
+      "text": "Make recommendations regarding public policy, such as nutrition labeling, food fortification, or nutrition standards for school programs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "326",
+      "text": "Manage quantity food service departments or clinical and community nutrition services.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "318",
+      "text": "Monitor food service operations to ensure conformance to nutritional, safety, sanitation and quality standards.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "321",
+      "text": "Inspect meals served for conformance to prescribed diets and standards of palatability and appearance.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "324",
+      "text": "Purchase food in accordance with health and safety codes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "320",
+      "text": "Develop policies for food service or nutritional programs to assist in health promotion and disease control.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "329",
+      "text": "Organize, develop, analyze, test, and prepare special meals, such as low-fat, low-cholesterol, or chemical-free meals.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "328",
+      "text": "Advise food service managers and organizations on sanitation, safety procedures, menu development, budgeting, and planning to assist with establishment, operation, and evaluation of food service facilities and nutrition programs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "323",
+      "text": "Prepare and administer budgets for food, equipment, and supplies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23917",
+      "text": "Plan, conduct, and evaluate nutrigenomic or nutrigenetic research.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "319",
+      "text": "Coordinate recipe development and standardization and develop new menus for independent food service operations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "334",
+      "text": "Plan and prepare grant proposals to request program funding.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "335",
+      "text": "Test new food products and equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "336",
+      "text": "Confer with design, building, and equipment personnel to plan for construction and remodeling of food service units.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 12,
+  "salary": 76400,
+  "demand": "Medium"
+}

@@ -1,0 +1,115 @@
+{
+  "code": "29-1218.00",
+  "title": "Obstetricians and Gynecologists",
+  "description": "Provide medical care related to pregnancy or childbirth. Diagnose, treat, and help prevent diseases of women, particularly those affecting the reproductive system. May also provide general care to women. May perform both medical and gynecological surgery functions.",
+  "tasks": [
+    {
+      "id": "7806",
+      "text": "Treat diseases of female organs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7804",
+      "text": "Care for and treat women during prenatal, natal, and postnatal periods.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7810",
+      "text": "Analyze records, reports, test results, or examination information to diagnose medical condition of patient.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7808",
+      "text": "Perform cesarean sections or other surgical procedures as needed to preserve patients' health and deliver babies safely.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7811",
+      "text": "Collect, record, and maintain patient information, such as medical histories, reports, or examination results.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7805",
+      "text": "Explain procedures and discuss test results or prescribed treatments with patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7809",
+      "text": "Prescribe or administer therapy, medication, and other specialized medical care to treat or prevent illness, disease, or injury.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7807",
+      "text": "Monitor patients' conditions and progress and reevaluate treatments as necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7814",
+      "text": "Consult with or provide consulting services to other physicians.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7813",
+      "text": "Refer patient to medical specialist or other practitioner when necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7815",
+      "text": "Direct and coordinate activities of nurses, students, assistants, specialists, therapists, and other medical staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7812",
+      "text": "Advise patients and community members concerning diet, activity, hygiene, and disease prevention.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7816",
+      "text": "Plan, implement, or administer health programs in hospitals, businesses, or communities for prevention and treatment of injuries or illnesses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7817",
+      "text": "Prepare government and organizational reports on birth, death, and disease statistics, workforce evaluations, or the medical status of individuals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7818",
+      "text": "Conduct research to develop or test medications, treatments, or procedures to prevent or control disease or injury.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 7,
+  "salary": 292910,
+  "demand": "Low"
+}

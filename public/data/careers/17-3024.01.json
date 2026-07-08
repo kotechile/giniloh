@@ -1,0 +1,164 @@
+{
+  "code": "17-3024.01",
+  "title": "Robotics Technicians",
+  "description": "Build, install, test, or maintain robotic equipment or related automated production systems.",
+  "tasks": [
+    {
+      "id": "21059",
+      "text": "Make repairs to robots or peripheral equipment, such as replacement of defective circuit boards, sensors, controllers, encoders, or servomotors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16589",
+      "text": "Troubleshoot robotic systems, using knowledge of microprocessors, programmable controllers, electronics, circuit analysis, mechanics, sensor or feedback systems, hydraulics, or pneumatics.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16593",
+      "text": "Install, program, or repair programmable controllers, robot controllers, end-of-arm tools, or conveyors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16579",
+      "text": "Maintain service records of robotic equipment or automated production systems.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "16584",
+      "text": "Modify computer-controlled robot movements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16592",
+      "text": "Perform preventive or corrective maintenance on robotic systems or components.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16588",
+      "text": "Align, fit, or assemble components, using hand tools, power tools, fixtures, templates, or microscopes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16586",
+      "text": "Attach wires between controllers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19684",
+      "text": "Evaluate the efficiency and reliability of industrial robotic systems, reprogramming or calibrating to achieve maximum quantity and quality.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16591",
+      "text": "Test performance of robotic assemblies, using instruments such as oscilloscopes, electronic voltmeters, or bridges.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16576",
+      "text": "Train customers or other personnel to install, use, or maintain robots.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16596",
+      "text": "Build or assemble robotic devices or systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16581",
+      "text": "Document robotics test procedures and results.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16587",
+      "text": "Assist engineers in the design, configuration, or application of robotic systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16594",
+      "text": "Install new robotic systems in stationary positions or on tracks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16577",
+      "text": "Program complex robotic systems, such as vision systems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16585",
+      "text": "Develop robotic path motions to maximize efficiency, safety, and quality.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16580",
+      "text": "Fabricate housings, jigs, fittings, or fixtures, using metalworking machines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16590",
+      "text": "Train robots, using artificial intelligence software or interactive training techniques, to perform simple or complex tasks, such as designing and carrying out a series of iterative tests of chemical samples.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16583",
+      "text": "Inspect installation sites.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21060",
+      "text": "Maintain inventories of robotic production supplies, such as sensors or cables.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16582",
+      "text": "Develop three-dimensional simulations of automation systems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 39,
+  "salary": 73900,
+  "demand": "Low"
+}

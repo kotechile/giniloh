@@ -1,0 +1,150 @@
+{
+  "code": "51-7011.00",
+  "title": "Cabinetmakers and Bench Carpenters",
+  "description": "Cut, shape, and assemble wooden articles or set up and operate a variety of woodworking machines, such as power saws, jointers, and mortisers to surface, cut, or shape lumber or to fabricate parts for wood products.",
+  "tasks": [
+    {
+      "id": "12211",
+      "text": "Verify dimensions or check the quality or fit of pieces to ensure adherence to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12210",
+      "text": "Produce or assemble components of articles, such as store fixtures, office equipment, cabinets, or high-grade furniture.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12213",
+      "text": "Measure and mark dimensions of parts on paper or lumber stock prior to cutting, following blueprints, to ensure a tight fit and quality product.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12212",
+      "text": "Set up or operate machines, including power saws, jointers, mortisers, tenoners, molders, or shapers, to cut, mold, or shape woodstock or wood substitutes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12216",
+      "text": "Establish the specifications of articles to be constructed or repaired, or plan the methods or operations for shaping or assembling parts, based on blueprints, drawings, diagrams, or oral or written instructions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12215",
+      "text": "Attach parts or subassemblies together to form completed units, using glue, dowels, nails, screws, or clamps.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12214",
+      "text": "Reinforce joints with nails or other fasteners to prepare articles for finishing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12224",
+      "text": "Install hardware, such as hinges, handles, catches, or drawer pulls, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12219",
+      "text": "Trim, sand, or scrape surfaces or joints to prepare articles for finishing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12218",
+      "text": "Match materials for color, grain, or texture, giving attention to knots or other features of the wood.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12217",
+      "text": "Cut timber to the right size, and shape and trim parts of joints to ensure a snug fit, using hand tools, such as planes, chisels, or wood files.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12223",
+      "text": "Perform final touch-ups with sandpaper or steel wool.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12220",
+      "text": "Bore holes for insertion of screws or dowels, by hand or using boring machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12226",
+      "text": "Repair or alter wooden furniture, cabinetry, fixtures, paneling, or other pieces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12222",
+      "text": "Estimate the amounts, types, or costs of needed materials.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12229",
+      "text": "Dip, brush, or spray assembled articles with protective or decorative finishes, such as stain, varnish, paint, or lacquer.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20822",
+      "text": "Draw up detailed specifications and discuss projects with customers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12228",
+      "text": "Design furniture, using computer-aided drawing programs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12227",
+      "text": "Apply Masonite, formica, or vinyl surfacing materials.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12221",
+      "text": "Program computers to operate machinery.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 38,
+  "salary": 46680,
+  "demand": "Medium"
+}

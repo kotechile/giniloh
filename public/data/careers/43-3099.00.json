@@ -1,0 +1,17 @@
+{
+  "code": "43-3099.00",
+  "title": "Financial Clerks, All Other",
+  "description": "All financial clerks not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Financial Clerks, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 53830,
+  "demand": "Medium"
+}

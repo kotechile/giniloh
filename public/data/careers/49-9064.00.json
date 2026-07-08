@@ -1,0 +1,115 @@
+{
+  "code": "49-9064.00",
+  "title": "Watch and Clock Repairers",
+  "description": "Repair, clean, and adjust mechanisms of timing instruments, such as watches and clocks. Includes watchmakers, watch technicians, and mechanical timepiece repairers.",
+  "tasks": [
+    {
+      "id": "14977",
+      "text": "Clean, rinse, and dry timepiece parts, using solutions and ultrasonic or mechanical watch-cleaning machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14984",
+      "text": "Adjust timing regulators, using truing calipers, watch-rate recorders, and tweezers.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "14979",
+      "text": "Reassemble timepieces, replacing glass faces and batteries, before returning them to customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14978",
+      "text": "Disassemble timepieces and inspect them for defective, worn, misaligned, or rusty parts, using loupes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14975",
+      "text": "Oil moving parts of timepieces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14982",
+      "text": "Estimate repair costs and timepiece values.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14976",
+      "text": "Repair or replace broken, damaged, or worn parts on timepieces, using lathes, drill presses, and hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14980",
+      "text": "Test timepiece accuracy and performance, using meters and other electronic instruments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14983",
+      "text": "Perform regular adjustment and maintenance on timepieces, watch cases, and watch bands.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21084",
+      "text": "Order supplies, including replacement parts, for timing instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14986",
+      "text": "Gather information from customers about a timepiece's problems and its service history.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14987",
+      "text": "Test and replace batteries and other electronic components.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14985",
+      "text": "Record quantities and types of timepieces repaired, serial and model numbers of items, work performed, and charges for repairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14988",
+      "text": "Demagnetize mechanisms, using demagnetizing machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14981",
+      "text": "Fabricate parts for watches and clocks, using small lathes and other machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 47,
+  "salary": 67230,
+  "demand": "Low"
+}

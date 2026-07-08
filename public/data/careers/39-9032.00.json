@@ -1,0 +1,178 @@
+{
+  "code": "39-9032.00",
+  "title": "Recreation Workers",
+  "description": "Conduct recreation activities with groups in public, private, or volunteer agencies or recreation facilities. Organize and promote activities, such as arts and crafts, sports, games, music, dramatics, social recreation, camping, and hobbies, taking into account the needs and interests of individual members.",
+  "tasks": [
+    {
+      "id": "2380",
+      "text": "Enforce rules and regulations of recreational facilities to maintain discipline and ensure safety.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2381",
+      "text": "Organize, lead, and promote interest in recreational activities, such as arts, crafts, sports, games, camping, and hobbies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21010",
+      "text": "Assess the needs and interests of individuals and groups and plan activities accordingly, given the available equipment or facilities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2382",
+      "text": "Manage the daily operations of recreational facilities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2383",
+      "text": "Administer first aid according to prescribed procedures and notify emergency medical personnel when necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2388",
+      "text": "Complete and maintain time and attendance forms and inventory lists.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2386",
+      "text": "Explain principles, techniques, and safety procedures to participants in recreational activities and demonstrate use of materials and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2393",
+      "text": "Direct special activities or events, such as aquatics, gymnastics, or performing arts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2390",
+      "text": "Supervise and coordinate the work activities of personnel, such as training staff members and assigning work duties.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2387",
+      "text": "Evaluate recreation areas, facilities, and services to determine if they are producing desired results.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21011",
+      "text": "Document individuals' progress toward meeting their treatment goals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2385",
+      "text": "Greet new arrivals to activities, introducing them to other participants, explaining facility rules, and encouraging participation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2389",
+      "text": "Confer with management to discuss and resolve participant complaints.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2394",
+      "text": "Meet with staff to discuss rules, regulations, and work-related problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2399",
+      "text": "Oversee the purchase, planning, design, construction, and upkeep of recreation facilities and areas.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2396",
+      "text": "Encourage participants to develop their own activities and leadership skills through group discussions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2391",
+      "text": "Meet and collaborate with agency personnel, community organizations, and other professional personnel to plan balanced recreational programs for participants.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2395",
+      "text": "Provide for entertainment and set up related decorations and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2397",
+      "text": "Serve as liaison between park or recreation administrators and activity instructors.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2392",
+      "text": "Schedule maintenance and use of facilities.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18557",
+      "text": "Conduct individual in-room visits with residents.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21012",
+      "text": "Develop treatment goals for individuals based on their assessments.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2398",
+      "text": "Evaluate staff performance, recording evaluations on appropriate forms.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18558",
+      "text": "Take residents on community outings.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 25,
+  "salary": 36560,
+  "demand": "Very High"
+}

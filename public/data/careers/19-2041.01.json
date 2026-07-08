@@ -1,0 +1,108 @@
+{
+  "code": "19-2041.01",
+  "title": "Climate Change Policy Analysts",
+  "description": "Research and analyze policy developments related to climate change. Make climate-related recommendations for actions such as legislation, awareness campaigns, or fundraising approaches.",
+  "tasks": [
+    {
+      "id": "16849",
+      "text": "Provide analytical support for policy briefs related to renewable energy, energy efficiency, or climate change.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16853",
+      "text": "Propose new or modified policies involving use of traditional and alternative fuels, transportation of goods, and other factors relating to climate and climate change.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16850",
+      "text": "Prepare study reports, memoranda, briefs, testimonies, or other written materials to inform government or environmental groups on environmental issues, such as climate change.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16854",
+      "text": "Analyze and distill climate-related research findings to inform legislators, regulatory agencies, or other stakeholders.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16851",
+      "text": "Make legislative recommendations related to climate change or environmental management, based on climate change policies, principles, programs, practices, and processes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16843",
+      "text": "Present climate-related information at public interest, governmental, or other meetings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16846",
+      "text": "Gather and review climate-related studies from government agencies, research laboratories, and other organizations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16848",
+      "text": "Review existing policies or legislation to identify environmental impacts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16842",
+      "text": "Promote initiatives to mitigate climate change with government or environmental groups.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16852",
+      "text": "Research policies, practices, or procedures for climate or environmental management.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16841",
+      "text": "Write reports or academic papers to communicate findings of climate-related studies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16847",
+      "text": "Develop, or contribute to the development of, educational or outreach programs on the environment or climate change.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16844",
+      "text": "Present and defend proposals for climate change research projects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16845",
+      "text": "Prepare grant applications to obtain funding for programs related to climate change, environmental management, or sustainability.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 36,
+  "salary": 82220,
+  "demand": "Medium"
+}

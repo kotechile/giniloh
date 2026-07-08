@@ -1,0 +1,185 @@
+{
+  "code": "19-2043.00",
+  "title": "Hydrologists",
+  "description": "Research the distribution, circulation, and physical properties of underground and surface waters; and study the form and intensity of precipitation and its rate of infiltration into the soil, movement through the earth, and return to the ocean and atmosphere.",
+  "tasks": [
+    {
+      "id": "18618",
+      "text": "Prepare written and oral reports describing research results, using illustrations, maps, appendices, and other information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9104",
+      "text": "Design and conduct scientific hydrogeological investigations to ensure that accurate and appropriate information is available for use in water resource management decisions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9108",
+      "text": "Measure and graph phenomena such as lake levels, stream flows, and changes in water volumes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9116",
+      "text": "Conduct research and communicate information to promote the conservation and preservation of water resources.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9102",
+      "text": "Coordinate and supervise the work of professional and technical staff, including research assistants, technologists, and technicians.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9105",
+      "text": "Study public water supply issues, including flood and drought risks, water quality, wastewater, and impacts on wetland habitats.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9107",
+      "text": "Apply research findings to help minimize the environmental impacts of pollution, waterborne diseases, erosion, and sedimentation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9100",
+      "text": "Study and document quantities, distribution, disposition, and development of underground and surface waters.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9112",
+      "text": "Install, maintain, and calibrate instruments such as those that monitor water levels, rainfall, and sediments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18617",
+      "text": "Develop computer models for hydrologic predictions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9115",
+      "text": "Study and analyze the physical aspects of the earth in terms of hydrological components, including atmosphere, hydrosphere, and interior structure.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9119",
+      "text": "Evaluate research data in terms of its impact on issues such as soil and water conservation, flood control planning, and water supply forecasting.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9106",
+      "text": "Collect and analyze water samples as part of field investigations or to validate data from automatic monitors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9103",
+      "text": "Prepare hydrogeologic evaluations of known or suspected hazardous waste sites and land treatment and feedlot facilities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9113",
+      "text": "Evaluate data and provide recommendations regarding the feasibility of municipal projects, such as hydroelectric power plants, irrigation systems, flood warning systems, and waste treatment facilities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9111",
+      "text": "Develop or modify methods for conducting hydrologic studies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9118",
+      "text": "Review applications for site plans and permits and recommend approval, denial, modification, or further investigative action.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9120",
+      "text": "Monitor the work of well contractors, exploratory borers, and engineers and enforce rules regarding their activities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9110",
+      "text": "Answer questions and provide technical assistance and information to contractors or the public regarding issues such as well drilling, code requirements, hydrology, and geology.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9123",
+      "text": "Investigate properties, origins, and activities of glaciers, ice, snow, and permafrost.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9114",
+      "text": "Conduct short- and long-term climate assessments and study storm occurrences.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9121",
+      "text": "Administer programs designed to ensure the proper sealing of abandoned wells.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9109",
+      "text": "Investigate complaints or conflicts related to the alteration of public waters, gathering information, recommending alternatives, informing participants of progress, and preparing draft orders.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9117",
+      "text": "Design civil works associated with hydrographic activities and supervise their construction, installation, and maintenance.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9122",
+      "text": "Compile and evaluate hydrologic information to prepare navigational charts and maps and to predict atmospheric conditions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 24,
+  "salary": 96600,
+  "demand": "Low"
+}

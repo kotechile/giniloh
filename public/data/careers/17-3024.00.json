@@ -1,0 +1,206 @@
+{
+  "code": "17-3024.00",
+  "title": "Electro-Mechanical and Mechatronics Technologists and Technicians",
+  "description": "Operate, test, maintain, or adjust unmanned, automated, servomechanical, or electromechanical equipment. May operate unmanned submarines, aircraft, or other equipment to observe or record visual information at sites such as oil rigs, crop fields, buildings, or for similar infrastructure, deep ocean exploration, or hazardous waste removal. May assist engineers in testing and designing robotics equipment.",
+  "tasks": [
+    {
+      "id": "10892",
+      "text": "Test performance of electromechanical assemblies, using test instruments such as oscilloscopes, electronic voltmeters, or bridges.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22014",
+      "text": "Install or program computer hardware or machine or instrumentation software in microprocessor-based systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10893",
+      "text": "Read blueprints, schematics, diagrams, or technical orders to determine methods and sequences of assembly.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22015",
+      "text": "Modify, maintain, or repair electrical, electronic, or mechanical components, equipment, or systems to ensure proper functioning.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10896",
+      "text": "Inspect parts for surface defects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10894",
+      "text": "Install electrical or electronic parts and hardware in housings or assemblies, using soldering equipment and hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10898",
+      "text": "Verify part dimensions or clearances to ensure conformance to specifications, using precision measuring instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22012",
+      "text": "Fabricate or assemble mechanical, electrical, or electronic components or assemblies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10895",
+      "text": "Align, fit, or assemble component parts, using hand or power tools, fixtures, templates, or microscopes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22016",
+      "text": "Produce electrical, electronic, or mechanical drawings or other related documents or graphics necessary for electromechanical design, using computer-aided design (CAD) software.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22018",
+      "text": "Select electromechanical equipment, materials, components, or systems to meet functional specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22011",
+      "text": "Establish and maintain inventory, records, or documentation systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10902",
+      "text": "Develop, test, or program new robots.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20743",
+      "text": "Prepare written documentation of electromechanical test results.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10900",
+      "text": "Repair, rework, or calibrate hydraulic or pneumatic assemblies or systems to meet operational specifications or tolerances.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22017",
+      "text": "Select and use laboratory, operational, or diagnostic techniques or test equipment to assess electromechanical circuits, equipment, processes, systems, or subsystems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19683",
+      "text": "Operate, test, or maintain robotic equipment used for green production applications, such as waste-to-energy conversion systems, minimization of material waste, or replacement of human operators in dangerous work environments.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22009",
+      "text": "Determine whether selected electromechanical components comply with environmental standards and regulations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22010",
+      "text": "Develop or implement programs related to the environmental impact of engineering activities.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10901",
+      "text": "Train others to install, use, or maintain robots.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22005",
+      "text": "Analyze engineering designs of logic or digital circuitry, motor controls, instrumentation, or data acquisition for implementation into new or existing automated, servomechanical, or other electromechanical systems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22007",
+      "text": "Conduct statistical studies to analyze or compare production costs for sustainable and nonsustainable designs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22019",
+      "text": "Specify, coordinate, or conduct quality-control or quality-assurance programs and procedures.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10899",
+      "text": "Operate metalworking machines to fabricate housings, jigs, fittings, or fixtures.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22021",
+      "text": "Translate electromechanical drawings into design specifications, applying principles of engineering, thermal or fluid sciences, mathematics, or statistics.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22013",
+      "text": "Identify energy-conserving production or fabrication methods, such as by bending metal rather than cutting and welding or casting metal.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23943",
+      "text": "Assist engineers to implement electromechanical designs in industrial or other settings.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22008",
+      "text": "Consult with machinists to ensure that electromechanical equipment or systems meet design specifications.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 32,
+  "salary": 73900,
+  "demand": "Low"
+}

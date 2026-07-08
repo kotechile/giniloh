@@ -1,0 +1,73 @@
+{
+  "code": "27-2021.00",
+  "title": "Athletes and Sports Competitors",
+  "description": "Compete in athletic events.",
+  "tasks": [
+    {
+      "id": "13038",
+      "text": "Assess performance following athletic competition, identifying strengths and weaknesses and making adjustments to improve future performance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13036",
+      "text": "Maintain equipment used in a particular sport.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13033",
+      "text": "Attend scheduled practice or training sessions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13037",
+      "text": "Maintain optimum physical fitness levels by training regularly, following nutrition plans, or consulting with health professionals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13034",
+      "text": "Participate in athletic events or competitive sports, according to established rules and regulations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13035",
+      "text": "Exercise or practice under the direction of athletic trainers or professional coaches to develop skills, improve physical condition, or prepare for competitions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20882",
+      "text": "Receive instructions from coaches or other sports staff prior to events and discuss performance afterwards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13040",
+      "text": "Represent teams or professional sports clubs, performing such activities as meeting with members of the media, making speeches, or participating in charity events.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13041",
+      "text": "Lead teams by serving as captain.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 11,
+  "salary": 66710,
+  "demand": "Low"
+}

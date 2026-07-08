@@ -1,0 +1,136 @@
+{
+  "code": "39-5092.00",
+  "title": "Manicurists and Pedicurists",
+  "description": "Clean and shape customers' fingernails and toenails. May polish or decorate nails.",
+  "tasks": [
+    {
+      "id": "8748",
+      "text": "Clean and sanitize tools and work environment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8753",
+      "text": "Apply undercoat and clear or colored polish onto nails with brush.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8758",
+      "text": "Maintain supply inventories and records of client services.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "8752",
+      "text": "Shape and smooth ends of nails, using scissors, files, or emery boards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20769",
+      "text": "Prepare nail cuticles with water and oil, using cuticle knives to push back cuticles and scissors or nippers to trim cuticles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20770",
+      "text": "Prepare customers' nails in soapy water, using swabs, files, and orange sticks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8750",
+      "text": "Remove previously applied nail polish, using liquid remover and swabs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20771",
+      "text": "Use rotary abrasive wheels to shape and smooth nails or artificial extensions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8749",
+      "text": "Schedule client appointments and accept payments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20772",
+      "text": "Assess the condition of clients' hands, remove dead skin, and massage hands.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8760",
+      "text": "Roughen surfaces of fingernails, using abrasive wheel.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8754",
+      "text": "Advise clients on nail care and use of products and colors.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20773",
+      "text": "Treat nails to repair or improve strength and resilience by wrapping.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20774",
+      "text": "Extend nails using powder, solvent, and paper forms attached to tips of customers' fingers to support and shape artificial nails.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8763",
+      "text": "Polish nails, using powdered polish and buffer.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8764",
+      "text": "Whiten underside of nails with white paste or pencils.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8761",
+      "text": "Promote and sell nail care products.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8765",
+      "text": "Decorate clients' nails by piercing or attaching ornaments or designs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 44,
+  "salary": 35760,
+  "demand": "High"
+}

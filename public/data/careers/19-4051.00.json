@@ -1,0 +1,136 @@
+{
+  "code": "19-4051.00",
+  "title": "Nuclear Technicians",
+  "description": "Assist nuclear physicists, nuclear engineers, or other scientists in laboratory, power generation, or electricity production activities. May operate, maintain, or provide quality control for nuclear testing and research equipment. May monitor radiation.",
+  "tasks": [
+    {
+      "id": "22308",
+      "text": "Follow nuclear equipment operational policies and procedures that ensure environmental safety.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22309",
+      "text": "Conduct surveillance testing to determine safety of nuclear equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22310",
+      "text": "Monitor nuclear reactor equipment performance to identify operational inefficiencies, hazards, or needs for maintenance or repair.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22311",
+      "text": "Test plant equipment to ensure it is operating properly.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22312",
+      "text": "Apply safety tags to equipment needing maintenance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22313",
+      "text": "Follow policies and procedures for radiation workers to ensure personnel safety.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22314",
+      "text": "Modify, devise, or maintain nuclear equipment used in operations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22315",
+      "text": "Monitor instruments, gauges, or recording devices under direction of nuclear experimenters.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22316",
+      "text": "Perform testing, maintenance, repair, or upgrading of accelerator systems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22318",
+      "text": "Warn maintenance workers of radiation hazards and direct workers to vacate hazardous areas.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22319",
+      "text": "Calculate equipment operating factors, such as radiation times, dosages, temperatures, gamma intensities, or pressures, using standard formulas and conversion tables.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22320",
+      "text": "Measure the intensity and identify the types of radiation in work areas, equipment, or materials, using radiation detectors or other instruments.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22321",
+      "text": "Communicate with accelerator maintenance personnel to ensure readiness of support systems, such as vacuum, water cooling, or radio frequency power sources.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22323",
+      "text": "Identify and implement appropriate decontamination procedures, based on equipment and the size, nature, and type of contamination.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22324",
+      "text": "Decontaminate objects by cleaning them using soap or solvents or by abrading using brushes, buffing machines, or sandblasting machines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22326",
+      "text": "Collect air, water, gas or solid samples for testing to determine radioactivity levels or to ensure appropriate radioactive containment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22327",
+      "text": "Determine or recommend radioactive decontamination procedures, according to the size and nature of equipment and the degree of contamination.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22328",
+      "text": "Set up equipment that automatically detects area radiation deviations and test detection equipment to ensure its accuracy.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 36,
+  "salary": 110240,
+  "demand": "Low"
+}

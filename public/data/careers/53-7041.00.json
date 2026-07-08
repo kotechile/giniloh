@@ -1,0 +1,101 @@
+{
+  "code": "53-7041.00",
+  "title": "Hoist and Winch Operators",
+  "description": "Operate or tend hoists or winches to lift and pull loads using power-operated cable equipment.",
+  "tasks": [
+    {
+      "id": "4979",
+      "text": "Move levers, pedals, and throttles to stop, start, and regulate speeds of hoist or winch drums in response to hand, bell, buzzer, telephone, loud-speaker, or whistle signals, or by observing dial indicators or cable marks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4980",
+      "text": "Start engines of hoists or winches and use levers and pedals to wind or unwind cable on drums.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4981",
+      "text": "Observe equipment gauges and indicators and hand signals of other workers to verify load positions or depths.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4982",
+      "text": "Operate compressed air, diesel, electric, gasoline, or steam-driven hoists or winches to control movement of cableways, cages, derricks, draglines, loaders, railcars, or skips.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4983",
+      "text": "Move or reposition hoists, winches, loads and materials, manually or using equipment and machines such as trucks, cars, and hand trucks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4984",
+      "text": "Select loads or materials according to weight and size specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4985",
+      "text": "Signal and assist other workers loading or unloading materials.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "4986",
+      "text": "Attach, fasten, and disconnect cables or lines to loads, materials, and equipment, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4987",
+      "text": "Apply hand or foot brakes and move levers to lock hoists or winches.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4988",
+      "text": "Oil winch drums so that cables will wind smoothly.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4989",
+      "text": "Climb ladders to position and set up vehicle-mounted derricks.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4990",
+      "text": "Repair, maintain, and adjust equipment, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4991",
+      "text": "Tend auxiliary equipment, such as jacks, slings, cables, or stop blocks, to facilitate moving items or materials for further processing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 54,
+  "salary": 56450,
+  "demand": "Low"
+}

@@ -1,0 +1,136 @@
+{
+  "code": "39-6012.00",
+  "title": "Concierges",
+  "description": "Assist patrons at hotel, apartment, or office building with personal services. May take messages; arrange or give advice on transportation, business services, or entertainment; or monitor guest requests for housekeeping and maintenance.",
+  "tasks": [
+    {
+      "id": "4529",
+      "text": "Provide information about local features, such as shopping, dining, nightlife, or recreational destinations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20259",
+      "text": "Make reservations for patrons, such as for dinner, spa treatments, or golf tee times, and obtain tickets to special events.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20260",
+      "text": "Provide directions to guests.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21203",
+      "text": "Order flowers for guests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4530",
+      "text": "Make travel arrangements for sightseeing or other tours.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4533",
+      "text": "Pick up and deliver items or run errands for guests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20262",
+      "text": "Plan special events, parties, or meetings, which may include booking musicians or celebrities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "24009",
+      "text": "Book airline or train tickets, reserve rental cars, or arrange shuttle service for guests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20263",
+      "text": "Arrange childcare services for guests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4534",
+      "text": "Carry out unusual requests, such as searching for hard-to-find items or arranging for exotic services, such as hot-air balloon rides.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "24010",
+      "text": "Assist guests with special needs by providing equipment such as wheelchairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4531",
+      "text": "Receive, store, or deliver luggage or mail.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4532",
+      "text": "Perform office duties on a temporary basis when needed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4535",
+      "text": "Arrange for the replacement of items lost by travelers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20261",
+      "text": "Provide business services for guests, such as sending or receiving faxes or shipping packages.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4536",
+      "text": "Arrange for interpreters or translators when patrons require such services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20265",
+      "text": "Provide food and beverage services to guests.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20264",
+      "text": "Clean and tidy hotel lounge.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 39,
+  "salary": 38950,
+  "demand": "Medium"
+}

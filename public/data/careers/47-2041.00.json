@@ -1,0 +1,122 @@
+{
+  "code": "47-2041.00",
+  "title": "Carpet Installers",
+  "description": "Lay and install carpet from rolls or blocks on floors. Install padding and trim flooring materials.",
+  "tasks": [
+    {
+      "id": "2835",
+      "text": "Inspect the surface to be covered to determine its condition, and correct any imperfections that might show through carpet or cause carpet to wear unevenly.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2836",
+      "text": "Roll out, measure, mark, and cut carpeting to size with a carpet knife, following floor sketches and allowing extra carpet for final fitting.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2833",
+      "text": "Join edges of carpet and seam edges where necessary, by sewing or by using tape with glue and heated carpet iron.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2834",
+      "text": "Cut and trim carpet to fit along wall edges, openings, and projections, finishing the edges with a wall trimmer.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2837",
+      "text": "Plan the layout of the carpet, allowing for expected traffic patterns and placing seams for best appearance and longest wear.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2838",
+      "text": "Stretch carpet to align with walls and ensure a smooth surface, and press carpet in place over tack strips or use staples, tape, tacks or glue to hold carpet in place.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2839",
+      "text": "Take measurements and study floor sketches to calculate the area to be carpeted and the amount of material needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2841",
+      "text": "Install carpet on some floors using adhesive, following prescribed method.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20142",
+      "text": "Clean up before and after installation, including vacuuming carpet and discarding remnant pieces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2844",
+      "text": "Measure, cut and install tackless strips along the baseboard or wall.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2842",
+      "text": "Nail tack strips around area to be carpeted or use old strips to attach edges of new carpet.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2840",
+      "text": "Cut carpet padding to size and install padding, following prescribed method.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2843",
+      "text": "Fasten metal treads across door openings or where carpet meets flooring to hold carpet in place.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2845",
+      "text": "Draw building diagrams and record dimensions.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "2846",
+      "text": "Move furniture from area to be carpeted and remove old carpet and padding.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2847",
+      "text": "Cut and bind material.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 50340,
+  "demand": "Low"
+}

@@ -1,0 +1,136 @@
+{
+  "code": "43-9071.00",
+  "title": "Office Machine Operators, Except Computer",
+  "description": "Operate one or more of a variety of office machines, such as photocopying, photographic, and duplicating machines, or other office machines.",
+  "tasks": [
+    {
+      "id": "13288",
+      "text": "Read job orders to determine the type of work to be done, the quantities to be produced, and the materials needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13301",
+      "text": "Deliver completed work.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13290",
+      "text": "Place original copies in feed trays, feed originals into feed rolls, or position originals on tables beneath camera lenses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13292",
+      "text": "Sort, assemble, and proof completed work.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13289",
+      "text": "Operate office machines such as high speed business photocopiers, readers, scanners, addressing machines, stencil-cutting machines, microfilm readers or printers, folding and inserting machines, bursters, and binder machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13300",
+      "text": "Complete records of production, including work volumes and outputs, materials used, and any backlogs.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "13291",
+      "text": "Compute prices for services and receive payment, or provide supervisors with billing information.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "13293",
+      "text": "Set up and adjust machines, regulating factors such as speed, ink flow, focus, and number of copies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13295",
+      "text": "Load machines with materials such as blank paper or film.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13294",
+      "text": "Monitor machine operation, and make adjustments as necessary to ensure proper operation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13298",
+      "text": "Clean machines, perform minor repairs, and report major repair needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13297",
+      "text": "File and store completed documents.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13299",
+      "text": "Operate auxiliary machines such as collators, pad and tablet making machines, staplers, and paper punching, folding, cutting, and perforating machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13296",
+      "text": "Maintain stock of supplies, and requisition any needed items.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13302",
+      "text": "Prepare and process papers for use in scanning, microfilming, and microfiche.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13304",
+      "text": "Clean and file master copies or plates.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13303",
+      "text": "Cut copies apart and write identifying information, such as page numbers or titles, on copies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13305",
+      "text": "Move heat units and clamping frames over screen beds to form Braille impressions on pages, raising frames to release individual copies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 53,
+  "salary": 40960,
+  "demand": "Medium"
+}

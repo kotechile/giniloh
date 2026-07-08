@@ -1,0 +1,178 @@
+{
+  "code": "29-1217.00",
+  "title": "Neurologists",
+  "description": "Diagnose, manage, and treat disorders and diseases of the brain, spinal cord, and peripheral nerves, with a primarily nonsurgical focus.",
+  "tasks": [
+    {
+      "id": "17123",
+      "text": "Interview patients to obtain information, such as complaints, symptoms, medical histories, and family histories.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17132",
+      "text": "Examine patients to obtain information about functional status of areas, such as vision, physical strength, coordination, reflexes, sensations, language skills, cognitive abilities, and mental status.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17130",
+      "text": "Perform or interpret the outcomes of procedures or diagnostic tests, such as lumbar punctures, electroencephalography, electromyography, and nerve conduction velocity tests.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17121",
+      "text": "Order or interpret results of laboratory analyses of patients' blood or cerebrospinal fluid.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17125",
+      "text": "Diagnose neurological conditions based on interpretation of examination findings, histories, or test results.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17117",
+      "text": "Prescribe or administer medications, such as anti-epileptic drugs, and monitor patients for behavioral and cognitive side effects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17131",
+      "text": "Identify and treat major neurological system diseases and disorders, such as central nervous system infection, cranio spinal trauma, dementia, and stroke.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17126",
+      "text": "Develop treatment plans based on diagnoses and on evaluation of factors, such as age and general health, or procedural risks and costs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17124",
+      "text": "Inform patients or families of neurological diagnoses and prognoses, or benefits, risks and costs of various treatment plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17119",
+      "text": "Prepare, maintain, or review records that include patients' histories, neurological examination findings, treatment plans, or outcomes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17128",
+      "text": "Communicate with other health care professionals regarding patients' conditions and care.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17113",
+      "text": "Counsel patients or others on the background of neurological disorders including risk factors, or genetic or environmental concerns.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17114",
+      "text": "Interpret the results of neuroimaging studies, such as Magnetic Resonance Imaging (MRI), Single Photon Emission Computed Tomography (SPECT), and Positron Emission Tomography (PET) scans.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17127",
+      "text": "Determine brain death using accepted tests and procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17129",
+      "text": "Coordinate neurological services with other health care team activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17115",
+      "text": "Refer patients to other health care practitioners as necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17116",
+      "text": "Advise other physicians on the treatment of neurological problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17111",
+      "text": "Participate in continuing education activities to maintain and expand competence.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17122",
+      "text": "Order supportive care services, such as physical therapy, specialized nursing care, and social services.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17110",
+      "text": "Provide training to medical students or staff members.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17112",
+      "text": "Supervise medical technicians in the performance of neurological diagnostic or therapeutic activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17109",
+      "text": "Participate in neuroscience research activities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17120",
+      "text": "Perform specialized treatments in areas such as sleep disorders, neuroimmunology, neuro-oncology, behavioral neurology, and neurogenetics.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17118",
+      "text": "Prescribe or administer treatments, such as transcranial magnetic stimulation, vagus nerve stimulation, and deep brain stimulation.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 10,
+  "salary": 248560,
+  "demand": "Low"
+}

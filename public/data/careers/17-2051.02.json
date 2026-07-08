@@ -1,0 +1,206 @@
+{
+  "code": "17-2051.02",
+  "title": "Water/Wastewater Engineers",
+  "description": "Design or oversee projects involving provision of potable water, disposal of wastewater and sewage, or prevention of flood-related damage. Prepare environmental documentation for water resources, regulatory program compliance, data management and analysis, and field work. Perform hydraulic modeling and pipeline design.",
+  "tasks": [
+    {
+      "id": "16327",
+      "text": "Provide technical direction or supervision to junior engineers, engineering or computer-aided design (CAD) technicians, or other technical personnel.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16325",
+      "text": "Review and critique proposals, plans, or designs related to water or wastewater treatment systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16350",
+      "text": "Design domestic or industrial water or wastewater treatment plants, including advanced facilities with sequencing batch reactors (SBR), membranes, lift stations, headworks, surge overflow basins, ultraviolet disinfection systems, aerobic digesters, sludge lagoons, or control buildings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21166",
+      "text": "Evaluate the operation and maintenance of water or wastewater systems to identify ways to improve their efficiency.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16330",
+      "text": "Design or select equipment for use in wastewater processing to ensure compliance with government standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16349",
+      "text": "Design pumping systems, pumping stations, pipelines, force mains, or sewers for the collection of wastewater.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16347",
+      "text": "Design water distribution systems for potable or non-potable water.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16331",
+      "text": "Conduct water quality studies to identify and characterize water pollutant sources.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16343",
+      "text": "Analyze and recommend chemical, biological, or other wastewater treatment methods to prepare water for industrial or domestic use.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16328",
+      "text": "Identify design alternatives for the development of new water resources.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16345",
+      "text": "Design water runoff collection networks, water supply channels, or water supply system networks.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16346",
+      "text": "Design water or wastewater lift stations, including water wells.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16339",
+      "text": "Conduct cost-benefit analyses for the construction of water supply systems, runoff collection networks, water and wastewater treatment plants, or wastewater collection systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16326",
+      "text": "Provide technical support on water resource or treatment issues to government agencies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16337",
+      "text": "Conduct feasibility studies for the construction of facilities, such as water supply systems, runoff collection networks, water and wastewater treatment plants, or wastewater collection systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16341",
+      "text": "Analyze storm water or floodplain drainage systems to control erosion, stabilize river banks, repair channel streams, or design bridges.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16335",
+      "text": "Oversee the construction of decentralized or on-site wastewater treatment systems, including reclaimed water facilities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16329",
+      "text": "Develop plans for new water resources or water efficiency programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16333",
+      "text": "Perform hydrological analyses, using three-dimensional simulation software, to model the movement of water or forecast the dispersion of chemical pollutants in the water supply.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16334",
+      "text": "Perform hydraulic analyses of water supply systems or water distribution networks to model flow characteristics, test for pressure losses, or to identify opportunities to mitigate risks and improve operational efficiency.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16324",
+      "text": "Write technical reports or publications related to water resources development or water use efficiency.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16344",
+      "text": "Design water storage tanks or other water storage facilities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16342",
+      "text": "Analyze and recommend sludge treatment or disposal methods.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16348",
+      "text": "Design sludge treatment plants.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16336",
+      "text": "Gather and analyze water use data to forecast water demand.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16338",
+      "text": "Conduct environmental impact studies related to water and wastewater collection, treatment, or distribution.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16340",
+      "text": "Analyze the efficiency of water delivery structures, such as dams, tainter gates, canals, pipes, penstocks, or cofferdams.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16332",
+      "text": "Perform mathematical modeling of underground or surface water resources, such as floodplains, ocean coastlines, streams, rivers, or wetlands.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 7,
+  "salary": 100840,
+  "demand": "Very High"
+}

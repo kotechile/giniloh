@@ -1,0 +1,206 @@
+{
+  "code": "13-1075.00",
+  "title": "Labor Relations Specialists",
+  "description": "Resolve disputes between workers and managers, negotiate collective bargaining agreements, or coordinate grievance procedures to handle employee complaints.",
+  "tasks": [
+    {
+      "id": "18886",
+      "text": "Negotiate collective bargaining agreements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18883",
+      "text": "Investigate and evaluate union complaints or arguments to determine viability.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18890",
+      "text": "Propose resolutions for collective bargaining or other labor or contract negotiations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18879",
+      "text": "Draft contract proposals or counter-proposals for collective bargaining or other labor negotiations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18882",
+      "text": "Interpret contractual agreements for employers and employees engaged in collective bargaining or other labor relations processes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18900",
+      "text": "Prepare evidence for disciplinary hearings, including preparing witnesses to testify.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18884",
+      "text": "Mediate discussions between employer and employee representatives in attempt to reconcile differences.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18893",
+      "text": "Review employer practices or employee data to ensure compliance with contracts on matters such as wages, hours, or conditions of employment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18891",
+      "text": "Recommend collective bargaining strategies, goals, or objectives.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18885",
+      "text": "Monitor company or workforce adherence to labor agreements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18878",
+      "text": "Call or meet with union, company, government, or other interested parties to discuss labor relations matters, such as contract negotiations or grievances.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18896",
+      "text": "Assess risk levels associated with collective bargaining strategies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18889",
+      "text": "Present the position of the company or of labor during arbitration or other labor negotiations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18881",
+      "text": "Identify alternatives to proposals of unions, employees, companies, or government agencies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18880",
+      "text": "Draft rules or regulations to govern collective bargaining activities in collaboration with company, government, or employee representatives.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18902",
+      "text": "Research case law or outcomes of previous case hearings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18895",
+      "text": "Write letters related to labor relations activities, such as letters to amend collective bargaining agreements, letters of dispute or conciliation, or letters to seek clarification of contract terms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18894",
+      "text": "Schedule or coordinate the details of grievance hearings or other meetings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18892",
+      "text": "Review and approve employee disciplinary actions, such as written reprimands, suspensions, or terminations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18903",
+      "text": "Select mediators or arbitrators for labor disputes or contract negotiations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18897",
+      "text": "Assess the impact of union proposals on company or government operations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18877",
+      "text": "Advise management on matters related to the administration of contracts or employee discipline or grievance procedures.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18904",
+      "text": "Train managers or supervisors on topics related to labor relations, such as working conditions, safety, or equal opportunity practices.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18901",
+      "text": "Provide expert testimony in legal proceedings related to labor relations or labor contracts.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18898",
+      "text": "Develop employee health and safety policies.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18899",
+      "text": "Develop methods to monitor employee satisfaction with policies or working conditions, including grievance or complaint procedures.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18888",
+      "text": "Prepare reports or presentations to communicate employee satisfaction or related data to management.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18887",
+      "text": "Prepare and submit required governmental reports or forms related to labor relations matters, such as equal employment opportunity (EEO) forms, new hire forms, or minority compensation reports.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 29,
+  "salary": 95420,
+  "demand": "Medium"
+}

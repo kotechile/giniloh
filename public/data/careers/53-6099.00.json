@@ -1,0 +1,17 @@
+{
+  "code": "53-6099.00",
+  "title": "Transportation Workers, All Other",
+  "description": "All transportation workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Transportation Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 45650,
+  "demand": "Low"
+}

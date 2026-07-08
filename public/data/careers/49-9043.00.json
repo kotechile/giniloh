@@ -1,0 +1,136 @@
+{
+  "code": "49-9043.00",
+  "title": "Maintenance Workers, Machinery",
+  "description": "Lubricate machinery, change parts, or perform other routine machinery maintenance.",
+  "tasks": [
+    {
+      "id": "11833",
+      "text": "Dismantle machines and remove parts for repair, using hand tools, chain falls, jacks, cranes, or hoists.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11828",
+      "text": "Reassemble machines after the completion of repair or maintenance work.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11834",
+      "text": "Record production, repair, and machine maintenance information.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11831",
+      "text": "Lubricate or apply adhesives or other materials to machines, machine parts, or other equipment according to specified procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11832",
+      "text": "Install, replace, or change machine parts and attachments, according to production specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11836",
+      "text": "Set up and operate machines, and adjust controls to regulate operations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11837",
+      "text": "Collaborate with other workers to repair or move machines, machine parts, or equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11835",
+      "text": "Read work orders and specifications to determine machines and equipment requiring repair or maintenance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11830",
+      "text": "Inspect or test damaged machine parts, and mark defective areas or advise supervisors of repair needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11829",
+      "text": "Start machines and observe mechanical operation to determine efficiency and to detect problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11839",
+      "text": "Transport machine parts, tools, equipment, and other material between work areas and storage, using cranes, hoists, or dollies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11840",
+      "text": "Collect and discard worn machine parts and other refuse to maintain machinery and work areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11838",
+      "text": "Inventory and requisition machine parts, equipment, and other supplies so that stock can be maintained and replenished.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11843",
+      "text": "Remove hardened material from machines or machine parts, using abrasives, power and hand tools, jackhammers, sledgehammers, or other equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11845",
+      "text": "Replace, empty, or replenish machine and equipment containers such as gas tanks or boxes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11841",
+      "text": "Clean machines and machine parts, using cleaning solvents, cloths, air guns, hoses, vacuums, or other equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11842",
+      "text": "Replace or repair metal, wood, leather, glass, or other lining in machines, or in equipment compartments or containers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11844",
+      "text": "Measure, mix, prepare, and test chemical solutions used to clean or repair machinery and equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 47,
+  "salary": 60850,
+  "demand": "Medium"
+}

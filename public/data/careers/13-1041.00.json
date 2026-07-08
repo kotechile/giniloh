@@ -1,0 +1,122 @@
+{
+  "code": "13-1041.00",
+  "title": "Compliance Officers",
+  "description": "Examine, evaluate, and investigate eligibility for or conformity with laws and regulations governing contract compliance of licenses and permits, and perform other compliance and enforcement inspection and analysis activities not classified elsewhere.",
+  "tasks": [
+    {
+      "id": "21446",
+      "text": "Warn violators of infractions or penalties.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21447",
+      "text": "Evaluate applications, records, or documents to gather information about eligibility or liability issues.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "21448",
+      "text": "Advise licensees or other individuals or groups concerning licensing, permit, or passport regulations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21449",
+      "text": "Prepare reports of activities, evaluations, recommendations, or decisions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21450",
+      "text": "Report law or regulation violations to appropriate boards or agencies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21451",
+      "text": "Confer with or interview officials, technical or professional specialists, or applicants to obtain information or to clarify facts relevant to licensing decisions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21452",
+      "text": "Issue licenses to individuals meeting standards.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21453",
+      "text": "Collect fees for licenses.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21454",
+      "text": "Administer oral, written, road, or flight tests to license applicants.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21455",
+      "text": "Visit establishments to verify that valid licenses or permits are displayed and that licensing standards are being upheld.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21456",
+      "text": "Score tests and observe equipment operation and control to rate ability of applicants.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21457",
+      "text": "Prepare correspondence to inform concerned parties of licensing decisions or appeals processes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21458",
+      "text": "Identify compliance issues that require follow-up or investigation.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21459",
+      "text": "Keep informed regarding pending industry changes, trends, or best practices.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21460",
+      "text": "Provide assistance to internal or external auditors in compliance reviews.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21461",
+      "text": "Verify that all firm and regulatory policies and procedures have been documented, implemented, and communicated.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 41,
+  "salary": 80730,
+  "demand": "Very High"
+}

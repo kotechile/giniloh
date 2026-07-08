@@ -1,0 +1,136 @@
+{
+  "code": "51-8013.03",
+  "title": "Biomass Plant Technicians",
+  "description": "Control and monitor biomass plant activities and perform maintenance as needed.",
+  "tasks": [
+    {
+      "id": "17861",
+      "text": "Operate biomass fuel-burning boiler or biomass fuel gasification system equipment in accordance with specifications or instructions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21208",
+      "text": "Perform tests of water chemistry in boilers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17864",
+      "text": "Operate high-pressure steam boiler or water chiller equipment for electrical cogeneration operations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17862",
+      "text": "Operate equipment to heat biomass, using knowledge of controls, combustion, and firing mechanisms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17863",
+      "text": "Operate equipment to start, stop, or regulate biomass-fueled generators, generator units, boilers, engines, or auxiliary systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17860",
+      "text": "Inspect biomass power plant or processing equipment, recording or reporting damage and mechanical problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17866",
+      "text": "Record or report operational data, such as readings on meters, instruments, and gauges.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "17855",
+      "text": "Operate valves, pumps, engines, or generators to control and adjust production of biofuels or biomass-fueled power.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17858",
+      "text": "Calculate, measure, load, or mix biomass feedstock for power generation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17867",
+      "text": "Clean work areas to ensure compliance with safety regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17856",
+      "text": "Perform routine maintenance or make minor repairs to mechanical, electrical, or electronic equipment in biomass plants.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17854",
+      "text": "Measure and monitor raw biomass feedstock, including wood, waste, or refuse materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17859",
+      "text": "Calibrate liquid flow devices or meters, including fuel, chemical, and water meters.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17857",
+      "text": "Assess quality of biomass feedstock.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17869",
+      "text": "Read and interpret instruction manuals or technical drawings related to biomass-fueled power or biofuels production equipment or processes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21209",
+      "text": "Operate heavy equipment, such as bulldozers and front-end loaders.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17865",
+      "text": "Preprocess feedstock to prepare for biochemical or thermochemical production processes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17868",
+      "text": "Manage parts and supply inventories for biomass plants.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 44,
+  "salary": 102040,
+  "demand": "Medium"
+}

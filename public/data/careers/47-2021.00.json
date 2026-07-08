@@ -1,0 +1,108 @@
+{
+  "code": "47-2021.00",
+  "title": "Brickmasons and Blockmasons",
+  "description": "Lay and bind building materials, such as brick, structural tile, concrete block, cinder block, glass block, and terra-cotta block, with mortar and other substances, to construct or repair walls, partitions, arches, sewers, and other structures.",
+  "tasks": [
+    {
+      "id": "4769",
+      "text": "Measure distance from reference points and mark guidelines to lay out work, using plumb bobs and levels.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4768",
+      "text": "Construct corners by fastening in plumb position a corner pole or building a corner pyramid of bricks, and filling in between the corners using a line from corner to corner to guide each course, or layer, of brick.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4775",
+      "text": "Apply and smooth mortar or other mixture over work surface.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4770",
+      "text": "Calculate angles and courses and determine vertical and horizontal alignment of courses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4772",
+      "text": "Break or cut bricks, tiles, or blocks to size, using trowel edge, hammer, or power saw.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4774",
+      "text": "Interpret blueprints and drawings to determine specifications and to calculate the materials required.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4773",
+      "text": "Remove excess mortar with trowels and hand tools, and finish mortar joints with jointing tools, for a sealed, uniform appearance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4771",
+      "text": "Fasten or fuse brick or other building material to structure with wire clamps, anchor holes, torch, or cement.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4778",
+      "text": "Clean working surface to remove scale, dust, soot, or chips of brick and mortar, using broom, wire brush, or scraper.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4777",
+      "text": "Examine brickwork or structure to determine need for repair.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4776",
+      "text": "Mix specified amounts of sand, clay, dirt, or mortar powder with water to form refractory mixtures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4780",
+      "text": "Remove burned or damaged brick or mortar, using sledgehammer, crowbar, chipping gun, or chisel.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4779",
+      "text": "Lay and align bricks, blocks, or tiles to build or repair structures or high temperature equipment, such as cupola, kilns, ovens, or furnaces.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4781",
+      "text": "Spray or spread refractory material over brickwork to protect against deterioration.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 43,
+  "salary": 62120,
+  "demand": "Medium"
+}

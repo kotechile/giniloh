@@ -1,0 +1,129 @@
+{
+  "code": "13-2061.00",
+  "title": "Financial Examiners",
+  "description": "Enforce or ensure compliance with laws and regulations governing financial and securities institutions and financial and real estate transactions. May examine, verify, or authenticate records.",
+  "tasks": [
+    {
+      "id": "7324",
+      "text": "Direct and participate in formal and informal meetings with bank directors, trustees, senior management, counsels, outside accountants, and consultants to gather information and discuss findings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7317",
+      "text": "Recommend actions to ensure compliance with laws and regulations, or to protect solvency of institutions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7319",
+      "text": "Prepare reports, exhibits, and other supporting schedules that detail an institution's safety and soundness, compliance with laws and regulations, and recommended solutions to questionable financial conditions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7327",
+      "text": "Resolve problems concerning the overall financial integrity of banking institutions including loan investment portfolios, capital, earnings, and specific or large troubled accounts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7314",
+      "text": "Investigate activities of institutions to enforce laws and regulations and to ensure legality of transactions and operations or financial solvency.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7320",
+      "text": "Review balance sheets, operating income and expense accounts, and loan documentation to confirm institution assets and liabilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7316",
+      "text": "Plan, supervise, and review work of assigned subordinates.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7321",
+      "text": "Review audit reports of internal and external auditors to monitor adequacy of scope of reports or to discover specific weaknesses in internal routines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7318",
+      "text": "Examine the minutes of meetings of directors, stockholders, and committees to investigate the specific authority extended at various levels of management.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7322",
+      "text": "Train other examiners in the financial examination process.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7323",
+      "text": "Establish guidelines for procedures and policies that comply with new and revised regulations and direct their implementation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7315",
+      "text": "Review and analyze new, proposed, or revised laws, regulations, policies, and procedures to interpret their meaning and determine their impact.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20190",
+      "text": "Provide regulatory compliance training to employees.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7328",
+      "text": "Evaluate data processing applications for institutions under examination to develop recommendations for coordinating existing systems with examination procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7326",
+      "text": "Review applications for mergers, acquisitions, establishment of new institutions, acceptance in Federal Reserve System, or registration of securities sales to determine their public interest value and conformance to regulations, and recommend acceptance or rejection.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7325",
+      "text": "Verify and inspect cash reserves, assigned collateral, and bank-owned securities to check internal control procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7329",
+      "text": "Confer with officials of real estate, securities, or financial institution industries to exchange views and discuss issues or pending cases.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 18,
+  "salary": 94160,
+  "demand": "Medium"
+}

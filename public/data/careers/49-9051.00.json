@@ -1,0 +1,171 @@
+{
+  "code": "49-9051.00",
+  "title": "Electrical Power-Line Installers and Repairers",
+  "description": "Install or repair cables or wires used in electrical power or distribution systems. May erect poles and light or heavy duty transmission towers.",
+  "tasks": [
+    {
+      "id": "8412",
+      "text": "Adhere to safety practices and procedures, such as checking equipment regularly and erecting barriers around work areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8418",
+      "text": "Drive vehicles equipped with tools and materials to job sites.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8413",
+      "text": "Open switches or attach grounding devices to remove electrical hazards from disturbed or fallen lines or to facilitate repairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8414",
+      "text": "Climb poles or use truck-mounted buckets to access equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8416",
+      "text": "Install, maintain, and repair electrical distribution and transmission systems, including conduits, cables, wires, and related equipment, such as transformers, circuit breakers, and switches.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8420",
+      "text": "Inspect and test power lines and auxiliary equipment to locate and identify problems, using reading and testing instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8419",
+      "text": "Coordinate work assignment preparation and completion with other workers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8423",
+      "text": "Replace or straighten damaged poles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8421",
+      "text": "String wire conductors and cables between poles, towers, trenches, pylons, and buildings, setting lines in place and using winches to adjust tension.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8425",
+      "text": "Attach cross-arms, insulators, and auxiliary equipment to poles prior to installing them.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8427",
+      "text": "Dig holes, using augers, and set poles, using cranes and power equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8426",
+      "text": "Travel in trucks, helicopters, and airplanes to inspect lines for freedom from obstruction and adequacy of insulation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8417",
+      "text": "Identify defective sectionalizing devices, circuit breakers, fuses, voltage regulators, transformers, switches, relays, or wiring, using wiring diagrams and electrical-testing instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8424",
+      "text": "Install watt-hour meters and connect service drops between power lines and consumers' facilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8422",
+      "text": "Test conductors, according to electrical diagrams and specifications, to identify corresponding conductors and to prevent incorrect connections.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8415",
+      "text": "Place insulating or fireproofing materials over conductors and joints.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8429",
+      "text": "Splice or solder cables together or to overhead transmission lines, customer service lines, or street light lines, using hand tools, epoxies, or specialized equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8428",
+      "text": "Trim trees that could be hazardous to the functioning of cables or wires.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8432",
+      "text": "Pull up cable by hand from large reels mounted on trucks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8433",
+      "text": "Lay underground cable directly in trenches, or string it through conduit running through the trenches.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8434",
+      "text": "Cut trenches for laying underground cables, using trenchers and cable plows.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8430",
+      "text": "Cut and peel lead sheathing and insulation from defective or newly installed cables and conduits prior to splicing.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8431",
+      "text": "Clean, tin, and splice corresponding conductors by twisting ends together or by joining ends with metal clamps and soldering connections.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 43,
+  "salary": 95320,
+  "demand": "High"
+}

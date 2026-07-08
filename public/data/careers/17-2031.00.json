@@ -1,0 +1,220 @@
+{
+  "code": "17-2031.00",
+  "title": "Bioengineers and Biomedical Engineers",
+  "description": "Apply knowledge of engineering, biology, chemistry, computer science, and biomechanical principles to the design, development, and evaluation of biological, agricultural, and health systems and products, such as artificial organs, prostheses, instrumentation, medical information systems, and health management and care delivery systems.",
+  "tasks": [
+    {
+      "id": "8968",
+      "text": "Evaluate the safety, efficiency, and effectiveness of biomedical equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21856",
+      "text": "Prepare technical reports, data summary documents, or research articles for scientific publication, regulatory submissions, or patent applications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21847",
+      "text": "Design or develop medical diagnostic or clinical instrumentation, equipment, or procedures, using the principles of engineering and biobehavioral sciences.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8975",
+      "text": "Conduct research, along with life scientists, chemists, and medical scientists, on the engineering aspects of the biological systems of humans and animals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8979",
+      "text": "Adapt or design computer hardware or software for medical science uses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21853",
+      "text": "Maintain databases of experiment characteristics or results.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21851",
+      "text": "Develop statistical models or simulations, using statistical or modeling software.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21857",
+      "text": "Read current scientific or trade literature to stay abreast of scientific, industrial, or technological advances.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21854",
+      "text": "Manage teams of engineers by creating schedules, tracking inventory, creating or using budgets, or overseeing contract obligations or deadlines.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8973",
+      "text": "Develop models or computer simulations of human biobehavioral systems to obtain data for measuring or controlling life processes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21846",
+      "text": "Design or conduct follow-up experimentation, based on generated data, to meet established process objectives.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18604",
+      "text": "Write documents describing protocols, policies, standards for use, maintenance, and repair of medical equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21841",
+      "text": "Communicate with bioregulatory authorities regarding licensing or compliance responsibilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21850",
+      "text": "Develop methodologies for transferring procedures or biological processes from laboratories to commercial-scale manufacturing production.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21840",
+      "text": "Collaborate with manufacturing or quality assurance staff to prepare product specification or safety sheets, standard operating procedures, user manuals, or qualification and validation reports.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8972",
+      "text": "Research new materials to be used for products, such as implanted artificial organs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21855",
+      "text": "Prepare project plans for equipment or facility improvements, including time lines, budgetary estimates, or capital spending requests.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21844",
+      "text": "Consult with chemists or biologists to develop or evaluate novel technologies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21843",
+      "text": "Confer with research and biomanufacturing personnel to ensure the compatibility of design and production.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21858",
+      "text": "Recommend process formulas, instrumentation, or equipment specifications, based on results of bench or pilot experimentation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21842",
+      "text": "Communicate with suppliers regarding the design or specifications of bioproduction equipment, instrumentation, or materials.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18603",
+      "text": "Conduct training or in-services to educate clinicians and other personnel on proper use of equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8970",
+      "text": "Advise hospital administrators on the planning, acquisition, and use of medical equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8980",
+      "text": "Analyze new medical procedures to forecast likely outcomes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21845",
+      "text": "Design and deliver technology, such as prosthetic devices, to assist people with disabilities.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21839",
+      "text": "Advise manufacturing staff regarding problems with fermentation, filtration, or other bioproduction processes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21859",
+      "text": "Review existing manufacturing processes to identify opportunities for yield improvement or reduced process variation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21849",
+      "text": "Develop bioremediation processes to reduce pollution, protect the environment, or treat waste products.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21852",
+      "text": "Lead studies to examine or recommend changes in process sequences or operation protocols.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21848",
+      "text": "Design or direct bench or pilot production experiments to determine the scale of production methods that optimize product yield and minimize production costs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 18,
+  "salary": 109370,
+  "demand": "Low"
+}

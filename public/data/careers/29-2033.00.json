@@ -1,0 +1,129 @@
+{
+  "code": "29-2033.00",
+  "title": "Nuclear Medicine Technologists",
+  "description": "Prepare, administer, and measure radioactive isotopes in therapeutic, diagnostic, and tracer studies using a variety of radioisotope equipment. Prepare stock solutions of radioactive materials and calculate doses to be administered by radiologists. Subject patients to radiation. Execute blood volume, red cell survival, and fat absorption studies following standard laboratory techniques.",
+  "tasks": [
+    {
+      "id": "15239",
+      "text": "Administer radiopharmaceuticals or radiation intravenously to detect or treat diseases, using radioisotope equipment, under direction of a physician.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4149",
+      "text": "Detect and map radiopharmaceuticals in patients' bodies, using a camera to produce photographic or computer images.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4153",
+      "text": "Process cardiac function studies, using computer.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4148",
+      "text": "Calculate, measure, and record radiation dosage or radiopharmaceuticals received, used, and disposed, using computer and following physician's prescription.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "4155",
+      "text": "Record and process results of procedures.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "4152",
+      "text": "Produce a computer-generated or film image for interpretation by a physician.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4156",
+      "text": "Prepare stock radiopharmaceuticals, adhering to safety standards that minimize radiation exposure to workers and patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4150",
+      "text": "Explain test procedures and safety precautions to patients and provide them with assistance during test procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15240",
+      "text": "Perform quality control checks on laboratory equipment or cameras.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4154",
+      "text": "Dispose of radioactive materials and store radiopharmaceuticals, following radiation safety procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4158",
+      "text": "Gather information on patients' illnesses and medical history to guide the choice of diagnostic procedures for therapy.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4157",
+      "text": "Maintain and calibrate radioisotope and laboratory equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4159",
+      "text": "Measure glandular activity, blood volume, red cell survival, or radioactivity of patient, using scanners, Geiger counters, scintillometers, or other laboratory equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4160",
+      "text": "Train or supervise student or subordinate nuclear medicine technologists.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4161",
+      "text": "Position radiation fields, radiation beams, and patient to allow for most effective treatment of patient's disease, using computer.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4162",
+      "text": "Add radioactive substances to biological specimens, such as blood, urine, or feces, to determine therapeutic drug or hormone levels.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4163",
+      "text": "Develop treatment procedures for nuclear medicine treatment programs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 26,
+  "salary": 101370,
+  "demand": "Low"
+}

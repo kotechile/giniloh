@@ -1,0 +1,143 @@
+{
+  "code": "51-4023.00",
+  "title": "Rolling Machine Setters, Operators, and Tenders, Metal and Plastic",
+  "description": "Set up, operate, or tend machines to roll steel or plastic forming bends, beads, knurls, rolls, or plate, or to flatten, temper, or reduce gauge of material.",
+  "tasks": [
+    {
+      "id": "10092",
+      "text": "Monitor machine cycles and mill operation to detect jamming and to ensure that products conform to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10091",
+      "text": "Adjust and correct machine set-ups to reduce thicknesses, reshape products, and eliminate product defects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10096",
+      "text": "Start operation of rolling and milling machines to flatten, temper, form, and reduce sheet metal sections and to produce steel strips.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10093",
+      "text": "Examine, inspect, and measure raw materials and finished products to verify conformance to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10094",
+      "text": "Read rolling orders, blueprints, and mill schedules to determine setup specifications, work sequences, product dimensions, and installation procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10095",
+      "text": "Manipulate controls and observe dial indicators to monitor, adjust, and regulate speeds of machine mechanisms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10097",
+      "text": "Set distance points between rolls, guides, meters, and stops, according to specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10105",
+      "text": "Calculate draft space and roll speed for each mill stand to plan rolling sequences and specified dimensions and tempers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10103",
+      "text": "Install equipment such as guides, guards, gears, cooling equipment, and rolls, using hand tools.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10099",
+      "text": "Position, align, and secure arbors, spindles, coils, mandrels, dies, and slitting knives.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10101",
+      "text": "Fill oil cups, adjust valves, and observe gauges to control flow of metal coolants and lubricants onto workpieces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10107",
+      "text": "Activate shears and grinders to trim workpieces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10104",
+      "text": "Signal and assist other workers to remove and position equipment, fill hoppers, and feed materials into machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10102",
+      "text": "Record mill production on schedule sheets.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "10100",
+      "text": "Direct and train other workers to change rolls, operate mill equipment, remove coils and cobbles, and band and load material.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10098",
+      "text": "Thread or feed sheets or rods through rolling mechanisms, or start and control mechanisms that automatically feed steel into rollers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10106",
+      "text": "Select rolls, dies, roll stands, and chucks from data charts to form specified contours and to fabricate products.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10108",
+      "text": "Remove scratches and polish roll surfaces, using polishing stones and electric buffers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10109",
+      "text": "Disassemble sizing mills removed from rolling lines, and sort and store parts.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 50140,
+  "demand": "Medium"
+}

@@ -1,0 +1,136 @@
+{
+  "code": "15-1243.01",
+  "title": "Data Warehousing Specialists",
+  "description": "Design, model, or implement corporate data warehousing activities. Program and configure warehouses of database information and provide support to warehouse users.",
+  "tasks": [
+    {
+      "id": "16132",
+      "text": "Develop data warehouse process models, including sourcing, loading, transformation, and extraction.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16121",
+      "text": "Verify the structure, accuracy, or quality of warehouse data.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16124",
+      "text": "Map data between source systems, data warehouses, and data marts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16126",
+      "text": "Develop and implement data extraction procedures from other systems, such as administration, billing, or claims.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16128",
+      "text": "Design and implement warehouse database structures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16127",
+      "text": "Develop or maintain standards, such as organization, structure, or nomenclature, for the design of data warehouse elements, such as data architectures, models, tools, and databases.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16118",
+      "text": "Provide or coordinate troubleshooting support for data warehouses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16120",
+      "text": "Write new programs or modify existing programs to meet customer requirements, using current programming languages and technologies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16133",
+      "text": "Design, implement, or operate comprehensive data warehouse systems to balance optimization of data access with batch loading and resource utilization factors, according to customer requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16123",
+      "text": "Perform system analysis, data analysis or programming, using a variety of computer languages and procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16129",
+      "text": "Create supporting documentation, such as metadata and diagrams of entity relationships, business processes, and process flow.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16131",
+      "text": "Create or implement metadata processes and frameworks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16117",
+      "text": "Review designs, codes, test plans, or documentation to ensure quality.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16130",
+      "text": "Create plans, test files, and scripts for data warehouse testing, ranging from unit to integration testing.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16122",
+      "text": "Select methods, techniques, or criteria for data warehousing evaluative procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16125",
+      "text": "Implement business rules via stored procedures, middleware, or other technologies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16119",
+      "text": "Prepare functional or technical documentation for data warehouses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16116",
+      "text": "Test software systems or applications for software enhancements or new products.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 28,
+  "salary": 139500,
+  "demand": "Medium"
+}

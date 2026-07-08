@@ -1,0 +1,17 @@
+{
+  "code": "29-2099.00",
+  "title": "Health Technologists and Technicians, All Other",
+  "description": "All health technologists and technicians not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Health Technologists and Technicians, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 50290,
+  "demand": "High"
+}

@@ -1,0 +1,101 @@
+{
+  "code": "29-2011.02",
+  "title": "Cytotechnologists",
+  "description": "Stain, mount, and study cells to detect evidence of cancer, hormonal abnormalities, and other pathological conditions following established standards and practices.",
+  "tasks": [
+    {
+      "id": "17395",
+      "text": "Examine cell samples to detect abnormalities in the color, shape, or size of cellular components and patterns.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17401",
+      "text": "Document specimens by verifying patients' and specimens' information.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17405",
+      "text": "Submit slides with abnormal cell structures to pathologists for further examination.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17397",
+      "text": "Prepare and analyze samples, such as Papanicolaou (PAP) smear body fluids and fine needle aspirations (FNAs), to detect abnormal conditions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17396",
+      "text": "Examine specimens, using microscopes, to evaluate specimen quality.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17402",
+      "text": "Maintain effective laboratory operations by adhering to standards of specimen collection, preparation, or laboratory safety.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17398",
+      "text": "Provide patient clinical data or microscopic findings to assist pathologists in the preparation of pathology reports.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17399",
+      "text": "Assist pathologists or other physicians to collect cell samples by fine needle aspiration (FNA) biopsy or other method.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17404",
+      "text": "Prepare cell samples by applying special staining techniques, such as chromosomal staining, to differentiate cells or cell components.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17406",
+      "text": "Adjust, maintain, or repair laboratory equipment, such as microscopes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17407",
+      "text": "Assign tasks or coordinate task assignments to ensure adequate performance of laboratory activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17408",
+      "text": "Attend continuing education programs that address laboratory issues.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17400",
+      "text": "Examine specimens to detect abnormal hormone conditions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 38,
+  "salary": 60761,
+  "demand": "Very High"
+}

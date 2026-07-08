@@ -1,0 +1,122 @@
+{
+  "code": "45-2011.00",
+  "title": "Agricultural Inspectors",
+  "description": "Inspect agricultural commodities, processing equipment, and facilities, and fish and logging operations, to ensure compliance with regulations and laws governing health, quality, and safety.",
+  "tasks": [
+    {
+      "id": "14854",
+      "text": "Inspect food products and processing procedures to determine whether products are safe to eat.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14850",
+      "text": "Interpret and enforce government acts and regulations and explain required standards to agricultural workers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14846",
+      "text": "Inspect agricultural commodities or related operations, as well as fish or logging operations, for compliance with laws and regulations governing health, quality, and safety.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "14857",
+      "text": "Label and seal graded products and issue official grading certificates.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14853",
+      "text": "Monitor the operations and sanitary conditions of slaughtering or meat processing plants.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14855",
+      "text": "Take emergency actions, such as closing production facilities, if product safety is compromised.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14848",
+      "text": "Verify that transportation and handling procedures meet regulatory requirements.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14852",
+      "text": "Inspect the cleanliness and practices of establishment employees.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14863",
+      "text": "Examine, weigh, and measure commodities, such as poultry, eggs, meat, or seafood to certify qualities, grades, and weights.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14847",
+      "text": "Inspect or test horticultural products or livestock to detect harmful diseases, chemical residues, or infestations and to determine the quality of products or animals.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14856",
+      "text": "Monitor the grading performed by company employees to verify conformance to standards.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14851",
+      "text": "Write reports of findings and recommendations and advise farmers, growers, or processors of corrective action to be taken.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14849",
+      "text": "Collect samples from animals, plants, or products and route them to laboratories for microbiological assessment, ingredient verification, or other testing.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14866",
+      "text": "Provide consultative services in areas such as equipment or product evaluation, plant construction or layout, or food safety systems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14868",
+      "text": "Testify in legal proceedings.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14864",
+      "text": "Compare product recipes with government-approved formulas or recipes to determine acceptability.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 34,
+  "salary": 49940,
+  "demand": "Low"
+}

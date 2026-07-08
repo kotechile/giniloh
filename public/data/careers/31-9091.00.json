@@ -1,0 +1,122 @@
+{
+  "code": "31-9091.00",
+  "title": "Dental Assistants",
+  "description": "Perform limited clinical duties under the direction of a dentist. Clinical duties may include equipment preparation and sterilization, preparing patients for treatment, assisting the dentist during treatment, and providing patients with instructions for oral healthcare procedures. May perform administrative duties such as scheduling appointments, maintaining medical records, billing, and coding information for insurance purposes.",
+  "tasks": [
+    {
+      "id": "550",
+      "text": "Prepare patient, sterilize or disinfect instruments, set up instrument trays, prepare materials, or assist dentist during dental procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "552",
+      "text": "Record treatment information in patient records.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "555",
+      "text": "Assist dentist in management of medical or dental emergencies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18552",
+      "text": "Order and monitor dental supplies and equipment inventory.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "551",
+      "text": "Expose dental diagnostic x-rays.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "554",
+      "text": "Provide postoperative instructions prescribed by dentist.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "557",
+      "text": "Instruct patients in oral hygiene and plaque control programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "553",
+      "text": "Take and record medical and dental histories and vital signs of patients.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "561",
+      "text": "Apply protective coating of fluoride to teeth.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "563",
+      "text": "Schedule appointments, prepare bills and receive payment for dental services, complete insurance forms, and maintain records, manually or using computer.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "558",
+      "text": "Make preliminary impressions for study casts and occlusal registrations for mounting study casts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "556",
+      "text": "Pour, trim, and polish study casts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "562",
+      "text": "Fabricate temporary restorations or custom impressions from preliminary impressions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "559",
+      "text": "Clean and polish removable appliances.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "560",
+      "text": "Clean teeth, using dental instruments.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18553",
+      "text": "Fabricate and fit orthodontic appliances and materials for patients, such as retainers, wires, or bands.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 38,
+  "salary": 48070,
+  "demand": "Very High"
+}

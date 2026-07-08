@@ -1,0 +1,94 @@
+{
+  "code": "45-4023.00",
+  "title": "Log Graders and Scalers",
+  "description": "Grade logs or estimate the marketable content or value of logs or pulpwood in sorting yards, millpond, log deck, or similar locations. Inspect logs for defects or measure logs to determine volume.",
+  "tasks": [
+    {
+      "id": "9811",
+      "text": "Evaluate log characteristics and determine grades, using established criteria.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9812",
+      "text": "Record data about individual trees or load volumes into tally books or hand-held collection terminals.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "9814",
+      "text": "Measure felled logs or loads of pulpwood to calculate volume, weight, dimensions, and marketable value, using measuring devices and conversion tables.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9813",
+      "text": "Paint identification marks of specified colors on logs to identify grades or species, using spray cans, or call out grades to log markers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9817",
+      "text": "Jab logs with metal ends of scale sticks, and inspect logs to ascertain characteristics or defects such as water damage, splits, knots, broken ends, rotten areas, twists, and curves.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9816",
+      "text": "Identify logs of substandard or special grade so that they can be returned to shippers, regraded, recut, or transferred for other processing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21015",
+      "text": "Arrange for hauling of logs to appropriate mill sites.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9820",
+      "text": "Weigh log trucks before and after unloading, and record load weights and supplier identities.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "9815",
+      "text": "Measure log lengths and mark boles for bucking into logs, according to specifications.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9819",
+      "text": "Communicate with coworkers by signals to direct log movement.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9818",
+      "text": "Drive to sawmills, wharfs, or skids to inspect logs or pulpwood.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9821",
+      "text": "Saw felled trees into lengths.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 46,
+  "salary": 46330,
+  "demand": "Low"
+}

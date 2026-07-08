@@ -1,0 +1,17 @@
+{
+  "code": "29-1029.00",
+  "title": "Dentists, All Other Specialists",
+  "description": "All dentists not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Dentists, All Other Specialists.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 224990,
+  "demand": "Low"
+}

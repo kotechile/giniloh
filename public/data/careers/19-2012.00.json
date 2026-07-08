@@ -1,0 +1,80 @@
+{
+  "code": "19-2012.00",
+  "title": "Physicists",
+  "description": "Conduct research into physical phenomena, develop theories on the basis of observation and experiments, and devise methods to apply physical laws and theories.",
+  "tasks": [
+    {
+      "id": "10903",
+      "text": "Perform complex calculations as part of the analysis and evaluation of data, using computers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10905",
+      "text": "Analyze data from research conducted to detect and measure physical phenomena.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10904",
+      "text": "Describe and express observations and conclusions in mathematical terms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10907",
+      "text": "Design computer simulations to model physical data so that it can be better understood.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21174",
+      "text": "Write research proposals to receive funding.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10912",
+      "text": "Teach physics to students.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10906",
+      "text": "Report experimental results by writing papers for scientific journals or by presenting information at scientific conferences.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10910",
+      "text": "Observe the structure and properties of matter, and the transformation and propagation of energy, using equipment such as masers, lasers, and telescopes, to explore and identify the basic principles governing these phenomena.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10911",
+      "text": "Develop theories and laws on the basis of observation and experiments, and apply these theories and laws to problems in areas such as nuclear energy, optics, and aerospace technology.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10908",
+      "text": "Collaborate with other scientists in the design, development, and testing of experimental, industrial, or medical equipment, instrumentation, and procedures.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 20,
+  "salary": 172250,
+  "demand": "Low"
+}

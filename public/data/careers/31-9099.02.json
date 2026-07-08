@@ -1,0 +1,94 @@
+{
+  "code": "31-9099.02",
+  "title": "Endoscopy Technicians",
+  "description": "Maintain a sterile field to provide support for physicians and nurses during endoscopy procedures. Prepare and maintain instruments and equipment. May obtain specimens.",
+  "tasks": [
+    {
+      "id": "17519",
+      "text": "Clean, disinfect, or calibrate scopes or other endoscopic instruments according to manufacturer recommendations and facility standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17527",
+      "text": "Collect specimens from patients, using standard medical procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17521",
+      "text": "Perform safety checks to verify proper equipment functioning.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17523",
+      "text": "Maintain or repair endoscopic equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17525",
+      "text": "Assist physicians or registered nurses in the conduct of endoscopic procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17530",
+      "text": "Place devices, such as blood pressure cuffs, pulse oximeter sensors, nasal cannulas, surgical cautery pads, and cardiac monitoring electrodes, on patients to monitor vital signs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17522",
+      "text": "Prepare suites or rooms according to endoscopic procedure requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17520",
+      "text": "Maintain inventories of endoscopic equipment and supplies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17526",
+      "text": "Attend in-service training to validate or refresh basic professional skills.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17528",
+      "text": "Conduct in-service training sessions to disseminate information regarding equipment or instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17524",
+      "text": "Position or transport patients in accordance with instructions from medical personnel.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17529",
+      "text": "Read current literature, talk with colleagues, or participate in professional organizations or conferences to keep abreast of developments in endoscopy.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 25,
+  "salary": 48430,
+  "demand": "High"
+}

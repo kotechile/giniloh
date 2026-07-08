@@ -1,0 +1,150 @@
+{
+  "code": "19-1031.03",
+  "title": "Park Naturalists",
+  "description": "Plan, develop, and conduct programs to inform public of historical, natural, and scientific features of national, state, or local park.",
+  "tasks": [
+    {
+      "id": "3686",
+      "text": "Provide visitor services, such as explaining regulations, answering visitor requests, needs and complaints, and providing information about the park and surrounding areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3691",
+      "text": "Assist with operations of general facilities, such as visitor centers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3690",
+      "text": "Confer with park staff to determine subjects and schedules for park programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3687",
+      "text": "Conduct field trips to point out scientific, historic, and natural features of parks, forests, historic sites, or other attractions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20866",
+      "text": "Plan and organize public events at the park.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3688",
+      "text": "Prepare and present illustrated lectures and interpretive talks about park features.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3692",
+      "text": "Plan, organize and direct activities of seasonal staff members.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3689",
+      "text": "Perform emergency duties to protect human life, government property, and natural features of park.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23959",
+      "text": "Train staff on park programs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20867",
+      "text": "Develop environmental educational programs and curricula for schools.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3695",
+      "text": "Construct historical, scientific, and nature visitor-center displays.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3696",
+      "text": "Research stories regarding the area's natural history or environment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3694",
+      "text": "Prepare brochures and write newspaper articles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3698",
+      "text": "Compile and maintain official park photographic and information files.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3699",
+      "text": "Take photographs and motion pictures for use in lectures and publications and to develop displays.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3701",
+      "text": "Plan and develop audio-visual devices for public programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3693",
+      "text": "Perform routine maintenance on park structures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23960",
+      "text": "Provide care for park program animals.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3697",
+      "text": "Interview specialists in desired fields to obtain and develop data for park information programs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3700",
+      "text": "Survey park to determine forest conditions and distribution and abundance of fauna and flora.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 28,
+  "salary": 73010,
+  "demand": "Medium"
+}

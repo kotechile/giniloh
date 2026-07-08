@@ -1,0 +1,164 @@
+{
+  "code": "19-1029.04",
+  "title": "Biologists",
+  "description": "Research or study basic principles of plant and animal life, such as origin, relationship, development, anatomy, and functions.",
+  "tasks": [
+    {
+      "id": "174",
+      "text": "Program and use computers to store, process, and analyze data.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18613",
+      "text": "Prepare technical and research reports, such as environmental impact reports, and communicate the results to individuals in industry, government, or the general public.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "186",
+      "text": "Supervise biological technicians and technologists and other scientists.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "173",
+      "text": "Develop and maintain liaisons and effective working relations with groups and individuals, agencies, and the public to encourage cooperative management strategies or to develop information and interpret findings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "178",
+      "text": "Identify, classify, and study structure, behavior, ecology, physiology, nutrition, culture, and distribution of plant and animal species.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "187",
+      "text": "Study basic principles of plant and animal life, such as origin, relationship, development, anatomy, and function.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "175",
+      "text": "Collect and analyze biological data about relationships among and between organisms and their environment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18614",
+      "text": "Review reports and proposals, such as those relating to land use classifications and recreational development, for accuracy, adequacy, or adherence to policies, regulations, or scientific standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21035",
+      "text": "Write grant proposals to obtain funding for biological research.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "185",
+      "text": "Teach or supervise students and perform research at universities and colleges.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "189",
+      "text": "Prepare requests for proposals or statements of work.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "177",
+      "text": "Communicate test results to state and federal representatives and general public.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "180",
+      "text": "Represent employer in a technical capacity at conferences.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "182",
+      "text": "Research environmental effects of present and potential uses of land and water areas, determining methods of improving environmental conditions or such outputs as crop yields.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "176",
+      "text": "Study aquatic plants and animals and environmental conditions affecting them, such as radioactivity or pollution.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "188",
+      "text": "Study and manage wild animal populations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "191",
+      "text": "Prepare plans for management of renewable resources.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "184",
+      "text": "Measure salinity, acidity, light, oxygen content, and other physical conditions of water to determine their relationship to aquatic life.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "194",
+      "text": "Develop pest management and control measures, and conduct risk assessments related to pest exclusion, using scientific methods.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "192",
+      "text": "Develop methods and apparatus for securing representative plant, animal, aquatic, or soil samples.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "181",
+      "text": "Plan and administer biological research programs for government, research firms, medical industries, or manufacturing firms.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "193",
+      "text": "Study reactions of plants, animals, and marine species to parasites.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 16,
+  "salary": 98920,
+  "demand": "Medium"
+}

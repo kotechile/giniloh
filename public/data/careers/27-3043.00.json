@@ -1,0 +1,150 @@
+{
+  "code": "27-3043.00",
+  "title": "Writers and Authors",
+  "description": "Originate and prepare written material, such as scripts, stories, advertisements, and other material.",
+  "tasks": [
+    {
+      "id": "22656",
+      "text": "Develop advertising campaigns for a wide range of clients, working with an advertising agency's creative director and art director to determine the best way to present advertising information.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22655",
+      "text": "Vary language and tone of messages based on product and medium.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22654",
+      "text": "Present drafts and ideas to clients.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22653",
+      "text": "Discuss with the client the product, advertising themes and methods, and any changes that should be made in advertising copy.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22660",
+      "text": "Review advertising trends, consumer surveys, and other data regarding marketing of goods and services to determine the best way to promote products.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22657",
+      "text": "Write articles, bulletins, sales letters, speeches, and other related informative, marketing and promotional material.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22658",
+      "text": "Conduct research and interviews to determine which of a product's selling features should be promoted.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22659",
+      "text": "Invent names for products and write the slogans that appear on packaging, brochures and other promotional material.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "22661",
+      "text": "Collaborate with other writers on specific projects.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22662",
+      "text": "Conduct research to obtain factual information and authentic detail, using sources such as newspaper accounts, diaries, and interviews.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22663",
+      "text": "Consult with sales, media and marketing representatives to obtain information on product or service and discuss style and length of advertising written material.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22664",
+      "text": "Edit or rewrite existing written material as necessary, and submit written material for approval by supervisor, editor, or publisher.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22665",
+      "text": "Follow appropriate procedures to get copyrights for completed work.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22666",
+      "text": "Plan project arrangements or outlines, and organize material accordingly.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22667",
+      "text": "Prepare works in appropriate format for publication, and send them to publishers or producers.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22668",
+      "text": "Revise written material to meet personal standards and to satisfy needs of clients, publishers, directors, or producers.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22669",
+      "text": "Work with staff to develop script, story, or advertising concepts.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22670",
+      "text": "Write advertising material for use by publication, broadcast, or internet media to promote the sale of goods and services.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22671",
+      "text": "Write fiction or nonfiction prose, such as short stories, novels, biographies, articles, descriptive or critical analyses, and essays.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22672",
+      "text": "Write to customers in their terms and on their level so that the script, story, or advertisement message is more readily received.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 38,
+  "salary": 76910,
+  "demand": "Medium"
+}

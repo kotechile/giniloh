@@ -1,0 +1,122 @@
+{
+  "code": "29-2055.00",
+  "title": "Surgical Technologists",
+  "description": "Assist in operations, under the supervision of surgeons, registered nurses, or other surgical personnel. May help set up operating room, prepare and transport patients for surgery, adjust lights and equipment, pass instruments and other supplies to surgeons and surgeons' assistants, hold retractors, cut sutures, and help count sponges, needles, supplies, and instruments.",
+  "tasks": [
+    {
+      "id": "15242",
+      "text": "Maintain a proper sterile field during surgical procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1959",
+      "text": "Count sponges, needles, and instruments before and after operation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1961",
+      "text": "Scrub arms and hands and assist the surgical team to scrub and put on gloves, masks, and surgical clothing.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1963",
+      "text": "Provide technical assistance to surgeons, surgical nurses, or anesthesiologists.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15243",
+      "text": "Prepare patients for surgery, including positioning patients on the operating table and covering them with sterile surgical drapes to prevent exposure.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1960",
+      "text": "Hand instruments and supplies to surgeons and surgeons' assistants, hold retractors and cut sutures, and perform other tasks as directed by surgeon during operation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1965",
+      "text": "Prepare, care for, and dispose of tissue specimens taken for laboratory analysis.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1964",
+      "text": "Wash and sterilize equipment, using germicides and sterilizers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1969",
+      "text": "Monitor and continually assess operating room conditions, including patient and surgical team needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1968",
+      "text": "Operate, assemble, adjust, or monitor sterilizers, lights, suction machines, or diagnostic equipment to ensure proper operation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1967",
+      "text": "Prepare dressings or bandages and apply or assist with their application following surgery.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15244",
+      "text": "Clean and restock operating room, gathering and placing equipment and supplies and arranging instruments according to instructions, such as a preference card.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15245",
+      "text": "Order surgical supplies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1970",
+      "text": "Observe patients' vital signs to assess physical condition.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1971",
+      "text": "Maintain supply of fluids, such as plasma, saline, blood, or glucose, for use during operations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1972",
+      "text": "Maintain files and records of surgical procedures.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 22,
+  "salary": 64650,
+  "demand": "High"
+}

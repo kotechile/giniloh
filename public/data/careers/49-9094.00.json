@@ -1,0 +1,108 @@
+{
+  "code": "49-9094.00",
+  "title": "Locksmiths and Safe Repairers",
+  "description": "Repair and open locks, make keys, change locks and safe combinations, and install and repair safes.",
+  "tasks": [
+    {
+      "id": "18789",
+      "text": "Cut new or duplicate keys, using impressions or code key machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7126",
+      "text": "Insert new or repaired tumblers into locks to change combinations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7127",
+      "text": "Move picklocks in cylinders to open door locks without keys.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7124",
+      "text": "Cut new or duplicate keys, using key cutting machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7131",
+      "text": "Open safe locks by drilling.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18790",
+      "text": "Set up and maintain master key systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18791",
+      "text": "Install door hardware, such as locks and closers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7125",
+      "text": "Keep records of company locks and keys.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "7128",
+      "text": "Disassemble mechanical or electrical locking devices, and repair or replace worn tumblers, springs, and other parts, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7129",
+      "text": "Repair and adjust safes, vault doors, and vault components, using hand tools, lathes, drill presses, and welding and acetylene cutting apparatus.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18792",
+      "text": "Install alarm and electronic access systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7130",
+      "text": "Install safes, vault doors, and deposit boxes according to blueprints, using equipment such as power drills, taps, dies, truck cranes, and dollies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18793",
+      "text": "Unlock cars and other vehicles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7132",
+      "text": "Remove interior and exterior finishes on safes and vaults, and spray on new finishes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 54,
+  "salary": 51320,
+  "demand": "Low"
+}

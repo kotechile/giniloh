@@ -1,0 +1,136 @@
+{
+  "code": "43-4171.00",
+  "title": "Receptionists and Information Clerks",
+  "description": "Answer inquiries and provide information to the general public, customers, visitors, and other interested parties regarding activities conducted at establishment and location of departments, offices, and employees within the organization.",
+  "tasks": [
+    {
+      "id": "744",
+      "text": "Operate telephone switchboard to answer, screen, or forward calls, providing information, taking messages, or scheduling appointments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "747",
+      "text": "Greet persons entering establishment, determine nature and purpose of visit, and direct or escort them to specific destinations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "745",
+      "text": "Receive payment and record receipts for services.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "751",
+      "text": "Schedule appointments and maintain and update appointment calendars.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "750",
+      "text": "Transmit information or documents to customers, using computer, mail, or facsimile machine.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "748",
+      "text": "Hear and resolve complaints from customers or the public.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "749",
+      "text": "File and maintain records.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "753",
+      "text": "Provide information about establishment, such as location of departments or offices, employees within the organization, or services provided.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "746",
+      "text": "Perform administrative support tasks, such as proofreading, transcribing handwritten information, or operating calculators or computers to work with pay records, invoices, balance sheets, or other documents.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "755",
+      "text": "Collect, sort, distribute, or prepare mail, messages, or courier deliveries.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "762",
+      "text": "Perform duties, such as taking care of plants or straightening magazines to maintain lobby or reception area.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "752",
+      "text": "Analyze data to determine answers to questions from customers or members of the public.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "756",
+      "text": "Calculate and quote rates for tours, stocks, insurance policies, or other products or services.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "754",
+      "text": "Keep a current record of staff members' whereabouts and availability.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "759",
+      "text": "Schedule space or equipment for special programs and prepare lists of participants.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "758",
+      "text": "Process and prepare memos, correspondence, travel vouchers, or other documents.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "760",
+      "text": "Enroll individuals to participate in programs and notify them of their acceptance.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "757",
+      "text": "Take orders for merchandise or materials and send them to the proper departments to be filled.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 47,
+  "salary": 38010,
+  "demand": "Very High"
+}

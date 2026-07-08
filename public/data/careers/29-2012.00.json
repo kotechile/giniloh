@@ -1,0 +1,101 @@
+{
+  "code": "29-2012.00",
+  "title": "Medical and Clinical Laboratory Technicians",
+  "description": "Perform routine medical laboratory tests for the diagnosis, treatment, and prevention of disease. May work under the supervision of a medical technologist.",
+  "tasks": [
+    {
+      "id": "1902",
+      "text": "Conduct chemical analyses of body fluids, such as blood or urine, using microscope or automatic analyzer to detect abnormalities or diseases and enter findings into computer.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1904",
+      "text": "Analyze the results of tests or experiments to ensure conformity to specifications, using special mechanical or electrical devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18535",
+      "text": "Set up, maintain, calibrate, clean, and test sterility of medical laboratory equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1915",
+      "text": "Prepare standard volumetric solutions or reagents to be combined with samples, following standardized formulas or experimental procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1910",
+      "text": "Collect blood or tissue samples from patients, observing principles of asepsis to obtain blood sample.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1914",
+      "text": "Supervise or instruct other technicians or laboratory assistants.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1907",
+      "text": "Conduct blood tests for transfusion purposes and perform blood counts.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1908",
+      "text": "Obtain specimens, cultivating, isolating, and identifying microorganisms for analysis.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1909",
+      "text": "Examine cells stained with dye to locate abnormalities.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1911",
+      "text": "Consult with a pathologist to determine a final diagnosis when abnormal cells are found.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1906",
+      "text": "Perform medical research to further control or cure disease.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1917",
+      "text": "Test raw materials, processes, or finished products to determine quality or quantity of materials or characteristics of a substance.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1905",
+      "text": "Analyze and record test data to issue reports that use charts, graphs, or narratives.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    }
+  ],
+  "risk_score": 35,
+  "salary": 61901,
+  "demand": "Very High"
+}

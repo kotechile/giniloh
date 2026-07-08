@@ -1,0 +1,122 @@
+{
+  "code": "43-4111.00",
+  "title": "Interviewers, Except Eligibility and Loan",
+  "description": "Interview persons by telephone, mail, in person, or by other means for the purpose of completing forms, applications, or questionnaires. Ask specific questions, record answers, and assist persons with completing form. May sort, classify, and file forms.",
+  "tasks": [
+    {
+      "id": "2627",
+      "text": "Ask questions in accordance with instructions to obtain various specified information, such as person's name, address, age, religious preference, or state of residency.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2634",
+      "text": "Identify and report problems in obtaining valid data.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2633",
+      "text": "Ensure payment for services by verifying benefits with the person's insurance provider or working out financing options.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20435",
+      "text": "Perform office duties, such as telemarketing or customer service inquiries, maintaining staff records, billing patients, or receiving payments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2630",
+      "text": "Review data obtained from interview for completeness and accuracy.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2629",
+      "text": "Compile, record, and code results or data from interview or survey, using computer or specified form.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "2636",
+      "text": "Perform patient services, such as answering the telephone or assisting patients with financial or medical questions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2632",
+      "text": "Assist individuals in filling out applications or questionnaires.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2628",
+      "text": "Identify and resolve inconsistencies in interviewees' responses by means of appropriate questioning or explanation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20434",
+      "text": "Supervise or train other staff members.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2637",
+      "text": "Prepare reports to provide answers in response to specific problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2640",
+      "text": "Meet with supervisor daily to submit completed assignments and discuss progress.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2638",
+      "text": "Locate and list addresses and households.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2631",
+      "text": "Contact individuals to be interviewed at home, place of business, or field location, by telephone, mail, or in person.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2641",
+      "text": "Collect and analyze data, such as studying old records, tallying the number of outpatients entering each day or week, or participating in federal, state, or local population surveys as a Census Enumerator.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "2635",
+      "text": "Explain survey objectives and procedures to interviewees and interpret survey questions to help interviewees' comprehension.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 47,
+  "salary": 45920,
+  "demand": "High"
+}

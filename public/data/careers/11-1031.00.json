@@ -1,0 +1,220 @@
+{
+  "code": "11-1031.00",
+  "title": "Legislators",
+  "description": "Develop, introduce, or enact laws and statutes at the local, tribal, state, or federal level. Includes only workers in elected positions.",
+  "tasks": [
+    {
+      "id": "15267",
+      "text": "Analyze and understand the local and national implications of proposed legislation.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15268",
+      "text": "Appoint nominees to leadership posts, or approve such appointments.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15269",
+      "text": "Confer with colleagues to formulate positions and strategies pertaining to pending issues.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15270",
+      "text": "Debate the merits of proposals and bill amendments during floor sessions, following the appropriate rules of procedure.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15271",
+      "text": "Develop expertise in subject matters related to committee assignments.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15272",
+      "text": "Hear testimony from constituents, representatives of interest groups, board and commission members, and others with an interest in bills or issues under consideration.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15273",
+      "text": "Keep abreast of the issues affecting constituents by making personal visits and phone calls, reading local newspapers, and viewing or listening to local broadcasts.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15274",
+      "text": "Maintain knowledge of relevant national and international current events.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15275",
+      "text": "Make decisions that balance the perspectives of private citizens, public officials, and party leaders.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15276",
+      "text": "Negotiate with colleagues or members of other political parties in order to reconcile differing interests, and to create policies and agreements.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15277",
+      "text": "Prepare drafts of amendments, government policies, laws, rules, regulations, budgets, programs and procedures.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15278",
+      "text": "Read and review concerns of constituents or the general public and determine if governmental action is necessary.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15279",
+      "text": "Represent their parties in negotiations with political executives or members of other parties, and when speaking with the media.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15280",
+      "text": "Review bills in committee, and make recommendations about their future.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15281",
+      "text": "Seek federal funding for local projects and programs.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15282",
+      "text": "Serve on commissions, investigative panels, study groups, and committees in order to examine specialized areas and recommend action.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15283",
+      "text": "Vote on motions, amendments, and decisions on whether or not to report a bill out from committee to the assembly floor.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15284",
+      "text": "Write, prepare, and deliver statements for the Congressional Record.",
+      "type": "n/a",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "15285",
+      "text": "Alert constituents of government actions and programs by way of newsletters, personal appearances at town meetings, phone calls, and individual meetings.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15286",
+      "text": "Attend receptions, dinners, and conferences to meet people, exchange views and information, and develop working relationships.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15287",
+      "text": "Conduct \"head counts\" to help predict the outcome of upcoming votes.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15288",
+      "text": "Determine campaign strategies for media advertising, positions on issues, and public appearances.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15289",
+      "text": "Encourage and support party candidates for political office.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15290",
+      "text": "Establish personal offices in local districts or states, and manage office staff.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15291",
+      "text": "Evaluate the structure, efficiency, activities, and performance of government agencies.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15292",
+      "text": "Organize and maintain campaign organizations and fundraisers, in order to raise money for election or re-election.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15293",
+      "text": "Oversee expense allowances, ensuring that accounts are balanced at the end of each fiscal year.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15294",
+      "text": "Promote the industries and products of their electoral districts.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15295",
+      "text": "Represent their government at local, national, and international meetings and conferences.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15296",
+      "text": "Speak to students to encourage and support the development of future political leaders.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 27,
+  "salary": 128284,
+  "demand": "Very High"
+}

@@ -1,0 +1,17 @@
+{
+  "code": "23-2099.00",
+  "title": "Legal Support Workers, All Other",
+  "description": "All legal support workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Legal Support Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 72110,
+  "demand": "Medium"
+}

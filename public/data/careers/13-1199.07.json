@@ -1,0 +1,171 @@
+{
+  "code": "13-1199.07",
+  "title": "Security Management Specialists",
+  "description": "Conduct security assessments for organizations, and design security systems and processes. May specialize in areas such as physical security or the safety of employees and facilities.",
+  "tasks": [
+    {
+      "id": "21482",
+      "text": "Assess the nature and level of physical security threats so that the scope of the problem can be determined.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21501",
+      "text": "Respond to emergency situations on an on-call basis.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21500",
+      "text": "Recommend improvements in security systems or procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21496",
+      "text": "Perform risk analyses so that appropriate countermeasures can be developed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21491",
+      "text": "Inspect physical security design features, installations, or programs to ensure compliance with applicable standards or regulations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21484",
+      "text": "Conduct security audits to identify potential vulnerabilities related to physical security or staff safety.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21485",
+      "text": "Design security policies, programs, or practices to ensure adequate security relating to alarm response, access card use, and other security needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21503",
+      "text": "Test security measures for final acceptance and implement or provide procedures for ongoing monitoring and evaluation of the measures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21486",
+      "text": "Design, implement, or establish requirements for security systems, video surveillance, motion detection, or closed-circuit television systems to ensure proper installation and operation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21498",
+      "text": "Prepare, maintain, or update security procedures, security system drawings, or related documentation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21497",
+      "text": "Prepare documentation for case reports or court proceedings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21487",
+      "text": "Develop conceptual designs of security systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21504",
+      "text": "Train personnel in security procedures or use of security equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21502",
+      "text": "Review design drawings or technical documents for completeness, correctness, or appropriateness.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21499",
+      "text": "Provide system design and integration recommendations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21494",
+      "text": "Monitor the work of contractors in the design, construction, and startup phases of security systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21483",
+      "text": "Budget and schedule security design work.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21490",
+      "text": "Inspect fire, intruder detection, or other security systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21488",
+      "text": "Develop or review specifications for design or construction of security systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21492",
+      "text": "Interview witnesses or suspects to identify persons responsible for security breaches or to establish losses, pursue prosecutions, or obtain restitution.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21495",
+      "text": "Outline system security criteria for pre-bid meetings with clients and companies to ensure comprehensiveness and appropriateness for implementation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21493",
+      "text": "Monitor tapes or digital recordings to identify the source of losses.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "21489",
+      "text": "Engineer, install, maintain, or repair security systems, programmable logic controls, or other security-related electronic systems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 26,
+  "salary": 83050,
+  "demand": "Very High"
+}

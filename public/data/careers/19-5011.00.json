@@ -1,0 +1,164 @@
+{
+  "code": "19-5011.00",
+  "title": "Occupational Health and Safety Specialists",
+  "description": "Review, evaluate, and analyze work environments and design programs and procedures to control, eliminate, and prevent disease or injury caused by chemical, physical, and biological agents or ergonomic factors. May conduct inspections and enforce adherence to laws and regulations governing the health and safety of individuals. May be employed in the public or private sector.",
+  "tasks": [
+    {
+      "id": "11063",
+      "text": "Recommend measures to help protect workers from potentially hazardous work methods, processes, or materials.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11066",
+      "text": "Develop or maintain hygiene programs, such as noise surveys, continuous atmosphere monitoring, ventilation surveys, or asbestos management plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11062",
+      "text": "Order suspension of activities that pose threats to workers' health or safety.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11064",
+      "text": "Investigate accidents to identify causes or to determine how such accidents might be prevented in the future.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11067",
+      "text": "Inspect or evaluate workplace environments, equipment, or practices to ensure compliance with safety standards and government regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11071",
+      "text": "Collect samples of dust, gases, vapors, or other potentially toxic materials for analysis.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11068",
+      "text": "Collaborate with engineers or physicians to institute control or remedial measures for hazardous or potentially hazardous conditions or equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11065",
+      "text": "Investigate the adequacy of ventilation, exhaust equipment, lighting, or other conditions that could affect employee health, comfort, or performance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11069",
+      "text": "Conduct safety training or education programs and demonstrate the use of safety equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11072",
+      "text": "Investigate health-related complaints and inspect facilities to ensure that they comply with public health legislation and regulations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23989",
+      "text": "Write reports.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11076",
+      "text": "Inspect specified areas to ensure the presence of fire prevention equipment, safety equipment, or first-aid supplies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11070",
+      "text": "Provide new-employee health and safety orientations and develop materials for these presentations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21142",
+      "text": "Analyze incident data to identify trends in injuries, illnesses, accidents, or other hazards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11074",
+      "text": "Maintain or update emergency response plans or procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11073",
+      "text": "Coordinate \"right-to-know\" programs regarding hazardous chemicals or other substances.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11077",
+      "text": "Conduct audits at hazardous waste sites or industrial sites or participate in hazardous waste site investigations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11075",
+      "text": "Develop or maintain medical monitoring programs for employees.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11078",
+      "text": "Collect samples of hazardous materials or arrange for sample collection.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11079",
+      "text": "Maintain inventories of hazardous materials or hazardous wastes, using waste tracking systems to ensure that materials are handled properly.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11080",
+      "text": "Prepare hazardous, radioactive, or mixed waste samples for transportation or storage by treating, compacting, packaging, and labeling them.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11081",
+      "text": "Perform laboratory analyses or physical inspections of samples to detect disease or to assess purity or cleanliness.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 25,
+  "salary": 90150,
+  "demand": "High"
+}

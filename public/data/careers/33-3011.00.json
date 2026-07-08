@@ -1,0 +1,115 @@
+{
+  "code": "33-3011.00",
+  "title": "Bailiffs",
+  "description": "Maintain order in courts of law.",
+  "tasks": [
+    {
+      "id": "20123",
+      "text": "Screen persons entering courthouse using magnetometers, x-ray machines, and other devices to collect and retain unauthorized firearms and other contraband.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20127",
+      "text": "Escort prisoners to and from courthouse and maintain custody of prisoners during court proceedings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2091",
+      "text": "Maintain order in courtroom during trial and guard jury from outside contact.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20124",
+      "text": "Provide security by patrolling interior and exterior of courthouse and escorting judges and other court employees.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2092",
+      "text": "Guard lodging of sequestered jury.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2094",
+      "text": "Enforce courtroom rules of behavior and warn persons not to smoke or disturb court procedure.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21197",
+      "text": "Arrest persons in court when arrest warrants have been issued.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2095",
+      "text": "Report need for police or medical assistance to sheriff's office.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20125",
+      "text": "Check courtroom for security and cleanliness and assure availability of sundry supplies, such as notepads, for use by judge, jurors, and attorneys.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2098",
+      "text": "Stop people from entering courtroom while judge charges jury.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20126",
+      "text": "Screen, control, and handle evidence and exhibits during court proceedings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21198",
+      "text": "Provide assistance to the public, such as directions to court offices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2097",
+      "text": "Announce entrance of judge.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20128",
+      "text": "Maintain court docket.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2093",
+      "text": "Provide jury escort to restaurant and other areas outside of courtroom to prevent jury contact with public.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 43,
+  "salary": 56600,
+  "demand": "Low"
+}

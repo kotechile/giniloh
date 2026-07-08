@@ -1,0 +1,66 @@
+{
+  "code": "29-2012.01",
+  "title": "Histology Technicians",
+  "description": "Prepare histological slides from tissue sections for microscopic examination and diagnosis by pathologists. May assist with research studies.",
+  "tasks": [
+    {
+      "id": "22795",
+      "text": "Cut sections of body tissues for microscopic examination, using microtomes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22796",
+      "text": "Embed tissue specimens into paraffin wax blocks, or infiltrate tissue specimens with wax.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22799",
+      "text": "Mount tissue specimens on glass slides.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22801",
+      "text": "Stain tissue specimens with dyes or other chemicals to make cell details visible under microscopes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22797",
+      "text": "Freeze tissue specimens.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22800",
+      "text": "Operate computerized laboratory equipment to dehydrate, decalcify, or microincinerate tissue samples.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22794",
+      "text": "Archive diagnostic material, such as histologic slides and blocks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22798",
+      "text": "Maintain laboratory equipment, such as microscopes, mass spectrometers, microtomes, immunostainers, tissue processors, embedding centers, and water baths.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 60367,
+  "demand": "Very High"
+}

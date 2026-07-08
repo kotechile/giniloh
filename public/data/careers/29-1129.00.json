@@ -1,0 +1,17 @@
+{
+  "code": "29-1129.00",
+  "title": "Therapists, All Other",
+  "description": "All therapists not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Therapists, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 77930,
+  "demand": "Low"
+}

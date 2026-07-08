@@ -1,0 +1,143 @@
+{
+  "code": "49-9052.00",
+  "title": "Telecommunications Line Installers and Repairers",
+  "description": "Install and repair telecommunications cable, including fiber optics.",
+  "tasks": [
+    {
+      "id": "11850",
+      "text": "Set up service for customers, installing, connecting, testing, or adjusting equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11846",
+      "text": "Travel to customers' premises to install, maintain, or repair audio and visual electronic reception equipment or accessories.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11849",
+      "text": "Measure signal strength at utility poles, using electronic test equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11847",
+      "text": "Inspect or test lines or cables, recording and analyzing test results, to assess transmission characteristics and locate faults or malfunctions.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11848",
+      "text": "Splice cables, using hand tools, epoxy, or mechanical equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11852",
+      "text": "Access specific areas to string lines, or install terminal boxes, auxiliary equipment, or appliances, using bucket trucks, climbing poles or ladders, or entering tunnels, trenches, or crawl spaces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11857",
+      "text": "Clean or maintain tools or test equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11853",
+      "text": "String cables between structures and lines from poles, towers, or trenches, and pull lines to proper tension.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20806",
+      "text": "Pull up cable by hand from large reels mounted on trucks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11855",
+      "text": "Lay underground cable directly in trenches, or string it through conduits running through trenches.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20807",
+      "text": "Pull cable through ducts by hand or with winches.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11861",
+      "text": "Dig trenches for underground wires or cables.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11858",
+      "text": "Explain cable service to subscribers after installation, and collect any installation fees due.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11851",
+      "text": "Place insulation over conductors, or seal splices with moisture-proof covering.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11859",
+      "text": "Compute impedance of wires from poles to houses to determine additional resistance needed for reducing signals to desired levels.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11854",
+      "text": "Install equipment such as amplifiers or repeaters to maintain the strength of communications transmissions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11860",
+      "text": "Use a variety of construction equipment to complete installations, such as digger derricks, trenchers, or cable plows.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11863",
+      "text": "Fill and tamp holes, using cement, earth, and tamping devices.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11862",
+      "text": "Dig holes for power poles, using power augers or shovels, set poles in place with cranes, and hoist poles upright, using winches.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 74330,
+  "demand": "Medium"
+}

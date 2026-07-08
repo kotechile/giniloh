@@ -1,0 +1,136 @@
+{
+  "code": "41-1012.00",
+  "title": "First-Line Supervisors of Non-Retail Sales Workers",
+  "description": "Directly supervise and coordinate activities of sales workers other than retail sales workers. May perform duties such as budgeting, accounting, and personnel work, in addition to supervisory duties.",
+  "tasks": [
+    {
+      "id": "9661",
+      "text": "Monitor sales staff performance to ensure that goals are met.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9665",
+      "text": "Provide staff with assistance in performing difficult or complicated duties.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20266",
+      "text": "Direct and supervise employees engaged in sales, inventory-taking, reconciling cash receipts, or performing specific services.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9660",
+      "text": "Listen to and resolve customer complaints regarding services, products, or personnel.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9673",
+      "text": "Keep records pertaining to purchases, sales, and requisitions.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "9662",
+      "text": "Hire, train, and evaluate personnel.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9663",
+      "text": "Confer with company officials to develop methods and procedures to increase sales, expand markets, and promote business.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9666",
+      "text": "Plan and prepare work schedules, and assign employees to specific duties.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9667",
+      "text": "Attend company meetings to exchange product information and coordinate work activities with other departments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9672",
+      "text": "Visit retailers and sales representatives to promote products and gather information.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9669",
+      "text": "Formulate pricing policies on merchandise according to profitability requirements.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9668",
+      "text": "Prepare sales and inventory reports for management and budget departments.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9677",
+      "text": "Examine products purchased for resale or received for storage to determine product condition.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9670",
+      "text": "Examine merchandise to ensure correct pricing and display, and that it functions as advertised.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9671",
+      "text": "Analyze details of sales territories to assess their growth potential and to set quotas.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9676",
+      "text": "Inventory stock and reorder when inventories drop to specified levels.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9674",
+      "text": "Coordinate sales promotion activities, such as preparing merchandise displays and advertising copy.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9675",
+      "text": "Prepare rental or lease agreements, specifying charges and payment procedures for use of machinery, tools, or other items.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 22,
+  "salary": 87520,
+  "demand": "High"
+}

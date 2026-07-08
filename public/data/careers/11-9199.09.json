@@ -1,0 +1,122 @@
+{
+  "code": "11-9199.09",
+  "title": "Wind Energy Operations Managers",
+  "description": "Manage wind field operations, including personnel, maintenance activities, financial activities, and planning.",
+  "tasks": [
+    {
+      "id": "15822",
+      "text": "Supervise employees or subcontractors to ensure quality of work or adherence to safety regulations or policies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15808",
+      "text": "Train or coordinate the training of employees in operations, safety, environmental issues, or technical issues.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15809",
+      "text": "Track and maintain records for wind operations, such as site performance, downtime events, parts usage, or substation events.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15823",
+      "text": "Oversee the maintenance of wind field equipment or structures, such as towers, transformers, electrical collector systems, roadways, or other site assets.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15821",
+      "text": "Prepare wind field operational budgets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15819",
+      "text": "Develop relationships and communicate with customers, site managers, developers, land owners, authorities, utility representatives, or residents.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15813",
+      "text": "Maintain operations records, such as work orders, site inspection forms, or other documentation.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "15815",
+      "text": "Recruit or select wind operations employees, contractors, or subcontractors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15810",
+      "text": "Provide technical support to wind field customers, employees, or subcontractors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15817",
+      "text": "Estimate costs associated with operations, including repairs or preventive maintenance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15816",
+      "text": "Monitor and maintain records of daily facility operations.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "15818",
+      "text": "Establish goals, objectives, or priorities for wind field operations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15812",
+      "text": "Order parts, tools, or equipment needed to maintain, restore, or improve wind field operations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15814",
+      "text": "Review, negotiate, or approve wind farm contracts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15811",
+      "text": "Manage warranty repair or replacement services.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15820",
+      "text": "Develop processes or procedures for wind operations, including transitioning from construction to commercial operations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 31,
+  "salary": 141900,
+  "demand": "Very High"
+}

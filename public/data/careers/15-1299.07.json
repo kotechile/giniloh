@@ -1,0 +1,129 @@
+{
+  "code": "15-1299.07",
+  "title": "Blockchain Engineers",
+  "description": "Maintain and support distributed and decentralized blockchain-based networks or block-chain applications such as cryptocurrency exchange, payment processing, document sharing, and digital voting. Design and deploy secure block-chain design patterns and solutions over geographically distributed networks using advanced technologies. May assist with infrastructure setup and testing for application transparency and security.",
+  "tasks": [
+    {
+      "id": "21806",
+      "text": "Assess blockchain threats, such as untested code and unprotected keys.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21807",
+      "text": "Automate the deployment of software updates over geographically distributed network nodes.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21808",
+      "text": "Design and deploy blockchain design patterns to make transactions secure, transparent, and immutable.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21809",
+      "text": "Design and develop blockchain technologies for industries such as finance and music.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21810",
+      "text": "Design and implement dashboard and data visualizations to meet customer reporting needs.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21811",
+      "text": "Design and implement data repositories to integrate data.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21812",
+      "text": "Design and verify cryptographic protocols to protect private information.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21813",
+      "text": "Determine specifications for, or implement, logging.",
+      "type": "n/a",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "21814",
+      "text": "Develop a maintainable code base using object-oriented design principles, practices, or patterns.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21815",
+      "text": "Discuss and plan systems with solution architects, system engineers, or cybersecurity experts to meet customer requirements.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21816",
+      "text": "Discuss data needs with engineers, product managers, or data scientists to identify blockchain requirements.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21817",
+      "text": "Evaluate blockchain processes or risks based on security assessments or control matrix reviews.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21818",
+      "text": "Evaluate new blockchain technologies and vendor products.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21819",
+      "text": "Implement catastrophic failure handlers to identify security breaches and prevent serious damage.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21820",
+      "text": "Run infrastructure tests to examine the behavior of large peer-to-peer networks.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21821",
+      "text": "Test the security and performance of blockchain infrastructures.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21822",
+      "text": "Update client and server applications responsible for integration and business logic.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 26,
+  "salary": 116580,
+  "demand": "Very High"
+}

@@ -1,0 +1,17 @@
+{
+  "code": "43-9199.00",
+  "title": "Office and Administrative Support Workers, All Other",
+  "description": "All office and administrative support workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Office and Administrative Support Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 45670,
+  "demand": "High"
+}

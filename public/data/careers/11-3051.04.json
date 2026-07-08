@@ -1,0 +1,143 @@
+{
+  "code": "11-3051.04",
+  "title": "Biomass Power Plant Managers",
+  "description": "Manage operations at biomass power generation facilities. Direct work activities at plant, including supervision of operations and maintenance staff.",
+  "tasks": [
+    {
+      "id": "21162",
+      "text": "Manage safety programs at power generation facilities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15471",
+      "text": "Review biomass operations performance specifications to ensure compliance with regulatory requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15470",
+      "text": "Review logs, datasheets, or reports to ensure adequate production levels and safe production environments or to identify abnormalities with power production equipment or processes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15468",
+      "text": "Supervise operations or maintenance employees in the production of power from biomass, such as wood, coal, paper sludge, or other waste or refuse.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15478",
+      "text": "Supervise biomass plant or substation operations, maintenance, repair, or testing activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15480",
+      "text": "Conduct field inspections of biomass plants, stations, or substations to ensure normal and safe operating conditions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15474",
+      "text": "Plan and schedule plant activities, such as wood, waste, or refuse fuel deliveries, ash removal, and regular maintenance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15473",
+      "text": "Prepare and manage biomass plant budgets.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15477",
+      "text": "Evaluate power production or demand trends to identify opportunities for improved operations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15476",
+      "text": "Inspect biomass gasification processes, equipment, and facilities for ways to maximize capacity and minimize operating costs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15472",
+      "text": "Prepare reports on biomass plant operations, status, maintenance, and other information.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15464",
+      "text": "Manage parts and supply inventories for biomass plants.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15465",
+      "text": "Monitor and operate communications systems, such as mobile radios.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15469",
+      "text": "Shut down and restart biomass power plants or equipment in emergency situations or for equipment maintenance, repairs, or replacements.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15466",
+      "text": "Compile and record operational data on forms or in log books.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "15479",
+      "text": "Monitor the operating status of biomass plants by observing control system parameters, distributed control systems, switchboard gauges, dials, or other indicators.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15467",
+      "text": "Adjust equipment controls to generate specified amounts of electrical power.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15463",
+      "text": "Test, maintain, or repair electrical power distribution machinery or equipment, using hand tools, power tools, and testing devices.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15475",
+      "text": "Operate controls to start, stop, or regulate biomass-fueled generators, generator units, boilers, engines, or auxiliary systems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 24,
+  "salary": 126060,
+  "demand": "High"
+}

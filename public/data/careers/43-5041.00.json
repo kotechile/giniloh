@@ -1,0 +1,94 @@
+{
+  "code": "43-5041.00",
+  "title": "Meter Readers, Utilities",
+  "description": "Read meter and record consumption of electricity, gas, water, or steam.",
+  "tasks": [
+    {
+      "id": "11309",
+      "text": "Read electric, gas, water, or steam consumption meters and enter data in route books or hand-held computers.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11311",
+      "text": "Upload into office computers all information collected on hand-held computers during meter rounds, or return route books or hand-held computers to business offices so that data can be compiled.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11310",
+      "text": "Walk or drive vehicles along established routes to take readings of meter dials.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11313",
+      "text": "Inspect meters for unauthorized connections, defects, and damage, such as broken seals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11312",
+      "text": "Verify readings in cases where consumption appears to be abnormal, and record possible reasons for fluctuations.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11314",
+      "text": "Report to service departments any problems, such as meter irregularities, damaged equipment, or impediments to meter access, including dogs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11317",
+      "text": "Leave messages to arrange different times to read meters in cases in which meters are not accessible.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11318",
+      "text": "Connect and disconnect utility services at specific locations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11315",
+      "text": "Answer customers' questions about services and charges, or direct them to customer service centers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11316",
+      "text": "Update client address and meter location information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20904",
+      "text": "Perform preventative maintenance or minor repairs on meters.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11320",
+      "text": "Report lost or broken keys.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 46,
+  "salary": 48150,
+  "demand": "Low"
+}

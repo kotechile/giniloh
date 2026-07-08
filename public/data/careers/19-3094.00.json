@@ -1,0 +1,108 @@
+{
+  "code": "19-3094.00",
+  "title": "Political Scientists",
+  "description": "Study the origin, development, and operation of political systems. May study topics, such as public opinion, political decisionmaking, and ideology. May analyze the structure and operation of governments, as well as various political entities. May conduct public opinion surveys, analyze election results, or analyze public documents.",
+  "tasks": [
+    {
+      "id": "5515",
+      "text": "Teach political science.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5519",
+      "text": "Maintain current knowledge of government policy decisions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5518",
+      "text": "Develop and test theories, using information from interviews, newspapers, periodicals, case law, historical papers, polls, or statistical sources.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5516",
+      "text": "Disseminate research results through academic publications, written reports, or public presentations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23949",
+      "text": "Advise political science students.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5520",
+      "text": "Collect, analyze, and interpret data, such as election results and public opinion surveys, reporting on findings, recommendations, and conclusions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5521",
+      "text": "Interpret and analyze policies, public issues, legislation, or the operations of governments, businesses, and organizations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5517",
+      "text": "Identify issues for research and analysis.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23950",
+      "text": "Serve on committees.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5524",
+      "text": "Forecast political, economic, and social trends.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5525",
+      "text": "Consult with and advise government officials, civic bodies, research agencies, the media, political parties, and others concerned with political issues.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5522",
+      "text": "Evaluate programs and policies, and make related recommendations to institutions and organizations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5526",
+      "text": "Provide media commentary or criticism related to public policy and political issues and events.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5523",
+      "text": "Write drafts of legislative proposals, and prepare speeches, correspondence, and policy papers for governmental use.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 29,
+  "salary": 142080,
+  "demand": "Low"
+}

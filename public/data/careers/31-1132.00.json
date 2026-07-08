@@ -1,0 +1,164 @@
+{
+  "code": "31-1132.00",
+  "title": "Orderlies",
+  "description": "Transport patients to areas such as operating rooms or x-ray rooms using wheelchairs, stretchers, or moveable beds. May maintain stocks of supplies or clean and transport equipment. Psychiatric orderlies are included in Psychiatric Aides.",
+  "tasks": [
+    {
+      "id": "19357",
+      "text": "Lift or assist others to lift patients to move them on or off beds, examination tables, surgical tables, or stretchers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19366",
+      "text": "Transport patients to treatment units, testing units, operating rooms, or other areas, using wheelchairs, stretchers, or moveable beds.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19356",
+      "text": "Disinfect or sterilize equipment or supplies, using germicides or sterilizing equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19353",
+      "text": "Clean equipment, such as wheelchairs, hospital beds, or portable medical equipment, documenting needed repairs or maintenance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19359",
+      "text": "Respond to emergency situations, such as emergency medical calls, security calls, or fire alarms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19351",
+      "text": "Change soiled linens, such as bed linens, drapes, or cubicle curtains.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19350",
+      "text": "Carry messages or documents between departments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19367",
+      "text": "Transport portable medical equipment or medical supplies between rooms or departments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19352",
+      "text": "Clean and sanitize patient rooms, bathrooms, examination rooms, or other patient areas.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19354",
+      "text": "Collect and transport infectious or hazardous waste in closed containers for sterilization or disposal, in accordance with applicable law, standards, or policies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19368",
+      "text": "Transport specimens, laboratory items, or pharmacy items, ensuring proper documentation and delivery to authorized personnel.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19355",
+      "text": "Collect soiled linen or trash.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19370",
+      "text": "Provide physical support to patients to assist them to perform daily living activities, such as getting out of bed, bathing, dressing, using the toilet, standing, walking, or exercising.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19371",
+      "text": "Separate collected materials for disposal, recycling, or reuse, in accordance with environmental policies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19360",
+      "text": "Restrain patients to prevent violence or injury or to assist physicians or nurses to administer treatments.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19369",
+      "text": "Turn or reposition bedridden patients, alone or with assistance, to prevent bedsores.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19358",
+      "text": "Position or hold patients in position for surgical preparation.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19363",
+      "text": "Stock utility rooms, nonmedical storage rooms, or cleaning carts with supplies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19349",
+      "text": "Answer patient call signals, signal lights, bells, or intercom systems to determine patients' needs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19362",
+      "text": "Stock or issue medical supplies, such as dressing packs or treatment trays.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19365",
+      "text": "Transport bodies to the morgue.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19361",
+      "text": "Serve or collect food trays.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 27,
+  "salary": 38290,
+  "demand": "Medium"
+}

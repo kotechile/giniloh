@@ -1,0 +1,213 @@
+{
+  "code": "51-4122.00",
+  "title": "Welding, Soldering, and Brazing Machine Setters, Operators, and Tenders",
+  "description": "Set up, operate, or tend welding, soldering, or brazing machines or robots that weld, braze, solder, or heat treat metal products, components, or assemblies. Includes workers who operate laser cutters or laser-beam machines.",
+  "tasks": [
+    {
+      "id": "10274",
+      "text": "Read blueprints, work orders, or production schedules to determine product or job instructions or specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10271",
+      "text": "Inspect, measure, or test completed metal workpieces to ensure conformance to specifications, using measuring and testing devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10272",
+      "text": "Record operational information on specified production reports.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "10270",
+      "text": "Correct problems by adjusting controls or by stopping machines and opening holding devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10267",
+      "text": "Set up, operate, or tend welding machines that join or bond components to fabricate metal products or assemblies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10282",
+      "text": "Select torch tips, alloys, flux, coil, tubing, or wire, according to metal types or thicknesses, data charts, or records.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "10276",
+      "text": "Lay out, fit, or connect parts to be bonded, calculating production measurements, as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10284",
+      "text": "Prepare metal surfaces or workpieces, using hand-operated equipment, such as grinders, cutters, or drills.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10292",
+      "text": "Mark weld points and positions of components on workpieces, using rules, squares, templates, or scribes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10286",
+      "text": "Set dials and timing controls to regulate electrical current, gas flow pressure, heating or cooling cycles, or shut-off.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10266",
+      "text": "Turn and press knobs and buttons or enter operating instructions into computers to adjust and start welding machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10275",
+      "text": "Assemble, align, and clamp workpieces into holding fixtures to bond, heat-treat, or solder fabricated metal components.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10277",
+      "text": "Conduct trial runs before welding, soldering, or brazing, and make necessary adjustments to equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10269",
+      "text": "Give directions to other workers regarding machine set-up and use.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10285",
+      "text": "Clean, lubricate, maintain, and adjust equipment to maintain efficient operation, using air hoses, cleaning fluids, and hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10281",
+      "text": "Select, position, align, and bolt jigs, holding fixtures, guides, or stops onto machines, using measuring instruments and hand tools.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10279",
+      "text": "Remove completed workpieces or parts from machinery, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10280",
+      "text": "Observe meters, gauges, or machine operations to ensure that soldering or brazing processes meet specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10290",
+      "text": "Transfer components, metal products, or assemblies, using moving equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10288",
+      "text": "Devise or build fixtures or jigs used to hold parts in place during welding, brazing, or soldering.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10291",
+      "text": "Add chemicals or materials to workpieces or machines to facilitate bonding or to cool workpieces.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10287",
+      "text": "Tend auxiliary equipment used in welding processes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10283",
+      "text": "Compute and record settings for new work, applying knowledge of metal properties, principles of welding, and shop mathematics.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "10293",
+      "text": "Anneal finished workpieces to relieve internal stress.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10268",
+      "text": "Load or feed workpieces into welding machines to join or bond components.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10289",
+      "text": "Fill hoppers and position spouts to direct flow of flux or manually brush flux onto seams of workpieces.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10273",
+      "text": "Start, monitor, and adjust robotic welding production lines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10278",
+      "text": "Dress electrodes, using tip dressers, files, emery cloths, or dressing wheels.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10294",
+      "text": "Immerse completed workpieces into water or acid baths to cool and clean components.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 47920,
+  "demand": "Medium"
+}

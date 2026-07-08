@@ -1,0 +1,227 @@
+{
+  "code": "29-2099.05",
+  "title": "Ophthalmic Medical Technologists",
+  "description": "Assist ophthalmologists by performing ophthalmic clinical functions and ophthalmic photography. Provide instruction and supervision to other ophthalmic personnel. Assist with minor surgical procedures, applying aseptic techniques and preparing instruments. May perform eye exams, administer eye medications, and instruct patients in care and use of corrective lenses.",
+  "tasks": [
+    {
+      "id": "19268",
+      "text": "Conduct tonometry or tonography tests to measure intraocular pressure.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19287",
+      "text": "Take and document patients' medical histories.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19281",
+      "text": "Take anatomical or functional ocular measurements, such as axial length measurements, of the eye or surrounding tissue.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19275",
+      "text": "Measure visual acuity, including near, distance, pinhole, or dynamic visual acuity, using appropriate tests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19259",
+      "text": "Administer topical ophthalmic or oral medications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19271",
+      "text": "Measure and record lens power, using lensometers.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "19263",
+      "text": "Calculate corrections for refractive errors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19264",
+      "text": "Collect ophthalmic measurements or other diagnostic information, using ultrasound equipment, such as A-scan ultrasound biometry or B-scan ultrasonography equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21190",
+      "text": "Perform ophthalmic triage, in the office or by phone, to assess severity of patients' conditions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19283",
+      "text": "Clean or sterilize ophthalmic or surgical instruments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21191",
+      "text": "Educate patients on ophthalmic medical procedures, conditions of the eye, and appropriate use of medications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19266",
+      "text": "Conduct ocular motility tests to measure function of eye muscles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19261",
+      "text": "Assess refractive condition of eyes, using retinoscope.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19269",
+      "text": "Conduct visual field tests to measure field of vision.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19273",
+      "text": "Measure corneal thickness, using pachymeter or contact ultrasound methods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19272",
+      "text": "Measure corneal curvature with keratometers or ophthalmometers to aid in the diagnosis of conditions, such as astigmatism.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19280",
+      "text": "Supervise or instruct ophthalmic staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19274",
+      "text": "Measure the thickness of the retinal nerve, using scanning laser polarimetry techniques to aid in diagnosis of glaucoma.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19262",
+      "text": "Assist physicians in performing ophthalmic procedures, including surgery.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19277",
+      "text": "Perform fluorescein angiography of the eye.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19279",
+      "text": "Photograph patients' eye areas, using clinical photography techniques, to document retinal or corneal defects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19286",
+      "text": "Maintain ophthalmic instruments or equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19267",
+      "text": "Conduct tests, such as the Amsler Grid test, to measure central visual field used in the early diagnosis of macular degeneration, glaucoma, or diseases of the eye.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19265",
+      "text": "Conduct binocular disparity tests to assess depth perception.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19260",
+      "text": "Assess abnormalities of color vision, such as amblyopia.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19282",
+      "text": "Call patients to inquire about their post-operative status or recovery.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19285",
+      "text": "Instruct patients in the care and use of contact lenses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19284",
+      "text": "Conduct low vision blindness tests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19276",
+      "text": "Perform advanced ophthalmic procedures, including electrophysiological, electrophysical, or microbial procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19278",
+      "text": "Perform slit lamp biomicroscopy procedures to diagnose disorders of the eye, such as retinitis, presbyopia, cataracts, or retinal detachment.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19270",
+      "text": "Create three-dimensional images of the eye, using computed tomography (CT).",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 32,
+  "salary": 50290,
+  "demand": "High"
+}

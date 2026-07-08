@@ -1,0 +1,115 @@
+{
+  "code": "25-4012.00",
+  "title": "Curators",
+  "description": "Administer collections, such as artwork, collectibles, historic items, or scientific specimens of museums or other institutions. May conduct instructional, research, or public service activities of institution.",
+  "tasks": [
+    {
+      "id": "18641",
+      "text": "Plan and organize the acquisition, storage, and exhibition of collections and related materials, including the selection of exhibition themes and designs, and develop or install exhibit materials.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1644",
+      "text": "Develop and maintain an institution's registration, cataloging, and basic record-keeping systems, using computer databases.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1649",
+      "text": "Plan and conduct special research projects in area of interest or expertise.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1645",
+      "text": "Provide information from the institution's holdings to other curators and to the public.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1648",
+      "text": "Negotiate and authorize purchase, sale, exchange, or loan of collections.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1655",
+      "text": "Study, examine, and test acquisitions to authenticate their origin, composition, history, and to assess their current value.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1646",
+      "text": "Inspect premises to assess the need for repairs and to ensure that climate and pest control issues are addressed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1654",
+      "text": "Write and review grant proposals, journal articles, institutional reports, and publicity materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18642",
+      "text": "Design, organize, or conduct tours, workshops, and instructional or educational sessions to acquaint individuals with an institution's facilities and materials.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1652",
+      "text": "Attend meetings, conventions, and civic events to promote use of institution's services, to seek financing, and to maintain community alliances.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1647",
+      "text": "Train and supervise curatorial, fiscal, technical, research, and clerical staff, as well as volunteers or interns.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1651",
+      "text": "Confer with the board of directors to formulate and interpret policies, to determine budget requirements, and to plan overall operations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1656",
+      "text": "Arrange insurance coverage for objects on loan or for special exhibits and recommend changes in coverage for the entire collection.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1653",
+      "text": "Schedule events and organize details, including refreshment, entertainment, decorations, and the collection of any fees.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1657",
+      "text": "Establish specifications for reproductions and oversee their manufacture or select items from commercially available replica sources.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 23,
+  "salary": 63420,
+  "demand": "Low"
+}

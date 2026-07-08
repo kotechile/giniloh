@@ -1,0 +1,178 @@
+{
+  "code": "11-9179.01",
+  "title": "Fitness and Wellness Coordinators",
+  "description": "Manage or coordinate fitness and wellness programs and services. Manage and train staff of wellness specialists, health educators, or fitness instructors.",
+  "tasks": [
+    {
+      "id": "15558",
+      "text": "Maintain wellness- and fitness-related schedules, records, or reports.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "15562",
+      "text": "Develop or coordinate fitness and wellness programs or services.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15552",
+      "text": "Recommend or approve new program or service offerings to promote wellness and fitness, produce revenues, or minimize costs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15557",
+      "text": "Manage or oversee fitness or recreation facilities, ensuring safe and clean facilities and equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15561",
+      "text": "Supervise fitness or wellness specialists, such as fitness instructors, nutritionists, or health educators.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15544",
+      "text": "Track attendance, participation, or performance data related to wellness events.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15559",
+      "text": "Conduct or facilitate training sessions or seminars for wellness and fitness staff.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15546",
+      "text": "Maintain or arrange for maintenance of fitness equipment or facilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15553",
+      "text": "Prepare or implement budgets and strategic, operational, purchasing, or maintenance plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23945",
+      "text": "Evaluate fitness and wellness programs to determine their effectiveness.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15560",
+      "text": "Develop fitness or wellness classes, such as yoga, aerobics, strength training, or aquatics, ensuring a diversity of class offerings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15556",
+      "text": "Demonstrate proper operation of fitness equipment, such as resistance machines, cardio machines, free weights, or fitness assessment devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15548",
+      "text": "Conduct needs assessments or surveys to determine interest in, or satisfaction with, wellness and fitness programs, events, or services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15549",
+      "text": "Teach fitness classes to improve strength, flexibility, cardiovascular conditioning, or general fitness of participants.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15547",
+      "text": "Develop marketing campaigns to promote a healthy lifestyle or participation in fitness or wellness programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15550",
+      "text": "Select or supervise contractors, such as event hosts or health, fitness, and wellness practitioners.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20316",
+      "text": "Track cost-containment strategies and programs to evaluate effectiveness.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15545",
+      "text": "Provide individual support or counseling in general wellness or nutrition.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20317",
+      "text": "Use computer skills and software to manage Web sites or databases, publish newsletters, or provide webinars.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15551",
+      "text": "Respond to customer, public, or media requests for information about wellness programs or services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20315",
+      "text": "Organize and oversee fitness or wellness programs, such as information presentations, blood drives, or training in first aid or cardiopulmonary resuscitation (CPR).",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15555",
+      "text": "Organize and oversee events such as organized runs or walks.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15554",
+      "text": "Organize and oversee health screenings or other preventive measures, such as mammography, blood pressure, or cholesterol screenings or flu vaccinations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20314",
+      "text": "Interpret insurance data or Health Reimbursement Account (HRA) data to develop programs that address specific needs of target populations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 19,
+  "salary": 69770,
+  "demand": "Low"
+}

@@ -1,0 +1,122 @@
+{
+  "code": "29-2053.00",
+  "title": "Psychiatric Technicians",
+  "description": "Care for individuals with mental or emotional conditions or disabilities, following the instructions of physicians or other health practitioners. Monitor patients' physical and emotional well-being and report to medical staff. May participate in rehabilitation and treatment programs, help with personal hygiene, and administer oral or injectable medications.",
+  "tasks": [
+    {
+      "id": "6945",
+      "text": "Provide nursing, psychiatric, or personal care to patients with cognitive, intellectual, or developmental disabilities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6948",
+      "text": "Encourage patients to develop work skills and to participate in social, recreational, or other therapeutic activities that enhance interpersonal skills or develop social relationships.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6951",
+      "text": "Restrain violent, potentially violent, or suicidal patients by verbal or physical means as required.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6956",
+      "text": "Lead prescribed individual or group therapy sessions as part of specific therapeutic procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6944",
+      "text": "Monitor patients' physical and emotional well-being and report unusual behavior or physical ailments to medical staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6947",
+      "text": "Take and record measures of patients' physical condition, using devices such as thermometers or blood pressure gauges.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6946",
+      "text": "Observe and influence patients' behavior, communicating and interacting with them and teaching, counseling, or befriending them.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6952",
+      "text": "Aid patients in performing tasks, such as bathing or keeping beds, clothing, or living areas clean.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6949",
+      "text": "Collaborate with or assist doctors, psychologists, or rehabilitation therapists in working with patients with cognitive, intellectual, or developmental disabilities to treat, rehabilitate, and return patients to the community.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6950",
+      "text": "Develop or teach strategies to promote client wellness and independence.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20575",
+      "text": "Train or instruct new employees on procedures to follow with psychiatric patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20576",
+      "text": "Escort patients to medical appointments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6953",
+      "text": "Administer oral medications or hypodermic injections, following physician's prescriptions and hospital procedures.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6954",
+      "text": "Issue medications from dispensary and maintain records in accordance with specified procedures.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "6955",
+      "text": "Interview new patients to complete admission forms, to assess their mental health status, or to obtain their mental health and treatment history.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6957",
+      "text": "Contact patients' relatives to arrange family conferences.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 12,
+  "salary": 45130,
+  "demand": "High"
+}

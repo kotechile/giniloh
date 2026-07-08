@@ -1,0 +1,17 @@
+{
+  "code": "25-1199.00",
+  "title": "Postsecondary Teachers, All Other",
+  "description": "All postsecondary teachers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Postsecondary Teachers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 77640,
+  "demand": "High"
+}

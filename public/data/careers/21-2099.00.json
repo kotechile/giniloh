@@ -1,0 +1,17 @@
+{
+  "code": "21-2099.00",
+  "title": "Religious Workers, All Other",
+  "description": "All religious workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Religious Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 45280,
+  "demand": "Low"
+}

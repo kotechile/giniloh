@@ -1,0 +1,150 @@
+{
+  "code": "49-2094.00",
+  "title": "Electrical and Electronics Repairers, Commercial and Industrial Equipment",
+  "description": "Repair, test, adjust, or install electronic equipment, such as industrial controls, transmitters, and antennas.",
+  "tasks": [
+    {
+      "id": "886",
+      "text": "Test faulty equipment to diagnose malfunctions, using test equipment or software, and applying knowledge of the functional operation of electronic units and systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "892",
+      "text": "Maintain equipment logs that record performance problems, repairs, calibrations, or tests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "884",
+      "text": "Set up and test industrial equipment to ensure that it functions properly.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "890",
+      "text": "Inspect components of industrial equipment for accurate assembly and installation or for defects, such as loose connections or frayed wires.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "897",
+      "text": "Install repaired equipment in various settings, such as industrial or military establishments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "885",
+      "text": "Operate equipment to demonstrate proper use or to analyze malfunctions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "899",
+      "text": "Enter information into computer to copy program or to draw, modify, or store schematics, applying knowledge of software package used.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "882",
+      "text": "Perform scheduled preventive maintenance tasks, such as checking, cleaning, or repairing equipment, to detect and prevent problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "888",
+      "text": "Calibrate testing instruments and installed or repaired equipment to prescribed specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "887",
+      "text": "Repair or adjust equipment, machines, or defective components, replacing worn parts, such as gaskets or seals in watertight electrical equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "895",
+      "text": "Consult with customers, supervisors, or engineers to plan layout of equipment or to resolve problems in system operation or maintenance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "894",
+      "text": "Maintain inventory of spare parts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "891",
+      "text": "Study blueprints, schematics, manuals, or other specifications to determine installation procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "883",
+      "text": "Examine work orders and converse with equipment operators to detect equipment problems and to ascertain whether mechanical or human errors contributed to the problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "893",
+      "text": "Coordinate efforts with other workers involved in installing or maintaining equipment or components.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "901",
+      "text": "Develop or modify industrial electronic devices, circuits, or equipment, according to available specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "898",
+      "text": "Determine feasibility of using standardized equipment or develop specifications for equipment required to perform additional functions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "889",
+      "text": "Advise management regarding customer satisfaction, product performance, or suggestions for product improvements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "896",
+      "text": "Send defective units to the manufacturer or to a specialized repair shop for repair.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "900",
+      "text": "Sign overhaul documents for equipment replaced or repaired.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 30,
+  "salary": 74090,
+  "demand": "Medium"
+}

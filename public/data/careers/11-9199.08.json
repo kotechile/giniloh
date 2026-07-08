@@ -1,0 +1,199 @@
+{
+  "code": "11-9199.08",
+  "title": "Loss Prevention Managers",
+  "description": "Plan and direct policies, procedures, or systems to prevent the loss of assets. Determine risk exposure or potential liability, and develop risk control measures.",
+  "tasks": [
+    {
+      "id": "15800",
+      "text": "Coordinate or conduct internal investigations of problems such as employee theft and violations of corporate loss prevention policies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15807",
+      "text": "Administer systems and programs to reduce loss, maintain inventory control, or increase safety.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15781",
+      "text": "Review loss prevention exception reports and cash discrepancies to ensure adherence to guidelines.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15791",
+      "text": "Train loss prevention staff, retail managers, or store employees on loss control and prevention measures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15786",
+      "text": "Investigate or interview individuals suspected of shoplifting or internal theft.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15783",
+      "text": "Provide recommendations and solutions in crisis situations such as workplace violence, protests, and demonstrations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15806",
+      "text": "Identify potential for loss and develop strategies to eliminate it.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15795",
+      "text": "Hire or supervise loss prevention staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15804",
+      "text": "Advise retail managers on compliance with applicable codes, laws, regulations, or standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15799",
+      "text": "Develop and maintain partnerships with federal, state, or local law enforcement agencies or members of the retail loss prevention community.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15794",
+      "text": "Perform or direct inventory investigations in response to shrink results outside of acceptable ranges.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15796",
+      "text": "Maintain documentation of all loss prevention activity.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15802",
+      "text": "Assess security needs across locations to ensure proper deployment of loss prevention resources, such as staff and technology.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15805",
+      "text": "Monitor compliance to operational, safety, or inventory control procedures, including physical security standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15790",
+      "text": "Verify correct use and maintenance of physical security systems, such as closed-circuit television, merchandise tags, and burglar alarms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15789",
+      "text": "Visit stores to ensure compliance with company policies and procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15803",
+      "text": "Analyze retail data to identify current or emerging trends in theft or fraud.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15798",
+      "text": "Direct loss prevention audit programs including target store audits, maintenance audits, safety audits, or electronic article surveillance (EAS) audits.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15801",
+      "text": "Collaborate with law enforcement to investigate and solve external theft or fraud cases.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15797",
+      "text": "Coordinate theft and fraud investigations involving career criminals or organized group activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15792",
+      "text": "Supervise surveillance, detection, or criminal processing related to theft and criminal cases.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15782",
+      "text": "Perform cash audits and deposit investigations to fully account for store cash.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15793",
+      "text": "Recommend improvements in loss prevention programs, staffing, scheduling, or training.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15787",
+      "text": "Direct installation of covert surveillance equipment, such as security cameras.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15784",
+      "text": "Monitor and review paperwork procedures and systems to prevent error-related shortages.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15788",
+      "text": "Advise retail establishments on development of loss-investigation procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15785",
+      "text": "Maintain databases such as bad check logs, reports on multiple offenders, and alarm activation lists.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 17,
+  "salary": 141900,
+  "demand": "Very High"
+}

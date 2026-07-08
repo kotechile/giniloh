@@ -1,0 +1,157 @@
+{
+  "code": "15-2051.02",
+  "title": "Clinical Data Managers",
+  "description": "Apply knowledge of health care and database management to analyze clinical data, and to identify and report trends.",
+  "tasks": [
+    {
+      "id": "16281",
+      "text": "Design and validate clinical databases, including designing or testing logic checks.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16284",
+      "text": "Process clinical data, including receipt, entry, verification, or filing of information.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16280",
+      "text": "Generate data queries, based on validation checks or errors and omissions identified during data entry, to resolve identified problems.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "16285",
+      "text": "Develop project-specific data management plans that address areas such as coding, reporting, or transfer of data, database locks, and work flow processes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16279",
+      "text": "Monitor work productivity or quality to ensure compliance with standard operating procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16268",
+      "text": "Prepare appropriate formatting to data sets as requested.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16286",
+      "text": "Design forms for receiving, processing, or tracking data.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16277",
+      "text": "Prepare data analysis listings and activity, performance, or progress reports.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16282",
+      "text": "Confer with end users to define or implement clinical system requirements such as data release formats, delivery schedules, and testing protocols.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16278",
+      "text": "Perform quality control audits to ensure accuracy, completeness, or proper usage of clinical systems and data.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16283",
+      "text": "Analyze clinical data using appropriate statistical tools.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16269",
+      "text": "Evaluate processes and technologies, and suggest revisions to increase productivity and efficiency.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16270",
+      "text": "Develop technical specifications for data management programming and communicate needs to information technology staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16273",
+      "text": "Write work instruction manuals, data capture guidelines, or standard operating procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16274",
+      "text": "Track the flow of work forms, including in-house data flow or electronic forms transfer.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16276",
+      "text": "Supervise the work of data management project staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16272",
+      "text": "Contribute to the compilation, organization, and production of protocols, clinical study reports, regulatory submissions, or other controlled documentation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16266",
+      "text": "Read technical literature and participate in continuing education or professional associations to maintain awareness of current database technology and best practices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16275",
+      "text": "Train staff on technical procedures or software program usage.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16271",
+      "text": "Develop or select specific software programs for various research scenarios.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16267",
+      "text": "Provide support and information to functional areas such as marketing, clinical monitoring, and medical affairs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 19,
+  "salary": 120230,
+  "demand": "High"
+}

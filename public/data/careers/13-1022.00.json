@@ -1,0 +1,150 @@
+{
+  "code": "13-1022.00",
+  "title": "Wholesale and Retail Buyers, Except Farm Products",
+  "description": "Buy merchandise or commodities, other than farm products, for resale to consumers at the wholesale or retail level, including both durable and nondurable goods. Analyze past buying trends, sales records, price, and quality of merchandise to determine value and yield. Select, order, and authorize payment for merchandise according to contractual agreements. May conduct meetings with sales personnel and introduce new products. May negotiate contracts. Includes assistant wholesale and retail buyers of nonfarm products.",
+  "tasks": [
+    {
+      "id": "20710",
+      "text": "Buy merchandise or commodities for resale to wholesale or retail consumers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20711",
+      "text": "Negotiate prices, discount terms, or transportation arrangements with suppliers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20712",
+      "text": "Examine, select, order, or purchase merchandise consistent with quality, quantity, specification requirements, or other factors, such as environmental soundness.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20713",
+      "text": "Recommend mark-up rates, mark-down rates, or merchandise selling prices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20714",
+      "text": "Obtain information about customer needs or preferences by conferring with sales or purchasing personnel.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "68",
+      "text": "Authorize payment of invoices or return of merchandise.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "66",
+      "text": "Monitor and analyze sales records, trends, or economic conditions to anticipate consumer buying patterns, company sales, and needed inventory.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "20715",
+      "text": "Collaborate with vendors to obtain or develop desired products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20716",
+      "text": "Inspect merchandise or products to determine quality, value, or yield.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20717",
+      "text": "Conduct sales meetings to introduce new merchandise.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "72",
+      "text": "Consult with store or merchandise managers about budgets or goods to be purchased.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "77",
+      "text": "Provide clerks with information to print on price tags, such as price, mark-ups or mark-downs, manufacturer number, season code, or style number.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "76",
+      "text": "Train or supervise sales or clerical staff.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "78",
+      "text": "Determine which products should be featured in advertising, the advertising medium to be used, or when the ads should be run.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "79",
+      "text": "Monitor competitors' sales activities by following their advertisements in newspapers or other media.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19547",
+      "text": "Analyze environmental aspects of competing merchandise when making buying decisions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19548",
+      "text": "Compare transportation options to determine the most energy-efficient options.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19549",
+      "text": "Develop strategies to advertise green products or merchandise to consumers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19550",
+      "text": "Identify opportunities to buy green commodities, such as alternative energy, water, or carbon-neutral products for resale to consumers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19551",
+      "text": "Monitor consumer preferences or environmental trends to determine the best way to introduce new green products.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 32,
+  "salary": 75961,
+  "demand": "Very High"
+}

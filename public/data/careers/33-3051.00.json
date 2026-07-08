@@ -1,0 +1,220 @@
+{
+  "code": "33-3051.00",
+  "title": "Police and Sheriff's Patrol Officers",
+  "description": "Maintain order and protect life and property by enforcing local, tribal, state, or federal laws and ordinances. Perform a combination of the following duties: patrol a specific area; direct traffic; issue traffic summonses; investigate accidents; apprehend and arrest suspects, or serve legal processes of courts. Includes police officers working at educational institutions.",
+  "tasks": [
+    {
+      "id": "23051",
+      "text": "Identify, pursue, and arrest suspects and perpetrators of criminal acts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23052",
+      "text": "Provide for public safety by maintaining order, responding to emergencies, protecting people and property, enforcing motor vehicle and criminal laws, and promoting good community relations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23053",
+      "text": "Record facts to prepare reports that document incidents and activities.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23054",
+      "text": "Render aid to accident survivors and other persons requiring first aid for physical injuries.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23056",
+      "text": "Review facts of incidents to determine if criminal act or statute violations were involved.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23055",
+      "text": "Investigate illegal or suspicious activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23057",
+      "text": "Monitor, note, report, and investigate suspicious persons and situations, safety hazards, and unusual or illegal activity in patrol area.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23058",
+      "text": "Testify in court to present evidence or act as witness in traffic and criminal cases.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23061",
+      "text": "Relay complaint and emergency-request information to appropriate agency dispatchers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23060",
+      "text": "Monitor traffic to ensure motorists observe traffic regulations and exhibit safe driving procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23059",
+      "text": "Drive vehicles or patrol specific areas to detect law violators, issue citations, and make arrests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23065",
+      "text": "Execute arrest warrants, locating and taking persons into custody.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23072",
+      "text": "Patrol and guard courthouses, grand jury rooms, or assigned areas to provide security, enforce laws, maintain order, and arrest violators.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23063",
+      "text": "Photograph or draw diagrams of crime or accident scenes and interview principals and eyewitnesses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23064",
+      "text": "Evaluate complaint and emergency-request information to determine response requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23066",
+      "text": "Patrol specific area on foot, horseback, or motorized conveyance, responding promptly to calls for assistance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23067",
+      "text": "Investigate traffic accidents and other accidents to determine causes and to determine if a crime has been committed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23062",
+      "text": "Verify that the proper legal charges have been made against law offenders.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23073",
+      "text": "Transport or escort prisoners and defendants en route to courtrooms, prisons or jails, attorneys' offices, or medical facilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23068",
+      "text": "Direct traffic flow and reroute traffic in case of emergencies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23071",
+      "text": "Question individuals entering secured areas to determine their business, directing and rerouting individuals as necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23069",
+      "text": "Notify patrol units to take violators into custody or to provide needed assistance or medical aid.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23079",
+      "text": "Place people in protective custody.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23070",
+      "text": "Serve statements of claims, subpoenas, summonses, jury summonses, orders to pay alimony, and other court orders.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23074",
+      "text": "Inform citizens of community services and recommend options to facilitate longer-term problem resolution.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23075",
+      "text": "Locate and confiscate real or personal property, as directed by court order.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23076",
+      "text": "Provide road information to assist motorists.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23080",
+      "text": "Conduct community programs for all ages concerning topics such as drugs and violence.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23077",
+      "text": "Process prisoners, and prepare and maintain records of prisoner bookings and prisoner status during booking and pre-trial process.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23078",
+      "text": "Supervise law enforcement staff, such as jail staff, officers, and deputy sheriffs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 40,
+  "salary": 76210,
+  "demand": "Very High"
+}

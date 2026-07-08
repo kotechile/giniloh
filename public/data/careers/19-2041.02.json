@@ -1,0 +1,171 @@
+{
+  "code": "19-2041.02",
+  "title": "Environmental Restoration Planners",
+  "description": "Collaborate with field and biology staff to oversee the implementation of restoration projects and to develop new products. Process and synthesize complex scientific data into practical strategies for restoration, monitoring or management.",
+  "tasks": [
+    {
+      "id": "16856",
+      "text": "Develop environmental restoration project schedules and budgets.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16862",
+      "text": "Provide technical direction on environmental planning to energy engineers, biologists, geologists, or other professionals working to develop restoration plans or strategies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16875",
+      "text": "Create habitat management or restoration plans, such as native tree restoration and weed control.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16876",
+      "text": "Conduct site assessments to certify a habitat or to ascertain environmental damage or restoration needs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16872",
+      "text": "Collect and analyze data to determine environmental conditions and restoration needs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16861",
+      "text": "Supervise and provide technical guidance, training, or assistance to employees working in the field to restore habitats.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16865",
+      "text": "Plan environmental restoration projects, using biological databases, environmental strategies, and planning software.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16871",
+      "text": "Communicate findings of environmental studies or proposals for environmental remediation to other restoration professionals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16859",
+      "text": "Apply for permits required for the implementation of environmental remediation projects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16864",
+      "text": "Inspect active remediation sites to ensure compliance with environmental or safety policies, standards, or regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16873",
+      "text": "Develop natural resource management plans, using knowledge of environmental planning or state and federal environmental regulatory requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16867",
+      "text": "Identify environmental mitigation alternatives, ensuring compliance with applicable standards, laws, or regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16866",
+      "text": "Identify short- and long-term impacts of environmental remediation activities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16855",
+      "text": "Notify regulatory or permitting agencies of deviations from implemented remediation plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23907",
+      "text": "Write grants to obtain funding for restoration projects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16863",
+      "text": "Plan or supervise environmental studies to achieve compliance with environmental regulations in construction, modification, operation, acquisition, or divestiture of facilities such as power plants.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16860",
+      "text": "Review existing environmental remediation designs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16857",
+      "text": "Develop and communicate recommendations for landowners to maintain or restore environmental conditions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16869",
+      "text": "Conduct feasibility and cost-benefit studies for environmental remediation projects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16870",
+      "text": "Conduct environmental impact studies to examine the ecological effects of pollutants, disease, human activities, nature, and climate change.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16868",
+      "text": "Create environmental models or simulations, using geographic information system (GIS) data and knowledge of particular ecosystems or ecological regions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16858",
+      "text": "Create diagrams to communicate environmental remediation planning, using geographic information systems (GIS), computer-aided design (CAD), or other mapping or diagramming software.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16874",
+      "text": "Develop environmental management or restoration plans for sites with power transmission lines, natural gas pipelines, fuel refineries, geothermal plants, wind farms, or solar farms.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 24,
+  "salary": 82220,
+  "demand": "Medium"
+}

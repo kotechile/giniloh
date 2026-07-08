@@ -1,0 +1,178 @@
+{
+  "code": "29-1123.00",
+  "title": "Physical Therapists",
+  "description": "Assess, plan, organize, and participate in rehabilitative programs that improve mobility, relieve pain, increase strength, and improve or correct disabling conditions resulting from disease or injury.",
+  "tasks": [
+    {
+      "id": "363",
+      "text": "Plan, prepare, or carry out individually designed programs of physical treatment to maintain, improve, or restore physical functioning, alleviate pain, or prevent physical dysfunction in patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "364",
+      "text": "Perform and document an initial exam, evaluating data to identify problems and determine a diagnosis prior to intervention.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "370",
+      "text": "Record prognosis, treatment, response, and progress in patient's chart or enter information into computer.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "367",
+      "text": "Instruct patient and family in treatment procedures to be continued at home.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "365",
+      "text": "Evaluate effects of treatment at various stages and adjust treatments to achieve maximum benefit.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "368",
+      "text": "Confer with the patient, medical practitioners, or appropriate others to plan, implement, or assess the intervention program.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "366",
+      "text": "Administer manual exercises, massage, or traction to help relieve pain, increase patient strength, or decrease or prevent deformity or crippling.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "371",
+      "text": "Obtain patients' informed consent to proposed interventions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "373",
+      "text": "Test and measure patient's strength, motor development and function, sensory perception, functional capacity, or respiratory or circulatory efficiency and record data.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "377",
+      "text": "Direct, supervise, assess, and communicate with supportive personnel.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "369",
+      "text": "Review physician's referral and patient's medical records to help determine diagnosis and physical therapy treatment required.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "374",
+      "text": "Identify and document goals, anticipated progress, and plans for reevaluation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "375",
+      "text": "Provide information to the patient about the proposed intervention, its material risks and expected benefits, and any reasonable alternatives.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "381",
+      "text": "Provide educational information about physical therapy or physical therapists, injury prevention, ergonomics, or ways to promote health.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20407",
+      "text": "Inform patients and refer to appropriate practitioners when diagnosis reveals findings outside physical therapy.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "372",
+      "text": "Discharge patient from physical therapy when goals or projected outcomes have been attained and provide for appropriate follow-up care or referrals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "378",
+      "text": "Administer treatment involving application of physical agents, using equipment, moist packs, ultraviolet or infrared lamps, or ultrasound machines.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "382",
+      "text": "Refer clients to community resources or services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "385",
+      "text": "Construct, maintain, or repair medical supportive devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "380",
+      "text": "Evaluate, fit, or adjust prosthetic or orthotic devices or recommend modification to orthotist.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "379",
+      "text": "Teach physical therapy students or those in other health professions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "383",
+      "text": "Conduct or support research and apply research findings to practice.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "384",
+      "text": "Participate in community or community agency activities or help to formulate public policy.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "386",
+      "text": "Direct group rehabilitation activities.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 6,
+  "salary": 102760,
+  "demand": "High"
+}

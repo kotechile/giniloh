@@ -1,0 +1,220 @@
+{
+  "code": "11-3071.04",
+  "title": "Supply Chain Managers",
+  "description": "Direct or coordinate production, purchasing, warehousing, distribution, or financial forecasting services or activities to limit costs and improve accuracy, customer service, or safety. Examine existing procedures or opportunities for streamlining activities to meet product distribution needs. Direct the movement, storage, or processing of inventory.",
+  "tasks": [
+    {
+      "id": "20942",
+      "text": "Determine appropriate equipment and staffing levels to load, unload, move, or store materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20943",
+      "text": "Manage activities related to strategic or tactical purchasing, material requirements planning, controlling inventory, warehousing, or receiving.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15680",
+      "text": "Select transportation routes to maximize economy by combining shipments or consolidating warehousing and distribution.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15695",
+      "text": "Define performance metrics for measurement, comparison, or evaluation of supply chain factors, such as product cost or quality.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20944",
+      "text": "Implement new or improved supply chain processes to improve efficiency or performance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15700",
+      "text": "Develop procedures for coordination of supply chain management with other functional areas, such as sales, marketing, finance, production, or quality assurance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15694",
+      "text": "Confer with supply chain planners to forecast demand or create supply plans that ensure availability of materials or products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15696",
+      "text": "Analyze inventories to determine how to increase inventory turns, reduce waste, or optimize customer service.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15685",
+      "text": "Negotiate prices and terms with suppliers, vendors, or freight forwarders.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15697",
+      "text": "Analyze information about supplier performance or procurement program success.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20945",
+      "text": "Monitor suppliers' activities to assess performance in meeting quality or delivery requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15701",
+      "text": "Design or implement supply chains that support business strategies adapted to changing market conditions, new business opportunities, or cost reduction strategies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15688",
+      "text": "Meet with suppliers to discuss performance metrics, to provide performance feedback, or to discuss production forecasts or changes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20946",
+      "text": "Monitor forecasts and quotas to identify changes and predict effects on supply chain activities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15698",
+      "text": "Participate in the coordination of engineering changes, product line extensions, or new product launches to ensure orderly and timely transitions in material or production flow.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20947",
+      "text": "Identify or qualify new suppliers in collaboration with other departments, such as procurement, engineering, or quality assurance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15693",
+      "text": "Design or implement plant warehousing strategies for production materials or finished products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19541",
+      "text": "Design, implement, or oversee product take back or reverse logistics programs to ensure products are recycled, reused, or responsibly disposed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15692",
+      "text": "Develop or implement procedures or systems to evaluate or select suppliers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15691",
+      "text": "Document physical supply chain processes, such as workflows, cycle times, position responsibilities, or system flows.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15681",
+      "text": "Diagram supply chain models to help facilitate discussions with customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19542",
+      "text": "Evaluate and select information or other technology solutions to improve tracking and reporting of materials or products distribution, storage, or inventory.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19543",
+      "text": "Identify opportunities to reuse or recycle materials to minimize consumption of new materials, minimize waste, or to convert wastes to by-products.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19546",
+      "text": "Review or update supply chain practices in accordance with new or changing environmental policies, standards, regulations, or laws.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19540",
+      "text": "Design or implement supply chains that support environmental policies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20948",
+      "text": "Forecast material costs or develop standard cost lists.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19545",
+      "text": "Locate or select biodegradable, non-toxic, or other environmentally friendly raw materials for manufacturing processes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20949",
+      "text": "Appraise vendor manufacturing capabilities through on-site observations or other measurements.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19539",
+      "text": "Conduct or oversee the conduct of life cycle analyses to determine the environmental impacts of products, processes, or systems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19544",
+      "text": "Investigate or review the carbon footprints and environmental performance records of current or potential storage and distribution service providers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 22,
+  "salary": 107230,
+  "demand": "High"
+}

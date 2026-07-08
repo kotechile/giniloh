@@ -1,0 +1,171 @@
+{
+  "code": "21-1011.00",
+  "title": "Substance Abuse and Behavioral Disorder Counselors",
+  "description": "Counsel and advise individuals with alcohol, tobacco, drug, or other problems, such as gambling and eating disorders. May counsel individuals, families, or groups or engage in prevention programs.",
+  "tasks": [
+    {
+      "id": "5584",
+      "text": "Complete and maintain accurate records or reports regarding the patients' histories and progress, services provided, or other required information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5583",
+      "text": "Counsel clients or patients, individually or in group sessions, to assist in overcoming dependencies, adjusting to life, or making changes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18622",
+      "text": "Assess individuals' degree of drug dependency by collecting and analyzing urine samples.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5601",
+      "text": "Follow progress of discharged patients to determine effectiveness of treatments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5594",
+      "text": "Conduct chemical dependency program orientation sessions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5586",
+      "text": "Review and evaluate clients' progress in relation to measurable goals described in treatment and care plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5598",
+      "text": "Coordinate activities with courts, probation officers, community services, or other post-treatment agencies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5585",
+      "text": "Develop client treatment plans based on research, clinical experience, and client histories.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5590",
+      "text": "Modify treatment plans to comply with changes in client status.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5591",
+      "text": "Coordinate counseling efforts with mental health professionals or other health professionals, such as doctors, nurses, or social workers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5593",
+      "text": "Plan or implement follow-up or aftercare programs for clients to be discharged from treatment programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5588",
+      "text": "Intervene as an advocate for clients or patients to resolve emergency problems in crisis situations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5592",
+      "text": "Attend training sessions to increase knowledge and skills.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5587",
+      "text": "Interview clients, review records, and confer with other professionals to evaluate individuals' mental and physical condition and to determine their suitability for participation in a specific program.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5600",
+      "text": "Instruct others in program methods, procedures, or functions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5596",
+      "text": "Participate in case conferences or staff meetings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5597",
+      "text": "Act as liaisons between clients and medical staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5589",
+      "text": "Provide clients or family members with information about addiction issues and about available services or programs, making appropriate referrals when necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18623",
+      "text": "Train or supervise student interns or new staff members.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5595",
+      "text": "Counsel family members to assist them in understanding, dealing with, and supporting clients or patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5599",
+      "text": "Confer with family members or others close to clients to keep them informed of treatment planning and progress.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5602",
+      "text": "Develop, implement, or evaluate public education, prevention, or health promotion programs, working in collaboration with organizations, institutions, or communities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5603",
+      "text": "Supervise or direct other workers providing services to clients or patients.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 15,
+  "salary": 62685,
+  "demand": "Very High"
+}

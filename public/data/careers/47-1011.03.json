@@ -1,0 +1,115 @@
+{
+  "code": "47-1011.03",
+  "title": "Solar Energy Installation Managers",
+  "description": "Direct work crews installing residential or commercial solar photovoltaic or thermal systems.",
+  "tasks": [
+    {
+      "id": "17725",
+      "text": "Plan and coordinate installations of photovoltaic (PV) solar and solar thermal systems to ensure conformance to codes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17726",
+      "text": "Supervise solar installers, technicians, and subcontractors for solar installation projects to ensure compliance with safety standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17735",
+      "text": "Estimate materials, equipment, and personnel needed for residential or commercial solar installation projects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17738",
+      "text": "Prepare solar installation project proposals, quotes, budgets, or schedules.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17732",
+      "text": "Provide technical assistance to installers, technicians, or other solar professionals in areas such as solar electric systems, solar thermal systems, electrical systems, or mechanical systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17729",
+      "text": "Coordinate or schedule building inspections for solar installation projects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17731",
+      "text": "Perform start-up of systems for testing or customer implementation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17737",
+      "text": "Identify means to reduce costs, minimize risks, or increase efficiency of solar installation projects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17728",
+      "text": "Assess system performance or functionality at the system, subsystem, and component levels.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17727",
+      "text": "Assess potential solar installation sites to determine feasibility and design requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17730",
+      "text": "Monitor work of contractors and subcontractors to ensure projects conform to plans, specifications, schedules, or budgets.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17733",
+      "text": "Visit customer sites to determine solar system needs, requirements, or specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17739",
+      "text": "Purchase or rent equipment for solar energy system installation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17734",
+      "text": "Develop and maintain system architecture, including all piping, instrumentation, or process flow diagrams.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17736",
+      "text": "Evaluate subcontractors or subcontractor bids for quality, cost, and reliability.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 23,
+  "salary": 79920,
+  "demand": "Very High"
+}

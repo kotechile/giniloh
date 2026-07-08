@@ -1,0 +1,150 @@
+{
+  "code": "53-7011.00",
+  "title": "Conveyor Operators and Tenders",
+  "description": "Control or tend conveyors or conveyor systems that move materials or products to and from stockpiles, processing stations, departments, or vehicles. May control speed and routing of materials or products.",
+  "tasks": [
+    {
+      "id": "10748",
+      "text": "Inform supervisors of equipment malfunctions that need to be addressed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10750",
+      "text": "Observe conveyor operations and monitor lights, dials, and gauges to maintain specified operating levels and to detect equipment malfunctions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10747",
+      "text": "Record production data such as weights, types, quantities, and storage locations of materials, as well as equipment performance problems and downtime.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10757",
+      "text": "Load, unload, or adjust materials or products on conveyors by hand, by using lifts, hoists, and scoops, or by opening gates, chutes, or hoppers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10755",
+      "text": "Stop equipment or machinery and clear jams, using poles, bars, and hand tools, or remove damaged materials from conveyors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10760",
+      "text": "Distribute materials, supplies, and equipment to work stations, using lifts and trucks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21030",
+      "text": "Observe packages moving along conveyors to identify packages, detect defective packaging, and perform quality control.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10756",
+      "text": "Collect samples of materials or products, checking them to ensure conformance to specifications or sending them to laboratories for analysis.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10744",
+      "text": "Position deflector bars, gates, chutes, or spouts to divert flow of materials from one conveyor onto another conveyor.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10753",
+      "text": "Repair or replace equipment components or parts such as blades, rolls, and pumps.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10746",
+      "text": "Manipulate controls, levers, and valves to start pumps, auxiliary equipment, or conveyors, and to adjust equipment positions, speeds, timing, and material flows.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10745",
+      "text": "Weigh or measure materials and products, using scales or other measuring instruments, or read scales on conveyors that continually weigh products, to verify specified tonnages and prevent overloads.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10752",
+      "text": "Read production and delivery schedules, and confer with supervisors, to determine sorting and transfer procedures, arrangement of packages on pallets, and destinations of loaded pallets.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10764",
+      "text": "Press console buttons to deflect packages to predetermined accumulators or reject lines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10749",
+      "text": "Clean, sterilize, and maintain equipment, machinery, and work stations, using hand tools, shovels, brooms, chemicals, hoses, and lubricants.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10759",
+      "text": "Affix identifying information to materials or products, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10761",
+      "text": "Move, assemble, and connect hoses or nozzles to material hoppers, storage tanks, conveyor sections or chutes, and pumps.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10766",
+      "text": "Thread strapping through strapping tools and secure battens with strapping to form protective pallets around extrusions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10754",
+      "text": "Contact workers in work stations or other departments to request movement of materials, products, or machinery, or to notify them of incoming shipments and their estimated delivery times.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10765",
+      "text": "Join sections of conveyor frames at temporary working areas, and connect power units.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 42420,
+  "demand": "Low"
+}

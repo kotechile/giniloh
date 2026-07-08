@@ -1,0 +1,129 @@
+{
+  "code": "15-2051.01",
+  "title": "Business Intelligence Analysts",
+  "description": "Produce financial and market intelligence by querying data repositories and generating periodic reports. Devise methods for identifying data patterns and trends in available information sources.",
+  "tasks": [
+    {
+      "id": "16150",
+      "text": "Generate standard or custom reports summarizing business, financial, or economic data for review by executives, managers, clients, and other stakeholders.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16139",
+      "text": "Maintain or update business intelligence tools, databases, dashboards, systems, or methods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16140",
+      "text": "Manage timely flow of business intelligence information to users.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16134",
+      "text": "Provide technical support for existing reports, dashboards, or other tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16141",
+      "text": "Identify and analyze industry or geographic trends with business strategy implications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16142",
+      "text": "Document specifications for business intelligence or information technology reports, dashboards, or other outputs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16144",
+      "text": "Create business intelligence tools or systems, including design of related databases, spreadsheets, or outputs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16146",
+      "text": "Collect business intelligence data from available industry reports, public information, field reports, or purchased sources.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16143",
+      "text": "Disseminate information regarding tools, reports, or metadata enhancements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16145",
+      "text": "Conduct or coordinate tests to ensure that intelligence is consistent with defined needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16149",
+      "text": "Synthesize current business intelligence or trend data to support recommendations for action.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16148",
+      "text": "Analyze competitive market strategies through analysis of related product, market, or share trends.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16136",
+      "text": "Identify or monitor current and potential customers, using business intelligence tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16138",
+      "text": "Communicate with customers, competitors, suppliers, professional organizations, or others to stay abreast of industry or business trends.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16135",
+      "text": "Maintain library of model documents, templates, or other reusable knowledge assets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16137",
+      "text": "Create or review technical design documentation to ensure the accurate development of reporting solutions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16147",
+      "text": "Analyze technology trends to identify markets for future product development or to improve sales of existing products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 29,
+  "salary": 120230,
+  "demand": "High"
+}

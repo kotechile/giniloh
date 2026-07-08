@@ -1,0 +1,94 @@
+{
+  "code": "11-3131.00",
+  "title": "Training and Development Managers",
+  "description": "Plan, direct, or coordinate the training and development activities and staff of an organization.",
+  "tasks": [
+    {
+      "id": "1015",
+      "text": "Analyze training needs to develop new training programs or modify and improve existing programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1009",
+      "text": "Evaluate instructor performance and the effectiveness of training programs, providing recommendations for improvement.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1014",
+      "text": "Plan, develop, and provide training and staff development programs, using knowledge of the effectiveness of methods such as classroom training, demonstrations, on-the-job training, meetings, conferences, and workshops.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1012",
+      "text": "Confer with management and conduct surveys to identify training needs based on projected production processes, changes, and other factors.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1008",
+      "text": "Conduct orientation sessions and arrange on-the-job training for new hires.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1017",
+      "text": "Train instructors and supervisors in techniques and skills for training and dealing with employees.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1013",
+      "text": "Develop and organize training manuals, multimedia visual aids, and other educational materials.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1019",
+      "text": "Prepare training budget for department or organization.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1010",
+      "text": "Develop testing and evaluation procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1011",
+      "text": "Conduct or arrange for ongoing technical training and personal development classes for staff members.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1016",
+      "text": "Review and evaluate training and apprenticeship programs for compliance with government standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1018",
+      "text": "Coordinate established courses with technical and professional courses provided by community schools, and designate training procedures.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 17,
+  "salary": 133000,
+  "demand": "Medium"
+}

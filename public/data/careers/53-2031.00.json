@@ -1,0 +1,185 @@
+{
+  "code": "53-2031.00",
+  "title": "Flight Attendants",
+  "description": "Monitor safety of the aircraft cabin. Provide services to airline passengers, explain safety information, serve food and beverages, and respond to emergency incidents.",
+  "tasks": [
+    {
+      "id": "9639",
+      "text": "Verify that first aid kits and other emergency equipment, including fire extinguishers and oxygen bottles, are in working order.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9637",
+      "text": "Announce and demonstrate safety and emergency procedures, such as the use of oxygen masks, seat belts, and life jackets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23942",
+      "text": "Monitor passenger behavior to identify threats to the safety of the crew and other passengers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9638",
+      "text": "Walk aisles of planes to verify that passengers have complied with federal regulations prior to takeoffs and landings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9636",
+      "text": "Direct and assist passengers in emergency procedures, such as evacuating a plane following an emergency landing.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9642",
+      "text": "Prepare passengers and aircraft for landing, following procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9640",
+      "text": "Administer first aid to passengers in distress.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9643",
+      "text": "Determine special assistance needs of passengers, such as small children, the elderly, or persons with disabilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9641",
+      "text": "Attend preflight briefings concerning weather, altitudes, routes, emergency procedures, crew coordination, lengths of flights, food and beverage services offered, and numbers of passengers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9645",
+      "text": "Reassure passengers when situations, such as turbulence, are encountered.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9644",
+      "text": "Check to ensure that food, beverages, blankets, reading material, emergency equipment, and other supplies are aboard and are in adequate supply.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9656",
+      "text": "Prepare reports showing places of departure and destination, passenger ticket numbers, meal and beverage inventories, the conditions of cabin equipment, and any problems encountered by passengers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9646",
+      "text": "Announce flight delays and descent preparations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9651",
+      "text": "Greet passengers boarding aircraft and direct them to assigned seats.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9649",
+      "text": "Assist passengers entering or disembarking the aircraft.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9652",
+      "text": "Conduct periodic trips through the cabin to ensure passenger comfort and to distribute reading material, headphones, pillows, playing cards, and blankets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9650",
+      "text": "Inspect and clean cabins, checking for any problems and making sure that cabins are in order.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9654",
+      "text": "Operate audio and video systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9648",
+      "text": "Answer passengers' questions about flights, aircraft, weather, travel routes and services, arrival times, or schedules.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9657",
+      "text": "Collect money for meals and beverages.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9658",
+      "text": "Heat and serve prepared foods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9647",
+      "text": "Inspect passenger tickets to verify information and to obtain destination information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9655",
+      "text": "Assist passengers in placing carry-on luggage in overhead, garment, or under-seat storage.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9653",
+      "text": "Take inventory of headsets, alcoholic beverages, and money collected.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9659",
+      "text": "Sell alcoholic beverages to passengers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 63580,
+  "demand": "High"
+}

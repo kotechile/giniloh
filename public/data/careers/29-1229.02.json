@@ -1,0 +1,108 @@
+{
+  "code": "29-1229.02",
+  "title": "Hospitalists",
+  "description": "Provide inpatient care predominantly in settings such as medical wards, acute care units, intensive care units, rehabilitation centers, or emergency rooms. Manage and coordinate patient care throughout treatment.",
+  "tasks": [
+    {
+      "id": "17106",
+      "text": "Diagnose, treat, or provide continuous care to hospital inpatients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17102",
+      "text": "Prescribe medications or treatment regimens to hospital inpatients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17103",
+      "text": "Order or interpret the results of tests such as laboratory tests and radiographs (x-rays).",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17107",
+      "text": "Admit patients for hospital stays.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17105",
+      "text": "Conduct discharge planning and discharge patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17099",
+      "text": "Write patient discharge summaries and send them to primary care physicians.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17096",
+      "text": "Refer patients to medical specialists, social services, or other professionals as appropriate.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17098",
+      "text": "Direct, coordinate, or supervise the patient care activities of nursing or support staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17104",
+      "text": "Attend inpatient consultations in areas of specialty.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17108",
+      "text": "Communicate with patients' primary care physicians upon admission, when treatment plans change, or at discharge to maintain continuity and quality of care.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17097",
+      "text": "Participate in continuing education activities to maintain or enhance knowledge and skills.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23920",
+      "text": "Direct or support quality improvement projects or safety programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17100",
+      "text": "Direct the operations of short stay or specialty units.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17101",
+      "text": "Train or supervise medical students, residents, or other health professionals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 7,
+  "salary": 265930,
+  "demand": "Very High"
+}

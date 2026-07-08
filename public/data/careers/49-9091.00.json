@@ -1,0 +1,136 @@
+{
+  "code": "49-9091.00",
+  "title": "Coin, Vending, and Amusement Machine Servicers and Repairers",
+  "description": "Install, service, adjust, or repair coin, vending, or amusement machines including video games, juke boxes, pinball machines, or slot machines.",
+  "tasks": [
+    {
+      "id": "13835",
+      "text": "Fill machines with products, ingredients, money, and other supplies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13839",
+      "text": "Inspect machines and meters to determine causes of malfunctions and fix minor problems such as jammed bills or stuck products.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13840",
+      "text": "Test machines to determine proper functioning.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13846",
+      "text": "Replace malfunctioning parts, such as worn magnetic heads on automatic teller machine (ATM) card readers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13845",
+      "text": "Maintain records of machine maintenance and repair.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "13842",
+      "text": "Clean and oil machine parts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13848",
+      "text": "Order parts needed for machine repairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13847",
+      "text": "Adjust and repair coin, vending, or amusement machines and meters and replace defective mechanical and electrical parts, using hand tools, soldering irons, and diagrams.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13843",
+      "text": "Record transaction information on forms or logs, and notify designated personnel of discrepancies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13836",
+      "text": "Keep records of merchandise distributed and money collected.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "13837",
+      "text": "Collect coins and bills from machines, prepare invoices, and settle accounts with concessionaires.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13838",
+      "text": "Make service calls to maintain and repair machines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13844",
+      "text": "Adjust machine pressure gauges and thermostats.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13849",
+      "text": "Disassemble and assemble machines, according to specifications and using hand and power tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13841",
+      "text": "Contact other repair personnel or make arrangements for the removal of machines in cases where major repairs are required.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13852",
+      "text": "Transport machines to installation sites.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13851",
+      "text": "Refer to manuals and wiring diagrams to gather information needed to repair machines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13850",
+      "text": "Install machines, making the necessary water and electrical connections in compliance with codes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 56,
+  "salary": 47450,
+  "demand": "Medium"
+}

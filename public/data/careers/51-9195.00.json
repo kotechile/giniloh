@@ -1,0 +1,178 @@
+{
+  "code": "51-9195.00",
+  "title": "Molders, Shapers, and Casters, Except Metal and Plastic",
+  "description": "Mold, shape, form, cast, or carve products such as food products, figurines, tile, pipes, and candles consisting of clay, glass, plaster, concrete, stone, or combinations of materials.",
+  "tasks": [
+    {
+      "id": "23666",
+      "text": "Read work orders or examine parts to determine parts or sections of products to be produced.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23667",
+      "text": "Trim or remove excess material, using scrapers, knives, or band saws.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23668",
+      "text": "Brush or spray mold surfaces with parting agents or insert paper into molds to ensure smoothness and prevent sticking or seepage.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23669",
+      "text": "Engrave or stamp identifying symbols, letters, or numbers on products.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23670",
+      "text": "Assemble, insert, and adjust wires, tubes, cores, fittings, rods, or patterns into molds, using hand tools and depth gauges.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23671",
+      "text": "Clean, finish, and lubricate molds and mold parts.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23672",
+      "text": "Separate models or patterns from molds and examine products for accuracy.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23673",
+      "text": "Set the proper operating temperature for each casting.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23674",
+      "text": "Load or stack filled molds in ovens, dryers, or curing boxes, or on storage racks or carts.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23675",
+      "text": "Align and assemble parts to produce completed products, using gauges and hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23676",
+      "text": "Operate and adjust controls of heating equipment to melt material or to cure, dry, or bake filled molds.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23677",
+      "text": "Select sizes and types of molds according to instructions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23678",
+      "text": "Patch broken edges or fractures, using clay or plaster.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23679",
+      "text": "Withdraw cores or other loose mold members after castings solidify.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23680",
+      "text": "Repair mold defects, such as cracks or broken edges, using patterns, mold boxes, or hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23681",
+      "text": "Measure and cut products to specified dimensions, using measuring and cutting instruments.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23682",
+      "text": "Smooth surfaces of molds, using scraping tools or sandpaper.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23683",
+      "text": "Measure ingredients and mix molding, casting material, or sealing compounds to prescribed consistencies, according to formulas.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23684",
+      "text": "Remove excess materials and level and smooth wet mold mixtures.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23687",
+      "text": "Verify dimensions of products, using measuring instruments, such as calipers, vernier gauges, or protractors.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23688",
+      "text": "Bore holes or cut grates, risers, or pouring spouts in molds, using power tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23690",
+      "text": "Tap or tilt molds to ensure uniform distribution of materials.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23691",
+      "text": "Construct or form molds for use in casting clay or plaster objects, using plaster, fiberglass, rubber, casting machines, patterns, or flasks.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23692",
+      "text": "Pour, pack, spread, or press plaster, concrete, or other materials into or around models or molds.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 46170,
+  "demand": "Medium"
+}

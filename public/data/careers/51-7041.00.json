@@ -1,0 +1,164 @@
+{
+  "code": "51-7041.00",
+  "title": "Sawing Machine Setters, Operators, and Tenders, Wood",
+  "description": "Set up, operate, or tend wood sawing machines. May operate computer numerically controlled (CNC) equipment. Includes lead sawyers.",
+  "tasks": [
+    {
+      "id": "12251",
+      "text": "Inspect and measure workpieces to mark for cuts and to verify the accuracy of cuts, using rulers, squares, or caliper rules.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12250",
+      "text": "Adjust saw blades, using wrenches and rulers, or by turning handwheels or pressing pedals, levers, or panel buttons.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12256",
+      "text": "Mount and bolt sawing blades or attachments to machine shafts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12253",
+      "text": "Set up, operate, or tend saws or machines that cut or trim wood to specified dimensions, such as circular saws, band saws, multiple-blade sawing machines, scroll saws, ripsaws, or crozer machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12254",
+      "text": "Inspect stock for imperfections or to estimate grades or qualities of stock or workpieces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12257",
+      "text": "Monitor sawing machines, adjusting speed and tension and clearing jams to ensure proper operation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12261",
+      "text": "Sharpen blades, or replace defective or worn blades or bands, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12259",
+      "text": "Guide workpieces against saws, saw over workpieces by hand, or operate automatic feeding devices to guide cuts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12264",
+      "text": "Clear machine jams, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12263",
+      "text": "Lubricate or clean machines, using wrenches, grease guns, or solvents.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12260",
+      "text": "Adjust bolts, clamps, stops, guides, or table angles or heights, using hand tools.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12252",
+      "text": "Examine logs or lumber to plan the best cuts.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12269",
+      "text": "Trim lumber to straighten rough edges or remove defects, using circular saws.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12262",
+      "text": "Count, sort, or stack finished workpieces.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12270",
+      "text": "Position and clamp stock on tables, conveyors, or carriages, using hoists, guides, stops, dogs, wedges, or wrenches.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12266",
+      "text": "Measure and mark stock for cuts.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12255",
+      "text": "Operate panelboards of saw or conveyor systems to move stock through processes or to cut stock to specified dimensions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12267",
+      "text": "Examine blueprints, drawings, work orders, or patterns to determine equipment set-up or selection details, procedures to be used, or dimensions of final products.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12258",
+      "text": "Select saw blades, types or grades of stock, or cutting procedures to be used, according to work orders or supervisors' instructions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12271",
+      "text": "Cut grooves, bevels, or miters, saw curved or irregular designs, and sever or shape metals, according to specifications or work orders.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12272",
+      "text": "Unclamp and remove finished workpieces from tables.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12265",
+      "text": "Dispose of waste material after completing work assignments.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 39,
+  "salary": 42770,
+  "demand": "Medium"
+}

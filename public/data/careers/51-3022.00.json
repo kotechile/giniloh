@@ -1,0 +1,94 @@
+{
+  "code": "51-3022.00",
+  "title": "Meat, Poultry, and Fish Cutters and Trimmers",
+  "description": "Use hands or hand tools to perform routine cutting and trimming of meat, poultry, and seafood.",
+  "tasks": [
+    {
+      "id": "8795",
+      "text": "Use knives, cleavers, meat saws, bandsaws, or other equipment to perform meat cutting and trimming.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8804",
+      "text": "Weigh meats and tag containers for weight and contents.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8799",
+      "text": "Inspect meat products for defects, bruises or blemishes and remove them along with any excess fat.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8797",
+      "text": "Cut and trim meat to prepare for packing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8803",
+      "text": "Separate meats and byproducts into specified containers and seal containers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8801",
+      "text": "Process primal parts into cuts that are ready for retail use.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8807",
+      "text": "Prepare ready-to-heat foods by filleting meat or fish or cutting it into bite-sized pieces, preparing and adding vegetables or applying sauces or breading.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8796",
+      "text": "Clean, trim, slice, and section carcasses for future processing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8798",
+      "text": "Remove parts, such as skin, feathers, scales or bones, from carcass.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8802",
+      "text": "Obtain and distribute specified meat or carcass.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8800",
+      "text": "Produce hamburger meat and meat trimmings.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8805",
+      "text": "Clean and salt hides.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 46,
+  "salary": 38300,
+  "demand": "High"
+}

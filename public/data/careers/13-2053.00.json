@@ -1,0 +1,59 @@
+{
+  "code": "13-2053.00",
+  "title": "Insurance Underwriters",
+  "description": "Review individual applications for insurance to evaluate degree of risk involved and determine acceptance of applications.",
+  "tasks": [
+    {
+      "id": "21045",
+      "text": "Examine documents to determine degree of risk from factors such as applicant health, financial standing and value, and condition of property.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1261",
+      "text": "Decline excessive risks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1262",
+      "text": "Write to field representatives, medical personnel, or others to obtain further information, quote rates, or explain company underwriting policies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1263",
+      "text": "Evaluate possibility of losses due to catastrophe or excessive insurance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1265",
+      "text": "Review company records to determine amount of insurance in force on single risk or group of closely related risks.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "1264",
+      "text": "Decrease value of policy when risk is substandard and specify applicable endorsements or apply rating to ensure safe, profitable distribution of risks, using reference materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1266",
+      "text": "Authorize reinsurance of policy when risk is high.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 43,
+  "salary": 81370,
+  "demand": "High"
+}

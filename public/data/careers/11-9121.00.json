@@ -1,0 +1,122 @@
+{
+  "code": "11-9121.00",
+  "title": "Natural Sciences Managers",
+  "description": "Plan, direct, or coordinate activities in such fields as life sciences, physical sciences, mathematics, statistics, and research and development in these fields.",
+  "tasks": [
+    {
+      "id": "7209",
+      "text": "Hire, supervise, or evaluate engineers, technicians, researchers, or other staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7207",
+      "text": "Design or coordinate successive phases of problem analysis, solution proposals, or testing.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7205",
+      "text": "Plan or direct research, development, or production activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7208",
+      "text": "Review project activities and prepare and review research, testing, or operational reports.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7203",
+      "text": "Confer with scientists, engineers, regulators, or others to plan or review projects or to provide technical assistance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7204",
+      "text": "Develop client relationships and communicate with clients to explain proposals, present research findings, establish specifications, or discuss project status.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7210",
+      "text": "Determine scientific or technical goals within broad outlines provided by top management and make detailed plans to accomplish these goals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7206",
+      "text": "Prepare project proposals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7211",
+      "text": "Develop or implement policies, standards, or procedures for the architectural, scientific, or technical work performed to ensure regulatory compliance or operations enhancement.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7215",
+      "text": "Recruit personnel or oversee the development or maintenance of staff competence.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7217",
+      "text": "Prepare and administer budgets, approve and review expenditures, and prepare financial reports.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7214",
+      "text": "Conduct own research in field of expertise.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7212",
+      "text": "Develop innovative technology or train staff for its implementation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7218",
+      "text": "Make presentations at professional meetings to further knowledge in the field.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7213",
+      "text": "Provide for stewardship of plant or animal resources or habitats, studying land use, monitoring animal populations, or providing shelter, resources, or medical treatment for animals.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7216",
+      "text": "Advise or assist in obtaining patents or meeting other legal requirements.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 16,
+  "salary": 167220,
+  "demand": "High"
+}

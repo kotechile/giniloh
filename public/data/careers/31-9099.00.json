@@ -1,0 +1,17 @@
+{
+  "code": "31-9099.00",
+  "title": "Healthcare Support Workers, All Other",
+  "description": "All healthcare support workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Healthcare Support Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 48430,
+  "demand": "High"
+}

@@ -1,0 +1,108 @@
+{
+  "code": "51-7031.00",
+  "title": "Model Makers, Wood",
+  "description": "Construct full-size and scale wooden precision models of products. Includes wood jig builders and loft workers.",
+  "tasks": [
+    {
+      "id": "14273",
+      "text": "Read blueprints, drawings, or written specifications, and consult with designers to determine sizes and shapes of patterns and required machine setups.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14275",
+      "text": "Fit, fasten, and assemble wood parts together to form patterns, models, or sections, using glue, nails, dowels, bolts, screws, and other fasteners.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14272",
+      "text": "Verify dimensions and contours of models during hand-forming processes, using templates and measuring devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14276",
+      "text": "Trim, smooth, and shape surfaces, and plane, shave, file, scrape, and sand models to attain specified shapes, using hand tools.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14280",
+      "text": "Plan, lay out, and draw outlines of units, sectional patterns, or full-scale mock-ups of products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14278",
+      "text": "Construct wooden models, patterns, templates, full scale mock-ups, and molds for parts of products and production tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14277",
+      "text": "Select wooden stock, determine layouts, and mark layouts of parts on stock, using precision equipment such as scribers, squares, and protractors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14279",
+      "text": "Mark identifying information on patterns, parts, and templates to indicate assembly methods and details.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14274",
+      "text": "Set up, operate, and adjust a variety of woodworking machines such as bandsaws and planers to cut and shape sections, parts, and patterns, according to specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14282",
+      "text": "Maintain pattern records for reference.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "14283",
+      "text": "Build jigs that can be used as guides for assembling oversized or special types of box shooks.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14284",
+      "text": "Issue patterns to designated machine operators.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14281",
+      "text": "Fabricate work aids such as scrapers or templates.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14285",
+      "text": "Finish patterns or models with protective or decorative coatings such as shellac, lacquer, or wax.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 32,
+  "salary": 56550,
+  "demand": "Low"
+}

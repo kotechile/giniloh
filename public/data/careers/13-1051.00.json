@@ -1,0 +1,108 @@
+{
+  "code": "13-1051.00",
+  "title": "Cost Estimators",
+  "description": "Prepare cost estimates for product manufacturing, construction projects, or services to aid management in bidding on or determining price of product or service. May specialize according to particular service performed or type of product manufactured.",
+  "tasks": [
+    {
+      "id": "80",
+      "text": "Analyze blueprints and other documentation to prepare time, cost, materials, and labor estimates.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "83",
+      "text": "Confer with engineers, architects, owners, contractors, and subcontractors on changes and adjustments to cost estimates.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20846",
+      "text": "Collect historical cost data to estimate costs for current or future products.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "81",
+      "text": "Assess cost effectiveness of products, projects or services, tracking actual costs relative to bids as the project develops.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "82",
+      "text": "Consult with clients, vendors, personnel in other departments, or construction foremen to discuss and formulate estimates and resolve issues.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "90",
+      "text": "Establish and maintain tendering process, and conduct negotiations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "85",
+      "text": "Prepare estimates for use in selecting vendors or subcontractors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "84",
+      "text": "Prepare estimates used by management for purposes such as planning, organizing, and scheduling work.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "89",
+      "text": "Set up cost monitoring and reporting systems and procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "86",
+      "text": "Review material and labor requirements to decide whether it is more cost-effective to produce or purchase components.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "87",
+      "text": "Prepare cost and expenditure statements and other necessary documentation at regular intervals for the duration of the project.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "91",
+      "text": "Conduct special studies to develop and establish standard hour and related cost data or to reduce cost.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "92",
+      "text": "Visit site and record information about access, drainage and topography, and availability of utility services.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "88",
+      "text": "Prepare and maintain a directory of suppliers, contractors and subcontractors.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 29,
+  "salary": 78740,
+  "demand": "High"
+}

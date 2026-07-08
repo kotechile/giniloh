@@ -1,0 +1,164 @@
+{
+  "code": "51-6052.00",
+  "title": "Tailors, Dressmakers, and Custom Sewers",
+  "description": "Design, make, alter, repair, or fit garments.",
+  "tasks": [
+    {
+      "id": "12177",
+      "text": "Measure parts, such as sleeves or pant legs, and mark or pin-fold alteration lines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12181",
+      "text": "Remove stitches from garments to be altered, using rippers or razor blades.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12176",
+      "text": "Sew garments, using needles and thread or sewing machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12179",
+      "text": "Let out or take in seams in suits and other garments to improve fit.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12190",
+      "text": "Measure customers, using tape measures, and record measurements.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "12175",
+      "text": "Fit and study garments on customers to determine required alterations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12187",
+      "text": "Trim excess material, using scissors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12180",
+      "text": "Assemble garment parts and join parts with basting stitches, using needles and thread or sewing machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12189",
+      "text": "Make garment style changes, such as tapering pant legs, narrowing lapels, and adding or removing padding.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12185",
+      "text": "Maintain garment drape and proportions as alterations are performed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12178",
+      "text": "Take up or let down hems to shorten or lengthen garment parts, such as sleeves.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12192",
+      "text": "Repair or replace defective garment parts, such as pockets, zippers, snaps, buttons, and linings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12186",
+      "text": "Press garments, using hand irons or pressing machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12184",
+      "text": "Fit, alter, repair, and make made-to-measure clothing, according to customers' and clothing manufacturers' specifications and fit, and applying principles of garment design, construction, and styling.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12191",
+      "text": "Estimate how much a garment will cost to make, based on factors such as time and material requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12194",
+      "text": "Position patterns of garment parts on fabric, and cut fabric along outlines, using scissors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12182",
+      "text": "Record required alterations and instructions on tags, and attach them to garments.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "12193",
+      "text": "Confer with customers to determine types of material and garment styles desired.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12183",
+      "text": "Examine tags on garments to determine alterations that are needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12188",
+      "text": "Develop, copy, or adapt designs for garments, and design patterns to fit measurements, applying knowledge of garment design, construction, styling, and fabric.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12196",
+      "text": "Put in padding and shaping materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12195",
+      "text": "Sew buttonholes and attach buttons to finish garments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 45,
+  "salary": 41640,
+  "demand": "Low"
+}

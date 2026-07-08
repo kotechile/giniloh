@@ -1,0 +1,17 @@
+{
+  "code": "51-2099.00",
+  "title": "Assemblers and Fabricators, All Other",
+  "description": "All assemblers and fabricators not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Assemblers and Fabricators, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 46265,
+  "demand": "Very High"
+}

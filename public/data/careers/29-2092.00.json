@@ -1,0 +1,87 @@
+{
+  "code": "29-2092.00",
+  "title": "Hearing Aid Specialists",
+  "description": "Select and fit hearing aids for customers. Administer and interpret tests of hearing. Assess hearing instrument efficacy. Take ear impressions and prepare, design, and modify ear molds.",
+  "tasks": [
+    {
+      "id": "17441",
+      "text": "Train clients to use hearing aids or other augmentative communication devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21189",
+      "text": "Counsel patients and families on communication strategies and the effects of hearing loss.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17439",
+      "text": "Select and administer tests to evaluate hearing or related disabilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17440",
+      "text": "Administer basic hearing tests including air conduction, bone conduction, or speech audiometry tests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17443",
+      "text": "Maintain or repair hearing aids or other communication devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17446",
+      "text": "Perform basic screening procedures, such as pure tone screening, otoacoustic screening, immittance screening, and screening of ear canal status using otoscope.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17442",
+      "text": "Create or modify impressions for earmolds and hearing aid shells.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17448",
+      "text": "Read current literature, talk with colleagues, and participate in professional organizations or conferences to keep abreast of developments in audiology.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17444",
+      "text": "Demonstrate assistive listening devices (ALDs) to clients.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17447",
+      "text": "Assist audiologists in performing aural procedures, such as real ear measurements, speech audiometry, auditory brainstem responses, electronystagmography, and cochlear implant mapping.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17445",
+      "text": "Diagnose and treat hearing or related disabilities under the direction of an audiologist.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 27,
+  "salary": 65160,
+  "demand": "Low"
+}

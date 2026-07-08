@@ -1,0 +1,17 @@
+{
+  "code": "49-9099.00",
+  "title": "Installation, Maintenance, and Repair Workers, All Other",
+  "description": "All installation, maintenance, and repair workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Installation, Maintenance, and Repair Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 49230,
+  "demand": "High"
+}

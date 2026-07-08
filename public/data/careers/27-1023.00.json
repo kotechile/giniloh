@@ -1,0 +1,115 @@
+{
+  "code": "27-1023.00",
+  "title": "Floral Designers",
+  "description": "Design, cut, and arrange live, dried, or artificial flowers and foliage.",
+  "tasks": [
+    {
+      "id": "1719",
+      "text": "Confer with clients regarding price and type of arrangement desired and the date, time, and place of delivery.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1722",
+      "text": "Select flora and foliage for arrangements, working with numerous combinations to synthesize and develop new creations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1723",
+      "text": "Order and purchase flowers and supplies from wholesalers and growers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20751",
+      "text": "Deliver arrangements to customers, or oversee employees responsible for deliveries.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1720",
+      "text": "Plan arrangement according to client's requirements, using knowledge of design and properties of materials, or select appropriate standard design pattern.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1721",
+      "text": "Water plants, and cut, condition, and clean flowers and foliage for storage.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1725",
+      "text": "Trim material and arrange bouquets, wreaths, terrariums, and other items, using trimmers, shapers, wire, pins, floral tape, foam, and other materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1724",
+      "text": "Wrap and price completed arrangements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1726",
+      "text": "Perform office and retail service duties, such as keeping financial records, serving customers, answering telephones, selling giftware items, and receiving payment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1730",
+      "text": "Unpack stock as it comes into the shop.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1731",
+      "text": "Create and change in-store and window displays, designs, and looks to enhance a shop's image.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1727",
+      "text": "Inform customers about the care, maintenance, and handling of various flowers and foliage, indoor plants, and other items.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1729",
+      "text": "Perform general cleaning duties in the store to ensure the shop is clean and tidy.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1728",
+      "text": "Decorate, or supervise the decoration of, buildings, halls, churches, or other facilities for parties, weddings and other occasions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1732",
+      "text": "Conduct classes or demonstrations, or train other workers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 20,
+  "salary": 37360,
+  "demand": "Medium"
+}

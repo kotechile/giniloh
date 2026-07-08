@@ -1,0 +1,129 @@
+{
+  "code": "43-4021.00",
+  "title": "Correspondence Clerks",
+  "description": "Compose letters or electronic correspondence in reply to requests for merchandise, damage claims, credit and other information, delinquent accounts, incorrect billings, or unsatisfactory services. Duties may include gathering data to formulate reply and preparing correspondence.",
+  "tasks": [
+    {
+      "id": "11276",
+      "text": "Maintain files and control records to show correspondence activities.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11273",
+      "text": "Read incoming correspondence to ascertain nature of writers' concerns and to determine disposition of correspondence.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11277",
+      "text": "Gather records pertinent to specific problems, review them for completeness and accuracy, and attach records to correspondence as necessary.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11270",
+      "text": "Prepare documents and correspondence, such as damage claims, credit and billing inquiries, invoices, and service complaints.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11271",
+      "text": "Compile data from records to prepare periodic reports.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11280",
+      "text": "Compose letters in reply to correspondence concerning such items as requests for merchandise, damage claims, credit information requests, delinquent accounts, incorrect billing, or unsatisfactory service.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11279",
+      "text": "Route correspondence to other departments for reply.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11281",
+      "text": "Ensure that money collected is properly recorded and secured.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11289",
+      "text": "Process orders for goods requested in correspondence.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11272",
+      "text": "Present clear and concise explanations of governing rules and regulations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11275",
+      "text": "Review correspondence for format and typographical accuracy, assemble the information into a prescribed form with the correct number of copies, and submit it to an authorized official for signature.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11283",
+      "text": "Compute costs of records furnished to requesters, and write letters to obtain payment.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11290",
+      "text": "Compile data pertinent to manufacture of special products for customers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11274",
+      "text": "Type acknowledgment letters to persons sending correspondence.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11278",
+      "text": "Complete form letters in response to requests or problems identified by correspondence.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11287",
+      "text": "Confer with company personnel regarding feasibility of complying with writers' requests.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11285",
+      "text": "Prepare records for shipment by certified mail.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    }
+  ],
+  "risk_score": 65,
+  "salary": 46800,
+  "demand": "Low"
+}

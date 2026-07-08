@@ -1,0 +1,150 @@
+{
+  "code": "23-1022.00",
+  "title": "Arbitrators, Mediators, and Conciliators",
+  "description": "Facilitate negotiation and conflict resolution through dialogue. Resolve conflicts outside of the court system by mutual consent of parties involved.",
+  "tasks": [
+    {
+      "id": "12999",
+      "text": "Prepare written opinions or decisions regarding cases.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20238",
+      "text": "Apply relevant laws, regulations, policies, or precedents to reach conclusions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20239",
+      "text": "Conduct hearings to obtain information or evidence relative to disposition of claims.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20240",
+      "text": "Determine extent of liability according to evidence, laws, or administrative or judicial precedents.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13001",
+      "text": "Rule on exceptions, motions, or admissibility of evidence.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12993",
+      "text": "Confer with disputants to clarify issues, identify underlying concerns, and develop an understanding of their respective needs and interests.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12994",
+      "text": "Use mediation techniques to facilitate communication between disputants, to further parties' understanding of different perspectives, and to guide parties toward mutual agreement.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13008",
+      "text": "Conduct initial meetings with disputants to outline the arbitration process, settle procedural matters, such as fees, or determine details, such as witness numbers or time requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13003",
+      "text": "Evaluate information from documents, such as claim applications, birth or death certificates, or physician or employer records.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "13005",
+      "text": "Research laws, regulations, policies, or precedent decisions to prepare for hearings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13010",
+      "text": "Issue subpoenas or administer oaths to prepare for formal hearings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12995",
+      "text": "Set up appointments for parties to meet for mediation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13007",
+      "text": "Recommend acceptance or rejection of compromise settlement offers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12996",
+      "text": "Prepare settlement agreements for disputants to sign.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13011",
+      "text": "Authorize payment of valid claims.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13004",
+      "text": "Interview claimants, agents, or witnesses to obtain information about disputed issues.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13012",
+      "text": "Conduct studies of appeals procedures to ensure adherence to legal requirements or to facilitate disposition of cases.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19807",
+      "text": "Specialize in the negotiation and resolution of environmental conflicts involving issues such as natural resource allocation or regional development planning.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12997",
+      "text": "Organize or deliver public presentations about mediation to organizations, such as community agencies or schools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13009",
+      "text": "Participate in court proceedings.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 40,
+  "salary": 75530,
+  "demand": "Low"
+}

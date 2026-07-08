@@ -1,0 +1,164 @@
+{
+  "code": "51-7021.00",
+  "title": "Furniture Finishers",
+  "description": "Shape, finish, and refinish damaged, worn, or used furniture or new high-grade furniture to specified color or finish.",
+  "tasks": [
+    {
+      "id": "14251",
+      "text": "Brush, spray, or hand-rub finishing ingredients, such as paint, oil, stain, or wax, onto and into wood grain and apply lacquer or other sealers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14254",
+      "text": "Fill and smooth cracks or depressions, remove marks and imperfections, and repair broken parts, using plastic or wood putty, glue, nails, or screws.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14252",
+      "text": "Smooth, shape, and touch up surfaces to prepare them for finishing, using sandpaper, pumice stones, steel wool, chisels, sanders, or grinders.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14263",
+      "text": "Remove accessories prior to finishing, and mask areas that should not be exposed to finishing processes or substances.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14259",
+      "text": "Remove old finishes and damaged or deteriorated parts, using hand tools, stripping tools, sandpaper, steel wool, abrasives, solvents, or dip baths.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14264",
+      "text": "Treat warped or stained surfaces to restore original contours and colors.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14253",
+      "text": "Select appropriate finishing ingredients such as paint, stain, lacquer, shellac, or varnish, depending on factors such as wood hardness and surface type.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14250",
+      "text": "Mix finish ingredients to obtain desired colors or shades.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14267",
+      "text": "Remove excess solvent, using cloths soaked in paint thinner.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14256",
+      "text": "Examine furniture to determine the extent of damage or deterioration, and to decide on the best method for repair or restoration.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14255",
+      "text": "Distress surfaces with woodworking tools or abrasives before staining to create an antique appearance, or rub surfaces to bring out highlights and shadings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14268",
+      "text": "Stencil, gild, emboss, mark, or paint designs or borders to reproduce the original appearance of restored pieces, or to decorate new pieces.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14261",
+      "text": "Disassemble items to prepare them for finishing, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14265",
+      "text": "Confer with customers to determine furniture colors or finishes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14258",
+      "text": "Recommend woods, colors, finishes, and furniture styles, using knowledge of wood products, fashions, and styles.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14262",
+      "text": "Wash surfaces to prepare them for finish application.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14260",
+      "text": "Follow blueprints to produce specific designs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14257",
+      "text": "Paint metal surfaces electrostatically, or by using a spray gun or other painting equipment.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14266",
+      "text": "Replace or refurbish upholstery of items, using tacks, adhesives, softeners, solvents, stains, or polish.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14269",
+      "text": "Design, create, and decorate entire pieces or specific parts of furniture, such as draws for cabinets.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14271",
+      "text": "Spread graining ink over metal portions of furniture to simulate wood-grain finish.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14270",
+      "text": "Brush bleaching agents on wood surfaces to restore natural color.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 27,
+  "salary": 44540,
+  "demand": "Low"
+}

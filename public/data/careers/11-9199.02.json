@@ -1,0 +1,213 @@
+{
+  "code": "11-9199.02",
+  "title": "Compliance Managers",
+  "description": "Plan, direct, or coordinate activities of an organization to ensure compliance with ethical or regulatory standards.",
+  "tasks": [
+    {
+      "id": "15645",
+      "text": "Report violations of compliance or regulatory standards to duly authorized enforcement agencies as appropriate or required.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15650",
+      "text": "Identify compliance issues that require follow-up or investigation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21088",
+      "text": "Discuss emerging compliance issues to ensure that management and employees are informed about compliance reporting systems, policies, and practices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15653",
+      "text": "File appropriate compliance reports with regulatory agencies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15638",
+      "text": "Maintain documentation of compliance activities, such as complaints received or investigation outcomes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15639",
+      "text": "Consult with corporate attorneys as necessary to address difficult legal compliance issues.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15656",
+      "text": "Conduct or direct the internal investigation of compliance issues.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15644",
+      "text": "Provide employee training on compliance related topics, policies, or procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15637",
+      "text": "Serve as a confidential point of contact for employees to communicate with management, seek clarification on issues or dilemmas, or report irregularities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21089",
+      "text": "Verify that all regulatory policies and procedures have been documented, implemented, and communicated.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15652",
+      "text": "Disseminate written policies and procedures related to compliance activities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15647",
+      "text": "Prepare management reports regarding compliance operations and progress.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15655",
+      "text": "Conduct periodic internal reviews or audits to ensure that compliance procedures are followed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21090",
+      "text": "Keep informed regarding pending industry changes, trends, or best practices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15649",
+      "text": "Monitor compliance systems to ensure their effectiveness.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21091",
+      "text": "Direct the development or implementation of policies and procedures related to compliance throughout an organization.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15642",
+      "text": "Advise internal management or business partners on the implementation or operation of compliance programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15654",
+      "text": "Design or implement improvements in communication, monitoring, or enforcement of compliance standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15646",
+      "text": "Provide assistance to internal or external auditors in compliance reviews.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15641",
+      "text": "Collaborate with human resources departments to ensure the implementation of consistent disciplinary action strategies in cases of compliance standard violations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21092",
+      "text": "Develop risk management strategies based on assessment of product, compliance, or operational risks.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19533",
+      "text": "Advise technical professionals on the development or use of environmental compliance or reporting tools.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19534",
+      "text": "Conduct environmental audits to ensure adherence to environmental standards.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19537",
+      "text": "Evaluate testing procedures to meet the specifications of environmental monitoring programs.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19538",
+      "text": "Review or modify policies or operating guidelines to comply with changes to environmental standards or regulations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15643",
+      "text": "Review communications such as securities sales advertising to ensure there are no violations of standards or regulations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21093",
+      "text": "Oversee internal reporting systems, such as corporate compliance hotlines.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15636",
+      "text": "Verify that software technology is in place to adequately provide oversight and monitoring in all required areas.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19536",
+      "text": "Direct environmental programs, such as air or water compliance, aboveground or underground storage tanks, spill prevention or control, hazardous waste or materials management, solid waste recycling, medical waste management, indoor air quality, integrated pest management, employee training, or disaster preparedness.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 24,
+  "salary": 141900,
+  "demand": "Very High"
+}

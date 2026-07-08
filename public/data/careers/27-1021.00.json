@@ -1,0 +1,129 @@
+{
+  "code": "27-1021.00",
+  "title": "Commercial and Industrial Designers",
+  "description": "Design and develop manufactured products, such as cars, home appliances, and children's toys. Combine artistic talent with research on product use, marketing, and materials to create the most functional and appealing product design.",
+  "tasks": [
+    {
+      "id": "6896",
+      "text": "Prepare sketches of ideas, detailed drawings, illustrations, artwork, or blueprints, using drafting instruments, paints and brushes, or computer-aided design equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6898",
+      "text": "Modify and refine designs, using working models, to conform with customer specifications, production limitations, or changes in design trends.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6902",
+      "text": "Evaluate feasibility of design ideas, based on factors such as appearance, safety, function, serviceability, budget, production costs/methods, and market characteristics.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6900",
+      "text": "Confer with engineering, marketing, production, or sales departments, or with customers, to establish and evaluate design concepts for manufactured products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6901",
+      "text": "Present designs and reports to customers or design committees for approval and discuss need for modification.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6904",
+      "text": "Research production specifications, costs, production materials, and manufacturing methods and provide cost estimates and itemized production requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6897",
+      "text": "Direct and coordinate the fabrication of models or samples and the drafting of working drawings and specification sheets from sketches.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6909",
+      "text": "Investigate product characteristics such as the product's safety and handling qualities, its market appeal, how efficiently it can be produced, and ways of distributing, using, and maintaining it.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6906",
+      "text": "Develop manufacturing procedures and monitor the manufacture of their designs in a factory to improve operations and product quality.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6911",
+      "text": "Participate in new product planning or market research, including studying the potential need for new products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6903",
+      "text": "Read publications, attend showings, and study competing products and design styles and motifs to obtain perspective and generate design concepts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6908",
+      "text": "Fabricate models or samples in paper, wood, glass, fabric, plastic, metal, or other materials, using hand or power tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6910",
+      "text": "Develop industrial standards and regulatory guidelines.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6899",
+      "text": "Coordinate the look and function of product lines.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6907",
+      "text": "Supervise assistants' work throughout the design process.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6905",
+      "text": "Design graphic material for use as ornamentation, illustration, or advertising on manufactured materials and packaging or containers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6912",
+      "text": "Advise corporations on issues involving corporate image projects or problems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 9,
+  "salary": 83910,
+  "demand": "Medium"
+}

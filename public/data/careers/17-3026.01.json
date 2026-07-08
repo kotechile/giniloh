@@ -1,0 +1,185 @@
+{
+  "code": "17-3026.01",
+  "title": "Nanotechnology Engineering Technologists and Technicians",
+  "description": "Implement production processes and operate commercial-scale production equipment to produce, test, or modify materials, devices, or systems of unique molecular or macromolecular composition. Operate advanced microscopy equipment to manipulate nanoscale objects. Work under the supervision of nanoengineering staff.",
+  "tasks": [
+    {
+      "id": "22047",
+      "text": "Produce images or measurements, using tools or techniques such as atomic force microscopy, scanning electron microscopy, optical microscopy, particle size analysis, or zeta potential analysis.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22063",
+      "text": "Maintain accurate record or batch-record documentation of nanoproduction.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "22053",
+      "text": "Calibrate nanotechnology equipment, such as weighing, testing, or production equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22046",
+      "text": "Maintain work area according to cleanroom or other processing standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22049",
+      "text": "Repair nanotechnology processing or testing equipment or submit work orders for equipment repair.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22068",
+      "text": "Assist nanoscientists or engineers in processing or characterizing materials according to physical or chemical properties.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22048",
+      "text": "Collaborate with scientists or engineers to design or conduct experiments for the development of nanotechnology materials, components, devices, or systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22045",
+      "text": "Operate nanotechnology compounding, testing, processing, or production equipment in accordance with appropriate standard operating procedures, good manufacturing practices, hazardous material restrictions, or health and safety requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22054",
+      "text": "Monitor hazardous waste cleanup procedures to ensure proper application of nanocomposites or accomplishment of objectives.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22051",
+      "text": "Monitor equipment during operation to ensure adherence to specifications for characteristics such as pressure, temperature, or flow.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22050",
+      "text": "Measure or mix chemicals or compounds in accordance with detailed instructions or formulas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22056",
+      "text": "Inspect or measure thin films of carbon nanotubes, polymers, or inorganic coatings, using a variety of techniques or analytical tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22065",
+      "text": "Prepare capability data, training materials, or other documentation for transfer of processes to production.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22052",
+      "text": "Collect or compile nanotechnology research or engineering data.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22061",
+      "text": "Prepare detailed verbal or written presentations for scientists, engineers, project managers, or upper management.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22055",
+      "text": "Contribute written material or data for grant or patent applications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22060",
+      "text": "Implement new or enhanced methods or processes for the processing, testing, or manufacture of nanotechnology materials or products.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22058",
+      "text": "Develop or modify wet chemical or industrial laboratory experimental techniques for nanoscale use.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22069",
+      "text": "Assist nanoscientists or engineers in writing process specifications or documentation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22067",
+      "text": "Measure emission of nanodust or nanoparticles during nanocomposite or other nano-scale production processes, using systems such as aerosol detection systems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22062",
+      "text": "Perform functional tests of nano-enhanced assemblies, components, or systems, using equipment such as torque gauges or conductivity meters.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22057",
+      "text": "Compare the performance or environmental impact of nanomaterials by nanoparticle size, shape, or organization.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22059",
+      "text": "Process nanoparticles or nanostructures, using technologies such as ultraviolet radiation, microwave energy, or catalysis.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22064",
+      "text": "Assemble components, using techniques such as interference fitting, solvent bonding, adhesive bonding, heat sealing, or ultrasonic welding.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22066",
+      "text": "Analyze the life cycle of nanomaterials or nano-enabled products to determine environmental impact.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 66120,
+  "demand": "Medium"
+}

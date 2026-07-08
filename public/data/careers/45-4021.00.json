@@ -1,0 +1,136 @@
+{
+  "code": "45-4021.00",
+  "title": "Fallers",
+  "description": "Use axes or chainsaws to fell trees using knowledge of tree characteristics and cutting techniques to control direction of fall and minimize tree damage.",
+  "tasks": [
+    {
+      "id": "13484",
+      "text": "Stop saw engines, pull cutting bars from cuts, and run to safety as tree falls.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13485",
+      "text": "Appraise trees for certain characteristics, such as twist, rot, and heavy limb growth, and gauge amount and direction of lean, to determine how to control the direction of a tree's fall with the least damage.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13486",
+      "text": "Saw back-cuts, leaving sufficient sound wood to control direction of fall.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13487",
+      "text": "Clear brush from work areas and escape routes, and cut saplings and other trees from direction of falls, using axes, chainsaws, or bulldozers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13488",
+      "text": "Measure felled trees and cut them into specified log lengths, using chain saws and axes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13489",
+      "text": "Assess logs after cutting to ensure that the quality and length are correct.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13490",
+      "text": "Determine position, direction, and depth of cuts to be made, and placement of wedges or jacks.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13491",
+      "text": "Control the direction of a tree's fall by scoring cutting lines with axes, sawing undercuts along scored lines with chainsaws, knocking slabs from cuts with single-bit axes, and driving wedges.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13492",
+      "text": "Trim off the tops and limbs of trees, using chainsaws, delimbers, or axes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13493",
+      "text": "Select trees to be cut down, assessing factors such as site, terrain, and weather conditions before beginning work.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13494",
+      "text": "Maintain and repair chainsaws and other equipment, cleaning, oiling, and greasing equipment, and sharpening equipment properly.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13495",
+      "text": "Insert jacks or drive wedges behind saws to prevent binding of saws and to start trees falling.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13496",
+      "text": "Tag unsafe trees with high-visibility ribbons.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13497",
+      "text": "Secure steel cables or chains to logs for dragging by tractors or for pulling by cable yarding systems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13498",
+      "text": "Load logs or wood onto trucks, trailers, or railroad cars, by hand or using loaders or winches.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13499",
+      "text": "Mark logs for identification.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13500",
+      "text": "Work as a member of a team, rotating between chain saw operation and skidder operation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13501",
+      "text": "Place supporting limbs or poles under felled trees to avoid splitting undersides, and to prevent logs from rolling.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 36,
+  "salary": 52100,
+  "demand": "Low"
+}

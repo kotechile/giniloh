@@ -1,0 +1,150 @@
+{
+  "code": "49-9062.00",
+  "title": "Medical Equipment Repairers",
+  "description": "Test, adjust, or repair biomedical or electromedical equipment.",
+  "tasks": [
+    {
+      "id": "3066",
+      "text": "Test or calibrate components or equipment, following manufacturers' manuals and troubleshooting techniques, using hand tools, power tools, or measuring devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3065",
+      "text": "Perform preventive maintenance or service, such as cleaning, lubricating, or adjusting equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23980",
+      "text": "Inspect, test, or troubleshoot malfunctioning medical or related equipment, following manufacturers' specifications and using test and analysis instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3064",
+      "text": "Keep records of maintenance, repair, and required updates of equipment.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "3063",
+      "text": "Disassemble malfunctioning equipment and remove, repair, or replace defective parts, such as motors, clutches, or transformers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3062",
+      "text": "Examine medical equipment or facility's structural environment and check for proper use of equipment to protect patients and staff from electrical or mechanical hazards and to ensure compliance with safety regulations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23981",
+      "text": "Install medical equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3071",
+      "text": "Test, evaluate, and classify excess or in-use medical equipment and determine serviceability, condition, and disposition, in accordance with regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3069",
+      "text": "Plan and carry out work assignments, using blueprints, schematic drawings, technical manuals, wiring diagrams, or liquid or air flow sheets, following prescribed regulations, directives, or other instructions as required.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3068",
+      "text": "Study technical manuals or attend training sessions provided by equipment manufacturers to maintain current knowledge.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3067",
+      "text": "Explain or demonstrate correct operation or preventive maintenance of medical equipment to personnel.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3072",
+      "text": "Research catalogs or repair part lists to locate sources for repair parts, requisitioning parts and recording their receipt.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "3077",
+      "text": "Repair shop equipment, metal furniture, or hospital equipment, including welding broken parts or replacing missing parts, or bring item into local shop for major repairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3070",
+      "text": "Solder loose connections, using soldering iron.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3075",
+      "text": "Compute power and space requirements for installing medical, dental, or related equipment and install units to manufacturers' specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3073",
+      "text": "Evaluate technical specifications to identify equipment or systems best suited for intended use and possible purchase, based on specifications, user needs, or technical requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3074",
+      "text": "Contribute expertise to develop medical maintenance standard operating procedures.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3079",
+      "text": "Fabricate, dress down, or substitute parts or major new items to modify equipment to meet unique operational or research needs, working from job orders, sketches, modification orders, samples, or discussions with operating officials.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3076",
+      "text": "Supervise or advise subordinate personnel.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3078",
+      "text": "Make computations relating to load requirements of wiring or equipment, using algebraic expressions and standard formulas.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 61660,
+  "demand": "Medium"
+}

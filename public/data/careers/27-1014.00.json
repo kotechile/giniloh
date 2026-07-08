@@ -1,0 +1,101 @@
+{
+  "code": "27-1014.00",
+  "title": "Special Effects Artists and Animators",
+  "description": "Create special effects or animations using film, video, computers, or other electronic tools and media for use in products, such as computer games, movies, music videos, and commercials.",
+  "tasks": [
+    {
+      "id": "6882",
+      "text": "Design complex graphics and animation, using independent judgment, creativity, and computer equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6888",
+      "text": "Create basic designs, drawings, and illustrations for product labels, cartons, direct mail, or television.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6893",
+      "text": "Participate in design and production of multimedia campaigns, handling budgeting and scheduling, and assisting with such responsibilities as production coordination, background design, and progress tracking.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6883",
+      "text": "Create two-dimensional and three-dimensional images depicting objects in motion or illustrating a process, using computer animation or modeling programs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6884",
+      "text": "Make objects or characters appear lifelike by manipulating light, color, texture, shadow, and transparency, or manipulating static images to give the illusion of motion.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6886",
+      "text": "Apply story development, directing, cinematography, and editing to animation to create storyboards that show the flow of the animation and map out key scenes and characters.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6895",
+      "text": "Implement and maintain configuration control systems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6887",
+      "text": "Script, plan, and create animated narrative sequences under tight deadlines, using computer software and hand drawing techniques.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6890",
+      "text": "Develop briefings, brochures, multimedia presentations, web pages, promotional products, technical illustrations, and computer artwork for use in products, technical manuals, literature, newsletters, and slide shows.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6885",
+      "text": "Assemble, typeset, scan, and produce digital camera-ready art or film negatives and printer's proofs.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6894",
+      "text": "Convert real objects to animated objects through modeling, using techniques such as optical scanning.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6889",
+      "text": "Create pen-and-paper images to be scanned, edited, colored, textured, or animated by computer.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6891",
+      "text": "Use models to simulate the behavior of animated objects in the finished sequence.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 27,
+  "salary": 102030,
+  "demand": "Low"
+}

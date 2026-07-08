@@ -1,0 +1,227 @@
+{
+  "code": "11-1011.00",
+  "title": "Chief Executives",
+  "description": "Determine and formulate policies and provide overall direction of companies or private and public sector organizations within guidelines set up by a board of directors or similar governing body. Plan, direct, or coordinate operational activities at the highest level of management with the help of subordinate executives and staff managers.",
+  "tasks": [
+    {
+      "id": "8823",
+      "text": "Direct or coordinate an organization's financial or budget activities to fund operations, maximize investments, or increase efficiency.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8824",
+      "text": "Confer with board members, organization officials, or staff members to discuss issues, coordinate activities, or resolve problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8827",
+      "text": "Prepare budgets for approval, including those for funding or implementation of programs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8826",
+      "text": "Direct, plan, or implement policies, objectives, or activities of organizations or businesses to ensure continuing operations, to maximize returns on investments, or to increase productivity.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8834",
+      "text": "Prepare or present reports concerning activities, expenses, budgets, government statutes or rulings, or other items affecting businesses or program services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8836",
+      "text": "Implement corrective action plans to solve organizational or departmental problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8825",
+      "text": "Analyze operations to evaluate performance of a company or its staff in meeting objectives or to determine areas of potential cost reduction, program improvement, or policy change.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8828",
+      "text": "Direct or coordinate activities of businesses or departments concerned with production, pricing, sales, or distribution of products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8832",
+      "text": "Direct human resources activities, including the approval of human resource plans or activities, the selection of directors or other high-level staff, or establishment or organization of major departments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8831",
+      "text": "Appoint department heads or managers and assign or delegate responsibilities to them.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8843",
+      "text": "Interpret and explain policies, rules, regulations, or laws to organizations, government or corporate officials, or individuals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8830",
+      "text": "Review reports submitted by staff members to recommend approval or to suggest changes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8829",
+      "text": "Negotiate or approve contracts or agreements with suppliers, distributors, federal or state agencies, or other organizational entities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8835",
+      "text": "Establish departmental responsibilities and coordinate functions among departments and sites.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8839",
+      "text": "Deliver speeches, write articles, or present information at meetings or conventions to promote services, exchange ideas, or accomplish objectives.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8840",
+      "text": "Serve as liaisons between organizations, shareholders, and outside organizations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8837",
+      "text": "Coordinate the development or implementation of budgetary control systems, recordkeeping systems, or other administrative control processes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8833",
+      "text": "Preside over, or serve on, boards of directors, management committees, or other governing boards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8849",
+      "text": "Attend and participate in meetings of municipal councils or council committees.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8850",
+      "text": "Organize or approve promotional campaigns.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8842",
+      "text": "Nominate citizens to boards or commissions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8851",
+      "text": "Conduct or direct investigations or hearings to resolve complaints or violations of laws, or testify at such hearings.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8847",
+      "text": "Direct or coordinate activities of businesses involved with buying or selling investment products or financial services.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8853",
+      "text": "Prepare bylaws approved by elected officials, and ensure that bylaws are enforced.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8844",
+      "text": "Make presentations to legislative or other government committees regarding policies, programs, or budgets.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20461",
+      "text": "Review and analyze legislation, laws, or public policy and recommend changes to promote or support interests of the general population or special groups.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8838",
+      "text": "Direct non-merchandising departments, such as advertising, purchasing, credit, or accounting.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8845",
+      "text": "Refer major policy matters to elected representatives for final decisions.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8848",
+      "text": "Direct or conduct studies or research on issues affecting areas of responsibility.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8846",
+      "text": "Administer programs for selection of sites, construction of buildings, or provision of equipment or supplies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8852",
+      "text": "Represent organizations or promote their objectives at official functions, or delegate representatives to do so.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 16,
+  "salary": 213990,
+  "demand": "High"
+}

@@ -1,0 +1,220 @@
+{
+  "code": "27-3023.00",
+  "title": "News Analysts, Reporters, and Journalists",
+  "description": "Narrate or write news stories, reviews, or commentary for print, broadcast, or other communications media such as newspapers, magazines, radio, or television. May collect and analyze information through interview, investigation, or observation.",
+  "tasks": [
+    {
+      "id": "22623",
+      "text": "Write commentaries, columns, or scripts, using computers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22624",
+      "text": "Coordinate and serve as an anchor on news broadcast programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22625",
+      "text": "Examine news items of local, national, and international significance to determine topics to address, or obtain assignments from editorial staff members.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22626",
+      "text": "Analyze and interpret news and information received from various sources to broadcast the information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22627",
+      "text": "Receive assignments or evaluate leads or tips to develop story ideas.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22628",
+      "text": "Research a story's background information to provide complete and accurate information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22629",
+      "text": "Arrange interviews with people who can provide information about a story.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22630",
+      "text": "Gather information and develop perspectives about news subjects through research, interviews, observation, and experience.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22631",
+      "text": "Select material most pertinent to presentation, and organize this material into appropriate formats.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22632",
+      "text": "Present news stories, and introduce in-depth videotaped segments or live transmissions from on-the-scene reporters.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22633",
+      "text": "Establish and maintain relationships with individuals who are credible sources of information.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22634",
+      "text": "Report news stories for publication or broadcast, describing the background and details of events.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22635",
+      "text": "Revise work to meet editorial approval or to fit time or space requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22636",
+      "text": "Review and evaluate notes taken about news events to isolate pertinent facts and details.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22637",
+      "text": "Investigate breaking news developments, such as disasters, crimes, or human-interest stories.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22638",
+      "text": "Review written, audio, or video copy, and correct errors in content, grammar, or punctuation, following prescribed editorial style and formatting guidelines.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22639",
+      "text": "Report on specialized fields such as medicine, green technology, environmental issues, science, politics, sports, arts, consumer affairs, business, religion, crime, or education.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22640",
+      "text": "Determine a published or broadcasted story's emphasis, length, and format, organizing material accordingly.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22641",
+      "text": "Transmit news stories or reporting information from remote locations, using equipment such as satellite phones, telephones, fax machines, or modems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22642",
+      "text": "Check reference materials, such as books, news files, or public records, to obtain relevant facts.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "22643",
+      "text": "Discuss issues with editors to establish priorities or positions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22644",
+      "text": "Photograph or videotape news events.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22645",
+      "text": "Present live or recorded commentary via broadcast media.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "22646",
+      "text": "Take pictures or video, and process them for inclusion in a story.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22647",
+      "text": "Conduct taped or filmed interviews or narratives.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22648",
+      "text": "Develop ideas or material for columns or commentaries by analyzing and interpreting news, current issues, or personal experiences.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22649",
+      "text": "Communicate with readers, viewers, advertisers, or the general public via mail, email, or telephone.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22650",
+      "text": "Write online blog entries that address news developments or offer additional information, opinions, or commentary on news events.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22651",
+      "text": "Assign stories to other reporters or duties to production staff.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22652",
+      "text": "Write columns, editorials, commentaries, or reviews that interpret events or offer opinions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 38,
+  "salary": 62200,
+  "demand": "Medium"
+}

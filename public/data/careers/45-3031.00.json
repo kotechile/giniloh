@@ -1,0 +1,213 @@
+{
+  "code": "45-3031.00",
+  "title": "Fishing and Hunting Workers",
+  "description": "Hunt, trap, catch, or gather wild animals or aquatic animals and plants. May use nets, traps, or other equipment. May haul catch onto ship or other vessel.",
+  "tasks": [
+    {
+      "id": "23403",
+      "text": "Steer vessels and operate navigational instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23410",
+      "text": "Remove catches from fishing equipment and measure them to ensure compliance with legal size.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23428",
+      "text": "Direct fishing or hunting operations, and supervise crew members.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23419",
+      "text": "Interpret weather and vessel conditions to determine appropriate responses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23402",
+      "text": "Travel on foot, by vehicle, or by equipment such as boats, snowmobiles, helicopters, snowshoes, or skis to reach hunting areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23415",
+      "text": "Select, bait, and set traps, and lay poison along trails, according to species, size, habits, and environs of birds or animals and reasons for trapping them.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23408",
+      "text": "Maintain engines, fishing gear, and other on-board equipment and perform minor repairs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23424",
+      "text": "Connect accessories such as floats, weights, flags, lights, or markers to nets, lines, or traps.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23423",
+      "text": "Wash decks, conveyors, knives, and other equipment, using brushes, detergents, and water.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23427",
+      "text": "Harvest marine life for human or animal consumption, using diving or dredging equipment, traps, barges, rods, reels, or tackle.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23429",
+      "text": "Oversee the purchase of supplies, gear, and equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23426",
+      "text": "Load and unload vessel equipment and supplies, by hand or using hoisting equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23406",
+      "text": "Scrape fat, blubber, or flesh from skin sides of pelts with knives or hand scrapers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23400",
+      "text": "Patrol trap lines or nets to inspect settings, remove catch, and reset or relocate traps.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23411",
+      "text": "Locate fish, using fish-finding equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23421",
+      "text": "Kill or stun trapped quarry, using clubs, poisons, guns, or drowning methods.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23405",
+      "text": "Maintain and repair trapping equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23401",
+      "text": "Obtain permission from landowners to hunt or trap on their land.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23407",
+      "text": "Put fishing equipment into the water and anchor or tow equipment, according to the fishing method used.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23414",
+      "text": "Compute positions and plot courses on charts to navigate vessels, using instruments such as compasses, sextants, and charts.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23409",
+      "text": "Sort, pack, and store catch in holds with salt and ice.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23412",
+      "text": "Obtain required approvals for using poisons or traps, and notify persons in areas where traps and poison are set.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23413",
+      "text": "Track animals by checking for signs such as droppings or destruction of vegetation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23404",
+      "text": "Skin quarry, using knives, and stretch pelts on frames to be cured.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23418",
+      "text": "Transport fish to processing plants or to buyers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23416",
+      "text": "Attach nets, slings, hooks, blades, or lifting devices to cables, booms, hoists, or dredges.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23425",
+      "text": "Teach or guide individuals or groups unfamiliar with specific hunting methods or types of prey.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23420",
+      "text": "Release quarry from traps or nets and transfer to cages.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23417",
+      "text": "Participate in animal damage control, wildlife management, disease control, and research activities.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 40,
+  "salary": 37471,
+  "demand": "Very High"
+}

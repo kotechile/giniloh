@@ -1,0 +1,17 @@
+{
+  "code": "33-1099.00",
+  "title": "First-Line Supervisors of Protective Service Workers, All Other",
+  "description": "All protective service supervisors not listed separately above.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to First-Line Supervisors of Protective Service Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 76400,
+  "demand": "Low"
+}

@@ -1,0 +1,213 @@
+{
+  "code": "47-5023.00",
+  "title": "Earth Drillers, Except Oil and Gas",
+  "description": "Operate a variety of drills such as rotary, churn, and pneumatic to tap subsurface water and salt deposits, to remove core samples during mineral exploration or soil testing, and to facilitate the use of explosives in mining or construction. Includes horizontal and earth boring machine operators.",
+  "tasks": [
+    {
+      "id": "13673",
+      "text": "Operate controls to stabilize machines and to position and align drills.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13671",
+      "text": "Start, stop, and control drilling speed of machines and insertion of casings into holes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13668",
+      "text": "Regulate air pressure, rotary speed, and downward pressure, according to the type of rock or concrete being drilled.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13674",
+      "text": "Select and attach drill bits and drill rods, adding more rods as hole depths increase, and changing drill bits as needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13677",
+      "text": "Drive or guide truck-mounted equipment into position, level and stabilize rigs, and extend telescoping derricks.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13676",
+      "text": "Operate machines to flush earth cuttings or to blow dust from holes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13669",
+      "text": "Verify depths and alignments of boring positions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13678",
+      "text": "Perform routine maintenance and upgrade work on machines and equipment, such as replacing parts, building up drill bits, and lubricating machinery.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13672",
+      "text": "Select the appropriate drill for the job, using knowledge of rock or soil conditions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13686",
+      "text": "Document geological formations encountered during work.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13679",
+      "text": "Drive trucks, tractors, or truck-mounted drills to and from work sites.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13682",
+      "text": "Assemble and position machines, augers, casing pipes, and other equipment, using hand and power tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13680",
+      "text": "Record drilling progress and geological data.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "13681",
+      "text": "Retrieve lost equipment from bore holes, using retrieval tools and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13696",
+      "text": "Fabricate well casings.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13683",
+      "text": "Pour water into wells, or pump water or slush into wells to cool drill bits and to remove drillings.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21016",
+      "text": "Create and lay out designs for drill and blast patterns.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13689",
+      "text": "Place and install screens, casings, pumps, and other well fixtures to develop wells.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13684",
+      "text": "Operate water-well drilling rigs and other equipment to drill, bore, and dig for water wells or for environmental assessment purposes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13692",
+      "text": "Review client requirements and proposed locations for drilling operations to determine feasibility, and to determine cost estimates.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13675",
+      "text": "Drill or bore holes in rock for blasting, grouting, anchoring, or building foundations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13685",
+      "text": "Perform pumping tests to assess well performance.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13691",
+      "text": "Disinfect, reconstruct, and redevelop contaminated wells and water pumping systems, and clean and disinfect new wells in preparation for use.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13690",
+      "text": "Design well pumping systems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13694",
+      "text": "Signal crane operators to move equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13687",
+      "text": "Withdraw drill rods from holes, and extract core samples.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13695",
+      "text": "Inspect core samples to determine nature of strata, or take samples to laboratories for analysis.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13688",
+      "text": "Retract augers to force discharge dirt from holes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23489",
+      "text": "Monitor drilling operations, by checking gauges and listening to equipment to assess drilling conditions and to determine the need to adjust drilling or alter equipment.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 40,
+  "salary": 60190,
+  "demand": "Low"
+}

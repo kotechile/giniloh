@@ -1,0 +1,143 @@
+{
+  "code": "51-6063.00",
+  "title": "Textile Knitting and Weaving Machine Setters, Operators, and Tenders",
+  "description": "Set up, operate, or tend machines that knit, loop, weave, or draw in textiles.",
+  "tasks": [
+    {
+      "id": "14165",
+      "text": "Observe woven cloth to detect weaving defects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14166",
+      "text": "Thread yarn, thread, and fabric through guides, needles, and rollers of machines for weaving, knitting, or other processing.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14163",
+      "text": "Remove defects in cloth by cutting and pulling out filling.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14167",
+      "text": "Examine looms to determine causes of loom stoppage, such as warp filling, harness breaks, or mechanical defects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14164",
+      "text": "Inspect products to ensure that specifications are met and to determine if machines need adjustment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14168",
+      "text": "Notify supervisors or repair staff of mechanical malfunctions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14170",
+      "text": "Start machines, monitor operations, and make adjustments as needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14174",
+      "text": "Stop machines when specified amounts of product have been produced.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14171",
+      "text": "Inspect machinery to determine whether repairs are needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14173",
+      "text": "Confer with co-workers to obtain information about orders, processes, or problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14176",
+      "text": "Operate machines for test runs to verify adjustments and to obtain product samples.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14178",
+      "text": "Program electronic equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14169",
+      "text": "Set up, or set up and operate textile machines that perform textile processing and manufacturing operations such as winding, twisting, knitting, weaving, bonding, or stretching.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14181",
+      "text": "Install, level, and align machine components such as gears, chains, guides, dies, cutters, or needles to set up machinery for operation.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14172",
+      "text": "Record information about work completed and machine settings.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "14179",
+      "text": "Study guides, loom patterns, samples, charts, or specification sheets, or confer with supervisors or engineering staff to determine setup requirements.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14180",
+      "text": "Repair or replace worn or defective needles and other components, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14175",
+      "text": "Clean, oil, and lubricate machines, using air hoses, cleaning solutions, rags, oil cans, or grease guns.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14182",
+      "text": "Adjust machine heating mechanisms, tensions, and speeds to produce specified products.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 39,
+  "salary": 39530,
+  "demand": "Low"
+}

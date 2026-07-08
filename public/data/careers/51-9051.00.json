@@ -1,0 +1,129 @@
+{
+  "code": "51-9051.00",
+  "title": "Furnace, Kiln, Oven, Drier, and Kettle Operators and Tenders",
+  "description": "Operate or tend heating equipment other than basic metal, plastic, or food processing equipment. Includes activities such as annealing glass, drying lumber, curing rubber, removing moisture from materials, or boiling soap.",
+  "tasks": [
+    {
+      "id": "4963",
+      "text": "Monitor equipment operation, gauges, and panel lights to detect deviations from standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "4966",
+      "text": "Confer with supervisors or other equipment operators to report equipment malfunctions or to resolve production problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4962",
+      "text": "Press and adjust controls to activate, set, and regulate equipment according to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4965",
+      "text": "Record gauge readings, test results, and shift production in log books.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "4964",
+      "text": "Read and interpret work orders and instructions to determine work assignments, process specifications, and production schedules.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4967",
+      "text": "Examine or test samples of processed substances, or collect samples for laboratory testing, to ensure conformance to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4969",
+      "text": "Transport materials and products to and from work areas, manually or using carts, handtrucks, or hoists.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4970",
+      "text": "Stop equipment and clear blockages or jams, using fingers, wire, or hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4976",
+      "text": "Load equipment receptacles or conveyors with material to be processed, by hand or using hoists.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4971",
+      "text": "Remove products from equipment, manually or using hoists, and prepare them for storage, shipment, or additional processing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4972",
+      "text": "Calculate amounts of materials to be loaded into furnaces, adjusting amounts as necessary for specific conditions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4974",
+      "text": "Melt or refine metal before casting, calculating required temperatures, and observe metal color, adjusting controls as necessary to maintain required temperatures.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4961",
+      "text": "Weigh or measure specified amounts of ingredients or materials for processing, using devices such as scales and calipers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4978",
+      "text": "Direct crane operators and crew members to load vessels with materials to be processed.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4973",
+      "text": "Feed fuel, such as coal and coke, into fireboxes or onto conveyors, and remove ashes from furnaces, using shovels and buckets.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4975",
+      "text": "Replace worn or defective equipment parts, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4968",
+      "text": "Clean, lubricate, and adjust equipment, using scrapers, solvents, air hoses, oil, and hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 47,
+  "salary": 48040,
+  "demand": "Low"
+}

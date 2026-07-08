@@ -1,0 +1,17 @@
+{
+  "code": "51-6099.00",
+  "title": "Textile, Apparel, and Furnishings Workers, All Other",
+  "description": "All textile, apparel, and furnishings workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Textile, Apparel, and Furnishings Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 37280,
+  "demand": "Low"
+}

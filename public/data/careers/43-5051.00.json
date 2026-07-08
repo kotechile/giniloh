@@ -1,0 +1,143 @@
+{
+  "code": "43-5051.00",
+  "title": "Postal Service Clerks",
+  "description": "Perform any combination of tasks in a United States Postal Service (USPS) post office, such as receive letters and parcels; sell postage and revenue stamps, postal cards, and stamped envelopes; fill out and sell money orders; place mail in pigeon holes of mail rack or in bags; and examine mail for correct postage. Includes postal service clerks employed by USPS contractors.",
+  "tasks": [
+    {
+      "id": "11322",
+      "text": "Weigh letters and parcels, compute mailing costs based on type, weight, and destination, and affix correct postage.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11326",
+      "text": "Check mail to ensure correct postage and that packages and letters are in proper condition for mailing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11330",
+      "text": "Sort incoming and outgoing mail, according to type and destination, by hand or by operating electronic mail-sorting and scanning devices.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11323",
+      "text": "Obtain signatures from recipients of registered or special delivery mail.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11327",
+      "text": "Answer questions regarding mail regulations and procedures, postage rates, and post office boxes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11338",
+      "text": "Transport mail from one work station to another.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11325",
+      "text": "Sell and collect payment for products such as stamps, prepaid mail envelopes, and money orders.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11321",
+      "text": "Keep money drawers in order, and record and balance daily transactions.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11324",
+      "text": "Register, certify, and insure letters and parcels.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11328",
+      "text": "Complete forms regarding changes of address, or theft or loss of mail, or for special services such as registered or priority mail.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11336",
+      "text": "Receive letters and parcels, and place mail into bags.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11333",
+      "text": "Put undelivered parcels away, retrieve them when customers come to claim them, and complete any related documentation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11335",
+      "text": "Respond to complaints regarding mail theft, delivery problems, and lost or damaged mail, filling out forms and making appropriate referrals for investigation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11329",
+      "text": "Provide assistance to the public in complying with federal regulations of Postal Service and other federal agencies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11332",
+      "text": "Rent post office boxes to customers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11334",
+      "text": "Provide customers with assistance in filing claims for mail theft, or lost or damaged mail.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11337",
+      "text": "Feed mail into postage canceling devices or hand stamp mail to cancel postage.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11331",
+      "text": "Cash money orders.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20905",
+      "text": "Order retail items and other supplies for office use.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 55,
+  "salary": 62130,
+  "demand": "Medium"
+}

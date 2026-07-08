@@ -1,0 +1,136 @@
+{
+  "code": "11-3061.00",
+  "title": "Purchasing Managers",
+  "description": "Plan, direct, or coordinate the activities of buyers, purchasing officers, and related workers involved in purchasing materials, products, and services. Includes wholesale or retail trade merchandising managers and procurement managers.",
+  "tasks": [
+    {
+      "id": "1027",
+      "text": "Develop and implement purchasing and contract management instructions, policies, and procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1021",
+      "text": "Locate vendors of materials, equipment or supplies, and interview them to determine product availability and terms of sales.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1033",
+      "text": "Prepare bid awards requiring board approval.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1032",
+      "text": "Direct and coordinate activities of personnel engaged in buying, selling, and distributing materials, equipment, machinery, and supplies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1025",
+      "text": "Review purchase order claims and contracts for conformance to company policy.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1031",
+      "text": "Review, evaluate, and approve specifications for issuing and awarding bids.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1035",
+      "text": "Administer online purchasing systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1022",
+      "text": "Prepare and process requisitions and purchase orders for supplies and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1024",
+      "text": "Interview and hire staff, and oversee staff training.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21039",
+      "text": "Develop cost reduction strategies and savings plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1023",
+      "text": "Control purchasing department budgets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1029",
+      "text": "Resolve vendor or contractor grievances and claims against suppliers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1026",
+      "text": "Analyze market and delivery systems to assess present and future material availability.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1028",
+      "text": "Participate in the development of specifications for equipment, products, or substitute materials.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1020",
+      "text": "Maintain records of goods ordered and received.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "1030",
+      "text": "Represent companies in negotiating contracts and formulating policies with suppliers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1034",
+      "text": "Prepare reports regarding market conditions and merchandise costs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1036",
+      "text": "Arrange for disposal of surplus materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 33,
+  "salary": 148080,
+  "demand": "Medium"
+}

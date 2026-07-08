@@ -1,0 +1,241 @@
+{
+  "code": "31-1131.00",
+  "title": "Nursing Assistants",
+  "description": "Provide or assist with basic care or support under the direction of onsite licensed nursing staff. Perform duties such as monitoring of health status, feeding, bathing, dressing, grooming, toileting, or ambulation of patients in a health or nursing facility. May include medication administration and other health-related tasks. Includes nursing care attendants, nursing aides, and nursing attendants.",
+  "tasks": [
+    {
+      "id": "19341",
+      "text": "Turn or reposition bedridden patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19317",
+      "text": "Answer patient call signals, signal lights, bells, or intercom systems to determine patients' needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19325",
+      "text": "Feed patients or assist patients to eat or drink.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19327",
+      "text": "Measure and record food and liquid intake or urinary and fecal output, reporting changes to medical or nursing staff.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "19331",
+      "text": "Provide physical support to assist patients to perform daily living activities, such as getting out of bed, bathing, dressing, using the toilet, standing, walking, or exercising.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19324",
+      "text": "Document or otherwise report observations of patient behavior, complaints, or physical symptoms to nurses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19334",
+      "text": "Remind patients to take medications or nutritional supplements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19336",
+      "text": "Review patients' dietary restrictions, food allergies, and preferences to ensure patient receives appropriate diet.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19342",
+      "text": "Undress, wash, and dress patients who are unable to do so for themselves.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19328",
+      "text": "Observe or examine patients to detect symptoms that may require medical attention, such as bruises, open wounds, or blood in urine.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19346",
+      "text": "Lift or assist others to lift patients to move them on or off beds, examination tables, surgical tables, or stretchers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19339",
+      "text": "Supply, collect, or empty bedpans.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19323",
+      "text": "Communicate with patients to ascertain feelings or need for assistance or social and emotional support.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19333",
+      "text": "Record vital signs, such as temperature, blood pressure, pulse, or respiration rate, as directed by medical or nursing staff.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19326",
+      "text": "Gather information from caregivers, nurses, or physicians about patient condition, treatment plans, or appropriate activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19343",
+      "text": "Wash, groom, shave, or drape patients to prepare them for surgery, treatment, or examination.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19330",
+      "text": "Prepare or serve food trays.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19320",
+      "text": "Change bed linens or make beds.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19344",
+      "text": "Exercise patients who are comatose, paralyzed, or have restricted mobility.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19335",
+      "text": "Restock patient rooms with personal hygiene items, such as towels, washcloths, soap, or toilet paper.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19321",
+      "text": "Clean and sanitize patient rooms, bathrooms, examination rooms, or other patient areas.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19319",
+      "text": "Assist nurses or physicians in the operation of medical equipment or provision of patient care.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19332",
+      "text": "Record height or weight of patients.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19340",
+      "text": "Transport patients to treatment units, testing units, operating rooms, or other areas, using wheelchairs, stretchers, or moveable beds.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19322",
+      "text": "Collect specimens, such as urine, feces, or sputum.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19347",
+      "text": "Provide information, such as directions, visiting hours, or patient status information to visitors or callers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19329",
+      "text": "Position or hold patients in position for surgical preparation.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19337",
+      "text": "Set up treating or testing equipment, such as oxygen tents, portable radiograph (x-ray) equipment, or overhead irrigation bottles, as directed by a physician or nurse.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19316",
+      "text": "Administer medications or treatments, such as catheterizations, suppositories, irrigations, enemas, massages, or douches, as directed by a physician or nurse.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19318",
+      "text": "Apply clean dressings, slings, stockings, or support bandages, under direction of nurse or physician.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19338",
+      "text": "Stock or issue medical supplies, such as dressing packs or treatment trays.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19345",
+      "text": "Explain medical instructions to patients or family members.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19348",
+      "text": "Transport specimens, laboratory items, or pharmacy items, ensuring proper documentation and delivery to authorized personnel.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 12,
+  "salary": 42260,
+  "demand": "Very High"
+}

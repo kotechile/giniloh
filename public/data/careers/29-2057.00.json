@@ -1,0 +1,150 @@
+{
+  "code": "29-2057.00",
+  "title": "Ophthalmic Medical Technicians",
+  "description": "Assist ophthalmologists by performing ophthalmic clinical functions. May administer eye exams, administer eye medications, and instruct the patient in care and use of corrective lenses.",
+  "tasks": [
+    {
+      "id": "19252",
+      "text": "Take and document patients' medical histories.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19257",
+      "text": "Conduct tonometry or tonography tests to measure intraocular pressure.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19250",
+      "text": "Operate ophthalmic equipment, such as autorefractors, phoropters, tomographs, or retinoscopes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19251",
+      "text": "Take anatomical or functional ocular measurements of the eye or surrounding tissue, such as axial length measurements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19249",
+      "text": "Measure visual acuity, including near, distance, pinhole, or dynamic visual acuity, using appropriate tests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19248",
+      "text": "Measure and record lens power, using lensometers.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "19239",
+      "text": "Administer topical ophthalmic or oral medications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19245",
+      "text": "Conduct visual field tests to measure field of vision.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19255",
+      "text": "Assist physicians in performing ophthalmic procedures, including surgery.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19258",
+      "text": "Measure corneal curvature with keratometers or ophthalmometers to aid in the diagnosis of conditions, such as astigmatism.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19244",
+      "text": "Conduct ocular motility tests to measure function of eye muscles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19243",
+      "text": "Clean or sterilize ophthalmic or surgical instruments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19247",
+      "text": "Maintain ophthalmic instruments or equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19246",
+      "text": "Instruct patients in the care and use of contact lenses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19240",
+      "text": "Assess refractive conditions of eyes, using retinoscopes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19242",
+      "text": "Call patients to inquire about their post-operative status or recovery.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19241",
+      "text": "Assist patients to insert or remove contact lenses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19256",
+      "text": "Conduct binocular disparity tests to assess depth perception.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19253",
+      "text": "Adjust or make minor repairs to spectacles or eyeglasses.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19254",
+      "text": "Assist patients to select eyewear.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 35,
+  "salary": 45570,
+  "demand": "Medium"
+}

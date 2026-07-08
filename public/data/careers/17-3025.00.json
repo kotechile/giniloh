@@ -1,0 +1,192 @@
+{
+  "code": "17-3025.00",
+  "title": "Environmental Engineering Technologists and Technicians",
+  "description": "Apply theory and principles of environmental engineering to modify, test, and operate equipment and devices used in the prevention, control, and remediation of environmental problems, including waste treatment and site remediation, under the direction of engineering staff or scientists. May assist in the development of environmental remediation devices.",
+  "tasks": [
+    {
+      "id": "3641",
+      "text": "Maintain project logbook records or computer program files.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "20513",
+      "text": "Record laboratory or field data, including numerical data, test results, photographs, or summaries of visual observations.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "3643",
+      "text": "Perform environmental quality work in field or office settings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3654",
+      "text": "Produce environmental assessment reports, tabulating data and preparing charts, graphs, or sketches.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20514",
+      "text": "Collect and analyze pollution samples, such as air or ground water.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19688",
+      "text": "Decontaminate or test field equipment used to clean or test pollutants from soil, air, or water.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19691",
+      "text": "Prepare and package environmental samples for shipping or testing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3655",
+      "text": "Maintain process parameters and evaluate process anomalies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3644",
+      "text": "Review technical documents to ensure completeness and conformance to requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3640",
+      "text": "Receive, set up, test, or decontaminate equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20033",
+      "text": "Prepare permit applications or review compliance with environmental permits.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3646",
+      "text": "Review work plans to schedule activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3653",
+      "text": "Assist in the cleanup of hazardous material spills.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3649",
+      "text": "Inspect facilities to monitor compliance with regulations governing substances, such as asbestos, lead, or wastewater.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3658",
+      "text": "Develop work plans, including writing specifications or establishing material, manpower, or facilities needs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3657",
+      "text": "Perform statistical analysis and correction of air or water pollution data submitted by industry or other agencies.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3648",
+      "text": "Arrange for the disposal of lead, asbestos, or other hazardous materials.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19689",
+      "text": "Evaluate and select technologies to clean up polluted sites, restore polluted air, water, or soil, or rehabilitate degraded ecosystems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19686",
+      "text": "Assess the ability of environments to naturally remove or reduce conventional or emerging contaminants from air, water, or soil.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3656",
+      "text": "Work with customers to assess the environmental impact of proposed construction or to develop pollution prevention programs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3650",
+      "text": "Provide technical engineering support in the planning of projects, such as wastewater treatment plants, to ensure compliance with environmental regulations and policies.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19690",
+      "text": "Model biological, chemical, or physical treatment processes to remove or degrade pollutants.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3652",
+      "text": "Oversee support staff.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19687",
+      "text": "Create models to demonstrate or predict the process by which pollutants move through or impact an environment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3651",
+      "text": "Improve chemical processes to reduce toxic emissions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3647",
+      "text": "Obtain product information, identify vendors or suppliers, or order materials or equipment to maintain inventory.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 35,
+  "salary": 59920,
+  "demand": "Low"
+}

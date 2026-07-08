@@ -1,0 +1,185 @@
+{
+  "code": "19-1032.00",
+  "title": "Foresters",
+  "description": "Manage public and private forested lands for economic, recreational, and conservation purposes. May inventory the type, amount, and location of standing timber, appraise the timber's worth, negotiate the purchase, and draw up contracts for procurement. May determine how to conserve wildlife habitats, creek beds, water quality, and soil stability, and how best to comply with environmental regulations. May devise plans for planting and growing new trees, monitor trees for healthy growth, and determine optimal harvesting schedules.",
+  "tasks": [
+    {
+      "id": "195",
+      "text": "Monitor contract compliance and results of forestry activities to assure adherence to government regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "200",
+      "text": "Negotiate terms and conditions of agreements and contracts for forest harvesting, forest management and leasing of forest lands.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "205",
+      "text": "Plan and implement projects for conservation of wildlife habitats and soil and water quality.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "196",
+      "text": "Establish short- and long-term plans for management of forest lands and forest resources.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "212",
+      "text": "Plan cutting programs and manage timber sales from harvested areas, assisting companies to achieve production goals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "202",
+      "text": "Determine methods of cutting and removing timber with minimum waste and environmental damage.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "207",
+      "text": "Perform inspections of forests or forest nurseries.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "208",
+      "text": "Map forest area soils and vegetation to estimate the amount of standing timber and future value and growth.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "204",
+      "text": "Monitor forest-cleared lands to ensure that they are reclaimed to their most suitable end use.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "219",
+      "text": "Develop techniques for measuring and identifying trees.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "197",
+      "text": "Supervise activities of other forestry workers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "206",
+      "text": "Plan and direct forest surveys and related studies and prepare reports and recommendations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "216",
+      "text": "Provide advice and recommendations, as a consultant on forestry issues, to private woodlot owners, firefighters, government agencies or to companies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "199",
+      "text": "Plan and supervise forestry projects, such as determining the type, number and placement of trees to be planted, managing tree nurseries, thinning forest and monitoring growth of new seedlings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "198",
+      "text": "Choose and prepare sites for new trees, using controlled burning, bulldozers, or herbicides to clear weeds, brush, and logging debris.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "210",
+      "text": "Procure timber from private landowners.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "211",
+      "text": "Subcontract with loggers or pulpwood cutters for tree removal and to aid in road layout.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "201",
+      "text": "Direct, and participate in, forest fire suppression.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "217",
+      "text": "Study different tree species' classification, life history, light and soil requirements, adaptation to new environmental conditions and resistance to disease and insects.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "203",
+      "text": "Analyze effect of forest conditions on tree growth rates and tree species prevalence and the yield, duration, seed production, growth viability, and germination of different species.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "214",
+      "text": "Plan and direct construction and maintenance of recreation facilities, fire towers, trails, roads and bridges, ensuring that they comply with guidelines and regulations set for forested public lands.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "209",
+      "text": "Conduct public educational programs on forest care and conservation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "213",
+      "text": "Monitor wildlife populations and assess the impacts of forest operations on population and habitats.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "215",
+      "text": "Contact local forest owners and gain permission to take inventory of the type, amount, and location of all standing timber on the property.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "218",
+      "text": "Develop new techniques for wood or residue use.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 26,
+  "salary": 76400,
+  "demand": "Low"
+}

@@ -1,0 +1,17 @@
+{
+  "code": "39-3099.00",
+  "title": "Entertainment Attendants and Related Workers, All Other",
+  "description": "All entertainment attendants and related workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Entertainment Attendants and Related Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 32640,
+  "demand": "Low"
+}

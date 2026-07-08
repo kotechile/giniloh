@@ -1,0 +1,108 @@
+{
+  "code": "31-9011.00",
+  "title": "Massage Therapists",
+  "description": "Perform therapeutic massages of soft tissues and joints. May assist in the assessment of range of motion and muscle strength, or propose client therapy plans.",
+  "tasks": [
+    {
+      "id": "7878",
+      "text": "Confer with clients about their medical histories and problems with stress or pain to determine how massage will be most helpful.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7880",
+      "text": "Massage and knead muscles and soft tissues of the body to provide treatment for medical conditions, injuries, or wellness maintenance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23928",
+      "text": "Maintain massage areas by restocking supplies or sanitizing equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7879",
+      "text": "Apply finger and hand pressure to specific points of the body.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7884",
+      "text": "Develop and propose client treatment plans that specify which types of massage are to be used.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7881",
+      "text": "Maintain treatment records.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7883",
+      "text": "Assess clients' soft tissue condition, joint quality and function, muscle strength, and range of motion.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7882",
+      "text": "Provide clients with guidance and information about techniques for postural improvement and stretching, strengthening, relaxation, and rehabilitative exercises.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7887",
+      "text": "Treat clients in professional settings or travel to clients' offices and homes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7885",
+      "text": "Refer clients to other types of therapists when necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7889",
+      "text": "Prepare and blend oils and apply the blends to clients' skin.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7888",
+      "text": "Consult with other health care professionals, such as physiotherapists, chiropractors, physicians, and psychologists, to develop treatment plans for clients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20757",
+      "text": "Perform other adjunctive therapies or treatment techniques in addition to massage.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7886",
+      "text": "Use complementary aids, such as infrared lamps, wet compresses, ice, and whirlpool baths to promote clients' recovery, relaxation, and well-being.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 29,
+  "salary": 58450,
+  "demand": "Medium"
+}

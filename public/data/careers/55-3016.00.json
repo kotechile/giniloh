@@ -1,0 +1,17 @@
+{
+  "code": "55-3016.00",
+  "title": "Infantry",
+  "description": "Operate weapons and equipment in ground combat operations. Duties include operating and maintaining weapons, such as rifles, machine guns, mortars, and hand grenades; locating, constructing, and camouflaging infantry positions and equipment; evaluating terrain and recording topographical information; operating and maintaining field communications equipment; assessing need for and directing supporting fire; placing explosives and performing minesweeping activities on land; and participating in basic reconnaissance operations.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Infantry.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 51857,
+  "demand": "Medium"
+}

@@ -1,0 +1,87 @@
+{
+  "code": "29-1125.00",
+  "title": "Recreational Therapists",
+  "description": "Plan, direct, or coordinate medically-approved recreation programs for patients in hospitals, nursing homes, or other institutions. Activities include sports, trips, dramatics, social activities, and crafts. May assess a patient condition and recommend appropriate recreational activity.",
+  "tasks": [
+    {
+      "id": "393",
+      "text": "Instruct patient in activities and techniques, such as sports, dance, music, art, or relaxation techniques, designed to meet their specific physical or psychological needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "392",
+      "text": "Conduct therapy sessions to improve patients' mental and physical well-being.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "395",
+      "text": "Plan, organize, direct, and participate in treatment programs and activities to facilitate patients' rehabilitation, help them integrate into the community, and prevent further medical problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "387",
+      "text": "Observe, analyze, and record patients' participation, reactions, and progress during treatment sessions, modifying treatment programs as needed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "388",
+      "text": "Develop treatment plan to meet needs of patient, based on needs assessment, patient interests, and objectives of therapy.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "394",
+      "text": "Obtain information from medical records, medical staff, family members and the patients, themselves, to assess patients' capabilities, needs and interests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "391",
+      "text": "Confer with members of treatment team to plan and evaluate therapy programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "390",
+      "text": "Counsel and encourage patients to develop leisure activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "389",
+      "text": "Encourage clients with special needs and circumstances to acquire new skills and get involved in health-promoting leisure activities, such as sports, games, arts and crafts, and gardening.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "396",
+      "text": "Prepare and submit reports and charts to treatment team to reflect patients' reactions and evidence of progress or regression.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20893",
+      "text": "Develop discharge plans for patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 5,
+  "salary": 61960,
+  "demand": "Low"
+}

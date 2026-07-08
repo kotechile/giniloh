@@ -1,0 +1,178 @@
+{
+  "code": "53-1042.00",
+  "title": "First-Line Supervisors of Helpers, Laborers, and Material Movers, Hand",
+  "description": "Directly supervise and coordinate the activities of helpers, laborers, or material movers, hand.",
+  "tasks": [
+    {
+      "id": "20830",
+      "text": "Maintain a safe working environment by monitoring safety procedures and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8562",
+      "text": "Collaborate with workers and managers to solve work-related problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8563",
+      "text": "Review work throughout the work process and at completion to ensure that it has been performed properly.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8566",
+      "text": "Inform designated employees or departments of items loaded or problems encountered.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8573",
+      "text": "Inspect equipment for wear and for conformance to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8570",
+      "text": "Prepare and maintain work records and reports of information such as employee time and wages, daily receipts, or inspection results.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "8564",
+      "text": "Transmit and explain work orders to laborers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8561",
+      "text": "Plan work schedules and assign duties to maintain adequate staff for effective performance of activities and response to fluctuating workloads.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8582",
+      "text": "Participate in the hiring process by reviewing credentials, conducting interviews, or making hiring decisions or recommendations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8579",
+      "text": "Estimate material, time, and staffing requirements for a given project, based on work orders, job specifications, and experience.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8572",
+      "text": "Counsel employees in work-related activities, personal growth, or career development.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8576",
+      "text": "Assess training needs of staff and arrange for or provide appropriate instruction.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8571",
+      "text": "Conduct staff meetings to relay general information or to address specific topics, such as safety.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8565",
+      "text": "Check specifications of materials loaded or unloaded against information contained in work orders.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8569",
+      "text": "Perform the same work duties as those supervised, or perform more difficult or skilled tasks or assist in their performance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8574",
+      "text": "Resolve personnel problems, complaints, or formal grievances when possible, or refer them to higher-level supervisors for resolution.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8575",
+      "text": "Recommend or initiate personnel actions, such as promotions, transfers, or disciplinary measures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8568",
+      "text": "Evaluate employee performance and prepare performance appraisals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8567",
+      "text": "Examine freight to determine loading sequences.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8577",
+      "text": "Schedule times of shipment and modes of transportation for materials.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8583",
+      "text": "Inventory supplies and requisition or purchase additional items, as necessary.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8578",
+      "text": "Quote prices to customers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8580",
+      "text": "Provide assistance in balancing books, tracking, monitoring, or projecting a unit's budget needs, and in developing unit policies and procedures.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8581",
+      "text": "Inspect job sites to determine the extent of maintenance or repairs needed.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 29,
+  "salary": 63326,
+  "demand": "Very High"
+}

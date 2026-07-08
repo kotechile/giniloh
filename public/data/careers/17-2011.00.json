@@ -1,0 +1,122 @@
+{
+  "code": "17-2011.00",
+  "title": "Aerospace Engineers",
+  "description": "Perform engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft. May conduct basic and applied research to evaluate adaptability of materials and equipment to aircraft design and manufacture. May recommend improvements in testing equipment and techniques.",
+  "tasks": [
+    {
+      "id": "1339",
+      "text": "Formulate mathematical models or other methods of computer analysis to develop, evaluate, or modify design, according to customer engineering requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1337",
+      "text": "Plan or conduct experimental, environmental, operational, or stress tests on models or prototypes of aircraft or aerospace systems or equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20724",
+      "text": "Formulate conceptual design of aeronautical or aerospace products or systems to meet customer requirements or conform to environmental regulations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1345",
+      "text": "Plan or coordinate investigation and resolution of customers' reports of technical problems with aircraft or aerospace vehicles.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1340",
+      "text": "Write technical reports or other documentation, such as handbooks or bulletins, for use by engineering staff, management, or customers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1335",
+      "text": "Direct or coordinate activities of engineering or technical personnel involved in designing, fabricating, modifying, or testing of aircraft or aerospace products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20725",
+      "text": "Evaluate product data or design from inspections or reports for conformance to engineering principles, customer requirements, environmental regulations, or quality standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20726",
+      "text": "Develop design criteria for aeronautical or aerospace products or systems, including testing methods, production costs, quality standards, environmental standards, or completion dates.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1341",
+      "text": "Analyze project requests, proposals, or engineering data to determine feasibility, productibility, cost, or production time of aerospace or aeronautical products.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1346",
+      "text": "Maintain records of performance reports for future reference.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20727",
+      "text": "Diagnose performance problems by reviewing reports or documentation from customers or field engineers or by inspecting malfunctioning or damaged products.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20728",
+      "text": "Direct aerospace research and development programs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1344",
+      "text": "Evaluate and approve selection of vendors by studying past performance or new advertisements.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19601",
+      "text": "Design new or modify existing aerospace systems to reduce polluting emissions, such as nitrogen oxide, carbon monoxide, or smoke emissions.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19602",
+      "text": "Design or engineer filtration systems that reduce harmful emissions.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19603",
+      "text": "Evaluate biofuel performance specifications to determine feasibility for aerospace applications.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 6,
+  "salary": 134960,
+  "demand": "Medium"
+}

@@ -1,0 +1,101 @@
+{
+  "code": "49-3052.00",
+  "title": "Motorcycle Mechanics",
+  "description": "Diagnose, adjust, repair, or overhaul motorcycles, scooters, mopeds, dirt bikes, or similar motorized vehicles.",
+  "tasks": [
+    {
+      "id": "20651",
+      "text": "Mount, balance, change, or check condition or pressure of tires.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8353",
+      "text": "Replace defective parts, using hand tools, arbor presses, flexible power presses, or power tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8357",
+      "text": "Dismantle engines and repair or replace defective parts, such as magnetos, carburetors, or generators.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8354",
+      "text": "Connect test panels to engines and measure generator output, ignition timing, or other engine performance indicators.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8355",
+      "text": "Listen to engines, examine vehicle frames, or confer with customers to determine nature and extent of malfunction or damage.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8359",
+      "text": "Repair or replace other parts, such as headlights, horns, handlebar controls, gasoline or oil tanks, starters, or mufflers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8360",
+      "text": "Disassemble subassembly units and examine condition, movement, or alignment of parts, visually or using gauges.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8352",
+      "text": "Repair or adjust motorcycle subassemblies, such as forks, transmissions, brakes, or drive chains, according to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20652",
+      "text": "Reassemble frames and reinstall engines after repairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8358",
+      "text": "Remove cylinder heads and grind valves to scrape off carbon and replace defective valves, pistons, cylinders, or rings, using hand and power tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23934",
+      "text": "Install motorcycle accessories.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8356",
+      "text": "Reassemble and test subassembly units.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20653",
+      "text": "Hammer out dents and bends in frames and weld tears and breaks.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 48580,
+  "demand": "Low"
+}

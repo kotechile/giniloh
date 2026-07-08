@@ -1,0 +1,59 @@
+{
+  "code": "47-2171.00",
+  "title": "Reinforcing Iron and Rebar Workers",
+  "description": "Position and secure steel bars or mesh in concrete forms in order to reinforce concrete. Use a variety of fasteners, rod-bending machines, blowtorches, and hand tools. Includes rod busters.",
+  "tasks": [
+    {
+      "id": "13569",
+      "text": "Determine quantities, sizes, shapes, and locations of reinforcing rods from blueprints, sketches, or oral instructions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13568",
+      "text": "Space and fasten together rods in forms according to blueprints, using wire and pliers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13567",
+      "text": "Position and secure steel bars, rods, cables, or mesh in concrete forms, using fasteners, rod-bending machines, blowtorches, or hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13571",
+      "text": "Cut rods to required lengths, using metal shears, hacksaws, bar cutters, or acetylene torches.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13570",
+      "text": "Place blocks under rebar to hold the bars off the deck when reinforcing floors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13572",
+      "text": "Cut and fit wire mesh or fabric, using hooked rods, and position fabric or mesh in concrete to reinforce concrete.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13573",
+      "text": "Bend steel rods with hand tools or rod-bending machines and weld them with arc-welding equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 58970,
+  "demand": "Low"
+}

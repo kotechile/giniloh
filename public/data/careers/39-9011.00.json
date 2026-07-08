@@ -1,0 +1,178 @@
+{
+  "code": "39-9011.00",
+  "title": "Childcare Workers",
+  "description": "Attend to children at schools, businesses, private households, and childcare institutions. Perform a variety of tasks, such as dressing, feeding, bathing, and overseeing play.",
+  "tasks": [
+    {
+      "id": "18756",
+      "text": "Maintain a safe play environment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2336",
+      "text": "Observe and monitor children's play activities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18757",
+      "text": "Communicate with children's parents or guardians about daily activities, behaviors, and related issues.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2331",
+      "text": "Support children's emotional and social development, encouraging understanding of others and positive self-concepts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2332",
+      "text": "Care for children in institutional setting, such as group homes, nursery schools, private businesses, or schools for people with disabilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2333",
+      "text": "Sanitize toys and play equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2346",
+      "text": "Dress children and change diapers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2337",
+      "text": "Keep records on individual children, including daily observations and information about activities, meals served, and medications administered.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "2335",
+      "text": "Identify signs of emotional or developmental problems in children and bring them to parents' or guardians' attention.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2338",
+      "text": "Instruct children in health and personal habits, such as eating, resting, and toilet habits.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2342",
+      "text": "Organize and store toys and materials to ensure order in activity areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18761",
+      "text": "Perform general administrative tasks, such as taking attendance, editing internal paperwork, and making phone calls.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18759",
+      "text": "Create developmentally appropriate lesson plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2348",
+      "text": "Perform housekeeping duties, such as laundry, cleaning, dish washing, and changing of linens.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2339",
+      "text": "Read to children and teach them simple painting, drawing, handicrafts, and songs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18758",
+      "text": "Assist in preparing food and serving meals and refreshments to children.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2334",
+      "text": "Discipline children and recommend or initiate other measures to control behavior, such as caring for own clothing and picking up toys and books.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18760",
+      "text": "Regulate children's rest periods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18762",
+      "text": "Organize and participate in recreational activities and outings, such as games and field trips.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2344",
+      "text": "Sterilize bottles and prepare formulas.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2347",
+      "text": "Help children with homework and school work.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18763",
+      "text": "Provide care for children with physical, developmental, or mental health disabilities.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18764",
+      "text": "Perform general personnel functions, such as supervision, training, and scheduling.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2349",
+      "text": "Accompany children to and from school, on outings, and to medical appointments.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 33,
+  "salary": 34980,
+  "demand": "Very High"
+}

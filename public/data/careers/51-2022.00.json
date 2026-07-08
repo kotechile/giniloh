@@ -1,0 +1,122 @@
+{
+  "code": "51-2022.00",
+  "title": "Electrical and Electronic Equipment Assemblers",
+  "description": "Assemble or modify electrical or electronic equipment, such as computers, test equipment telemetering systems, electric motors, and batteries.",
+  "tasks": [
+    {
+      "id": "10022",
+      "text": "Read and interpret schematic drawings, diagrams, blueprints, specifications, work orders, or reports to determine materials requirements or assembly instructions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10019",
+      "text": "Assemble electrical or electronic systems or support structures and install components, units, subassemblies, wiring, or assembly casings, using rivets, bolts, soldering or micro-welding equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10020",
+      "text": "Adjust, repair, or replace electrical or electronic components to correct defects and to ensure conformance to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10024",
+      "text": "Position, align, or adjust workpieces or electrical parts to facilitate wiring or assembly.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10027",
+      "text": "Explain assembly procedures or techniques to other workers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10021",
+      "text": "Clean parts, using cleaning solutions, air hoses, and cloths.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10030",
+      "text": "Drill or tap holes in specified equipment locations to mount control units or to provide openings for elements, wiring, or instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10029",
+      "text": "Fabricate or form parts, coils, or structures according to specifications, using drills, calipers, cutters, or saws.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10026",
+      "text": "Confer with supervisors or engineers to plan or review work activities or to resolve production problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10018",
+      "text": "Inspect or test wiring installations, assemblies, or circuits for resistance factors or for operation, and record results.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "10023",
+      "text": "Mark and tag components so that stock inventory can be tracked and identified.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10028",
+      "text": "Measure and adjust voltages to specified values to determine operational accuracy of instruments.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10031",
+      "text": "Complete, review, or maintain production, time, or component waste reports.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10034",
+      "text": "Distribute materials, supplies, or subassemblies to work areas.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10025",
+      "text": "Pack finished assemblies for shipment, and transport them to storage areas, using hoists or handtrucks.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10033",
+      "text": "Instruct customers in the installation, repair, or maintenance of products.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 46169,
+  "demand": "High"
+}

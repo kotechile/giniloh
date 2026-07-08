@@ -1,0 +1,17 @@
+{
+  "code": "51-7099.00",
+  "title": "Woodworkers, All Other",
+  "description": "All woodworkers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Woodworkers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 44530,
+  "demand": "Low"
+}

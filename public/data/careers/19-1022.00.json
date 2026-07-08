@@ -1,0 +1,108 @@
+{
+  "code": "19-1022.00",
+  "title": "Microbiologists",
+  "description": "Investigate the growth, structure, development, and other characteristics of microscopic organisms, such as bacteria, algae, or fungi. Includes medical microbiologists who study the relationship between organisms and disease or the effects of antibiotics on microorganisms.",
+  "tasks": [
+    {
+      "id": "15212",
+      "text": "Isolate and maintain cultures of bacteria or other microorganisms in prescribed or developed media, controlling moisture, aeration, temperature, and nutrition.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3676",
+      "text": "Provide laboratory services for health departments, community environmental health programs, and physicians needing information for diagnosis and treatment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15213",
+      "text": "Monitor and perform tests on water, food, and the environment to detect harmful microorganisms or to obtain information about sources of pollution, contamination, or infection.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3675",
+      "text": "Examine physiological, morphological, and cultural characteristics, using microscope, to identify and classify microorganisms in human, water, and food specimens.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3679",
+      "text": "Supervise biological technologists and technicians and other scientists.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3683",
+      "text": "Use a variety of specialized equipment, such as electron microscopes, gas and high-pressure liquid chromatographs, electrophoresis units, thermocyclers, fluorescence-activated cell sorters, and phosphorimagers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3678",
+      "text": "Investigate the relationship between organisms and disease, including the control of epidemics and the effects of antibiotics on microorganisms.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3681",
+      "text": "Prepare technical reports and recommendations, based upon research outcomes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3677",
+      "text": "Observe action of microorganisms upon living tissues of plants, higher animals, and other microorganisms, and on dead organic matter.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3680",
+      "text": "Study growth, structure, development, and general characteristics of bacteria and other microorganisms to understand their relationship to human, plant, and animal health.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3682",
+      "text": "Study the structure and function of human, animal, and plant tissues, cells, pathogens, and toxins.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15214",
+      "text": "Develop new products and procedures for sterilization, food and pharmaceutical supply preservation, or microbial contamination detection.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3684",
+      "text": "Conduct chemical analyses of substances such as acids, alcohols, and enzymes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3685",
+      "text": "Research use of bacteria and microorganisms to develop vitamins, antibiotics, amino acids, grain alcohol, sugars, and polymers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 11,
+  "salary": 87990,
+  "demand": "Low"
+}

@@ -1,0 +1,206 @@
+{
+  "code": "13-2023.00",
+  "title": "Appraisers and Assessors of Real Estate",
+  "description": "Appraise real estate, exclusively, and estimate its fair value. May assess taxes in accordance with prescribed schedules.",
+  "tasks": [
+    {
+      "id": "21549",
+      "text": "Compute final estimation of property values, taking into account such factors as depreciation, replacement costs, value comparisons of similar properties, and income potential.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21550",
+      "text": "Prepare written reports that estimate property values, outline methods by which the estimations were made, and meet appraisal standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21569",
+      "text": "Photograph interiors and exteriors of properties to assist in estimating property value, substantiate findings, and complete appraisal reports.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21565",
+      "text": "Search public records for transactions such as sales, leases, and assessments.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "21570",
+      "text": "Obtain county land values and sales information about nearby properties to aid in establishment of property values.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21564",
+      "text": "Maintain familiarity with aspects of local real estate markets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21556",
+      "text": "Inspect properties, considering factors such as market value, location, and building or replacement costs to determine appraisal value.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21552",
+      "text": "Collect and analyze relevant data to identify real estate market trends.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21558",
+      "text": "Review information about transfers of property to ensure its accuracy, checking basic information on buyers, sellers, and sales prices and making corrections as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21577",
+      "text": "Analyze trends in sales prices, construction costs, and rents, to assess property values or determine the accuracy of assessments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21551",
+      "text": "Inspect new construction and major improvements to existing structures to determine values.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21566",
+      "text": "Check building codes and zoning bylaws to determine any effects on the properties being appraised.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21568",
+      "text": "Interview persons familiar with properties and immediate surroundings, such as contractors, home owners, and realtors, to obtain pertinent information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21567",
+      "text": "Verify legal descriptions of properties by comparing them to county records.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "21563",
+      "text": "Evaluate land and neighborhoods where properties are situated, considering locations and trends or impending changes that could influence future values.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21571",
+      "text": "Examine the type and location of nearby services, such as shopping centers, schools, parks, and other neighborhood features, to evaluate their impact on property values.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21562",
+      "text": "Examine income records and operating costs of income properties.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "21572",
+      "text": "Estimate building replacement costs, using building valuation manuals and professional cost estimators.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21573",
+      "text": "Draw land diagrams to be used in appraisal reports to support findings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21560",
+      "text": "Conduct regular reviews of property within jurisdictions to determine changes in property due to construction or demolition.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21574",
+      "text": "Testify in court as to the value of a piece of real estate property.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21555",
+      "text": "Identify the ownership of each piece of taxable property.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21553",
+      "text": "Prepare and maintain current data on each parcel assessed, including maps of boundaries, inventories of land and structures, property characteristics, and any applicable exemptions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21561",
+      "text": "Establish uniform and equitable systems for assessing all classes and kinds of property.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21575",
+      "text": "Calculate tax bills for properties by multiplying assessed values by jurisdiction tax rates.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21578",
+      "text": "Determine taxability of properties, using methods such as field inspection, structural measurement, calculation, sales analysis, market trend studies, and income and expense analysis.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21554",
+      "text": "Explain assessed values to property owners and defend appealed assessments at public hearings.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21559",
+      "text": "Explain real and personal property taxes to property owners.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 69160,
+  "demand": "Medium"
+}

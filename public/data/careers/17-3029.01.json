@@ -1,0 +1,122 @@
+{
+  "code": "17-3029.01",
+  "title": "Non-Destructive Testing Specialists",
+  "description": "Test the safety of structures, vehicles, or vessels using x-ray, ultrasound, fiber optic or related equipment.",
+  "tasks": [
+    {
+      "id": "16626",
+      "text": "Interpret the results of all methods of non-destructive testing (NDT), such as acoustic emission, electromagnetic, leak, liquid penetrant, magnetic particle, neutron radiographic, radiographic, thermal or infrared, ultrasonic, vibration analysis, and visual testing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16620",
+      "text": "Interpret or evaluate test results in accordance with applicable codes, standards, specifications, or procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16622",
+      "text": "Identify defects in solid materials, using ultrasonic testing techniques.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16618",
+      "text": "Make radiographic images to detect flaws in objects while leaving objects intact.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16625",
+      "text": "Prepare reports on non-destructive testing results.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16623",
+      "text": "Select, calibrate, or operate equipment used in the non-destructive testing of products or materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16619",
+      "text": "Visually examine materials, structures, or components for signs of corrosion, metal fatigue, cracks, or other flaws, using tools and equipment such as endoscopes, closed-circuit television systems, and fiber optics.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16627",
+      "text": "Examine structures or vehicles such as aircraft, trains, nuclear reactors, bridges, dams, and pipelines, using non-destructive testing techniques.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16616",
+      "text": "Document non-destructive testing methods, processes, or results.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16613",
+      "text": "Produce images of objects on film, using radiographic techniques.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16612",
+      "text": "Supervise or direct the work of non-destructive testing trainees or staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16624",
+      "text": "Conduct liquid penetrant tests to locate surface cracks by coating objects with fluorescent dyes, cleaning excess penetrant, and applying developer.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16617",
+      "text": "Map the presence of imperfections within objects, using sonic measurements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16615",
+      "text": "Develop or use new non-destructive testing methods, such as acoustic emission testing, leak testing, and thermal or infrared testing.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16621",
+      "text": "Identify defects in concrete or other building materials, using thermal or infrared testing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16614",
+      "text": "Evaluate material properties, using radio astronomy, voltage and amperage measurement, or rheometric flow measurement.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 41,
+  "salary": 78350,
+  "demand": "Medium"
+}

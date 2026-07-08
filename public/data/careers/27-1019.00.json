@@ -1,0 +1,17 @@
+{
+  "code": "27-1019.00",
+  "title": "Artists and Related Workers, All Other",
+  "description": "All artists and related workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Artists and Related Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 71240,
+  "demand": "Low"
+}

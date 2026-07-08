@@ -1,0 +1,157 @@
+{
+  "code": "27-4031.00",
+  "title": "Camera Operators, Television, Video, and Film",
+  "description": "Operate television, video, or film camera to record images or scenes for television, video, or film productions.",
+  "tasks": [
+    {
+      "id": "4031",
+      "text": "Compose and frame each shot, applying the technical aspects of light, lenses, film, filters, and camera settings to achieve the effects sought by directors.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4030",
+      "text": "Operate television or motion picture cameras to record scenes for television broadcasts, advertising, or motion pictures.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "4035",
+      "text": "Adjust positions and controls of cameras, printers, and related equipment to change focus, exposure, and lighting.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4037",
+      "text": "Confer with directors, sound and lighting technicians, electricians, and other crew members to discuss assignments and determine filming sequences, desired effects, camera movements, and lighting requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4032",
+      "text": "Operate zoom lenses, changing images according to specifications and rehearsal instructions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4038",
+      "text": "Observe sets or locations for potential problems and to determine filming and lighting requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18664",
+      "text": "Set up and perform live shots for broadcast.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4033",
+      "text": "Use cameras in any of several different camera mounts, such as stationary, track-mounted, or crane-mounted.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18666",
+      "text": "Test, clean, maintain, and repair broadcast equipment, including testing microphones, to ensure proper working condition.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18663",
+      "text": "Edit video for broadcast productions, including non-linear editing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4039",
+      "text": "Instruct camera operators regarding camera setups, angles, distances, movement, and variables and cues for starting and stopping filming.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18665",
+      "text": "Assemble studio sets and select and arrange cameras, film stock, audio, or lighting equipment to be used during filming.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4046",
+      "text": "Read and analyze work orders and specifications to determine locations of subject material, work procedures, sequences of operations, and machine setups.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "4044",
+      "text": "View films to resolve problems of exposure control, subject and camera movement, changes in subject distance, and related variables.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18669",
+      "text": "Direct studio productions.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4043",
+      "text": "Set up cameras, optical printers, and related equipment to produce photographs and special effects.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4042",
+      "text": "Read charts and compute ratios to determine variables such as lighting, shutter angles, filter factors, and camera distances.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18668",
+      "text": "Set up and operate electric news gathering (ENG) microwave vehicles to gather and edit raw footage on location to send to television affiliates for broadcast.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18671",
+      "text": "Write new scripts for broadcasts.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18670",
+      "text": "Design graphics for studio productions.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18667",
+      "text": "Stay current with new technologies in the field by reading trade magazines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 38,
+  "salary": 74990,
+  "demand": "Low"
+}

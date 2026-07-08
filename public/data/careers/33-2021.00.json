@@ -1,0 +1,220 @@
+{
+  "code": "33-2021.00",
+  "title": "Fire Inspectors and Investigators",
+  "description": "Inspect buildings to detect fire hazards and enforce local ordinances and state laws, or investigate and gather facts to determine cause of fires and explosions.",
+  "tasks": [
+    {
+      "id": "22991",
+      "text": "Prepare and maintain reports of investigation results, and records of convicted arsonists and arson suspects.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "22992",
+      "text": "Testify in court cases involving fires, suspected arson, and false alarms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22993",
+      "text": "Package collected pieces of evidence in securely closed containers, such as bags, crates, or boxes, to protect them.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22994",
+      "text": "Conduct inspections and acceptance testing of newly installed fire protection systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22995",
+      "text": "Analyze evidence and other information to determine probable cause of fire or explosion.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22996",
+      "text": "Photograph damage and evidence related to causes of fires or explosions to document investigation findings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22998",
+      "text": "Inspect buildings to locate hazardous conditions and fire code violations, such as accumulations of combustible material, electrical wiring problems, and inadequate or non-functional fire exits.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22997",
+      "text": "Examine fire sites and collect evidence such as glass, metal fragments, charred wood, and accelerant residue for use in determining the cause of a fire.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22999",
+      "text": "Instruct children about the dangers of fire.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23000",
+      "text": "Conduct fire code compliance follow-ups to ensure that corrective actions have been taken in cases where violations were found.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23001",
+      "text": "Inspect properties that store, handle, and use hazardous materials to ensure compliance with laws, codes, and regulations, and issue hazardous materials permits to facilities found in compliance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23002",
+      "text": "Write detailed reports of fire inspections performed, fire code violations observed, and corrective recommendations offered.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23003",
+      "text": "Identify corrective actions necessary to bring properties into compliance with applicable fire codes, laws, regulations, and standards, and explain these measures to property owners or their representatives.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23004",
+      "text": "Develop or review fire exit plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23005",
+      "text": "Inspect and test fire protection or fire detection systems to verify that such systems are installed in accordance with appropriate laws, codes, ordinances, regulations, and standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23006",
+      "text": "Coordinate efforts with other organizations, such as law enforcement agencies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23007",
+      "text": "Attend training classes to maintain current knowledge of fire prevention, safety, and firefighting procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23008",
+      "text": "Review blueprints and plans for new or remodeled buildings to ensure the structures meet fire safety codes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23009",
+      "text": "Teach fire investigation techniques to other firefighter personnel.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23010",
+      "text": "Conduct fire exit drills to monitor and evaluate evacuation procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23011",
+      "text": "Teach public education programs on fire safety and prevention.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23012",
+      "text": "Recommend changes to fire prevention, inspection, and fire code endorsement procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23013",
+      "text": "Subpoena and interview witnesses, property owners, and building occupants to obtain information and sworn testimony.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23014",
+      "text": "Conduct internal investigation to determine negligence and violation of laws and regulations by fire department employees.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23015",
+      "text": "Test sites and materials to establish facts, such as burn patterns and flash points of materials, using test equipment.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23016",
+      "text": "Dust evidence or portions of fire scenes for latent fingerprints.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23017",
+      "text": "Arrange for the replacement of defective fire fighting equipment and for repair of fire alarm and sprinkler systems, making minor repairs such as servicing fire extinguishers when feasible.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23018",
+      "text": "Issue permits for public assemblies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23019",
+      "text": "Supervise staff, training them, planning their work, and evaluating their performance.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23020",
+      "text": "Develop and coordinate fire prevention programs, such as false alarm billing, fire inspection reporting, and hazardous materials management.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 33,
+  "salary": 75920,
+  "demand": "Low"
+}

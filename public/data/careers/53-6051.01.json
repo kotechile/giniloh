@@ -1,0 +1,101 @@
+{
+  "code": "53-6051.01",
+  "title": "Aviation Inspectors",
+  "description": "Inspect aircraft, maintenance procedures, air navigational aids, air traffic controls, and communications equipment to ensure conformance with Federal safety regulations.",
+  "tasks": [
+    {
+      "id": "10728",
+      "text": "Inspect work of aircraft mechanics performing maintenance, modification, or repair and overhaul of aircraft and aircraft mechanical systems to ensure adherence to standards and procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10734",
+      "text": "Examine maintenance records and flight logs to determine if service and maintenance checks and overhauls were performed at prescribed intervals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10733",
+      "text": "Inspect new, repaired, or modified aircraft to identify damage or defects and to assess airworthiness and conformance to standards, using checklists, hand tools, and test instruments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10741",
+      "text": "Approve or deny issuance of certificates of airworthiness.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10732",
+      "text": "Prepare and maintain detailed repair, inspection, investigation, and certification records and reports.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "10731",
+      "text": "Examine landing gear, tires, and exteriors of fuselage, wings, and engines for evidence of damage or corrosion and the need for repairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10735",
+      "text": "Recommend replacement, repair, or modification of aircraft equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10729",
+      "text": "Start aircraft and observe gauges, meters, and other instruments to detect evidence of malfunctions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10730",
+      "text": "Examine aircraft access plates and doors for security.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10736",
+      "text": "Recommend changes in rules, policies, standards, and regulations, based on knowledge of operating conditions, aircraft improvements, and other factors.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10738",
+      "text": "Investigate air accidents and complaints to determine causes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10742",
+      "text": "Analyze training programs and conduct oral and written examinations to ensure the competency of persons operating, installing, and repairing aircraft equipment.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10740",
+      "text": "Conduct flight test programs to test equipment, instruments, and systems under a variety of conditions, using both manual and automatic controls.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 23,
+  "salary": 92100,
+  "demand": "Low"
+}

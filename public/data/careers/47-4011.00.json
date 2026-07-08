@@ -1,0 +1,143 @@
+{
+  "code": "47-4011.00",
+  "title": "Construction and Building Inspectors",
+  "description": "Inspect structures using engineering skills to determine structural soundness and compliance with specifications, building codes, and other regulations. Inspections may be general in nature or may be limited to a specific area, such as electrical systems or plumbing.",
+  "tasks": [
+    {
+      "id": "20447",
+      "text": "Approve building plans that meet required specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "871",
+      "text": "Review and interpret plans, blueprints, site layouts, specifications, or construction methods to ensure compliance to legal requirements and safety regulations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "875",
+      "text": "Issue permits for construction, relocation, demolition, or occupancy.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "869",
+      "text": "Inspect bridges, dams, highways, buildings, wiring, plumbing, electrical circuits, sewers, heating systems, or foundations during and after construction for structural quality, general safety, or conformance to specifications and codes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "878",
+      "text": "Monitor installation of plumbing, wiring, equipment, or appliances to ensure that installation is performed properly and is in compliance with applicable regulations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "872",
+      "text": "Inspect and monitor construction sites to ensure adherence to safety standards, building codes, or specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20446",
+      "text": "Confer with owners, violators, or authorities to explain regulations or recommend remedial actions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "873",
+      "text": "Measure dimensions and verify level, alignment, or elevation of structures or fixtures to ensure compliance to building plans and codes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "870",
+      "text": "Maintain daily logs and supplement inspection records with photographs.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "20445",
+      "text": "Conduct inspections, using survey instruments, metering devices, tape measures, or test equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "880",
+      "text": "Train, direct, or supervise other construction inspectors.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19866",
+      "text": "Monitor construction activities to ensure that environmental regulations are not violated.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19864",
+      "text": "Evaluate project details to ensure adherence to environmental regulations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19865",
+      "text": "Inspect facilities or installations to determine their environmental impact.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20448",
+      "text": "Examine lifting or conveying devices, such as elevators, escalators, moving sidewalks, hoists, inclined railways, ski lifts, or amusement rides to ensure safety and proper functioning.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19863",
+      "text": "Conduct environmental hazard inspections to identify or quantify problems, such as asbestos, poor air quality, water contamination, or other environmental hazards.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20449",
+      "text": "Estimate cost of completed work or of needed renovations or upgrades.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20450",
+      "text": "Evaluate premises for cleanliness, such as proper garbage disposal or lack of vermin infestation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19867",
+      "text": "Sample and test air to identify gasses, such as bromine, ozone, or sulfur dioxide, or particulates, such as mold, dust, or allergens.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 37,
+  "salary": 74690,
+  "demand": "High"
+}

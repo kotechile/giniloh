@@ -1,0 +1,150 @@
+{
+  "code": "49-3042.00",
+  "title": "Mobile Heavy Equipment Mechanics, Except Engines",
+  "description": "Diagnose, adjust, repair, or overhaul mobile mechanical, hydraulic, and pneumatic equipment, such as cranes, bulldozers, graders, and conveyors, used in construction, logging, and mining.",
+  "tasks": [
+    {
+      "id": "3001",
+      "text": "Repair and replace damaged or worn parts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3000",
+      "text": "Test mechanical products and equipment after repair or assembly to ensure proper performance and compliance with manufacturers' specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3002",
+      "text": "Operate and inspect machines or heavy equipment to diagnose defects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3008",
+      "text": "Read and understand operating manuals, blueprints, and technical drawings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3004",
+      "text": "Dismantle and reassemble heavy equipment using hoists and hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3009",
+      "text": "Overhaul and test machines or equipment to ensure operating efficiency.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3014",
+      "text": "Adjust, maintain, and repair or replace subassemblies, such as transmissions and crawler heads, using hand tools, jacks, and cranes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18583",
+      "text": "Repair, rewire, and troubleshoot electrical systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3003",
+      "text": "Diagnose faults or malfunctions to determine required repairs, using engine diagnostic equipment such as computerized test equipment and calibration devices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3006",
+      "text": "Examine parts for damage or excessive wear, using micrometers and gauges.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3012",
+      "text": "Weld or solder broken parts and structural members, using electric or gas welders and soldering tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18584",
+      "text": "Research, order, and maintain parts inventory for services and repairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3011",
+      "text": "Fit bearings to adjust, repair, or overhaul mobile mechanical, hydraulic, and pneumatic equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3007",
+      "text": "Schedule maintenance for industrial machines and equipment, and keep equipment service records.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "3005",
+      "text": "Clean, lubricate, and perform other routine maintenance work on equipment and vehicles.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3010",
+      "text": "Assemble gear systems, and align frames and gears.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3013",
+      "text": "Clean parts by spraying them with grease solvent or immersing them in tanks of solvent.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3015",
+      "text": "Adjust and maintain industrial machinery, using control and regulating devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3016",
+      "text": "Fabricate needed parts or items from sheet metal.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3017",
+      "text": "Direct workers who are assembling or disassembling equipment or cleaning parts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 40,
+  "salary": 65510,
+  "demand": "High"
+}

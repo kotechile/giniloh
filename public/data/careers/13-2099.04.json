@@ -1,0 +1,171 @@
+{
+  "code": "13-2099.04",
+  "title": "Fraud Examiners, Investigators and Analysts",
+  "description": "Obtain evidence, take statements, produce reports, and testify to findings regarding resolution of fraud allegations. May coordinate fraud detection and prevention activities.",
+  "tasks": [
+    {
+      "id": "16051",
+      "text": "Gather financial documents related to investigations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16049",
+      "text": "Interview witnesses or suspects and take statements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16046",
+      "text": "Prepare written reports of investigation findings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16053",
+      "text": "Document all investigative activities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16054",
+      "text": "Create and maintain logs, records, or databases of information about fraudulent activity.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "16055",
+      "text": "Coordinate investigative efforts with law enforcement officers and attorneys.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16048",
+      "text": "Lead, or participate in, fraud investigation teams.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16043",
+      "text": "Testify in court regarding investigation findings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16038",
+      "text": "Prepare evidence for presentation in court.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16047",
+      "text": "Recommend actions in fraud cases.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16045",
+      "text": "Review reports of suspected fraud to determine need for further investigation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16050",
+      "text": "Design, implement, or maintain fraud detection tools or procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16057",
+      "text": "Analyze financial data to detect irregularities in areas such as billing trends, financial relationships, and regulatory compliance procedures.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "16035",
+      "text": "Maintain knowledge of current events and trends in such areas as money laundering and criminal tools and techniques.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16052",
+      "text": "Evaluate business operations to identify risk areas for fraud.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16056",
+      "text": "Conduct in-depth investigations of suspicious financial activity, such as suspected money-laundering efforts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16044",
+      "text": "Advise businesses or agencies on ways to improve fraud detection.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16036",
+      "text": "Train others in fraud detection and prevention techniques.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16041",
+      "text": "Conduct field surveillance to gather case-related information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16040",
+      "text": "Negotiate with responsible parties to arrange for recovery of losses due to fraud.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16037",
+      "text": "Research or evaluate new technologies for use in fraud detection systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16039",
+      "text": "Obtain and serve subpoenas.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16042",
+      "text": "Arrest individuals to be charged with fraud.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 41,
+  "salary": 81100,
+  "demand": "High"
+}

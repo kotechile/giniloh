@@ -1,0 +1,206 @@
+{
+  "code": "53-5011.00",
+  "title": "Sailors and Marine Oilers",
+  "description": "Stand watch to look for obstructions in path of vessel, measure water depth, turn wheel on bridge, or use emergency equipment as directed by captain, mate, or pilot. Break out, rig, overhaul, and store cargo-handling gear, stationary rigging, and running gear. Perform a variety of maintenance tasks to preserve the painted surface of the ship and to maintain line and ship equipment. Must hold government-issued certification and tankerman certification when working aboard liquid-carrying vessels. Includes able seamen and ordinary seamen.",
+  "tasks": [
+    {
+      "id": "14482",
+      "text": "Tie barges together into tow units for tugboats to handle, inspecting barges periodically during voyages and disconnecting them when destinations are reached.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14479",
+      "text": "Attach hoses and operate pumps to transfer substances to and from liquid cargo tanks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14461",
+      "text": "Handle lines to moor vessels to wharfs, to tie up vessels to other vessels, or to rig towing lines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14475",
+      "text": "Read pressure and temperature gauges or displays and record data in engineering logs.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "14462",
+      "text": "Stand watch in ships' bows or bridge wings to look for obstructions in a ship's path or to locate navigational aids, such as buoys or lighthouses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14457",
+      "text": "Maintain government-issued certifications, as required.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14476",
+      "text": "Examine machinery to verify specified pressures or lubricant flows.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14480",
+      "text": "Maintain a ship's engines under the direction of the ship's engineering officers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14468",
+      "text": "Break out, rig, and stow cargo-handling gear, stationary rigging, or running gear.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14467",
+      "text": "Lubricate machinery, equipment, or engine parts, such as gears, shafts, or bearings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14458",
+      "text": "Lower and man lifeboats when emergencies occur.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14472",
+      "text": "Sweep, mop, and wash down decks to remove oil, dirt, and debris, using brooms, mops, brushes, and hoses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14469",
+      "text": "Splice and repair ropes, wire cables, or cordage, using marlinespikes, wire cutters, twine, and hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20934",
+      "text": "Load or unload materials, vehicles, or passengers from vessels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14473",
+      "text": "Chip and clean rust spots on decks, superstructures, or sides of ships, using wire brushes and hand or air chipping machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14470",
+      "text": "Provide engineers with assistance in repairing or adjusting machinery.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14465",
+      "text": "Operate, maintain, or repair ship equipment, such as winches, cranes, derricks, or weapons system.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14471",
+      "text": "Paint or varnish decks, superstructures, lifeboats, or sides of ships.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14474",
+      "text": "Give directions to crew members engaged in cleaning wheelhouses or quarterdecks.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14459",
+      "text": "Stand by wheels when ships are on automatic pilot, and verify accuracy of courses, using magnetic compasses.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14460",
+      "text": "Steer ships under the direction of commanders or navigating officers or direct helmsmen to steer, following designated courses.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14481",
+      "text": "Relay specified signals to other ships, using visual signaling devices, such as blinker lights or semaphores.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14464",
+      "text": "Overhaul lifeboats or lifeboat gear and lower or raise lifeboats with winches or falls.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14463",
+      "text": "Stand gangway watches to prevent unauthorized persons from boarding ships while in port.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20935",
+      "text": "Record data in ships' logs, such as weather conditions or distances traveled.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "14477",
+      "text": "Measure depth of water in shallow or unfamiliar waters, using leadlines, and telephone or shout depth information to vessel bridges.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14484",
+      "text": "Clean and polish wood trim, brass, or other metal parts.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14483",
+      "text": "Participate in shore patrols.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 45,
+  "salary": 51520,
+  "demand": "Medium"
+}

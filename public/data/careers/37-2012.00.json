@@ -1,0 +1,150 @@
+{
+  "code": "37-2012.00",
+  "title": "Maids and Housekeeping Cleaners",
+  "description": "Perform any combination of light cleaning duties to maintain private households or commercial establishments, such as hotels and hospitals, in a clean and orderly manner. Duties may include making beds, replenishing linens, cleaning rooms and halls, and vacuuming.",
+  "tasks": [
+    {
+      "id": "9564",
+      "text": "Keep storage areas and carts well-stocked, clean, and tidy.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9560",
+      "text": "Carry linens, towels, toilet items, and cleaning supplies, using wheeled carts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9561",
+      "text": "Clean rooms, hallways, lobbies, lounges, restrooms, corridors, elevators, stairways, locker rooms, and other work areas so that health standards are met.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9562",
+      "text": "Empty wastebaskets, empty and clean ashtrays, and transport other trash and waste to disposal areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9566",
+      "text": "Sweep, scrub, wax, or polish floors, using brooms, mops, or powered scrubbing and waxing machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9563",
+      "text": "Replenish supplies, such as drinking glasses, linens, writing supplies, and bathroom items.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9567",
+      "text": "Clean rugs, carpets, upholstered furniture, and draperies, using vacuum cleaners and shampooers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9568",
+      "text": "Wash windows, walls, ceilings, and woodwork, waxing and polishing as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9565",
+      "text": "Dust and polish furniture and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9570",
+      "text": "Disinfect equipment and supplies, using germicides or steam-operated sterilizers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9571",
+      "text": "Observe precautions required to protect hotel and guest property and report damage, theft, and found articles to supervisors.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9577",
+      "text": "Sort, count, and mark clean linens and store them in linen closets.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9575",
+      "text": "Sort clothing and other articles, load washing machines, and iron and fold dried items.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9587",
+      "text": "Move and arrange furniture and turn mattresses.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9582",
+      "text": "Replace light bulbs.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9586",
+      "text": "Deliver television sets, ironing boards, baby cribs, and rollaway beds to guests' rooms.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9569",
+      "text": "Hang draperies and dust window blinds.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9581",
+      "text": "Request repair services and wait for repair workers to arrive.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9579",
+      "text": "Prepare rooms for meetings and arrange decorations, media equipment, and furniture for social or business functions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9578",
+      "text": "Polish silver accessories and metalwork, such as fixtures and fittings.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 35510,
+  "demand": "Very High"
+}

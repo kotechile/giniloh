@@ -1,0 +1,129 @@
+{
+  "code": "45-4011.00",
+  "title": "Forest and Conservation Workers",
+  "description": "Under supervision, perform manual labor necessary to develop, maintain, or protect areas such as forests, forested areas, woodlands, wetlands, and rangelands through such activities as raising and transporting seedlings; combating insects, pests, and diseases harmful to plant life; and building structures to control water, erosion, and leaching of soil. Includes forester aides, seedling pullers, tree planters, and gatherers of nontimber forestry products such as pine straw.",
+  "tasks": [
+    {
+      "id": "7026",
+      "text": "Check equipment to ensure that it is operating properly.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7028",
+      "text": "Fight forest fires or perform prescribed burning tasks under the direction of fire suppression officers or forestry technicians.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7029",
+      "text": "Perform fire protection or suppression duties, such as constructing fire breaks or disposing of brush.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7027",
+      "text": "Confer with other workers to discuss issues, such as safety, cutting heights, or work needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7035",
+      "text": "Maintain tallies of trees examined and counted during tree marking or measuring efforts.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7041",
+      "text": "Explain or enforce regulations regarding camping, vehicle use, fires, use of buildings, or sanitation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7042",
+      "text": "Operate skidders, bulldozers, or other prime movers to pull a variety of scarification or site preparation equipment over areas to be regenerated.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7032",
+      "text": "Spray or inject vegetation with insecticides to kill insects or to protect against disease or with herbicides to reduce competing vegetation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7034",
+      "text": "Thin or space trees, using power thinning saws.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7031",
+      "text": "Identify diseased or undesirable trees and remove them, using power saws or hand saws.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7030",
+      "text": "Select or cut trees according to markings or sizes, types, or grades.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7038",
+      "text": "Prune or shear tree tops or limbs to control growth, increase density, or improve shape.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7045",
+      "text": "Maintain campsites or recreational areas, replenishing firewood or other supplies and cleaning kitchens or restrooms.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7037",
+      "text": "Erect signs or fences, using posthole diggers, shovels, or other hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7039",
+      "text": "Select tree seedlings, prepare the ground, or plant the trees in reforestation areas, using manual planting tools.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7040",
+      "text": "Provide assistance to forest survey crews by clearing site-lines, holding measuring tools, or setting stakes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20632",
+      "text": "Sort tree seedlings, discarding substandard seedlings, according to standard charts or verbal instructions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 38,
+  "salary": 43680,
+  "demand": "Low"
+}

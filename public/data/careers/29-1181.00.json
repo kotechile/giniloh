@@ -1,0 +1,164 @@
+{
+  "code": "29-1181.00",
+  "title": "Audiologists",
+  "description": "Assess and treat persons with hearing and related disorders. May fit hearing aids and provide auditory training. May perform research related to hearing problems.",
+  "tasks": [
+    {
+      "id": "18690",
+      "text": "Maintain patient records at all stages, including initial and subsequent evaluation and treatment activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18673",
+      "text": "Evaluate hearing and balance disorders to determine diagnoses and courses of treatment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18681",
+      "text": "Fit, dispense, and repair assistive devices, such as hearing aids.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18678",
+      "text": "Administer hearing tests and examine patients to collect information on type and degree of impairment, using specialized instruments and electronic equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18686",
+      "text": "Monitor patients' progress and provide ongoing observation of hearing or balance status.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18684",
+      "text": "Instruct patients, parents, teachers, or employers in communication strategies to maximize effective receptive communication.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18672",
+      "text": "Counsel and instruct patients and their families in techniques to improve hearing and communication related to hearing loss.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18688",
+      "text": "Refer patients to additional medical or educational services, if needed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18675",
+      "text": "Participate in conferences or training to update or share knowledge of new hearing or balance disorder treatment methods or technologies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7870",
+      "text": "Examine and clean patients' ear canals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18680",
+      "text": "Recommend assistive devices according to patients' needs or nature of impairments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18682",
+      "text": "Advise educators or other medical staff on hearing or balance topics.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18674",
+      "text": "Program and monitor cochlear implants to fit the needs of patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7872",
+      "text": "Educate and supervise audiology students and health care personnel.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18677",
+      "text": "Plan and conduct treatment programs for patients' hearing or balance problems, consulting with educators, physicians, nurses, psychologists, speech-language pathologists, and other health care personnel, as necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18685",
+      "text": "Work with multidisciplinary teams to assess and rehabilitate recipients of implanted hearing devices through auditory training and counseling.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18676",
+      "text": "Conduct or direct research on hearing or balance topics and report findings to help in the development of procedures, technology, or treatments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18689",
+      "text": "Perform administrative tasks, such as managing office functions and finances.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18683",
+      "text": "Provide information to the public on hearing or balance topics.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18679",
+      "text": "Engage in marketing activities, such as developing marketing plans, to promote business for private practices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18687",
+      "text": "Measure noise levels in workplaces and conduct hearing conservation programs in industry, military, schools, and communities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7875",
+      "text": "Develop and supervise hearing screening programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 7,
+  "salary": 95780,
+  "demand": "Low"
+}

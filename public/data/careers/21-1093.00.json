@@ -1,0 +1,143 @@
+{
+  "code": "21-1093.00",
+  "title": "Social and Human Service Assistants",
+  "description": "Assist other social and human service providers in providing client services in a wide variety of fields, such as psychology, rehabilitation, or social work, including support for families. May assist clients in identifying and obtaining available benefits and social and community services. May assist social workers with developing, organizing, and conducting programs to prevent and resolve problems relevant to substance abuse, human relationships, rehabilitation, or dependent care.",
+  "tasks": [
+    {
+      "id": "21179",
+      "text": "Assess clients' cognitive abilities and physical and emotional needs to determine appropriate interventions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21180",
+      "text": "Develop and implement behavioral management and care plans for clients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3754",
+      "text": "Keep records or prepare reports for owner or management concerning visits with clients.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3755",
+      "text": "Visit individuals in homes or attend group meetings to provide information on agency services, requirements, or procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3757",
+      "text": "Submit reports and review reports or problems with superior.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3759",
+      "text": "Interview individuals or family members to compile information on social, educational, criminal, institutional, or drug history.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3753",
+      "text": "Provide information or refer individuals to public or private agencies or community services for assistance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3756",
+      "text": "Advise clients regarding food stamps, child care, food, money management, sanitation, or housekeeping.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3758",
+      "text": "Oversee day-to-day group activities of residents in institution.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3770",
+      "text": "Assist in locating housing for displaced individuals.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3765",
+      "text": "Consult with supervisor concerning programs for individual families.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3764",
+      "text": "Demonstrate use and care of equipment for tenant use.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3772",
+      "text": "Assist in planning food budgets, using charts or sample budgets.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3771",
+      "text": "Assist clients with preparation of forms, such as tax or rent forms.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3762",
+      "text": "Explain rules established by owner or management, such as sanitation or maintenance requirements or parking regulations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3767",
+      "text": "Observe clients' food selections and recommend alternate economical and nutritional food choices.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3763",
+      "text": "Observe and discuss meal preparation and suggest alternate methods of food preparation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3761",
+      "text": "Transport and accompany clients to shopping areas or to appointments, using automobile.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3768",
+      "text": "Inform tenants of facilities, such as laundries or playgrounds.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 32,
+  "salary": 45930,
+  "demand": "Very High"
+}

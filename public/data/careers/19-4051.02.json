@@ -1,0 +1,122 @@
+{
+  "code": "19-4051.02",
+  "title": "Nuclear Monitoring Technicians",
+  "description": "Collect and test samples to monitor results of nuclear experiments and contamination of humans, facilities, and environment.",
+  "tasks": [
+    {
+      "id": "20539",
+      "text": "Brief workers on radiation levels in work areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7597",
+      "text": "Calculate safe radiation exposure times for personnel using plant contamination readings and prescribed safe levels of radiation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7599",
+      "text": "Monitor personnel to determine the amounts and intensities of radiation exposure.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7600",
+      "text": "Inform supervisors when individual exposures or area radiation levels approach maximum permissible limits.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7598",
+      "text": "Provide initial response to abnormal events or to alarms from radiation monitoring equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7602",
+      "text": "Determine intensities and types of radiation in work areas, equipment, or materials, using radiation detectors or other instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7601",
+      "text": "Instruct personnel in radiation safety procedures and demonstrate use of protective clothing and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7603",
+      "text": "Collect samples of air, water, gases, or solids to determine radioactivity levels of contamination.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20540",
+      "text": "Analyze samples, such as air or water samples, for contaminants or other elements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7605",
+      "text": "Determine or recommend radioactive decontamination procedures, according to the size and nature of equipment and the degree of contamination.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7604",
+      "text": "Set up equipment that automatically detects area radiation deviations and test detection equipment to ensure its accuracy.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7612",
+      "text": "Prepare reports describing contamination tests, material or equipment decontaminated, or methods used in decontamination processes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20541",
+      "text": "Place radioactive waste, such as sweepings or broken sample bottles, into containers for shipping or disposal.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "7606",
+      "text": "Decontaminate objects by cleaning with soap or solvents or by abrading with wire brushes, buffing wheels, or sandblasting machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7610",
+      "text": "Enter data into computers to record characteristics of nuclear events or to locate coordinates of particles.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "7608",
+      "text": "Calibrate and maintain chemical instrumentation sensing elements and sampling system equipment, using calibration instruments and hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 110240,
+  "demand": "Low"
+}

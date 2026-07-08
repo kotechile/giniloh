@@ -1,0 +1,122 @@
+{
+  "code": "23-2093.00",
+  "title": "Title Examiners, Abstractors, and Searchers",
+  "description": "Search real estate records, examine titles, or summarize pertinent legal or insurance documents or details for a variety of purposes. May compile lists of mortgages, contracts, and other instruments pertaining to titles by searching public and private records for law firms, real estate agencies, or title insurance companies.",
+  "tasks": [
+    {
+      "id": "9231",
+      "text": "Examine documentation such as mortgages, liens, judgments, easements, plat books, maps, contracts, and agreements to verify factors such as properties' legal descriptions, ownership, or restrictions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9234",
+      "text": "Examine individual titles to determine if restrictions, such as delinquent taxes, will affect titles and limit property use.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9235",
+      "text": "Prepare reports describing any title encumbrances encountered during searching activities and outlining actions needed to clear titles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9233",
+      "text": "Copy or summarize recorded documents, such as mortgages, trust deeds, and contracts, that affect property titles.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "9236",
+      "text": "Verify accuracy and completeness of land-related documents accepted for registration, preparing rejection notices when documents are not acceptable.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9230",
+      "text": "Prepare lists of all legal instruments applying to a specific piece of land and the buildings on it.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9232",
+      "text": "Read search requests to ascertain types of title evidence required and to obtain descriptions of properties and names of involved parties.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9240",
+      "text": "Obtain maps or drawings delineating properties from company title plants, county surveyors, or assessors' offices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9237",
+      "text": "Confer with realtors, lending institution personnel, buyers, sellers, contractors, surveyors, and courthouse personnel to exchange title-related information or to resolve problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9238",
+      "text": "Enter into record-keeping systems appropriate data needed to create new title records or to update existing ones.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "9243",
+      "text": "Retrieve and examine real estate closing files for accuracy and to ensure that information included is recorded and executed according to regulations.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "9241",
+      "text": "Prepare and issue title commitments and title insurance policies, based on information compiled from title searches.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9239",
+      "text": "Direct activities of workers who search records and examine titles, assigning, scheduling, and evaluating work, and providing technical guidance as necessary.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9245",
+      "text": "Determine whether land-related documents can be registered under the relevant legislation, such as the Land Titles Act.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9246",
+      "text": "Assess fees related to registration of property-related documents.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9242",
+      "text": "Summarize pertinent legal or insurance details, or sections of statutes or case law from reference books for use in examinations or as proofs or ready reference.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 53,
+  "salary": 58650,
+  "demand": "Medium"
+}

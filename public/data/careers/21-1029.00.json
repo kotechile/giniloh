@@ -1,0 +1,17 @@
+{
+  "code": "21-1029.00",
+  "title": "Social Workers, All Other",
+  "description": "All social workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Social Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 71900,
+  "demand": "Medium"
+}

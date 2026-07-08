@@ -1,0 +1,255 @@
+{
+  "code": "25-2022.00",
+  "title": "Middle School Teachers, Except Special and Career/Technical Education",
+  "description": "Teach one or more subjects to students at the middle, intermediate, or junior high school level.",
+  "tasks": [
+    {
+      "id": "6581",
+      "text": "Prepare materials and classrooms for class activities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6580",
+      "text": "Observe and evaluate students' performance, behavior, social development, and physical health.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6575",
+      "text": "Instruct through lectures, discussions, and demonstrations in one or more subjects, such as English, mathematics, or social studies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6576",
+      "text": "Prepare, administer, and grade tests and assignments to evaluate students' progress.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "6573",
+      "text": "Establish and enforce rules for behavior and procedures for maintaining order among students.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6577",
+      "text": "Establish clear objectives for all lessons, units, and projects, and communicate these objectives to students.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6582",
+      "text": "Assign lessons and correct homework.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18638",
+      "text": "Assist students who need extra help, such as by tutoring and preparing and implementing remedial programs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6584",
+      "text": "Confer with parents or guardians, other teachers, counselors, and administrators to resolve students' behavioral and academic problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6579",
+      "text": "Maintain accurate, complete, and correct student records as required by laws, district policies, and administrative regulations.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "6578",
+      "text": "Plan and conduct activities for a balanced program of instruction, demonstration, and work time that provides students with opportunities to observe, question, and investigate.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6574",
+      "text": "Adapt teaching methods and instructional materials to meet students' varying needs and interests.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6583",
+      "text": "Enforce all administration policies and rules governing students.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6585",
+      "text": "Prepare students for later grades by encouraging them to explore learning opportunities and to persevere with challenging tasks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6592",
+      "text": "Use computers, audio-visual aids, and other equipment and materials to supplement presentations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6596",
+      "text": "Collaborate with other teachers and administrators in the development, evaluation, and revision of middle school programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6588",
+      "text": "Guide and counsel students with adjustment or academic problems, or special academic interests.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18639",
+      "text": "Meet or correspond with parents or guardians to discuss children's progress and to determine priorities and resource needs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6593",
+      "text": "Instruct and monitor students in the use and care of equipment and materials to prevent injury and damage.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "6589",
+      "text": "Meet with other professionals to discuss individual students' needs and progress.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6594",
+      "text": "Prepare reports on students and activities as required by administration.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6591",
+      "text": "Prepare for assigned classes and show written evidence of preparation upon request of immediate supervisors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6586",
+      "text": "Prepare objectives and outlines for courses of study, following curriculum guidelines or requirements of states and schools.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6602",
+      "text": "Attend staff meetings and serve on staff committees, as required.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6603",
+      "text": "Plan and supervise class projects, field trips, visits by guest speakers, or other experiential activities, and guide students in learning from such activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6595",
+      "text": "Confer with other staff members to plan and schedule lessons promoting learning, following approved curricula.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6597",
+      "text": "Attend professional meetings, educational conferences, and teacher training workshops to maintain and improve professional competence.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6601",
+      "text": "Organize and supervise games and other recreational activities to promote physical, mental, and social development.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6598",
+      "text": "Perform administrative duties, such as school library assistance, hall and cafeteria monitoring, and bus loading and unloading.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18640",
+      "text": "Coordinate and supervise extracurricular activities, such as clubs, student organizations, and academic contests.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6600",
+      "text": "Organize and label materials and display students' work.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6604",
+      "text": "Select, store, order, issue, and inventory classroom equipment, materials, and supplies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6599",
+      "text": "Administer standardized ability and achievement tests, and interpret results to determine student strengths and needs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6606",
+      "text": "Provide students with disabilities with assistive devices, supportive technology, and assistance accessing facilities, such as restrooms.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6607",
+      "text": "Supervise, evaluate, and plan assignments for teacher assistants and volunteers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 30,
+  "salary": 64370,
+  "demand": "Very High"
+}

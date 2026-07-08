@@ -1,0 +1,143 @@
+{
+  "code": "15-2099.01",
+  "title": "Bioinformatics Technicians",
+  "description": "Apply principles and methods of bioinformatics to assist scientists in areas such as pharmaceuticals, medical technology, biotechnology, computational biology, proteomics, computer information science, biology and medical informatics. Apply bioinformatics tools to visualize, analyze, manipulate or interpret molecular data. May build and maintain databases for processing and analyzing genomic or other biological information.",
+  "tasks": [
+    {
+      "id": "17709",
+      "text": "Analyze or manipulate bioinformatics data using software packages, statistical applications, or data mining techniques.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17715",
+      "text": "Extend existing software programs, web-based interactive tools, or database queries as sequence management and analysis needs evolve.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17716",
+      "text": "Maintain awareness of new and emerging computational methods and technologies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17721",
+      "text": "Conduct quality analyses of data inputs and resulting analyses or predictions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17707",
+      "text": "Enter or retrieve information from structural databases, protein sequence motif databases, mutation databases, genomic databases or gene expression databases.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17706",
+      "text": "Develop or maintain applications that process biologically based data into searchable databases for purposes of analysis, calculation, or presentation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17710",
+      "text": "Confer with researchers, clinicians, or information technology staff to determine data needs and programming requirements and to provide assistance with database-related research activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17717",
+      "text": "Participate in the preparation of reports or scientific publications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17720",
+      "text": "Write computer programs or scripts to be used in querying databases.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17714",
+      "text": "Document all database changes, modifications, or problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17711",
+      "text": "Create data management or error-checking procedures and user manuals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17713",
+      "text": "Develop or apply data mining and machine learning algorithms.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17712",
+      "text": "Design or implement web-based tools for querying large-scale biological databases.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17708",
+      "text": "Monitor database performance and perform any necessary maintenance, upgrades, or repairs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17722",
+      "text": "Confer with database users about project timelines and changes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17724",
+      "text": "Perform routine system administrative functions, such as troubleshooting, back-ups, or upgrades.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17723",
+      "text": "Package bioinformatics data for submission to public repositories.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17719",
+      "text": "Train bioinformatics staff or researchers in the use of databases.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17718",
+      "text": "Test new or updated software or tools and provide feedback to developers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 24,
+  "salary": 81490,
+  "demand": "Low"
+}

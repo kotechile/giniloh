@@ -1,0 +1,136 @@
+{
+  "code": "11-3051.06",
+  "title": "Hydroelectric Production Managers",
+  "description": "Manage operations at hydroelectric power generation facilities. Maintain and monitor hydroelectric plant equipment for efficient and safe plant operations.",
+  "tasks": [
+    {
+      "id": "15520",
+      "text": "Direct operations, maintenance, or repair of hydroelectric power facilities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15515",
+      "text": "Identify and communicate power system emergencies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15512",
+      "text": "Maintain records of hydroelectric facility operations, maintenance, or repairs.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "15509",
+      "text": "Perform or direct preventive or corrective containment or cleanup to protect the environment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15513",
+      "text": "Monitor or inspect hydroelectric equipment, such as hydro-turbines, generators, or control systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15514",
+      "text": "Inspect hydroelectric facilities, including switchyards, control houses, or relay houses, for normal operation or adherence to safety standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15519",
+      "text": "Supervise or monitor hydroelectric facility operations to ensure that generation or mechanical equipment conform to applicable regulations or standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15508",
+      "text": "Plan or coordinate hydroelectric production operations to meet customer requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15518",
+      "text": "Check hydroelectric operations for compliance with prescribed operating limits, such as loads, voltages, temperatures, lines, or equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15504",
+      "text": "Develop or implement projects to improve efficiency, economy, or effectiveness of hydroelectric plant operations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15503",
+      "text": "Provide technical direction in the erection or commissioning of hydroelectric equipment or supporting electrical or mechanical systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15505",
+      "text": "Supervise hydropower plant equipment installations, upgrades, or maintenance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15507",
+      "text": "Plan or manage hydroelectric plant upgrades.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15506",
+      "text": "Respond to problems related to ratepayers, water users, power users, government agencies, educational institutions, or other private or public power resource interests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15516",
+      "text": "Develop or review budgets, annual plans, power contracts, power rates, standing operating procedures, power reviews, or engineering studies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15502",
+      "text": "Develop or implement policy evaluation procedures for hydroelectric generation activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15510",
+      "text": "Operate energized high- or low-voltage hydroelectric power transmission system substations, according to procedures and safety requirements.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15517",
+      "text": "Create or enforce hydrostation voltage schedules.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 25,
+  "salary": 126060,
+  "demand": "High"
+}

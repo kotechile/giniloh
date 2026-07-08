@@ -1,0 +1,73 @@
+{
+  "code": "53-7051.00",
+  "title": "Industrial Truck and Tractor Operators",
+  "description": "Operate industrial trucks or tractors equipped to move materials around a warehouse, storage yard, factory, construction site, or similar location.",
+  "tasks": [
+    {
+      "id": "3202",
+      "text": "Move levers or controls that operate lifting devices, such as forklifts, lift beams with swivel-hooks, hoists, or elevating platforms, to load, unload, transport, or stack material.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3201",
+      "text": "Move controls to drive gasoline- or electric-powered trucks, cars, or tractors and transport materials between loading, processing, and storage areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15266",
+      "text": "Manually or mechanically load or unload materials from pallets, skids, platforms, cars, lifting devices, or other transport vehicles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3203",
+      "text": "Position lifting devices under, over, or around loaded pallets, skids, or boxes and secure material or products for transport to designated areas.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15265",
+      "text": "Inspect product load for accuracy and safely move it around the warehouse or facility to ensure timely and complete delivery.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3206",
+      "text": "Weigh materials or products and record weight or other production data on tags or labels.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "3205",
+      "text": "Perform routine maintenance on vehicles or auxiliary equipment, such as cleaning, lubricating, recharging batteries, fueling, or replacing liquefied-gas tank.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3207",
+      "text": "Operate or tend automatic stacking, loading, packaging, or cutting machines.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "3210",
+      "text": "Turn valves and open chutes to dump, spray, or release materials from dump cars or storage bins into hoppers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 46420,
+  "demand": "Very High"
+}

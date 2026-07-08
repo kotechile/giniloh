@@ -1,0 +1,122 @@
+{
+  "code": "51-9195.04",
+  "title": "Glass Blowers, Molders, Benders, and Finishers",
+  "description": "Shape molten glass according to patterns.",
+  "tasks": [
+    {
+      "id": "12632",
+      "text": "Heat glass to pliable stage, using gas flames or ovens and rotating glass to heat it uniformly.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12630",
+      "text": "Inspect, weigh, and measure products to verify conformance to specifications, using instruments such as micrometers, calipers, magnifiers, or rulers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12631",
+      "text": "Record manufacturing information, such as quantities, sizes, or types of goods produced.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "12646",
+      "text": "Place glass into dies or molds of presses and control presses to form products, such as glassware components or optical blanks.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12644",
+      "text": "Spray or swab molds with oil solutions to prevent adhesion of glass.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12633",
+      "text": "Blow tubing into specified shapes to prevent glass from collapsing, using compressed air or own breath, or blow and rotate gathers in molds or on boards to obtain final shapes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12638",
+      "text": "Determine types and quantities of glass required to fabricate products.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12634",
+      "text": "Set up and adjust machine press stroke lengths and pressures and regulate oven temperatures, according to glass types to be processed.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12635",
+      "text": "Shape, bend, or join sections of glass, using paddles, pressing and flattening hand tools, or cork.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12647",
+      "text": "Design and create glass objects, using blowpipes and artisans' hand tools and equipment.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12649",
+      "text": "Operate and maintain finishing machines to grind, drill, sand, bevel, decorate, wash, or polish glass or glass products.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12648",
+      "text": "Repair broken scrolls by replacing them with new sections of tubing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12637",
+      "text": "Develop sketches of glass products into blueprint specifications, applying knowledge of glass technology and glass blowing.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12640",
+      "text": "Superimpose bent tubing on asbestos patterns to ensure accuracy.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12645",
+      "text": "Cut lengths of tubing to specified sizes, using files or cutting wheels.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12639",
+      "text": "Place rubber hoses on ends of tubing and charge tubing with gas.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 47,
+  "salary": 46170,
+  "demand": "Medium"
+}

@@ -1,0 +1,136 @@
+{
+  "code": "11-9041.01",
+  "title": "Biofuels/Biodiesel Technology and Product Development Managers",
+  "description": "Define, plan, or execute biofuels/biodiesel research programs that evaluate alternative feedstock and process technologies with near-term commercial potential.",
+  "tasks": [
+    {
+      "id": "15574",
+      "text": "Design or conduct applied biodiesel or biofuels research projects on topics, such as transport, thermodynamics, mixing, filtration, distillation, fermentation, extraction, and separation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15578",
+      "text": "Analyze data from biofuels studies, such as fluid dynamics, water treatments, or solvent extraction and recovery processes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15567",
+      "text": "Prepare, or oversee the preparation of, experimental plans for biofuels research or development.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15566",
+      "text": "Provide technical or scientific guidance to technical staff in the conduct of biofuels research or development.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15580",
+      "text": "Propose new biofuels products, processes, technologies or applications based on findings from applied biofuels or biomass research projects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15576",
+      "text": "Conduct experiments on biomass or pretreatment technologies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15568",
+      "text": "Prepare biofuels research and development reports for senior management or technical professionals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15563",
+      "text": "Develop lab scale models of industrial scale processes, such as fermentation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15579",
+      "text": "Oversee biodiesel/biofuels prototyping or development projects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15577",
+      "text": "Conduct experiments to test new or alternate feedstock fermentation processes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15572",
+      "text": "Develop methods to estimate the efficiency of biomass pretreatments.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15569",
+      "text": "Perform protein functional analysis and engineering for processing of feedstock and creation of biofuels.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15581",
+      "text": "Conduct research to breed or develop energy crops with improved biomass yield, environmental adaptability, pest resistance, production efficiency, bioprocessing characteristics, or reduced environmental impacts.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15564",
+      "text": "Develop computational tools or approaches to improve biofuels research and development activities.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15570",
+      "text": "Develop separation processes to recover biofuels.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15575",
+      "text": "Design chemical conversion processes, such as etherification, esterification, interesterification, transesterification, distillation, hydrogenation, oxidation or reduction of fats and oils, and vegetable oil refining.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15573",
+      "text": "Design or execute solvent or product recovery experiments in laboratory or field settings.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15571",
+      "text": "Develop methods to recover ethanol or other fuels from complex bioreactor liquid and gas streams.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 8,
+  "salary": 171270,
+  "demand": "High"
+}

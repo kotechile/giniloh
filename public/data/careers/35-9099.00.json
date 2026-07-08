@@ -1,0 +1,17 @@
+{
+  "code": "35-9099.00",
+  "title": "Food Preparation and Serving Related Workers, All Other",
+  "description": "All food preparation and serving related workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Food Preparation and Serving Related Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 35840,
+  "demand": "Medium"
+}

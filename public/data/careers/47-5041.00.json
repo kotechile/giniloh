@@ -1,0 +1,115 @@
+{
+  "code": "47-5041.00",
+  "title": "Continuous Mining Machine Operators",
+  "description": "Operate self-propelled mining machines that rip coal, metal and nonmetal ores, rock, stone, or sand from the mine face and load it onto conveyors, shuttle cars, or trucks in a continuous operation.",
+  "tasks": [
+    {
+      "id": "20912",
+      "text": "Hang ventilation tubing and ventilation curtains to ensure that the mining face area is kept properly ventilated.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20913",
+      "text": "Conduct methane gas checks to ensure breathing quality of air.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20914",
+      "text": "Check the stability of roof and rib support systems before mining face areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14956",
+      "text": "Operate mining machines to gather coal and convey it to floors or shuttle cars.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14959",
+      "text": "Drive machines into position at working faces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14960",
+      "text": "Move controls to start and regulate movement of conveyors and to start and position drill cutters or torches.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14958",
+      "text": "Reposition machines to make additional holes or cuts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14957",
+      "text": "Determine locations, boundaries, and depths of holes or channels to be cut.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14961",
+      "text": "Observe and listen to equipment operation to detect binding or stoppage of tools or other equipment malfunctions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14962",
+      "text": "Repair, oil, and adjust machines, and change cutting teeth, using wrenches.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14964",
+      "text": "Install casings to prevent cave-ins.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19876",
+      "text": "Scrape or wash conveyors, using belt scrapers or belt washers, to minimize dust production.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14963",
+      "text": "Move levers to raise and lower hydraulic safety bars supporting roofs above machines until other workers complete framing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19875",
+      "text": "Apply new technologies developed to minimize the environmental impact of coal mining.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14965",
+      "text": "Guide and assist crews laying track and resetting supports and blocking.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 43,
+  "salary": 61810,
+  "demand": "Low"
+}

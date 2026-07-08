@@ -1,0 +1,213 @@
+{
+  "code": "19-4043.00",
+  "title": "Geological Technicians, Except Hydrologic Technicians",
+  "description": "Assist scientists or engineers in the use of electronic, sonic, or nuclear measuring instruments in laboratory, exploration, and production activities to obtain data indicating resources such as metallic ore, minerals, gas, coal, or petroleum. Analyze mud and drill cuttings. Chart pressure, temperature, and other characteristics of wells or bore holes.",
+  "tasks": [
+    {
+      "id": "22262",
+      "text": "Test and analyze samples to determine their content and characteristics, using laboratory apparatus or testing equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22263",
+      "text": "Collect or prepare solid or fluid samples for analysis.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22264",
+      "text": "Compile, log, or record testing or operational data for review and further analysis.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "22265",
+      "text": "Prepare notes, sketches, geological maps, or cross-sections.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22266",
+      "text": "Participate in geological, geophysical, geochemical, hydrographic, or oceanographic surveys, prospecting field trips, exploratory drilling, well logging, or underground mine survey programs.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "22267",
+      "text": "Prepare or review professional, technical, or other reports regarding sampling, testing, or recommendations of data analysis.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22268",
+      "text": "Adjust or repair testing, electrical, or mechanical equipment or devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22269",
+      "text": "Read and study reports in order to compile information and data for geological and geophysical prospecting.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22270",
+      "text": "Interview individuals, and research public databases in order to obtain information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22271",
+      "text": "Plot information from aerial photographs, well logs, section descriptions, or other databases.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22272",
+      "text": "Assemble, maintain, or distribute information for library or record systems.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "22273",
+      "text": "Operate or adjust equipment or apparatus used to obtain geological data.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22274",
+      "text": "Plan and direct activities of workers who operate equipment to collect data.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22275",
+      "text": "Set up or direct set-up of instruments used to collect geological data.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22276",
+      "text": "Record readings in order to compile data used in prospecting for oil or gas.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "22277",
+      "text": "Create photographic recordings of information, using equipment.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "22278",
+      "text": "Measure geological characteristics used in prospecting for oil or gas, using measuring instruments.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22279",
+      "text": "Participate in the evaluation of possible mining locations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22280",
+      "text": "Assess the environmental impacts of development projects on subsurface materials.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22281",
+      "text": "Evaluate and interpret core samples and cuttings, and other geological data used in prospecting for oil or gas.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22282",
+      "text": "Supervise well exploration, drilling activities, or well completions.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22283",
+      "text": "Inspect engines for wear or defective parts, using equipment or measuring devices.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22285",
+      "text": "Collaborate with hydrogeologists to evaluate groundwater or well circulation.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22286",
+      "text": "Apply new technologies, such as improved seismic imaging techniques, to locate untapped oil or natural gas deposits.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22287",
+      "text": "Collect data on underground areas, such as reservoirs, that could be used in carbon sequestration operations.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22288",
+      "text": "Collect geological data from potential geothermal energy plant sites.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22289",
+      "text": "Compile data used to address environmental issues, such as the suitability of potential landfill sites.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22290",
+      "text": "Conduct geophysical surveys of potential sites for wind farms or solar installations to determine their suitability.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22291",
+      "text": "Evaluate and interpret seismic data with the aid of computers.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 47,
+  "salary": 53350,
+  "demand": "Low"
+}

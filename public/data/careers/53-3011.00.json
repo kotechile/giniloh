@@ -1,0 +1,87 @@
+{
+  "code": "53-3011.00",
+  "title": "Ambulance Drivers and Attendants, Except Emergency Medical Technicians",
+  "description": "Drive ambulance or assist ambulance driver in transporting sick, injured, or convalescent persons. Assist in lifting patients.",
+  "tasks": [
+    {
+      "id": "8607",
+      "text": "Remove and replace soiled linens or equipment to maintain sanitary conditions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8606",
+      "text": "Drive ambulances or assist ambulance drivers in transporting sick, injured, or convalescent persons.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8612",
+      "text": "Report facts concerning accidents or emergencies to hospital personnel or law enforcement officials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8608",
+      "text": "Place patients on stretchers, and load stretchers into ambulances, usually with assistance from other attendants.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8609",
+      "text": "Accompany and assist emergency medical technicians on calls.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8611",
+      "text": "Replace supplies and disposable items on ambulances.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21028",
+      "text": "Perform minor maintenance on emergency medical services vehicles, such as ambulances.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21029",
+      "text": "Clean and wash rigs, ambulances, or equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8610",
+      "text": "Earn and maintain appropriate certifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8613",
+      "text": "Administer first aid, such as bandaging, splinting, or administering oxygen.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8614",
+      "text": "Restrain or shackle violent patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 36,
+  "salary": 35450,
+  "demand": "Low"
+}

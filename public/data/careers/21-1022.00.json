@@ -1,0 +1,129 @@
+{
+  "code": "21-1022.00",
+  "title": "Healthcare Social Workers",
+  "description": "Provide individuals, families, and groups with the psychosocial support needed to cope with chronic, acute, or terminal illnesses. Services include advising family caregivers. Provide patients with information and counseling, and make referrals for other services. May also provide case and care management or interventions designed to promote health, prevent disease, and address barriers to access to healthcare.",
+  "tasks": [
+    {
+      "id": "263",
+      "text": "Advocate for clients or patients to resolve crises.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23910",
+      "text": "Educate clients about end-of-life symptoms and options to assist them in making informed decisions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "258",
+      "text": "Collaborate with other professionals to evaluate patients' medical or physical condition and to assess client needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "260",
+      "text": "Refer patient, client, or family to community resources to assist in recovery from mental or physical illness and to provide access to services such as financial assistance, legal aid, housing, job placement or education.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "265",
+      "text": "Utilize consultation data and social work experience to plan and coordinate client or patient care and rehabilitation, following through to ensure service efficacy.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "267",
+      "text": "Monitor, evaluate, and record client progress according to measurable goals described in treatment and care plan.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "264",
+      "text": "Identify environmental impediments to client or patient progress through interviews and review of patient records.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "261",
+      "text": "Counsel clients and patients in individual and group sessions to help them overcome dependencies, recover from illness, and adjust to life.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15227",
+      "text": "Plan discharge from care facility to home or other care facility.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "262",
+      "text": "Organize support groups or counsel family members to assist them in understanding, dealing with, and supporting the client or patient.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "266",
+      "text": "Modify treatment plans to comply with changes in clients' status.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "268",
+      "text": "Supervise and direct other workers providing services to clients or patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "272",
+      "text": "Plan and conduct programs to combat social problems, prevent substance abuse, or improve community health and counseling services.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "269",
+      "text": "Develop or advise on social policy and assist in community development.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "271",
+      "text": "Conduct social research to advance knowledge in the social work field.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "259",
+      "text": "Investigate child abuse or neglect cases and take authorized protective action when necessary.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "270",
+      "text": "Oversee Medicaid- and Medicare-related paperwork and recordkeeping in hospitals.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 12,
+  "salary": 67880,
+  "demand": "High"
+}

@@ -1,0 +1,150 @@
+{
+  "code": "15-1299.06",
+  "title": "Digital Forensics Analysts",
+  "description": "Conduct investigations on computer-based crimes establishing documentary or physical evidence, such as digital media and logs associated with cyber intrusion incidents. Analyze digital evidence and investigate computer security incidents to derive information in support of system and network vulnerability mitigation. Preserve and present computer-related evidence in support of criminal, fraud, counterintelligence, or law enforcement investigations.",
+  "tasks": [
+    {
+      "id": "21786",
+      "text": "Adhere to legal policies and procedures related to handling digital media.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21787",
+      "text": "Analyze log files or other digital information to identify the perpetrators of network intrusions.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21788",
+      "text": "Conduct predictive or reactive analyses on security measures to support cyber security initiatives.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21789",
+      "text": "Create system images or capture network settings from information technology environments to preserve as evidence.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21790",
+      "text": "Develop plans for investigating alleged computer crimes, violations, or suspicious activity.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21791",
+      "text": "Develop policies or requirements for data collection, processing, or reporting.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21792",
+      "text": "Duplicate digital evidence to use for data recovery and analysis procedures.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21793",
+      "text": "Identify or develop reverse-engineering tools to improve system capabilities or detect vulnerabilities.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21794",
+      "text": "Maintain cyber defense software or hardware to support responses to cyber incidents.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21795",
+      "text": "Maintain knowledge of laws, regulations, policies or other issuances pertaining to digital forensics or information privacy.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21796",
+      "text": "Perform file signature analysis to verify files on storage media or discover potential hidden files.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21797",
+      "text": "Perform forensic investigations of operating or file systems.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21798",
+      "text": "Perform web service network traffic analysis or waveform analysis to detect anomalies, such as unusual events or trends.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21799",
+      "text": "Preserve and maintain digital forensic evidence for analysis.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21800",
+      "text": "Recommend cyber defense software or hardware to support responses to cyber incidents.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21801",
+      "text": "Recover data or decrypt seized data.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21802",
+      "text": "Write and execute scripts to automate tasks, such as parsing large data files.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21803",
+      "text": "Write cyber defense recommendations, reports, or white papers using research or experience.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21804",
+      "text": "Write reports, sign affidavits, or give depositions for legal proceedings.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21805",
+      "text": "Write technical summaries to report findings.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 30,
+  "salary": 116580,
+  "demand": "Very High"
+}

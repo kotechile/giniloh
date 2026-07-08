@@ -1,0 +1,136 @@
+{
+  "code": "51-3011.00",
+  "title": "Bakers",
+  "description": "Mix and bake ingredients to produce breads, rolls, cookies, cakes, pies, pastries, or other baked goods.",
+  "tasks": [
+    {
+      "id": "20819",
+      "text": "Check products for quality, and identify damaged or expired goods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11916",
+      "text": "Set oven temperatures, and place items into hot ovens for baking.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11917",
+      "text": "Combine measured ingredients in bowls of mixing, blending, or cooking machinery.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11920",
+      "text": "Place dough in pans, molds, or on sheets, and bake in production ovens or on grills.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11926",
+      "text": "Set time and speed controls for mixing machines, blending machines, or steam kettles so that ingredients will be mixed or cooked according to instructions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11918",
+      "text": "Measure or weigh flour or other ingredients to prepare batters, doughs, fillings, or icings, using scales or graduated containers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11915",
+      "text": "Observe color of products being baked, and adjust oven temperatures, humidity, or conveyor speeds accordingly.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11921",
+      "text": "Check the quality of raw materials to ensure that standards and specifications are met.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11924",
+      "text": "Check equipment to ensure that it meets health and safety regulations, and perform maintenance or cleaning, as necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11922",
+      "text": "Adapt the quantity of ingredients to match the amount of items to be baked.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11923",
+      "text": "Apply glazes, icings, or other toppings to baked goods, using spatulas or brushes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11925",
+      "text": "Decorate baked goods, such as cakes or pastries.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11919",
+      "text": "Roll, knead, cut, or shape dough to form sweet rolls, pie crusts, tarts, cookies, or other products.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11928",
+      "text": "Direct or coordinate bakery deliveries.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11929",
+      "text": "Order or receive supplies or equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11927",
+      "text": "Prepare or maintain inventory or production records.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11930",
+      "text": "Operate slicing or wrapping machines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11931",
+      "text": "Develop new recipes for baked goods.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 44,
+  "salary": 37160,
+  "demand": "High"
+}

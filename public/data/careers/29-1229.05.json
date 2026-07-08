@@ -1,0 +1,115 @@
+{
+  "code": "29-1229.05",
+  "title": "Preventive Medicine Physicians",
+  "description": "Apply knowledge of general preventive medicine and public health issues to promote health care to groups or individuals, and aid in the prevention or reduction of risk of disease, injury, disability, or death. May practice population-based medicine or diagnose and treat patients in the context of clinical health promotion and disease prevention.",
+  "tasks": [
+    {
+      "id": "17222",
+      "text": "Direct or manage prevention programs in specialty areas such as aerospace, occupational, infectious disease, and environmental medicine.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17212",
+      "text": "Document or review comprehensive patients' histories with an emphasis on occupation or environmental risks.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17217",
+      "text": "Identify groups at risk for specific preventable diseases or injuries.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17220",
+      "text": "Perform epidemiological investigations of acute and chronic diseases.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17214",
+      "text": "Supervise or coordinate the work of physicians, nurses, statisticians, or other professional staff members.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17218",
+      "text": "Design or use surveillance tools, such as screening, lab reports, and vital records, to identify health risks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17219",
+      "text": "Direct public health education programs dealing with topics such as preventable diseases, injuries, nutrition, food service sanitation, water supply safety, sewage and waste disposal, insect control, and immunizations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17216",
+      "text": "Evaluate the effectiveness of prescribed risk reduction measures or other interventions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17225",
+      "text": "Provide information about potential health hazards and possible interventions to the media, the public, other health care professionals, or local, state, and federal health authorities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17211",
+      "text": "Teach or train medical staff regarding preventive medicine issues.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17224",
+      "text": "Coordinate or integrate the resources of health care institutions, social service agencies, public safety workers, or other organizations to improve community health.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17213",
+      "text": "Prepare preventive health reports, including problem descriptions, analyses, alternative solutions, and recommendations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17223",
+      "text": "Design, implement, or evaluate health service delivery systems to improve the health of targeted populations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17221",
+      "text": "Develop or implement interventions to address behavioral causes of diseases.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17215",
+      "text": "Deliver presentations to lay or professional audiences.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 17,
+  "salary": 265930,
+  "demand": "Very High"
+}

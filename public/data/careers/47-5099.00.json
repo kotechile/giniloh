@@ -1,0 +1,17 @@
+{
+  "code": "47-5099.00",
+  "title": "Extraction Workers, All Other",
+  "description": "All extraction workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Extraction Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 57010,
+  "demand": "Low"
+}

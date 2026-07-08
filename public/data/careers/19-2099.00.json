@@ -1,0 +1,17 @@
+{
+  "code": "19-2099.00",
+  "title": "Physical Scientists, All Other",
+  "description": "All physical scientists not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Physical Scientists, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 122570,
+  "demand": "Low"
+}

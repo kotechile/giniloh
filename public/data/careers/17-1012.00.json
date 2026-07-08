@@ -1,0 +1,143 @@
+{
+  "code": "17-1012.00",
+  "title": "Landscape Architects",
+  "description": "Plan and design land areas for projects such as parks and other recreational facilities, airports, highways, hospitals, schools, land subdivisions, and commercial, industrial, and residential sites.",
+  "tasks": [
+    {
+      "id": "20369",
+      "text": "Confer with clients, engineering personnel, or architects on landscape projects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20371",
+      "text": "Analyze data on conditions such as site location, drainage, or structure location for environmental reports or landscaping plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20373",
+      "text": "Inspect landscape work to ensure compliance with specifications, evaluate quality of materials or work, or advise clients or construction personnel.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20370",
+      "text": "Prepare site plans, specifications, or cost estimates for land development.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20375",
+      "text": "Integrate existing land features or landscaping into designs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19597",
+      "text": "Collaborate with architects or related professionals on whole building design to maximize the aesthetic features of structures or surrounding land and to improve energy efficiency.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18470",
+      "text": "Prepare graphic representations or drawings of proposed plans or designs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20378",
+      "text": "Inspect proposed sites to identify structural elements of land areas or other important site information, such as soil condition, existing landscaping, or the proximity of water management facilities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20380",
+      "text": "Collaborate with estimators to cost projects, create project plans, or coordinate bids from landscaping contractors.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19598",
+      "text": "Create landscapes that minimize water consumption such as by incorporating drought-resistant grasses or indigenous plants.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20379",
+      "text": "Develop planting plans to help clients garden productively or to achieve particular aesthetic effects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20376",
+      "text": "Manage the work of subcontractors to ensure quality control.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20374",
+      "text": "Present project plans or designs to public stakeholders, such as government agencies or community groups.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20372",
+      "text": "Develop marketing materials, proposals, or presentations to generate new work opportunities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20381",
+      "text": "Prepare conceptual drawings, graphics, or other visual representations of land areas to show predicted growth or development of land areas over time.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19600",
+      "text": "Identify and select appropriate sustainable materials for use in landscape designs, such as recycled wood or recycled concrete boards for structural elements or recycled tires for playground bedding.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20377",
+      "text": "Research latest products, technology, or design trends to stay current in the field.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19599",
+      "text": "Design and integrate rainwater harvesting or gray and reclaimed water systems to conserve water into building or land designs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20382",
+      "text": "Provide follow-up consultations for clients to ensure landscape designs are maturing or developing as planned.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 0,
+  "salary": 79870,
+  "demand": "Low"
+}

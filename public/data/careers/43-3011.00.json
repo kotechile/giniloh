@@ -1,0 +1,115 @@
+{
+  "code": "43-3011.00",
+  "title": "Bill and Account Collectors",
+  "description": "Locate and notify customers of delinquent accounts by mail, telephone, or personal visit to solicit payment. Duties include receiving payment and posting amount to customer's account, preparing statements to credit department if customer fails to respond, initiating repossession proceedings or service disconnection, and keeping records of collection and status of accounts.",
+  "tasks": [
+    {
+      "id": "2474",
+      "text": "Record information about financial status of customers and status of collection efforts.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "2475",
+      "text": "Locate and notify customers of delinquent accounts by mail, telephone, or personal visits to solicit payment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2473",
+      "text": "Locate and monitor overdue accounts, using computers and a variety of automated systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2481",
+      "text": "Arrange for debt repayment or establish repayment schedules, based on customers' financial situations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2477",
+      "text": "Advise customers of necessary actions and strategies for debt repayment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18559",
+      "text": "Answer customer questions regarding problems with their accounts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2478",
+      "text": "Persuade customers to pay amounts due on credit accounts, damage claims, or nonpayable checks, or to return merchandise.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2476",
+      "text": "Confer with customers by telephone or in person to determine reasons for overdue payments and to review the terms of sales, service, or credit contracts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2472",
+      "text": "Receive payments and post amounts paid to customer accounts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2483",
+      "text": "Trace delinquent customers to new addresses by inquiring at post offices, telephone companies, credit bureaus, or through the questioning of neighbors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2484",
+      "text": "Notify credit departments, order merchandise repossession or service disconnection, and turn over account records to attorneys when customers fail to respond to collection attempts.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "2479",
+      "text": "Sort and file correspondence and perform miscellaneous clerical duties, such as answering correspondence and writing reports.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2480",
+      "text": "Perform various administrative functions for assigned accounts, such as recording address changes and purging the records of deceased customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18560",
+      "text": "Contact insurance companies to check on status of claims payments and write appeal letters for denial on claims.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2482",
+      "text": "Negotiate credit extensions when necessary.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 40,
+  "salary": 47030,
+  "demand": "High"
+}

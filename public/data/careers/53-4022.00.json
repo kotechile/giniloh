@@ -1,0 +1,192 @@
+{
+  "code": "53-4022.00",
+  "title": "Railroad Brake, Signal, and Switch Operators and Locomotive Firers",
+  "description": "Operate or monitor railroad track switches or locomotive instruments. May couple or uncouple rolling stock to make up or break up trains. Watch for and relay traffic signals. May inspect couplings, air hoses, journal boxes, and hand brakes. May watch for dragging equipment or obstacles on rights-of-way.",
+  "tasks": [
+    {
+      "id": "23774",
+      "text": "Observe train signals along routes and verify their meanings for engineers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23775",
+      "text": "Signal locomotive engineers to start or stop trains when coupling or uncoupling cars, using hand signals, lanterns, or radio communication.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23776",
+      "text": "Pull or push track switches to reroute cars.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23777",
+      "text": "Observe signals from other crew members so that work activities can be coordinated.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23778",
+      "text": "Monitor trains as they go around curves to detect dragging equipment and smoking journal boxes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23779",
+      "text": "Inspect couplings, air hoses, journal boxes, and handbrakes to ensure that they are securely fastened and functioning properly.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23780",
+      "text": "Observe tracks from left sides of locomotives to detect obstructions on tracks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23781",
+      "text": "Operate locomotives in emergency situations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23782",
+      "text": "Raise levers to couple and uncouple cars for makeup and breakup of trains.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23783",
+      "text": "Climb ladders to tops of cars to set brakes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23784",
+      "text": "Receive oral or written instructions from yardmasters or yard conductors indicating track assignments and cars to be switched.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23785",
+      "text": "Inspect locomotives to detect damaged or worn parts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23786",
+      "text": "Signal other workers to set brakes and to throw track switches when switching cars from trains to way stations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23787",
+      "text": "Check to see that trains are equipped with supplies such as fuel, water, and sand.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23788",
+      "text": "Monitor oil, temperature, and pressure gauges on dashboards to determine if engines are operating safely and efficiently.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23789",
+      "text": "Set flares, flags, lanterns, or torpedoes in front and at rear of trains during emergency stops to warn oncoming trains.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23790",
+      "text": "Inspect tracks, cars, and engines for defects and to determine service needs, sending engines and cars for repairs as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23791",
+      "text": "Start diesel engines to warm engines before runs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23792",
+      "text": "Make minor repairs to couplings, air hoses, and journal boxes, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23793",
+      "text": "Connect air hoses to cars, using wrenches.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23794",
+      "text": "Operate and drive locomotives, diesel switch engines, dinkey engines, flatcars, and railcars in train yards and at industrial sites.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23795",
+      "text": "Refuel and lubricate engines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23796",
+      "text": "Ride atop cars that have been shunted, and turn handwheels to control speeds or stop cars at specified positions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23798",
+      "text": "Record numbers of cars available, numbers of cars sent to repair stations, and types of service needed.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23799",
+      "text": "Provide passengers with assistance entering and exiting trains.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23801",
+      "text": "Conduct brake tests to determine the condition of brakes on trains.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 68840,
+  "demand": "Low"
+}

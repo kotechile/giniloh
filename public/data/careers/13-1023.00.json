@@ -1,0 +1,143 @@
+{
+  "code": "13-1023.00",
+  "title": "Purchasing Agents, Except Wholesale, Retail, and Farm Products",
+  "description": "Purchase machinery, equipment, tools, parts, supplies, or services necessary for the operation of an establishment. Purchase raw or semifinished materials for manufacturing. May negotiate contracts.",
+  "tasks": [
+    {
+      "id": "1146",
+      "text": "Monitor and follow applicable laws and regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1142",
+      "text": "Purchase the highest quality merchandise at the lowest possible price and in correct amounts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1159",
+      "text": "Formulate policies and procedures for bid proposals and procurement of goods and services.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1143",
+      "text": "Prepare purchase orders, solicit bid proposals, and review requisitions for goods and services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1157",
+      "text": "Write and review product specifications, maintaining a working technical knowledge of the goods or services to be purchased.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1145",
+      "text": "Analyze price proposals, financial reports, and other data and information to determine reasonable prices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1156",
+      "text": "Hire, train, or supervise purchasing clerks, buyers, and expediters.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1144",
+      "text": "Research and evaluate suppliers, based on price, quality, selection, service, support, availability, reliability, production and distribution capabilities, and the supplier's reputation and history.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1150",
+      "text": "Evaluate and monitor contract performance to ensure compliance with contractual obligations and to determine need for changes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1147",
+      "text": "Negotiate, renegotiate, and administer contracts with suppliers, vendors, and other representatives.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1153",
+      "text": "Study sales records and inventory levels of current stock to develop strategic purchasing programs that facilitate employee access to supplies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1149",
+      "text": "Confer with staff, users, and vendors to discuss defective or unacceptable goods or services and determine corrective action.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1151",
+      "text": "Maintain and review computerized or manual records of purchased items, costs, deliveries, product performance, and inventories.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1158",
+      "text": "Monitor changes affecting supply and demand, tracking market conditions, price trends, or futures markets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1148",
+      "text": "Monitor shipments to ensure that goods come in on time, and resolve problems related to undelivered goods.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1152",
+      "text": "Review catalogs, industry periodicals, directories, trade journals, and Internet sites and consult with other department personnel to locate necessary goods and services.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1160",
+      "text": "Attend meetings, trade shows, conferences, conventions, and seminars to network with people in other purchasing departments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1155",
+      "text": "Arrange the payment of duty and freight charges.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1154",
+      "text": "Interview vendors and visit suppliers' plants and distribution centers to examine and learn about products, services, and prices.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 26,
+  "salary": 75559,
+  "demand": "Very High"
+}

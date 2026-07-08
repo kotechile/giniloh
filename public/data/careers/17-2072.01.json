@@ -1,0 +1,157 @@
+{
+  "code": "17-2072.01",
+  "title": "Radio Frequency Identification Device Specialists",
+  "description": "Design and implement radio frequency identification device (RFID) systems used to track shipments or goods.",
+  "tasks": [
+    {
+      "id": "16363",
+      "text": "Identify operational requirements for new systems to inform selection of technological solutions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16370",
+      "text": "Integrate tags, readers, or software in radio frequency identification device (RFID) designs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16354",
+      "text": "Perform systems analysis or programming of radio frequency identification device (RFID) technology.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16359",
+      "text": "Test radio frequency identification device (RFID) software to ensure proper functioning.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16360",
+      "text": "Select appropriate radio frequency identification device (RFID) tags and determine placement locations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16361",
+      "text": "Perform site analyses to determine system configurations, processes to be impacted, or on-site obstacles to technology implementation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16362",
+      "text": "Perform acceptance testing on newly installed or updated systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16366",
+      "text": "Determine means of integrating radio frequency identification device (RFID) into other applications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16353",
+      "text": "Provide technical support for radio frequency identification device (RFID) technology.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16371",
+      "text": "Collect data about existing client hardware, software, networking, or key business processes to inform implementation of radio frequency identification device (RFID) technology.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16369",
+      "text": "Install, test, or maintain radio frequency identification device (RFID) systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16358",
+      "text": "Test tags or labels to ensure readability.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16364",
+      "text": "Determine usefulness of new radio frequency identification device (RFID) technologies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16351",
+      "text": "Verify compliance of developed applications with architectural standards and established practices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16356",
+      "text": "Train users in details of system operation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16365",
+      "text": "Develop process flows, work instructions, or standard operating procedures for radio frequency identification device (RFID) systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16352",
+      "text": "Read current literature, attend meetings or conferences, or talk with colleagues to stay abreast of industry research about new technologies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16355",
+      "text": "Document equipment or process details of radio frequency identification device (RFID) technology.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16367",
+      "text": "Define and compare possible radio frequency identification device (RFID) solutions to inform selection for specific projects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16368",
+      "text": "Create simulations or models of radio frequency identification device (RFID) systems to provide information for selection and configuration.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16357",
+      "text": "Analyze radio frequency identification device (RFID)-related supply chain data.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 33,
+  "salary": 130220,
+  "demand": "Medium"
+}

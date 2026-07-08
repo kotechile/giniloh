@@ -1,0 +1,108 @@
+{
+  "code": "29-1229.03",
+  "title": "Urologists",
+  "description": "Diagnose, treat, and help prevent benign and malignant medical and surgical disorders of the genitourinary system and the renal glands.",
+  "tasks": [
+    {
+      "id": "17295",
+      "text": "Diagnose or treat diseases or disorders of genitourinary organs and tracts including erectile dysfunction (ED), infertility, incontinence, bladder cancer, prostate cancer, urethral stones, or premature ejaculation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17294",
+      "text": "Examine patients using equipment, such as radiograph (x-ray) machines or fluoroscopes, to determine the nature and extent of disorder or injury.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17293",
+      "text": "Order and interpret the results of diagnostic tests, such as prostate specific antigen (PSA) screening, to detect prostate cancer.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17283",
+      "text": "Document or review patients' histories.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17289",
+      "text": "Prescribe or administer antibiotics, antiseptics, or compresses to treat infection or injury.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17287",
+      "text": "Treat urologic disorders using alternatives to traditional surgery such as extracorporeal shock wave lithotripsy, laparoscopy, or laser techniques.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17284",
+      "text": "Provide urology consultation to physicians or other health care professionals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17288",
+      "text": "Treat lower urinary tract dysfunctions using equipment such as diathermy machines, catheters, cystoscopes, or radium emanation tubes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17286",
+      "text": "Direct the work of nurses, residents, or other staff to provide patient care.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17291",
+      "text": "Perform abdominal, pelvic, or retroperitoneal surgeries.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17290",
+      "text": "Prescribe medications to treat patients with erectile dysfunction (ED), infertility, or ejaculation problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17285",
+      "text": "Refer patients to specialists when condition exceeds experience, expertise, or scope of practice.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17282",
+      "text": "Teach or train medical and clinical staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17292",
+      "text": "Perform brachytherapy, cryotherapy, high intensity focused ultrasound (HIFU), or photodynamic therapy to treat prostate or other cancers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 4,
+  "salary": 265930,
+  "demand": "Very High"
+}

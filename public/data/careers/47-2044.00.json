@@ -1,0 +1,185 @@
+{
+  "code": "47-2044.00",
+  "title": "Tile and Stone Setters",
+  "description": "Apply hard tile, stone, and comparable materials to walls, floors, ceilings, countertops, and roof decks.",
+  "tasks": [
+    {
+      "id": "2848",
+      "text": "Align and straighten tile using levels, squares, and straightedges.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2851",
+      "text": "Finish and dress the joints and wipe excess grout from between tiles, using damp sponge.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2850",
+      "text": "Cut and shape tile to fit around obstacles and into odd spaces and corners, using hand and power cutting tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2849",
+      "text": "Determine and implement the best layout to achieve a desired pattern.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2853",
+      "text": "Mix, apply, and spread plaster, concrete, mortar, cement, mastic, glue or other adhesives to form a bed for the tiles, using brush, trowel and screed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2859",
+      "text": "Study blueprints and examine surface to be covered to determine amount of material needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2855",
+      "text": "Measure and mark surfaces to be tiled, following blueprints.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2864",
+      "text": "Lay and set mosaic tiles to create decorative wall, mural, and floor designs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2852",
+      "text": "Apply mortar to tile back, position the tile, and press or tap with trowel handle to affix tile to base.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2869",
+      "text": "Mix and apply mortar or cement to edges and ends of drain tiles to seal halves and joints.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2871",
+      "text": "Apply a sealer to make grout stain- and water-resistant.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2856",
+      "text": "Level concrete and allow to dry.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2867",
+      "text": "Measure and cut metal lath to size for walls and ceilings, using tin snips.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2861",
+      "text": "Install and anchor fixtures in designated positions, using hand tools.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2858",
+      "text": "Prepare surfaces for tiling by attaching lath or waterproof paper, or by applying a cement mortar coat to a metal screen.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2866",
+      "text": "Remove and replace cracked or damaged tile.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2862",
+      "text": "Cut tile backing to required size, using shears.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2863",
+      "text": "Remove any old tile, grout and adhesive using chisels and scrapers and clean the surface carefully.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2860",
+      "text": "Cut, surface, polish, and install marble and granite or install pre-cast terrazzo, granite or marble units.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2870",
+      "text": "Spread mastic or other adhesive base on roof deck to form base for promenade tile, using serrated spreader.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2865",
+      "text": "Assist customers in selection of tile and grout.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2854",
+      "text": "Prepare cost and labor estimates, based on calculations of time and materials needed for project.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2872",
+      "text": "Brush glue onto manila paper on which design has been drawn and position tiles, finished side down, onto paper.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2868",
+      "text": "Select and order tile and other items to be installed, such as bathroom accessories, walls, panels, and cabinets, according to specifications.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2857",
+      "text": "Build underbeds and install anchor bolts, wires, and brackets.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 44,
+  "salary": 55690,
+  "demand": "Medium"
+}

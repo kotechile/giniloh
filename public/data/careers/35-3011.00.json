@@ -1,0 +1,150 @@
+{
+  "code": "35-3011.00",
+  "title": "Bartenders",
+  "description": "Mix and serve drinks to patrons, directly or through waitstaff.",
+  "tasks": [
+    {
+      "id": "2227",
+      "text": "Clean glasses, utensils, and bar equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2223",
+      "text": "Collect money for drinks served.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2225",
+      "text": "Balance cash receipts.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "2224",
+      "text": "Check identification of customers to verify age requirements for purchase of alcohol.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2230",
+      "text": "Clean bars, work areas, and tables.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2226",
+      "text": "Attempt to limit problems and liability related to customers' excessive drinking by taking steps such as persuading customers to stop drinking, or ordering taxis or other transportation for intoxicated patrons.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2228",
+      "text": "Take beverage orders from serving staff or directly from patrons.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2229",
+      "text": "Serve wine, and bottled or draft beer.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2237",
+      "text": "Plan, organize, and control the operations of a cocktail lounge or bar.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18735",
+      "text": "Stock bar with beer, wine, liquor, and related supplies such as ice, glassware, napkins, or straws.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2232",
+      "text": "Serve snacks or food items to customers seated at the bar.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2231",
+      "text": "Mix ingredients, such as liquor, soda, water, sugar, and bitters, to prepare cocktails and other drinks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2235",
+      "text": "Slice and pit fruit for garnishing drinks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2234",
+      "text": "Ask customers who become loud and obnoxious to leave, or physically remove them.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2236",
+      "text": "Arrange bottles and glasses to make attractive displays.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2241",
+      "text": "Create drink recipes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2238",
+      "text": "Supervise the work of bar staff and other bartenders.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2233",
+      "text": "Order or requisition liquors and supplies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2239",
+      "text": "Plan bar menus.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2240",
+      "text": "Prepare appetizers such as pickles, cheese, and cold meats.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 34340,
+  "demand": "Very High"
+}

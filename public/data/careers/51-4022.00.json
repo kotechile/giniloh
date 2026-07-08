@@ -1,0 +1,101 @@
+{
+  "code": "51-4022.00",
+  "title": "Forging Machine Setters, Operators, and Tenders, Metal and Plastic",
+  "description": "Set up, operate, or tend forging machines to taper, shape, or form metal or plastic parts.",
+  "tasks": [
+    {
+      "id": "10079",
+      "text": "Read work orders or blueprints to determine specified tolerances and sequences of operations for machine setup.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10086",
+      "text": "Position and move metal wires or workpieces through a series of dies that compress and shape stock to form die impressions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10078",
+      "text": "Measure and inspect machined parts to ensure conformance to product specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10085",
+      "text": "Set up, operate, or tend presses and forging machines to perform hot or cold forging by flattening, straightening, bending, cutting, piercing, or other operations to taper, shape, or form metal.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10082",
+      "text": "Turn handles or knobs to set pressures and depths of ram strokes and to synchronize machine operations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10087",
+      "text": "Install, adjust, and remove dies, synchronizing cams, forging hammers, and stop guides, using overhead cranes or other hoisting devices, and hand tools.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10080",
+      "text": "Start machines to produce sample workpieces, and observe operations to detect machine malfunctions and to verify that machine setups conform to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10083",
+      "text": "Confer with other workers about machine setups and operational specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10089",
+      "text": "Trim and compress finished forgings to specified tolerances.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10081",
+      "text": "Remove dies from machines when production runs are finished.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10084",
+      "text": "Repair, maintain, and replace parts on dies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10088",
+      "text": "Select, align, and bolt positioning fixtures, stops, and specified dies to rams and anvils, forging rolls, or presses and hammers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10090",
+      "text": "Sharpen cutting tools and drill bits, using bench grinders.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 38,
+  "salary": 49030,
+  "demand": "Low"
+}

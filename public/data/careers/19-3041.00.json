@@ -1,0 +1,115 @@
+{
+  "code": "19-3041.00",
+  "title": "Sociologists",
+  "description": "Study human society and social behavior by examining the groups and social institutions that people form, as well as various social, religious, political, and business organizations. May study the behavior and interaction of groups, trace their origin and growth, and analyze the influence of group activities on individual members.",
+  "tasks": [
+    {
+      "id": "5465",
+      "text": "Analyze and interpret data to increase the understanding of human social behavior.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5464",
+      "text": "Prepare publications and reports containing research findings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5468",
+      "text": "Develop, implement, and evaluate methods of data collection, such as questionnaires or interviews.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5467",
+      "text": "Collect data about the attitudes, values, and behaviors of people in groups, using observation, interviews, and review of documents.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5469",
+      "text": "Teach sociology.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5466",
+      "text": "Plan and conduct research to develop and test theories about societal issues such as crime, group relations, poverty, and aging.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20868",
+      "text": "Present research findings at professional meetings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23963",
+      "text": "Explain sociological research to the general public.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5475",
+      "text": "Develop problem intervention procedures, using techniques such as interviews, consultations, role playing, and participant observation of group interactions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5471",
+      "text": "Consult with and advise individuals such as administrators, social workers, and legislators regarding social issues and policies, as well as the implications of research findings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5470",
+      "text": "Direct work of statistical clerks, statisticians, and others who compile and evaluate research data.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5472",
+      "text": "Collaborate with research workers in other disciplines.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23964",
+      "text": "Write grants to obtain funding for research projects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5473",
+      "text": "Develop approaches to the solution of groups' problems, based on research findings in sociology and related disciplines.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5474",
+      "text": "Observe group interactions and role affiliations to collect data, identify problems, evaluate progress, and determine the need for additional change.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 23,
+  "salary": 106030,
+  "demand": "Low"
+}

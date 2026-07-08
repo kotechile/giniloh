@@ -1,0 +1,220 @@
+{
+  "code": "53-7065.00",
+  "title": "Stockers and Order Fillers",
+  "description": "Receive, store, and issue merchandise, materials, equipment, and other items from stockroom, warehouse, or storage yard to fill shelves, racks, tables, or customers' orders. May operate power equipment to fill orders. May mark prices on merchandise and set up sales displays.",
+  "tasks": [
+    {
+      "id": "23871",
+      "text": "Complete order receipts.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23877",
+      "text": "Answer customers' questions about merchandise and advise customers on merchandise selection.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23886",
+      "text": "Issue or distribute materials, products, parts, and supplies to customers or coworkers, based on information from incoming requisitions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23895",
+      "text": "Keep records of out-going orders.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23880",
+      "text": "Stock shelves, racks, cases, bins, and tables with new or transferred merchandise.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23899",
+      "text": "Operate equipment such as forklifts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23879",
+      "text": "Stamp, attach, or change price tags on merchandise, referring to price list.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23872",
+      "text": "Obtain merchandise from bins or shelves.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23878",
+      "text": "Receive and count stock items, and record data manually or on computer.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23873",
+      "text": "Read orders to ascertain catalog numbers, sizes, colors, and quantities of merchandise.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23900",
+      "text": "Receive, unload, open, unpack, or issue sales floor merchandise.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23890",
+      "text": "Pack customer purchases in bags or cartons.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23875",
+      "text": "Store items in an orderly and accessible manner in warehouses, tool rooms, supply rooms, or other areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23884",
+      "text": "Mark stock items, using identification tags, stamps, electric marking tools, or other labeling equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23874",
+      "text": "Pack and unpack items to be stocked on shelves in stockrooms, warehouses, or storage yards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23885",
+      "text": "Take inventory or examine merchandise to identify items to be reordered or replenished.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23888",
+      "text": "Clean display cases, shelves, and aisles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23894",
+      "text": "Keep records on the use or damage of stock or stock-handling equipment.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23892",
+      "text": "Clean and maintain supplies, tools, equipment, and storage areas to ensure compliance with safety regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23898",
+      "text": "Determine proper storage methods, identification, and stock location, based on turnover, environmental factors, and physical capabilities of facilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23891",
+      "text": "Dispose of damaged or defective items, or return them to vendors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23893",
+      "text": "Recommend disposal of excess, defective, or obsolete stock.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23889",
+      "text": "Design and set up advertising signs and displays of merchandise on shelves, counters, or tables to attract customers and promote sales.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23887",
+      "text": "Provide assistance or direction to other stockroom, warehouse, or storage yard workers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23876",
+      "text": "Examine and inspect stock items for wear or defects, reporting any damage to supervisors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23896",
+      "text": "Compute prices of items or groups of items.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23882",
+      "text": "Itemize and total customer merchandise selection at checkout counter, using cash register, and accept cash or charge card for purchases.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23897",
+      "text": "Requisition merchandise from supplier, based on available space, merchandise on hand, customer demand, or advertised specials.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23881",
+      "text": "Compare merchandise invoices to items actually received to ensure that shipments are correct.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23883",
+      "text": "Transport packages to customers' vehicles.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 37330,
+  "demand": "Very High"
+}

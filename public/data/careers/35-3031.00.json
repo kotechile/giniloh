@@ -1,0 +1,185 @@
+{
+  "code": "35-3031.00",
+  "title": "Waiters and Waitresses",
+  "description": "Take orders and serve food and beverages to patrons at tables in dining establishment.",
+  "tasks": [
+    {
+      "id": "2276",
+      "text": "Collect payments from customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2275",
+      "text": "Check patrons' identification to ensure that they meet minimum age requirements for consumption of alcoholic beverages.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2277",
+      "text": "Write patrons' food orders on order slips, memorize orders, or enter orders into computers for transmittal to kitchen staff.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2279",
+      "text": "Check with customers to ensure that they are enjoying their meals, and take action to correct any problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2278",
+      "text": "Take orders from patrons for food or beverages.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2281",
+      "text": "Prepare checks that itemize and total meal costs and sales taxes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18745",
+      "text": "Remove dishes and glasses from tables or counters, and take them to kitchen for cleaning.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2285",
+      "text": "Clean tables or counters after patrons have finished dining.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2280",
+      "text": "Serve food or beverages to patrons, and prepare or serve specialty dishes at tables as required.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18747",
+      "text": "Perform cleaning duties, such as sweeping and mopping floors, vacuuming carpet, tidying up server station, taking out trash, or checking and cleaning bathroom.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "2283",
+      "text": "Present menus to patrons and answer questions about menu items, making recommendations upon request.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2288",
+      "text": "Prepare tables for meals, including setting up items such as linens, silverware, and glassware.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2290",
+      "text": "Stock service areas with supplies such as coffee, food, tableware, and linens.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18744",
+      "text": "Roll silverware, set up food stations, or set up dining areas to prepare for the next shift or for large parties.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2284",
+      "text": "Inform customers of daily specials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2287",
+      "text": "Explain how various menu items are prepared, describing ingredients and cooking methods.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18746",
+      "text": "Assist host or hostess by answering phones to take reservations or to-go orders, and by greeting, seating, and thanking guests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2292",
+      "text": "Fill salt, pepper, sugar, cream, condiment, and napkin containers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2289",
+      "text": "Perform food preparation duties, such as preparing salads, appetizers, and cold dishes, portioning desserts, and brewing coffee.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2286",
+      "text": "Prepare hot, cold, and mixed drinks for patrons, and chill bottles of wine.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2293",
+      "text": "Escort customers to their tables.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18748",
+      "text": "Provide guests with information about local areas, including directions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2291",
+      "text": "Garnish and decorate dishes in preparation for serving.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2295",
+      "text": "Bring wine selections to tables with appropriate glasses, and pour the wines for customers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2294",
+      "text": "Describe and recommend wines to customers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 44,
+  "salary": 35230,
+  "demand": "Very High"
+}

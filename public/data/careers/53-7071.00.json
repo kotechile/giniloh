@@ -1,0 +1,101 @@
+{
+  "code": "53-7071.00",
+  "title": "Gas Compressor and Gas Pumping Station Operators",
+  "description": "Operate steam-, gas-, electric motor-, or internal combustion-engine driven compressors. Transmit, compress, or recover gases, such as butane, nitrogen, hydrogen, and natural gas.",
+  "tasks": [
+    {
+      "id": "14596",
+      "text": "Monitor meters and pressure gauges to determine consumption rate variations, temperatures, and pressures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14603",
+      "text": "Respond to problems by adjusting control room equipment or instructing other personnel to adjust equipment at problem locations or in other control areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14600",
+      "text": "Record instrument readings and operational changes in operating logs.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "14597",
+      "text": "Adjust valves and equipment to obtain specified performance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14601",
+      "text": "Move controls and turn valves to start compressor engines, pumps, and auxiliary equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14599",
+      "text": "Operate power-driven pumps that transfer liquids, semi-liquids, gases, or powdered materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14606",
+      "text": "Submit daily reports on facility operations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14604",
+      "text": "Take samples of gases and conduct chemical tests to determine gas quality and sulfur or moisture content, or send samples to laboratories for analysis.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14598",
+      "text": "Read gas meters, and maintain records of the amounts of gas received and dispensed from holders.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "14602",
+      "text": "Turn knobs or switches to regulate pressures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14605",
+      "text": "Clean, lubricate, and adjust equipment, and replace filters and gaskets, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14608",
+      "text": "Maintain each station by performing general housekeeping duties such as painting, washing, and cleaning.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14607",
+      "text": "Connect pipelines between pumps and containers that are being filled or emptied.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 77320,
+  "demand": "Low"
+}

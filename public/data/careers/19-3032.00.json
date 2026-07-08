@@ -1,0 +1,185 @@
+{
+  "code": "19-3032.00",
+  "title": "Industrial-Organizational Psychologists",
+  "description": "Apply principles of psychology to human resources, administration, management, sales, and marketing problems. Activities may include policy planning; employee testing and selection, training, and development; and organizational development and analysis. May work with management to organize the work setting to improve worker productivity.",
+  "tasks": [
+    {
+      "id": "20230",
+      "text": "Provide advice on best practices and implementation for selection.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7560",
+      "text": "Develop and implement employee selection or placement programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7572",
+      "text": "Analyze data, using statistical methods and applications, to evaluate the outcomes and effectiveness of workplace programs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7568",
+      "text": "Develop interview techniques, rating scales, and psychological tests used to assess skills, abilities, and interests for the purpose of employee selection, placement, or promotion.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7562",
+      "text": "Observe and interview workers to obtain information about the physical, mental, and educational requirements of jobs, as well as information about aspects such as job satisfaction.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7571",
+      "text": "Facilitate organizational development and change.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7561",
+      "text": "Analyze job requirements and content to establish criteria for classification, selection, training, and other related personnel functions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7564",
+      "text": "Advise management concerning personnel, managerial, and marketing policies and practices and their potential effects on organizational effectiveness and efficiency.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20222",
+      "text": "Conduct presentations on research findings for clients or at research meetings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20229",
+      "text": "Coach senior executives and managers on leadership and performance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20225",
+      "text": "Conduct individual assessments, including interpreting measures and providing feedback for selection, placement, or promotion.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20228",
+      "text": "Train clients to administer human resources functions, including testing, selection, and performance management.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7569",
+      "text": "Assess employee performance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7565",
+      "text": "Identify training and development needs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7567",
+      "text": "Formulate and implement training programs, applying principles of learning and individual differences.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7570",
+      "text": "Study organizational effectiveness, productivity, and efficiency, including the nature of workplace supervision and leadership.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20223",
+      "text": "Provide expert testimony in employment lawsuits.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7566",
+      "text": "Conduct research studies of physical work environments, organizational structures, communication systems, group interactions, morale, or motivation to assess organizational functioning.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20227",
+      "text": "Develop new business by contacting potential clients, making sales presentations, and writing proposals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7563",
+      "text": "Write reports on research findings and implications to contribute to general knowledge or to suggest potential changes in organizational functioning.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20226",
+      "text": "Write articles, white papers, or reports to share research findings and educate others.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20224",
+      "text": "Review research literature to remain current on psychological science issues.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7573",
+      "text": "Counsel workers about job and career-related issues.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7575",
+      "text": "Participate in mediation and dispute resolution.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7574",
+      "text": "Study consumers' reactions to new products and package designs, and to advertising efforts, using surveys and tests.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 20,
+  "salary": 193950,
+  "demand": "Low"
+}

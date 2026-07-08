@@ -1,0 +1,115 @@
+{
+  "code": "39-2011.00",
+  "title": "Animal Trainers",
+  "description": "Train animals for riding, harness, security, performance, or obedience, or for assisting persons with disabilities. Accustom animals to human voice and contact, and condition animals to respond to commands. Train animals according to prescribed standards for show or competition. May train animals to carry pack loads or work as part of pack team.",
+  "tasks": [
+    {
+      "id": "7989",
+      "text": "Cue or signal animals during performances.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7993",
+      "text": "Talk to or interact with animals to familiarize them to human voices or contact.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20593",
+      "text": "Conduct training programs to develop or maintain desired animal behaviors for competition, entertainment, obedience, security, riding, or related purposes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7992",
+      "text": "Feed or exercise animals or provide other general care, such as cleaning or maintaining holding or performance areas.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7988",
+      "text": "Observe animals' physical conditions to detect illness or unhealthy conditions requiring medical care.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7991",
+      "text": "Evaluate animals to determine their temperaments, abilities, or aptitude for training.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7990",
+      "text": "Administer prescribed medications to animals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7995",
+      "text": "Keep records documenting animal health, diet, or behavior.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "20594",
+      "text": "Evaluate animals for trainability and ability to perform.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7996",
+      "text": "Advise animal owners regarding the purchase of specific animals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7998",
+      "text": "Train horses or other equines for riding, harness, show, racing, or other work, using knowledge of breed characteristics, training methods, performance standards, and the peculiarities of each animal.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7999",
+      "text": "Use oral, spur, rein, or hand commands to condition horses to carry riders or to pull horse-drawn equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8002",
+      "text": "Retrain horses to break bad habits, such as kicking, bolting, or resisting bridling or grooming.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8001",
+      "text": "Train dogs in human assistance or property protection duties.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8004",
+      "text": "Organize or conduct animal shows.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 33,
+  "salary": 39990,
+  "demand": "Low"
+}

@@ -1,0 +1,17 @@
+{
+  "code": "45-2099.00",
+  "title": "Agricultural Workers, All Other",
+  "description": "All agricultural workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Agricultural Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 39850,
+  "demand": "Low"
+}

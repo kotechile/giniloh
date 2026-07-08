@@ -1,0 +1,164 @@
+{
+  "code": "15-1211.00",
+  "title": "Computer Systems Analysts",
+  "description": "Analyze science, engineering, business, and other data processing problems to develop and implement solutions to complex applications problems, system administration issues, or network concerns. Perform systems management and integration functions, improve existing computer systems, and review computer system capabilities, workflow, and schedule limitations. May analyze or recommend commercially available software.",
+  "tasks": [
+    {
+      "id": "20950",
+      "text": "Troubleshoot program and system malfunctions to restore normal functioning.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3464",
+      "text": "Provide staff and users with assistance solving computer-related problems, such as malfunctions and program problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3465",
+      "text": "Test, maintain, and monitor computer programs and systems, including coordinating the installation of computer programs and systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3482",
+      "text": "Use the computer in the analysis and solution of business problems, such as development of integrated production and inventory control and cost analysis systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3468",
+      "text": "Coordinate and link the computer systems within an organization to increase compatibility so that information can be shared.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3466",
+      "text": "Use object-oriented programming languages, as well as client and server applications development processes and multimedia and Internet technology.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3474",
+      "text": "Analyze information processing or computation needs and plan and design computer systems, using techniques such as structured analysis, data modeling, and information engineering.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3469",
+      "text": "Consult with management to ensure agreement on system principles.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3484",
+      "text": "Specify inputs accessed by the system and plan the distribution and use of the results.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3470",
+      "text": "Expand or modify system to serve new purposes or improve work flow.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3473",
+      "text": "Train staff and users to work with computer systems and programs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3475",
+      "text": "Assess the usefulness of pre-developed application packages and adapt them to a user environment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3472",
+      "text": "Determine computer software or hardware needed to set up or alter systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3480",
+      "text": "Read manuals, periodicals, and technical reports to learn how to develop programs that meet staff and user requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3477",
+      "text": "Develop, document, and revise system design procedures, test procedures, and quality standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3479",
+      "text": "Recommend new equipment or software packages.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3476",
+      "text": "Define the goals of the system and devise flow charts and diagrams describing logical operational steps of programs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3467",
+      "text": "Confer with clients regarding the nature of the information processing or computation needs a computer program is to address.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3478",
+      "text": "Review and analyze computer printouts and performance indicators to locate code problems, and correct errors by correcting codes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3471",
+      "text": "Interview or survey workers, observe job performance, or perform the job to determine what information is processed and how it is processed.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3481",
+      "text": "Supervise computer programmers or other systems analysts or serve as project leaders for particular systems projects.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3483",
+      "text": "Prepare cost-benefit and return-on-investment analyses to aid in decisions on system implementation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 20,
+  "salary": 105850,
+  "demand": "Very High"
+}

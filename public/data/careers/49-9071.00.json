@@ -1,0 +1,199 @@
+{
+  "code": "49-9071.00",
+  "title": "Maintenance and Repair Workers, General",
+  "description": "Perform work involving the skills of two or more maintenance or craft occupations to keep machines, mechanical equipment, or the structure of a building in repair. Duties may involve pipe fitting; HVAC maintenance; insulating; welding; machining; carpentry; repairing electrical or mechanical equipment; installing, aligning, and balancing new equipment; and repairing buildings, floors, or stairs.",
+  "tasks": [
+    {
+      "id": "20671",
+      "text": "Perform routine maintenance, such as inspecting drives, motors, or belts, checking fluid levels, replacing filters, or doing other preventive maintenance actions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3024",
+      "text": "Inspect, operate, or test machinery or equipment to diagnose machine malfunctions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3030",
+      "text": "Adjust functional parts of devices or control instruments, using hand tools, levels, plumb bobs, or straightedges.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20672",
+      "text": "Repair machines, equipment, or structures, using tools such as hammers, hoists, saws, drills, wrenches, or equipment such as precision measuring instruments or electrical or electronic testing devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20674",
+      "text": "Order parts, supplies, or equipment from catalogs or suppliers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3023",
+      "text": "Diagnose mechanical problems and determine how to correct them, checking blueprints, repair manuals, or parts catalogs, as necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20679",
+      "text": "Design new equipment to aid in the repair or maintenance of machines, mechanical equipment, or building structures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3022",
+      "text": "Assemble, install, or repair wiring, electrical or electronic components, pipe systems, plumbing, machinery, or equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3026",
+      "text": "Clean or lubricate shafts, bearings, gears, or other parts of machinery.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20678",
+      "text": "Estimate costs to repair machinery, equipment, or building structures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3033",
+      "text": "Align and balance new equipment after installation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3025",
+      "text": "Record type and cost of maintenance or repair work.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "20673",
+      "text": "Maintain or repair specialized equipment or machinery located in cafeterias, laundries, hospitals, stores, offices, or factories.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20670",
+      "text": "Dismantle machines, equipment, or devices to access and remove defective parts, using hoists, cranes, hand tools, or power tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3028",
+      "text": "Plan and lay out repair work, using diagrams, drawings, blueprints, maintenance manuals, or schematic diagrams.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19898",
+      "text": "Install equipment to improve the energy or operational efficiency of residential or commercial buildings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3035",
+      "text": "Set up and operate machine tools to repair or fabricate machine parts, jigs, fixtures, or tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20675",
+      "text": "Perform general cleaning of buildings or properties.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20676",
+      "text": "Train or manage maintenance personnel or subcontractors.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3037",
+      "text": "Fabricate or repair counters, benches, partitions, or other wooden structures, such as sheds or outbuildings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3031",
+      "text": "Paint or repair roofs, windows, doors, floors, woodwork, plaster, drywall, or other parts of building structures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19899",
+      "text": "Perform routine maintenance on boilers, such as replacing burners or hoses, installing replacement parts, or reinforcing structural weaknesses to ensure optimal boiler efficiency.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20677",
+      "text": "Provide groundskeeping services, such as landscaping or snow removal.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3032",
+      "text": "Operate cutting torches or welding equipment to cut or join metal parts.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3034",
+      "text": "Inspect used parts to determine changes in dimensional requirements, using rules, calipers, micrometers, or other measuring instruments.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19897",
+      "text": "Assemble boilers at installation sites, using tools such as levels, plumb bobs, hammers, torches, or other hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19900",
+      "text": "Position, attach, or blow insulating materials to prevent energy losses from buildings, pipes, or other structures or objects.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 35,
+  "salary": 49590,
+  "demand": "Very High"
+}

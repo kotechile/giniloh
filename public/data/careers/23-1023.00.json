@@ -1,0 +1,157 @@
+{
+  "code": "23-1023.00",
+  "title": "Judges, Magistrate Judges, and Magistrates",
+  "description": "Arbitrate, advise, adjudicate, or administer justice in a court of law. May sentence defendant in criminal cases according to government statutes or sentencing guidelines. May determine liability of defendant in civil cases. May perform wedding ceremonies.",
+  "tasks": [
+    {
+      "id": "5644",
+      "text": "Sentence defendants in criminal cases, on conviction by jury, according to applicable government statutes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5649",
+      "text": "Monitor proceedings to ensure that all applicable rules and procedures are followed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5643",
+      "text": "Instruct juries on applicable laws, direct juries to deduce the facts from the evidence presented, and hear their verdicts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5653",
+      "text": "Write decisions on cases.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5647",
+      "text": "Read documents on pleadings and motions to ascertain facts and issues.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5645",
+      "text": "Rule on admissibility of evidence and methods of conducting testimony.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5646",
+      "text": "Preside over hearings and listen to allegations made by plaintiffs to determine whether the evidence supports the charges.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5654",
+      "text": "Award compensation for damages to litigants in civil cases in relation to findings by juries or by the court.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5650",
+      "text": "Advise attorneys, juries, litigants, and court personnel regarding conduct, issues, and proceedings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5651",
+      "text": "Research legal issues and write opinions on the issues.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5648",
+      "text": "Interpret and enforce rules of procedure or establish new rules in situations where there are no procedures already established by law.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21182",
+      "text": "Issue arrest warrants.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5655",
+      "text": "Settle disputes between opposing attorneys.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5657",
+      "text": "Impose restrictions upon parties in civil cases until trials can be held.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5656",
+      "text": "Supervise other judges, court officers, and the court's administrative staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5658",
+      "text": "Rule on custody and access disputes, and enforce court orders regarding custody and support of children.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5652",
+      "text": "Conduct preliminary hearings to decide issues, such as whether there is reasonable and probable cause to hold defendants in felony cases.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5659",
+      "text": "Grant divorces and divide assets between spouses.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5660",
+      "text": "Participate in judicial tribunals to help resolve disputes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20057",
+      "text": "Provide information regarding the judicial system or other legal issues through the media and public speeches.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5661",
+      "text": "Perform wedding ceremonies.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 33,
+  "salary": 153990,
+  "demand": "Low"
+}

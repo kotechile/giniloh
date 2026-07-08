@@ -1,0 +1,17 @@
+{
+  "code": "25-2059.00",
+  "title": "Special Education Teachers, All Other",
+  "description": "All special education teachers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Special Education Teachers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 76580,
+  "demand": "Medium"
+}

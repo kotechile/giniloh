@@ -1,0 +1,108 @@
+{
+  "code": "33-9021.00",
+  "title": "Private Detectives and Investigators",
+  "description": "Gather, analyze, compile, and report information regarding individuals or organizations to clients, or detect occurrences of unlawful acts or infractions of rules in private establishment.",
+  "tasks": [
+    {
+      "id": "13095",
+      "text": "Write reports or case summaries to document investigations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13099",
+      "text": "Conduct private investigations on a paid basis.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13096",
+      "text": "Search computer databases, credit reports, public records, tax or legal filings, or other resources to locate persons or to compile information for investigations.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "20758",
+      "text": "Conduct personal background investigations, such as pre-employment checks, to obtain information about an individual's character, financial status, or personal history.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13106",
+      "text": "Expose fraudulent insurance claims or stolen funds.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13097",
+      "text": "Obtain and analyze information on suspects, crimes, or disturbances to solve cases, to identify criminal activity, or to gather information for court cases.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13100",
+      "text": "Testify at hearings or court trials to present evidence.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13101",
+      "text": "Question persons to obtain evidence for cases of divorce, child custody, or missing persons or information about individuals' character or financial status.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13102",
+      "text": "Observe and document activities of individuals to detect unlawful acts or to obtain evidence for cases, using binoculars and still or video cameras.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13107",
+      "text": "Confer with establishment officials, security departments, police, or postal officials to identify problems, provide information, or receive instructions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13105",
+      "text": "Investigate companies' financial standings, or locate funds stolen by embezzlers, using accounting skills.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13104",
+      "text": "Perform undercover operations, such as evaluating the performance or honesty of employees by posing as customers or employees.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13103",
+      "text": "Alert appropriate personnel to suspects' locations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13109",
+      "text": "Count cash and review transactions, sales checks, or register tapes to verify amounts or to identify shortages.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 43,
+  "salary": 51220,
+  "demand": "Medium"
+}

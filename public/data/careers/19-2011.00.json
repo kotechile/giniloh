@@ -1,0 +1,129 @@
+{
+  "code": "19-2011.00",
+  "title": "Astronomers",
+  "description": "Observe, research, and interpret astronomical phenomena to increase basic knowledge or apply such information to practical problems.",
+  "tasks": [
+    {
+      "id": "7525",
+      "text": "Analyze research data to determine its significance, using computers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7526",
+      "text": "Present research findings at scientific conferences and in papers written for scientific journals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7524",
+      "text": "Study celestial phenomena, using a variety of ground-based and space-borne telescopes and scientific instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7530",
+      "text": "Collaborate with other astronomers to carry out research projects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21171",
+      "text": "Mentor graduate students and junior colleagues.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21172",
+      "text": "Supervise students' research on celestial and astronomical phenomena.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7532",
+      "text": "Teach astronomy or astrophysics.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7528",
+      "text": "Develop theories based on personal observations or on observations and theories of other astronomers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7527",
+      "text": "Measure radio, infrared, gamma, and x-ray emissions from extraterrestrial sources.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7531",
+      "text": "Develop instrumentation and software for astronomical observation and analysis.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20049",
+      "text": "Review scientific proposals and research papers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7529",
+      "text": "Raise funds for scientific research.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7533",
+      "text": "Develop and modify astronomy-related programs for public presentation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20050",
+      "text": "Serve on professional panels and committees.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7534",
+      "text": "Calculate orbits and determine sizes, shapes, brightness, and motions of different celestial bodies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21173",
+      "text": "Conduct question-and-answer presentations on astronomy topics with public audiences.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7535",
+      "text": "Direct the operations of a planetarium.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 24,
+  "salary": 128820,
+  "demand": "Low"
+}

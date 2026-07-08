@@ -1,0 +1,143 @@
+{
+  "code": "39-1014.00",
+  "title": "First-Line Supervisors of Entertainment and Recreation Workers, Except Gambling Services",
+  "description": "Directly supervise and coordinate activities of entertainment and recreation related workers.",
+  "tasks": [
+    {
+      "id": "23157",
+      "text": "Analyze and record personnel or operational data and write related activity reports.",
+      "type": "n/a",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23158",
+      "text": "Apply customer feedback to service improvement efforts.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23159",
+      "text": "Assign work schedules, following work requirements, to ensure quality and timely delivery of service.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23160",
+      "text": "Collaborate with staff members to plan or develop programs of events or schedules of activities.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23161",
+      "text": "Direct or coordinate the activities of entertainment and recreation related workers.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23162",
+      "text": "Furnish customers with information on events or activities.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23163",
+      "text": "Inform workers about interests or special needs of specific groups.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23164",
+      "text": "Inspect work areas or operating equipment to ensure conformance to established standards in areas such as cleanliness or maintenance.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23165",
+      "text": "Meet with managers or other supervisors to stay informed of changes affecting workers or operations.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23166",
+      "text": "Observe and evaluate workers' appearance and performance to ensure quality service and compliance with specifications.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23167",
+      "text": "Participate in continuing education to stay abreast of industry trends and developments.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23168",
+      "text": "Plan, direct, or supervise recreational and entertainment activities led by staff, such as sports, aquatics, games, or performing arts.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23169",
+      "text": "Provide staff with assistance in performing difficult or complicated duties.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23170",
+      "text": "Recruit and hire staff members.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23171",
+      "text": "Requisition supplies and equipment necessary for workers to facilitate recreational or entertainment activities, such as safety harnesses, flash lights, or first aid kits.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23172",
+      "text": "Resolve customer complaints regarding worker performance or services rendered.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23173",
+      "text": "Serve as a point of contact between managerial staff and leaders of recreational or entertainment activities.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23174",
+      "text": "Take disciplinary action to address performance problems.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23175",
+      "text": "Train workers in proper operational procedures and functions and explain company policies.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 24,
+  "salary": 48560,
+  "demand": "High"
+}

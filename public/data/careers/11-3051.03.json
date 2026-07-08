@@ -1,0 +1,108 @@
+{
+  "code": "11-3051.03",
+  "title": "Biofuels Production Managers",
+  "description": "Manage biofuels production and plant operations. Collect and process information on plant production and performance, diagnose problems, and design corrective procedures.",
+  "tasks": [
+    {
+      "id": "15454",
+      "text": "Supervise production employees in the manufacturing of biofuels, such as biodiesel or ethanol.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15462",
+      "text": "Manage operations at biofuels power generation facilities, including production, shipping, maintenance, or quality assurance activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15450",
+      "text": "Provide direction to employees to ensure compliance with biofuels plant safety, environmental, or operational standards and regulations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15453",
+      "text": "Confer with technical and supervisory personnel to report or resolve conditions affecting biofuels plant safety, operational efficiency, and product quality.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15456",
+      "text": "Review logs, datasheets, or reports to ensure adequate production levels or to identify abnormalities with biofuels production equipment or processes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15458",
+      "text": "Monitor meters, flow gauges, or other real-time data to ensure proper operation of biofuels production equipment, implementing corrective measures as needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15461",
+      "text": "Adjust temperature, pressure, vacuum, level, flow rate, or transfer of biofuels to maintain processes at required levels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15449",
+      "text": "Provide training to subordinate or new employees to improve biofuels plant safety or increase the production of biofuels.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15455",
+      "text": "Shut down and restart biofuels plant or equipment in emergency situations or for equipment maintenance, repairs, or replacements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15451",
+      "text": "Monitor transportation and storage of flammable or other potentially dangerous feedstocks or products to ensure adherence to safety guidelines.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15452",
+      "text": "Draw samples of biofuels products or secondary by-products for quality control testing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15460",
+      "text": "Approve proposals for the acquisition, replacement, or repair of biofuels processing equipment or the implementation of new production processes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15457",
+      "text": "Prepare and manage biofuels plant or unit budgets.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15459",
+      "text": "Conduct cost, material, and efficiency studies for biofuels production plants or operations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 18,
+  "salary": 126060,
+  "demand": "High"
+}

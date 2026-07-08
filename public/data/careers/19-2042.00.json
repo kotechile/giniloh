@@ -1,0 +1,234 @@
+{
+  "code": "19-2042.00",
+  "title": "Geoscientists, Except Hydrologists and Geographers",
+  "description": "Study the composition, structure, and other physical aspects of the Earth. May use geological, physics, and mathematics knowledge in exploration for oil, gas, minerals, or underground water; or in waste disposal, land reclamation, or other environmental problems. May study the Earth's internal composition, atmospheres, and oceans, and its magnetic, electrical, and gravitational forces. Includes mineralogists, paleontologists, stratigraphers, geodesists, and seismologists.",
+  "tasks": [
+    {
+      "id": "3703",
+      "text": "Plan or conduct geological, geochemical, or geophysical field studies or surveys, sample collection, or drilling and testing programs used to collect data for research or application.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15224",
+      "text": "Analyze and interpret geological data, using computer software.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3704",
+      "text": "Investigate the composition, structure, or history of the Earth's crust through the collection, examination, measurement, or classification of soils, minerals, rocks, or fossil remains.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3702",
+      "text": "Analyze and interpret geological, geochemical, or geophysical information from sources, such as survey data, well logs, bore holes, or aerial photos.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20391",
+      "text": "Identify risks for natural disasters, such as mudslides, earthquakes, or volcanic eruptions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3705",
+      "text": "Prepare geological maps, cross-sectional diagrams, charts, or reports concerning mineral extraction, land use, or resource management, using results of fieldwork or laboratory research.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3712",
+      "text": "Communicate geological findings by writing research papers, participating in conferences, or teaching geological science at universities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3706",
+      "text": "Locate and estimate probable natural gas, oil, or mineral ore deposits or underground water resources, using aerial photographs, charts, or research or survey results.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3711",
+      "text": "Advise construction firms or government agencies on dam or road construction, foundation design, land use, or resource management.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3713",
+      "text": "Measure characteristics of the Earth, such as gravity or magnetic fields, using equipment such as seismographs, gravimeters, torsion balances, or magnetometers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20390",
+      "text": "Locate and review research articles or environmental, historical, or technical reports.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3709",
+      "text": "Conduct geological or geophysical studies to provide information for use in regional development, site selection, or development of public works projects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21176",
+      "text": "Review environmental, historical, or technical reports and publications for accuracy.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3707",
+      "text": "Assess ground or surface water movement to provide advice on issues, such as waste management, route and site selection, or the restoration of contaminated sites.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20392",
+      "text": "Inspect construction projects to analyze engineering problems, using test equipment or drilling machinery.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19768",
+      "text": "Provide advice on the safe siting of new nuclear reactor projects or methods of nuclear waste management.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15226",
+      "text": "Design geological mine maps, monitor mine structural integrity, or advise and monitor mining crews.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19771",
+      "text": "Review work plans to determine the effectiveness of activities for mitigating soil or groundwater contamination.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3714",
+      "text": "Test industrial diamonds or abrasives, soil, or rocks to determine their geological characteristics, using optical, x-ray, heat, acid, or precision instruments.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19772",
+      "text": "Study historical climate change indicators found in locations, such as ice sheets or rock formations to develop climate change models.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19763",
+      "text": "Develop strategies for more environmentally friendly resource extraction and reclamation.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20393",
+      "text": "Identify deposits of construction materials suitable for use as concrete aggregates, road fill, or other applications.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19765",
+      "text": "Identify new sources of platinum group elements for industrial applications, such as automotive fuel cells or pollution abatement systems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19767",
+      "text": "Locate potential sources of geothermal energy.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19770",
+      "text": "Research ways to reduce the ecological footprint of increasingly prevalent megacities.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19760",
+      "text": "Collaborate with medical or health researchers to address health problems related to geological materials or processes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19762",
+      "text": "Determine ways to mitigate the negative consequences of mineral dust dispersion.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19766",
+      "text": "Identify possible sites for carbon sequestration projects.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19764",
+      "text": "Develop ways to capture or use gases burned off as waste during oil production processes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19769",
+      "text": "Research geomechanical or geochemical processes to be used in carbon sequestration projects.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3716",
+      "text": "Develop applied software for the analysis and interpretation of geological data.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19761",
+      "text": "Determine methods to incorporate geomethane or methane hydrates into global energy production or evaluate the potential environmental impacts of such incorporation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 27,
+  "salary": 101920,
+  "demand": "Low"
+}

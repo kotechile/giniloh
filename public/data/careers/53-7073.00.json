@@ -1,0 +1,108 @@
+{
+  "code": "53-7073.00",
+  "title": "Wellhead Pumpers",
+  "description": "Operate power pumps and auxiliary equipment to produce flow of oil or gas from wells in oil field.",
+  "tasks": [
+    {
+      "id": "21159",
+      "text": "Monitor pumps and flow lines for gas and fluid leaks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21160",
+      "text": "Gauge oil and gas production.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5019",
+      "text": "Start compressor engines and divert oil from storage tanks into compressor units and auxiliary equipment to recover natural gas from oil.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5013",
+      "text": "Monitor control panels during pumping operations to ensure that materials are being pumped at the correct pressure, density, rate, and concentration.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5014",
+      "text": "Operate engines and pumps to shut off wells according to production schedules, and to switch flow of oil into storage tanks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5016",
+      "text": "Repair gas and oil meters and gauges.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5015",
+      "text": "Perform routine maintenance on vehicles and equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5020",
+      "text": "Open valves to return compressed gas to bottoms of specified wells to repressurize them and force oil to surface.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21161",
+      "text": "Change water filters.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5023",
+      "text": "Prepare trucks and equipment necessary for the type of pumping service required.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5018",
+      "text": "Attach pumps and hoses to wellheads.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5025",
+      "text": "Mix acids, chemicals, or dry cement as required for a specific job.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5017",
+      "text": "Unload and assemble pipes and pumping equipment, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5021",
+      "text": "Supervise oil pumpers and other workers engaged in producing oil from wells.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 43,
+  "salary": 69960,
+  "demand": "Low"
+}

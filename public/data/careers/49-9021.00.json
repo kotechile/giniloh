@@ -1,0 +1,220 @@
+{
+  "code": "49-9021.00",
+  "title": "Heating, Air Conditioning, and Refrigeration Mechanics and Installers",
+  "description": "Install or repair heating, central air conditioning, HVAC, or refrigeration systems, including oil burners, hot-air furnaces, and heating stoves.",
+  "tasks": [
+    {
+      "id": "23552",
+      "text": "Test electrical circuits or components for continuity, using electrical test equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23557",
+      "text": "Comply with all applicable standards, policies, or procedures, such as safety procedures or the maintenance of a clean work area.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23558",
+      "text": "Study blueprints, design specifications, or manufacturers' recommendations to ascertain the configuration of heating or cooling equipment components and to ensure the proper installation of components.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23554",
+      "text": "Discuss heating or cooling system malfunctions with users to isolate problems or to verify that repairs corrected malfunctions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23555",
+      "text": "Connect heating or air conditioning equipment to fuel, water, or refrigerant source to form complete circuit.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23565",
+      "text": "Adjust system controls to settings recommended by manufacturer to balance system.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23568",
+      "text": "Recommend, develop, or perform preventive or general maintenance procedures, such as cleaning, power-washing, or vacuuming equipment, oiling parts, or changing filters.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23562",
+      "text": "Inspect and test systems to verify system compliance with plans and specifications or to detect and locate malfunctions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23553",
+      "text": "Repair or replace defective equipment, components, or wiring.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23579",
+      "text": "Install or repair self-contained ground source heat pumps or hybrid ground or air source heat pumps to minimize carbon-based energy consumption and reduce carbon emissions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23556",
+      "text": "Install, connect, or adjust thermostats, humidistats, or timers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23559",
+      "text": "Install auxiliary components to heating or cooling equipment, such as expansion or discharge valves, air ducts, pipes, blowers, dampers, flues, or stokers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23560",
+      "text": "Braze or solder parts to repair defective joints and leaks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23561",
+      "text": "Lay out and connect electrical wiring between controls and equipment, according to wiring diagrams, using electrician's hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23564",
+      "text": "Perform mechanical overhauls and refrigerant reclaiming.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23566",
+      "text": "Install expansion and control valves, using acetylene torches and wrenches.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23571",
+      "text": "Measure, cut, thread, or bend pipe or tubing, using pipe fitter's tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23570",
+      "text": "Mount compressor, condenser, and other components in specified locations on frames, using hand tools and acetylene welding equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23567",
+      "text": "Install dehumidifiers or related equipment for spaces that require cool, dry air to operate efficiently, such as computer rooms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23563",
+      "text": "Record and report time, materials, faults, deficiencies, or other unusual occurrences on work orders.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23572",
+      "text": "Keep records of repairs and replacements made and causes of malfunctions.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23569",
+      "text": "Cut or drill holes in floors, walls, or roof to install equipment, using power saws or drills.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23574",
+      "text": "Estimate, order, pick up, deliver, and install materials and supplies needed to maintain equipment in good working condition.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23575",
+      "text": "Schedule work with customers and initiate work orders, house requisitions, and orders from stock.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23576",
+      "text": "Supervise and instruct assistants.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23577",
+      "text": "Lay out reference points for installation of structural and functional components, using measuring instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23578",
+      "text": "Lift and align components into position, using hoist or block and tackle.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23573",
+      "text": "Install or repair air purification systems, such as specialized filters or ultraviolet (UV) light purification systems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23580",
+      "text": "Repair or service heating, ventilating, and air conditioning (HVAC) systems to improve efficiency, such as by changing filters, cleaning ducts, and refilling non-toxic refrigerants.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23581",
+      "text": "Test pipes, lines, components, and connections for leaks.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 43,
+  "salary": 61010,
+  "demand": "Very High"
+}

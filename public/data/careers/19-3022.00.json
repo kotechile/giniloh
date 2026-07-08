@@ -1,0 +1,122 @@
+{
+  "code": "19-3022.00",
+  "title": "Survey Researchers",
+  "description": "Plan, develop, or conduct surveys. May analyze and interpret the meaning of survey data, determine survey objectives, or suggest or test question wording. Includes social scientists who primarily design questionnaires or supervise survey teams.",
+  "tasks": [
+    {
+      "id": "7550",
+      "text": "Conduct surveys and collect data, using methods such as interviews, questionnaires, focus groups, market analysis surveys, public opinion polls, literature reviews, and file reviews.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7545",
+      "text": "Prepare and present summaries and analyses of survey data, including tables, graphs, and fact sheets that describe survey techniques and results.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7546",
+      "text": "Consult with clients to identify survey needs and specific requirements, such as special samples.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7555",
+      "text": "Determine and specify details of survey projects, including sources of information, procedures to be used, and the design of survey instruments and materials.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7556",
+      "text": "Support, plan, and coordinate operations for single or multiple surveys.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7553",
+      "text": "Monitor and evaluate survey progress and performance, using sample disposition reports and response rate calculations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7551",
+      "text": "Collaborate with other researchers in the planning, implementation, and evaluation of surveys.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7549",
+      "text": "Conduct research to gather information about survey topics.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7552",
+      "text": "Direct and review the work of staff members, including survey support staff and interviewers who gather survey data.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7557",
+      "text": "Direct updates and changes in survey implementation and methods.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7554",
+      "text": "Produce documentation of the questionnaire development process, data collection methods, sampling designs, and decisions related to sample statistical weighting.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21107",
+      "text": "Write proposals to win new projects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7548",
+      "text": "Review, classify, and record survey data in preparation for computer analysis.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "7547",
+      "text": "Analyze data from surveys, old records, or case studies, using statistical software.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "7559",
+      "text": "Write training manuals to be used by survey interviewers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7558",
+      "text": "Hire and train recruiters and data collectors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 31,
+  "salary": 69460,
+  "demand": "Low"
+}

@@ -1,0 +1,199 @@
+{
+  "code": "45-2092.00",
+  "title": "Farmworkers and Laborers, Crop, Nursery, and Greenhouse",
+  "description": "Manually plant, cultivate, and harvest vegetables, fruits, nuts, horticultural specialties, and field crops. Use hand tools, such as shovels, trowels, hoes, tampers, pruning hooks, shears, and knives. Duties may include tilling soil and applying fertilizers; transplanting, weeding, thinning, or pruning crops; applying pesticides; or cleaning, grading, sorting, packing, and loading harvested products. May construct trellises, repair fences and farm buildings, or participate in irrigation activities.",
+  "tasks": [
+    {
+      "id": "23387",
+      "text": "Record information about crops, such as pesticide use, yields, or costs.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23379",
+      "text": "Direct and monitor the work of casual and seasonal help during planting and harvesting.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23392",
+      "text": "Participate in the inspection, grading, sorting, storage, and post-harvest treatment of crops.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23370",
+      "text": "Harvest plants, and transplant or pot and label them.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23373",
+      "text": "Repair and maintain farm vehicles, implements, and mechanical equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23374",
+      "text": "Harvest fruits and vegetables by hand.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23372",
+      "text": "Set up and operate irrigation equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23378",
+      "text": "Inform farmers or farm managers of crop progress.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23380",
+      "text": "Identify plants, pests, and weeds to determine the selection and application of pesticides and fertilizers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23371",
+      "text": "Operate tractors, tractor-drawn machinery, and self-propelled machinery to plow, harrow and fertilize soil, or to plant, cultivate, spray and harvest crops.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23397",
+      "text": "Load agricultural products into trucks, and drive trucks to market or storage facilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23375",
+      "text": "Clean work areas, and maintain grounds and landscaping.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23376",
+      "text": "Sell and deliver plants and flowers to customers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23381",
+      "text": "Regulate greenhouse conditions, and indoor and outdoor irrigation systems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23383",
+      "text": "Feel plants' leaves and note their coloring to detect the presence of insects or disease.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23384",
+      "text": "Provide information and advice to the public regarding the selection, purchase, and care of products.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23385",
+      "text": "Maintain and repair irrigation and climate control systems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23386",
+      "text": "Dig, cut, and transplant seedlings, cuttings, trees, and shrubs.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23390",
+      "text": "Record information about plants and plant growth.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23389",
+      "text": "Maintain inventory, ordering materials as required.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23391",
+      "text": "Dig, rake, and screen soil, filling cold frames and hot beds in preparation for planting.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23393",
+      "text": "Inspect plants and bud ties to assess quality.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23395",
+      "text": "Move containerized shrubs, plants, and trees, using wheelbarrows or tractors.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23396",
+      "text": "Tie and bunch flowers, plants, shrubs, and trees, wrap their roots, and pack them into boxes to fill orders.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23398",
+      "text": "Haul and spread topsoil, fertilizer, peat moss, and other materials to condition soil, using wheelbarrows or carts and shovels.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23388",
+      "text": "Repair farm buildings, fences, and other structures.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23399",
+      "text": "Plant, spray, weed, fertilize, water, and prune plants, shrubs, and trees, using gardening tools.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 30,
+  "salary": 35660,
+  "demand": "High"
+}

@@ -1,0 +1,143 @@
+{
+  "code": "45-2093.00",
+  "title": "Farmworkers, Farm, Ranch, and Aquacultural Animals",
+  "description": "Attend to live farm, ranch, open range or aquacultural animals that may include cattle, sheep, swine, goats, horses and other equines, poultry, rabbits, finfish, shellfish, and bees. Attend to animals produced for animal products, such as meat, fur, skins, feathers, eggs, milk, and honey. Duties may include feeding, watering, herding, grazing, milking, castrating, branding, de-beaking, weighing, catching, and loading animals. May maintain records on animals; examine animals to detect diseases and injuries; assist in birth deliveries; and administer medications, vaccinations, or insecticides as appropriate. May clean and maintain animal housing areas. Includes workers who shear wool from sheep and collect eggs in hatcheries.",
+  "tasks": [
+    {
+      "id": "13410",
+      "text": "Feed and water livestock and monitor food and water supplies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13419",
+      "text": "Herd livestock to pastures for grazing or to scales, trucks, or other enclosures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13412",
+      "text": "Examine animals to detect illness, injury, or disease, and to check physical characteristics, such as rate of weight gain.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13413",
+      "text": "Provide medical treatment, such as administering medications and vaccinations, or arrange for veterinarians to provide more extensive treatment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13418",
+      "text": "Mark livestock to identify ownership and grade, using brands, tags, paint, or tattoos.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13411",
+      "text": "Drive trucks, tractors, and other equipment to distribute feed to animals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13424",
+      "text": "Segregate animals according to weight, age, color, and physical condition.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13415",
+      "text": "Inspect, maintain, and repair equipment, machinery, buildings, pens, yards, and fences.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "13416",
+      "text": "Move equipment, poultry, or livestock from one location to another, manually or using trucks or carts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13417",
+      "text": "Clean stalls, pens, and equipment, using disinfectant solutions, brushes, shovels, water hoses, or pumps.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13414",
+      "text": "Mix feed, additives, and medicines in prescribed portions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13420",
+      "text": "Shift animals between grazing areas to ensure that they have sufficient access to food.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13430",
+      "text": "Protect herds from predators, using trained dogs.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13421",
+      "text": "Order food for animals, and arrange for its delivery.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13422",
+      "text": "Perform duties related to livestock reproduction, such as breeding animals within appropriate timeframes, performing artificial inseminations, and helping with animal births.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13425",
+      "text": "Patrol grazing lands on horseback or using all-terrain vehicles.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13426",
+      "text": "Maintain growth, feeding, production, and cost records.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "13427",
+      "text": "Groom, clip, trim, or castrate animals, dock ears and tails, or shear coats to collect hair.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13428",
+      "text": "Spray livestock with disinfectants and insecticides, or dip or bathe animals.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 45,
+  "salary": 36670,
+  "demand": "Medium"
+}

@@ -1,0 +1,164 @@
+{
+  "code": "29-1124.00",
+  "title": "Radiation Therapists",
+  "description": "Provide radiation therapy to patients as prescribed by a radiation oncologist according to established practices and standards. Duties may include reviewing prescription and diagnosis; acting as liaison with physician and supportive care personnel; preparing equipment, such as immobilization, treatment, and protection devices; and maintaining records, reports, and files. May assist in dosimetry procedures and tumor localization.",
+  "tasks": [
+    {
+      "id": "4086",
+      "text": "Position patients for treatment with accuracy, according to prescription.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4085",
+      "text": "Administer prescribed doses of radiation to specific body parts, using radiation therapy equipment according to established practices and standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4088",
+      "text": "Follow principles of radiation protection for patient, self, and others.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4090",
+      "text": "Review prescription, diagnosis, patient chart, and identification.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4091",
+      "text": "Conduct most treatment sessions independently, in accordance with the long-term treatment plan and under the general direction of the patient's physician.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4087",
+      "text": "Enter data into computer and set controls to operate or adjust equipment or regulate dosage.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "4092",
+      "text": "Check radiation therapy equipment to ensure proper operation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4093",
+      "text": "Observe and reassure patients during treatment and report unusual reactions to physician or turn equipment off if unexpected adverse reactions occur.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4095",
+      "text": "Educate, prepare, and reassure patients and their families by answering questions, providing physical assistance, and reinforcing physicians' advice regarding treatment reactions or post-treatment care.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4089",
+      "text": "Maintain records, reports, or files as required, including such information as radiation dosages, equipment settings, or patients' reactions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4094",
+      "text": "Check for side effects, such as skin irritation, nausea, or hair loss to assess patients' reaction to treatment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4097",
+      "text": "Prepare or construct equipment, such as immobilization, treatment, or protection devices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4099",
+      "text": "Help physicians, radiation oncologists, or clinical physicists to prepare physical or technical aspects of radiation treatment plans, using information about patient condition and anatomy.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4096",
+      "text": "Calculate actual treatment dosages delivered during each session.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4098",
+      "text": "Photograph treated area of patient and process film.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4101",
+      "text": "Act as liaison with physicist and supportive care personnel.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20408",
+      "text": "Schedule patients for treatment times.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4102",
+      "text": "Provide assistance to other healthcare personnel during dosimetry procedures and tumor localization.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4100",
+      "text": "Train or supervise student or subordinate radiotherapy technologists.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4103",
+      "text": "Implement appropriate follow-up care plans.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4104",
+      "text": "Store, sterilize, or prepare the special applicators containing the radioactive substance implanted by the physician.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4105",
+      "text": "Assist in the preparation of sealed radioactive materials, such as cobalt, radium, cesium, or isotopes, for use in radiation treatments.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 11,
+  "salary": 105310,
+  "demand": "Low"
+}

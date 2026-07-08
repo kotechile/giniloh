@@ -1,0 +1,157 @@
+{
+  "code": "17-2112.02",
+  "title": "Validation Engineers",
+  "description": "Design or plan protocols for equipment or processes to produce products meeting internal and external purity, safety, and quality requirements.",
+  "tasks": [
+    {
+      "id": "21051",
+      "text": "Study product characteristics or customer requirements to determine validation objectives and standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18131",
+      "text": "Analyze validation test data to determine whether systems or processes have met validation criteria or to identify root causes of production problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18129",
+      "text": "Develop validation master plans, process flow diagrams, test cases, or standard operating procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18137",
+      "text": "Prepare detailed reports or design statements, based on results of validation and qualification tests or reviews of procedures and protocols.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18144",
+      "text": "Maintain validation test equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18127",
+      "text": "Conduct validation or qualification tests of new or existing processes, equipment, or software in accordance with internal protocols or external standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18142",
+      "text": "Communicate with regulatory agencies regarding compliance documentation or validation results.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18146",
+      "text": "Prepare, maintain, or review validation and compliance documentation, such as engineering change notices, schematics, or protocols.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21052",
+      "text": "Recommend resolution of identified deviations from established product or process standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18128",
+      "text": "Design validation study features, such as sampling, testing, or analytical methodologies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18130",
+      "text": "Prepare validation or performance qualification protocols for new or modified manufacturing processes, systems, or equipment for production of pharmaceuticals, electronics, or other products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18133",
+      "text": "Create, populate, or maintain databases for tracking validation activities, test results, or validated systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18139",
+      "text": "Resolve testing problems by modifying testing methods or revising test objectives and standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18132",
+      "text": "Conduct audits of validation or performance qualification processes to ensure compliance with internal or regulatory requirements.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21053",
+      "text": "Draw samples of raw materials, intermediate products, or finished products for validation testing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18134",
+      "text": "Direct validation activities, such as protocol creation or testing.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18143",
+      "text": "Coordinate the implementation or scheduling of validation testing with affected departments and personnel.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18145",
+      "text": "Participate in internal or external training programs to maintain knowledge of validation principles, industry trends, or novel technologies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19647",
+      "text": "Validate or characterize sustainable or environmentally friendly products, using electronic testing platforms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18141",
+      "text": "Assist in training equipment operators or other staff on validation protocols and standard operating procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21054",
+      "text": "Devise automated lab validation test stations or other test fixtures or equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 29,
+  "salary": 102440,
+  "demand": "Very High"
+}

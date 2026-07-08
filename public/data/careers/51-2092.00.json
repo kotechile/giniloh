@@ -1,0 +1,87 @@
+{
+  "code": "51-2092.00",
+  "title": "Team Assemblers",
+  "description": "Work as part of a team having responsibility for assembling an entire product or component of a product. Team assemblers can perform all tasks conducted by the team in the assembly process and rotate through all or most of them, rather than being assigned to a specific task on a permanent basis. May participate in making management decisions affecting the work. Includes team leaders who work as part of the team.",
+  "tasks": [
+    {
+      "id": "20157",
+      "text": "Perform quality checks on products and parts.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20160",
+      "text": "Review work orders and blueprints to ensure work is performed according to specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8468",
+      "text": "Rotate through all the tasks required in a particular production process.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8469",
+      "text": "Determine work assignments and procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20163",
+      "text": "Supervise assemblers and train employees on job procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20159",
+      "text": "Shovel, sweep, or otherwise clean work areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8472",
+      "text": "Provide assistance in the production of wiring assemblies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20162",
+      "text": "Maintain production equipment and machinery.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20161",
+      "text": "Complete production reports to communicate team production level to management.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20158",
+      "text": "Package finished products and prepare them for shipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20164",
+      "text": "Operate machinery and heavy equipment, such as forklifts.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 32,
+  "salary": 45179,
+  "demand": "Very High"
+}

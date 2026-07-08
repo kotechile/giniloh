@@ -1,0 +1,115 @@
+{
+  "code": "49-2095.00",
+  "title": "Electrical and Electronics Repairers, Powerhouse, Substation, and Relay",
+  "description": "Inspect, test, repair, or maintain electrical equipment in generating stations, substations, and in-service relays.",
+  "tasks": [
+    {
+      "id": "11743",
+      "text": "Inspect and test equipment and circuits to identify malfunctions or defects, using wiring diagrams and testing devices such as ohmmeters, voltmeters, or ammeters.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11747",
+      "text": "Prepare and maintain records detailing tests, repairs, and maintenance.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11744",
+      "text": "Consult manuals, schematics, wiring diagrams, and engineering personnel to troubleshoot and solve equipment problems and to determine optimum equipment functioning.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11748",
+      "text": "Analyze test data to diagnose malfunctions, to determine performance characteristics of systems, or to evaluate effects of system modifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11746",
+      "text": "Open and close switches to isolate defective relays, performing adjustments or repairs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11745",
+      "text": "Notify facility personnel of equipment shutdowns.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11750",
+      "text": "Repair, replace, and clean equipment and components such as circuit breakers, brushes, and commutators.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11753",
+      "text": "Run signal quality and connectivity tests for individual cables, and record results.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11756",
+      "text": "Maintain inventories of spare parts for all equipment, requisitioning parts as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11742",
+      "text": "Construct, test, maintain, and repair substation relay and control systems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11749",
+      "text": "Test insulators and bushings of equipment by inducing voltage across insulation, testing current, and calculating insulation loss.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11752",
+      "text": "Schedule and supervise the construction and testing of special devices and the implementation of unique monitoring or control systems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11754",
+      "text": "Schedule and supervise splicing or termination of cables in color-code order.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11755",
+      "text": "Test oil in circuit breakers and transformers for dielectric strength, refilling oil periodically.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11751",
+      "text": "Disconnect voltage regulators, bolts, and screws, and connect replacement regulators to high-voltage lines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 40,
+  "salary": 103020,
+  "demand": "Low"
+}

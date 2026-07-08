@@ -1,0 +1,164 @@
+{
+  "code": "33-3041.00",
+  "title": "Parking Enforcement Workers",
+  "description": "Patrol assigned area, such as public parking lot or city streets to issue tickets to overtime parking violators and illegally parked vehicles.",
+  "tasks": [
+    {
+      "id": "7951",
+      "text": "Enter and retrieve information pertaining to vehicle registration, identification, and status, using hand-held computers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7935",
+      "text": "Patrol an assigned area by vehicle or on foot to ensure public compliance with existing parking ordinance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7937",
+      "text": "Write warnings and citations for illegally parked vehicles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7947",
+      "text": "Appear in court at hearings regarding contested traffic citations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7945",
+      "text": "Maintain assigned equipment and supplies, such as hand-held citation computers, citation books, rain gear, tire-marking chalk, and street cones.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7939",
+      "text": "Respond to and make radio dispatch calls regarding parking violations and complaints.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7936",
+      "text": "Maintain close communications with dispatching personnel, using two-way radios or cell phones.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7942",
+      "text": "Perform simple vehicle maintenance procedures, such as checking oil and gas, and report mechanical problems to supervisors.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7943",
+      "text": "Observe and report hazardous conditions, such as missing traffic signals or signs, and street markings that need to be repainted.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7941",
+      "text": "Identify vehicles in violation of parking codes, checking with dispatchers when necessary to confirm identities or to determine whether vehicles need to be booted or towed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7940",
+      "text": "Train new or temporary staff.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7948",
+      "text": "Make arrangements for illegally parked or abandoned vehicles to be towed, and direct tow-truck drivers to the correct vehicles.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7944",
+      "text": "Investigate and answer complaints regarding contested parking citations, determining their validity and routing them appropriately.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7946",
+      "text": "Provide information to the public regarding parking regulations and facilities, and the location of streets, buildings and points of interest.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7953",
+      "text": "Prepare and maintain required records, including logs of parking enforcement activities, and records of contested citations.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "7949",
+      "text": "Perform traffic control duties such as setting up barricades and temporary signs, placing bags on parking meters to limit their use, or directing traffic.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7938",
+      "text": "Mark tires of parked vehicles with chalk and record time of marking, and return at regular intervals to ensure that parking time limits are not exceeded.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "7954",
+      "text": "Locate lost, stolen, and counterfeit parking permits, and take necessary enforcement action.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7952",
+      "text": "Collect coins deposited in meters.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7955",
+      "text": "Wind parking meter clocks.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7950",
+      "text": "Provide assistance to motorists needing help with problems, such as flat tires, keys locked in cars, or dead batteries.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7956",
+      "text": "Assign and review the work of subordinates.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 45,
+  "salary": 46730,
+  "demand": "Low"
+}

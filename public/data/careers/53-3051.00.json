@@ -1,0 +1,129 @@
+{
+  "code": "53-3051.00",
+  "title": "Bus Drivers, School",
+  "description": "Drive a school bus to transport students. Ensure adherence to safety rules. May assist students in boarding or exiting.",
+  "tasks": [
+    {
+      "id": "23716",
+      "text": "Comply with traffic regulations to operate vehicles in a safe and courteous manner.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23719",
+      "text": "Follow safety rules as students board and exit buses or cross streets near bus stops.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23715",
+      "text": "Check the condition of a vehicle's tires, brakes, windshield wipers, lights, oil, fuel, water, and safety equipment to ensure that everything is in working order.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23729",
+      "text": "Report any bus malfunctions or needed repairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23724",
+      "text": "Pick up and drop off students at regularly scheduled neighborhood locations, following strict time schedules.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23717",
+      "text": "Drive gasoline, diesel, or electrically powered multi-passenger vehicles to transport students between neighborhoods, schools, and school activities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23722",
+      "text": "Maintain order among students during trips to ensure safety.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23725",
+      "text": "Prepare and submit reports that may include the number of students or trips, hours worked, mileage, or fuel consumption.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23721",
+      "text": "Maintain knowledge of first-aid procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23727",
+      "text": "Record bus routes.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23730",
+      "text": "Report delays, accidents, or other traffic and transportation situations, using telephones or mobile two-way radios.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23720",
+      "text": "Keep bus interiors clean for students.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23726",
+      "text": "Read maps and follow written and verbal geographic directions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23728",
+      "text": "Regulate heating, lighting, and ventilation systems for student comfort.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23731",
+      "text": "Report delinquent student behaviors to school administration.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23718",
+      "text": "Escort small children across roads and highways.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23723",
+      "text": "Make minor repairs to vehicles.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 47920,
+  "demand": "Very High"
+}

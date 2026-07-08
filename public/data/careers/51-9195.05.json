@@ -1,0 +1,171 @@
+{
+  "code": "51-9195.05",
+  "title": "Potters, Manufacturing",
+  "description": "Operate production machines such as pug mill, jigger machine, or potter's wheel to process clay in manufacture of ceramic, pottery and stoneware products.",
+  "tasks": [
+    {
+      "id": "21210",
+      "text": "Operate gas or electric kilns to fire pottery pieces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21211",
+      "text": "Mix and apply glazes to pottery pieces, using tools, such as spray guns.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15118",
+      "text": "Raise and shape clay into wares, such as vases and pitchers, on revolving wheels, using hands, fingers, and thumbs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15115",
+      "text": "Adjust wheel speeds according to the feel of the clay as pieces enlarge and walls become thinner.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15117",
+      "text": "Position balls of clay in centers of potters' wheels, and start motors or pump treadles with feet to revolve wheels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15122",
+      "text": "Move pieces from wheels so that they can dry.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15119",
+      "text": "Prepare work for sale or exhibition, and maintain relationships with retail, pottery, art, and resource networks that can facilitate sale or exhibition of work.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21212",
+      "text": "Attach handles to pottery pieces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15114",
+      "text": "Press thumbs into centers of revolving clay to form hollows, and press on the inside and outside of emerging clay cylinders with hands and fingers, gradually raising and shaping clay to desired forms and sizes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21213",
+      "text": "Pack and ship pottery to stores or galleries for retail sale.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15120",
+      "text": "Smooth surfaces of finished pieces, using rubber scrapers and wet sponges.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15123",
+      "text": "Pull wires through bases of articles and wheels to separate finished pieces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21214",
+      "text": "Design spaces to display pottery for sale.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15127",
+      "text": "Verify accuracy of shapes and sizes of objects, using calipers and templates.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15124",
+      "text": "Examine finished ware for defects and measure dimensions, using rule and thickness gauge.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15126",
+      "text": "Maintain supplies of tools, equipment, and materials, and order additional supplies as needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15131",
+      "text": "Operate pug mills to blend and extrude clay.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15125",
+      "text": "Perform test-fires of pottery to determine how to achieve specific colors and textures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15129",
+      "text": "Start machine units and conveyors and observe lights and gauges on panel board to verify operational efficiency.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15128",
+      "text": "Operate drying chambers to dry or finish molded ceramic ware.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15130",
+      "text": "Adjust pressures, temperatures, and trimming tool settings as required.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15121",
+      "text": "Design clay forms and molds, and decorations for forms.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15133",
+      "text": "Teach pottery classes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 41,
+  "salary": 46170,
+  "demand": "Medium"
+}

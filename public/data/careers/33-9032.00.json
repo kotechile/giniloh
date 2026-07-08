@@ -1,0 +1,108 @@
+{
+  "code": "33-9032.00",
+  "title": "Security Guards",
+  "description": "Guard, patrol, or monitor premises to prevent theft, violence, or infractions of rules. May operate x-ray and metal detector equipment.",
+  "tasks": [
+    {
+      "id": "20894",
+      "text": "Lock doors and gates of entrances and exits to secure buildings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2131",
+      "text": "Patrol industrial or commercial premises to prevent and detect signs of intrusion and ensure security of doors, windows, and gates.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20895",
+      "text": "Respond to medical emergencies by administering basic first aid or by obtaining assistance from paramedics.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2132",
+      "text": "Answer alarms and investigate disturbances.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2136",
+      "text": "Circulate among visitors, patrons, or employees to preserve order and protect property.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2133",
+      "text": "Monitor and authorize entrance and departure of employees, visitors, and other persons to guard against theft and maintain security of premises.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2134",
+      "text": "Write reports of daily activities and irregularities, such as equipment or property damage, theft, presence of unauthorized persons, or unusual occurrences.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2138",
+      "text": "Warn persons of rule infractions or violations, and apprehend or evict violators from premises, using force when necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2137",
+      "text": "Answer telephone calls to take messages, answer questions, and provide information during non-business hours or when switchboard is closed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2135",
+      "text": "Call police or fire departments in cases of emergency, such as fire or presence of unauthorized persons.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2139",
+      "text": "Operate detecting devices to screen individuals and prevent passage of prohibited articles into restricted areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2141",
+      "text": "Inspect and adjust security systems, equipment, or machinery to ensure operational use and to detect evidence of tampering.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2140",
+      "text": "Escort or drive motor vehicle to transport individuals to specified locations or to provide personal protection.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2143",
+      "text": "Monitor and adjust controls that regulate building systems, such as air conditioning, furnace, or boiler.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 39,
+  "salary": 38020,
+  "demand": "Very High"
+}

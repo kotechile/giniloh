@@ -1,0 +1,185 @@
+{
+  "code": "51-5113.00",
+  "title": "Print Binding and Finishing Workers",
+  "description": "Bind books and other publications or finish printed products by hand or machine. May set up binding and finishing machines.",
+  "tasks": [
+    {
+      "id": "19460",
+      "text": "Examine stitched, collated, bound, or unbound product samples for defects, such as imperfect bindings, ink spots, torn pages, loose pages, or loose or uncut threads.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19453",
+      "text": "Read work orders to determine instructions and specifications for machine set-up.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19461",
+      "text": "Install or adjust bindery machine devices, such as knives, guides, rollers, rounding forms, creasing rams, or clamps, to accommodate sheets, signatures, or books of specified sizes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19459",
+      "text": "Trim edges of books to size, using cutting machines, book trimming machines, or hand cutters.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19458",
+      "text": "Stitch or glue endpapers, bindings, backings, or signatures, using sewing machines, glue machines, or glue and brushes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19450",
+      "text": "Monitor machine operations to detect malfunctions or to determine whether adjustments are needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19448",
+      "text": "Maintain records, such as daily production records, using specified forms.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "19462",
+      "text": "Lubricate, clean, or make minor repairs to machine parts to keep machines in working condition.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19455",
+      "text": "Set up or operate bindery machines, such as coil binders, thermal or tape binders, plastic comb binders, or specialty binders.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19457",
+      "text": "Set up or operate machines that perform binding operations, such as pressing, folding, or trimming.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19463",
+      "text": "Prepare finished books for shipping by wrapping or packing books and stacking boxes on pallets.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "19456",
+      "text": "Set up or operate glue machines by filling glue reservoirs, turning switches to activate heating elements, or adjusting glue flow or conveyor speed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19464",
+      "text": "Train workers to set up, operate, and use automatic bindery machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19447",
+      "text": "Insert book bodies in devices that form back edges of books into convex shapes and produce grooves that facilitate cover attachment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19443",
+      "text": "Cut cover material to specified dimensions, fitting and gluing material to binder boards by hand or machine.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19442",
+      "text": "Cut binder boards to specified dimensions, using board shears, hand cutters, or cutting machines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19440",
+      "text": "Bind new books, using hand tools such as bone folders, knives, hammers, or brass binding tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19451",
+      "text": "Perform highly skilled hand finishing binding operations, such as grooving or lettering.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19446",
+      "text": "Imprint or emboss lettering, designs, or numbers on book covers, using gold, silver, or colored foil, and stamping machines.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19441",
+      "text": "Compress sewed or glued signatures, using hand presses or smashing machines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19449",
+      "text": "Meet with clients, printers, or designers to discuss job requirements or binding plans.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19445",
+      "text": "Form book bodies by folding and sewing printed sheets to form signatures and assembling signatures in numerical order.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19444",
+      "text": "Design original or special bindings for limited editions or other custom binding projects.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19452",
+      "text": "Punch holes in and fasten paper sheets, signatures, or other material, using hand or machine punches and staplers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19454",
+      "text": "Repair, restore, or rebind old, rare, or damaged books, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 42290,
+  "demand": "Medium"
+}

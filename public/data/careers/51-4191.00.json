@@ -1,0 +1,171 @@
+{
+  "code": "51-4191.00",
+  "title": "Heat Treating Equipment Setters, Operators, and Tenders, Metal and Plastic",
+  "description": "Set up, operate, or tend heating equipment, such as heat-treating furnaces, flame-hardening machines, induction machines, soaking pits, or vacuum equipment to temper, harden, anneal, or heat treat metal or plastic objects.",
+  "tasks": [
+    {
+      "id": "12087",
+      "text": "Read production schedules and work orders to determine processing sequences, furnace temperatures, and heat cycle requirements for objects to be heat-treated.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12088",
+      "text": "Record times that parts are removed from furnaces to document that objects have attained specified temperatures for specified times.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "12094",
+      "text": "Adjust controls to maintain temperatures and heating times, using thermal instruments and charts, dials and gauges of furnaces, and color of stock in furnaces to make setting determinations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12107",
+      "text": "Start conveyors and open furnace doors to load stock, or signal crane operators to uncover soaking pits and lower ingots into them.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12089",
+      "text": "Set up and operate or tend machines, such as furnaces, baths, flame-hardening machines, and electronic induction machines, that harden, anneal, and heat-treat metal.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12091",
+      "text": "Remove parts from furnaces after specified times, and air dry or cool parts in water, oil brine, or other baths.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12099",
+      "text": "Move controls to light gas burners and to adjust gas and water flow and flame temperature.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12093",
+      "text": "Instruct new workers in machine operation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12095",
+      "text": "Determine flame temperatures, current frequencies, heating cycles, and induction heating coils needed, based on degree of hardness required and properties of stock to be treated.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12090",
+      "text": "Determine types and temperatures of baths and quenching media needed to attain specified part hardness, toughness, and ductility, using heat-treating charts and knowledge of methods, equipment, and metals.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12104",
+      "text": "Examine parts to ensure metal shades and colors conform to specifications, using knowledge of metal heat-treating.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12112",
+      "text": "Set and adjust speeds of reels and conveyors for prescribed time cycles to pass parts through continuous furnaces.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12096",
+      "text": "Load parts into containers and place containers on conveyors to be inserted into furnaces, or insert parts into furnaces.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12102",
+      "text": "Test parts for hardness, using hardness testing equipment, or by examining and feeling samples.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12101",
+      "text": "Signal forklift operators to deposit or extract containers of parts into and from furnaces and quenching rinse tanks.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12097",
+      "text": "Mount workpieces in fixtures, on arbors, or between centers of machines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12100",
+      "text": "Reduce heat when processing is complete to allow parts to cool in furnaces or machinery.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12113",
+      "text": "Mount fixtures and industrial coils on machines, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12108",
+      "text": "Heat billets, bars, plates, rods, and other stock to specified temperatures preparatory to forging, rolling, or processing, using oil, gas, or electrical furnaces.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12092",
+      "text": "Position stock in furnaces, using tongs, chain hoists, or pry bars.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12106",
+      "text": "Repair, replace, and maintain furnace equipment as needed, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12109",
+      "text": "Clean oxides and scales from parts or fittings, using steam sprays or chemical and water baths.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12111",
+      "text": "Stamp heat-treatment identification marks on parts, using hammers and punches.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 48,
+  "salary": 48750,
+  "demand": "Low"
+}

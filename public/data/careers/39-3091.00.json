@@ -1,0 +1,129 @@
+{
+  "code": "39-3091.00",
+  "title": "Amusement and Recreation Attendants",
+  "description": "Perform a variety of attending duties at amusement or recreation facility. May schedule use of recreation facilities, maintain and provide equipment to participants of sporting events or recreational pursuits, or operate amusement concessions and rides.",
+  "tasks": [
+    {
+      "id": "5119",
+      "text": "Sell tickets and collect fees from customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5116",
+      "text": "Provide information about facilities, entertainment options, and rules and regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5120",
+      "text": "Keep informed of shut-down and emergency evacuation procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5130",
+      "text": "Direct patrons to rides, seats, or attractions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5118",
+      "text": "Monitor activities to ensure adherence to rules and safety procedures, or arrange for the removal of unruly patrons.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5117",
+      "text": "Record details of attendance, sales, receipts, reservations, or repair activities.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "5134",
+      "text": "Maintain inventories of equipment, storing and retrieving items and assembling and disassembling equipment as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5131",
+      "text": "Provide assistance to patrons entering or exiting amusement rides, boats, or ski lifts, or mounting or dismounting animals.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5121",
+      "text": "Clean sporting equipment, vehicles, rides, booths, facilities, or grounds.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5125",
+      "text": "Inspect equipment to detect wear and damage and perform minor repairs, adjustments, or maintenance tasks, such as oiling parts.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5128",
+      "text": "Verify, collect, or punch tickets before admitting patrons to venues, such as amusement parks and rides.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5124",
+      "text": "Fasten safety devices for patrons, or provide them with directions for fastening devices.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5123",
+      "text": "Announce or describe amusement park attractions to patrons to entice customers to games and other entertainment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5133",
+      "text": "Schedule the use of recreation facilities, such as golf courses, tennis courts, bowling alleys, or softball diamonds.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5132",
+      "text": "Sell and serve refreshments to customers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5127",
+      "text": "Rent, sell, or issue sporting equipment and supplies, such as bowling shoes, golf balls, swimming suits, or beach chairs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5126",
+      "text": "Operate, drive, or explain the use of mechanical riding devices or other automatic equipment in amusement parks, carnivals, or recreation areas.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 41,
+  "salary": 32150,
+  "demand": "Very High"
+}

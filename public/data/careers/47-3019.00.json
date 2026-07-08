@@ -1,0 +1,17 @@
+{
+  "code": "47-3019.00",
+  "title": "Helpers, Construction Trades, All Other",
+  "description": "All construction trades helpers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Helpers, Construction Trades, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 42670,
+  "demand": "Low"
+}

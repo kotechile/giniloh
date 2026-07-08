@@ -1,0 +1,122 @@
+{
+  "code": "49-9098.00",
+  "title": "Helpers--Installation, Maintenance, and Repair Workers",
+  "description": "Help installation, maintenance, and repair workers in maintenance, parts replacement, and repair of vehicles, industrial machinery, and electrical and electronic equipment. Perform duties such as furnishing tools, materials, and supplies to other workers; cleaning work area, machines, and tools; and holding materials or tools for other workers.",
+  "tasks": [
+    {
+      "id": "3083",
+      "text": "Install or replace machinery, equipment, and new or replacement parts and instruments, using hand or power tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3081",
+      "text": "Examine and test machinery, equipment, components, and parts for defects to ensure proper functioning.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3080",
+      "text": "Tend and observe equipment and machinery to verify efficient and safe operation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3082",
+      "text": "Adjust, connect, or disconnect wiring, piping, tubing, and other parts, using hand or power tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3084",
+      "text": "Clean or lubricate vehicles, machinery, equipment, instruments, tools, work areas, and other objects, using hand tools, power tools, and cleaning equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3091",
+      "text": "Hold or supply tools, parts, equipment, and supplies for other workers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20152",
+      "text": "Diagnose electrical problems and install and rewire electrical components.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3087",
+      "text": "Disassemble broken or defective equipment to facilitate repair and reassemble equipment when repairs are complete.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3090",
+      "text": "Position vehicles, machinery, equipment, physical structures, and other objects for assembly or installation, using hand tools, power tools, and moving equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3086",
+      "text": "Transfer tools, parts, equipment, and supplies to and from work stations and other areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20150",
+      "text": "Adjust, maintain, and repair tools, equipment, and machines, and assist more skilled workers with similar tasks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20151",
+      "text": "Order new parts to maintain inventory.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3085",
+      "text": "Apply protective materials to equipment, components, and parts to prevent defects and corrosion.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20153",
+      "text": "Design, weld, and fabricate parts, using blueprints or other mechanical plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3088",
+      "text": "Assemble and maintain physical structures, using hand or power tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3092",
+      "text": "Prepare work stations for use by mechanics and repairers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 44,
+  "salary": 39630,
+  "demand": "Medium"
+}

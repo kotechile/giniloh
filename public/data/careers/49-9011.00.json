@@ -1,0 +1,185 @@
+{
+  "code": "49-9011.00",
+  "title": "Mechanical Door Repairers",
+  "description": "Install, service, or repair automatic door mechanisms and hydraulic doors. Includes garage door mechanics.",
+  "tasks": [
+    {
+      "id": "8388",
+      "text": "Wind large springs with upward motion of arm.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8387",
+      "text": "Adjust doors to open or close with the correct amount of effort, or make simple adjustments to electric openers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8394",
+      "text": "Carry springs to tops of doors, using ladders or scaffolding, and attach springs to tracks to install spring systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8393",
+      "text": "Repair or replace worn or broken door parts, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8391",
+      "text": "Complete required paperwork, such as work orders, according to services performed or required.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8392",
+      "text": "Fasten angle iron back-hangers to ceilings and tracks, using fasteners or welding equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8390",
+      "text": "Collect payment upon job completion.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8397",
+      "text": "Install door frames, rails, steel rolling curtains, electronic-eye mechanisms, or electric door openers and closers, using power tools, hand tools, and electronic test equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8389",
+      "text": "Inspect job sites, assessing headroom, side room, or other conditions to determine appropriateness of door for a given location.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "8399",
+      "text": "Assemble and fasten tracks to structures or bucks, using impact wrenches or welding equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8395",
+      "text": "Set doors into place or stack hardware sections into openings after rail or track installation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8403",
+      "text": "Operate lifts, winches, or chain falls to move heavy curtain doors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8396",
+      "text": "Remove or disassemble defective automatic mechanical door closers, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8409",
+      "text": "Fabricate replacements for worn or broken parts, using welders, lathes, drill presses, or shaping or milling machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20805",
+      "text": "Prepare doors for hardware installation, such as drilling holes to install locks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8400",
+      "text": "Run low voltage wiring on ceiling surfaces, using insulated staples.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8401",
+      "text": "Cut door stops or angle irons to fit openings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8402",
+      "text": "Study blueprints and schematic diagrams to determine appropriate methods of installing or repairing automated door openers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8408",
+      "text": "Install dock seals, bumpers, or shelters.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8404",
+      "text": "Order replacement springs, sections, or slats.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8407",
+      "text": "Lubricate door closer oil chambers, and pack spindles with leather washers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8406",
+      "text": "Set in and secure floor treadles for door-activating mechanisms, and connect power packs and electrical panelboards to treadles.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8411",
+      "text": "Cover treadles with carpeting or other floor covering materials, and test systems by operating treadles.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8405",
+      "text": "Bore or cut holes in flooring as required for installation, using hand or power tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8410",
+      "text": "Clean door closer parts, using caustic soda, rotary brushes, or grinding wheels.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 48,
+  "salary": 55720,
+  "demand": "Medium"
+}

@@ -1,0 +1,108 @@
+{
+  "code": "29-1022.00",
+  "title": "Oral and Maxillofacial Surgeons",
+  "description": "Perform surgery and related procedures on the hard and soft tissues of the oral and maxillofacial regions to treat diseases, injuries, or defects. May diagnose problems of the oral and maxillofacial regions. May perform surgery to improve function or appearance.",
+  "tasks": [
+    {
+      "id": "9370",
+      "text": "Administer general and local anesthetics.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9373",
+      "text": "Collaborate with other professionals, such as restorative dentists and orthodontists, to plan treatment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9372",
+      "text": "Evaluate the position of the wisdom teeth to determine whether problems exist currently or might occur in the future.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9374",
+      "text": "Perform surgery to prepare the mouth for dental implants and to aid in the regeneration of deficient bone and gum tissues.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9371",
+      "text": "Remove impacted, damaged, and non-restorable teeth.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9376",
+      "text": "Treat infections of the oral cavity, salivary glands, jaws, and neck.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9375",
+      "text": "Remove tumors and other abnormal growths of the oral and facial regions, using surgical instruments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9378",
+      "text": "Provide emergency treatment of facial injuries including facial lacerations, intra-oral lacerations, and fractured facial bones.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9377",
+      "text": "Treat problems affecting the oral mucosa, such as mouth ulcers and infections.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9380",
+      "text": "Restore form and function by moving skin, bone, nerves, and other tissues from other parts of the body to reconstruct the jaws and face.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9379",
+      "text": "Perform surgery on the mouth and jaws to treat conditions such as cleft lip, cleft palate, and jaw growth problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20244",
+      "text": "Perform minor cosmetic procedures, such as chin and cheekbone enhancements.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20245",
+      "text": "Perform minor facial rejuvenation procedures, including the use of Botox and laser technology.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9382",
+      "text": "Treat snoring problems, using laser surgery.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 14,
+  "salary": 352220,
+  "demand": "Low"
+}

@@ -1,0 +1,143 @@
+{
+  "code": "11-9041.00",
+  "title": "Architectural and Engineering Managers",
+  "description": "Plan, direct, or coordinate activities in such fields as architecture and engineering or research and development in these fields.",
+  "tasks": [
+    {
+      "id": "20170",
+      "text": "Manage the coordination and overall integration of technical activities in architecture or engineering projects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20171",
+      "text": "Direct, review, or approve project design changes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1071",
+      "text": "Consult or negotiate with clients to prepare project specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20172",
+      "text": "Prepare budgets, bids, or contracts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1070",
+      "text": "Present and explain proposals, reports, or findings to clients.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1060",
+      "text": "Confer with management, production, or marketing staff to discuss project specifications or procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20173",
+      "text": "Assess project feasibility by analyzing technology, resource needs, or market demand.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20175",
+      "text": "Review, recommend, or approve contracts or cost estimates.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20176",
+      "text": "Develop or implement policies, standards, or procedures for engineering and technical work.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20178",
+      "text": "Establish scientific or technical goals within broad outlines provided by top management.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20174",
+      "text": "Direct recruitment, placement, and evaluation of architecture or engineering project staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20177",
+      "text": "Perform administrative functions, such as reviewing or writing reports, approving expenditures, enforcing rules, or purchasing of materials or services.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19525",
+      "text": "Develop or implement programs to improve sustainability or reduce the environmental impacts of engineering or architecture activities or operations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19527",
+      "text": "Evaluate the environmental impacts of engineering, architecture, or research and development activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1063",
+      "text": "Plan or direct the installation, testing, operation, maintenance, or repair of facilities or equipment.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19528",
+      "text": "Identify environmental threats or opportunities associated with the development and launch of new technologies.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20180",
+      "text": "Plan, direct, or coordinate survey work with other project activities.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19526",
+      "text": "Evaluate environmental regulations or social pressures related to environmental issues to inform strategic or operational decision-making.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20179",
+      "text": "Solicit project support by conferring with officials or providing information to the public.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 11,
+  "salary": 171270,
+  "demand": "High"
+}

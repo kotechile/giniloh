@@ -1,0 +1,199 @@
+{
+  "code": "19-2021.00",
+  "title": "Atmospheric and Space Scientists",
+  "description": "Investigate atmospheric phenomena and interpret meteorological data, gathered by surface and air stations, satellites, and radar to prepare reports and forecasts for public and other uses. Includes weather analysts and forecasters whose functions require the detailed knowledge of meteorology.",
+  "tasks": [
+    {
+      "id": "20208",
+      "text": "Develop or use mathematical or computer models for weather forecasting.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20209",
+      "text": "Interpret data, reports, maps, photographs, or charts to predict long- or short-range weather conditions, using computer models and knowledge of climate theory, physics, and mathematics.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20210",
+      "text": "Conduct meteorological research into the processes or determinants of atmospheric phenomena, weather, or climate.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19759",
+      "text": "Formulate predictions by interpreting environmental data, such as meteorological, atmospheric, oceanic, paleoclimate, climate, or related information.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9068",
+      "text": "Broadcast weather conditions, forecasts, or severe weather warnings to the public via television, radio, or the Internet or provide this information to the news media.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9070",
+      "text": "Prepare forecasts or briefings to meet the needs of industry, business, government, or other groups.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9069",
+      "text": "Gather data from sources such as surface or upper air stations, satellites, weather bureaus, or radar for use in meteorological reports or forecasts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21104",
+      "text": "Develop computer programs to collect meteorological data or to present meteorological information.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20206",
+      "text": "Prepare weather reports or maps for analysis, distribution, or use in weather broadcasts, using computer graphics.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21105",
+      "text": "Develop and deliver training on weather topics.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20211",
+      "text": "Prepare scientific atmospheric or climate reports, articles, or texts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19755",
+      "text": "Analyze climate data sets, using techniques such as geophysical fluid dynamics, data assimilation, or numerical modeling.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20205",
+      "text": "Analyze historical climate information, such as precipitation or temperature records, to help predict future weather or climate trends.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "20203",
+      "text": "Consult with other offices, agencies, professionals, or researchers regarding the use and interpretation of climatological information for weather predictions and warnings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21103",
+      "text": "Speak to the public to discuss weather topics or answer questions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20207",
+      "text": "Apply meteorological knowledge to issues such as global warming, pollution control, or ozone depletion.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20202",
+      "text": "Perform managerial duties, such as creating work schedules, creating or implementing staff training, matching staff expertise to situations, or analyzing performance of offices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9074",
+      "text": "Measure wind, temperature, and humidity in the upper atmosphere, using weather balloons.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9076",
+      "text": "Direct forecasting services at weather stations or at radio or television broadcasting facilities.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9078",
+      "text": "Collect air samples from planes or ships over land or sea to study atmospheric composition.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20204",
+      "text": "Teach college-level courses on topics such as atmospheric and space science, meteorology, or global climate change.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9083",
+      "text": "Design or develop new equipment or methods for meteorological data collection, remote sensing, or related applications.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20212",
+      "text": "Research the impact of industrial projects or pollution on climate, air quality, or weather phenomena.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19756",
+      "text": "Conduct wind assessment, integration, or validation studies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9079",
+      "text": "Conduct numerical simulations of climate conditions to understand and predict global or regional weather patterns.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19758",
+      "text": "Estimate or predict the effects of global warming over time for specific geographic regions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19757",
+      "text": "Create visualizations to illustrate historical or future changes in the Earth's climate, using paleoclimate or climate geographic information systems (GIS) databases.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 33,
+  "salary": 99070,
+  "demand": "Low"
+}

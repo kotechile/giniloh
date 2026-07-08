@@ -1,0 +1,150 @@
+{
+  "code": "13-1041.06",
+  "title": "Coroners",
+  "description": "Direct activities such as autopsies, pathological and toxicological analyses, and inquests relating to the investigation of deaths occurring within a legal jurisdiction to determine cause of death or to fix responsibility for accidental, violent, or unexplained deaths.",
+  "tasks": [
+    {
+      "id": "8915",
+      "text": "Complete death certificates, including the assignment of cause and manner of death.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8912",
+      "text": "Perform medicolegal examinations and autopsies, conducting preliminary examinations of the body to identify victims, locate signs of trauma, and identify factors that would indicate time of death.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8921",
+      "text": "Interview persons present at death scenes to obtain information useful in determining the manner of death.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8916",
+      "text": "Observe and record the positions and conditions of bodies and related evidence.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "8923",
+      "text": "Provide information concerning the circumstances of death to relatives of the deceased.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8920",
+      "text": "Remove or supervise removal of bodies from death scenes, using the proper equipment and supplies, and arrange for transportation to morgues.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8913",
+      "text": "Inquire into the cause, manner, and circumstances of human deaths and establish the identities of deceased persons.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8918",
+      "text": "Observe, record, and preserve any objects or personal property related to deaths, including objects such as medication containers and suicide notes.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "8919",
+      "text": "Complete reports and forms required to finalize cases.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8928",
+      "text": "Arrange for the next of kin to be notified of deaths.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8924",
+      "text": "Locate and document information regarding the next of kin, including their relationship to the deceased and the status of notification attempts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8917",
+      "text": "Collect and document any pertinent medical history information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8926",
+      "text": "Inventory personal effects recovered from bodies, such as jewelry or wallets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20181",
+      "text": "Direct activities of workers conducting autopsies, performing pathological and toxicological analyses, and preparing documents for permanent records.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8927",
+      "text": "Coordinate the release of personal effects to authorized persons and facilitate the disposition of unclaimed corpses and personal effects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8931",
+      "text": "Witness and certify deaths that are the result of a judicial order.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8922",
+      "text": "Testify at inquests, hearings, and court trials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8925",
+      "text": "Confer with officials of public health and law enforcement agencies to coordinate interdepartmental activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "8930",
+      "text": "Collect wills, burial instructions, and other documentation needed for investigations and for handling of the remains.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8929",
+      "text": "Record the disposition of minor children, as well as details of arrangements made for their care.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 80730,
+  "demand": "Very High"
+}

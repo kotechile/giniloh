@@ -1,0 +1,164 @@
+{
+  "code": "29-1126.00",
+  "title": "Respiratory Therapists",
+  "description": "Assess, treat, and care for patients with breathing disorders. Assume primary responsibility for all respiratory care modalities, including the supervision of respiratory therapy technicians. Initiate and conduct therapeutic procedures; maintain patient records; and select, assemble, check, and operate equipment.",
+  "tasks": [
+    {
+      "id": "398",
+      "text": "Provide emergency care, such as artificial respiration, external cardiac massage, or assistance with cardiopulmonary resuscitation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "400",
+      "text": "Monitor patient's physiological responses to therapy, such as vital signs, arterial blood gases, or blood chemistry changes, and consult with physician if adverse reactions occur.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "397",
+      "text": "Set up and operate devices, such as mechanical ventilators, therapeutic gas administration apparatus, environmental control systems, or aerosol generators, following specified parameters of treatment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18522",
+      "text": "Work as part of a team of physicians, nurses, or other healthcare professionals to manage patient care by assisting with medical procedures or related duties.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "404",
+      "text": "Maintain charts that contain patients' pertinent identification and therapy information.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "401",
+      "text": "Read prescription, measure arterial blood gases, and review patient information to assess patient condition.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "408",
+      "text": "Relay blood analysis results to a physician.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "405",
+      "text": "Inspect, clean, test, and maintain respiratory therapy equipment to ensure equipment is functioning safely and efficiently, ordering repairs when necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "407",
+      "text": "Explain treatment procedures to patients to gain cooperation and allay fears.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "414",
+      "text": "Make emergency visits to resolve equipment problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "399",
+      "text": "Determine requirements for treatment, such as type, method and duration of therapy, precautions to be taken, or medication and dosages, compatible with physicians' orders.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "403",
+      "text": "Enforce safety rules and ensure careful adherence to physicians' orders.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "406",
+      "text": "Educate patients and their families about their conditions and teach appropriate disease management techniques, such as breathing exercises or the use of medications or respiratory equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "410",
+      "text": "Perform bronchopulmonary drainage and assist or instruct patients in performance of breathing exercises.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "415",
+      "text": "Conduct tests, such as electrocardiograms (EKGs), stress testing, or lung capacity tests, to evaluate patients' cardiopulmonary functions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "409",
+      "text": "Perform pulmonary function and adjust equipment to obtain optimum results in therapy.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "411",
+      "text": "Demonstrate respiratory care procedures to trainees or other healthcare personnel.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "413",
+      "text": "Use a variety of testing techniques to assist doctors in cardiac or pulmonary research or to diagnose disorders.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20409",
+      "text": "Transport patients to the hospital or within the hospital.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "412",
+      "text": "Teach, train, supervise, or use the assistance of students, respiratory therapy technicians, or assistants.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20410",
+      "text": "Perform endotracheal intubation to maintain open airways for patients who are unable to breathe on their own.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20411",
+      "text": "Monitor cardiac patients, using electrocardiography devices, such as a holter monitor.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 9,
+  "salary": 82280,
+  "demand": "High"
+}

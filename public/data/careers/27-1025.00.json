@@ -1,0 +1,122 @@
+{
+  "code": "27-1025.00",
+  "title": "Interior Designers",
+  "description": "Plan, design, and furnish the internal space of rooms or buildings. Design interior environments or create physical layouts that are practical, aesthetic, and conducive to the intended purposes. May specialize in a particular field, style, or phase of interior design.",
+  "tasks": [
+    {
+      "id": "20996",
+      "text": "Design plans to be safe and to be compliant with the American Disabilities Act (ADA).",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18521",
+      "text": "Use computer-aided drafting (CAD) and related software to produce construction documents.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23995",
+      "text": "Research health and safety code requirements to inform design.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1735",
+      "text": "Confer with client to determine factors affecting planning of interior environments, such as budget, architectural preferences, purpose, and function.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1736",
+      "text": "Advise client on interior design factors, such as space planning, layout and use of furnishings or equipment, and color coordination.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18519",
+      "text": "Coordinate with other professionals, such as contractors, architects, engineers, and plumbers, to ensure job success.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18520",
+      "text": "Review and detail shop drawings for construction plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20997",
+      "text": "Inspect construction work on site to ensure its adherence to the design plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1740",
+      "text": "Render design ideas in form of paste-ups or drawings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1739",
+      "text": "Subcontract fabrication, installation, and arrangement of carpeting, fixtures, accessories, draperies, paint and wall coverings, art work, furniture, and related items.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1737",
+      "text": "Select or design, and purchase furnishings, art work, and accessories.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1734",
+      "text": "Estimate material requirements and costs, and present design to client for approval.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20999",
+      "text": "Research and explore the use of new materials, technologies, and products to incorporate into designs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20998",
+      "text": "Design spaces to be environmentally friendly, using sustainable, recycled materials when feasible.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1738",
+      "text": "Formulate environmental plan to be practical, esthetic, and conducive to intended purposes, such as raising productivity or selling merchandise.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1741",
+      "text": "Plan and design interior environments for boats, planes, buses, trains, and other enclosed spaces.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 3,
+  "salary": 67190,
+  "demand": "Medium"
+}

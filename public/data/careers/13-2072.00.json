@@ -1,0 +1,220 @@
+{
+  "code": "13-2072.00",
+  "title": "Loan Officers",
+  "description": "Evaluate, authorize, or recommend approval of commercial, real estate, or credit loans. Advise borrowers on financial status and payment methods. Includes mortgage loan officers and agents, collection analysts, loan servicing officers, loan underwriters, and payday loan officers.",
+  "tasks": [
+    {
+      "id": "3408",
+      "text": "Meet with applicants to obtain information for loan applications and to answer questions about the process.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3409",
+      "text": "Analyze applicants' financial status, credit, and property evaluations to determine feasibility of granting loans.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3407",
+      "text": "Approve loans within specified limits, and refer loan applications outside those limits to management for approval.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3410",
+      "text": "Explain to customers the different types of loans and credit options that are available, as well as the terms of those services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3416",
+      "text": "Submit applications to credit analysts for verification and recommendation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3413",
+      "text": "Review loan agreements to ensure that they are complete and accurate according to policy.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3412",
+      "text": "Review and update credit and loan files.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "3411",
+      "text": "Obtain and compile copies of loan applicants' credit histories, corporate financial statements, and other financial information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3418",
+      "text": "Work with clients to identify their financial goals and to find ways of reaching those goals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3417",
+      "text": "Handle customer complaints and take appropriate action to resolve them.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3415",
+      "text": "Stay abreast of new types of loans and other financial services and products to better meet customers' needs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3421",
+      "text": "Market bank products to individuals and firms, promoting bank services that may meet customers' needs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3425",
+      "text": "Analyze potential loan markets and develop referral networks to locate prospects for loans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3414",
+      "text": "Compute payment schedules.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3422",
+      "text": "Supervise loan personnel.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "3426",
+      "text": "Prepare reports to send to customers whose accounts are delinquent, and forward irreconcilable accounts for collector action.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "3423",
+      "text": "Set credit policies, credit lines, procedures and standards in conjunction with senior managers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21635",
+      "text": "Assist in selection of financial award candidates using electronic databases to certify loan eligibility.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21636",
+      "text": "Authorize or sign mail collection letters.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21637",
+      "text": "Calculate amount of debt and funds available to plan methods of payoff and to estimate time for debt liquidation.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21638",
+      "text": "Confer with underwriters to resolve mortgage application problems.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21639",
+      "text": "Contact applicants or creditors to resolve questions about applications or to assist with completion of paperwork.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21640",
+      "text": "Contact borrowers with delinquent accounts to obtain payment in full or to negotiate repayment plans.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21641",
+      "text": "Counsel clients on personal and family financial problems, such as excessive spending or borrowing of funds.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21642",
+      "text": "Establish payment priorities according to credit terms and interest rates to reduce clients' overall costs.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21643",
+      "text": "Inform individuals and groups about the financial assistance available to college or university students.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21644",
+      "text": "Maintain and review account records, updating and recategorizing them according to status changes.",
+      "type": "n/a",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "21645",
+      "text": "Match individuals' needs and eligibility with available financial aid programs to provide informed recommendations.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21646",
+      "text": "Review accounts to determine write-offs for collection agencies.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21647",
+      "text": "Review billing for accuracy.",
+      "type": "n/a",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    }
+  ],
+  "risk_score": 30,
+  "salary": 76690,
+  "demand": "High"
+}

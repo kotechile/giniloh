@@ -1,0 +1,122 @@
+{
+  "code": "33-9011.00",
+  "title": "Animal Control Workers",
+  "description": "Handle animals for the purpose of investigations of mistreatment, or control of abandoned, dangerous, or unattended animals.",
+  "tasks": [
+    {
+      "id": "7968",
+      "text": "Write reports of activities, and maintain files of impoundments and dispositions of animals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7958",
+      "text": "Investigate reports of animal attacks or animal cruelty, interviewing witnesses, collecting evidence, and writing reports.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7960",
+      "text": "Examine animals for injuries or malnutrition, and arrange for any necessary medical treatment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7967",
+      "text": "Contact animal owners to inform them that their pets are at animal holding facilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7966",
+      "text": "Educate the public about animal welfare, and animal control laws and regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7961",
+      "text": "Remove captured animals from animal-control service vehicles and place animals in shelter cages or other enclosures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7970",
+      "text": "Answer inquiries from the public concerning animal control operations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7959",
+      "text": "Capture and remove stray, uncontrolled, or abused animals from undesirable conditions, using nets, nooses, or tranquilizer darts as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7965",
+      "text": "Prepare for prosecutions related to animal treatment, and give evidence in court.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7963",
+      "text": "Supply animals with food, water, and personal care.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7969",
+      "text": "Issue warnings or citations in connection with animal-related offenses, or contact police to report violations and request arrests.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7962",
+      "text": "Euthanize rabid, unclaimed, or severely injured animals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7964",
+      "text": "Clean facilities and equipment such as dog pens and animal control trucks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7972",
+      "text": "Organize the adoption of unclaimed animals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7971",
+      "text": "Examine animal licenses, and inspect establishments housing animals for compliance with laws.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7973",
+      "text": "Train police officers in dog handling and training techniques for tracking, crowd control, and narcotics and bomb detection.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 31,
+  "salary": 45660,
+  "demand": "Low"
+}

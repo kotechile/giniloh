@@ -1,0 +1,115 @@
+{
+  "code": "51-9082.00",
+  "title": "Medical Appliance Technicians",
+  "description": "Construct, maintain, or repair medical supportive devices such as braces, orthotics and prosthetic devices, joints, arch supports, and other surgical and medical appliances.",
+  "tasks": [
+    {
+      "id": "10520",
+      "text": "Drill and tap holes for rivets, and glue, weld, bolt, or rivet parts together to form prosthetic or orthotic devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10514",
+      "text": "Read prescriptions or specifications to determine the type of product or device to be fabricated and the materials and tools required.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10513",
+      "text": "Make orthotic or prosthetic devices, using materials such as thermoplastic and thermosetting materials, metal alloys and leather, and hand or power tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10519",
+      "text": "Bend, form, and shape fabric or material to conform to prescribed contours of structural components.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10518",
+      "text": "Construct or receive casts or impressions of patients' torsos or limbs for use as cutting and fabrication patterns.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10515",
+      "text": "Repair, modify, or maintain medical supportive devices, such as artificial limbs, braces, or surgical supports, according to specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10523",
+      "text": "Cover or pad metal or plastic structures or devices, using coverings such as rubber, leather, felt, plastic, or fiberglass.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10522",
+      "text": "Test medical supportive devices for proper alignment, movement, or biomechanical stability, using meters and alignment fixtures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10521",
+      "text": "Lay out and mark dimensions of parts, using templates and precision measuring instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10512",
+      "text": "Fit appliances onto patients, and make any necessary adjustments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10524",
+      "text": "Polish artificial limbs, braces, or supports, using grinding and buffing wheels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10517",
+      "text": "Take patients' body or limb measurements for use in device construction.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10516",
+      "text": "Instruct patients in use of prosthetic or orthotic devices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10525",
+      "text": "Service or repair machinery used in the fabrication of appliances.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10526",
+      "text": "Mix pigments to match patients' skin coloring, according to formulas, and apply mixtures to orthotic or prosthetic devices.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 30,
+  "salary": 48030,
+  "demand": "Low"
+}

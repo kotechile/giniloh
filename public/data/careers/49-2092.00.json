@@ -1,0 +1,227 @@
+{
+  "code": "49-2092.00",
+  "title": "Electric Motor, Power Tool, and Related Repairers",
+  "description": "Repair, maintain, or install electric motors, wiring, or switches.",
+  "tasks": [
+    {
+      "id": "11696",
+      "text": "Inspect and test equipment to locate damage or worn parts and diagnose malfunctions, or read work orders or schematic drawings to determine required repairs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11690",
+      "text": "Reassemble repaired electric motors to specified requirements and ratings, using hand tools and electrical meters.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11688",
+      "text": "Measure velocity, horsepower, revolutions per minute (rpm), amperage, circuitry, and voltage of units or parts to diagnose problems, using ammeters, voltmeters, wattmeters, and other testing devices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11692",
+      "text": "Repair and rebuild defective mechanical parts in electric motors, generators, and related equipment, using hand tools and power tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11702",
+      "text": "Lift units or parts such as motors or generators, using cranes or chain hoists, or signal crane operators to lift heavy parts or subassemblies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11689",
+      "text": "Record repairs required, parts used, and labor time.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "11701",
+      "text": "Disassemble defective equipment so that repairs can be made, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11705",
+      "text": "Adjust working parts, such as fan belts, contacts, and springs, using hand tools and gauges.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11699",
+      "text": "Lubricate moving parts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11695",
+      "text": "Read service guides to find information needed to perform repairs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11694",
+      "text": "Inspect electrical connections, wiring, relays, charging resistance boxes, and storage batteries, following wiring diagrams.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "11707",
+      "text": "Scrape and clean units or parts, using cleaning solvents and equipment such as buffing wheels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11703",
+      "text": "Weld, braze, or solder electrical connections.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11713",
+      "text": "Verify and adjust alignments and dimensions of parts, using gauges and tracing lathes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11720",
+      "text": "Steam-clean polishing and buffing wheels to remove abrasives and bonding materials, and spray, brush, or recoat surfaces as necessary.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11710",
+      "text": "Set machinery for proper performance, using computers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11714",
+      "text": "Test equipment for overheating, using speed gauges and thermometers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11704",
+      "text": "Reface, ream, and polish commutators and machine parts to specified tolerances, using machine tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11691",
+      "text": "Maintain stocks of parts.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11709",
+      "text": "Cut and form insulation, and insert insulation into armature, rotor, or stator slots.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11698",
+      "text": "Assemble electrical parts such as alternators, generators, starting devices, and switches, following schematic drawings and using hand, machine, and power tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11697",
+      "text": "Solder, wrap, and coat wires to ensure proper insulation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11693",
+      "text": "Rewire electrical systems, and repair or replace electrical accessories.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11706",
+      "text": "Clean cells, cell assemblies, glassware, leads, electrical connections, and battery poles, using scrapers, steam, water, emery cloths, power grinders, or acid.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11708",
+      "text": "Rewind coils on cores in slots, or make replacement coils, using coil-winding machines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11700",
+      "text": "Remove and replace defective parts such as coil leads, carbon brushes, and wires, using soldering equipment.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11726",
+      "text": "Hammer out dents and twists in tools and equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11725",
+      "text": "Seal joints with putty, mortar, and asbestos, using putty extruders and knives.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11722",
+      "text": "Repair and operate battery-charging equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11724",
+      "text": "Sharpen tools such as saws, picks, shovels, screwdrivers, and scoops, either manually or by using bench grinders and emery wheels.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11721",
+      "text": "Test battery charges, and replace or recharge batteries as necessary.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 56210,
+  "demand": "Low"
+}

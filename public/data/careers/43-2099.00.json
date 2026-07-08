@@ -1,0 +1,17 @@
+{
+  "code": "43-2099.00",
+  "title": "Communications Equipment Operators, All Other",
+  "description": "All communications equipment operators not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Communications Equipment Operators, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 54680,
+  "demand": "Low"
+}

@@ -1,0 +1,17 @@
+{
+  "code": "15-2099.00",
+  "title": "Mathematical Science Occupations, All Other",
+  "description": "All mathematical scientists not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Mathematical Science Occupations, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 81490,
+  "demand": "Low"
+}

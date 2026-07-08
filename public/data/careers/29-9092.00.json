@@ -1,0 +1,143 @@
+{
+  "code": "29-9092.00",
+  "title": "Genetic Counselors",
+  "description": "Assess individual or family risk for a variety of inherited conditions, such as genetic disorders and birth defects. Provide information to other healthcare providers or to individuals and families concerned with the risk of inherited conditions. Advise individuals and families to support informed decisionmaking and coping methods for those at risk. May help conduct research related to genetic conditions or genetic counseling.",
+  "tasks": [
+    {
+      "id": "17507",
+      "text": "Interpret laboratory results and communicate findings to patients or physicians.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17506",
+      "text": "Discuss testing options and the associated risks, benefits and limitations with patients and families to assist them in making informed decisions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17500",
+      "text": "Analyze genetic information to identify patients or families at risk for specific disorders or syndromes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17504",
+      "text": "Provide counseling to patient and family members by providing information, education, or reassurance.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17511",
+      "text": "Write detailed consultation reports to provide information on complex genetic concepts to patients or referring physicians.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17502",
+      "text": "Provide genetic counseling in specified areas of clinical genetics, such as obstetrics, pediatrics, oncology and neurology.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17505",
+      "text": "Determine or coordinate treatment plans by requesting laboratory services, reviewing genetics or counseling literature, and considering histories or diagnostic data.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17508",
+      "text": "Interview patients or review medical records to obtain comprehensive patient or family medical histories, and document findings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17503",
+      "text": "Assess patients' psychological or emotional needs, such as those relating to stress, fear of test results, financial issues, and marital conflicts to make referral recommendations or assist patients in managing test outcomes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17509",
+      "text": "Provide patients with information about the inheritance of conditions such as cardiovascular disease, Alzheimer's disease, diabetes, and various forms of cancer.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17517",
+      "text": "Read current literature, talk with colleagues, or participate in professional organizations or conferences to keep abreast of developments in genetics.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17518",
+      "text": "Prepare or provide genetics-related educational materials to patients or medical personnel.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17501",
+      "text": "Explain diagnostic procedures such as chorionic villus sampling (CVS), ultrasound, fetal blood sampling, and amniocentesis.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17510",
+      "text": "Refer patients to specialists or community resources.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17512",
+      "text": "Design and conduct genetics training programs for physicians, graduate students, other health professions or the general community.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17515",
+      "text": "Evaluate or make recommendations for standards of care or clinical operations, ensuring compliance with applicable regulations, ethics, legislation, or policies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17514",
+      "text": "Engage in research activities related to the field of medical genetics or genetic counseling.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17513",
+      "text": "Collect for, or share with, research projects patient data on specific genetic disorders or syndromes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17516",
+      "text": "Identify funding sources and write grant proposals for eligible programs or services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 8,
+  "salary": 100040,
+  "demand": "Low"
+}

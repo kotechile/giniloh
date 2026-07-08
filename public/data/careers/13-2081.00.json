@@ -1,0 +1,157 @@
+{
+  "code": "13-2081.00",
+  "title": "Tax Examiners and Collectors, and Revenue Agents",
+  "description": "Determine tax liability or collect taxes from individuals or business firms according to prescribed laws and regulations.",
+  "tasks": [
+    {
+      "id": "5293",
+      "text": "Send notices to taxpayers when accounts are delinquent.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5291",
+      "text": "Confer with taxpayers or their representatives to discuss the issues, laws, and regulations involved in returns, and to resolve problems with returns.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5294",
+      "text": "Notify taxpayers of any overpayment or underpayment, and either issue a refund or request further payment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5290",
+      "text": "Maintain records for each case, including contacts, telephone numbers, and actions taken.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "5292",
+      "text": "Contact taxpayers by mail or telephone to address discrepancies and to request supporting documentation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20016",
+      "text": "Answer questions from taxpayers and assist them in completing tax forms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5288",
+      "text": "Collect taxes from individuals or businesses according to prescribed laws and regulations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5305",
+      "text": "Determine appropriate methods of debt settlement, such as offers of compromise, wage garnishment, or seizure and sale of property.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5302",
+      "text": "Check tax forms to verify that names and taxpayer identification numbers are correct, that computations have been performed correctly, or that amounts match those on supporting documentation.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5303",
+      "text": "Examine and analyze tax assets and liabilities to determine resolution of delinquent tax problems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5301",
+      "text": "Impose payment deadlines on delinquent taxpayers and monitor payments to ensure that deadlines are met.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5308",
+      "text": "Direct service of legal documents, such as subpoenas, warrants, notices of assessment, and garnishments.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5296",
+      "text": "Review filed tax returns to determine whether claimed tax credits and deductions are allowed by law.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5289",
+      "text": "Maintain knowledge of tax code changes, and of accounting procedures and theory to properly evaluate financial information.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5310",
+      "text": "Investigate claims of inability to pay taxes by researching court information for the status of liens, mortgages, or financial statements, or by locating assets through third parties.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5297",
+      "text": "Review selected tax returns to determine the nature and extent of audits to be performed on them.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5299",
+      "text": "Examine accounting systems and records to determine whether accounting methods used were appropriate and in compliance with statutory provisions.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "5312",
+      "text": "Participate in informal appeals hearings on contested cases from other agents.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5307",
+      "text": "Prepare briefs and assist in searching and seizing records to prepare charges and documentation for court cases.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "5298",
+      "text": "Enter tax return information into computers for processing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5306",
+      "text": "Secure a taxpayer's agreement to discharge a tax assessment or submit contested determinations to other administrative or judicial conferees for appeals hearings.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 43,
+  "salary": 62370,
+  "demand": "Medium"
+}

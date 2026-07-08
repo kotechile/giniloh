@@ -1,0 +1,101 @@
+{
+  "code": "41-2012.00",
+  "title": "Gambling Change Persons and Booth Cashiers",
+  "description": "Exchange coins, tokens, and chips for patrons' money. May issue payoffs and obtain customer's signature on receipt. May operate a booth in the slot machine area and furnish change persons with money bank at the start of the shift, or count and audit money in drawers.",
+  "tasks": [
+    {
+      "id": "6999",
+      "text": "Keep accurate records of monetary exchanges, authorization forms, and transaction reconciliations.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "21152",
+      "text": "Exchange money, credit, tickets, or casino chips and make change for customers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6998",
+      "text": "Count money and audit money drawers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21153",
+      "text": "Check identifications to verify age of players.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7003",
+      "text": "Maintain cage security according to rules.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7005",
+      "text": "Reconcile daily summaries of transactions to balance books.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7004",
+      "text": "Obtain customers' signatures on receipts when winnings exceed the amount held in a slot machine.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "7007",
+      "text": "Calculate the value of chips won or lost by players.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7009",
+      "text": "Accept credit applications and verify credit references to provide check-cashing authorization or to establish house credit accounts.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7008",
+      "text": "Furnish change persons with a money bank at the start of each shift.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7002",
+      "text": "Listen for jackpot alarm bells and issue payoffs to winners.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7006",
+      "text": "Sell gambling chips, tokens, or tickets to patrons, or to other workers for resale to patrons.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21154",
+      "text": "Clean casino areas.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 54,
+  "salary": 36220,
+  "demand": "Low"
+}

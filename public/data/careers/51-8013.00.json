@@ -1,0 +1,220 @@
+{
+  "code": "51-8013.00",
+  "title": "Power Plant Operators",
+  "description": "Control, operate, or maintain machinery to generate electric power. Includes auxiliary equipment operators.",
+  "tasks": [
+    {
+      "id": "12328",
+      "text": "Control generator output to match the phase, frequency, or voltage of electricity supplied to panels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12318",
+      "text": "Take regulatory action, based on readings from charts, meters and gauges, at established intervals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12316",
+      "text": "Control power generating equipment, including boilers, turbines, generators, or reactors, using control boards or semi-automatic equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12319",
+      "text": "Start or stop generators, auxiliary pumping equipment, turbines, or other power plant equipment as necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12314",
+      "text": "Monitor power plant equipment and indicators to detect evidence of operating problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19914",
+      "text": "Operate or maintain distributed power generation equipment, including fuel cells or microturbines, to produce energy on-site for manufacturing or other commercial purposes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12325",
+      "text": "Open and close valves and switches in sequence to start or shut down auxiliary units.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12321",
+      "text": "Control or maintain auxiliary equipment, such as pumps, fans, compressors, condensers, feedwater heaters, filters, or chlorinators, to supply water, fuel, lubricants, air, or auxiliary power.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12317",
+      "text": "Regulate equipment operations and conditions, such as water levels, based on instrument data or from computers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12320",
+      "text": "Inspect records or log book entries or communicate with plant personnel to assess equipment operating status.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12322",
+      "text": "Clean, lubricate, or maintain equipment, such as generators, turbines, pumps, or compressors, to prevent failure or deterioration.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12324",
+      "text": "Record and compile operational data by completing and maintaining forms, logs, or reports.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "12327",
+      "text": "Make adjustments or minor repairs, such as tightening leaking gland or pipe joints.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12315",
+      "text": "Adjust controls to generate specified electrical power or to regulate the flow of power between generating stations and substations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19915",
+      "text": "Operate, control, or monitor equipment, such as acid or gas carbon dioxide removal units, carbon dioxide compressors, or pipelines, to capture, store, or transport carbon dioxide exhaust.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19916",
+      "text": "Operate, control, or monitor gasifiers or related equipment, such as coolers, water quenches, water gas shifts reactors, or sulfur recovery units, to produce syngas or electricity from coal.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12323",
+      "text": "Communicate with systems operators to regulate and coordinate line voltages and transmission loads and frequencies.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19917",
+      "text": "Operate, control, or monitor integrated gasification combined cycle (IGCC) or related equipment, such as air separation units, to generate electricity from coal.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12330",
+      "text": "Receive outage calls and request necessary personnel during power outages or emergencies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12326",
+      "text": "Collect oil, water, or electrolyte samples for laboratory analysis.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12331",
+      "text": "Examine and test electrical power distribution machinery and equipment, using testing devices.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12329",
+      "text": "Place standby emergency electrical generators on line in emergencies and monitor the temperature, output, and lubrication of the system.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23612",
+      "text": "Analyze the layout, instrumentation, or function of electrical generation or transmission facilities.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23613",
+      "text": "Diagnose or troubleshoot problems with gas collection systems.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23614",
+      "text": "Monitor well fields periodically to ensure proper functioning and performance.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23615",
+      "text": "Operate landfill gas, methane, or natural gas fueled electrical generation systems.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23616",
+      "text": "Prepare and submit compliance, operational, and safety forms or reports.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23617",
+      "text": "Repair or replace gas piping.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23618",
+      "text": "Trace electrical circuitry to ensure compliance of electrical systems with applicable codes or laws.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23619",
+      "text": "Verify that well field monitoring data conforms to applicable regulations.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 102040,
+  "demand": "Medium"
+}

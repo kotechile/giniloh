@@ -1,0 +1,122 @@
+{
+  "code": "51-6092.00",
+  "title": "Fabric and Apparel Patternmakers",
+  "description": "Draw and construct sets of precision master fabric patterns or layouts. May also mark and cut fabrics and apparel.",
+  "tasks": [
+    {
+      "id": "12200",
+      "text": "Create a master pattern for each size within a range of garment sizes, using charts, drafting instruments, computers, or grading devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20930",
+      "text": "Input specifications into computers to assist with pattern design and pattern cutting.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12198",
+      "text": "Draw details on outlined parts to indicate where parts are to be joined, as well as the positions of pleats, pockets, buttonholes, and other features, using computers or drafting instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20931",
+      "text": "Make adjustments to patterns after fittings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12206",
+      "text": "Compute dimensions of patterns according to sizes, considering stretching of material.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12205",
+      "text": "Mark samples and finished patterns with information, such as garment size, section, style, identification, and sewing instructions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12201",
+      "text": "Draw outlines of pattern parts by adapting or copying existing patterns, or by drafting new patterns.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "12197",
+      "text": "Test patterns by making and fitting sample garments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12203",
+      "text": "Position and cut out master or sample patterns, using scissors and knives, or print out copies of patterns, using computers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12202",
+      "text": "Create a paper pattern from which to mass-produce a design concept.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12204",
+      "text": "Discuss design specifications with designers, and convert their original models of garments into patterns of separate parts that can be laid out on a length of fabric.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12207",
+      "text": "Examine sketches, sample articles, and design specifications to determine quantities, shapes, and sizes of pattern parts, and to determine the amount of material or fabric required to make a product.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12199",
+      "text": "Determine the best layout of pattern pieces to minimize waste of material, and mark fabric accordingly.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20932",
+      "text": "Create design specifications to provide instructions on garment sewing and assembly.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12208",
+      "text": "Trace outlines of paper onto cardboard patterns, and cut patterns into parts to make templates.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12209",
+      "text": "Trace outlines of specified patterns onto material, and cut fabric, using scissors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 38,
+  "salary": 62750,
+  "demand": "Low"
+}

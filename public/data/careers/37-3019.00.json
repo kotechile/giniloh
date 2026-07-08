@@ -1,0 +1,17 @@
+{
+  "code": "37-3019.00",
+  "title": "Grounds Maintenance Workers, All Other",
+  "description": "All grounds maintenance workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Grounds Maintenance Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 46860,
+  "demand": "Low"
+}

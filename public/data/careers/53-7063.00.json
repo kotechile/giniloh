@@ -1,0 +1,101 @@
+{
+  "code": "53-7063.00",
+  "title": "Machine Feeders and Offbearers",
+  "description": "Feed materials into or remove materials from machines or equipment that is automatic or tended by other workers.",
+  "tasks": [
+    {
+      "id": "14583",
+      "text": "Inspect materials and products for defects, and to ensure conformance to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14591",
+      "text": "Record production and operational data, such as amount of materials processed.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "14585",
+      "text": "Push dual control buttons and move controls to start, stop, or adjust machinery and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14589",
+      "text": "Weigh or measure materials or products to ensure conformance to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14586",
+      "text": "Identify and mark materials, products, and samples, following instructions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14588",
+      "text": "Clean and maintain machinery, equipment, and work areas to ensure proper functioning and safe working conditions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14587",
+      "text": "Load materials and products into machines and equipment, or onto conveyors, using hand tools and moving devices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14593",
+      "text": "Transfer materials and products to and from machinery and equipment, using industrial trucks or hand trucks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14590",
+      "text": "Fasten, package, or stack materials and products, using hand tools and fastening equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14584",
+      "text": "Remove materials and products from machines and equipment, and place them in boxes, trucks or conveyors, using hand tools and moving devices.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14595",
+      "text": "Shovel or scoop materials into containers, machines, or equipment for processing, storage, or transport.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14594",
+      "text": "Open and close gates of belt and pneumatic conveyors on machines that are fed directly from preceding machines.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14592",
+      "text": "Add chemicals, solutions, or ingredients to machines or equipment as required by the manufacturing process.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 41220,
+  "demand": "Medium"
+}

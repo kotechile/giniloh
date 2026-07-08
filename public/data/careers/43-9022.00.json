@@ -1,0 +1,143 @@
+{
+  "code": "43-9022.00",
+  "title": "Word Processors and Typists",
+  "description": "Use word processor, computer, or typewriter to type letters, reports, forms, or other material from rough draft, corrected copy, or voice recording. May perform other clerical duties as assigned.",
+  "tasks": [
+    {
+      "id": "791",
+      "text": "Perform other clerical duties, such as answering telephone, sorting and distributing mail, running errands or sending faxes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "790",
+      "text": "Check completed work for spelling, grammar, punctuation, and format.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "794",
+      "text": "File and store completed documents on computer hard drive or disk, or maintain a computer filing system to store, retrieve, update, and delete documents.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "795",
+      "text": "Print and make copies of work.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "805",
+      "text": "Transmit work electronically to other locations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "803",
+      "text": "Address envelopes or prepare envelope labels, using typewriter or computer.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "793",
+      "text": "Type correspondence, reports, text and other written material from rough drafts, corrected copies, voice recordings, dictation, or previous versions, using a computer, word processor, or typewriter.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "792",
+      "text": "Gather, register, and arrange the material to be typed, following instructions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "797",
+      "text": "Compute and verify totals on report forms, requisitions, or bills, using adding machine or calculator.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "796",
+      "text": "Keep records of work performed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "799",
+      "text": "Electronically sort and compile text and numerical data, retrieving, updating, and merging documents as required.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "801",
+      "text": "Search for specific sets of stored, typed characters to make changes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "798",
+      "text": "Collate pages of reports and other documents.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "800",
+      "text": "Reformat documents, moving paragraphs or columns.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "802",
+      "text": "Adjust settings for format, page layout, line spacing, and other style requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "807",
+      "text": "Use data entry devices, such as optical scanners, to input data into computers for revision or editing.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "804",
+      "text": "Operate and resupply printers and computers, changing print wheels or fluid cartridges, adding paper, and loading blank tapes, cards, or disks into equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21014",
+      "text": "Manage schedules and set dates, times, and locations for meetings and appointments.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "806",
+      "text": "Work with technical material, preparing statistical reports, planning and typing statistical tables, and combining and rearranging material from different sources.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 53,
+  "salary": 49280,
+  "demand": "Medium"
+}

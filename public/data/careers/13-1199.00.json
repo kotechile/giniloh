@@ -1,0 +1,17 @@
+{
+  "code": "13-1199.00",
+  "title": "Business Operations Specialists, All Other",
+  "description": "All business operations specialists not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Business Operations Specialists, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 83050,
+  "demand": "Very High"
+}

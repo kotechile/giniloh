@@ -1,0 +1,115 @@
+{
+  "code": "51-4051.00",
+  "title": "Metal-Refining Furnace Operators and Tenders",
+  "description": "Operate or tend furnaces, such as gas, oil, coal, electric-arc or electric induction, open-hearth, or oxygen furnaces, to melt and refine metal before casting or to produce specified types of steel.",
+  "tasks": [
+    {
+      "id": "10163",
+      "text": "Regulate supplies of fuel and air, or control flow of electric current and water coolant to heat furnaces and adjust temperatures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10158",
+      "text": "Draw smelted metal samples from furnaces or kettles for analysis, and calculate types and amounts of materials needed to ensure that materials meet specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10162",
+      "text": "Weigh materials to be charged into furnaces, using scales.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10160",
+      "text": "Record production data, and maintain production logs.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "10165",
+      "text": "Observe air and temperature gauges or metal color and fluidity, and turn fuel valves or adjust controls to maintain required temperatures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10161",
+      "text": "Operate controls to move or discharge metal workpieces from furnaces.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10164",
+      "text": "Inspect furnaces and equipment to locate defects and wear.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10159",
+      "text": "Drain, transfer, or remove molten metal from furnaces, and place it into molds, using hoists, pumps, or ladles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10168",
+      "text": "Kindle fires, and shovel fuel and other materials into furnaces or onto conveyors by hand, with hoists, or by directing crane operators.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10171",
+      "text": "Prepare material to load into furnaces, including cleaning, crushing, or applying chemicals, by using crushing machines, shovels, rakes, or sprayers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10167",
+      "text": "Remove impurities from the surface of molten metal, using strainers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10166",
+      "text": "Observe operations inside furnaces, using television screens, to ensure that problems do not occur.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10169",
+      "text": "Sprinkle chemicals over molten metal to bring impurities to the surface.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10170",
+      "text": "Direct work crews in the cleaning and repair of furnace walls and flooring.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10172",
+      "text": "Scrape accumulations of metal oxides from floors, molds, and crucibles, and sift and store them for reclamation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 47,
+  "salary": 54430,
+  "demand": "Low"
+}

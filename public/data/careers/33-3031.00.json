@@ -1,0 +1,178 @@
+{
+  "code": "33-3031.00",
+  "title": "Fish and Game Wardens",
+  "description": "Patrol assigned area to prevent fish and game law violations. Investigate reports of damage to crops or property by wildlife. Compile biological data.",
+  "tasks": [
+    {
+      "id": "7915",
+      "text": "Patrol assigned areas by car, boat, airplane, horse, or on foot to enforce game, fish, or boating laws or to manage wildlife programs, lakes, or land.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20582",
+      "text": "Compile and present evidence for court actions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20583",
+      "text": "Investigate hunting accidents or reports of fish or game law violations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7918",
+      "text": "Protect and preserve native wildlife, plants, or ecosystems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20584",
+      "text": "Issue warnings or citations and file reports as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20585",
+      "text": "Serve warrants and make arrests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7921",
+      "text": "Provide assistance to other local law enforcement agencies as required.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7919",
+      "text": "Promote or provide hunter or trapper safety training.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20586",
+      "text": "Participate in search-and-rescue operations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20587",
+      "text": "Arrange for disposition of fish or game illegally taken or possessed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20588",
+      "text": "Seize equipment used in fish and game law violations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7922",
+      "text": "Address schools, civic groups, sporting clubs, or the media to disseminate information concerning wildlife conservation and regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7923",
+      "text": "Recommend revisions in hunting and trapping regulations or in animal management programs so that wildlife balances or habitats can be maintained.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7924",
+      "text": "Inspect commercial operations relating to fish or wildlife, recreation, or protected areas.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7926",
+      "text": "Survey areas and compile figures of bag counts of hunters to determine the effectiveness of control measures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7925",
+      "text": "Collect and report information on populations or conditions of fish and wildlife in their habitats, availability of game food or cover, or suspected pollution.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7929",
+      "text": "Design or implement control measures to prevent or counteract damage caused by wildlife or people.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7933",
+      "text": "Provide advice or information to park or reserve visitors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7928",
+      "text": "Investigate crop, property, or habitat damage or destruction or instances of water pollution to determine causes and to advise property owners of preventive measures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7932",
+      "text": "Issue licenses, permits, or other documentation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7930",
+      "text": "Document the extent of crop, property, or habitat damage and make financial loss estimates or compensation recommendations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7931",
+      "text": "Supervise the activities of seasonal workers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7934",
+      "text": "Perform facilities maintenance work, such as constructing or repairing structures or controlling weeds or pests.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20589",
+      "text": "Participate in firefighting efforts.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 31,
+  "salary": 74060,
+  "demand": "Low"
+}

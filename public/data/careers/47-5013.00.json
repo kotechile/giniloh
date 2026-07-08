@@ -1,0 +1,143 @@
+{
+  "code": "47-5013.00",
+  "title": "Service Unit Operators, Oil and Gas",
+  "description": "Operate equipment to increase oil flow from producing wells or to remove stuck pipe, casing, tools, or other obstructions from drilling wells. Includes fishing-tool technicians.",
+  "tasks": [
+    {
+      "id": "20451",
+      "text": "Maintain and perform safety inspections on equipment and tools.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7080",
+      "text": "Operate controls that raise derricks or level rigs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20452",
+      "text": "Listen to engines, rotary chains, or other equipment to detect faulty operations or unusual well conditions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7083",
+      "text": "Prepare reports of services rendered, tools used, or time required, for billing purposes.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "7076",
+      "text": "Install pressure-control devices onto wellheads.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7074",
+      "text": "Confer with others to gather information regarding pipe or tool sizes or borehole conditions in wells.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7078",
+      "text": "Operate pumps that circulate water, oil, or other fluids through wells to remove sand or other materials obstructing the free flow of oil.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7075",
+      "text": "Drive truck-mounted units to well sites.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7088",
+      "text": "Interpret instrument readings to ascertain the depth of obstruction.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7077",
+      "text": "Thread cables through derrick pulleys, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7085",
+      "text": "Select fishing methods or tools for removing obstacles such as liners, broken casing, screens, or drill pipe.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7079",
+      "text": "Close and seal wells no longer in use.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7081",
+      "text": "Direct drilling crews performing activities such as assembling and connecting pipe, applying weights to drill pipes, or drilling around lodged obstacles.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19874",
+      "text": "Apply green technologies or techniques, such as the use of coiled tubing, slim-hole drilling, horizontal drilling, hydraulic fracturing, or gas lift systems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7084",
+      "text": "Operate specialized equipment to remove obstructions by backing off or severing pipes by chemical or explosive action.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7082",
+      "text": "Perforate well casings or sidewalls of boreholes with explosive charges.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7086",
+      "text": "Examine unserviceable wells to determine actions to be taken to improve well conditions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7089",
+      "text": "Monitor sound wave-generating or detecting mechanisms to determine well fluid levels.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7087",
+      "text": "Insert detection instruments into wells with obstructions.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 45,
+  "salary": 58160,
+  "demand": "Medium"
+}

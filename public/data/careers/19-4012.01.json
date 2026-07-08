@@ -1,0 +1,164 @@
+{
+  "code": "19-4012.01",
+  "title": "Precision Agriculture Technicians",
+  "description": "Apply geospatial technologies, including geographic information systems (GIS) and Global Positioning System (GPS), to agricultural production or management activities, such as pest scouting, site-specific pesticide application, yield mapping, or variable-rate irrigation. May use computers to develop or analyze maps or remote sensing images to compare physical topography with data on soils, fertilizer, pests, or weather.",
+  "tasks": [
+    {
+      "id": "18295",
+      "text": "Document and maintain records of precision agriculture information.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "18281",
+      "text": "Collect information about soil or field attributes, yield data, or field boundaries, using field data recorders and basic geographic information systems (GIS).",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "20872",
+      "text": "Use geospatial technology to develop soil sampling grids or identify sampling sites for testing characteristics such as nitrogen, phosphorus, or potassium content, pH, or micronutrients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18284",
+      "text": "Divide agricultural fields into georeferenced zones, based on soil characteristics and production potentials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18280",
+      "text": "Install, calibrate, or maintain sensors, mechanical controls, GPS-based vehicle guidance systems, or computer settings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18289",
+      "text": "Create, layer, and analyze maps showing precision agricultural data, such as crop yields, soil characteristics, input applications, terrain, drainage patterns, or field management history.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18279",
+      "text": "Compare crop yield maps with maps of soil test data, chemical application patterns, or other information to develop site-specific crop management plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20875",
+      "text": "Analyze geospatial data to determine agricultural implications of factors such as soil quality, terrain, field productivity, fertilizers, or weather conditions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18282",
+      "text": "Identify spatial coordinates, using remote sensing and Global Positioning System (GPS) data.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20874",
+      "text": "Analyze data from harvester monitors to develop yield maps.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19801",
+      "text": "Apply precision agriculture information to specifically reduce the negative environmental impacts of farming practices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20873",
+      "text": "Demonstrate the applications of geospatial technology, such as Global Positioning System (GPS), geographic information systems (GIS), automatic tractor guidance systems, variable rate chemical input applicators, surveying equipment, or computer mapping software.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18296",
+      "text": "Draw or read maps, such as soil, contour, or plat maps.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18288",
+      "text": "Recommend best crop varieties or seeding rates for specific field areas, based on analysis of geospatial data.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20876",
+      "text": "Prepare reports in graphical or tabular form, summarizing field productivity or profitability.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19803",
+      "text": "Provide advice on the development or application of better boom-spray technology to limit the overapplication of chemicals and to reduce the migration of chemicals beyond the fields being treated.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18278",
+      "text": "Program farm equipment, such as variable-rate planting equipment or pesticide sprayers, based on input from crop scouting and analysis of field condition variability.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19802",
+      "text": "Participate in efforts to advance precision agriculture technology, such as developing advanced weed identification or automated spot spraying systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18293",
+      "text": "Analyze remote sensing imagery to identify relationships between soil quality, crop canopy densities, light reflectance, and weather history.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19800",
+      "text": "Advise farmers on upgrading Global Positioning System (GPS) equipment to take advantage of newly installed advanced satellite technology.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18290",
+      "text": "Contact equipment manufacturers for technical assistance, as needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18287",
+      "text": "Identify areas in need of pesticide treatment by analyzing geospatial data to determine insect movement and damage patterns.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 30,
+  "salary": 49630,
+  "demand": "Low"
+}

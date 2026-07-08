@@ -1,0 +1,234 @@
+{
+  "code": "43-4121.00",
+  "title": "Library Assistants, Clerical",
+  "description": "Compile records, and sort, shelve, issue, and receive library materials such as books, electronic media, pictures, cards, slides and microfilm. Locate library materials for loan and replace material in shelving area, stacks, or files according to identification number and title. Register patrons to permit them to borrow books, periodicals, and other library materials.",
+  "tasks": [
+    {
+      "id": "2645",
+      "text": "Sort books, publications, and other items according to established procedure and return them to shelves, files, or other designated storage areas.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18769",
+      "text": "Open and close library during specified hours and secure library equipment, such as computers and audio-visual equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2646",
+      "text": "Locate library materials for patrons, including books, periodicals, tape cassettes, Braille volumes, and pictures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2643",
+      "text": "Enter and update patrons' records on computers.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "2649",
+      "text": "Answer routine inquiries and refer patrons in need of professional assistance to librarians.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18773",
+      "text": "Manage reserve materials by placing items on reserve for library patrons, checking items in and out of library, and removing out-of-date items.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18774",
+      "text": "Lend, reserve, and collect books, periodicals, videotapes, and other materials at circulation desks and process materials for inter-library loans.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2647",
+      "text": "Instruct patrons on how to use reference sources, card catalogs, and automated information systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2648",
+      "text": "Inspect returned books for condition and due-date status and compute any applicable fines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2650",
+      "text": "Maintain records of items received, stored, issued, and returned and file catalog cards according to system used.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "18770",
+      "text": "Perform clerical activities, such as answering phones, sorting mail, filing, typing, word processing, and photocopying and mailing out material.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "2655",
+      "text": "Register new patrons and issue borrower identification cards that permit patrons to borrow books and other materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2644",
+      "text": "Process new materials including books, audio-visual materials, and computer software.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2652",
+      "text": "Provide assistance to librarians in the maintenance of collections of books, periodicals, magazines, newspapers, and audio-visual and other materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2661",
+      "text": "Review records, such as microfilm and issue cards, to identify titles of overdue materials and delinquent borrowers.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "2656",
+      "text": "Send out notices and accept fine payments for lost or overdue books.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18772",
+      "text": "Maintain library equipment, such as photocopiers, scanners, and computers, and instruct patrons in proper use of such equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18771",
+      "text": "Schedule, supervise, and train clerical workers, volunteers, student assistants, and other library employees.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18776",
+      "text": "Repair books using mending tape, paste, and brushes or prepare books to be sent to a bindery for repair.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2653",
+      "text": "Take action to deal with disruptive or problem patrons.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2658",
+      "text": "Prepare, store, and retrieve classification and catalog information, lecture notes, or other information related to stored documents, using computers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2662",
+      "text": "Select substitute titles when requested materials are unavailable, following criteria such as age, education, and interests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18778",
+      "text": "Prepare library statistics reports.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2664",
+      "text": "Deliver and retrieve items to and from departments by hand or using push carts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2667",
+      "text": "Assist in the preparation of book displays.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2654",
+      "text": "Classify and catalog items according to content and purpose.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2657",
+      "text": "Operate small branch libraries, under the direction of off-site librarian supervisors.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21077",
+      "text": "Plan or participate in library events and programs, such as story time with children.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18775",
+      "text": "Perform accounting and bookkeeping activities, such as invoicing, maintaining financial records, budgeting, and handling cash.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "2660",
+      "text": "Operate and maintain audio-visual equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18779",
+      "text": "Design or maintain library web site and online catalogues.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18777",
+      "text": "Acquire books, pamphlets, periodicals, audio-visual materials, and other library supplies by checking prices, figuring costs, and preparing appropriate order forms and facilitating the ordering process by providing such information to others.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 48,
+  "salary": 36910,
+  "demand": "Medium"
+}

@@ -1,0 +1,122 @@
+{
+  "code": "27-3043.05",
+  "title": "Poets, Lyricists and Creative Writers",
+  "description": "Create original written works, such as scripts, essays, prose, poetry or song lyrics, for publication or performance.",
+  "tasks": [
+    {
+      "id": "11051",
+      "text": "Write fiction or nonfiction prose, such as short stories, novels, biographies, articles, descriptive or critical analyses, and essays.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11052",
+      "text": "Develop factors such as themes, plots, characterizations, psychological analyses, historical environments, action, and dialogue to create material.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11046",
+      "text": "Revise written material to meet personal standards and to satisfy needs of clients, publishers, directors, or producers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11047",
+      "text": "Choose subject matter and suitable form to express personal feelings and experiences or ideas, or to narrate stories or events.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11049",
+      "text": "Prepare works in appropriate format for publication, and send them to publishers or producers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11054",
+      "text": "Conduct research to obtain factual information and authentic detail, using sources such as newspaper accounts, diaries, and interviews.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11053",
+      "text": "Confer with clients, editors, publishers, or producers to discuss changes or revisions to written material.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11048",
+      "text": "Plan project arrangements or outlines, and organize material accordingly.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11050",
+      "text": "Follow appropriate procedures to get copyrights for completed work.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11056",
+      "text": "Attend book launches and publicity events, or conduct public readings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11055",
+      "text": "Write narrative, dramatic, lyric, or other types of poetry for publication.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11057",
+      "text": "Write words to fit musical compositions, including lyrics for operas, musical plays, and choral works.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "11058",
+      "text": "Adapt text to accommodate musical requirements of composers and singers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11060",
+      "text": "Write humorous material for publication, or for performances such as comedy routines, gags, and comedy shows.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11059",
+      "text": "Teach writing classes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "11061",
+      "text": "Collaborate with other writers on specific projects.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 25,
+  "salary": 76910,
+  "demand": "Medium"
+}

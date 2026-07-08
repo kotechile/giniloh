@@ -1,0 +1,220 @@
+{
+  "code": "49-2021.00",
+  "title": "Radio, Cellular, and Tower Equipment Installers and Repairers",
+  "description": "Repair, install, or maintain mobile or stationary radio transmitting, broadcasting, and receiving equipment, and two-way radio communications systems used in cellular telecommunications, mobile broadband, ship-to-shore, aircraft-to-ground communications, and radio equipment in service and emergency vehicles. May test and analyze network coverage.",
+  "tasks": [
+    {
+      "id": "19401",
+      "text": "Inspect completed work to ensure all hardware is tight, antennas are level, hangers are properly fastened, proper support is in place, or adequate weather proofing has been installed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19409",
+      "text": "Run appropriate power, ground, or coaxial cables.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19410",
+      "text": "Test operation of tower transmission components, using sweep testing tools or software.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19402",
+      "text": "Install all necessary transmission equipment components, including antennas or antenna mounts, surge arrestors, transmission lines, connectors, or tower-mounted amplifiers (TMAs).",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19407",
+      "text": "Read work orders, blueprints, plans, datasheets or site drawings to determine work to be done.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19408",
+      "text": "Replace existing antennas with new antennas as directed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19398",
+      "text": "Bolt equipment into place, using hand or power tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19404",
+      "text": "Install, connect, or test underground or aboveground grounding systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19412",
+      "text": "Complete reports related to project status, progress, or other work details, using computer software.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19399",
+      "text": "Check antenna positioning to ensure specified azimuths or mechanical tilts and adjust as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19415",
+      "text": "Transport equipment to work sites, using utility trucks and equipment trailers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19414",
+      "text": "Take site survey photos or photos of work performed, using digital cameras.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19411",
+      "text": "Climb towers to access components, using safety equipment, such as full-body harnesses.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19400",
+      "text": "Climb communication towers to install, replace, or repair antennas or auxiliary equipment used to transmit and receive radio waves.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19405",
+      "text": "Lift equipment into position, using cranes and rigging tools or equipment, such as gin poles.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19406",
+      "text": "Perform maintenance or repair work on existing tower equipment, using hand or power tools.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19413",
+      "text": "Locate tower sites where work is to be performed, using mapping software.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19403",
+      "text": "Install or repair tower lighting components, including strobes, beacons, or lighting controllers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23510",
+      "text": "Calibrate and align components, using scales, gauges, and other measuring instruments.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23511",
+      "text": "Examine malfunctioning radio equipment to locate defects such as loose connections, broken wires, or burned-out components, using schematic diagrams and test equipment.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23512",
+      "text": "Insert plugs into receptacles and bolt or screw leads to terminals to connect equipment to power sources, using hand tools.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23513",
+      "text": "Install, adjust, and repair stationary and mobile radio transmitting and receiving equipment and two-way radio communication systems.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23514",
+      "text": "Monitor radio range stations to detect transmission flaws and adjust controls to eliminate flaws.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23515",
+      "text": "Mount equipment on transmission towers and in vehicles such as ships or ambulances.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23516",
+      "text": "Remove and replace defective components and parts such as conductors, resistors, semiconductors, and integrated circuits, using soldering irons, wire cutters, and hand tools.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23517",
+      "text": "Repair circuits, wiring, and soldering, using soldering irons and hand tools to install parts and adjust connections.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23518",
+      "text": "Test batteries, using hydrometers and ammeters, and charge batteries as necessary.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23519",
+      "text": "Test emergency transmitters to ensure their readiness for immediate use.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23520",
+      "text": "Test equipment functions such as signal strength and quality, transmission capacity, interference, and signal delay, using equipment such as oscilloscopes, circuit analyzers, frequency meters, and wattmeters.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23521",
+      "text": "Turn setscrews to adjust receivers for maximum sensitivity and transmitters for maximum output.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 40,
+  "salary": 63520,
+  "demand": "Low"
+}

@@ -1,0 +1,157 @@
+{
+  "code": "13-2099.01",
+  "title": "Financial Quantitative Analysts",
+  "description": "Develop quantitative techniques to inform securities investing, equities investing, pricing, or valuation of financial instruments. Develop mathematical or statistical models for risk management, asset optimization, pricing, or relative value analysis.",
+  "tasks": [
+    {
+      "id": "15997",
+      "text": "Apply mathematical or statistical techniques to address practical issues in finance, such as derivative valuation, securities trading, risk management, or financial market regulation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15995",
+      "text": "Research or develop analytical tools to address issues such as portfolio construction or optimization, performance measurement, attribution, profit and loss measurement, or pricing models.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15989",
+      "text": "Interpret results of financial analysis procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15990",
+      "text": "Develop core analytical capabilities or model libraries, using advanced statistical, quantitative, or econometric techniques.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15991",
+      "text": "Define or recommend model specifications or data collection methods.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15988",
+      "text": "Produce written summary reports of financial research results.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15987",
+      "text": "Maintain or modify all financial analytic models in use.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15983",
+      "text": "Provide application or analytical support to researchers or traders on issues such as valuations or data.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15996",
+      "text": "Devise or apply independent models or tools to help verify results of analytical systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15985",
+      "text": "Collaborate in the development or testing of new analytical software to ensure compliance with user requirements, specifications, or scope.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15993",
+      "text": "Confer with other financial engineers or analysts on trading strategies, market dynamics, or trading system performance to inform development of quantitative techniques.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15992",
+      "text": "Consult traders or other financial industry personnel to determine the need for new or improved analytical applications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15986",
+      "text": "Research new financial products or analytics to determine their usefulness.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15984",
+      "text": "Identify, track, or maintain metrics for trading system operations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19574",
+      "text": "Develop methods of assessing or measuring corporate performance in terms of environmental, social, and governance (ESG) issues.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15994",
+      "text": "Collaborate with product development teams to research, model, validate, or implement quantitative structured solutions for new or expanded markets.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15982",
+      "text": "Prepare requirements documentation for use by software developers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19575",
+      "text": "Develop solutions to help clients hedge carbon exposure or risk.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19576",
+      "text": "Develop tools to assess green technologies or green financial products, such as green hedge funds or social responsibility investment funds.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19573",
+      "text": "Assess the potential impact of climate change on business financial issues, such as damage repairs, insurance costs, or potential disruptions of daily activities.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19572",
+      "text": "Analyze pricing or risks of carbon trading products.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 21,
+  "salary": 81100,
+  "demand": "High"
+}

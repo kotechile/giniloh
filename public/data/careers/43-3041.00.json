@@ -1,0 +1,129 @@
+{
+  "code": "43-3041.00",
+  "title": "Gambling Cage Workers",
+  "description": "In a gambling establishment, conduct financial transactions for patrons. Accept patron's credit application and verify credit references to provide check-cashing authorization or to establish house credit accounts. May reconcile daily summaries of transactions to balance books. May sell gambling chips, tokens, or tickets to patrons, or to other workers for resale to patrons. May convert gambling chips, tokens, or tickets to currency upon patron's request. May use a cash register or computer to record transaction.",
+  "tasks": [
+    {
+      "id": "4662",
+      "text": "Maintain confidentiality of customers' transactions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4661",
+      "text": "Follow all gaming regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4665",
+      "text": "Maintain cage security.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4668",
+      "text": "Cash checks and process credit card advances for patrons.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4671",
+      "text": "Supply currency, coins, chips, or gaming checks to other departments as needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4664",
+      "text": "Convert gaming checks, coupons, tokens, or coins to currency for gaming patrons.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4663",
+      "text": "Count funds and reconcile daily summaries of transactions to balance books.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4667",
+      "text": "Verify accuracy of reports, such as authorization forms, transaction reconciliations, or exchange summary reports.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4666",
+      "text": "Determine cash requirements for windows and order all necessary currency, coins, or chips.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4670",
+      "text": "Perform removal and rotation of cash, coin, or chip inventories as necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4672",
+      "text": "Provide assistance in the training and orientation of new cashiers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4673",
+      "text": "Provide customers with information about casino operations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4675",
+      "text": "Prepare bank deposits, balancing assigned funds as necessary.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4676",
+      "text": "Prepare reports, including assignment of company funds or recording of department revenues.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "4674",
+      "text": "Record casino exchange transactions, using cash registers.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "4677",
+      "text": "Establish new computer accounts.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4669",
+      "text": "Sell gambling chips, tokens, or tickets to patrons or to other workers for resale to patrons.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 37580,
+  "demand": "Low"
+}

@@ -1,0 +1,108 @@
+{
+  "code": "43-9111.00",
+  "title": "Statistical Assistants",
+  "description": "Compile and compute data according to statistical formulas for use in statistical studies. May perform actuarial computations and compile charts and graphs for use by actuaries. Includes actuarial clerks.",
+  "tasks": [
+    {
+      "id": "9788",
+      "text": "Compute and analyze data, using statistical formulas and computers or calculators.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9792",
+      "text": "Check source data to verify completeness and accuracy.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9789",
+      "text": "Enter data into computers for use in analyses or reports.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "9791",
+      "text": "Compile reports, charts, or graphs that describe and interpret findings of analyses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9793",
+      "text": "Participate in the publication of data or information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9795",
+      "text": "File data and related information, and maintain and update databases.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9797",
+      "text": "Organize paperwork, such as survey forms or reports, for distribution or analysis.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9798",
+      "text": "Code data prior to computer entry, using lists of codes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9790",
+      "text": "Compile statistics from source materials, such as production or sales records, quality-control or test records, time sheets, or survey sheets.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "9800",
+      "text": "Interview people and keep track of their responses.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9799",
+      "text": "Check survey responses for errors, such as the use of pens instead of pencils, and set aside response forms that cannot be used.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9796",
+      "text": "Select statistical tests for analyzing data.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9794",
+      "text": "Discuss data presentation requirements with clients.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9801",
+      "text": "Send out surveys.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 57,
+  "salary": 50330,
+  "demand": "Low"
+}

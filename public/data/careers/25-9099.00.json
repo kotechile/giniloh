@@ -1,0 +1,17 @@
+{
+  "code": "25-9099.00",
+  "title": "Educational Instruction and Library Workers, All Other",
+  "description": "All educational instruction and library workers not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Educational Instruction and Library Workers, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 50890,
+  "demand": "High"
+}

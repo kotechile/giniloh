@@ -1,0 +1,206 @@
+{
+  "code": "11-9051.00",
+  "title": "Food Service Managers",
+  "description": "Plan, direct, or coordinate activities of an organization or department that serves food and beverages.",
+  "tasks": [
+    {
+      "id": "15199",
+      "text": "Count money and make bank deposits.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1086",
+      "text": "Establish standards for personnel performance and customer service.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1085",
+      "text": "Keep records required by government agencies regarding sanitation or food subsidies.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "1082",
+      "text": "Schedule staff hours and assign duties.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1078",
+      "text": "Investigate and resolve complaints regarding food quality, service, or accommodations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1090",
+      "text": "Maintain food and equipment inventories, and keep inventory records.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "1089",
+      "text": "Perform some food preparation or service tasks, such as cooking, clearing tables, and serving food and drinks when necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1081",
+      "text": "Monitor budgets and payroll records, and review financial transactions to ensure that expenditures are authorized and budgeted.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1079",
+      "text": "Schedule and receive food and beverage deliveries, checking delivery contents to verify product quality and quantity.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1084",
+      "text": "Coordinate assignments of cooking personnel to ensure economical use of food and timely preparation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1091",
+      "text": "Organize and direct worker training programs, resolve personnel problems, hire new staff, and evaluate employee performance in dining and lodging facilities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1095",
+      "text": "Assess staffing needs and recruit staff, using methods such as newspaper advertisements or attendance at job fairs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1087",
+      "text": "Estimate food, liquor, wine, and other beverage consumption to anticipate amounts to be purchased or requisitioned.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1080",
+      "text": "Monitor food preparation methods, portion sizes, and garnishing and presentation of food to ensure that food is prepared and presented in an acceptable manner.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1083",
+      "text": "Monitor compliance with health and fire regulations regarding food preparation and serving, and building maintenance in lodging and dining facilities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1077",
+      "text": "Test cooked food by tasting and smelling it to ensure palatability and flavor conformity.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1092",
+      "text": "Order and purchase equipment and supplies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1088",
+      "text": "Review work procedures and operational problems to determine ways to improve service, performance, or safety.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1096",
+      "text": "Arrange for equipment maintenance and repairs, and coordinate a variety of services, such as waste removal and pest control.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1097",
+      "text": "Monitor employee and patron activities to ensure liquor regulations are obeyed.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1098",
+      "text": "Greet guests, escort them to their seats, and present them with menus and wine lists.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1094",
+      "text": "Record the number, type, and cost of items sold to determine which items may be unpopular or less profitable.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "1100",
+      "text": "Plan menus and food utilization, based on anticipated number of guests, nutritional value, palatability, popularity, and costs.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1093",
+      "text": "Review menus and analyze recipes to determine labor and overhead costs, and assign prices to menu items.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "1102",
+      "text": "Take dining reservations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "1101",
+      "text": "Create specialty dishes and develop recipes to be used in dining facilities.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1103",
+      "text": "Schedule use of facilities or catering services for events such as banquets or receptions, and negotiate details of arrangements with clients.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1099",
+      "text": "Establish and enforce nutritional standards for dining establishments, based on accepted industry standards.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 38,
+  "salary": 69390,
+  "demand": "High"
+}

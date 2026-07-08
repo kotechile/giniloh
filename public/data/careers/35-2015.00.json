@@ -1,0 +1,87 @@
+{
+  "code": "35-2015.00",
+  "title": "Cooks, Short Order",
+  "description": "Prepare and cook to order a variety of foods that require only a short preparation time. May take orders from customers and serve patrons at counters or tables.",
+  "tasks": [
+    {
+      "id": "2187",
+      "text": "Clean food preparation equipment, work areas, and counters or tables.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18725",
+      "text": "Restock kitchen supplies, rotate food, and stamp the time and date on food in coolers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2192",
+      "text": "Complete orders from steam tables, placing food on plates and serving customers at tables or counters.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2188",
+      "text": "Plan work on orders so that items served together are finished at the same time.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2189",
+      "text": "Grill, cook, and fry foods such as french fries, eggs, and pancakes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18726",
+      "text": "Perform food preparation tasks, such as making sandwiches, carving meats, making soups or salads, baking breads or desserts, and brewing coffee or tea.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18727",
+      "text": "Perform general cleaning activities in kitchen and dining areas.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2190",
+      "text": "Take orders from customers and cook foods requiring short preparation times, according to customer requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2191",
+      "text": "Grill and garnish hamburgers or other meats, such as steaks and chops.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2194",
+      "text": "Order supplies and stock them on shelves.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2195",
+      "text": "Accept payments, and make change or write charge slips as necessary.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 36,
+  "salary": 35880,
+  "demand": "High"
+}

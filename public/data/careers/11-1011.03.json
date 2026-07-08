@@ -1,0 +1,136 @@
+{
+  "code": "11-1011.03",
+  "title": "Chief Sustainability Officers",
+  "description": "Communicate and coordinate with management, shareholders, customers, and employees to address sustainability issues. Enact or oversee a corporate sustainability strategy.",
+  "tasks": [
+    {
+      "id": "15382",
+      "text": "Monitor and evaluate effectiveness of sustainability programs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15384",
+      "text": "Develop or execute strategies to address issues such as energy use, resource conservation, recycling, pollution reduction, waste elimination, transportation, education, and building design.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15379",
+      "text": "Develop, or oversee the development of, sustainability evaluation or monitoring systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15372",
+      "text": "Supervise employees or volunteers working on sustainability projects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15378",
+      "text": "Develop sustainability reports, presentations, or proposals for supplier, employee, academia, media, government, public interest, or other groups.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15380",
+      "text": "Develop, or oversee the development of, marketing or outreach media for sustainability projects or events.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15368",
+      "text": "Identify and evaluate pilot projects or programs to enhance the sustainability research agenda.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15370",
+      "text": "Create and maintain sustainability program documents, such as schedules and budgets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15375",
+      "text": "Formulate or implement sustainability campaign or marketing strategies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15376",
+      "text": "Research environmental sustainability issues, concerns, or stakeholder interests.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15383",
+      "text": "Direct sustainability program operations to ensure compliance with environmental or governmental regulations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15377",
+      "text": "Evaluate and approve proposals for sustainability projects, considering factors such as cost effectiveness, technical feasibility, and integration with other initiatives.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15381",
+      "text": "Develop methodologies to assess the viability or success of sustainability initiatives.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15374",
+      "text": "Review sustainability program objectives, progress, or status to ensure compliance with policies, standards, regulations, or laws.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15373",
+      "text": "Write and distribute financial or environmental impact reports.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15371",
+      "text": "Write project proposals, grant applications, or other documents to pursue funding for environmental initiatives.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15367",
+      "text": "Identify educational, training, or other development opportunities for sustainability employees or volunteers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15369",
+      "text": "Conduct risk assessments related to sustainability and the environment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 25,
+  "salary": 213990,
+  "demand": "High"
+}

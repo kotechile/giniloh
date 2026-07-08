@@ -1,0 +1,108 @@
+{
+  "code": "13-2022.00",
+  "title": "Appraisers of Personal and Business Property",
+  "description": "Appraise and estimate the fair value of tangible personal or business property, such as jewelry, art, antiques, collectibles, and equipment. May also appraise land.",
+  "tasks": [
+    {
+      "id": "21548",
+      "text": "Write descriptions of the property being appraised.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21537",
+      "text": "Determine the appropriate type of valuation to make, such as fair market, replacement, or liquidation, based on the needs of the property owner.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21538",
+      "text": "Document physical characteristics of property such as measurements, quality, and design.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21535",
+      "text": "Calculate the value of property based on comparisons to recent sales, estimated cost to reproduce, and anticipated property income streams.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21541",
+      "text": "Locate and record data on sales of comparable property using specialized software, internet searches, or personal records.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "21547",
+      "text": "Write and submit appraisal reports for property, such as jewelry, art, antiques, collectibles, and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21540",
+      "text": "Inspect personal or business property.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21536",
+      "text": "Create and maintain a database of completed appraisals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21543",
+      "text": "Take photographs of property.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21546",
+      "text": "Verify that property matches legal descriptions or certifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21545",
+      "text": "Update appraisals when property has been improved, damaged, or has otherwise changed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21544",
+      "text": "Testify in court as to the value of a piece of tangible property.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21539",
+      "text": "Forecast the value of property.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21542",
+      "text": "Recommend loan amounts based on the value of property being used as collateral.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 46,
+  "salary": 69567,
+  "demand": "Medium"
+}

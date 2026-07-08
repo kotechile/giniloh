@@ -1,0 +1,94 @@
+{
+  "code": "49-9081.00",
+  "title": "Wind Turbine Service Technicians",
+  "description": "Inspect, diagnose, adjust, or repair wind turbines. Perform maintenance on wind turbine equipment including resolving electrical, mechanical, and hydraulic malfunctions.",
+  "tasks": [
+    {
+      "id": "17806",
+      "text": "Troubleshoot or repair mechanical, hydraulic, or electrical malfunctions related to variable pitch systems, variable speed control systems, converter systems, or related components.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17809",
+      "text": "Perform routine maintenance on wind turbine equipment, underground transmission systems, wind fields substations, or fiber optic sensing and control systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17808",
+      "text": "Diagnose problems involving wind turbine generators or control systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17811",
+      "text": "Test electrical components of wind systems with devices, such as voltage testers, multimeters, oscilloscopes, infrared testers, or fiber optic equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17810",
+      "text": "Start or restart wind turbine generator systems to ensure proper operations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17807",
+      "text": "Climb wind turbine towers to inspect, maintain, or repair equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17815",
+      "text": "Maintain tool and spare parts inventories required for repair, installation, or replacement services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17812",
+      "text": "Test structures, controls, or mechanical, hydraulic, or electrical systems, according to test plans or in coordination with engineers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17817",
+      "text": "Train end-users, distributors, installers, or other technicians in wind commissioning, testing, or other technical procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17814",
+      "text": "Collect turbine data for testing or research and analysis.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17805",
+      "text": "Inspect or repair fiberglass turbine blades.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17813",
+      "text": "Assist in assembly of individual wind generators or construction of wind farms.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 38,
+  "salary": 64120,
+  "demand": "Low"
+}

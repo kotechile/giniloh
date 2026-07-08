@@ -1,0 +1,94 @@
+{
+  "code": "43-5032.00",
+  "title": "Dispatchers, Except Police, Fire, and Ambulance",
+  "description": "Schedule and dispatch workers, work crews, equipment, or service vehicles for conveyance of materials, freight, or passengers, or for normal installation, service, or emergency repairs rendered outside the place of business. Duties may include using radio, telephone, or computer to transmit assignments and compiling statistics and reports on work progress.",
+  "tasks": [
+    {
+      "id": "2723",
+      "text": "Schedule or dispatch workers, work crews, equipment, or service vehicles to appropriate locations, according to customer requests, specifications, or needs, using radios or telephones.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2727",
+      "text": "Prepare daily work and run schedules.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2726",
+      "text": "Confer with customers or supervising personnel to address questions, problems, or requests for service or equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2725",
+      "text": "Relay work orders, messages, or information to or from work crews, supervisors, or field inspectors, using telephones or two-way radios.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2728",
+      "text": "Receive or prepare work orders.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2731",
+      "text": "Record and maintain files or records of customer requests, work or services performed, charges, expenses, inventory, or other dispatch information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2724",
+      "text": "Arrange for necessary repairs to restore service and schedules.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2730",
+      "text": "Monitor personnel or equipment locations and utilization to coordinate service and schedules.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2732",
+      "text": "Determine types or amounts of equipment, vehicles, materials, or personnel required, according to work orders or specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2733",
+      "text": "Advise personnel about traffic problems, such as construction areas, accidents, congestion, weather conditions, or other hazards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2729",
+      "text": "Oversee all communications within specifically assigned territories.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2735",
+      "text": "Order supplies or equipment and issue them to personnel.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 33,
+  "salary": 50340,
+  "demand": "High"
+}

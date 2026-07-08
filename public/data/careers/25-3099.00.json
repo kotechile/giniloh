@@ -1,0 +1,17 @@
+{
+  "code": "25-3099.00",
+  "title": "Teachers and Instructors, All Other",
+  "description": "All teachers and instructors not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Teachers and Instructors, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 66140,
+  "demand": "High"
+}

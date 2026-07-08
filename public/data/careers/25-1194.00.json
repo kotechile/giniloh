@@ -1,0 +1,150 @@
+{
+  "code": "25-1194.00",
+  "title": "Career/Technical Education Teachers, Postsecondary",
+  "description": "Teach vocational courses intended to provide occupational training below the baccalaureate level in subjects such as construction, mechanics/repair, manufacturing, transportation, or cosmetology, primarily to students who have graduated from or left high school. Teaching takes place in public or private schools whose primary business is academic or vocational education.",
+  "tasks": [
+    {
+      "id": "6446",
+      "text": "Observe and evaluate students' work to determine progress, provide feedback, and make suggestions for improvement.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "6447",
+      "text": "Present lectures and conduct discussions to increase students' knowledge and competence using visual aids, such as graphs, charts, videotapes, and slides.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6445",
+      "text": "Supervise and monitor students' use of tools and equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6448",
+      "text": "Administer oral, written, or performance tests to measure progress and to evaluate training effectiveness.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6452",
+      "text": "Provide individualized instruction and tutorial or remedial instruction.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6449",
+      "text": "Prepare reports and maintain records, such as student grades, attendance rolls, and training activity details.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "6454",
+      "text": "Develop curricula and plan course content and methods of instruction.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6451",
+      "text": "Determine training needs of students or workers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6450",
+      "text": "Supervise independent or group projects, field placements, laboratory work, or other training.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6456",
+      "text": "Integrate academic and vocational curricula so that students can obtain a variety of skills.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6458",
+      "text": "Select and assemble books, materials, supplies, and equipment for training, courses, or projects.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6453",
+      "text": "Conduct on-the-job training classes or training sessions to teach and demonstrate principles, techniques, procedures, or methods of designated subjects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20106",
+      "text": "Acquire, maintain, and repair laboratory equipment and tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6455",
+      "text": "Prepare outlines of instructional programs and training schedules and establish course goals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6459",
+      "text": "Advise students on course selection, career decisions, and other academic and vocational concerns.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6460",
+      "text": "Participate in conferences, seminars, and training sessions to keep abreast of developments in the field, and integrate relevant information into training programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6457",
+      "text": "Develop teaching aids, such as instructional software, multimedia visual aids, or study materials.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6461",
+      "text": "Serve on faculty and school committees concerned with budgeting, curriculum revision, and course and diploma requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "6463",
+      "text": "Arrange for lectures by experts in designated fields.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "6462",
+      "text": "Review enrollment applications and correspond with applicants to obtain additional information.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 28,
+  "salary": 63820,
+  "demand": "High"
+}

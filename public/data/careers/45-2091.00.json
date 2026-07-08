@@ -1,0 +1,129 @@
+{
+  "code": "45-2091.00",
+  "title": "Agricultural Equipment Operators",
+  "description": "Drive and control equipment to support agricultural activities such as tilling soil; planting, cultivating, and harvesting crops; feeding and herding livestock; or removing animal waste. May perform tasks such as crop baling or hay bucking. May operate stationary equipment to perform post-harvest tasks such as husking, shelling, threshing, and ginning.",
+  "tasks": [
+    {
+      "id": "13369",
+      "text": "Load and unload crops or containers of materials, manually or using conveyors, handtrucks, forklifts, or transfer augers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13358",
+      "text": "Mix specified materials or chemicals, and dump solutions, powders, or seeds into planter or sprayer machinery.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13363",
+      "text": "Spray fertilizer or pesticide solutions to control insects, fungus and weed growth, and diseases, using hand sprayers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13356",
+      "text": "Observe and listen to machinery operation to detect equipment malfunctions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13360",
+      "text": "Manipulate controls to set, activate, and adjust mechanisms on machinery.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13359",
+      "text": "Operate or tend equipment used in agricultural production, such as tractors, combines, and irrigation equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13355",
+      "text": "Adjust, repair, and service farm machinery and notify supervisors when machinery malfunctions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13364",
+      "text": "Attach farm implements such as plows, discs, sprayers, or harvesters to tractors, using bolts and hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13362",
+      "text": "Load hoppers, containers, or conveyors to feed machines with products, using forklifts, transfer augers, suction gates, shovels, or pitchforks.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13361",
+      "text": "Direct and monitor the activities of work crews engaged in planting, weeding, or harvesting activities.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13365",
+      "text": "Operate towed machines such as seed drills or manure spreaders to plant, fertilize, dust, and spray crops.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13368",
+      "text": "Weigh crop-filled containers, and record weights and other identifying information.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "13367",
+      "text": "Walk beside or ride on planting machines while inserting plants in planter mechanisms at specified intervals.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13366",
+      "text": "Drive trucks to haul crops, supplies, tools, or farm workers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13370",
+      "text": "Guide products on conveyors to regulate flow through machines, and to discard diseased or rotten products.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13371",
+      "text": "Position boxes or attach bags at discharge ends of machinery to catch products, removing and closing full containers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13357",
+      "text": "Irrigate soil, using portable pipes or ditch systems, and maintain ditches or pipes and pumps.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 38,
+  "salary": 41730,
+  "demand": "Medium"
+}

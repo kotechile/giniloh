@@ -118,6 +118,18 @@ export const calculatorTools = [
 		utility: 'Evaluate local GPU vs cloud GPU TCO',
 		category: 'FinanceApplication',
 		keywords: ['gpu compute calculator', 'local rig vs cloud gpu', 'rtx 4090 power cost']
+	},
+	{
+		title: 'JobProof AI',
+		slug: 'career-ai-resilience',
+		href: '/calculators/career-ai-resilience/',
+		status: 'Live',
+		accent: 'cyan',
+		description:
+			'Analyze the automation vulnerability of 1,000+ occupations at the task level. Drag sliders to simulate upskilling and see how task-shifting future-proofs your career.',
+		utility: 'Analyze career AI risk & upskill',
+		category: 'FinanceApplication',
+		keywords: ['career ai risk', 'occupation vulnerability', 'ai automation calculator', 'future proof career']
 	}
 ] as const;
 

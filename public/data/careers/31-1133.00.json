@@ -1,0 +1,129 @@
+{
+  "code": "31-1133.00",
+  "title": "Psychiatric Aides",
+  "description": "Assist mentally impaired or emotionally disturbed patients, working under direction of nursing and medical staff. May assist with daily living activities, lead patients in educational and recreational activities, or accompany patients to and from examinations and treatments. May restrain violent patients. Includes psychiatric orderlies.",
+  "tasks": [
+    {
+      "id": "20578",
+      "text": "Listen and provide emotional support and encouragement to psychiatric patients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1994",
+      "text": "Provide patients with cognitive, intellectual, or developmental disabilities with routine physical, emotional, psychological, or rehabilitation care under the direction of nursing or medical staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18696",
+      "text": "Complete physical checks and monitor patients to detect unusual or harmful behavior and report observations to professional staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2001",
+      "text": "Restrain or aid patients as necessary to prevent injury.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1996",
+      "text": "Work as part of a team that may include psychiatrists, psychologists, psychiatric nurses, or social workers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18697",
+      "text": "Record and maintain patient information, such as vital signs, eating habits, behavior, progress notes, treatments, or discharge plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2005",
+      "text": "Maintain patients' restrictions to assigned areas.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1998",
+      "text": "Organize, supervise, or encourage patient participation in social, educational, or recreational activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2003",
+      "text": "Provide patients with assistance in bathing, dressing, or grooming, demonstrating these skills as necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1997",
+      "text": "Aid patients in becoming accustomed to hospital routines.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2000",
+      "text": "Serve meals or feed patients needing assistance or persuasion.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2007",
+      "text": "Clean and disinfect rooms and furnishings to maintain a safe and orderly environment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18698",
+      "text": "Complete administrative tasks, such as entering orders into computer, answering telephone calls, or maintaining medical or facility information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2006",
+      "text": "Accompany patients to and from wards for medical or dental treatments, shopping trips, or religious or recreational events.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2004",
+      "text": "Participate in recreational activities with patients, including card games, sports, or television viewing.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "1999",
+      "text": "Perform nursing duties, such as administering medications, measuring vital signs, collecting specimens, or drawing blood samples.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2002",
+      "text": "Interview patients upon admission and record information.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 12,
+  "salary": 44910,
+  "demand": "Medium"
+}

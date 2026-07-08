@@ -1,0 +1,213 @@
+{
+  "code": "13-1031.00",
+  "title": "Claims Adjusters, Examiners, and Investigators",
+  "description": "Review settled claims to determine that payments and settlements are made in accordance with company practices and procedures. Confer with legal counsel on claims requiring litigation. May also settle insurance claims.",
+  "tasks": [
+    {
+      "id": "21417",
+      "text": "Examine claims forms and other records to determine insurance coverage.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "21418",
+      "text": "Analyze information gathered by investigation and report findings and recommendations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21426",
+      "text": "Pay and process claims within designated authority level.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21423",
+      "text": "Investigate, evaluate, and settle claims, applying technical knowledge and human relations skills to effect fair and prompt disposal of cases and to contribute to a reduced loss ratio.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21428",
+      "text": "Verify and analyze data used in settling claims to ensure that claims are valid and that settlements are made according to company practices and procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21419",
+      "text": "Review police reports, medical treatment records, medical bills, or physical property damage to determine the extent of liability.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21420",
+      "text": "Investigate and assess damage to property and create or review property damage estimates.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21421",
+      "text": "Interview or correspond with agents and claimants to correct errors or omissions and to investigate questionable claims.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21422",
+      "text": "Interview or correspond with claimants, witnesses, police, physicians, or other relevant parties to determine claim settlement, denial, or review.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21429",
+      "text": "Enter claim payments, reserves and new claims on computer system, inputting concise yet sufficient file documentation.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "21425",
+      "text": "Resolve complex, severe exposure claims, using high service oriented file handling.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21424",
+      "text": "Adjust reserves or provide reserve recommendations to ensure that reserve activities are consistent with corporate policies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21432",
+      "text": "Confer with legal counsel on claims requiring litigation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21427",
+      "text": "Examine claims investigated by insurance adjusters, further investigating questionable claims to determine whether to authorize payments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21434",
+      "text": "Maintain claim files, such as records of settled claims and an inventory of claims requiring detailed analysis.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "21430",
+      "text": "Refer questionable claims to investigator or claims adjuster for investigation or settlement.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21431",
+      "text": "Collect evidence to support contested claims in court.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21433",
+      "text": "Contact or interview claimants, doctors, medical specialists, or employers to get additional information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21435",
+      "text": "Present cases and participate in their discussion at claim committee meetings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21439",
+      "text": "Report overpayments, underpayments, and other irregularities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21443",
+      "text": "Attend mediations or trials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21436",
+      "text": "Supervise claims adjusters to ensure that adjusters have followed proper methods.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21437",
+      "text": "Conduct detailed bill reviews to implement sound litigation management and expense control.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21440",
+      "text": "Communicate with reinsurance brokers to obtain information necessary for processing claims.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21441",
+      "text": "Prepare reports to be submitted to company's data processing department.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21438",
+      "text": "Examine titles to property to determine validity and act as company agent in transactions with property owners.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21442",
+      "text": "Obtain credit information from banks and other credit services.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21444",
+      "text": "Communicate with former associates to verify employment record or to obtain background information regarding persons or businesses applying for credit.",
+      "type": "n/a",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "21445",
+      "text": "Negotiate claim settlements or recommend litigation when settlement cannot be negotiated.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 33,
+  "salary": 78000,
+  "demand": "Very High"
+}

@@ -1,0 +1,143 @@
+{
+  "code": "31-2022.00",
+  "title": "Physical Therapist Aides",
+  "description": "Under close supervision of a physical therapist or physical therapy assistant, perform only delegated, selected, or routine tasks in specific situations. These duties include preparing the patient and the treatment area.",
+  "tasks": [
+    {
+      "id": "4273",
+      "text": "Clean and organize work area and disinfect equipment after treatment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4276",
+      "text": "Secure patients into or onto therapy equipment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4275",
+      "text": "Instruct, motivate, safeguard, or assist patients practicing exercises or functional activities, under direction of medical staff.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4278",
+      "text": "Confer with physical therapy staff or others to discuss and evaluate patient information for planning, modifying, or coordinating treatment.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4274",
+      "text": "Observe patients during treatment to compile and evaluate data on patients' responses and progress and report to physical therapist.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4283",
+      "text": "Change linens, such as bed sheets and pillow cases.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4282",
+      "text": "Administer active or passive manual therapeutic exercises, therapeutic massage, or heat, light, sound, water, or electrical modality treatments, such as ultrasound.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4277",
+      "text": "Transport patients to and from treatment areas, using wheelchairs or providing standing support.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4280",
+      "text": "Perform clerical duties, such as taking inventory, ordering supplies, answering telephone, taking messages, or filling out forms.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15251",
+      "text": "Schedule patient appointments with physical therapists and coordinate therapists' schedules.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4284",
+      "text": "Arrange treatment supplies to keep them in order.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4285",
+      "text": "Assist patients to dress, undress, or put on and remove supportive devices, such as braces, splints, or slings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4281",
+      "text": "Maintain equipment or furniture to keep it in good working condition, including performing the assembly or disassembly of equipment or accessories.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4279",
+      "text": "Record treatment given and equipment used.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4286",
+      "text": "Measure patient's range-of-joint motion, body parts, or vital signs to determine effects of treatments or for patient evaluations.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4287",
+      "text": "Train patients to use orthopedic braces, prostheses, or supportive devices.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4290",
+      "text": "Administer traction to relieve neck or back pain, using intermittent or static traction equipment.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4288",
+      "text": "Fit patients for orthopedic braces, prostheses, or supportive devices, adjusting fit as needed.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "4289",
+      "text": "Participate in patient care tasks, such as assisting with passing food trays, feeding residents, or bathing residents on bed rest.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 8,
+  "salary": 35240,
+  "demand": "Medium"
+}

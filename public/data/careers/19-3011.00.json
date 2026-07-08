@@ -1,0 +1,108 @@
+{
+  "code": "19-3011.00",
+  "title": "Economists",
+  "description": "Conduct research, prepare reports, or formulate plans to address economic problems related to the production and distribution of goods and services or monetary and fiscal policy. May collect and process economic and statistical data using sampling techniques and econometric methods.",
+  "tasks": [
+    {
+      "id": "7536",
+      "text": "Study economic and statistical data in area of specialization, such as finance, labor, or agriculture.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7538",
+      "text": "Compile, analyze, and report data to explain economic phenomena and forecast market trends, applying mathematical models and statistical techniques.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20052",
+      "text": "Study the socioeconomic impacts of new public policies, such as proposed legislation, taxes, services, and regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21106",
+      "text": "Explain economic impact of policies to the public.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23988",
+      "text": "Review documents written by others.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7537",
+      "text": "Provide advice and consultation on economic relationships to businesses, public and private agencies, and other employers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7539",
+      "text": "Formulate recommendations, policies, or plans to solve economic problems or to interpret markets.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7542",
+      "text": "Supervise research projects and students' study projects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20053",
+      "text": "Conduct research on economic issues, and disseminate research findings through technical reports or scientific articles in journals.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7540",
+      "text": "Develop economic guidelines and standards, and prepare points of view used in forecasting trends and formulating economic policy.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7544",
+      "text": "Teach theories, principles, and methods of economics.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7541",
+      "text": "Testify at regulatory or legislative hearings concerning the estimated effects of changes in legislation or public policy, and present recommendations based on cost-benefit analyses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20051",
+      "text": "Provide litigation support, such as writing reports for expert testimony or testifying as an expert witness.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7543",
+      "text": "Forecast production and consumption of renewable resources and supply, consumption, and depletion of non-renewable resources.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 29,
+  "salary": 124720,
+  "demand": "Low"
+}

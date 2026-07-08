@@ -1,0 +1,220 @@
+{
+  "code": "11-9013.00",
+  "title": "Farmers, Ranchers, and Other Agricultural Managers",
+  "description": "Plan, direct, or coordinate the management or operation of farms, ranches, greenhouses, aquacultural operations, nurseries, timber tracts, or other agricultural establishments. May hire, train, and supervise farm workers or contract for services to carry out the day-to-day activities of the managed operation. May engage in or supervise planting, cultivating, harvesting, and financial and marketing activities.",
+  "tasks": [
+    {
+      "id": "21370",
+      "text": "Collect and record growth, production, and environmental data.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "21371",
+      "text": "Manage nurseries that grow horticultural plants for sale to trade or retail customers, for display or exhibition, or for research.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21372",
+      "text": "Direct and monitor trapping and spawning of fish, egg incubation, and fry rearing, applying knowledge of management and fish culturing techniques.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21373",
+      "text": "Direct and monitor the transfer of mature fish to lakes, ponds, streams, or commercial tanks.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21374",
+      "text": "Determine how to allocate resources and to respond to unanticipated problems, such as insect infestation, drought, and fire.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21375",
+      "text": "Determine plant growing conditions, such as greenhouses, hydroponics, or natural settings, and set planting and care schedules.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21376",
+      "text": "Devise and participate in activities to improve fish hatching and growth rates, and to prevent disease in hatcheries.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21377",
+      "text": "Position and regulate plant irrigation systems, and program environmental and irrigation control computers.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21378",
+      "text": "Prepare reports required by state and federal laws.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21379",
+      "text": "Inspect facilities and equipment for signs of disrepair, and perform necessary maintenance work.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21380",
+      "text": "Maintain financial, operational, production, or employment records for farms or ranches.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "21381",
+      "text": "Coordinate clerical, record-keeping, inventory, requisitioning, and marketing activities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21382",
+      "text": "Direct the breeding or raising of stock, such as cattle, poultry, or honeybees, using recognized breeding practices to ensure stock improvement.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21383",
+      "text": "Negotiate with buyers for the sale, storage, or shipment of crops or livestock.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21384",
+      "text": "Coordinate the selection and maintenance of brood stock.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21385",
+      "text": "Analyze soil to determine types or quantities of fertilizer required for maximum crop production.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21386",
+      "text": "Provide information to customers on the care of trees, shrubs, flowers, plants, and lawns.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21387",
+      "text": "Analyze market conditions to determine acreage allocations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21388",
+      "text": "Supervise the construction of farm or ranch structures, such as buildings, fences, drainage systems, wells, or roads.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21389",
+      "text": "Replace chemical insecticides with environmentally friendly practices, such as adding pest-repelling plants to fields.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21390",
+      "text": "Conduct inspections to determine crop maturity or condition or to detect disease or insect infestation.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21391",
+      "text": "Conduct or supervise stock examinations to identify diseases or parasites.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21392",
+      "text": "Determine types or quantities of crops, plants, or livestock to be grown and raised, based on budgets, federal incentives, market conditions, executive directives, projected sales volumes, or soil conditions.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21393",
+      "text": "Determine, administer, and execute policies relating to operations administration and standards, facility maintenance, and safety.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21394",
+      "text": "Direct crop production operations, such as planning, tilling, planting, fertilizing, cultivating, spraying, and harvesting.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21395",
+      "text": "Evaluate marketing or sales alternatives for products.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21396",
+      "text": "Hire, supervise, and train support workers.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21397",
+      "text": "Monitor activities, such as irrigation, chemical application, harvesting, milking, breeding, and grading, to ensure adherence to safety regulations or standards.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21398",
+      "text": "Monitor environments to ensure maintenance of optimum animal or plant life.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21399",
+      "text": "Obtain financing for and purchase necessary machinery, land, supplies, or livestock.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 25,
+  "salary": 89900,
+  "demand": "Low"
+}

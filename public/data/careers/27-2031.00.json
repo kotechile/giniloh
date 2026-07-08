@@ -1,0 +1,108 @@
+{
+  "code": "27-2031.00",
+  "title": "Dancers",
+  "description": "Perform dances. May perform on stage, for broadcasting, or for video recording.",
+  "tasks": [
+    {
+      "id": "7686",
+      "text": "Study and practice dance moves required in roles.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7687",
+      "text": "Harmonize body movements to rhythm of musical accompaniment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7685",
+      "text": "Train, exercise, and attend dance classes to maintain high levels of technical proficiency, physical ability, and physical fitness.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "7690",
+      "text": "Coordinate dancing with that of partners or dance ensembles.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7693",
+      "text": "Develop self-understanding of physical capabilities and limitations, and choose dance styles accordingly.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7688",
+      "text": "Perform classical, modern, or acrobatic dances in productions, expressing stories, rhythm, and sound with their bodies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7689",
+      "text": "Collaborate with choreographers to refine or modify dance steps.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7692",
+      "text": "Audition for dance roles or for membership in dance companies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "7691",
+      "text": "Attend costume fittings, photography sessions, and makeup calls associated with dance performances.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7694",
+      "text": "Monitor the field of dance to remain aware of current trends and innovations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21141",
+      "text": "Prepare pointe shoes, by sewing or other means, for use in rehearsals and performance.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7697",
+      "text": "Perform in productions, singing or acting in addition to dancing, if required.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7695",
+      "text": "Teach dance students.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "7696",
+      "text": "Devise and choreograph dance for self or others.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 18,
+  "salary": 53621,
+  "demand": "Low"
+}

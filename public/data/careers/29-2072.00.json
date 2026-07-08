@@ -1,0 +1,129 @@
+{
+  "code": "29-2072.00",
+  "title": "Medical Records Specialists",
+  "description": "Compile, process, and maintain medical records of hospital and clinic patients in a manner consistent with medical, administrative, ethical, legal, and regulatory requirements of the healthcare system. Classify medical and healthcare concepts, including diagnosis, procedures, medical services, and equipment, into the healthcare industry's numerical coding system. Includes medical coders.",
+  "tasks": [
+    {
+      "id": "22877",
+      "text": "Assign the patient to diagnosis-related groups (DRGs), using appropriate computer software.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22878",
+      "text": "Compile and maintain patients' medical records to document condition and treatment and to provide data for research or cost control and care improvement efforts.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22879",
+      "text": "Consult classification manuals to locate information about disease processes.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22880",
+      "text": "Enter data, such as demographic characteristics, history and extent of disease, diagnostic procedures, or treatment into computer.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22881",
+      "text": "Identify, compile, abstract, and code patient data, using standard classification systems.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22882",
+      "text": "Maintain or operate a variety of health record indexes or storage and retrieval systems to collect, classify, store, or analyze information.",
+      "type": "n/a",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "22883",
+      "text": "Post medical insurance billings.",
+      "type": "n/a",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "22884",
+      "text": "Process and prepare business or government forms.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22885",
+      "text": "Process patient admission or discharge documents.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22886",
+      "text": "Protect the security of medical records to ensure that confidentiality is maintained.",
+      "type": "n/a",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "22887",
+      "text": "Release information to persons or agencies according to regulations.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22888",
+      "text": "Resolve or clarify codes or diagnoses with conflicting, missing, or unclear information by consulting with doctors or others or by participating in the coding team's regular meetings.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22889",
+      "text": "Retrieve patient medical records for physicians, technicians, or other medical personnel.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22890",
+      "text": "Review records for completeness, accuracy, and compliance with regulations.",
+      "type": "n/a",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "22891",
+      "text": "Scan patients' health records into electronic formats.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22892",
+      "text": "Schedule medical appointments for patients.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22893",
+      "text": "Transcribe medical reports.",
+      "type": "n/a",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    }
+  ],
+  "risk_score": 44,
+  "salary": 51140,
+  "demand": "High"
+}

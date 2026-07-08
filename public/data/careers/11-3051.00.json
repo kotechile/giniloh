@@ -1,0 +1,157 @@
+{
+  "code": "11-3051.00",
+  "title": "Industrial Production Managers",
+  "description": "Plan, direct, or coordinate the work activities and resources necessary for manufacturing products in accordance with cost, quality, and quantity specifications.",
+  "tasks": [
+    {
+      "id": "39",
+      "text": "Set and monitor product standards, examining samples of raw products or directing testing during processing, to ensure finished products are of prescribed quality.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "32",
+      "text": "Direct or coordinate production, processing, distribution, or marketing activities of industrial organizations.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "34",
+      "text": "Review processing schedules or production orders to make decisions concerning inventory requirements, staffing requirements, work procedures, or duty assignments, considering budgetary limitations and time constraints.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "35",
+      "text": "Review operations and confer with technical or administrative staff to resolve production or processing problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "36",
+      "text": "Hire, train, evaluate, or discharge staff or resolve personnel grievances.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "40",
+      "text": "Develop or implement production tracking or quality control systems, analyzing production, quality control, maintenance, or other operational reports to detect production problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "38",
+      "text": "Prepare and maintain production reports or personnel records.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "41",
+      "text": "Review plans and confer with research or support staff to develop new products or processes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "33",
+      "text": "Develop budgets or approve expenditures for supplies, materials, or human resources, ensuring that materials, labor, or equipment are used efficiently to meet production targets.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "44",
+      "text": "Maintain current knowledge of the quality control field, relying on current literature pertaining to materials use, technological advances, or statistical studies.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "43",
+      "text": "Coordinate or recommend procedures for facility or equipment maintenance or modification, including the replacement of machines.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "37",
+      "text": "Initiate or coordinate inventory or cost control programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "45",
+      "text": "Negotiate materials prices with suppliers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21332",
+      "text": "Conduct site audits to ensure adherence to safety and environmental regulations.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21333",
+      "text": "Develop or enforce procedures for normal operation of manufacturing systems.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21334",
+      "text": "Implement operational and emergency procedures.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21335",
+      "text": "Maintain records to demonstrate compliance with safety and environmental laws, regulations, or policies.",
+      "type": "n/a",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "21336",
+      "text": "Monitor permit requirements for updates.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21337",
+      "text": "Optimize operational costs and productivity consistent with safety and environmental rules and regulations.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21338",
+      "text": "Prepare reports on operations and system productivity or efficiency.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21339",
+      "text": "Supervise subordinate employees.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 26,
+  "salary": 126060,
+  "demand": "High"
+}

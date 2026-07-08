@@ -1,0 +1,171 @@
+{
+  "code": "15-1299.03",
+  "title": "Document Management Specialists",
+  "description": "Implement and administer enterprise-wide document management systems and related procedures that allow organizations to capture, store, retrieve, share, and destroy electronic records and documents.",
+  "tasks": [
+    {
+      "id": "16234",
+      "text": "Assist in determining document management policies to facilitate efficient, legal, and secure access to electronic content.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16232",
+      "text": "Assist in the development of document or content classification taxonomies to facilitate information capture, search, and retrieval.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16238",
+      "text": "Implement electronic document processing, retrieval, and distribution systems in collaboration with other information technology specialists.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16239",
+      "text": "Identify and classify documents or other electronic content according to characteristics such as security level, function, and metadata.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16229",
+      "text": "Develop, document, or maintain standards, best practices, or system usage procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16233",
+      "text": "Assist in the assessment, acquisition, or deployment of new electronic document management systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16237",
+      "text": "Administer document and system access rights and revision control to ensure security of system and integrity of master documents.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20368",
+      "text": "Prepare and record changes to official documents and confirm changes with legal and compliance management staff, including enterprise-wide records management staff.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16220",
+      "text": "Write, review, or execute plans for testing new or established document management systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16219",
+      "text": "Monitor regulatory activity to maintain compliance with records and document management laws.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16222",
+      "text": "Retrieve electronic assets from repository for distribution to users, collecting and returning to repository, if necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20367",
+      "text": "Keep abreast of developments in document management technologies and techniques by reviewing current literature, talking with colleagues, participating in educational programs, attending meetings or workshops, or participating in professional organizations or conferences.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16231",
+      "text": "Conduct needs assessments to identify document management requirements of departments or end users.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16240",
+      "text": "Develop or configure document management system features, such as user interfaces, access profiles, and document workflow procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16228",
+      "text": "Document technical functions and specifications for new or proposed content management systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16226",
+      "text": "Exercise security surveillance over document processing, reproduction, distribution, storage, or archiving.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16230",
+      "text": "Consult with end users regarding problems in accessing electronic content.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16223",
+      "text": "Propose recommendations for improving content management system capabilities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16236",
+      "text": "Operate data capture technology to import digitized documents into document management system.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16224",
+      "text": "Prepare support documentation and training materials for end users of document management systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16221",
+      "text": "Search electronic sources, such as databases or repositories, or manual sources for information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16227",
+      "text": "Implement scanning or other automated data entry procedures, using imaging devices and document imaging software.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "16235",
+      "text": "Analyze, interpret, or disseminate system performance data.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 22,
+  "salary": 116580,
+  "demand": "Very High"
+}

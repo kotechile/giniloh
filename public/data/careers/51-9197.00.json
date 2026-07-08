@@ -1,0 +1,150 @@
+{
+  "code": "51-9197.00",
+  "title": "Tire Builders",
+  "description": "Operate machines to build tires.",
+  "tasks": [
+    {
+      "id": "14418",
+      "text": "Build semi-raw rubber treads onto buffed tire casings to prepare tires for vulcanization in recapping or retreading processes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14430",
+      "text": "Trim excess rubber and imperfections during retreading processes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14425",
+      "text": "Fill cuts and holes in tires, using hot rubber.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14431",
+      "text": "Place tires into molds for new tread.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14423",
+      "text": "Fit inner tubes and final layers of rubber onto tires.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21215",
+      "text": "Buff tires according to specifications for width and undertread depth.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14426",
+      "text": "Brush or spray solvents onto plies to ensure adhesion, and repeat process as specified, alternating direction of each ply to strengthen tires.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14411",
+      "text": "Start rollers that bond tread and plies as drums revolve.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14415",
+      "text": "Align treads with guides, start drums to wind treads onto plies, and slice ends.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14413",
+      "text": "Inspect worn tires for faults, cracks, cuts, and nail holes, and to determine if tires are suitable for retreading.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "14428",
+      "text": "Measure tires to determine mold size requirements.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14427",
+      "text": "Roll hand rollers over rebuilt casings, exerting pressure to ensure adhesion between camelbacks and casings.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14417",
+      "text": "Position ply stitcher rollers and drums according to width of stock, using hand tools and gauges.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14414",
+      "text": "Cut plies at splice points, and press ends together to form continuous bands.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14410",
+      "text": "Depress pedals to rotate drums, and wind specified numbers of plies around drums to form tire bodies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14422",
+      "text": "Clean and paint completed tires.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14424",
+      "text": "Rub cement sticks on drum edges to provide adhesive surfaces for plies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14429",
+      "text": "Depress pedals to collapse drums after processing is complete.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14419",
+      "text": "Wind chafers and breakers onto plies.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14420",
+      "text": "Pull plies from supply racks, and align plies with edges of drums.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 42,
+  "salary": 57390,
+  "demand": "Low"
+}

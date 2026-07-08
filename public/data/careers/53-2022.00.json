@@ -1,0 +1,199 @@
+{
+  "code": "53-2022.00",
+  "title": "Airfield Operations Specialists",
+  "description": "Ensure the safe takeoff and landing of commercial and military aircraft. Duties include coordination between air-traffic control and maintenance personnel, dispatching, using airfield landing and navigational aids, implementing airfield safety procedures, monitoring and maintaining flight records, and applying knowledge of weather information.",
+  "tasks": [
+    {
+      "id": "23939",
+      "text": "Inspect airfield conditions to ensure compliance with federal regulatory requirements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10613",
+      "text": "Implement airfield safety procedures to ensure a safe operating environment for personnel and aircraft operation.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23940",
+      "text": "Conduct inspections of the airport property and perimeter to maintain controlled access to airfields.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "20456",
+      "text": "Assist in responding to aircraft and medical emergencies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23941",
+      "text": "Initiate or conduct airport-wide coordination of snow removal on runways and taxiways.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20457",
+      "text": "Manage wildlife on and around airport grounds.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10621",
+      "text": "Coordinate communications between air traffic control and maintenance personnel.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10622",
+      "text": "Perform and supervise airfield management activities, including mobile airfield management functions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10614",
+      "text": "Plan and coordinate airfield construction.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10616",
+      "text": "Monitor the arrival, parking, refueling, loading, and departure of all aircraft.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10618",
+      "text": "Train operations staff.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10615",
+      "text": "Coordinate with agencies, such as air traffic control, civil engineers, or command posts, to ensure support of airfield management activities.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10619",
+      "text": "Relay departure, arrival, delay, aircraft and airfield status, and other pertinent information to upline controlling agencies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10630",
+      "text": "Provide aircrews with information and services needed for airfield management and flight planning.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10626",
+      "text": "Coordinate with agencies to meet aircrew requirements for billeting, messing, refueling, ground transportation, and transient aircraft maintenance.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10632",
+      "text": "Use airfield landing and navigational aids and digital data terminal communications equipment to perform duties.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10623",
+      "text": "Receive, transmit, and control message traffic.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10617",
+      "text": "Maintain air-to-ground and point-to-point radio contact with aircraft commanders.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10620",
+      "text": "Procure, produce, and provide information on the safe operation of aircraft, such as flight planning publications, operations publications, charts and maps, or weather information.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10629",
+      "text": "Anticipate aircraft equipment needs for air evacuation and cargo flights.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10633",
+      "text": "Post visual display boards and status boards.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10624",
+      "text": "Receive and post weather information and flight plan data, such as air routes or arrival and departure times.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10631",
+      "text": "Conduct departure and arrival briefings.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10627",
+      "text": "Collaborate with others to plan flight schedules and air crew assignments.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10625",
+      "text": "Maintain flight and event logs, air crew flying records, and flight operations records of incoming and outgoing flights.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "10628",
+      "text": "Coordinate changes to flight itineraries with appropriate Air Traffic Control (ATC) agencies.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10634",
+      "text": "Check military flight plans with civilian agencies.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 19,
+  "salary": 56850,
+  "demand": "Low"
+}

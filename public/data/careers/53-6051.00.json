@@ -1,0 +1,129 @@
+{
+  "code": "53-6051.00",
+  "title": "Transportation Inspectors",
+  "description": "Inspect equipment or goods in connection with the safe transport of cargo or people. Includes rail transportation inspectors, such as freight inspectors, rail inspectors, and other inspectors of transportation vehicles not elsewhere classified.",
+  "tasks": [
+    {
+      "id": "23850",
+      "text": "Prepare and submit reports after completion of freight shipments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23851",
+      "text": "Inspect shipments to ensure that freight is securely braced and blocked.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23852",
+      "text": "Record details about freight conditions, handling of freight, and any problems encountered.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "23853",
+      "text": "Advise crews in techniques of stowing dangerous and heavy cargo.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23854",
+      "text": "Observe loading of freight to ensure that crews comply with procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23855",
+      "text": "Recommend remedial procedures to correct any violations found during inspections.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23856",
+      "text": "Inspect loaded cargo, cargo lashed to decks or in storage facilities, and cargo handling devices to determine compliance with health and safety regulations and need for maintenance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "23857",
+      "text": "Notify workers of any special treatment required for shipments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23858",
+      "text": "Direct crews to reload freight or to insert additional bracing or packing as necessary.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23859",
+      "text": "Check temperatures and humidities of shipping and storage areas to ensure that they are at appropriate levels to protect cargo.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23860",
+      "text": "Determine cargo transportation capabilities by reading documents that set forth cargo loading and securing procedures, capacities, and stability factors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23861",
+      "text": "Read draft markings to determine depths of vessels in water.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23864",
+      "text": "Post warning signs on vehicles containing explosives or flammable or radioactive materials.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23865",
+      "text": "Measure heights and widths of loads to ensure they will pass over bridges or through tunnels on scheduled routes.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23868",
+      "text": "Calculate gross and net tonnage, hold capacities, volumes of stored fuel and water, cargo weights, and vessel stability factors, using mathematical formulas.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23869",
+      "text": "Measure vessels' holds and depths of fuel and water in tanks, using sounding lines and tape measures.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "23870",
+      "text": "Visually inspect cargo for damage upon arrival or discharge.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 41,
+  "salary": 92100,
+  "demand": "Low"
+}

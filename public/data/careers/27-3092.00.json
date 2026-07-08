@@ -1,0 +1,108 @@
+{
+  "code": "27-3092.00",
+  "title": "Court Reporters and Simultaneous Captioners",
+  "description": "Use verbatim methods and equipment to capture, store, retrieve, and transcribe pretrial and trial proceedings or other information. Includes stenocaptioners who operate computerized stenographic captioning equipment to provide captions of live or prerecorded broadcasts for hearing-impaired viewers.",
+  "tasks": [
+    {
+      "id": "8655",
+      "text": "Record verbatim proceedings of courts, legislative assemblies, committee meetings, and other proceedings, using computerized recording equipment, electronic stenograph machines, or stenomasks.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "21183",
+      "text": "Proofread transcripts for correct spelling of words.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8657",
+      "text": "Ask speakers to clarify inaudible statements.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8654",
+      "text": "Provide transcripts of proceedings upon request of judges, lawyers, or the public.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8656",
+      "text": "Transcribe recorded proceedings in accordance with established formats.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "21184",
+      "text": "Log and store exhibits from court proceedings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8659",
+      "text": "File and store shorthand notes of court session.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8658",
+      "text": "File a legible transcript of records of a court case with the court clerk's office.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "8662",
+      "text": "Verify accuracy of transcripts by checking copies against original records of proceedings and accuracy of rulings by checking with judges.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "8660",
+      "text": "Respond to requests during court sessions to read portions of the proceedings already recorded.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "8663",
+      "text": "Record symbols on computer storage media and use computer aided transcription to translate and display them as text.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "8653",
+      "text": "Take notes in shorthand or use a stenotype or shorthand machine that prints letters on a paper tape.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21185",
+      "text": "Type court orders for judges.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "8661",
+      "text": "Record depositions and other proceedings for attorneys.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    }
+  ],
+  "risk_score": 75,
+  "salary": 72420,
+  "demand": "Low"
+}

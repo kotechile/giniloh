@@ -1,0 +1,206 @@
+{
+  "code": "43-1011.00",
+  "title": "First-Line Supervisors of Office and Administrative Support Workers",
+  "description": "Directly supervise and coordinate the activities of clerical and administrative support workers.",
+  "tasks": [
+    {
+      "id": "9704",
+      "text": "Supervise the work of office, administrative, or customer service employees to ensure adherence to quality standards, deadlines, and proper procedures, correcting errors or problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9703",
+      "text": "Resolve customer complaints or answer customers' questions regarding policies and procedures.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9705",
+      "text": "Provide employees with guidance in handling difficult or complex problems or in resolving escalated complaints or disputes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9710",
+      "text": "Review records or reports pertaining to activities such as production, payroll, or shipping to verify details, monitor work activities, or evaluate performance.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9707",
+      "text": "Discuss job performance problems with employees to identify causes and issues and to work on resolving problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9713",
+      "text": "Prepare and issue work schedules, deadlines, and duty assignments for office or administrative staff.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9711",
+      "text": "Recruit, interview, and select employees.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9712",
+      "text": "Interpret and communicate work procedures and company policies to staff.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9709",
+      "text": "Evaluate employees' job performance and conformance to regulations and recommend appropriate personnel action.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9708",
+      "text": "Train or instruct employees in job duties or company policies or arrange for training to be provided.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9716",
+      "text": "Research, compile, and prepare reports, manuals, correspondence, or other information required by management or governmental agencies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9706",
+      "text": "Implement corporate or departmental policies, procedures, and service standards in conjunction with management.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9715",
+      "text": "Compute figures such as balances, totals, or commissions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9717",
+      "text": "Coordinate activities with other supervisory personnel or with other work units or departments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9722",
+      "text": "Participate in the work of subordinates to facilitate productivity or to overcome difficult aspects of work.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9720",
+      "text": "Make recommendations to management concerning such issues as staffing decisions or procedural changes.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9719",
+      "text": "Develop or update procedures, policies, or standards.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9714",
+      "text": "Maintain records pertaining to inventory, personnel, orders, supplies, or machine maintenance.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "9721",
+      "text": "Consult with managers or other personnel to resolve problems in areas such as equipment performance, output quality, or work schedules.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9724",
+      "text": "Develop work schedules according to budgets and workloads.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9718",
+      "text": "Analyze financial activities of establishments or departments and provide input into budget planning and preparation processes.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9723",
+      "text": "Design, implement, or evaluate staff training and development programs, customer service initiatives, or performance measurement criteria.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9729",
+      "text": "Keep informed of provisions of labor-management agreements and their effects on departmental operations.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9730",
+      "text": "Coordinate or perform activities associated with shipping, receiving, distribution, or transportation.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9725",
+      "text": "Monitor inventory levels and requisition or purchase supplies as needed.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "9727",
+      "text": "Plan for or coordinate office services, such as equipment or supply acquisition or organization, disposal of assets, relocation, parking, maintenance, or security services.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9728",
+      "text": "Arrange for necessary maintenance or repair work.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9731",
+      "text": "Plan layouts of stockrooms, warehouses, or other storage areas, considering turnover, size, weight, or related factors pertaining to items stored.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 23,
+  "salary": 69500,
+  "demand": "Very High"
+}

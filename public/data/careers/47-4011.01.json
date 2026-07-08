@@ -1,0 +1,157 @@
+{
+  "code": "47-4011.01",
+  "title": "Energy Auditors",
+  "description": "Conduct energy audits of buildings, building systems, or process systems. May also conduct investment grade audits of buildings or systems.",
+  "tasks": [
+    {
+      "id": "18082",
+      "text": "Identify and prioritize energy-saving measures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18074",
+      "text": "Prepare audit reports containing energy analysis results or recommendations for energy cost savings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19561",
+      "text": "Identify any health or safety issues related to planned weatherization projects.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18083",
+      "text": "Identify opportunities to improve the operation, maintenance, or energy efficiency of building or process systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18077",
+      "text": "Calculate potential for energy savings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18073",
+      "text": "Inspect or evaluate building envelopes, mechanical systems, electrical systems, or process systems to determine the energy consumption of each system.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18076",
+      "text": "Analyze technical feasibility of energy-saving measures, using knowledge of engineering, energy production, energy use, construction, maintenance, system operation, or process systems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "19560",
+      "text": "Examine commercial sites to determine the feasibility of installing equipment that allows building management systems to reduce electricity consumption during peak demand periods.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18087",
+      "text": "Recommend energy-efficient technologies or alternate energy sources.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18078",
+      "text": "Collect and analyze field data related to energy usage.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18071",
+      "text": "Measure energy usage with devices such as data loggers, universal data recorders, light meters, sling psychrometers, psychrometric charts, flue gas analyzers, amp probes, watt meters, volt meters, thermometers, or utility meters.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "18081",
+      "text": "Educate customers on energy efficiency or answer questions on topics such as the costs of running household appliances or the selection of energy-efficient appliances.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18072",
+      "text": "Perform tests such as blower-door tests to locate air leaks.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18086",
+      "text": "Prepare job specification sheets for home energy improvements, such as attic insulation, window retrofits, or heating system upgrades.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "19562",
+      "text": "Inspect newly installed energy-efficient equipment to ensure that it was installed properly and is performing according to specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18075",
+      "text": "Analyze energy bills, including utility rates or tariffs, to gather historical energy usage data.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18084",
+      "text": "Quantify energy consumption to establish baselines for energy use or need.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18080",
+      "text": "Determine patterns of building use to show annual or monthly needs for heating, cooling, lighting, or other energy needs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18079",
+      "text": "Compare existing energy consumption levels to normative data.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18085",
+      "text": "Oversee installation of equipment such as water heater wraps, pipe insulation, weatherstripping, door sweeps, or low-flow showerheads to improve energy efficiency.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "19563",
+      "text": "Verify income eligibility of participants in publicly financed weatherization programs.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 33,
+  "salary": 74690,
+  "demand": "High"
+}

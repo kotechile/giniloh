@@ -1,0 +1,192 @@
+{
+  "code": "19-4099.01",
+  "title": "Quality Control Analysts",
+  "description": "Conduct tests to determine quality of raw materials, bulk intermediate and finished products. May conduct stability sample tests.",
+  "tasks": [
+    {
+      "id": "16980",
+      "text": "Conduct routine and non-routine analyses of in-process materials, raw materials, environmental samples, finished goods, or stability samples.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16974",
+      "text": "Interpret test results, compare them to established specifications and control limits, and make recommendations on appropriateness of data for release.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16978",
+      "text": "Calibrate, validate, or maintain laboratory equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16961",
+      "text": "Ensure that lab cleanliness and safety standards are maintained.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16956",
+      "text": "Perform visual inspections of finished products.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16977",
+      "text": "Complete documentation needed to support testing procedures, including data capture forms, equipment logbooks, or inventory forms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16979",
+      "text": "Compile laboratory test data and perform appropriate analyses.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16959",
+      "text": "Identify and troubleshoot equipment problems.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16964",
+      "text": "Write technical reports or documentation, such as deviation reports, testing protocols, and trend analyses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16973",
+      "text": "Investigate or report questionable test results.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16972",
+      "text": "Monitor testing procedures to ensure that all tests are performed according to established item specifications, standard test methods, or protocols.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16975",
+      "text": "Identify quality problems and recommend solutions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16971",
+      "text": "Participate in out-of-specification and failure investigations and recommend corrective actions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16967",
+      "text": "Receive and inspect raw materials.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16955",
+      "text": "Train other analysts to perform laboratory procedures and assays.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16966",
+      "text": "Supply quality control data necessary for regulatory submissions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16957",
+      "text": "Serve as a technical liaison between quality control and other departments, vendors, or contractors.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16965",
+      "text": "Write or revise standard quality control operating procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "16958",
+      "text": "Participate in internal assessments and audits as required.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16970",
+      "text": "Perform validations or transfers of analytical methods in accordance with applicable policies or guidelines.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16976",
+      "text": "Evaluate analytical methods and procedures to determine how they might be improved.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16969",
+      "text": "Prepare or review required method transfer documentation including technical transfer protocols or reports.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16968",
+      "text": "Review data from contract laboratories to ensure accuracy and regulatory compliance.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "16962",
+      "text": "Develop and qualify new testing methods.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16963",
+      "text": "Coordinate testing with contract laboratories and vendors.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "16960",
+      "text": "Evaluate new technologies and methods to make recommendations regarding their use.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 25,
+  "salary": 62280,
+  "demand": "Medium"
+}

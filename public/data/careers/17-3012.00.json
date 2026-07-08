@@ -1,0 +1,220 @@
+{
+  "code": "17-3012.00",
+  "title": "Electrical and Electronics Drafters",
+  "description": "Prepare wiring diagrams, circuit board assembly diagrams, and layout drawings used for the manufacture, installation, or repair of electrical equipment.",
+  "tasks": [
+    {
+      "id": "21951",
+      "text": "Draft detail and assembly drawings of design components, circuitry or printed circuit boards, using computer-assisted equipment or standard drafting techniques and devices.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21945",
+      "text": "Draft working drawings, wiring diagrams, wiring connection specifications, or cross-sections of underground cables, as required for instructions to installation crew.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21946",
+      "text": "Assemble documentation packages and produce drawing sets to be checked by an engineer or an architect.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21948",
+      "text": "Review completed construction drawings and cost estimates for accuracy and conformity to standards and regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "21947",
+      "text": "Consult with engineers to discuss or interpret design concepts, or determine requirements of detailed working drawings.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21950",
+      "text": "Confer with engineering staff and other personnel to resolve problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21952",
+      "text": "Measure factors that affect installation and arrangement of equipment, such as distances to be spanned by wire and cable.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21954",
+      "text": "Design electrical systems, such as lighting systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21955",
+      "text": "Draw master sketches to scale showing relation of proposed installations to existing facilities and exact specifications and dimensions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21958",
+      "text": "Review work orders or procedural manuals and confer with vendors or design staff to resolve problems or modify design.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21953",
+      "text": "Locate files relating to specified design project in database library, load program into computer, and record completed job data.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21949",
+      "text": "Examine electronic schematics and supporting documents to develop, compute, and verify specifications for drafting data, such as configuration of parts, dimensions, or tolerances.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21963",
+      "text": "Compare logic element configuration on display screen with engineering schematics and calculate figures to convert, redesign, or modify element.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21965",
+      "text": "Review blueprints to determine customer requirements and consult with assembler regarding schematics, wiring procedures, or conductor paths.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21956",
+      "text": "Study work order requests to determine type of service, such as lighting or power, demanded by installation.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21957",
+      "text": "Explain drawings to production or construction teams and provide adjustments, as necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21959",
+      "text": "Reproduce working drawings on copy machines or trace drawings in ink.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21960",
+      "text": "Generate computer tapes of final layout design to produce layered photo masks or photo plotting design onto film.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21964",
+      "text": "Determine the order of work and the method of presentation, such as orthographic or isometric drawing.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21966",
+      "text": "Visit proposed installation sites and draw rough sketches of location.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21961",
+      "text": "Key and program specified commands and engineering specifications into computer system to change functions and test final layout.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21970",
+      "text": "Copy drawings of printed circuit board fabrication using print machine or blueprinting procedure.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21967",
+      "text": "Select drill size to drill test head, according to test design and specifications, and submit guide layout to designated department.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21968",
+      "text": "Plot electrical test points on layout sheets and draw schematics for wiring test fixture heads to frames.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21969",
+      "text": "Write technical reports and draw charts that display statistics and data.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21962",
+      "text": "Supervise and coordinate work activities of workers engaged in drafting, designing layouts, assembling, or testing printed circuit boards.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21971",
+      "text": "Train students to use drafting machines and to prepare schematic diagrams, block diagrams, control drawings, logic diagrams, integrated circuit drawings, or interconnection diagrams.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21972",
+      "text": "Prepare and interpret specifications, calculating weights, volumes, or stress factors.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "21973",
+      "text": "Supervise or train other technologists, technicians, or drafters.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21974",
+      "text": "Use computer-aided drafting equipment or conventional drafting stations, technical handbooks, tables, calculators, or traditional drafting tools, such as boards, pencils, protractors, or T-squares.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 32,
+  "salary": 76870,
+  "demand": "Low"
+}

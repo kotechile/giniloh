@@ -1,0 +1,199 @@
+{
+  "code": "33-3012.00",
+  "title": "Correctional Officers and Jailers",
+  "description": "Guard inmates in penal or rehabilitative institutions in accordance with established regulations and procedures. May guard prisoners in transit between jail, courtroom, prison, or other point. Includes deputy sheriffs and police who spend the majority of their time guarding prisoners in correctional institutions.",
+  "tasks": [
+    {
+      "id": "15252",
+      "text": "Conduct head counts to ensure that each prisoner is present.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15254",
+      "text": "Inspect conditions of locks, window bars, grills, doors, and gates at correctional facilities to ensure security and help prevent escapes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "15253",
+      "text": "Monitor conduct of prisoners in housing unit, or during work or recreational activities, according to established policies, regulations, and procedures, to prevent escape or violence.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "15256",
+      "text": "Search prisoners and vehicles and conduct shakedowns of cells for valuables and contraband, such as weapons or drugs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2102",
+      "text": "Guard facility entrances to screen visitors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15255",
+      "text": "Record information, such as prisoner identification, charges, and incidents of inmate disturbance, keeping daily logs of prisoner activities.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "2104",
+      "text": "Inspect mail for the presence of contraband.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2117",
+      "text": "Maintain records of prisoners' identification and charges.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "2107",
+      "text": "Use weapons, handcuffs, and physical force to maintain discipline and order among prisoners.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15261",
+      "text": "Use nondisciplinary tools and equipment, such as a computer.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2108",
+      "text": "Conduct fire, safety, and sanitation inspections.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "2105",
+      "text": "Take prisoners into custody and escort to locations within and outside of facility, such as visiting room, courtroom, or airport.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15258",
+      "text": "Participate in required job training.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15259",
+      "text": "Serve meals, distribute commissary items, and dispense prescribed medication to prisoners.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2110",
+      "text": "Settle disputes between inmates.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2109",
+      "text": "Provide to supervisors oral and written reports of the quality and quantity of work performed by inmates, inmate disturbances and rule violations, and unusual occurrences.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2111",
+      "text": "Drive passenger vehicles and trucks used to transport inmates to other institutions, courtrooms, hospitals, and work sites.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15260",
+      "text": "Counsel inmates and respond to legitimate questions, concerns, and requests.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2113",
+      "text": "Assign duties to inmates, providing instructions as needed.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2114",
+      "text": "Issue clothing, tools, and other authorized items to inmates.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2112",
+      "text": "Arrange daily schedules for prisoners, including library visits, work assignments, family visits, and counseling appointments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2103",
+      "text": "Search for and recapture escapees.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "15257",
+      "text": "Process or book convicted individuals into prison.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2118",
+      "text": "Supervise and coordinate work of other correctional service officers.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "23976",
+      "text": "Take fingerprints of arrestees, prisoners, or the general public.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "2116",
+      "text": "Investigate crimes that have occurred within an institution, or assist police in their investigations of crimes and inmates.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "2119",
+      "text": "Sponsor inmate recreational activities, such as newspapers and self-help groups.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 39,
+  "salary": 58940,
+  "demand": "Very High"
+}

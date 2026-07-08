@@ -1,0 +1,101 @@
+{
+  "code": "53-7062.00",
+  "title": "Laborers and Freight, Stock, and Material Movers, Hand",
+  "description": "Manually move freight, stock, luggage, or other materials, or perform other general labor. Includes all manual laborers not elsewhere classified.",
+  "tasks": [
+    {
+      "id": "10789",
+      "text": "Maintain equipment storage areas to ensure that inventory is protected.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10779",
+      "text": "Read work orders or receive oral instructions to determine work assignments or material or equipment needs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10781",
+      "text": "Move freight, stock, or other materials to and from storage or production areas, loading docks, delivery vehicles, ships, or containers, by hand or using trucks, tractors, or other equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10788",
+      "text": "Install protective devices, such as bracing, padding, or strapping, to prevent shifting or damage to items being transported.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10782",
+      "text": "Sort cargo before loading and unloading.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "10778",
+      "text": "Attach identifying tags to containers or mark them with identifying information.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10780",
+      "text": "Record numbers of units handled or moved, using daily production sheets or work tickets.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "10790",
+      "text": "Attach slings, hooks, or other devices to lift cargo and guide loads.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10787",
+      "text": "Carry needed tools or supplies from storage or trucks and return them after use.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10786",
+      "text": "Pack containers and re-pack damaged containers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10783",
+      "text": "Assemble product containers or crates, using hand tools and precut lumber.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10792",
+      "text": "Adjust controls to guide, position, or move equipment, such as cranes, booms, or cameras.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10796",
+      "text": "Connect electrical equipment to power sources so that it can be tested before use.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 40240,
+  "demand": "Very High"
+}

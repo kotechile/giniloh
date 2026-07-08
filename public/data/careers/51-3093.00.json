@@ -1,0 +1,129 @@
+{
+  "code": "51-3093.00",
+  "title": "Food Cooking Machine Operators and Tenders",
+  "description": "Operate or tend cooking equipment, such as steam cooking vats, deep fry cookers, pressure cookers, kettles, and boilers, to prepare food products.",
+  "tasks": [
+    {
+      "id": "4949",
+      "text": "Clean, wash, and sterilize equipment and cooking area, using water hoses, cleaning or sterilizing solutions, or rinses.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4948",
+      "text": "Read work orders, recipes, or formulas to determine cooking times and temperatures, and ingredient specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4947",
+      "text": "Observe gauges, dials, and product characteristics, and adjust controls to maintain appropriate temperature, pressure, and flow of ingredients.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4952",
+      "text": "Measure or weigh ingredients, using scales or measuring containers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4951",
+      "text": "Tend or operate and control equipment, such as kettles, cookers, vats and tanks, and boilers, to cook ingredients or prepare products for further processing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4944",
+      "text": "Record production and test data, such as processing steps, temperature and steam readings, cooking time, batches processed, and test results.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "4950",
+      "text": "Set temperature, pressure, and time controls, and start conveyers, machines, or pumps.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4954",
+      "text": "Remove cooked material or products from equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4946",
+      "text": "Collect and examine product samples during production to test them for quality, color, content, consistency, viscosity, acidity, or specific gravity.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4958",
+      "text": "Pour, dump, or load prescribed quantities of ingredients or products into cooking equipment, manually or using a hoist.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4945",
+      "text": "Listen for malfunction alarms, and shut down equipment and notify supervisors when necessary.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4955",
+      "text": "Notify or signal other workers to operate equipment or when processing is complete.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4956",
+      "text": "Turn valves or start pumps to add ingredients or drain products from equipment and to transfer products for storage, cooling, or further processing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4953",
+      "text": "Admit required amounts of water, steam, cooking oils, or compressed air into equipment, such as by opening water valves to cool mixtures to the desired consistency.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4959",
+      "text": "Activate agitators and paddles to mix or stir ingredients, stopping machines when ingredients are thoroughly mixed.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4960",
+      "text": "Operate auxiliary machines and equipment, such as grinders, canners, and molding presses, to prepare or further process products.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "4957",
+      "text": "Place products on conveyors or carts, and monitor product flow.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    }
+  ],
+  "risk_score": 53,
+  "salary": 41590,
+  "demand": "Medium"
+}

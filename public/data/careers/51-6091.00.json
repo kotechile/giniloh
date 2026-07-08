@@ -1,0 +1,129 @@
+{
+  "code": "51-6091.00",
+  "title": "Extruding and Forming Machine Setters, Operators, and Tenders, Synthetic and Glass Fibers",
+  "description": "Set up, operate, or tend machines that extrude and form continuous filaments from synthetic materials, such as liquid polymer, rayon, and fiberglass.",
+  "tasks": [
+    {
+      "id": "14208",
+      "text": "Set up, operate, or tend machines that extrude and form filaments from synthetic materials such as rayon, fiberglass, or liquid polymers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14214",
+      "text": "Press buttons to stop machines when processes are complete or when malfunctions are detected.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14213",
+      "text": "Notify other workers of defects, and direct them to adjust extruding and forming machines.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "14216",
+      "text": "Observe machine operations, control boards, and gauges to detect malfunctions such as clogged bushings and defective binder applicators.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14209",
+      "text": "Load materials into extruding and forming machines, using hand tools, and adjust feed mechanisms to set feed rates.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14211",
+      "text": "Move controls to activate and adjust extruding and forming machines.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14212",
+      "text": "Record details of machine malfunctions.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "14220",
+      "text": "Clean and maintain extruding and forming machines, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14215",
+      "text": "Observe flow of finish across finish rollers, and turn valves to adjust flow to specifications.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14219",
+      "text": "Remove polymer deposits from spinnerettes and equipment, using silicone spray, brass chisels, and bronze-wool pads.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14218",
+      "text": "Press metering-pump buttons and turn valves to stop flow of polymers.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14224",
+      "text": "Record operational data on tags, and attach tags to machines.",
+      "type": "Supplemental",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "14210",
+      "text": "Start metering pumps and observe operation of machines and equipment to ensure continuous flow of filaments extruded through spinnerettes and to detect processing defects.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14207",
+      "text": "Remove excess, entangled, or completed filaments from machines, using hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14227",
+      "text": "Wipe finish rollers with cloths and wash finish trays with water when necessary.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14225",
+      "text": "Lower pans inside cabinets to catch molten filaments until flow of polymer through packs has stopped.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "14217",
+      "text": "Open cabinet doors to cut multifilament threadlines away from guides, using scissors.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 46350,
+  "demand": "Low"
+}

@@ -1,0 +1,143 @@
+{
+  "code": "29-1222.00",
+  "title": "Physicians, Pathologists",
+  "description": "Diagnose diseases and conduct lab tests using organs, body tissues, and fluids. Includes medical examiners.",
+  "tasks": [
+    {
+      "id": "17194",
+      "text": "Examine microscopic samples to identify diseases or other abnormalities.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17195",
+      "text": "Diagnose diseases or study medical conditions, using techniques such as gross pathology, histology, cytology, cytopathology, clinical chemistry, immunology, flow cytometry, or molecular biology.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17190",
+      "text": "Write pathology reports summarizing analyses, results, and conclusions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17192",
+      "text": "Communicate pathologic findings to surgeons or other physicians.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17187",
+      "text": "Identify the etiology, pathogenesis, morphological change, and clinical significance of diseases.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17180",
+      "text": "Read current literature, talk with colleagues, or participate in professional organizations or conferences to keep abreast of developments in pathology.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17193",
+      "text": "Consult with physicians about ordering and interpreting tests or providing treatments.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17191",
+      "text": "Analyze and interpret results from tests, such as microbial or parasite tests, urine analyses, hormonal assays, fine needle aspirations (FNAs), and polymerase chain reactions (PCRs).",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17178",
+      "text": "Review cases by analyzing autopsies, laboratory findings, or case investigation reports.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "17179",
+      "text": "Manage medical laboratories.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17181",
+      "text": "Develop or adopt new tests or instruments to improve diagnosis of diseases.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17182",
+      "text": "Educate physicians, students, and other personnel in medical laboratory professions, such as medical technology, cytotechnology, or histotechnology.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17185",
+      "text": "Plan and supervise the work of the pathology staff, residents, or visiting pathologists.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17184",
+      "text": "Perform autopsies to determine causes of deaths.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17188",
+      "text": "Diagnose infections, such as Hepatitis B and Acquired Immune Deficiency Syndrome (AIDS), by conducting tests to detect the antibodies that patients' immune systems make to fight such infections.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17186",
+      "text": "Obtain specimens by performing procedures, such as biopsies or fine needle aspirations (FNAs) of superficial nodules.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17189",
+      "text": "Conduct genetic analyses of deoxyribonucleic acid (DNA) or chromosomes to diagnose small biopsies and cell samples.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "17183",
+      "text": "Conduct research and present scientific findings.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "17177",
+      "text": "Testify in depositions or trials as an expert witness.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 21,
+  "salary": 312400,
+  "demand": "Low"
+}

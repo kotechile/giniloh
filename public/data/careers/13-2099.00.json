@@ -1,0 +1,17 @@
+{
+  "code": "13-2099.00",
+  "title": "Financial Specialists, All Other",
+  "description": "All financial specialists not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Financial Specialists, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 81100,
+  "demand": "High"
+}

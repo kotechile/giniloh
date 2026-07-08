@@ -1,0 +1,87 @@
+{
+  "code": "17-3021.00",
+  "title": "Aerospace Engineering and Operations Technologists and Technicians",
+  "description": "Operate, install, adjust, and maintain integrated computer/communications systems, consoles, simulators, and other data acquisition, test, and measurement instruments and equipment, which are used to launch, track, position, and evaluate air and space vehicles. May record and interpret test data.",
+  "tasks": [
+    {
+      "id": "10888",
+      "text": "Test aircraft systems under simulated operational conditions, performing systems readiness tests and pre- and post-operational checkouts, to establish design or fabrication parameters.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10885",
+      "text": "Identify required data, data acquisition plans, and test parameters, setting up equipment to conform to these specifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10881",
+      "text": "Inspect, diagnose, maintain, and operate test setups and equipment to detect malfunctions.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10883",
+      "text": "Confer with engineering personnel regarding details and implications of test procedures and results.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10887",
+      "text": "Operate and calibrate computer systems and devices to comply with test requirements and to perform data acquisition and analysis.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10882",
+      "text": "Record and interpret test data on parts, assemblies, and mechanisms.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "10884",
+      "text": "Adjust, repair, or replace faulty components of test setups and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10889",
+      "text": "Fabricate and install parts and systems to be tested in test equipment, using hand tools, power tools, and test instruments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10890",
+      "text": "Finish vehicle instrumentation and deinstrumentation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10886",
+      "text": "Construct and maintain test facilities for aircraft parts and systems, according to specifications.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "21102",
+      "text": "Design electrical and mechanical systems for avionic instrumentation applications.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 23,
+  "salary": 82890,
+  "demand": "Low"
+}

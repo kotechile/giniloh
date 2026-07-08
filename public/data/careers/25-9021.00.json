@@ -1,0 +1,115 @@
+{
+  "code": "25-9021.00",
+  "title": "Farm and Home Management Educators",
+  "description": "Instruct and advise individuals and families engaged in agriculture, agricultural-related processes, or home management activities. Demonstrate procedures and apply research findings to advance agricultural and home management activities. May develop educational outreach programs. May instruct on either agricultural issues such as agricultural processes and techniques, pest management, and food safety, or on home management issues such as budgeting, nutrition, and child development.",
+  "tasks": [
+    {
+      "id": "10976",
+      "text": "Advise farmers and demonstrate techniques in areas such as feeding and health maintenance of livestock, growing and harvesting practices, and financial planning.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10975",
+      "text": "Conduct classes or deliver lectures on subjects such as nutrition, home management, and farming techniques.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10974",
+      "text": "Collaborate with producers to diagnose and prevent management and production problems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10977",
+      "text": "Research information requested by farmers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10979",
+      "text": "Collect and evaluate data to determine community program needs.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10986",
+      "text": "Act as an advocate for farmers or farmers' groups.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10984",
+      "text": "Conduct field demonstrations of new products, techniques, or services.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10980",
+      "text": "Maintain records of services provided and the effects of advice given.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "10978",
+      "text": "Prepare and distribute leaflets, pamphlets, and visual aids for educational and informational purposes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10981",
+      "text": "Schedule and make regular visits to farmers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "10982",
+      "text": "Organize, advise, and participate in community activities and organizations, such as county and state fair events and 4-H Clubs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10985",
+      "text": "Conduct agricultural research, analyze data, and prepare research reports.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10988",
+      "text": "Set and monitor production targets.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "10983",
+      "text": "Collaborate with social service and health care professionals to advise individuals and families on home management practices, such as budget planning, meal preparation, and time management.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "10987",
+      "text": "Provide direct assistance to farmers by performing activities such as purchasing or selling products and supplies, supervising properties, and collecting soil and herbage samples for testing.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 30,
+  "salary": 60220,
+  "demand": "Low"
+}

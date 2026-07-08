@@ -1,0 +1,94 @@
+{
+  "code": "19-3092.00",
+  "title": "Geographers",
+  "description": "Study the nature and use of areas of the Earth's surface, relating and interpreting interactions of physical and cultural phenomena. Conduct research on physical aspects of a region, including land forms, climates, soils, plants, and animals, and conduct research on the spatial implications of human activities within a given area, including social characteristics, economic activities, and political organization, as well as researching interdependence between regions at scales ranging from local to global.",
+  "tasks": [
+    {
+      "id": "5503",
+      "text": "Create and modify maps, graphs, or diagrams, using geographical information software and related equipment, and principles of cartography, such as coordinate systems, longitude, latitude, elevation, topography, and map scales.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5509",
+      "text": "Gather and compile geographic data from sources such as censuses, field observations, satellite imagery, aerial photographs, and existing maps.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5508",
+      "text": "Teach geography.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5504",
+      "text": "Write and present reports of research findings.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5514",
+      "text": "Provide geographical information systems support to the private and public sectors.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5511",
+      "text": "Study the economic, political, and cultural characteristics of a specific region's population.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5507",
+      "text": "Analyze geographic distributions of physical and cultural phenomena on local, regional, continental, or global scales.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "5505",
+      "text": "Develop, operate, and maintain geographical information computer systems, including hardware, software, plotters, digitizers, printers, and video cameras.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "5506",
+      "text": "Locate and obtain existing geographic information databases.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5513",
+      "text": "Collect data on physical characteristics of specified areas, such as geological formations, climates, and vegetation, using surveying or meteorological equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5510",
+      "text": "Conduct field work at outdoor sites.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "5512",
+      "text": "Provide consulting services in fields such as resource development and management, business location and market area analysis, environmental hazards, regional cultural history, and urban social planning.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 33,
+  "salary": 102040,
+  "demand": "Low"
+}

@@ -1,0 +1,220 @@
+{
+  "code": "17-3031.00",
+  "title": "Surveying and Mapping Technicians",
+  "description": "Perform surveying and mapping duties, usually under the direction of an engineer, surveyor, cartographer, or photogrammetrist, to obtain data used for construction, mapmaking, boundary location, mining, or other purposes. May calculate mapmaking information and create maps from source data, such as surveying notes, aerial photography, satellite data, or other maps to show topographical features, political boundaries, and other features. May verify accuracy and completeness of maps.",
+  "tasks": [
+    {
+      "id": "22103",
+      "text": "Position and hold the vertical rods, or targets, that theodolite operators use for sighting to measure angles, distances, and elevations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22104",
+      "text": "Check all layers of maps to ensure accuracy, identifying and marking errors and making corrections.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22105",
+      "text": "Design or develop information databases that include geographic or topographic data.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22106",
+      "text": "Monitor mapping work or the updating of maps to ensure accuracy, inclusion of new or changed information, or compliance with rules and regulations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22107",
+      "text": "Produce or update overlay maps to show information boundaries, water locations, or topographic features on various base maps or at different scales.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22108",
+      "text": "Determine scales, line sizes, or colors to be used for hard copies of computerized maps, using plotters.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22109",
+      "text": "Compile information necessary to stake projects for construction, using engineering plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22110",
+      "text": "Identify and compile database information to create requested maps.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22111",
+      "text": "Operate and manage land-information computer systems, performing tasks such as storing data, making inquiries, and producing plots and reports.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22112",
+      "text": "Compare survey computations with applicable standards to determine adequacy of data.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22113",
+      "text": "Analyze aerial photographs to detect and interpret significant military, industrial, resource, or topographical data.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22114",
+      "text": "Research and combine existing property information to describe property boundaries in relation to adjacent properties, taking into account parcel splits, combinations, or land boundary adjustments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22115",
+      "text": "Calculate latitudes, longitudes, angles, areas, or other information for mapmaking, using survey field notes or reference tables.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22116",
+      "text": "Compare topographical features or contour lines with images from aerial photographs, old maps, or other reference materials to verify the accuracy of their identification.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22117",
+      "text": "Trace contours or topographic details to generate maps that denote specific land or property locations or geographic attributes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22118",
+      "text": "Provide assistance in the development of methods and procedures for conducting field surveys.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22119",
+      "text": "Trim, align, and join prints to form photographic mosaics, maintaining scaled distances between reference points.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22120",
+      "text": "Answer questions and provide information to the public or to staff members regarding assessment maps, surveys, boundaries, easements, property ownership, roads, zoning, or similar matters.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "22121",
+      "text": "Complete detailed source and method notes describing the location of routine or complex land parcels.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22122",
+      "text": "Adjust and operate surveying instruments such as prisms, theodolites, electronic distance measuring equipment, or electronic data collectors.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22123",
+      "text": "Collect information needed to carry out new surveys, using source maps, previous survey data, photographs, computer records, or other relevant information.",
+      "type": "n/a",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "22124",
+      "text": "Conduct surveys to ascertain the locations of natural features and man-made structures on the Earth's surface, underground, and underwater, using electronic distance-measuring equipment, such as GPS, and other surveying instruments.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22125",
+      "text": "Enter Global Positioning System (GPS) data, legal deeds, field notes, or land survey reports into geographic information system (GIS) workstations so that information can be transformed into graphic land descriptions, such as maps and drawings.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22126",
+      "text": "Perform calculations to determine earth curvature corrections, atmospheric impacts on measurements, traverse closures or adjustments, azimuths, level runs, or placement of markers.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "22127",
+      "text": "Prepare cost estimates for mapping projects.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22128",
+      "text": "Prepare topographic or contour maps of land surveyed, including site features and other relevant information, such as charts, drawings, and survey notes.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22129",
+      "text": "Record survey measurements or descriptive data, using notes, drawings, sketches, or inked tracings.",
+      "type": "n/a",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "22130",
+      "text": "Search for section corners, property irons, or survey points.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22131",
+      "text": "Set out and recover stakes, marks, or other monumentation.",
+      "type": "n/a",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "22132",
+      "text": "Supervise or coordinate activities of workers engaged in surveying, plotting data, drafting maps, or producing blueprints, photostats, or photographs.",
+      "type": "n/a",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 43,
+  "salary": 54240,
+  "demand": "Medium"
+}

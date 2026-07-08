@@ -1,0 +1,171 @@
+{
+  "code": "13-2071.00",
+  "title": "Credit Counselors",
+  "description": "Advise and educate individuals or organizations on acquiring and managing debt. May provide guidance in determining the best type of loan and explain loan requirements or restrictions. May help develop debt management plans or student financial aid packages. May advise on credit issues, or provide budget, mortgage, bankruptcy, or student financial aid counseling.",
+  "tasks": [
+    {
+      "id": "18935",
+      "text": "Calculate clients' available monthly income to meet debt obligations.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18938",
+      "text": "Explain services or policies to clients, such as debt management program rules, advantages and disadvantages of using services, or creditor concession policies.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18936",
+      "text": "Create debt management plans, spending plans, or budgets to assist clients to meet financial goals.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18943",
+      "text": "Prioritize client debt repayment to avoid dire consequences, such as bankruptcy or foreclosure or to reduce overall costs, such as by paying high-interest or short-term loans first.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18934",
+      "text": "Assess clients' overall financial situations by reviewing income, assets, debts, expenses, credit reports, or other financial information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "18945",
+      "text": "Recommend strategies for clients to meet their financial goals, such as borrowing money through loans or loan programs, declaring bankruptcy, making budget adjustments, or enrolling in debt management plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18952",
+      "text": "Explain general financial topics to clients, such as credit report ratings, bankruptcy laws, consumer protection laws, wage attachments, or collection actions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18939",
+      "text": "Interview clients by telephone or in person to gather financial information.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18937",
+      "text": "Estimate time for debt repayment, given amount of debt, interest rates, and available funds.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18942",
+      "text": "Prepare written documents to establish contracts with or communicate financial recommendations to clients.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18940",
+      "text": "Maintain or update records of client account activity, including financial transactions, counseling session notes, correspondence, document images, or client inquiries.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18941",
+      "text": "Negotiate with creditors on behalf of clients to arrange for payment adjustments, interest rate reductions, time extensions, or payment plans.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18948",
+      "text": "Advise clients on housing matters, such as housing rental, homeownership, mortgage delinquency, or foreclosure prevention.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18950",
+      "text": "Create action plans to assist clients in obtaining permanent housing via rent or mortgage programs.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18933",
+      "text": "Advise clients or respond to inquiries about financial matters in person or via phone, email, Web site, or Internet chat.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18947",
+      "text": "Review changes to financial, family, or employment situations to determine whether changes to existing debt management plans, spending plans, or budgets are needed.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18944",
+      "text": "Recommend educational materials or resources to clients on matters, such as financial planning, budgeting, or credit.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18946",
+      "text": "Refer clients to social service or community resources for needs beyond those of credit or debt counseling.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18953",
+      "text": "Explain loan information to clients, such as available loan types, eligibility requirements, or loan restrictions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18955",
+      "text": "Teach courses or seminars on topics, such as budgeting, management of personal finances, or financial literacy.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "18949",
+      "text": "Conduct research to help clients avoid repossessions or foreclosures or remove levies or wage garnishments.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18951",
+      "text": "Disburse funds from client accounts to creditors.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "18954",
+      "text": "Investigate missing checks, payment histories, held funds, returned checks, or other related issues to resolve client or creditor problems.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    }
+  ],
+  "risk_score": 20,
+  "salary": 52230,
+  "demand": "Medium"
+}

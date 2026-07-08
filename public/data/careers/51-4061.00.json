@@ -1,0 +1,122 @@
+{
+  "code": "51-4061.00",
+  "title": "Model Makers, Metal and Plastic",
+  "description": "Set up and operate machines, such as lathes, milling and engraving machines, and jig borers to make working models of metal or plastic objects. Includes template makers.",
+  "tasks": [
+    {
+      "id": "12022",
+      "text": "Study blueprints, drawings, and sketches to determine material dimensions, required equipment, and operations sequences.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12023",
+      "text": "Set up and operate machines, such as lathes, drill presses, punch presses, or bandsaws, to fabricate prototypes or models.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20924",
+      "text": "Program computer numerical control (CNC) machines to fabricate model parts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12024",
+      "text": "Inspect and test products to verify conformance to specifications, using precision measuring instruments or circuit testers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+    },
+    {
+      "id": "12025",
+      "text": "Cut, shape, and form metal parts, using lathes, power saws, snips, power brakes and shears, files, and mallets.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12030",
+      "text": "Rework or alter component model or parts as required to ensure that products meet standards.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12027",
+      "text": "Drill, countersink, and ream holes in parts and assemblies for bolts, screws, and other fasteners, using power tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12028",
+      "text": "Grind, file, and sand parts to finished dimensions.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12034",
+      "text": "Devise and construct tools, dies, molds, jigs, and fixtures, or modify existing tools and equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12029",
+      "text": "Record specifications, production operations, and final dimensions of models for use in establishing operating standards and procedures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12031",
+      "text": "Align, fit, and join parts, using bolts and screws or by welding or gluing.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12026",
+      "text": "Lay out and mark reference points and dimensions on materials, using measuring instruments and drawing or scribing tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12032",
+      "text": "Consult and confer with engineering personnel to discuss developmental problems and to recommend product modifications.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "20925",
+      "text": "Use computer-aided design (CAD) and computer-aided manufacturing (CAM) software or hardware to fabricate model parts.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "12033",
+      "text": "Assemble mechanical, electrical, and electronic components into models or prototypes, using hand tools, power tools, and fabricating machines.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "12035",
+      "text": "Wire and solder electrical and electronic connections and components.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 44,
+  "salary": 63340,
+  "demand": "Low"
+}

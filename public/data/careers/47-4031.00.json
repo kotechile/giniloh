@@ -1,0 +1,150 @@
+{
+  "code": "47-4031.00",
+  "title": "Fence Erectors",
+  "description": "Erect and repair fences and fence gates, using hand and power tools.",
+  "tasks": [
+    {
+      "id": "13623",
+      "text": "Establish the location for a fence, and gather information needed to ensure that there are no electric cables or water lines in the area.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "13627",
+      "text": "Set metal or wooden posts in upright positions in postholes.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13625",
+      "text": "Measure and lay out fence lines and mark posthole positions, following instructions, drawings, or specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13624",
+      "text": "Align posts, by lines or sighting, and verify vertical alignment of posts, using plumb bobs or spirit levels.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13637",
+      "text": "Attach rails or tension wire along bottoms of posts to form fencing frames.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13626",
+      "text": "Dig postholes, using spades, posthole diggers, or power-driven augers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13633",
+      "text": "Attach fence rail supports to posts, using hammers and pliers.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13634",
+      "text": "Assemble gates, and fasten gates into position, using hand tools.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13629",
+      "text": "Mix and pour concrete around bases of posts, or tamp soil into postholes to embed posts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13630",
+      "text": "Make rails for fences, by sawing lumber or by cutting metal tubing to required lengths.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13631",
+      "text": "Nail top and bottom rails to fence posts, or insert them in slots on posts.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13628",
+      "text": "Discuss fencing needs with customers, and estimate and quote prices.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13632",
+      "text": "Stretch wire, wire mesh, or chain link fencing between posts, and attach fencing to frames.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13635",
+      "text": "Complete top fence rails of metal fences by connecting tube sections, using metal sleeves.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13641",
+      "text": "Erect alternate panel, basket weave, and louvered fences.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13636",
+      "text": "Insert metal tubing through rail supports.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13638",
+      "text": "Nail pointed slats to rails to construct picket fences.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13639",
+      "text": "Construct and repair barriers, retaining walls, trellises, and other types of fences, walls, and gates.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13640",
+      "text": "Weld metal parts together, using portable gas welding equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "13642",
+      "text": "Blast rock formations and rocky areas with dynamite to facilitate posthole digging.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 48,
+  "salary": 47980,
+  "demand": "Low"
+}

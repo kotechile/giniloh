@@ -1,0 +1,157 @@
+{
+  "code": "37-2011.00",
+  "title": "Janitors and Cleaners, Except Maids and Housekeeping Cleaners",
+  "description": "Keep buildings in clean and orderly condition. Perform heavy cleaning duties, such as cleaning floors, shampooing rugs, washing walls and glass, and removing rubbish. Duties may include tending furnace and boiler, performing routine maintenance activities, notifying management of need for repairs, and cleaning snow or debris from sidewalk.",
+  "tasks": [
+    {
+      "id": "9538",
+      "text": "Service, clean, or supply restrooms.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9539",
+      "text": "Gather and empty trash.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9540",
+      "text": "Clean building floors by sweeping, mopping, scrubbing, or vacuuming.",
+      "type": "Core",
+      "risk": "high",
+      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+    },
+    {
+      "id": "20590",
+      "text": "Monitor building security and safety by performing tasks such as locking doors after operating hours or checking electrical appliance use to ensure that hazards are not created.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9544",
+      "text": "Notify managers concerning the need for major repairs or additions to building operating systems.",
+      "type": "Core",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9541",
+      "text": "Follow procedures for the use of chemical cleaners and power equipment to prevent damage to floors and fixtures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9542",
+      "text": "Mix water and detergents or acids in containers to prepare cleaning solutions, according to specifications.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9546",
+      "text": "Clean windows, glass partitions, or mirrors, using soapy water or other cleaners, sponges, or squeegees.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9545",
+      "text": "Requisition supplies or equipment needed for cleaning and maintenance duties.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9550",
+      "text": "Dust furniture, walls, machines, or equipment.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9549",
+      "text": "Clean and polish furniture and fixtures.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9551",
+      "text": "Move heavy furniture, equipment, or supplies, either manually or with hand trucks.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9543",
+      "text": "Strip, seal, finish, and polish floors.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9552",
+      "text": "Remove snow from sidewalks, driveways, or parking areas, using snowplows, snow blowers, or snow shovels, or spread snow-melting chemicals.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9555",
+      "text": "Make adjustments or minor repairs to heating, cooling, ventilating, plumbing, or electrical systems.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20592",
+      "text": "Drive vans, industrial trucks, or other vehicles required to travel to, or to perform, cleaning work.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9554",
+      "text": "Spray insecticides or fumigants to prevent insect or rodent infestation.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9548",
+      "text": "Set up, arrange, or remove decorations, tables, chairs, ladders, or scaffolding to prepare facilities for events, such as banquets or meetings.",
+      "type": "Supplemental",
+      "risk": "low",
+      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+    },
+    {
+      "id": "9559",
+      "text": "Clean chimneys, flues, and connecting pipes, using power or hand tools.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "20591",
+      "text": "Mow or trim lawns or shrubbery, using mowers or hand or power trimmers, and clear debris from grounds.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    },
+    {
+      "id": "9547",
+      "text": "Steam-clean or shampoo carpets.",
+      "type": "Supplemental",
+      "risk": "medium",
+      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+    }
+  ],
+  "risk_score": 43,
+  "salary": 36840,
+  "demand": "Very High"
+}

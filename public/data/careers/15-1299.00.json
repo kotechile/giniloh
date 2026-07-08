@@ -1,0 +1,17 @@
+{
+  "code": "15-1299.00",
+  "title": "Computer Occupations, All Other",
+  "description": "All computer occupations not listed separately.",
+  "tasks": [
+    {
+      "id": "fallback",
+      "text": "Perform general duties related to Computer Occupations, All Other.",
+      "type": "Core",
+      "risk": "medium",
+      "rationale": "General job responsibility."
+    }
+  ],
+  "risk_score": 50,
+  "salary": 116580,
+  "demand": "Very High"
+}
