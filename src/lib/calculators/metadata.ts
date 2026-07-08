@@ -120,7 +120,7 @@ export const calculatorTools = [
 		keywords: ['gpu compute calculator', 'local rig vs cloud gpu', 'rtx 4090 power cost']
 	},
 	{
-		title: 'JobProof AI',
+		title: 'AI Career Radar',
 		slug: 'career-ai-resilience',
 		href: '/calculators/career-ai-resilience/',
 		status: 'Live',

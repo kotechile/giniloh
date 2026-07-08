@@ -8,7 +8,7 @@ import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/
 const calculator = getCalculatorBySlug('career-ai-resilience');
 const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
 
-const title = "JobProof AI";
+const title = "AI Career Radar";
 const description = "Analyze the automation vulnerability of 1,000+ occupations at the task level. Drag sliders to simulate upskilling and see how task-shifting future-proofs your career.";
 const eyebrow = "Career & AI Alignment";
 
@@ -29,7 +29,7 @@ const faqItems = [
 ---
 
 <BaseLayout
-	title="JobProof AI | Gini Loh"
+	title="AI Career Radar | Gini Loh"
 	description={description}
 >
 	<link slot="head" rel="canonical" href={new URL('/calculators/career-ai-resilience/', Astro.site).toString()} />
