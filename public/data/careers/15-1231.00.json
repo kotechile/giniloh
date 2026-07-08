@@ -98,8 +98,8 @@
       "id": "18998",
       "text": "Install new hardware or software systems or components, ensuring integration with existing network systems.",
       "type": "Core",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "19001",
@@ -186,7 +186,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 46,
+  "risk_score": 48,
   "salary": 76220,
   "demand": "High"
 }

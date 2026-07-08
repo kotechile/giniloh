@@ -126,8 +126,8 @@
       "id": "12420",
       "text": "Type instructions on computer keyboards, push buttons to activate computer programs, or manually set cutting guides, clamps, and knives.",
       "type": "Supplemental",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "12435",
@@ -179,7 +179,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 50,
+  "risk_score": 54,
   "salary": 46570,
   "demand": "Medium"
 }

@@ -140,8 +140,8 @@
       "id": "14661",
       "text": "Perform initial debugging procedures by reviewing configuration files, logs, or code pieces to determine breakdown source.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "14659",
@@ -214,7 +214,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 20,
+  "risk_score": 23,
   "salary": 104300,
   "demand": "High"
 }

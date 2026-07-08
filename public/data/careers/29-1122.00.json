@@ -98,8 +98,8 @@
       "id": "354",
       "text": "Help clients improve decision making, abstract reasoning, memory, sequencing, coordination, and perceptual skills, using computer programs.",
       "type": "Core",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "361",
@@ -123,7 +123,7 @@
       "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
     }
   ],
-  "risk_score": 12,
+  "risk_score": 15,
   "salary": 100330,
   "demand": "High"
 }

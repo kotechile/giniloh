@@ -49,8 +49,8 @@
       "id": "20800",
       "text": "Test backup batteries, keypad programming, sirens, or other security features to ensure proper functioning or to diagnose malfunctions.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "11766",
@@ -84,8 +84,8 @@
       "id": "11764",
       "text": "Adjust sensitivity of units, based on room structures and manufacturers' recommendations, using programming keypads.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "11769",
@@ -116,7 +116,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 31,
+  "risk_score": 44,
   "salary": 60070,
   "demand": "Medium"
 }

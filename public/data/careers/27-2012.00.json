@@ -21,8 +21,8 @@
       "id": "22517",
       "text": "Direct live broadcasts, films and recordings, or non-broadcast programming for public entertainment or education.",
       "type": "Core",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "22522",
@@ -214,7 +214,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 23,
+  "risk_score": 25,
   "salary": 90360,
   "demand": "High"
 }

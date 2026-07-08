@@ -28,8 +28,8 @@
       "id": "16434",
       "text": "Calibrate vehicle systems, including control algorithms or other software systems.",
       "type": "Core",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "16437",
@@ -179,7 +179,7 @@
       "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
     }
   ],
-  "risk_score": 12,
+  "risk_score": 14,
   "salary": 104110,
   "demand": "High"
 }

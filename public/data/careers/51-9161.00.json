@@ -84,8 +84,8 @@
       "id": "11936",
       "text": "Adjust machine feed and speed, change cutting tools, or adjust machine controls when automatic programming is faulty or if machines malfunction.",
       "type": "Core",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "11947",
@@ -193,7 +193,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 46,
+  "risk_score": 48,
   "salary": 50690,
   "demand": "High"
 }

@@ -133,8 +133,8 @@
       "id": "16515",
       "text": "Write algorithms or programming code for ad hoc robotic applications.",
       "type": "Core",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "16513",
@@ -172,7 +172,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 29,
+  "risk_score": 31,
   "salary": 122930,
   "demand": "High"
 }

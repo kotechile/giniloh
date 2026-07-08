@@ -210,8 +210,8 @@
       "id": "11676",
       "text": "Enter codes needed to correct electronic switching system programming.",
       "type": "Supplemental",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "11679",
@@ -277,7 +277,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 41,
+  "risk_score": 42,
   "salary": 63890,
   "demand": "High"
 }

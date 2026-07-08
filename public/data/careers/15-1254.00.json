@@ -28,8 +28,8 @@
       "id": "14711",
       "text": "Select programming languages, design tools, or applications.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "14700",
@@ -63,8 +63,8 @@
       "id": "14701",
       "text": "Maintain understanding of current Web technologies or programming practices through continuing education, reading, or participation in professional conferences, workshops, or groups.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "14702",
@@ -154,8 +154,8 @@
       "id": "14722",
       "text": "Provide clear, detailed descriptions of Web site specifications, such as product features, activities, software, communication protocols, programming languages, and operating systems software and hardware.",
       "type": "Core",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "14725",
@@ -207,7 +207,7 @@
       "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
     }
   ],
-  "risk_score": 17,
+  "risk_score": 26,
   "salary": 92650,
   "demand": "Medium"
 }

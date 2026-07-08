@@ -56,8 +56,8 @@
       "id": "21104",
       "text": "Develop computer programs to collect meteorological data or to present meteorological information.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "20206",
@@ -193,7 +193,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 33,
+  "risk_score": 37,
   "salary": 99070,
   "demand": "Low"
 }

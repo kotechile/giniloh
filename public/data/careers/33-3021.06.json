@@ -77,8 +77,8 @@
       "id": "17544",
       "text": "Design, use, or maintain databases and software applications, such as geographic information systems (GIS) mapping and artificial intelligence tools.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "17542",
@@ -151,7 +151,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 43,
+  "risk_score": 48,
   "salary": 93790,
   "demand": "High"
 }

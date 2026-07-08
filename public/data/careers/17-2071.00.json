@@ -133,8 +133,8 @@
       "id": "23956",
       "text": "Develop software to control electrical systems.",
       "type": "Supplemental",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "19619",
@@ -158,7 +158,7 @@
       "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
     }
   ],
-  "risk_score": 14,
+  "risk_score": 18,
   "salary": 120630,
   "demand": "High"
 }

@@ -112,11 +112,11 @@
       "id": "21838",
       "text": "Write new functions or applications in programming languages to conduct analyses.",
       "type": "n/a",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     }
   ],
-  "risk_score": 28,
+  "risk_score": 31,
   "salary": 120230,
   "demand": "High"
 }

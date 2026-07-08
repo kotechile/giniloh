@@ -56,8 +56,8 @@
       "id": "20908",
       "text": "Archive documents, conduct research, and read copy, using the internet and various computer programs.",
       "type": "Core",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "20909",
@@ -81,7 +81,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 50,
+  "risk_score": 55,
   "salary": 51120,
   "demand": "Low"
 }

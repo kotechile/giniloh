@@ -14,8 +14,8 @@
       "id": "21669",
       "text": "Develop or direct software system testing or validation procedures, programming, or documentation.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "21664",
@@ -56,8 +56,8 @@
       "id": "21667",
       "text": "Design, develop and modify software systems, using scientific analysis and mathematical models to predict and measure outcomes and consequences of design.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "21668",
@@ -70,8 +70,8 @@
       "id": "21665",
       "text": "Consult with customers or other departments on project status, proposals, or technical issues, such as software system design or maintenance.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "21663",
@@ -91,8 +91,8 @@
       "id": "21666",
       "text": "Coordinate installation of software system.",
       "type": "Supplemental",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "21678",
@@ -123,7 +123,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 15,
+  "risk_score": 38,
   "salary": 135980,
   "demand": "Very High"
 }

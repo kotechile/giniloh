@@ -189,8 +189,8 @@
       "id": "16184",
       "text": "Develop transactional Web applications, using Web programming software and knowledge of programming languages, such as hypertext markup language (HTML) and extensible markup language (XML).",
       "type": "Supplemental",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "16183",
@@ -256,7 +256,7 @@
       "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
     }
   ],
-  "risk_score": 15,
+  "risk_score": 18,
   "salary": 78760,
   "demand": "Very High"
 }

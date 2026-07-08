@@ -56,8 +56,8 @@
       "id": "16120",
       "text": "Write new programs or modify existing programs to meet customer requirements, using current programming languages and technologies.",
       "type": "Core",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "16133",
@@ -70,8 +70,8 @@
       "id": "16123",
       "text": "Perform system analysis, data analysis or programming, using a variety of computer languages and procedures.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "16129",
@@ -126,11 +126,11 @@
       "id": "16116",
       "text": "Test software systems or applications for software enhancements or new products.",
       "type": "Core",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     }
   ],
-  "risk_score": 28,
+  "risk_score": 39,
   "salary": 139500,
   "demand": "Medium"
 }

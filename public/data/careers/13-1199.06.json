@@ -175,8 +175,8 @@
       "id": "15727",
       "text": "Design customer interface of online storefront, using web programming or e-commerce software.",
       "type": "Supplemental",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "15716",
@@ -242,7 +242,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 35,
+  "risk_score": 38,
   "salary": 83050,
   "demand": "Very High"
 }

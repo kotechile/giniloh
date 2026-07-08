@@ -91,8 +91,8 @@
       "id": "22906",
       "text": "Resolve or clarify codes or diagnoses with conflicting, missing, or unclear information by consulting with doctors or others or by participating in the coding team's regular meetings.",
       "type": "n/a",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "22907",
@@ -116,7 +116,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 28,
+  "risk_score": 34,
   "salary": 68020,
   "demand": "Medium"
 }

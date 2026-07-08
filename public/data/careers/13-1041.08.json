@@ -42,8 +42,8 @@
       "id": "15941",
       "text": "Classify goods according to tariff coding system.",
       "type": "Core",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "15933",
@@ -165,7 +165,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 46,
+  "risk_score": 48,
   "salary": 80730,
   "demand": "Very High"
 }

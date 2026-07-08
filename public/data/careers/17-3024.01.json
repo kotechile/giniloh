@@ -63,8 +63,8 @@
       "id": "19684",
       "text": "Evaluate the efficiency and reliability of industrial robotic systems, reprogramming or calibrating to achieve maximum quantity and quality.",
       "type": "Core",
-      "risk": "medium",
-      "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "16591",
@@ -158,7 +158,7 @@
       "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
     }
   ],
-  "risk_score": 39,
+  "risk_score": 41,
   "salary": 73900,
   "demand": "Low"
 }

@@ -7,8 +7,8 @@
       "id": "16786",
       "text": "Develop new software applications or customize existing applications to meet specific scientific project needs.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "16792",
@@ -63,8 +63,8 @@
       "id": "16789",
       "text": "Design and apply bioinformatics algorithms including unsupervised and supervised machine learning, dynamic programming, or graphic algorithms.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "16793",
@@ -144,7 +144,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 22,
+  "risk_score": 32,
   "salary": 98920,
   "demand": "Medium"
 }

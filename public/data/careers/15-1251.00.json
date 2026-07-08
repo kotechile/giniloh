@@ -28,8 +28,8 @@
       "id": "1270",
       "text": "Write, update, and maintain computer programs or software packages to handle specific jobs such as tracking inventory, storing or retrieving data, or controlling other equipment.",
       "type": "Core",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "1271",
@@ -42,8 +42,8 @@
       "id": "1268",
       "text": "Conduct trial runs of programs and software applications to be sure they will produce the desired information and that the instructions are correct.",
       "type": "Core",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "1276",
@@ -63,15 +63,15 @@
       "id": "1278",
       "text": "Consult with and assist computer operators or system analysts to define and resolve problems in running computer programs.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "1277",
       "text": "Perform systems analysis and programming tasks to maintain and control the use of computer systems software as a systems programmer.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "1274",
@@ -91,15 +91,15 @@
       "id": "1279",
       "text": "Assign, coordinate, and review work and activities of programming personnel.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "1281",
       "text": "Train subordinates in programming and program coding.",
       "type": "Supplemental",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "21049",
@@ -112,18 +112,18 @@
       "id": "21050",
       "text": "Train users on the use and function of computer programs.",
       "type": "Supplemental",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "1280",
       "text": "Collaborate with computer manufacturers and other users to develop new programming methods.",
       "type": "Supplemental",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     }
   ],
-  "risk_score": 21,
+  "risk_score": 56,
   "salary": 100390,
   "demand": "Medium"
 }

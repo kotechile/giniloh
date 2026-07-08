@@ -64,7 +64,7 @@
       "text": "Operate office equipment, such as voice mail messaging systems, and use word processing, spreadsheet, or other software applications to prepare reports, invoices, financial statements, letters, case histories, or medical records.",
       "type": "Core",
       "risk": "high",
-      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "787",

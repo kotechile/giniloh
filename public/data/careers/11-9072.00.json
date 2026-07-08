@@ -98,8 +98,8 @@
       "id": "21415",
       "text": "Write and present strategies for recreational facility programming using customer or employee data.",
       "type": "Core",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "21405",
@@ -123,7 +123,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 41,
+  "risk_score": 44,
   "salary": 79520,
   "demand": "Medium"
 }

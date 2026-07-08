@@ -535,13 +535,13 @@
     "code": "11-9072.00",
     "title": "Entertainment and Recreation Managers, Except Gambling",
     "description": "Plan, direct, or coordinate entertainment and recreational activities and operations of a recreational facility, including cruise ships and parks.",
-    "risk_score": 41,
+    "risk_score": 44,
     "tasks_count": 17,
     "salary": 79520,
     "demand": "Medium",
     "category_distribution": {
-      "high": 1,
-      "medium": 12,
+      "high": 2,
+      "medium": 11,
       "low": 4
     }
   },
@@ -997,13 +997,13 @@
     "code": "13-1041.08",
     "title": "Customs Brokers",
     "description": "Prepare customs documentation and ensure that shipments meet all applicable laws to facilitate the import and export of goods. Determine and track duties and taxes payable and process payments on behalf of client. Sign documents under a power of attorney. Represent clients in meetings with customs officials and apply for duty refunds and tariff reclassifications. Coordinate transportation and storage of imported goods.",
-    "risk_score": 46,
+    "risk_score": 48,
     "tasks_count": 23,
     "salary": 80730,
     "demand": "Very High",
     "category_distribution": {
-      "high": 1,
-      "medium": 19,
+      "high": 2,
+      "medium": 18,
       "low": 3
     }
   },
@@ -1207,14 +1207,14 @@
     "code": "13-1161.01",
     "title": "Search Marketing Strategists",
     "description": "Employ search marketing tactics to increase visibility and engagement with content, products, or services in Internet-enabled devices or interfaces. Examine search query behaviors on general or specialty search engines or other Internet-based content. Analyze research, data, or technology to understand user intent and measure outcomes for ongoing optimization.",
-    "risk_score": 15,
+    "risk_score": 18,
     "tasks_count": 36,
     "salary": 78760,
     "demand": "Very High",
     "category_distribution": {
-      "high": 0,
+      "high": 1,
       "medium": 11,
-      "low": 25
+      "low": 24
     }
   },
   {
@@ -1263,14 +1263,14 @@
     "code": "13-1199.06",
     "title": "Online Merchants",
     "description": "Conduct retail activities of businesses operating exclusively online. May perform duties such as preparing business strategies, buying merchandise, managing inventory, implementing marketing activities, fulfilling and shipping online orders, and balancing financial records.",
-    "risk_score": 35,
+    "risk_score": 38,
     "tasks_count": 34,
     "salary": 83050,
     "demand": "Very High",
     "category_distribution": {
-      "high": 0,
+      "high": 1,
       "medium": 24,
-      "low": 10
+      "low": 9
     }
   },
   {
@@ -1347,13 +1347,13 @@
     "code": "13-2041.00",
     "title": "Credit Analysts",
     "description": "Analyze credit data and financial statements of individuals or firms to determine the degree of risk involved in extending credit or lending money. Prepare reports with credit information for use in decisionmaking.",
-    "risk_score": 27,
+    "risk_score": 32,
     "tasks_count": 11,
     "salary": 83510,
     "demand": "Medium",
     "category_distribution": {
-      "high": 0,
-      "medium": 6,
+      "high": 1,
+      "medium": 5,
       "low": 5
     }
   },
@@ -1529,14 +1529,14 @@
     "code": "15-1211.00",
     "title": "Computer Systems Analysts",
     "description": "Analyze science, engineering, business, and other data processing problems to develop and implement solutions to complex applications problems, system administration issues, or network concerns. Perform systems management and integration functions, improve existing computer systems, and review computer system capabilities, workflow, and schedule limitations. May analyze or recommend commercially available software.",
-    "risk_score": 20,
+    "risk_score": 36,
     "tasks_count": 22,
     "salary": 105850,
     "demand": "Very High",
     "category_distribution": {
-      "high": 0,
-      "medium": 9,
-      "low": 13
+      "high": 4,
+      "medium": 8,
+      "low": 10
     }
   },
   {
@@ -1557,14 +1557,14 @@
     "code": "15-1212.00",
     "title": "Information Security Analysts",
     "description": "Plan, implement, upgrade, or monitor security measures for the protection of computer networks and information. Assess system vulnerabilities for security risks and propose and implement risk mitigation strategies. May ensure appropriate security controls are in place that will safeguard digital files and vital electronic infrastructure. May respond to computer security breaches and viruses.",
-    "risk_score": 32,
+    "risk_score": 41,
     "tasks_count": 11,
     "salary": 129180,
     "demand": "High",
     "category_distribution": {
-      "high": 0,
+      "high": 1,
       "medium": 7,
-      "low": 4
+      "low": 3
     }
   },
   {
@@ -1585,13 +1585,13 @@
     "code": "15-1231.00",
     "title": "Computer Network Support Specialists",
     "description": "Analyze, test, troubleshoot, and evaluate existing network systems, such as local area networks (LAN), wide area networks (WAN), cloud networks, servers, and other data communications networks. Perform network maintenance to ensure networks operate correctly with minimal interruption.",
-    "risk_score": 46,
+    "risk_score": 48,
     "tasks_count": 26,
     "salary": 76220,
     "demand": "High",
     "category_distribution": {
-      "high": 0,
-      "medium": 24,
+      "high": 1,
+      "medium": 23,
       "low": 2
     }
   },
@@ -1627,56 +1627,56 @@
     "code": "15-1241.01",
     "title": "Telecommunications Engineering Specialists",
     "description": "Design or configure wired, wireless, and satellite communications systems for voice, video, and data services. Supervise installation, service, and maintenance.",
-    "risk_score": 25,
+    "risk_score": 29,
     "tasks_count": 26,
     "salary": 134050,
     "demand": "High",
     "category_distribution": {
-      "high": 0,
+      "high": 1,
       "medium": 13,
-      "low": 13
+      "low": 12
     }
   },
   {
     "code": "15-1242.00",
     "title": "Database Administrators",
     "description": "Administer, test, and implement computer databases, applying knowledge of database management systems. Coordinate changes to computer databases. Identify, investigate, and resolve database performance issues, database capacity, and database scalability. May plan, coordinate, and implement security measures to safeguard computer databases.",
-    "risk_score": 17,
+    "risk_score": 22,
     "tasks_count": 18,
     "salary": 104620,
     "demand": "Medium",
     "category_distribution": {
-      "high": 0,
+      "high": 1,
       "medium": 6,
-      "low": 12
+      "low": 11
     }
   },
   {
     "code": "15-1243.00",
     "title": "Database Architects",
     "description": "Design strategies for enterprise databases, data warehouse systems, and multidimensional networks. Set standards for database operations, programming, query processes, and security. Model, design, and construct large relational databases or data warehouses. Create and optimize data models for warehouse infrastructure and workflow. Integrate new systems with existing warehouse structure and refine system performance and functionality.",
-    "risk_score": 12,
+    "risk_score": 16,
     "tasks_count": 25,
     "salary": 139500,
     "demand": "Medium",
     "category_distribution": {
-      "high": 0,
+      "high": 1,
       "medium": 6,
-      "low": 19
+      "low": 18
     }
   },
   {
     "code": "15-1243.01",
     "title": "Data Warehousing Specialists",
     "description": "Design, model, or implement corporate data warehousing activities. Program and configure warehouses of database information and provide support to warehouse users.",
-    "risk_score": 28,
+    "risk_score": 39,
     "tasks_count": 18,
     "salary": 139500,
     "demand": "Medium",
     "category_distribution": {
-      "high": 0,
-      "medium": 10,
-      "low": 8
+      "high": 3,
+      "medium": 8,
+      "low": 7
     }
   },
   {
@@ -1697,70 +1697,70 @@
     "code": "15-1251.00",
     "title": "Computer Programmers",
     "description": "Create, modify, and test the code and scripts that allow computer applications to run. Work from specifications drawn up by software and web developers or other individuals. May develop and write computer programs to store, locate, and retrieve specific documents, data, and information.",
-    "risk_score": 21,
+    "risk_score": 56,
     "tasks_count": 17,
     "salary": 100390,
     "demand": "Medium",
     "category_distribution": {
-      "high": 0,
-      "medium": 7,
-      "low": 10
+      "high": 8,
+      "medium": 3,
+      "low": 6
     }
   },
   {
     "code": "15-1252.00",
     "title": "Software Developers",
     "description": "Research, design, and develop computer and network software or specialized utility programs. Analyze user needs and develop software solutions, applying principles and techniques of computer science, engineering, and mathematical analysis. Update software or enhance existing software capabilities. May work with computer hardware engineers to integrate hardware and software systems, and develop specifications and performance requirements. May maintain databases within an application area, working individually or coordinating database development as part of a team.",
-    "risk_score": 15,
+    "risk_score": 38,
     "tasks_count": 17,
     "salary": 135980,
     "demand": "Very High",
     "category_distribution": {
-      "high": 0,
+      "high": 4,
       "medium": 5,
-      "low": 12
+      "low": 8
     }
   },
   {
     "code": "15-1253.00",
     "title": "Software Quality Assurance Analysts and Testers",
     "description": "Develop and execute software tests to identify software problems and their causes. Test system modifications to prepare for implementation. Document software and application defects using a bug tracking system and report defects to software or web developers. Create and maintain databases of known defects. May participate in software design reviews to provide input on functional requirements, operational characteristics, product designs, and schedules.",
-    "risk_score": 20,
+    "risk_score": 23,
     "tasks_count": 30,
     "salary": 104300,
     "demand": "High",
     "category_distribution": {
-      "high": 0,
+      "high": 1,
       "medium": 12,
-      "low": 18
+      "low": 17
     }
   },
   {
     "code": "15-1254.00",
     "title": "Web Developers",
     "description": "Develop and implement websites, web applications, application databases, and interactive web interfaces. Evaluate code to ensure that it is properly structured, meets industry standards, and is compatible with browsers and devices. Optimize website performance, scalability, and server-side code and processes. May develop website infrastructure and integrate websites with other computer applications.",
-    "risk_score": 17,
+    "risk_score": 26,
     "tasks_count": 29,
     "salary": 92650,
     "demand": "Medium",
     "category_distribution": {
-      "high": 0,
-      "medium": 10,
-      "low": 19
+      "high": 3,
+      "medium": 9,
+      "low": 17
     }
   },
   {
     "code": "15-1255.00",
     "title": "Web and Digital Interface Designers",
     "description": "Design digital user interfaces or websites. Develop and test layouts, interfaces, functionality, and navigation menus to ensure compatibility and usability across browsers or devices. May use web framework applications as well as client-side code and processes. May evaluate web design following web and accessibility standards, and may analyze web use metrics and optimize websites for marketability and search engine ranking. May design and test interfaces that facilitate the human-computer interaction and maximize the usability of digital devices, websites, and software with a focus on aesthetics and design. May create graphics used in websites and manage website content and links.",
-    "risk_score": 17,
+    "risk_score": 25,
     "tasks_count": 30,
     "salary": 104000,
     "demand": "High",
     "category_distribution": {
-      "high": 0,
-      "medium": 10,
-      "low": 20
+      "high": 3,
+      "medium": 9,
+      "low": 18
     }
   },
   {
@@ -1809,14 +1809,14 @@
     "code": "15-1299.02",
     "title": "Geographic Information Systems Technologists and Technicians",
     "description": "Assist scientists or related professionals in building, maintaining, modifying, or using geographic information systems (GIS) databases. May also perform some custom application development or provide user support.",
-    "risk_score": 24,
+    "risk_score": 31,
     "tasks_count": 29,
     "salary": 116580,
     "demand": "Very High",
     "category_distribution": {
-      "high": 0,
+      "high": 2,
       "medium": 14,
-      "low": 15
+      "low": 13
     }
   },
   {
@@ -1963,14 +1963,14 @@
     "code": "15-2041.00",
     "title": "Statisticians",
     "description": "Develop or apply mathematical or statistical theory and methods to collect, organize, interpret, and summarize numerical data to provide usable information. May specialize in fields such as biostatistics, agricultural statistics, business statistics, or economic statistics. Includes mathematical and survey statisticians.",
-    "risk_score": 34,
+    "risk_score": 39,
     "tasks_count": 19,
     "salary": 105650,
     "demand": "Medium",
     "category_distribution": {
-      "high": 0,
+      "high": 1,
       "medium": 13,
-      "low": 6
+      "low": 5
     }
   },
   {
@@ -1991,13 +1991,13 @@
     "code": "15-2051.00",
     "title": "Data Scientists",
     "description": "Develop and implement a set of techniques or analytics applications to transform raw data into meaningful information using data-oriented programming languages and visualization software. Apply data mining, data modeling, natural language processing, and machine learning to extract and analyze information from large structured and unstructured datasets. Visualize, interpret, and report data findings. May create dynamic data reports.",
-    "risk_score": 28,
+    "risk_score": 31,
     "tasks_count": 16,
     "salary": 120230,
     "demand": "High",
     "category_distribution": {
-      "high": 0,
-      "medium": 9,
+      "high": 1,
+      "medium": 8,
       "low": 7
     }
   },
@@ -2019,14 +2019,14 @@
     "code": "15-2051.02",
     "title": "Clinical Data Managers",
     "description": "Apply knowledge of health care and database management to analyze clinical data, and to identify and report trends.",
-    "risk_score": 19,
+    "risk_score": 29,
     "tasks_count": 21,
     "salary": 120230,
     "demand": "High",
     "category_distribution": {
-      "high": 1,
+      "high": 3,
       "medium": 6,
-      "low": 14
+      "low": 12
     }
   },
   {
@@ -2047,14 +2047,14 @@
     "code": "15-2099.01",
     "title": "Bioinformatics Technicians",
     "description": "Apply principles and methods of bioinformatics to assist scientists in areas such as pharmaceuticals, medical technology, biotechnology, computational biology, proteomics, computer information science, biology and medical informatics. Apply bioinformatics tools to visualize, analyze, manipulate or interpret molecular data. May build and maintain databases for processing and analyzing genomic or other biological information.",
-    "risk_score": 24,
+    "risk_score": 32,
     "tasks_count": 19,
     "salary": 81490,
     "demand": "Low",
     "category_distribution": {
-      "high": 0,
-      "medium": 9,
-      "low": 10
+      "high": 2,
+      "medium": 8,
+      "low": 9
     }
   },
   {
@@ -2243,14 +2243,14 @@
     "code": "17-2071.00",
     "title": "Electrical Engineers",
     "description": "Research, design, develop, test, or supervise the manufacturing and installation of electrical equipment, components, or systems for commercial, industrial, military, or scientific use.",
-    "risk_score": 14,
+    "risk_score": 18,
     "tasks_count": 22,
     "salary": 120630,
     "demand": "High",
     "category_distribution": {
-      "high": 0,
+      "high": 1,
       "medium": 6,
-      "low": 16
+      "low": 15
     }
   },
   {
@@ -2271,14 +2271,14 @@
     "code": "17-2072.01",
     "title": "Radio Frequency Identification Device Specialists",
     "description": "Design and implement radio frequency identification device (RFID) systems used to track shipments or goods.",
-    "risk_score": 33,
+    "risk_score": 38,
     "tasks_count": 21,
     "salary": 130220,
     "demand": "Medium",
     "category_distribution": {
-      "high": 0,
+      "high": 1,
       "medium": 14,
-      "low": 7
+      "low": 6
     }
   },
   {
@@ -2439,13 +2439,13 @@
     "code": "17-2141.02",
     "title": "Automotive Engineers",
     "description": "Develop new or improved designs for vehicle structural members, engines, transmissions, or other vehicle systems, using computer-assisted design technology. Direct building, modification, or testing of vehicle or components.",
-    "risk_score": 12,
+    "risk_score": 14,
     "tasks_count": 25,
     "salary": 104110,
     "demand": "High",
     "category_distribution": {
-      "high": 0,
-      "medium": 6,
+      "high": 1,
+      "medium": 5,
       "low": 19
     }
   },
@@ -2565,13 +2565,13 @@
     "code": "17-2199.08",
     "title": "Robotics Engineers",
     "description": "Research, design, develop, or test robotic applications.",
-    "risk_score": 29,
+    "risk_score": 31,
     "tasks_count": 24,
     "salary": 122930,
     "demand": "High",
     "category_distribution": {
-      "high": 1,
-      "medium": 12,
+      "high": 2,
+      "medium": 11,
       "low": 11
     }
   },
@@ -2733,13 +2733,13 @@
     "code": "17-3024.01",
     "title": "Robotics Technicians",
     "description": "Build, install, test, or maintain robotic equipment or related automated production systems.",
-    "risk_score": 39,
+    "risk_score": 41,
     "tasks_count": 22,
     "salary": 73900,
     "demand": "Low",
     "category_distribution": {
-      "high": 1,
-      "medium": 15,
+      "high": 2,
+      "medium": 14,
       "low": 6
     }
   },
@@ -2985,14 +2985,14 @@
     "code": "19-1029.01",
     "title": "Bioinformatics Scientists",
     "description": "Conduct research using bioinformatics theory and methods in areas such as pharmaceuticals, medical technology, biotechnology, computational biology, proteomics, computer information science, biology and medical informatics. May design databases and develop algorithms for processing and analyzing genomic information, or other biological information.",
-    "risk_score": 22,
+    "risk_score": 32,
     "tasks_count": 20,
     "salary": 98920,
     "demand": "Medium",
     "category_distribution": {
-      "high": 0,
+      "high": 2,
       "medium": 9,
-      "low": 11
+      "low": 9
     }
   },
   {
@@ -3167,14 +3167,14 @@
     "code": "19-2021.00",
     "title": "Atmospheric and Space Scientists",
     "description": "Investigate atmospheric phenomena and interpret meteorological data, gathered by surface and air stations, satellites, and radar to prepare reports and forecasts for public and other uses. Includes weather analysts and forecasters whose functions require the detailed knowledge of meteorology.",
-    "risk_score": 33,
+    "risk_score": 37,
     "tasks_count": 27,
     "salary": 99070,
     "demand": "Low",
     "category_distribution": {
-      "high": 1,
+      "high": 2,
       "medium": 16,
-      "low": 10
+      "low": 9
     }
   },
   {
@@ -3503,14 +3503,14 @@
     "code": "19-3093.00",
     "title": "Historians",
     "description": "Research, analyze, record, and interpret the past as recorded in sources, such as government and institutional records, newspapers and other periodicals, photographs, interviews, films, electronic media, and unpublished manuscripts, such as personal diaries and letters.",
-    "risk_score": 43,
+    "risk_score": 48,
     "tasks_count": 21,
     "salary": 76750,
     "demand": "Low",
     "category_distribution": {
-      "high": 3,
+      "high": 4,
       "medium": 12,
-      "low": 6
+      "low": 5
     }
   },
   {
@@ -4189,14 +4189,14 @@
     "code": "25-1021.00",
     "title": "Computer Science Teachers, Postsecondary",
     "description": "Teach courses in computer science. May specialize in a field of computer science, such as the design and function of computers or operations and research analysis. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
-    "risk_score": 27,
+    "risk_score": 31,
     "tasks_count": 26,
     "salary": 96980,
     "demand": "Medium",
     "category_distribution": {
-      "high": 1,
+      "high": 2,
       "medium": 12,
-      "low": 13
+      "low": 12
     }
   },
   {
@@ -5323,13 +5323,13 @@
     "code": "27-2012.00",
     "title": "Producers and Directors",
     "description": "Produce or direct stage, television, radio, video, or film productions for entertainment, information, or instruction. Responsible for creative decisions, such as interpretation of script, choice of actors or guests, set design, sound, special effects, and choreography.",
-    "risk_score": 23,
+    "risk_score": 25,
     "tasks_count": 30,
     "salary": 90360,
     "demand": "High",
     "category_distribution": {
-      "high": 1,
-      "medium": 12,
+      "high": 2,
+      "medium": 11,
       "low": 17
     }
   },
@@ -5337,14 +5337,14 @@
     "code": "27-2012.03",
     "title": "Media Programming Directors",
     "description": "Direct and coordinate activities of personnel engaged in preparation of radio or television station program schedules and programs, such as sports or news.",
-    "risk_score": 17,
+    "risk_score": 41,
     "tasks_count": 23,
     "salary": 90360,
     "demand": "High",
     "category_distribution": {
-      "high": 0,
-      "medium": 8,
-      "low": 15
+      "high": 6,
+      "medium": 7,
+      "low": 10
     }
   },
   {
@@ -5645,13 +5645,13 @@
     "code": "27-4011.00",
     "title": "Audio and Video Technicians",
     "description": "Set up, maintain, and dismantle audio and video equipment, such as microphones, sound speakers, connecting wires and cables, sound and mixing boards, video cameras, video monitors and servers, and related electronic equipment for live or recorded events, such as concerts, meetings, conventions, presentations, podcasts, news conferences, and sporting events.",
-    "risk_score": 28,
+    "risk_score": 29,
     "tasks_count": 29,
     "salary": 58100,
     "demand": "Medium",
     "category_distribution": {
-      "high": 1,
-      "medium": 14,
+      "high": 2,
+      "medium": 13,
       "low": 14
     }
   },
@@ -5659,14 +5659,14 @@
     "code": "27-4012.00",
     "title": "Broadcast Technicians",
     "description": "Set up, operate, and maintain the electronic equipment used to acquire, edit, and transmit audio and video for radio or television programs. Control and adjust incoming and outgoing broadcast signals to regulate sound volume, signal strength, and signal clarity. Operate satellite, microwave, or other transmitter equipment to broadcast radio or television programs.",
-    "risk_score": 52,
+    "risk_score": 57,
     "tasks_count": 27,
     "salary": 59570,
     "demand": "Low",
     "category_distribution": {
-      "high": 6,
-      "medium": 16,
-      "low": 5
+      "high": 8,
+      "medium": 15,
+      "low": 4
     }
   },
   {
@@ -5925,13 +5925,13 @@
     "code": "29-1122.00",
     "title": "Occupational Therapists",
     "description": "Assess, plan, and organize rehabilitative programs that help build or restore vocational, homemaking, and daily living skills, as well as general independence, to persons with disabilities or developmental delays. Use therapeutic techniques, adapt the individual's environment, teach skills, and modify specific tasks that present barriers to the individual.",
-    "risk_score": 12,
+    "risk_score": 15,
     "tasks_count": 17,
     "salary": 100330,
     "demand": "High",
     "category_distribution": {
-      "high": 1,
-      "medium": 2,
+      "high": 2,
+      "medium": 1,
       "low": 14
     }
   },
@@ -6905,14 +6905,14 @@
     "code": "29-2072.00",
     "title": "Medical Records Specialists",
     "description": "Compile, process, and maintain medical records of hospital and clinic patients in a manner consistent with medical, administrative, ethical, legal, and regulatory requirements of the healthcare system. Classify medical and healthcare concepts, including diagnosis, procedures, medical services, and equipment, into the healthcare industry's numerical coding system. Includes medical coders.",
-    "risk_score": 44,
+    "risk_score": 50,
     "tasks_count": 17,
     "salary": 51140,
     "demand": "High",
     "category_distribution": {
-      "high": 5,
+      "high": 6,
       "medium": 5,
-      "low": 7
+      "low": 6
     }
   },
   {
@@ -7017,14 +7017,14 @@
     "code": "29-9021.00",
     "title": "Health Information Technologists and Medical Registrars",
     "description": "Apply knowledge of healthcare and information systems to assist in the design, development, and continued modification and analysis of computerized healthcare systems. Abstract, collect, and analyze treatment and followup information of patients. May educate staff and assist in problem solving to promote the implementation of the healthcare information system. May design, develop, test, and implement databases with complete history, diagnosis, treatment, and health status to help monitor diseases.",
-    "risk_score": 28,
+    "risk_score": 34,
     "tasks_count": 16,
     "salary": 68020,
     "demand": "Medium",
     "category_distribution": {
-      "high": 2,
+      "high": 3,
       "medium": 5,
-      "low": 9
+      "low": 8
     }
   },
   {
@@ -7549,14 +7549,14 @@
     "code": "33-3021.06",
     "title": "Intelligence Analysts",
     "description": "Gather, analyze, or evaluate information from a variety of sources, such as law enforcement databases, surveillance, intelligence networks or geographic information systems. Use intelligence data to anticipate and prevent organized crime activities, such as terrorism.",
-    "risk_score": 43,
+    "risk_score": 48,
     "tasks_count": 21,
     "salary": 93790,
     "demand": "High",
     "category_distribution": {
-      "high": 2,
+      "high": 3,
       "medium": 14,
-      "low": 5
+      "low": 4
     }
   },
   {
@@ -9369,13 +9369,13 @@
     "code": "43-5011.00",
     "title": "Cargo and Freight Agents",
     "description": "Expedite and route movement of incoming and outgoing cargo and freight shipments in airline, train, and trucking terminals and shipping docks. Take orders from customers and arrange pickup of freight and cargo for delivery to loading platform. Prepare and examine bills of lading to determine shipping charges and tariffs.",
-    "risk_score": 44,
+    "risk_score": 46,
     "tasks_count": 24,
     "salary": 52260,
     "demand": "Medium",
     "category_distribution": {
-      "high": 3,
-      "medium": 15,
+      "high": 4,
+      "medium": 14,
       "low": 6
     }
   },
@@ -9691,13 +9691,13 @@
     "code": "43-9081.00",
     "title": "Proofreaders and Copy Markers",
     "description": "Read transcript or proof type setup to detect and mark for correction any grammatical, typographical, or compositional errors. Excludes workers whose primary duty is editing copy. Includes proofreaders of braille.",
-    "risk_score": 50,
+    "risk_score": 55,
     "tasks_count": 11,
     "salary": 51120,
     "demand": "Low",
     "category_distribution": {
-      "high": 2,
-      "medium": 7,
+      "high": 3,
+      "medium": 6,
       "low": 2
     }
   },
@@ -10853,14 +10853,14 @@
     "code": "49-2011.00",
     "title": "Computer, Automated Teller, and Office Machine Repairers",
     "description": "Repair, maintain, or install computers, word processing systems, automated teller machines, and electronic office machines, such as duplicating and fax machines.",
-    "risk_score": 50,
+    "risk_score": 54,
     "tasks_count": 25,
     "salary": 47810,
     "demand": "Medium",
     "category_distribution": {
-      "high": 2,
+      "high": 3,
       "medium": 21,
-      "low": 2
+      "low": 1
     }
   },
   {
@@ -10881,13 +10881,13 @@
     "code": "49-2022.00",
     "title": "Telecommunications Equipment Installers and Repairers, Except Line Installers",
     "description": "Install, set up, rearrange, or remove switching, distribution, routing, and dialing equipment used in central offices or headends. Service or repair telephone, cable television, Internet, and other communications equipment on customers' property. May install communications equipment or communications wiring in buildings.",
-    "risk_score": 41,
+    "risk_score": 42,
     "tasks_count": 39,
     "salary": 63890,
     "demand": "High",
     "category_distribution": {
-      "high": 1,
-      "medium": 30,
+      "high": 2,
+      "medium": 29,
       "low": 8
     }
   },
@@ -10993,14 +10993,14 @@
     "code": "49-2098.00",
     "title": "Security and Fire Alarm Systems Installers",
     "description": "Install, program, maintain, and repair security and fire alarm wiring and equipment. Ensure that work is in accordance with relevant codes.",
-    "risk_score": 31,
+    "risk_score": 44,
     "tasks_count": 16,
     "salary": 60070,
     "demand": "Medium",
     "category_distribution": {
-      "high": 0,
+      "high": 2,
       "medium": 10,
-      "low": 6
+      "low": 4
     }
   },
   {
@@ -12771,14 +12771,14 @@
     "code": "51-9032.00",
     "title": "Cutting and Slicing Machine Setters, Operators, and Tenders",
     "description": "Set up, operate, or tend machines that cut or slice materials, such as glass, stone, cork, rubber, tobacco, food, paper, or insulating material.",
-    "risk_score": 50,
+    "risk_score": 54,
     "tasks_count": 25,
     "salary": 46570,
     "demand": "Medium",
     "category_distribution": {
-      "high": 2,
+      "high": 3,
       "medium": 21,
-      "low": 2
+      "low": 1
     }
   },
   {
@@ -12967,13 +12967,13 @@
     "code": "51-9161.00",
     "title": "Computer Numerically Controlled Tool Operators",
     "description": "Operate computer-controlled tools, machines, or robots to machine or process parts, tools, or other work pieces made of metal, plastic, wood, stone, or other materials. May also set up and maintain equipment.",
-    "risk_score": 46,
+    "risk_score": 48,
     "tasks_count": 27,
     "salary": 50690,
     "demand": "High",
     "category_distribution": {
-      "high": 0,
-      "medium": 25,
+      "high": 1,
+      "medium": 24,
       "low": 2
     }
   },

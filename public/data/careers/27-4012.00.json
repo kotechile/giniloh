@@ -21,8 +21,8 @@
       "id": "4007",
       "text": "Maintain programming logs as required by station management and the Federal Communications Commission.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "4009",
@@ -63,8 +63,8 @@
       "id": "4013",
       "text": "Select sources from which programming will be received or through which programming will be transmitted.",
       "type": "Core",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "18656",
@@ -106,7 +106,7 @@
       "text": "Schedule programming or read television programming logs to determine which programs are to be recorded or aired.",
       "type": "Supplemental",
       "risk": "high",
-      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "4022",
@@ -193,7 +193,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 52,
+  "risk_score": 57,
   "salary": 59570,
   "demand": "Low"
 }

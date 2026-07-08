@@ -49,8 +49,8 @@
       "id": "17710",
       "text": "Confer with researchers, clinicians, or information technology staff to determine data needs and programming requirements and to provide assistance with database-related research activities.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "17717",
@@ -63,8 +63,8 @@
       "id": "17720",
       "text": "Write computer programs or scripts to be used in querying databases.",
       "type": "Core",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "17714",
@@ -137,7 +137,7 @@
       "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
     }
   ],
-  "risk_score": 24,
+  "risk_score": 32,
   "salary": 81490,
   "demand": "Low"
 }

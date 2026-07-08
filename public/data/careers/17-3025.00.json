@@ -8,7 +8,7 @@
       "text": "Maintain project logbook records or computer program files.",
       "type": "Core",
       "risk": "high",
-      "rationale": "Routine cognitive or manual task with high vulnerability to automation."
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "20513",

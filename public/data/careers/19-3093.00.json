@@ -84,8 +84,8 @@
       "id": "3729",
       "text": "Research and prepare manuscripts in support of public programming and the development of exhibits at historic sites, museums, libraries, and archives.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "3723",
@@ -151,7 +151,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 43,
+  "risk_score": 48,
   "salary": 76750,
   "demand": "Low"
 }

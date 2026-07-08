@@ -21,8 +21,8 @@
       "id": "16354",
       "text": "Perform systems analysis or programming of radio frequency identification device (RFID) technology.",
       "type": "Core",
-      "risk": "low",
-      "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "16359",
@@ -151,7 +151,7 @@
       "rationale": "Semi-structured cognitive task involving analysis, inspection, or monitoring."
     }
   ],
-  "risk_score": 33,
+  "risk_score": 38,
   "salary": 130220,
   "demand": "Medium"
 }

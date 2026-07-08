@@ -91,8 +91,8 @@
       "id": "20273",
       "text": "Check import or export documentation to determine cargo contents and use tariff coding system to classify goods according to fee or tariff group.",
       "type": "Supplemental",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "8202",
@@ -172,7 +172,7 @@
       "rationale": "Semi-structured task combining routine and non-routine responsibilities."
     }
   ],
-  "risk_score": 44,
+  "risk_score": 46,
   "salary": 52260,
   "demand": "Medium"
 }

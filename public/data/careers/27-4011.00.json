@@ -49,8 +49,8 @@
       "id": "3987",
       "text": "Switch sources of video input from one camera or studio to another, from film to live programming, or from network to local programming.",
       "type": "Core",
-      "risk": "medium",
-      "rationale": "Semi-structured task combining routine and non-routine responsibilities."
+      "risk": "high",
+      "rationale": "Software coding, programming, or application development task highly susceptible to automated generation."
     },
     {
       "id": "3997",
@@ -207,7 +207,7 @@
       "rationale": "Complex problem-solving, strategic leadership, or high-empathy task requiring human judgment."
     }
   ],
-  "risk_score": 28,
+  "risk_score": 29,
   "salary": 58100,
   "demand": "Medium"
 }

@@ -11,6 +11,15 @@ random.seed(42)
 def classify_task(task_text):
     text = task_text.lower()
     
+    # Force coding, programming, debugging, and software development tasks to High Risk
+    coding_keywords = [
+        "write code", "writing code", "computer program", "programming", 
+        "debugging", "develop software", "software development", "coding",
+        "software application", "software system"
+    ]
+    if any(keyword in text for keyword in coding_keywords):
+        return "high", "Software coding, programming, or application development task highly susceptible to automated generation."
+    
     # Low Risk (High Resilience) indicators: Strategic, leadership, interpersonal, high empathy, unstructured, highly creative
     low_indicators = [
         "direct", "plan", "negotiate", "lead", "manage", "collaborate", "innovate", 
