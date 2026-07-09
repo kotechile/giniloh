@@ -28,16 +28,16 @@ const faqItems = [
 ---
 
 <BaseLayout
-	title="Lease Break Calculator | Gini Loh"
-	description="Estimate the financial impact of breaking a lease early with a real-time calculator built for modern renters."
+	title="Lease Break Penalty & Offset Estimator | Gini Loh"
+	description="Estimate early lease termination penalty exposure, cleanout costs, and deposit offsets based on your contract terms."
 >
 	<link slot="head" rel="canonical" href={new URL('/calculators/lease-break/', Astro.site).toString()} />
 	{schema ? <JsonLd slot="head" data={schema} /> : null}
 
 	<CalculatorShell
 		eyebrow="Renting calculator"
-		title="Lease Break Calculator"
-		description="Estimate the cost of terminating a lease early using the three most common fee structures, then adjust for cleaning, repairs, and the security deposit offset."
+		title="Lease Break Penalty & Offset Estimator"
+		description="Estimate the real penalty of breaking a lease early based on your specific contract terms, then adjust for cleaning, repairs, and the security deposit offset."
 	>
 		<div slot="calculator">
 			<LeaseBreakCalculator client:load />
@@ -49,9 +49,9 @@ const faqItems = [
 				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white">How to use this estimate well</h2>
 				<ol class="mt-5 grid gap-4 text-sm leading-7 text-slate-300">
 					<li>1. Enter your monthly rent and the number of months left on the lease.</li>
-					<li>2. Fill in the flat fee, percentage fee, and months-of-rent fields from your contract.</li>
+					<li>2. Choose your penalty calculation method and fill in the rate or fee from your contract.</li>
 					<li>3. Add any repair or cleaning charges you expect, then subtract the security deposit amount.</li>
-					<li>4. Review the net estimate and compare the three penalty paths before you negotiate.</li>
+					<li>4. Review the net estimate and deposit coverage before you negotiate.</li>
 				</ol>
 				<div class="mt-6 rounded-[1.3rem] border border-white/10 bg-white/5 p-4">
 					<p class="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">Best use case</p>
@@ -65,13 +65,12 @@ const faqItems = [
 			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
 				<p class="font-mono text-xs uppercase tracking-[0.28em] text-emerald-300/80">Formula</p>
 				<div class="mt-4 rounded-[1.3rem] border border-slate-800/90 bg-slate-950/60 p-5 font-mono text-sm leading-7 text-slate-200">
-					<p>Net penalty = max(fixed fee, percentage path, months-rent path)</p>
+					<p>Net penalty = selected penalty path</p>
 					<p class="mt-2">+ additional costs</p>
 					<p>- security deposit</p>
 				</div>
 				<p class="mt-4 text-sm leading-7 text-slate-300">
-					The tool intentionally uses the highest penalty path so the result is conservative rather
-					than overly optimistic.
+					The tool calculates early lease exit costs according to your specific contract penalty terms, offsets it with your security deposit, and adds expected repairs or cleanout costs.
 				</p>
 			</article>
 

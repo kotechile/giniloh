@@ -1,15 +1,15 @@
 export const calculatorTools = [
 	{
-		title: 'Lease Break Calculator',
+		title: 'Lease Break Penalty & Offset Estimator',
 		slug: 'lease-break',
 		href: '/calculators/lease-break/',
 		status: 'Live',
 		accent: 'emerald',
 		description:
-			'Estimate the real cost of breaking a lease early, including penalties, extra charges, and security deposit offsets.',
+			'Evaluate your early lease termination exposure. Calculate contract penalty structures, repair/cleanout fees, and security deposit offsets.',
 		utility: 'Calculate renter exit costs',
 		category: 'FinanceApplication',
-		keywords: ['lease break calculator', 'early lease termination', 'rent calculator']
+		keywords: ['lease break penalty estimator', 'early lease termination penalty', 'lease break offset calculator']
 	},
 	{
 		title: 'Job-Hop vs. Retention Compensation Calculator',

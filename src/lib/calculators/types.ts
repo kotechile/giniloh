@@ -1,4 +1,4 @@
-export type LeasePenaltyMethod = 'fixed' | 'percentage' | 'months';
+export type LeasePenaltyMethod = 'fixed' | 'percentage' | 'months' | 'remaining';
 
 export interface LeaseBreakInputs {
 	monthlyRent: number;
@@ -15,6 +15,7 @@ export interface LeaseBreakBreakdown {
 	fixedPenalty: number;
 	percentagePenalty: number;
 	monthsPenalty: number;
+	remainingPenalty: number;
 	selectedMethodPenalty: number;
 	basePenalty: number;
 	additionalCosts: number;

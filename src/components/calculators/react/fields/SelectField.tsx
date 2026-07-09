@@ -10,9 +10,10 @@ interface SelectFieldProps {
 }
 
 const OPTIONS: Array<{ value: LeasePenaltyMethod; label: string }> = [
-	{ value: 'fixed', label: 'Fixed fee' },
+	{ value: 'months', label: 'Months of rent (e.g. 2 months penalty)' },
+	{ value: 'fixed', label: 'Fixed buyout fee (flat rate)' },
 	{ value: 'percentage', label: 'Percentage of remaining lease value' },
-	{ value: 'months', label: 'Months of rent' }
+	{ value: 'remaining', label: 'Pay out remainder of lease (no buyout)' }
 ];
 
 export function SelectField({ id, label, eyebrow, value, helpText, onChange }: SelectFieldProps) {

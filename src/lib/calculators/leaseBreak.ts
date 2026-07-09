@@ -24,19 +24,25 @@ export function calculateLeaseBreakPenalty(inputs: LeaseBreakInputs): LeaseBreak
 	const fixedPenalty = fixedFee;
 	const percentagePenalty = (percentageFee / 100) * monthlyRent * remainingMonths;
 	const monthsPenalty = monthsFee * monthlyRent;
-	const basePenalty = Math.max(fixedPenalty, percentagePenalty, monthsPenalty);
+	const remainingPenalty = monthlyRent * remainingMonths;
 
 	const selectedMethodPenalty =
 		inputs.selectedMethod === 'fixed'
 			? fixedPenalty
 			: inputs.selectedMethod === 'percentage'
 				? percentagePenalty
-				: monthsPenalty;
+				: inputs.selectedMethod === 'months'
+					? monthsPenalty
+					: remainingPenalty;
+
+	// The base penalty is now exactly the selected method's penalty
+	const basePenalty = selectedMethodPenalty;
 
 	return {
 		fixedPenalty,
 		percentagePenalty,
 		monthsPenalty,
+		remainingPenalty,
 		selectedMethodPenalty,
 		basePenalty,
 		additionalCosts,
