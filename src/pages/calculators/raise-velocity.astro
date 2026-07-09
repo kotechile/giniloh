@@ -4,6 +4,8 @@ import JsonLd from '../../components/JsonLd.astro';
 import RaiseVelocityCalculator from '../../components/calculators/react/RaiseVelocityCalculator';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+import { fetchPostBySlug } from '../../lib/wordpress';
+import RelatedArticleCard from '../../components/calculators/RelatedArticleCard.astro';
 
 const calculator = getCalculatorBySlug('raise-velocity');
 const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
@@ -25,6 +27,8 @@ const faqItems = [
 			'The calculator isolates the "Raise Delta"—the net take-home pay difference between staying and job-hopping—and models investing that capital directly into an index portfolio compounding at a specified market return rate (default 8%).'
 	}
 ];
+
+const post = await fetchPostBySlug('jobs-switch-calculator-step-by-step-profit-guide');
 ---
 
 <BaseLayout
@@ -43,38 +47,38 @@ const faqItems = [
 			<RaiseVelocityCalculator client:load />
 		</div>
 
-		<div slot="aside" class="grid gap-6">
-			<article class="overflow-hidden rounded-[1.8rem] border border-cyan-500/20 bg-[linear-gradient(135deg,rgba(8,47,73,0.92),rgba(2,6,23,0.98)_70%,rgba(6,182,212,0.12))] p-6 shadow-[0_0_40px_rgba(34,211,238,0.08)] [.light_&]:bg-[linear-gradient(135deg,rgba(224,242,254,0.7),rgba(248,250,252,0.95)_70%,rgba(207,250,254,0.6))] [.light_&]:border-cyan-200/80 [.light_&]:shadow-[0_0_40px_rgba(6,182,212,0.04)]">
-				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-200/80 [.light_&]:text-cyan-700!">Strategy note</p>
-				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white font-sans">The Loyalty Penalty</h2>
-				<p class="mt-4 text-sm leading-7 text-slate-300">
-					Studies show that staying at the same company for more than two years can cost you up to 50% in lifetime earnings compared to strategic job-hopping. This simulator compiles all cash-flow sources (base, bonus, match, tax, location, and hours) to visualize the true financial divergence.
-				</p>
-			</article>
+		<article slot="aside" class="overflow-hidden rounded-[1.8rem] border border-cyan-500/20 bg-[linear-gradient(135deg,rgba(8,47,73,0.92),rgba(2,6,23,0.98)_70%,rgba(6,182,212,0.12))] p-6 shadow-[0_0_40px_rgba(34,211,238,0.08)] [.light_&]:bg-[linear-gradient(135deg,rgba(224,242,254,0.7),rgba(248,250,252,0.95)_70%,rgba(207,250,254,0.6))] [.light_&]:border-cyan-200/80 [.light_&]:shadow-[0_0_40px_rgba(6,182,212,0.04)]">
+			<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-200/80 [.light_&]:text-cyan-700!">Strategy note</p>
+			<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white font-sans">The Loyalty Penalty</h2>
+			<p class="mt-4 text-sm leading-7 text-slate-300">
+				Studies show that staying at the same company for more than two years can cost you up to 50% in lifetime earnings compared to strategic job-hopping. This simulator compiles all cash-flow sources (base, bonus, match, tax, location, and hours) to visualize the true financial divergence.
+			</p>
+		</article>
 
-			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
-				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">Formulas</p>
-				<div class="mt-4 rounded-[1.3rem] border border-slate-800/90 bg-slate-950/60 p-5 font-mono text-xs leading-6 text-slate-200">
-					<p class="font-semibold text-cyan-300">Raise Delta:</p>
-					<p class="text-slate-400">ΔN_t = N_switcher,t - N_stayer,t</p>
-					<p class="mt-3 font-semibold text-cyan-300">Compounded Portfolio:</p>
-					<p class="text-slate-400">P_t = P_t-1 * (1 + R_p) + ΔN_t</p>
-					<p class="mt-3 font-semibold text-cyan-300">Effective Hourly Rate:</p>
-					<p class="text-slate-400">Rate = Comp_CoL / (Hours_Year)</p>
-				</div>
-			</article>
+		<article slot="aside" class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+			<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">Formulas</p>
+			<div class="mt-4 rounded-[1.3rem] border border-slate-800/90 bg-slate-950/60 p-5 font-mono text-xs leading-6 text-slate-200">
+				<p class="font-semibold text-cyan-300">Raise Delta:</p>
+				<p class="text-slate-400">ΔN_t = N_switcher,t - N_stayer,t</p>
+				<p class="mt-3 font-semibold text-cyan-300">Compounded Portfolio:</p>
+				<p class="text-slate-400">P_t = P_t-1 * (1 + R_p) + ΔN_t</p>
+				<p class="mt-3 font-semibold text-cyan-300">Effective Hourly Rate:</p>
+				<p class="text-slate-400">Rate = Comp_CoL / (Hours_Year)</p>
+			</div>
+		</article>
 
-			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
-				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">FAQ</p>
-				<div class="mt-5 grid gap-4">
-					{faqItems.map((item) => (
-						<div class="rounded-[1.2rem] border border-slate-800/80 bg-slate-950/55 p-4">
-							<h2 class="text-sm font-semibold text-white font-sans">{item.question}</h2>
-							<p class="mt-2 text-xs leading-6 text-slate-400 font-mono">{item.answer}</p>
-						</div>
-					))}
-				</div>
-			</article>
-		</div>
+		<article slot="aside" class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+			<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">FAQ</p>
+			<div class="mt-5 grid gap-4">
+				{faqItems.map((item) => (
+					<div class="rounded-[1.2rem] border border-slate-800/80 bg-slate-950/55 p-4">
+						<h2 class="text-sm font-semibold text-white font-sans">{item.question}</h2>
+						<p class="mt-2 text-xs leading-6 text-slate-400 font-mono">{item.answer}</p>
+					</div>
+				))}
+			</div>
+		</article>
+
+		{post && <RelatedArticleCard slot="aside" post={post} />}
 	</CalculatorShell>
 </BaseLayout>

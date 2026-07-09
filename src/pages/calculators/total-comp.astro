@@ -4,6 +4,8 @@ import JsonLd from '../../components/JsonLd.astro';
 import TotalCompCalculator from '../../components/calculators/react/TotalCompCalculator';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+import { fetchPostBySlug } from '../../lib/wordpress';
+import RelatedArticleCard from '../../components/calculators/RelatedArticleCard.astro';
 
 const calculator = getCalculatorBySlug('total-comp');
 const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
@@ -30,6 +32,8 @@ const faqItems = [
 			'We calculate federal income taxes using progressive brackets (Single or Married filing jointly) applied to cash compensation plus liquid vested stock units. State taxes are modeled as representative flat rates (e.g. CA: 9.3%, NY: 6.5%, MD: 4.75%). You can override this by inputting a custom effective tax rate manually.'
 	}
 ];
+
+const post = await fetchPostBySlug('negotiate-job-offer-with-giniloh-visualizer');
 ---
 
 <BaseLayout
@@ -48,68 +52,66 @@ const faqItems = [
 			<TotalCompCalculator client:load />
 		</div>
 
-		<div slot="aside" class="grid gap-6">
-			
-			<article class="overflow-hidden rounded-[1.8rem] border border-indigo-500/20 bg-[linear-gradient(135deg,rgba(30,27,75,0.92),rgba(2,6,23,0.98)_70%,rgba(99,102,241,0.12))] p-6 shadow-[0_0_40px_rgba(99,102,241,0.08)] [.light_&]:bg-slate-50 [.light_&]:bg-none [.light_&]:border-slate-200/80 [.light_&]:shadow-sm">
-				<p class="font-mono text-xs uppercase tracking-[0.28em] text-indigo-200/80 [.light_&]:text-indigo-600!">Strategy guide</p>
-				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white font-sans border-0 pl-0">Comparing Public vs. Private Firm Offers</h2>
-				<p class="mt-4 text-sm leading-7 text-slate-300">
-					Private firms or partnerships often match publicly listed corporate offers on paper by quoting substantial LTIP grants or options based on speculative current values. 
-					However, because private shares/units are illiquid and purchasing option/shares can require out-of-pocket cash, their real-time cash flow footprint can be negative if auto-exercised. 
-					Use this visualizer to model:
+		<article slot="aside" class="overflow-hidden rounded-[1.8rem] border border-indigo-500/20 bg-[linear-gradient(135deg,rgba(30,27,75,0.92),rgba(2,6,23,0.98)_70%,rgba(99,102,241,0.12))] p-6 shadow-[0_0_40px_rgba(99,102,241,0.08)] [.light_&]:bg-slate-50 [.light_&]:bg-none [.light_&]:border-slate-200/80 [.light_&]:shadow-sm">
+			<p class="font-mono text-xs uppercase tracking-[0.28em] text-indigo-200/80 [.light_&]:text-indigo-600!">Strategy guide</p>
+			<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white font-sans border-0 pl-0">Comparing Public vs. Private Firm Offers</h2>
+			<p class="mt-4 text-sm leading-7 text-slate-300">
+				Private firms or partnerships often match publicly listed corporate offers on paper by quoting substantial LTIP grants or options based on speculative current values. 
+				However, because private shares/units are illiquid and purchasing option/shares can require out-of-pocket cash, their real-time cash flow footprint can be negative if auto-exercised. 
+				Use this visualizer to model:
+			</p>
+			<ul class="mt-4 space-y-2 text-sm text-slate-300 list-disc list-inside">
+				<li>How option purchase costs reduce your first 4 years of spendable cash.</li>
+				<li>How much of your wealth is locked up in paper assets vs. liquid bank balances.</li>
+				<li>The compound growth difference between a public stock and a private valuation.</li>
+			</ul>
+			<div class="mt-6 rounded-[1.3rem] border border-white/10 bg-white/5 p-4 [.light_&]:border-slate-200/80 [.light_&]:bg-slate-100/50">
+				<p class="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500 [.light_&]:text-slate-600!">Pro Tip</p>
+				<p class="mt-2 text-sm leading-7 text-slate-200">
+					Toggle <strong>Auto-Exercise Options</strong> to see if your base salary and bonus can absorb the grant price cost of your options as they vest, or if exercising will require dipping into savings.
 				</p>
-				<ul class="mt-4 space-y-2 text-sm text-slate-300 list-disc list-inside">
-					<li>How option purchase costs reduce your first 4 years of spendable cash.</li>
-					<li>How much of your wealth is locked up in paper assets vs. liquid bank balances.</li>
-					<li>The compound growth difference between a public stock and a private valuation.</li>
-				</ul>
-				<div class="mt-6 rounded-[1.3rem] border border-white/10 bg-white/5 p-4 [.light_&]:border-slate-200/80 [.light_&]:bg-slate-100/50">
-					<p class="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500 [.light_&]:text-slate-600!">Pro Tip</p>
-					<p class="mt-2 text-sm leading-7 text-slate-200">
-						Toggle <strong>Auto-Exercise Options</strong> to see if your base salary and bonus can absorb the grant price cost of your options as they vest, or if exercising will require dipping into savings.
-					</p>
+			</div>
+		</article>
+
+		<article slot="aside" class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+			<p class="font-mono text-xs uppercase tracking-[0.28em] text-indigo-300/80 [.light_&]:text-indigo-600!">The Math Engine</p>
+			<div class="mt-4 space-y-4 font-mono text-xs leading-6 text-slate-200">
+				<div class="rounded-[1.2rem] border border-slate-800 bg-slate-950/60 p-4 [.light_&]:bg-slate-100/60 [.light_&]:border-slate-200">
+					<p class="text-indigo-400 font-bold uppercase tracking-wider [.light_&]:text-indigo-600!">Stock growth model</p>
+					<p class="mt-1">Value_t = Base_Value * (1 + growth_rate)^(t - 1)</p>
 				</div>
-			</article>
-
-			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
-				<p class="font-mono text-xs uppercase tracking-[0.28em] text-indigo-300/80 [.light_&]:text-indigo-600!">The Math Engine</p>
-				<div class="mt-4 space-y-4 font-mono text-xs leading-6 text-slate-200">
-					<div class="rounded-[1.2rem] border border-slate-800 bg-slate-950/60 p-4 [.light_&]:bg-slate-100/60 [.light_&]:border-slate-200">
-						<p class="text-indigo-400 font-bold uppercase tracking-wider [.light_&]:text-indigo-600!">Stock growth model</p>
-						<p class="mt-1">Value_t = Base_Value * (1 + growth_rate)^(t - 1)</p>
-					</div>
-					<div class="rounded-[1.2rem] border border-slate-800 bg-slate-950/60 p-4 [.light_&]:bg-slate-100/60 [.light_&]:border-slate-200">
-						<p class="text-indigo-400 font-bold uppercase tracking-wider [.light_&]:text-indigo-600!">ESPP yield boost</p>
-						<p class="mt-1">Yield = (Base * Contrib_%) * (Discount_% / (1 - Discount_%))</p>
-					</div>
-					<div class="rounded-[1.2rem] border border-slate-800 bg-slate-950/60 p-4 [.light_&]:bg-slate-100/60 [.light_&]:border-slate-200">
-						<p class="text-indigo-400 font-bold uppercase tracking-wider [.light_&]:text-indigo-600!">Net spendable cash</p>
-						<p class="mt-1">Cash_t = Salary + Bonus_t + Vested_Liquid_Stock_Units_t + ESPP_Yield_t - Tax_t - Purchase_Cost_t - Health_t</p>
-					</div>
+				<div class="rounded-[1.2rem] border border-slate-800 bg-slate-950/60 p-4 [.light_&]:bg-slate-100/60 [.light_&]:border-slate-200">
+					<p class="text-indigo-400 font-bold uppercase tracking-wider [.light_&]:text-indigo-600!">ESPP yield boost</p>
+					<p class="mt-1">Yield = (Base * Contrib_%) * (Discount_% / (1 - Discount_%))</p>
 				</div>
-			</article>
-
-			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
-				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70 [.light_&]:text-cyan-600!">FAQ</p>
-				<div class="mt-5 grid gap-4">
-					{faqItems.map((item) => (
-						<div class="rounded-[1.2rem] border border-slate-800 bg-slate-950/55 p-4 [.light_&]:bg-slate-100/60 [.light_&]:border-slate-200">
-							<h3 class="text-sm font-semibold text-white">{item.question}</h3>
-							<p class="mt-2 text-xs leading-6 text-slate-400">{item.answer}</p>
-						</div>
-					))}
+				<div class="rounded-[1.2rem] border border-slate-800 bg-slate-950/60 p-4 [.light_&]:bg-slate-100/60 [.light_&]:border-slate-200">
+					<p class="text-indigo-400 font-bold uppercase tracking-wider [.light_&]:text-indigo-600!">Net spendable cash</p>
+					<p class="mt-1">Cash_t = Salary + Bonus_t + Vested_Liquid_Stock_Units_t + ESPP_Yield_t - Tax_t - Purchase_Cost_t - Health_t</p>
 				</div>
-			</article>
+			</div>
+		</article>
 
-			<article class="rounded-[1.8rem] border border-amber-400/15 bg-[linear-gradient(180deg,rgba(120,53,15,0.18),rgba(2,6,23,0.96))] p-6 shadow-[0_0_40px_rgba(245,158,11,0.08)] [.light_&]:bg-amber-50/40 [.light_&]:bg-none [.light_&]:border-amber-200/50">
-				<p class="font-mono text-xs uppercase tracking-[0.28em] text-amber-200/80 [.light_&]:text-amber-800!">AMT Warning Tooltip</p>
-				<h2 class="mt-3 text-lg font-semibold text-white font-sans border-0 pl-0">Alternative Minimum Tax (AMT)</h2>
-				<p class="mt-3 text-sm leading-7 text-slate-300">
-					Purchasing options or partnership units in a private company can trigger Alternative Minimum Tax (AMT) on the spread between the grant price and current value, even though the shares cannot be sold for cash. 
-					Consult a CPA to model your AMT exposure before purchasing large blocks of options.
-				</p>
-			</article>
+		<article slot="aside" class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+			<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70 [.light_&]:text-cyan-600!">FAQ</p>
+			<div class="mt-5 grid gap-4">
+				{faqItems.map((item) => (
+					<div class="rounded-[1.2rem] border border-slate-800 bg-slate-950/55 p-4 [.light_&]:bg-slate-100/60 [.light_&]:border-slate-200">
+						<h3 class="text-sm font-semibold text-white">{item.question}</h3>
+						<p class="mt-2 text-xs leading-6 text-slate-400">{item.answer}</p>
+					</div>
+				))}
+			</div>
+		</article>
 
-		</div>
+		<article slot="aside" class="rounded-[1.8rem] border border-amber-400/15 bg-[linear-gradient(180deg,rgba(120,53,15,0.18),rgba(2,6,23,0.96))] p-6 shadow-[0_0_40px_rgba(245,158,11,0.08)] [.light_&]:bg-amber-50/40 [.light_&]:bg-none [.light_&]:border-amber-200/50">
+			<p class="font-mono text-xs uppercase tracking-[0.28em] text-amber-200/80 [.light_&]:text-amber-800!">AMT Warning Tooltip</p>
+			<h2 class="mt-3 text-lg font-semibold text-white font-sans border-0 pl-0">Alternative Minimum Tax (AMT)</h2>
+			<p class="mt-3 text-sm leading-7 text-slate-300">
+				Purchasing options or partnership units in a private company can trigger Alternative Minimum Tax (AMT) on the spread between the grant price and current value, even though the shares cannot be sold for cash. 
+				Consult a CPA to model your AMT exposure before purchasing large blocks of options.
+			</p>
+		</article>
+
+		{post && <RelatedArticleCard slot="aside" post={post} />}
 	</CalculatorShell>
 </BaseLayout>

@@ -4,6 +4,8 @@ import JsonLd from '../../components/JsonLd.astro';
 import RelocationCalculator from '../../components/calculators/react/RelocationCalculator';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+import { fetchPostBySlug } from '../../lib/wordpress';
+import RelatedArticleCard from '../../components/calculators/RelatedArticleCard.astro';
 
 const calculator = getCalculatorBySlug('relocation-cost');
 const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
@@ -25,6 +27,8 @@ const faqItems = [
 			'Certain states (like CA, NY, NJ) exclude physical transit and packing expenses from state income tax calculations, even if they are taxed federally. This modeler handles these state exclusions dynamically.'
 	}
 ];
+
+const post = await fetchPostBySlug('calculate-your-career-relocation-payback');
 ---
 
 <BaseLayout
@@ -43,39 +47,39 @@ const faqItems = [
 			<RelocationCalculator client:load />
 		</div>
 
-		<div slot="aside" class="grid gap-6">
-			<article class="overflow-hidden rounded-[1.8rem] border border-blue-500/20 bg-[linear-gradient(135deg,rgba(15,23,42,0.92),rgba(2,6,23,0.98)_70%,rgba(59,130,246,0.12))] p-6 shadow-[0_0_40px_rgba(59,130,246,0.08)]">
-				<p class="font-mono text-xs uppercase tracking-[0.28em] text-blue-200/80">Operator notes</p>
-				<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white">How to use this modeler</h2>
-				<ol class="mt-5 grid gap-4 text-sm leading-7 text-slate-300">
-					<li>1. Enter your origin and proposed destination salaries and tax jurisdictions.</li>
-					<li>2. Input your physical transit and origin/destination services in the Expense Ledger.</li>
-					<li>3. Detail your lease termination fees and security deposit offsets in the Lease Break tab.</li>
-					<li>4. Review your net-of-tax payback projection, gross-up models, and clawback agreements.</li>
-				</ol>
-			</article>
+		<article slot="aside" class="overflow-hidden rounded-[1.8rem] border border-blue-500/20 bg-[linear-gradient(135deg,rgba(15,23,42,0.92),rgba(2,6,23,0.98)_70%,rgba(59,130,246,0.12))] p-6 shadow-[0_0_40px_rgba(59,130,246,0.08)]">
+			<p class="font-mono text-xs uppercase tracking-[0.28em] text-blue-200/80">Operator notes</p>
+			<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white">How to use this modeler</h2>
+			<ol class="mt-5 grid gap-4 text-sm leading-7 text-slate-300">
+				<li>1. Enter your origin and proposed destination salaries and tax jurisdictions.</li>
+				<li>2. Input your physical transit and origin/destination services in the Expense Ledger.</li>
+				<li>3. Detail your lease termination fees and security deposit offsets in the Lease Break tab.</li>
+				<li>4. Review your net-of-tax payback projection, gross-up models, and clawback agreements.</li>
+			</ol>
+		</article>
 
-			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
-				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">Formulas</p>
-				<div class="mt-4 rounded-[1.3rem] border border-slate-800/90 bg-slate-950/60 p-5 font-mono text-xs leading-6 text-slate-200">
-					<p class="font-semibold text-cyan-300">Payback Period:</p>
-					<p>T_break = C_out_of_pocket / I_monthly_gain</p>
-					<p class="mt-3 font-semibold text-cyan-300">Net Lease Break Cost:</p>
-					<p>F_net = R_prorated + F_flat + D_lost - A_mitigation</p>
-				</div>
-			</article>
+		<article slot="aside" class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+			<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">Formulas</p>
+			<div class="mt-4 rounded-[1.3rem] border border-slate-800/90 bg-slate-950/60 p-5 font-mono text-xs leading-6 text-slate-200">
+				<p class="font-semibold text-cyan-300">Payback Period:</p>
+				<p>T_break = C_out_of_pocket / I_monthly_gain</p>
+				<p class="mt-3 font-semibold text-cyan-300">Net Lease Break Cost:</p>
+				<p>F_net = R_prorated + F_flat + D_lost - A_mitigation</p>
+			</div>
+		</article>
 
-			<article class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
-				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">FAQ</p>
-				<div class="mt-5 grid gap-4">
-					{faqItems.map((item) => (
-						<div class="rounded-[1.2rem] border border-slate-800/80 bg-slate-950/55 p-4">
-							<h2 class="text-sm font-semibold text-white">{item.question}</h2>
-							<p class="mt-2 text-xs leading-6 text-slate-400">{item.answer}</p>
-						</div>
-					))}
-				</div>
-			</article>
-		</div>
+		<article slot="aside" class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+			<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">FAQ</p>
+			<div class="mt-5 grid gap-4">
+				{faqItems.map((item) => (
+					<div class="rounded-[1.2rem] border border-slate-800/80 bg-slate-950/55 p-4">
+						<h2 class="text-sm font-semibold text-white">{item.question}</h2>
+						<p class="mt-2 text-xs leading-6 text-slate-400">{item.answer}</p>
+					</div>
+				))}
+			</div>
+		</article>
+
+		{post && <RelatedArticleCard slot="aside" post={post} />}
 	</CalculatorShell>
 </BaseLayout>
