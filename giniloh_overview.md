@@ -30,7 +30,7 @@ We built Gini Loh to be the resource we wished we had. A place where integrated 
 image representing data and analytics that bring clarity to make decisions
 The 
 Gini Loh Mission
-One practical roadmap for professionals who want bigger paychecks, smarter portfolios, and lives they don’t need an escape from.
+One Practical roadmaps and calculators for professional compensation modeling, asset TCO, and friction-free financial systems.
 
 Our mission is to give high-potential professionals the tactical tools to earn more, keep more, and (3) grow more—without living on rice & beans or turning into a 24/7 networking robot.
 
