@@ -19,7 +19,7 @@ export interface OverviewContent {
 
 const FALLBACK_OVERVIEW: OverviewContent = {
 	eyebrow: 'Integrated career and wealth systems',
-	headline: 'Master your money. Accelerate your career.',
+	headline: 'Engineer Your Money. Quantify Your Decisions.',
 	subheadline:
 		'Gini Loh connects compensation strategy, automation, and investing so ambitious professionals can earn more, keep more, and build a life with less friction.',
 	mission:
@@ -63,7 +63,7 @@ async function loadOverview() {
 	const rawContent = await readFile(overviewPath, 'utf8');
 	const cleanedContent = rawContent.replace(/\r/g, '');
 
-	const headlineMatch = cleanedContent.match(/Master Your Money\.\s*Accelerate Your Career/i);
+	const headlineMatch = cleanedContent.match(/Engineer Your Money\.\s*Quantify Your Decisions/i);
 	const originMatch = cleanedContent.match(
 		/The path to financial freedom[\s\S]*?We built Gini Loh to be the resource we wished we had\.[\s\S]*?fulfilling life\./i
 	);

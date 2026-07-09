@@ -13,7 +13,7 @@ ginilog
 Menu
 Reading Time: 2 minutes
 GiniLoh.com
-Master Your Money. Accelerate Your Career
+Engineer Your Money. Quantify Your Decisions
  
 
 From Confusion to Clarity
