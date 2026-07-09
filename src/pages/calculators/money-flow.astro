@@ -20,78 +20,78 @@ const post = await fetchPostBySlug('the-blueprint-behind-giniloh-money-flow');
 	{schema ? <JsonLd slot="head" data={schema} /> : null}
 
 	<section class="pt-32">
-		<!-- Header with 2 columns: Title/Desc on left, Philosophy Card on right -->
-		<div class="grid gap-8 lg:grid-cols-[1.25fr_0.75fr] items-start mb-12">
-			<div>
-				<p class="section-eyebrow">Automation Simulator</p>
-				<h1 class="mt-4 text-5xl font-bold tracking-tight text-white sm:text-6xl">
-					Automated Income Waterfall Simulator
-				</h1>
-				<p class="mt-6 text-lg leading-8 text-slate-400">
-					Map and configure automated money pipelines to route savings, retirement matching, tax-sheltered accounts, and taxable indexing without manual budgeting.
-				</p>
-			</div>
-			<div class="grid gap-6">
-				<article class="overflow-hidden rounded-[1.8rem] border border-violet-500/20 bg-[linear-gradient(135deg,rgba(46,16,101,0.92),rgba(2,6,23,0.98)_70%,rgba(139,92,246,0.12))] p-6 shadow-[0_0_40px_rgba(139,92,246,0.08)]">
-					<p class="font-mono text-xs uppercase tracking-[0.28em] text-violet-200/80">Loh-Friction Philosophy</p>
-					<h2 class="mt-3 text-xl font-semibold tracking-tight text-white">Never budget manually again</h2>
-					<p class="mt-3 text-sm leading-6 text-slate-300">
-						Budgeting apps focus on looking backward. Automation engines look forward by routing cash at the moment of deposit, eliminating friction and making investment compounding automatic.
-					</p>
-				</article>
-
-				<article class="overflow-hidden rounded-[1.8rem] border border-cyan-500/20 bg-[linear-gradient(135deg,rgba(8,47,73,0.92),rgba(2,6,23,0.98)_70%,rgba(34,211,238,0.12))] p-6 shadow-[0_0_40px_rgba(34,211,238,0.08)]">
-					<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/80">User Manual</p>
-					<h2 class="mt-3 text-xl font-semibold tracking-tight text-white">How to run the simulator</h2>
-					<ul class="mt-3 space-y-2.5 text-sm leading-6 text-slate-300">
-						<li class="flex items-start gap-2">
-							<span class="text-cyan-400 font-bold select-none">•</span>
-							<span><strong>Configure via Canvas:</strong> Click nodes (e.g., Primary Checking) to drag sliders adjusting balances, ceilings (T_over), or floors (T_under) in real time. Double-click to view tooltip stats.</span>
-						</li>
-						<li class="flex items-start gap-2">
-							<span class="text-cyan-400 font-bold select-none">•</span>
-							<span><strong>Establish Pipelines:</strong> Use the AI Chat with natural language and numerical values (e.g., "Sweep 500 from checking to savings") or type exact shorthand (e.g., <code>checking hysa</code>) in the CLI.</span>
-						</li>
-						<li class="flex items-start gap-2">
-							<span class="text-cyan-400 font-bold select-none">•</span>
-							<span><strong>Control System Flow:</strong> Set income, sim speed, and macro regimes (Baseline, Stagflation, Contraction) via the dashboard. Start the clock to watch your waterfall routing automate in real-time.</span>
-						</li>
-					</ul>
-				</article>
-
-				{post && (
-					<a 
-						href={`/${post.slug}/`} 
-						class="group block overflow-hidden rounded-[1.8rem] border border-slate-800 bg-slate-950 p-6 shadow-2xl transition hover:border-cyan-500/40 hover:shadow-[0_0_40px_rgba(56,189,248,0.15)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
-					>
-						<p class="font-mono text-xs uppercase tracking-[0.28em] text-slate-500 font-bold">Related Article</p>
-						{post.featuredImage && (
-							<div class="mt-4 overflow-hidden rounded-xl aspect-[1.8/1] bg-slate-900 border border-slate-850">
-								<img 
-									src={post.featuredImage} 
-									alt={post.featuredImageAlt || post.title}
-									class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
-									loading="lazy"
-								/>
-							</div>
-						)}
-						<h2 class="mt-4 text-xl font-semibold tracking-tight text-white group-hover:text-cyan-300 transition">
-							{post.title}
-						</h2>
-						<p class="mt-3 text-xs leading-5 text-slate-400">
-							{post.excerpt}
-						</p>
-						<span class="mt-4 inline-flex text-xs font-semibold text-cyan-300 group-hover:text-cyan-100">
-							Read Article ->
-						</span>
-					</a>
-				)}
-			</div>
+		<!-- Header -->
+		<div class="max-w-3xl mb-12">
+			<p class="section-eyebrow">Automation Simulator</p>
+			<h1 class="mt-4 text-5xl font-bold tracking-tight text-white sm:text-6xl">
+				Automated Income Waterfall Simulator
+			</h1>
+			<p class="mt-6 text-lg leading-8 text-slate-400">
+				Map and configure automated money pipelines to route savings, retirement matching, tax-sheltered accounts, and taxable indexing without manual budgeting.
+			</p>
 		</div>
 
 		<!-- Simulator spans the full screen width -->
 		<div class="panel-soft rounded-[2rem] border border-slate-800/90 bg-slate-900/50 p-6 shadow-[0_22px_70px_rgba(0,0,0,0.55)] backdrop-blur-2xl sm:p-8">
 			<MoneyFlowSimulator client:load />
+		</div>
+
+		<!-- Supporting Info & Related Guides -->
+		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mt-12">
+			<article class="overflow-hidden rounded-[1.8rem] border border-violet-500/20 bg-[linear-gradient(135deg,rgba(46,16,101,0.92),rgba(2,6,23,0.98)_70%,rgba(139,92,246,0.12))] p-6 shadow-[0_0_40px_rgba(139,92,246,0.08)]">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-violet-200/80">Loh-Friction Philosophy</p>
+				<h2 class="mt-3 text-xl font-semibold tracking-tight text-white">Never budget manually again</h2>
+				<p class="mt-3 text-sm leading-6 text-slate-300">
+					Budgeting apps focus on looking backward. Automation engines look forward by routing cash at the moment of deposit, eliminating friction and making investment compounding automatic.
+				</p>
+			</article>
+
+			<article class="overflow-hidden rounded-[1.8rem] border border-cyan-500/20 bg-[linear-gradient(135deg,rgba(8,47,73,0.92),rgba(2,6,23,0.98)_70%,rgba(34,211,238,0.12))] p-6 shadow-[0_0_40px_rgba(34,211,238,0.08)]">
+				<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/80">User Manual</p>
+				<h2 class="mt-3 text-xl font-semibold tracking-tight text-white">How to run the simulator</h2>
+				<ul class="mt-3 space-y-2.5 text-sm leading-6 text-slate-300">
+					<li class="flex items-start gap-2">
+						<span class="text-cyan-400 font-bold select-none">•</span>
+						<span><strong>Configure via Canvas:</strong> Click nodes (e.g., Primary Checking) to drag sliders adjusting balances, ceilings (T_over), or floors (T_under) in real time. Double-click to view tooltip stats.</span>
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="text-cyan-400 font-bold select-none">•</span>
+						<span><strong>Establish Pipelines:</strong> Use the AI Chat with natural language and numerical values (e.g., "Sweep 500 from checking to savings") or type exact shorthand (e.g., <code>checking hysa</code>) in the CLI.</span>
+					</li>
+					<li class="flex items-start gap-2">
+						<span class="text-cyan-400 font-bold select-none">•</span>
+						<span><strong>Control System Flow:</strong> Set income, sim speed, and macro regimes (Baseline, Stagflation, Contraction) via the dashboard. Start the clock to watch your waterfall routing automate in real-time.</span>
+					</li>
+				</ul>
+			</article>
+
+			{post && (
+				<a 
+					href={`/${post.slug}/`} 
+					class="group block overflow-hidden rounded-[1.8rem] border border-slate-800 bg-slate-950 p-6 shadow-2xl transition hover:border-cyan-500/40 hover:shadow-[0_0_40px_rgba(56,189,248,0.15)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-400"
+				>
+					<p class="font-mono text-xs uppercase tracking-[0.28em] text-slate-500 font-bold">Related Article</p>
+					{post.featuredImage && (
+						<div class="mt-4 overflow-hidden rounded-xl aspect-[1.8/1] bg-slate-900 border border-slate-850">
+							<img 
+								src={post.featuredImage} 
+								alt={post.featuredImageAlt || post.title}
+								class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+								loading="lazy"
+							/>
+						</div>
+					)}
+					<h2 class="mt-4 text-xl font-semibold tracking-tight text-white group-hover:text-cyan-300 transition">
+						{post.title}
+					</h2>
+					<p class="mt-3 text-xs leading-5 text-slate-400">
+						{post.excerpt}
+					</p>
+					<span class="mt-4 inline-flex text-xs font-semibold text-cyan-300 group-hover:text-cyan-100">
+						Read Article ->
+					</span>
+				</a>
+			)}
 		</div>
 	</section>
 </BaseLayout>
