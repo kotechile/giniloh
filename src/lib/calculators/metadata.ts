@@ -137,28 +137,57 @@ export type CalculatorTool = (typeof calculatorTools)[number];
 
 export function getCalculatorSchema(tool: CalculatorTool, site: URL) {
 	const url = new URL(tool.href, site).toString();
+	const homeUrl = new URL('/', site).toString();
+	const calculatorsUrl = new URL('/calculators/', site).toString();
 
 	return {
 		'@context': 'https://schema.org',
-		'@type': 'SoftwareApplication',
-		name: tool.title,
-		description: tool.description,
-		url,
-		applicationCategory: tool.category,
-		operatingSystem: 'Web',
-		isAccessibleForFree: true,
-		keywords: tool.keywords.join(', '),
-		offers: {
-			'@type': 'Offer',
-			price: '0',
-			priceCurrency: 'USD',
-			url
-		},
-		publisher: {
-			'@type': 'Organization',
-			name: 'Gini Loh',
-			url: new URL('/', site).toString()
-		}
+		'@graph': [
+			{
+				'@type': 'SoftwareApplication',
+				name: tool.title,
+				description: tool.description,
+				url,
+				applicationCategory: tool.category,
+				operatingSystem: 'Web',
+				isAccessibleForFree: true,
+				keywords: tool.keywords.join(', '),
+				offers: {
+					'@type': 'Offer',
+					price: '0',
+					priceCurrency: 'USD',
+					url
+				},
+				publisher: {
+					'@type': 'Organization',
+					name: 'Gini Loh',
+					url: homeUrl
+				}
+			},
+			{
+				'@type': 'BreadcrumbList',
+				itemListElement: [
+					{
+						'@type': 'ListItem',
+						position: 1,
+						name: 'Home',
+						item: homeUrl
+					},
+					{
+						'@type': 'ListItem',
+						position: 2,
+						name: 'Calculators',
+						item: calculatorsUrl
+					},
+					{
+						'@type': 'ListItem',
+						position: 3,
+						name: tool.title,
+						item: url
+					}
+				]
+			}
+		]
 	};
 }
 

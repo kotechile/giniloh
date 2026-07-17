@@ -17,6 +17,7 @@ interface WordPressPostResponse {
 	id: number;
 	link?: string;
 	date?: string;
+	modified?: string;
 	title?: WordPressRenderedField;
 	excerpt?: WordPressRenderedField;
 	content?: WordPressRenderedField;
@@ -44,6 +45,7 @@ export interface WordPressPost {
 	slug: string;
 	link: string;
 	date: string | null;
+	modified: string | null;
 	featuredImage: string | null;
 	featuredImageAlt: string;
 	categoryLabel: string | null;
@@ -147,6 +149,7 @@ function normalizePost(post: WordPressPostResponse): WordPressPost {
 		slug: post.slug || '',
 		link: post.link ?? '#',
 		date: post.date ?? null,
+		modified: post.modified ?? post.date ?? null,
 		featuredImage,
 		featuredImageAlt: featuredMedia?.alt_text || '',
 		categoryLabel: category?.name ?? null,

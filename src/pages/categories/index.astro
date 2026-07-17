@@ -1,8 +1,46 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import JsonLd from '../../components/JsonLd.astro';
 import { getTopLevelCategories } from '../../lib/categories';
 
 const categories = await getTopLevelCategories();
+
+const siteUrl = Astro.site?.toString() || 'https://giniloh.com/';
+const pageUrl = new URL('/categories/', siteUrl).toString();
+
+const collectionSchema = {
+	"@context": "https://schema.org",
+	"@type": "CollectionPage",
+	"name": "Categories | Gini Loh",
+	"description": "Browse editorial pillars for high-stakes decisions, career growth strategy, and automated portfolio systems.",
+	"url": pageUrl,
+	"numberOfItems": categories.length,
+	"itemListElement": categories.map((cat, idx) => ({
+		"@type": "ListItem",
+		"position": idx + 1,
+		"name": cat.name,
+		"url": new URL(`/categories/${cat.slug}/`, siteUrl).toString()
+	}))
+};
+
+const breadcrumbSchema = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement": [
+		{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Home",
+			"item": siteUrl
+		},
+		{
+			"@type": "ListItem",
+			"position": 2,
+			"name": "Categories",
+			"item": pageUrl
+		}
+	]
+};
 ---
 
 <BaseLayout
@@ -10,6 +48,8 @@ const categories = await getTopLevelCategories();
 	description="Browse editorial pillars for high-stakes decisions, career growth strategy, and automated portfolio systems."
 >
 	<link slot="head" rel="canonical" href={new URL('/categories/', Astro.site).toString()} />
+	<JsonLd slot="head" data={collectionSchema} />
+	<JsonLd slot="head" data={breadcrumbSchema} />
 
 	<div class="relative py-12">
 		<div class="absolute inset-x-0 top-0 -z-10 h-96 bg-[radial-gradient(circle_at_top,rgba(0,112,243,0.1),transparent_60%)]"></div>

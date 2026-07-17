@@ -1,15 +1,55 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import JsonLd from '../components/JsonLd.astro';
 import { getOverviewContent } from '../lib/overview';
 
 const overview = await getOverviewContent();
+
+const siteUrl = Astro.site?.toString() || 'https://giniloh.com/';
+const pageUrl = new URL('/about/', siteUrl).toString();
+
+const organizationSchema = {
+	"@context": "https://schema.org",
+	"@type": "Organization",
+	"name": "Gini Loh",
+	"url": siteUrl,
+	"logo": new URL('/favicon.png', siteUrl).toString(),
+	"description": "Gini Loh builds free interactive calculators and data-driven guides for salary negotiation, lease break analysis, investment automation, and smart buying decisions.",
+	"member": {
+		"@type": "Person",
+		"name": "Gini Loh",
+		"jobTitle": "Financial Systems Engineer",
+		"url": new URL('/author/gini-loh/', siteUrl).toString()
+	}
+};
+
+const breadcrumbSchema = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement": [
+		{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Home",
+			"item": siteUrl
+		},
+		{
+			"@type": "ListItem",
+			"position": 2,
+			"name": "About",
+			"item": pageUrl
+		}
+	]
+};
 ---
 
 <BaseLayout
 	title="About | Gini Loh"
-	description="Learn the mission, audience, and integrated strategy thesis behind Gini Loh."
+	description="Gini Loh builds free interactive calculators and data-driven guides for salary negotiation, lease break analysis, investment automation, and smart buying decisions. Stop guessing — quantify your next money move."
 >
-	<link slot="head" rel="canonical" href={new URL('/about/', Astro.site).toString()} />
+	<link slot="head" rel="canonical" href={pageUrl} />
+	<JsonLd slot="head" data={organizationSchema} />
+	<JsonLd slot="head" data={breadcrumbSchema} />
 	<section class="pt-32">
 		<p class="section-eyebrow">About Gini Loh</p>
 		<h1 class="mt-4 max-w-4xl text-5xl font-bold tracking-tight text-white sm:text-6xl">

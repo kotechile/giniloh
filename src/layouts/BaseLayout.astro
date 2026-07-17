@@ -7,12 +7,17 @@ import '../styles/global.css';
 interface Props {
 	title: string;
 	description?: string;
+	image?: string;
 }
 
-const { title, description = 'Headless editorial front end for Gini Loh powered by Astro and WordPress.' } = Astro.props;
+const { title, description = 'Headless editorial front end for Gini Loh powered by Astro and WordPress.', image } = Astro.props;
 
 const analyticsSrc = import.meta.env.PUBLIC_ANALYTICS_SRC;
 const analyticsWebsiteId = import.meta.env.PUBLIC_ANALYTICS_WEBSITE_ID;
+const googleVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
+const bingVerification = import.meta.env.PUBLIC_BING_SITE_VERIFICATION;
+const defaultImage = new URL('/default-share-image.png', Astro.site || 'https://giniloh.com').toString();
+const shareImage = image || defaultImage;
 ---
 
 <!doctype html>
@@ -32,10 +37,24 @@ const analyticsWebsiteId = import.meta.env.PUBLIC_ANALYTICS_WEBSITE_ID;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Search Console Verification -->
+		{googleVerification && <meta name="google-site-verification" content={googleVerification} />}
+		{bingVerification && <meta name="msvalidate.01" content={bingVerification} />}
+		
 		<meta name="description" content={description} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
+		<meta property="og:image" content={shareImage} />
+		
+		<!-- Twitter/X Card Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@giniloh" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={shareImage} />
+		
 		{import.meta.env.DEV && (
 			<>
 				<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />

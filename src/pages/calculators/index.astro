@@ -64,6 +64,45 @@ const fetchedPosts = await Promise.all(
 const postBySlugMap = Object.fromEntries(
 	fetchedPosts.filter((item): item is [string, any] => item !== null)
 );
+
+import JsonLd from '../../components/JsonLd.astro';
+
+const siteUrl = Astro.site?.toString() || 'https://giniloh.com/';
+const pageUrl = new URL('/calculators/', siteUrl).toString();
+
+const itemListSchema = {
+	"@context": "https://schema.org",
+	"@type": "ItemList",
+	"name": "Gini Loh Calculators",
+	"description": "Centralized library of practical decision-intelligence tools for ambitious professionals.",
+	"url": pageUrl,
+	"numberOfItems": calculatorTools.length,
+	"itemListElement": calculatorTools.map((tool, idx) => ({
+		"@type": "ListItem",
+		"position": idx + 1,
+		"name": tool.title,
+		"url": new URL(tool.href, siteUrl).toString()
+	}))
+};
+
+const breadcrumbSchema = {
+	"@context": "https://schema.org",
+	"@type": "BreadcrumbList",
+	"itemListElement": [
+		{
+			"@type": "ListItem",
+			"position": 1,
+			"name": "Home",
+			"item": siteUrl
+		},
+		{
+			"@type": "ListItem",
+			"position": 2,
+			"name": "Calculators",
+			"item": pageUrl
+		}
+	]
+};
 ---
 
 <BaseLayout
@@ -71,6 +110,8 @@ const postBySlugMap = Object.fromEntries(
 	description="Free public interactive decision-intelligence calculators. Run the numbers on career relocation, raises, job-hopping compensation, equity value, and automated investments."
 >
 	<link slot="head" rel="canonical" href={new URL('/calculators/', Astro.site).toString()} />
+	<JsonLd slot="head" data={itemListSchema} />
+	<JsonLd slot="head" data={breadcrumbSchema} />
 
 	<section class="pt-32">
 		<p class="section-eyebrow">Interactive Decision Engines</p>

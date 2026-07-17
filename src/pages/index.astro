@@ -3,6 +3,7 @@ import CategoryBento from '../components/CategoryBento.astro';
 import HeroGlass from '../components/HeroGlass.astro';
 import LatestPostsGrid from '../components/LatestPostsGrid.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import JsonLd from '../components/JsonLd.astro';
 import { getTopLevelCategories } from '../lib/categories';
 import { calculatorTools } from '../lib/calculators/metadata';
 import { getOverviewContent } from '../lib/overview';
@@ -17,6 +18,19 @@ const categoryPosts = Object.fromEntries(
 		])
 	)
 );
+
+const websiteSchema = {
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	"name": "Gini Loh",
+	"alternateName": "GiniLoh",
+	"url": Astro.site?.toString() || "https://giniloh.com/",
+	"potentialAction": {
+		"@type": "SearchAction",
+		"target": `${Astro.site?.toString() || "https://giniloh.com/"}?s={search_term_string}`,
+		"query-input": "required name=search_term_string"
+	}
+};
 ---
 
 <BaseLayout
@@ -24,6 +38,7 @@ const categoryPosts = Object.fromEntries(
 	description="Practical roadmaps and calculators for professional compensation modeling, asset TCO, and friction-free financial systems."
 >
 	<link slot="head" rel="canonical" href={new URL('/', Astro.site).toString()} />
+	<JsonLd slot="head" data={websiteSchema} />
 	<HeroGlass overview={overview} topCategories={topCategories} />
 
 	<section class="mt-20" aria-labelledby="homepage-calculators">
