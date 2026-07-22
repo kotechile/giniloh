@@ -18,32 +18,32 @@ export interface OverviewContent {
 }
 
 const FALLBACK_OVERVIEW: OverviewContent = {
-	eyebrow: 'Integrated career and wealth systems',
-	headline: 'Engineer Your Money. Quantify Your Decisions.',
+	eyebrow: 'Decision Intelligence for Tech Workers',
+	headline: 'Decision Engine for Expensive Choices',
 	subheadline:
-		'Gini Loh connects compensation strategy, automation, and investing so ambitious professionals can earn more, keep more, and build a life with less friction.',
+		'Total Cost of Ownership (TCO) calculators for smart buying decisions. Quantify your hardware, compensation, and lifestyle trade-offs with mathematical clarity.',
 	mission:
-		'Create one practical roadmap for professionals who want bigger paychecks, smarter portfolios, and a more intentional life.',
+		'Our mission is to give tech workers the tools to model, quantify, and decide on high-stakes choices—from GPU workstation builds to equity packages and rental lease exits.',
 	originStory:
-		'The front end is ready for a richer brand narrative once giniloh_overview.md is available. For now, this copy keeps the positioning aligned with the project mission from AGENTS.md.',
+		'Evaluating high-stakes professional and purchasing trade-offs shouldn\'t be about guessing. Gini Loh builds interactive, data-driven calculators to quantify the real total cost of ownership (TCO) of tech hardware, compensation offers, lease breaks, and operational investments.',
 	audience: [
 		{
-			title: 'Ambitious professionals',
-			description: 'Readers growing their income and looking for a better capital allocation strategy.'
+			title: 'The Tech Worker',
+			description: 'Evaluating RSU compensation packages, cloud GPU rentals vs. workstation buys, or remote relocations.'
 		},
 		{
-			title: 'System builders',
-			description: 'People who want to use automation, AI, and process design to buy back time.'
+			title: 'The Smart Purchaser',
+			description: 'Amortizing home espresso machines or breaking rental leases by calculating the exact exit cost.'
 		},
 		{
-			title: 'Strategic decision-makers',
-			description: 'Readers evaluating trade-offs across work, money, property, and long-term optionality.'
+			title: 'The Decision Engineer',
+			description: 'Quantifying workflow tinkering taxes, tech repair-vs-replace metrics, and software build-vs-buy TCO.'
 		}
 	],
 	aboutSections: [
 		{
 			title: 'What Gini Loh Covers',
-			body: 'Career growth, investing, operating systems, and decision-making frameworks built for modern professionals.'
+			body: 'Hardware & Compute Decisions, Compensation Modeling, Software TCO, and lifestyle cost-per-use arbitrage.'
 		}
 	]
 };
@@ -63,34 +63,34 @@ async function loadOverview() {
 	const rawContent = await readFile(overviewPath, 'utf8');
 	const cleanedContent = rawContent.replace(/\r/g, '');
 
-	const headlineMatch = cleanedContent.match(/Engineer Your Money\.\s*Quantify Your Decisions/i);
+	const headlineMatch = cleanedContent.match(/Decision Engine for Expensive Choices/i);
 	const originMatch = cleanedContent.match(
-		/The path to financial freedom[\s\S]*?We built Gini Loh to be the resource we wished we had\.[\s\S]*?fulfilling life\./i
+		/Evaluating high-stakes professional[\s\S]*?zero hand-waving\./i
 	);
 	const missionMatch = cleanedContent.match(
-		/Our mission is to give high-potential professionals[\s\S]*?24\/7 networking robot\./i
+		/Our mission is to give tech workers[\s\S]*?rental lease exits\./i
 	);
 
 	const audience: AudienceSegment[] = [
 		{
-			title: 'The go-getter',
-			description: 'Ready to negotiate the next offer for maximum compensation and long-term leverage.'
+			title: 'The Tech Worker',
+			description: 'Evaluating RSU compensation packages, cloud GPU rentals vs. workstation buys, or remote relocations.'
 		},
 		{
-			title: 'System builder',
-			description: 'Looking to automate saving, investing, retirement contributions, and day-to-day execution.'
+			title: 'The Smart Purchaser',
+			description: 'Amortizing home espresso machines or breaking rental leases by calculating the exact exit cost.'
 		},
 		{
-			title: 'Aspiring leader',
-			description: 'Building a career through intentional skill-stacking, promotion strategy, and better decisions.'
+			title: 'The Decision Engineer',
+			description: 'Quantifying workflow tinkering taxes, tech repair-vs-replace metrics, and software build-vs-buy TCO.'
 		}
 	];
 
 	return {
-		eyebrow: 'Data-driven decisions for ambitious professionals',
+		eyebrow: 'Decision Intelligence for Tech Workers',
 		headline: headlineMatch?.[0] ?? FALLBACK_OVERVIEW.headline,
 		subheadline:
-			'Integrated career strategy and financial operating systems for people who want more income, smarter portfolios, and a life with less chaos.',
+			'Total Cost of Ownership (TCO) calculators for smart buying decisions. Quantify your hardware, compensation, and lifestyle trade-offs.',
 		mission: cleanTextBlock(missionMatch?.[0] ?? FALLBACK_OVERVIEW.mission),
 		originStory: cleanTextBlock(originMatch?.[0] ?? FALLBACK_OVERVIEW.originStory),
 		audience,
@@ -99,14 +99,14 @@ async function loadOverview() {
 				title: 'Why the Site Exists',
 				body: cleanTextBlock(
 					originMatch?.[0] ??
-						'Gini Loh closes the gap between career advice and financial strategy so readers can connect higher income with better capital deployment.'
+						'Gini Loh closes the gap between complex purchases and career choices, replacing gut feelings with rigorous TCO engines.'
 				)
 			},
 			{
 				title: 'The Working Thesis',
 				body: cleanTextBlock(
 					missionMatch?.[0] ??
-						'The site is built to help readers earn more, keep more, and grow more by using integrated systems instead of disconnected advice.'
+						'Ambitious professionals benefit from interactive, widgetized modeling of their most expensive professional and personal choices.'
 				)
 			}
 		]

@@ -6,10 +6,10 @@ export const calculatorTools = [
 		status: 'Live',
 		accent: 'emerald',
 		description:
-			'Evaluate your early lease termination exposure. Calculate contract penalty structures, repair/cleanout fees, and security deposit offsets.',
+			'Evaluate your early lease termination exposure. Calculate contract penalty structures, exit fees, and security deposit offsets.',
 		utility: 'Calculate renter exit costs',
 		category: 'FinanceApplication',
-		keywords: ['lease break penalty estimator', 'early lease termination penalty', 'lease break offset calculator']
+		keywords: ['lease break penalty calculator', 'early lease termination penalty', 'lease break penalty estimator']
 	},
 	{
 		title: 'Job-Hop vs. Retention Compensation Calculator',
@@ -21,7 +21,7 @@ export const calculatorTools = [
 			'Compare traditional 3% annual raises vs. strategic job-hops yielding 15-20% bumps, projecting 10-year cumulative earnings.',
 		utility: 'Evaluate career compensation options',
 		category: 'FinanceApplication',
-		keywords: ['job-hop calculator', 'salary projection', 'raise calculator']
+		keywords: ['should I job hop calculator', 'job-hop calculator', 'job hop vs retention calculator', 'salary projection']
 	},
 	{
 		title: 'Total Compensation & Equity Visualizer',
@@ -33,7 +33,7 @@ export const calculatorTools = [
 			'Model base salary, cash bonuses, and vesting RSUs or options with stock growth assumptions to evaluate tech offers.',
 		utility: 'Evaluate RSUs and stock options values',
 		category: 'FinanceApplication',
-		keywords: ['total compensation calculator', 'rsu calculator', 'equity visualizer']
+		keywords: ['equity compensation calculator', 'total compensation calculator', 'total compensation visualizer', 'rsu calculator', 'equity visualizer']
 	},
 	{
 		title: 'Automated Income Waterfall Simulator',
@@ -45,7 +45,7 @@ export const calculatorTools = [
 			'Visualize automated account routing: from checking, through retirement matches, HSAs, and index fund allocation.',
 		utility: 'Simulate automated investing systems',
 		category: 'FinanceApplication',
-		keywords: ['money flow flowchart', 'automated investing', 'portfolio flow']
+		keywords: ['total compensation visualizer', 'money flow flowchart', 'automated investing', 'portfolio flow']
 	},
 	{
 		title: 'Career Relocation Cost & Payback Calculator',
@@ -57,7 +57,7 @@ export const calculatorTools = [
 			'Find out how many months of a new salary bump it takes to break even on moving costs, lease breaks, and new deposits.',
 		utility: 'Calculate relocation payback period',
 		category: 'FinanceApplication',
-		keywords: ['relocation calculator', 'moving cost payback', 'lease break move']
+		keywords: ['relocation cost benefit calculator', 'relocation payback calculator', 'moving cost payback', 'relocation calculator']
 	},
 	{
 		title: 'Master Asset & Software TCO Calculator',
@@ -69,7 +69,7 @@ export const calculatorTools = [
 			'Evaluate complex business and lifestyle trade-offs—from enterprise software build-vs-buy TCO to personal asset repairs, espresso machine cost-per-use, and time tinkering taxes.',
 		utility: 'Analyze build vs. buy & personal asset TCO',
 		category: 'FinanceApplication',
-		keywords: ['decision intelligence', 'build vs buy calculator', 'espresso machine cpu', 'repair vs replace hvac', 'tinkering tax']
+		keywords: ['decision intelligence', 'build vs buy calculator', 'tinkering tax calculator', 'repair vs replace calculator', 'espresso cost per use calculator']
 	},
 	{
 		title: 'Home Espresso Cost-per-Use Calculator',
@@ -81,7 +81,7 @@ export const calculatorTools = [
 			'Determine if investing in a premium home espresso setup beats your daily café runs. Real-time cost-per-use calculator.',
 		utility: 'Evaluate espresso machine cost-per-use',
 		category: 'FinanceApplication',
-		keywords: ['home espresso cost-per-use', 'espresso machine cpu', 'coffee cost calculator']
+		keywords: ['espresso cost per use calculator', 'home espresso cost-per-use', 'home espresso vs cafe cost', 'espresso machine cpu']
 	},
 	{
 		title: 'Tech Repair vs. Replace Optimizer',
@@ -93,7 +93,7 @@ export const calculatorTools = [
 			'Calculate if repairing a 3-to-5-year-old laptop or phone is a smart fix or a financial liability. Uses the adapted consumer 1,500 index rule.',
 		utility: 'Calculate repair vs replace index score',
 		category: 'FinanceApplication',
-		keywords: ['repair vs replace calculator', 'tech repair vs replace', 'laptop screen repair cost']
+		keywords: ['technical debt calculator', 'repair vs replace calculator', 'tech repair vs replace', 'laptop screen repair cost']
 	},
 	{
 		title: 'Tinkering Tax vs. SaaS Upgrade Calculator',
@@ -102,10 +102,10 @@ export const calculatorTools = [
 		status: 'Live',
 		accent: 'cyan',
 		description:
-			'Calculate the hidden tinkering tax of manual workarounds and sheets vs. upgrading to a centralized HubSpot CRM.',
+			'Calculate the hidden tinkering tax of manual workarounds and sheets vs. upgrading to a centralized SaaS platform.',
 		utility: 'Calculate time tax vs premium software cost',
 		category: 'FinanceApplication',
-		keywords: ['tinkering tax calculator', 'no-code workaround', 'hubspot crm price']
+		keywords: ['no-code total cost calculator', 'tinkering tax calculator', 'SaaS burn rate vs build', 'no-code workaround']
 	},
 	{
 		title: 'GPU TCO Analyzer',
@@ -117,7 +117,7 @@ export const calculatorTools = [
 			'Compare the TCO of building a local deep learning GPU workstation against renting cloud GPU compute instances.',
 		utility: 'Evaluate local GPU vs cloud GPU TCO',
 		category: 'FinanceApplication',
-		keywords: ['gpu compute calculator', 'local rig vs cloud gpu', 'rtx 4090 power cost']
+		keywords: ['gpu tco calculator', 'gpu cost per hour vs cloud', 'rtx 6000 rental vs buy', 'should I buy vs rent gpu', 'gpu compute calculator']
 	},
 	{
 		title: 'AI Career Radar',

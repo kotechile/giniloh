@@ -13,6 +13,14 @@ const { eyebrow, title, description } = Astro.props;
 		<p class="section-eyebrow">{eyebrow}</p>
 		<h1 class="mt-4 text-5xl font-bold tracking-tight text-white sm:text-6xl">{title}</h1>
 		<p class="mt-6 text-lg leading-8 text-slate-400">{description}</p>
+		<div class="mt-6 flex flex-wrap items-center gap-3 text-xs font-mono tracking-wider text-slate-400 uppercase">
+			<div class="flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/60 px-3 py-1 text-slate-300 shadow-sm backdrop-blur-sm">
+				<span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
+				<span class="text-slate-300 font-bold">E-E-A-T Verified</span>
+			</div>
+			<span>•</span>
+			<span>Developed &amp; audited by <a href="/author/gini-loh/" class="text-cyan-400 hover:text-cyan-300 transition hover:underline font-bold">Gini Loh</a></span>
+		</div>
 	</div>
 
 	<div class="mt-12 flex flex-col gap-12">
