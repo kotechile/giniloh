@@ -76,6 +76,7 @@ const apiBase = getConfiguredWordPressApiBase();
 
 	type SearchPostResponse = {
 		link?: string;
+		slug?: string;
 		date?: string;
 		title?: { rendered?: string };
 		excerpt?: { rendered?: string };
@@ -228,10 +229,12 @@ const apiBase = getConfiguredWordPressApiBase();
 
 			const posts = data.map((post) => {
 				const category = (post?._embedded?.['wp:term'] ?? []).flat().find((term) => term?.name);
+				const slug = post?.slug ?? '';
+				const localLink = slug ? `/${slug}/` : '#';
 				return {
 					title: cleanText(post?.title?.rendered ?? 'Untitled post'),
 					excerpt: cleanText(post?.excerpt?.rendered ?? ''),
-					link: post?.link ?? '#',
+					link: localLink,
 					date: post?.date ?? null,
 					categoryLabel: category?.name ?? null
 				};
