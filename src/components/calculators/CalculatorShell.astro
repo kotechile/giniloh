@@ -6,6 +6,11 @@ interface Props {
 }
 
 const { eyebrow, title, description } = Astro.props;
+
+const pathname = Astro.url.pathname;
+const slug = pathname.split('/').filter(Boolean).pop() || '';
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://giniloh.com';
+const embedCode = `<div class="giniloh-calculator-embed" data-calculator="${slug}"></div>\n<script src="${siteUrl}/embed.js" async></script>`;
 ---
 
 <section class="pt-32">
@@ -26,9 +31,63 @@ const { eyebrow, title, description } = Astro.props;
 	<div class="mt-12 flex flex-col gap-12">
 		<div class="panel-soft rounded-[2rem] border border-slate-800/90 bg-slate-900/50 p-6 shadow-[0_22px_70px_rgba(0,0,0,0.55)] backdrop-blur-2xl sm:p-8">
 			<slot name="calculator" />
+
+			<!-- Embed Block -->
+			{slug && (
+				<div class="mt-8 border-t border-slate-800/80 pt-6">
+					<details class="group">
+						<summary class="flex cursor-pointer items-center justify-between font-mono text-xs uppercase tracking-[0.24em] text-slate-400 hover:text-cyan-300 transition select-none">
+							<span class="flex items-center gap-2">
+								<svg class="h-4 w-4 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+								</svg>
+								Embed this calculator on your site
+							</span>
+							<span class="text-slate-500 group-open:rotate-180 transition-transform duration-200">↓</span>
+						</summary>
+						<div class="mt-4 rounded-xl border border-slate-800 bg-slate-950/60 p-4 font-mono text-xs">
+							<p class="text-slate-400 mb-3 leading-relaxed font-sans">
+								<strong>Bloggers & authors:</strong> Embed this interactive calculator directly in your articles or comparison guides. It loads dynamically via a responsive iframe (auto-resizing to prevent double scrollbars) and provides a direct, high-value tool for your audience.
+							</p>
+							<div class="relative flex items-center justify-between gap-4 rounded-lg bg-slate-900 p-3 border border-slate-800">
+								<code class="text-cyan-300 break-all select-all block pr-20">{embedCode}</code>
+								<button
+									type="button"
+									data-copy-embed
+									data-code={embedCode}
+									class="absolute right-2 top-1/2 -translate-y-1/2 rounded-md bg-slate-800 hover:bg-slate-700 px-3 py-1.5 text-[0.7rem] font-bold text-white transition active:scale-95 border border-slate-700 select-none cursor-pointer"
+								>
+									Copy
+								</button>
+							</div>
+						</div>
+					</details>
+				</div>
+			)}
 		</div>
 		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 			<slot name="aside" />
 		</div>
 	</div>
 </section>
+
+<script>
+	const copyButtons = document.querySelectorAll('[data-copy-embed]');
+	copyButtons.forEach((btn) => {
+		btn.addEventListener('click', async () => {
+			const code = btn.getAttribute('data-code') || '';
+			try {
+				await navigator.clipboard.writeText(code);
+				const originalText = btn.textContent;
+				btn.textContent = 'Copied!';
+				btn.classList.add('text-emerald-400', 'border-emerald-500/30', 'bg-emerald-950/20');
+				setTimeout(() => {
+					btn.textContent = originalText;
+					btn.classList.remove('text-emerald-400', 'border-emerald-500/30', 'bg-emerald-950/20');
+				}, 2000);
+			} catch (err) {
+				console.error('Failed to copy text: ', err);
+			}
+		});
+	});
+</script>

@@ -1,0 +1,215 @@
+---
+import '../../../styles/global.css';
+import { calculatorTools, getCalculatorBySlug } from '../../../lib/calculators/metadata';
+
+// React Calculator Components
+import LeaseBreakCalculator from '../../../components/calculators/react/LeaseBreakCalculator';
+import RaiseVelocityCalculator from '../../../components/calculators/react/RaiseVelocityCalculator';
+import TotalCompCalculator from '../../../components/calculators/react/TotalCompCalculator';
+import MoneyFlowSimulator from '../../../components/calculators/react/MoneyFlowSimulator';
+import RelocationCalculator from '../../../components/calculators/react/RelocationCalculator';
+import DecisionIntelligenceCalculator from '../../../components/calculators/react/DecisionIntelligenceCalculator';
+import LocalVsCloudGpuCalculator from '../../../components/calculators/react/LocalVsCloudGpuCalculator';
+import CareerAiResilienceCalculator from '../../../components/calculators/react/CareerAiResilienceCalculator';
+
+// Template components
+import AmortizerTemplate from '../../../components/calculators/react/AmortizerTemplate';
+import RxRTemplate from '../../../components/calculators/react/RxRTemplate';
+import TimeDrainTemplate from '../../../components/calculators/react/TimeDrainTemplate';
+
+export async function getStaticPaths() {
+	return calculatorTools.map((tool) => ({
+		params: { slug: tool.slug }
+	}));
+}
+
+const { slug } = Astro.params;
+const tool = getCalculatorBySlug(slug);
+
+// Configurations for templates
+const coffeeConfig = {
+	title: 'Home Espresso Cost-per-Use Calculator',
+	description: 'Compare the TCO of a premium espresso setup against daily café runs or capsule systems.',
+	eyebrow: 'Asset Cost-per-Use',
+	stickerLabel: 'Sticker Price (Upfront Cost)',
+	stickerHelp: 'The initial cost of your espresso machine, grinder, and initial accessories.',
+	stickerDefault: 3000,
+	frequencyLabel: 'Weekly Usage Frequency',
+	frequencyHelp: 'How many espresso drinks you expect to make at home each week.',
+	frequencyUnit: 'drinks / wk',
+	frequencyDefault: 5,
+	frequencyStep: 1,
+	frequencyMin: 1,
+	frequencyMax: 42,
+	outsourceLabel: 'Outsourced Cost (Café Price)',
+	outsourceHelp: 'The average price you pay per drink at your local coffee shop.',
+	outsourceDefault: 6.00,
+	secondaryLabel: 'Upkeep / Internal Cost (Per Use)',
+	secondaryHelp: 'Cost of coffee beans, milk, water filters, and descaling chemicals per drink.',
+	secondaryDefault: 1.50,
+	lifespanLabel: 'Target Lifespan Horizon',
+	lifespanHelp: 'How many years you expect to own and use this setup.',
+	lifespanDefault: 3,
+	localProducts: [
+		{ id: 'bambino', name: 'Breville Bambino Setup', cost: 650, secondaryCost: 0.75, info: 'Entry-level, 15 bar pressure' },
+		{ id: 'gaggia', name: 'Gaggia Classic Pro Setup', cost: 1100, secondaryCost: 0.90, info: 'Prosumer 58mm setup' },
+		{ id: 'lamarzocco', name: 'La Marzocco Linea Micra Setup', cost: 4900, secondaryCost: 1.20, info: 'Commercial-grade home setup' }
+	],
+	outsourceProducts: [
+		{ id: 'specialty', name: 'Specialty Café Latte', rate: 6.00, setupFee: 0, info: 'Artisanal single-origin espresso', affiliateUrl: 'https://www.google.com/maps/search/specialty+coffee+shops/', ctaText: 'Find Specialty Cafés Near You →' },
+		{ id: 'starbucks', name: 'Starbucks Latte', rate: 4.75, setupFee: 0, info: 'Standard chain latte menu', affiliateUrl: 'https://starbucks.com', ctaText: 'Starbucks Store Locator →' },
+		{ id: 'nespresso', name: 'Nespresso Capsule System', rate: 1.20, setupFee: 150, info: 'Nespresso Pixie machine + capsule cost', affiliateUrl: 'https://nespresso.com', ctaText: 'Shop Nespresso Pods & Machines →' }
+	],
+	buyVerdictTitle: 'Invest in the Setup',
+	buyVerdictSubtitle: 'Ownership is financially superior. Your home drink cost is lower than the local café rate, successfully amortizing the CapEx.',
+	skipVerdictTitle: 'Keep Visiting the Café',
+	skipVerdictSubtitle: 'Café runs are financially superior. Your weekly coffee density is not high enough to amortize the setup and maintenance costs.',
+	aspirationalThreshold: 14,
+	aspirationalWarning: 'Optimistic frequency alert: Preparing 14+ drinks/week at home requires significant cleaning, maintenance, and dial-in labor. Ensure this aligns with your routine.',
+	tutorials: []
+};
+
+const techDebtConfig = {
+	title: 'Tech Repair vs. Replace Optimizer',
+	description: 'Determine if repairing a 3-to-5-year-old laptop or phone makes financial sense vs. buying a replacement.',
+	eyebrow: 'Repair vs. Replace',
+	ageLabel: 'Device Age',
+	ageHelp: 'How many years old the phone or laptop is.',
+	ageDefault: 4,
+	ageUnit: 'Yrs Old',
+	ageMin: 1,
+	ageMax: 10,
+	repairLabel: 'Immediate Repair Quote',
+	repairHelp: 'The technician/manufacturer repair estimate for screen, battery, or keyboard fixes.',
+	repairDefault: 450,
+	repairMin: 50,
+	repairStep: 25,
+	threshold: 1500,
+	repairVerdictTitle: 'Repair the Device',
+	repairVerdictSubtitle: 'Your device index is in the safe zone. Patching this unit is mathematically efficient compared to paying for a full modern replacement.',
+	replaceVerdictTitle: 'Replace the Device',
+	replaceVerdictSubtitle: 'Your device index exceeds the 1,500 threshold. Depreciating tech stack assets become financial money pits; upgrade to a modern baseline instead.'
+};
+
+const noCodeConfig = {
+	title: 'Tinkering Tax vs. SaaS Upgrade Calculator',
+	description: 'Determine if managing business pipelines with a fragile web of Notion and Zapier beats upgrading to HubSpot.',
+	eyebrow: 'Tinkering Tax Audit',
+	hoursLabel: 'Monthly Troubleshooting Time',
+	hoursHelp: 'Hours spent fixing broken integrations, syncing contacts, and resolving data discrepancies.',
+	hoursDefault: 8,
+	hoursUnit: 'hrs / mo',
+	hoursMin: 1,
+	hoursMax: 80,
+	hoursStep: 1,
+	timeValueLabel: 'Loaded Opportunity Rate',
+	timeValueHelp: 'The average hourly labor value of the person troubleshooting these sheets and API disconnects.',
+	timeValueDefault: 75,
+	premiumLabel: 'Unified Platform Premium Cost',
+	premiumHelp: 'The incremental monthly fee of upgrading to a centralized CRM platform (like HubSpot).',
+	premiumDefault: 450,
+	buyVerdictTitle: 'Upgrade to Centralized Platform',
+	buyVerdictSubtitle: 'Adopting a unified CRM is mathematically superior. Your monthly time-drag cost exceeds the platform subscription premium, eliminating the tinkering tax.',
+	waitVerdictTitle: 'Keep the Fragile Setup',
+	waitVerdictSubtitle: 'Continue using the current workaround. Your monthly time-drain cost is lower than the premium subscription price. Keep monitoring scaling friction.'
+};
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{tool?.title ? `${tool.title} | Embeddable Widget` : 'Embeddable Calculator'}</title>
+		<meta name="robots" content="noindex" />
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+				background: transparent !important;
+				min-height: auto;
+			}
+			/* Custom container wrapper for inside an iframe */
+			.embed-wrapper {
+				padding: 4px;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body data-slug={slug} class="bg-transparent text-slate-200 antialiased">
+		<div id="embed-container" class="embed-wrapper">
+			<div class="panel-soft rounded-[2rem] border border-slate-800/90 bg-slate-900/90 p-5 shadow-2xl backdrop-blur-3xl sm:p-7">
+				<div class="mb-5 flex flex-wrap items-center justify-between gap-3 border-b border-slate-800 pb-4">
+					<div>
+						<p class="font-mono text-[0.65rem] uppercase tracking-[0.24em] text-cyan-400">
+							{tool?.utility || 'Interactive Calculator'}
+						</p>
+						<h1 class="mt-1 text-lg font-bold tracking-tight text-white">
+							{tool?.title}
+						</h1>
+					</div>
+					<div class="rounded-full border border-slate-800 bg-slate-950/60 px-3 py-1 font-mono text-[0.62rem] uppercase tracking-[0.22em] text-slate-400">
+						Gini Loh Tool
+					</div>
+				</div>
+
+				{slug === 'lease-break' && <LeaseBreakCalculator client:load />}
+				{slug === 'raise-velocity' && <RaiseVelocityCalculator client:load />}
+				{slug === 'total-comp' && <TotalCompCalculator client:load />}
+				{slug === 'money-flow' && <MoneyFlowSimulator client:load />}
+				{slug === 'relocation-cost' && <RelocationCalculator client:load />}
+				{slug === 'decision-intelligence' && <DecisionIntelligenceCalculator client:load />}
+				{slug === 'gpu-compute' && <LocalVsCloudGpuCalculator client:load />}
+				{slug === 'career-ai-resilience' && <CareerAiResilienceCalculator client:load />}
+				{slug === 'coffee-arbitrage' && <AmortizerTemplate client:load config={coffeeConfig} />}
+				{slug === 'tech-debt-repair' && <RxRTemplate client:load config={techDebtConfig} />}
+				{slug === 'no-code-terminator' && <TimeDrainTemplate client:load config={noCodeConfig} />}
+
+				<div class="mt-5 border-t border-slate-800/60 pt-3 flex items-center justify-between text-[0.68rem] font-mono text-slate-500">
+					<span>© {new Date().getFullYear()} Gini Loh. All rights reserved.</span>
+					<a
+						href={tool?.href ? `${Astro.site || 'https://giniloh.com'}${tool.href}` : 'https://giniloh.com'}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="text-cyan-400 hover:text-cyan-300 font-bold transition flex items-center gap-1"
+					>
+						Powered by Gini Loh
+						<svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<script is:inline>
+			(function() {
+				const urlParams = new URLSearchParams(window.location.search);
+				const embedId = urlParams.get('embedId');
+
+				function sendHeight() {
+					const container = document.getElementById('embed-container');
+					if (container) {
+						const height = container.scrollHeight || container.offsetHeight;
+						window.parent.postMessage({
+							type: 'giniloh-resize',
+							embedId: embedId,
+							slug: document.body.dataset.slug,
+							height: height
+						}, '*');
+					}
+				}
+
+				window.addEventListener('load', sendHeight);
+				window.addEventListener('resize', sendHeight);
+
+				if (window.ResizeObserver) {
+					const observer = new ResizeObserver(sendHeight);
+					observer.observe(document.body);
+				}
+
+				setInterval(sendHeight, 500);
+			})();
+		</script>
+	</body>
+</html>
