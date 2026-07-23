@@ -1,0 +1,197 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import CalculatorShell from '../../../components/calculators/CalculatorShell.astro';
+import RelatedArticleCard from '../../../components/calculators/RelatedArticleCard.astro';
+import CommunityPoll from '../../../components/calculators/react/CommunityPoll';
+import { fetchPostBySlug } from '../../../lib/wordpress';
+
+export async function getStaticPaths() {
+	const indexFilePath = path.resolve('./public/data/careers/index.json');
+	const indexData = JSON.parse(fs.readFileSync(indexFilePath, 'utf-8'));
+	
+	function slugify(text: string) {
+		return text
+			.toLowerCase()
+			.replace(/[^\w\s-]/g, '')
+			.replace(/[\s_-]+/g, '-')
+			.replace(/^-+|-+$/g, '');
+	}
+
+	const slugsSeen = new Set();
+	
+	return indexData.map((item: any) => {
+		let slug = slugify(item.title);
+		if (slugsSeen.has(slug)) {
+			slug = `${slug}-${item.code.replace('.', '-')}`;
+		}
+		slugsSeen.add(slug);
+
+		return {
+			params: { slug },
+			props: { item }
+		};
+	});
+}
+
+const { item } = Astro.props;
+
+// Load the detailed JSON file
+const detailFilePath = path.resolve(`./public/data/careers/${item.code}.json`);
+const detailData = JSON.parse(fs.readFileSync(detailFilePath, 'utf-8'));
+
+const formatUSD = (val: number) => {
+	return new Intl.NumberFormat('en-US', {
+		style: 'currency',
+		currency: 'USD',
+		maximumFractionDigits: 0
+	}).format(val);
+};
+
+const title = `Will AI Replace ${item.title}?`;
+const description = `Analyze the automation vulnerability, task-level AI risk, salary, and demand projection for ${item.title}. Run the upskilling simulator.`;
+const eyebrow = "AI Automation Index";
+
+const post = await fetchPostBySlug('best-ai-proof-jobs-in-a-changing-market');
+
+const highCount = detailData.tasks?.filter((t: any) => t.risk === 'high').length || 0;
+const mediumCount = detailData.tasks?.filter((t: any) => t.risk === 'medium').length || 0;
+const lowCount = detailData.tasks?.filter((t: any) => t.risk === 'low').length || 0;
+const totalTasks = detailData.tasks?.length || 1;
+
+const highPct = Math.round((highCount / totalTasks) * 100);
+const mediumPct = Math.round((mediumCount / totalTasks) * 100);
+const lowPct = 100 - highPct - mediumPct;
+---
+
+<BaseLayout
+	title={`${title} | Gini Loh`}
+	description={description}
+>
+	<link slot="head" rel="canonical" href={new URL(`/calculators/career-ai-resilience/occupations/${Astro.params.slug}/`, Astro.site).toString()} />
+
+	<CalculatorShell
+		eyebrow={eyebrow}
+		title={title}
+		description={description}
+	>
+		<div slot="calculator" class="space-y-8 p-2">
+			<!-- Main Stats Grid -->
+			<div class="grid gap-6 sm:grid-cols-3">
+				<div class="rounded-2xl border border-white/5 bg-white/5 p-6 backdrop-blur-sm">
+					<p class="font-mono text-xs uppercase tracking-wider text-slate-400">AI Vulnerability</p>
+					<div class="mt-2 flex items-baseline gap-2">
+						<span class={`text-4xl font-bold ${item.risk_score > 60 ? 'text-red-400' : item.risk_score > 35 ? 'text-yellow-400' : 'text-emerald-400'}`}>
+							{item.risk_score}%
+						</span>
+						<span class="text-xs text-slate-400">risk score</span>
+					</div>
+				</div>
+
+				<div class="rounded-2xl border border-white/5 bg-white/5 p-6 backdrop-blur-sm">
+					<p class="font-mono text-xs uppercase tracking-wider text-slate-400">Median Salary</p>
+					<div class="mt-2 flex items-baseline gap-2">
+						<span class="text-4xl font-bold text-white">{formatUSD(item.salary)}</span>
+						<span class="text-xs text-slate-400">/ year</span>
+					</div>
+				</div>
+
+				<div class="rounded-2xl border border-white/5 bg-white/5 p-6 backdrop-blur-sm">
+					<p class="font-mono text-xs uppercase tracking-wider text-slate-400">Growth Demand</p>
+					<div class="mt-2 flex items-baseline gap-2">
+						<span class={`text-4xl font-bold ${item.demand === 'High' ? 'text-cyan-400' : 'text-slate-300'}`}>
+							{item.demand}
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Task Analysis Panel -->
+			<div class="rounded-[1.8rem] border border-slate-800/90 bg-slate-950/40 p-6 md:p-8">
+				<h3 class="text-2xl font-bold tracking-tight text-white">Constituent Task Mix</h3>
+				<p class="mt-2 text-sm text-slate-400">We parsed O*NET's {item.tasks_count} constituent tasks for this occupation and classified them by AI threat risk.</p>
+
+				<div class="mt-8 grid gap-8 lg:grid-cols-2">
+					<!-- Mini Chart Visualization -->
+					<div class="flex flex-col justify-center space-y-4">
+						<div>
+							<div class="flex justify-between text-xs font-mono uppercase text-red-400">
+								<span>High Automation Risk (Routine Tasks)</span>
+								<span>{highPct}%</span>
+							</div>
+							<div class="mt-2 h-2 w-full overflow-hidden rounded-full bg-slate-800">
+								<div class="h-full bg-red-500" style={`width: ${highPct}%`}></div>
+							</div>
+						</div>
+						<div>
+							<div class="flex justify-between text-xs font-mono uppercase text-yellow-400">
+								<span>Medium Automation Risk (Cognitive/Technical)</span>
+								<span>{mediumPct}%</span>
+							</div>
+							<div class="mt-2 h-2 w-full overflow-hidden rounded-full bg-slate-800">
+								<div class="h-full bg-yellow-500" style={`width: ${mediumPct}%`}></div>
+							</div>
+						</div>
+						<div>
+							<div class="flex justify-between text-xs font-mono uppercase text-emerald-400">
+								<span>Low Automation Risk (Strategy/Leadership)</span>
+								<span>{lowPct}%</span>
+							</div>
+							<div class="mt-2 h-2 w-full overflow-hidden rounded-full bg-slate-800">
+								<div class="h-full bg-emerald-500" style={`width: ${lowPct}%`}></div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Direct Dynamic Action CTA -->
+					<div class="flex flex-col items-center justify-center rounded-2xl border border-cyan-500/10 bg-cyan-950/10 p-6 text-center">
+						<h4 class="text-lg font-bold text-cyan-300">How would you survive?</h4>
+						<p class="mt-2 text-xs text-slate-400">Automate your routine tasks and design your day around strategic advisory to future-proof this score.</p>
+						<a 
+							href={`/calculators/career-ai-resilience/?code=${item.code}`}
+							class="mt-5 inline-flex items-center gap-2 rounded-full bg-cyan-500 px-6 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/25 transition hover:bg-cyan-400 hover:scale-[1.03]"
+						>
+							Simulate Upskilling &rarr;
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Task List Details -->
+			<div class="space-y-4">
+				<h3 class="text-xl font-semibold text-white"> constituent Tasks</h3>
+				<div class="grid gap-3">
+					{detailData.tasks?.map((task: any) => (
+						<div class="flex items-start gap-4 rounded-xl border border-white/5 bg-white/[0.02] p-4">
+							<span class={`mt-1 flex h-2 w-2 shrink-0 rounded-full ${task.risk === 'high' ? 'bg-red-500' : task.risk === 'medium' ? 'bg-yellow-500' : 'bg-emerald-500'}`}></span>
+							<div>
+								<p class="text-sm font-medium text-slate-200">{task.text}</p>
+								<p class="mt-1 text-xs text-slate-400 font-mono tracking-wide">{task.rationale}</p>
+							</div>
+						</div>
+					))}
+				</div>
+			</div>
+		</div>
+
+		<!-- Side Info Cards -->
+		<article slot="aside" class="overflow-hidden rounded-[1.8rem] border border-cyan-500/20 bg-[linear-gradient(135deg,rgba(8,47,73,0.92),rgba(2,6,23,0.98)_70%,rgba(16,185,129,0.12))] p-6 shadow-[0_0_40px_rgba(34,211,238,0.08)]">
+			<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-200/80">Community Sentiment</p>
+			<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white">Do you agree?</h2>
+			<div class="mt-4">
+				<CommunityPoll client:load occupationCode={item.code} />
+			</div>
+		</article>
+
+		<article slot="aside" class="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/45 p-6 shadow-2xl backdrop-blur-md">
+			<p class="font-mono text-xs uppercase tracking-[0.28em] text-cyan-300/70">O*NET Methodology</p>
+			<h2 class="mt-3 text-2xl font-semibold tracking-tight text-white">O*NET Data Source</h2>
+			<p class="mt-4 text-sm leading-6 text-slate-300">
+				This page dynamically extracts data structures sponsored by the U.S. Department of Labor. Our AI classification applies cognitive task automation risk models to individual tasks.
+			</p>
+		</article>
+
+		{post && <RelatedArticleCard slot="aside" post={post} />}
+	</CalculatorShell>
+</BaseLayout>

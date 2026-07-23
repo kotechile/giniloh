@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
+import CompareDeck, { type CompareItem } from './CompareDeck';
 
 interface CategoryDistribution {
 	high: number;
@@ -95,6 +96,38 @@ export default function CareerAiResilienceCalculator() {
 		}
 		fetchIndex();
 	}, []);
+
+	// Fetch selected career detail dynamically
+	useEffect(() => {
+		if (typeof window !== 'undefined') {
+			const params = new URLSearchParams(window.location.search);
+			const codeParam = params.get('code');
+			if (codeParam) {
+				setSelectedCode(codeParam);
+				setActiveView('profile');
+			}
+		}
+	}, []);
+
+	// Compare Deck states
+	const [compareItems, setCompareItems] = useState<CompareItem[]>([]);
+
+	const handleAddToCompare = (item: OccupationIndexItem) => {
+		if (compareItems.some((c) => c.code === item.code)) return;
+		if (compareItems.length >= 3) {
+			alert("You can compare up to 3 occupations at a time.");
+			return;
+		}
+		setCompareItems([...compareItems, item]);
+	};
+
+	const handleRemoveFromCompare = (code: string) => {
+		setCompareItems(compareItems.filter((item) => item.code !== code));
+	};
+
+	const handleClearCompare = () => {
+		setCompareItems([]);
+	};
 
 	// Fetch selected career detail dynamically
 	useEffect(() => {
@@ -1157,15 +1190,26 @@ export default function CareerAiResilienceCalculator() {
 													</span>
 												</td>
 												<td className="px-6 py-4 text-right">
-													<button
-														onClick={(e) => {
-															e.stopPropagation();
-															handleSelectFromExplorer(item.code);
-														}}
-														className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-1.5 font-mono text-[9.5px] uppercase tracking-wider text-slate-400 group-hover:text-cyan-300 group-hover:border-cyan-500/30 transition shadow-sm"
-													>
-														Analyze
-													</button>
+													<div className="flex justify-end gap-2">
+														<button
+															onClick={(e) => {
+																e.stopPropagation();
+																handleAddToCompare(item);
+															}}
+															className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-1.5 font-mono text-[9.5px] uppercase tracking-wider text-slate-400 hover:text-cyan-300 hover:border-cyan-500/30 transition shadow-sm"
+														>
+															+ Compare
+														</button>
+														<button
+															onClick={(e) => {
+																e.stopPropagation();
+																handleSelectFromExplorer(item.code);
+															}}
+															className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-1.5 font-mono text-[9.5px] uppercase tracking-wider text-slate-400 group-hover:text-cyan-300 group-hover:border-cyan-500/30 transition shadow-sm"
+														>
+															Analyze
+														</button>
+													</div>
 												</td>
 											</tr>
 										))
@@ -1387,6 +1431,11 @@ export default function CareerAiResilienceCalculator() {
 					</div>
 				</div>
 			)}
+			<CompareDeck
+				items={compareItems}
+				onRemove={handleRemoveFromCompare}
+				onClear={handleClearCompare}
+			/>
 		</div>
 	);
 }
