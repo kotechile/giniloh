@@ -582,34 +582,65 @@ export default function LocalVsCloudGpuCalculator() {
 						</div>
 					</div>
 
-					{/* Time Period Months Slider */}
-					<div className="space-y-2">
+					{/* Evaluation Horizon (Time Period) Variable Control */}
+					<div className="space-y-3">
 						<div className="flex justify-between items-center text-sm font-semibold text-slate-300">
-							<span>Time Period (Months)</span>
+							<div className="flex items-center gap-1.5">
+								<span>Evaluation Horizon (Time Period)</span>
+								<span className="text-[10px] text-cyan-400 font-mono font-normal">
+									({(timePeriodMonths / 12).toFixed(1)} yrs)
+								</span>
+							</div>
 							<div className="flex items-center gap-1 bg-slate-950/60 [.light_&]:bg-white rounded-lg px-2 py-0.5 border border-slate-800/80 [.light_&]:border-slate-200 focus-within:border-cyan-500/50">
 								<input
 									type="number"
 									min="1"
-									max="36"
+									max="84"
 									value={timePeriodMonths}
-									onChange={(e) => setTimePeriodMonths(Math.min(36, Math.max(1, Number(e.target.value))))}
-									className="w-8 bg-transparent text-right font-mono text-sm font-semibold text-cyan-400 focus:outline-none border-none p-0"
+									onChange={(e) => setTimePeriodMonths(Math.min(84, Math.max(1, Number(e.target.value))))}
+									className="w-10 bg-transparent text-right font-mono text-sm font-semibold text-cyan-400 focus:outline-none border-none p-0"
 								/>
 								<span className="text-[10px] text-slate-500 font-mono">mo</span>
 							</div>
 						</div>
+
+						{/* Quick Horizon Presets */}
+						<div className="flex gap-1.5 flex-wrap">
+							{[
+								{ label: '1 Yr', months: 12 },
+								{ label: '3 Yrs', months: 36 },
+								{ label: '5 Yrs', months: 60 },
+								{ label: '7 Yrs', months: 84 }
+							].map((horizon) => (
+								<button
+									key={horizon.months}
+									type="button"
+									onClick={() => setTimePeriodMonths(horizon.months)}
+									className={`px-2.5 py-1 rounded-lg text-xs font-mono font-bold transition cursor-pointer ${
+										timePeriodMonths === horizon.months
+											? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20'
+											: 'bg-slate-950 border border-slate-800 text-slate-400 hover:text-white'
+									}`}
+								>
+									{horizon.label}
+								</button>
+							))}
+						</div>
+
 						<input
 							type="range"
 							min="1"
-							max="36"
+							max="84"
 							step="1"
 							value={timePeriodMonths}
 							onChange={(e) => setTimePeriodMonths(Number(e.target.value))}
 							className="w-full h-2 bg-slate-950 [.light_&]:bg-slate-200 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-slate-800 [.light_&]:border-slate-300"
 						/>
 						<div className="flex justify-between text-[10px] text-slate-500 font-mono">
-							<span>1 month</span>
-							<span>36 months (3 yrs)</span>
+							<span>1 mo</span>
+							<span>36 mo (3 yrs)</span>
+							<span>60 mo (5 yrs)</span>
+							<span>84 mo (7 yrs)</span>
 						</div>
 					</div>
 
