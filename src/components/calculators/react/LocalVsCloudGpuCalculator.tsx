@@ -419,8 +419,8 @@ export default function LocalVsCloudGpuCalculator() {
 
 		for (let m = 0; m <= maxSearchMonths; m++) {
 			const cumGrossLocal = hardwareCost + (monthlyLocalPowerAndMaint * m);
-			// Apply resale credit offset at month 36 (or pro-rated after 36 months)
-			const cumResaleCredit = m >= 36 ? resaleValue : (m / 36) * resaleValue;
+			// Resale credit offset applies at Month 36 (end of 3-year term)
+			const cumResaleCredit = m >= 36 ? resaleValue : 0;
 			const cumNetLocal = Math.max(0, cumGrossLocal - cumResaleCredit);
 			const cumCloud = m * monthlyCloudTotal;
 
@@ -439,8 +439,7 @@ export default function LocalVsCloudGpuCalculator() {
 		const monthlyData = [];
 		for (let m = 0; m <= chartMaxMonths; m++) {
 			const cumGrossLocal = hardwareCost + (monthlyLocalPowerAndMaint * m);
-			// Resale credit offset applies at Month 36 (or pro-rated after month 36)
-			const cumResaleCredit = m >= 36 ? resaleValue : (m / 36) * resaleValue;
+			const cumResaleCredit = m >= 36 ? resaleValue : 0;
 			const cumNetLocal = Math.max(0, cumGrossLocal - cumResaleCredit);
 			const cumCloud = m * monthlyCloudTotal;
 
