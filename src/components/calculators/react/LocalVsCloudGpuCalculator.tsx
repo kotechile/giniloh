@@ -413,14 +413,13 @@ export default function LocalVsCloudGpuCalculator() {
 		const monthlyLocalPowerAndMaint = (monthlyHours * totalPowerDrawKw * electricityRate) + (hardwareCost * 0.05 / 12);
 		const monthlyCloudTotal = (monthlyHours * effectiveCloudRate) + (storageSizeGb * activeProvider.storageRate);
 
-		// Monthly Timeline Data Series for Chart (0 to max(timePeriodMonths, 36))
-		const chartMaxMonths = Math.max(timePeriodMonths, 36);
-		const monthlyData = [];
+		// Search for Break-Even month up to 84 months (7 years)
 		let breakEvenMonthFound = Infinity;
+		const maxSearchMonths = 84;
 
-		for (let m = 0; m <= chartMaxMonths; m++) {
+		for (let m = 0; m <= maxSearchMonths; m++) {
 			const cumGrossLocal = hardwareCost + (monthlyLocalPowerAndMaint * m);
-			// Pro-rated resale value credit over 36 months
+			// Pro-rated resale value credit over 36 months (salvage value applies after 36 months)
 			const cumResaleCredit = (Math.min(m, 36) / 36) * resaleValue;
 			const cumNetLocal = Math.max(0, cumGrossLocal - cumResaleCredit);
 			const cumCloud = m * monthlyCloudTotal;
@@ -428,6 +427,21 @@ export default function LocalVsCloudGpuCalculator() {
 			if (m > 0 && cumCloud >= cumNetLocal && breakEvenMonthFound === Infinity) {
 				breakEvenMonthFound = m;
 			}
+		}
+
+		// Dynamically scale chart timeline to display the intersection point if found within 7 years
+		let chartMaxMonths = Math.max(timePeriodMonths, 36);
+		if (Number.isFinite(breakEvenMonthFound)) {
+			chartMaxMonths = Math.max(chartMaxMonths, Math.min(84, Math.ceil(breakEvenMonthFound * 1.1)));
+		}
+
+		// Build monthly data series for chart
+		const monthlyData = [];
+		for (let m = 0; m <= chartMaxMonths; m++) {
+			const cumGrossLocal = hardwareCost + (monthlyLocalPowerAndMaint * m);
+			const cumResaleCredit = (Math.min(m, 36) / 36) * resaleValue;
+			const cumNetLocal = Math.max(0, cumGrossLocal - cumResaleCredit);
+			const cumCloud = m * monthlyCloudTotal;
 
 			monthlyData.push({
 				month: m,
@@ -981,8 +995,10 @@ export default function LocalVsCloudGpuCalculator() {
 						<p className="text-xs text-slate-500 font-medium">Break-Even Point</p>
 						<p className="text-2xl font-black text-white mt-1.5 font-mono">
 							{Number.isFinite(calculations.breakEvenMonths)
-								? `Month ${calculations.breakEvenMonths}`
-								: 'Never'}
+								? calculations.breakEvenMonths > 12
+									? `Mo ${calculations.breakEvenMonths} (${(calculations.breakEvenMonths / 12).toFixed(1)} yrs)`
+									: `Month ${calculations.breakEvenMonths}`
+								: '> 7 Years'}
 						</p>
 					</div>
 					<div className="panel-soft rounded-[1.5rem] p-5">
@@ -1306,7 +1322,7 @@ function GpuBreakEvenChart({
 				})}
 
 				{/* Vertical Gridlines & X-Axis Labels */}
-				{[0, 6, 12, 18, 24, 30, 36].filter(m => m <= maxMonths).map((m) => {
+				{Array.from({ length: Math.floor(maxMonths / 12) + 1 }, (_, i) => i * 12).map((m) => {
 					const x = xScale(m);
 					return (
 						<g key={m}>
