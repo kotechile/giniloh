@@ -419,8 +419,9 @@ export default function LocalVsCloudGpuCalculator() {
 
 		for (let m = 0; m <= maxSearchMonths; m++) {
 			const cumGrossLocal = hardwareCost + (monthlyLocalPowerAndMaint * m);
-			// Net Local TCO: Net CapEx (Hardware - Salvage Credit) + Monthly OpEx (Electricity & Maintenance)
-			const cumNetLocal = Math.max(0, (hardwareCost - resaleValue) + (monthlyLocalPowerAndMaint * m));
+			// Apply resale credit offset at month 36 (or pro-rated after 36 months)
+			const cumResaleCredit = m >= 36 ? resaleValue : (m / 36) * resaleValue;
+			const cumNetLocal = Math.max(0, cumGrossLocal - cumResaleCredit);
 			const cumCloud = m * monthlyCloudTotal;
 
 			if (m > 0 && cumCloud >= cumNetLocal && breakEvenMonthFound === Infinity) {
@@ -438,7 +439,9 @@ export default function LocalVsCloudGpuCalculator() {
 		const monthlyData = [];
 		for (let m = 0; m <= chartMaxMonths; m++) {
 			const cumGrossLocal = hardwareCost + (monthlyLocalPowerAndMaint * m);
-			const cumNetLocal = Math.max(0, (hardwareCost - resaleValue) + (monthlyLocalPowerAndMaint * m));
+			// Resale credit offset applies at Month 36 (or pro-rated after month 36)
+			const cumResaleCredit = m >= 36 ? resaleValue : (m / 36) * resaleValue;
+			const cumNetLocal = Math.max(0, cumGrossLocal - cumResaleCredit);
 			const cumCloud = m * monthlyCloudTotal;
 
 			monthlyData.push({
@@ -446,7 +449,7 @@ export default function LocalVsCloudGpuCalculator() {
 				grossLocal: cumGrossLocal,
 				netLocal: cumNetLocal,
 				cloud: cumCloud,
-				resaleCredit: resaleValue
+				resaleCredit: cumResaleCredit
 			});
 		}
 
@@ -1379,6 +1382,20 @@ function GpuBreakEvenChart({
 							<rect x="-10" y="-14" width="130" height="24" rx="6" fill="#f59e0b" />
 							<text x="55" y="2" textAnchor="middle" className="text-[10px] font-extrabold font-mono fill-slate-950">
 								★ Break-Even: Mo {breakEvenMonth}
+							</text>
+						</g>
+					</g>
+				)}
+
+				{/* 36-Month Resale Offset Marker */}
+				{maxMonths >= 36 && data.find(d => d.month === 36) && (
+					<g transform={`translate(${xScale(36)}, ${yScale(data.find(d => d.month === 36)!.netLocal)})`}>
+						<line x1="0" y1="-15" x2="0" y2="15" stroke="#10b981" strokeWidth="1.5" strokeDasharray="2 2" />
+						<circle cx="0" cy="0" r="5" fill="#10b981" />
+						<g transform="translate(-60, -28)">
+							<rect width="120" height="18" rx="4" fill="#022c22" stroke="#10b981" strokeWidth="1" />
+							<text x="60" y="12" textAnchor="middle" className="text-[9px] font-bold font-mono fill-emerald-300">
+								💵 Resale Offset (-20%)
 							</text>
 						</g>
 					</g>
