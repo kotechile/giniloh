@@ -339,14 +339,18 @@ export default function LocalVsCloudGpuCalculator() {
 	// 1. Usage Pattern States (Sliders)
 	const [hoursPerDay, setHoursPerDay] = useState<number>(6);
 	const [daysPerMonth, setDaysPerMonth] = useState<number>(18);
-	const [timePeriodMonths, setTimePeriodMonths] = useState<number>(12);
+	const [timePeriodMonths, setTimePeriodMonths] = useState<number>(36);
 	const [electricityRate, setElectricityRate] = useState<number>(0.12);
 	const [storageSizeGb, setStorageSizeGb] = useState<number>(100);
 	const [systemCost, setSystemCost] = useState<number>(1000);
 
+	// Multi-GPU & Resale Value States
+	const [cloudGpuCount, setCloudGpuCount] = useState<number>(1);
+	const [resalePercent, setResalePercent] = useState<number>(20); // 20% after 3 years
+
 	// 2. Selection States
-	const [selectedGpuId, setSelectedGpuId] = useState<string>('rtx4090');
-	const [selectedProviderId, setSelectedProviderId] = useState<string>('runpod-nvidia-rtx-4090');
+	const [selectedGpuId, setSelectedGpuId] = useState<string>('rtx-pro-6000-blackwell');
+	const [selectedProviderId, setSelectedProviderId] = useState<string>('hyperstack-nvidia-rtx-pro-6000');
 
 	// Auto-adjust system cost based on turnkey hardware selection
 	useEffect(() => {
@@ -364,6 +368,21 @@ export default function LocalVsCloudGpuCalculator() {
 	const activeGpu = useMemo(() => GPU_MODELS.find(g => g.id === selectedGpuId) || GPU_MODELS[0], [selectedGpuId]);
 	const activeProvider = useMemo(() => PRESET_FLAT_LIST.find(p => p.id === selectedProviderId) || PRESET_FLAT_LIST[0], [selectedProviderId]);
 
+	// Quick Preset Handler
+	const applyPreset = (presetKey: 'blackwell-vs-cloud-96' | 'blackwell-vs-2x-ada') => {
+		if (presetKey === 'blackwell-vs-cloud-96') {
+			setSelectedGpuId('rtx-pro-6000-blackwell');
+			const pro6000Preset = PRESET_FLAT_LIST.find(p => p.gpuModel.includes('PRO 6000') || p.gpuModel.includes('6000')) || PRESET_FLAT_LIST[0];
+			setSelectedProviderId(pro6000Preset.id);
+			setCloudGpuCount(1);
+		} else if (presetKey === 'blackwell-vs-2x-ada') {
+			setSelectedGpuId('rtx-pro-6000-blackwell');
+			const adaPreset = PRESET_FLAT_LIST.find(p => p.gpuModel.includes('6000 Ada') || p.gpuModel.includes('RTX 6000')) || PRESET_FLAT_LIST[0];
+			setSelectedProviderId(adaPreset.id);
+			setCloudGpuCount(2); // Renting 2x RTX 6000 Ada (48GB x 2 = 96GB)
+		}
+	};
+
 	// 3. Mathematical Calculations
 	const calculations = useMemo(() => {
 		const monthlyHours = hoursPerDay * daysPerMonth;
@@ -371,33 +390,58 @@ export default function LocalVsCloudGpuCalculator() {
 
 		// Local Cost Calculations
 		const hardwareCost = activeGpu.cost + systemCost;
-		const totalPowerDrawKw = (activeGpu.tdp + 250) / 1000; // Adding 250W base system draw (CPU, RAM, fans, motherboard)
+		const totalPowerDrawKw = (activeGpu.tdp + 250) / 1000; // 250W base system draw
 		const electricityCost = totalHours * totalPowerDrawKw * electricityRate;
 		const maintenanceCost = hardwareCost * 0.05 * (timePeriodMonths / 12); // 5% maintenance budget per year
 		
-		const localTco = hardwareCost + electricityCost + maintenanceCost;
-		const localCostPerHour = totalHours > 0 ? localTco / totalHours : 0;
+		const grossLocalTco = hardwareCost + electricityCost + maintenanceCost;
 
-		// Cloud Cost Calculations
-		const cloudUsageCost = totalHours * activeProvider.rate;
+		// Resale Value (Salvage Credit)
+		const resaleValue = activeGpu.cost * (resalePercent / 100);
+		const netLocalTco = Math.max(0, grossLocalTco - resaleValue);
+		const localCostPerHour = totalHours > 0 ? netLocalTco / totalHours : 0;
+
+		// Cloud Cost Calculations (scaled by cloudGpuCount)
+		const effectiveCloudRate = activeProvider.rate * cloudGpuCount;
+		const cloudUsageCost = totalHours * effectiveCloudRate;
 		const cloudStorageCost = storageSizeGb * activeProvider.storageRate * timePeriodMonths;
 		
 		const cloudTco = cloudUsageCost + cloudStorageCost;
 		const cloudCostPerHour = totalHours > 0 ? cloudTco / totalHours : 0;
 
-		// Savings & TCO Comparison
-		const localWins = localTco < cloudTco;
-		const netSavings = Math.abs(cloudTco - localTco);
-		const monthlyDifference = netSavings / timePeriodMonths;
+		// Monthly rates for time series & break-even calculation
+		const monthlyLocalPowerAndMaint = (monthlyHours * totalPowerDrawKw * electricityRate) + (hardwareCost * 0.05 / 12);
+		const monthlyCloudTotal = (monthlyHours * effectiveCloudRate) + (storageSizeGb * activeProvider.storageRate);
 
-		// Break-Even Calculations
-		const upfrontPremium = (hardwareCost + maintenanceCost);
-		const monthlySavings = (monthlyHours * activeProvider.rate + storageSizeGb * activeProvider.storageRate) - (monthlyHours * totalPowerDrawKw * electricityRate);
-		
-		let breakEvenMonths = Infinity;
-		if (monthlySavings > 0) {
-			breakEvenMonths = upfrontPremium / monthlySavings;
+		// Monthly Timeline Data Series for Chart (0 to max(timePeriodMonths, 36))
+		const chartMaxMonths = Math.max(timePeriodMonths, 36);
+		const monthlyData = [];
+		let breakEvenMonthFound = Infinity;
+
+		for (let m = 0; m <= chartMaxMonths; m++) {
+			const cumGrossLocal = hardwareCost + (monthlyLocalPowerAndMaint * m);
+			// Pro-rated resale value credit over 36 months
+			const cumResaleCredit = (Math.min(m, 36) / 36) * resaleValue;
+			const cumNetLocal = Math.max(0, cumGrossLocal - cumResaleCredit);
+			const cumCloud = m * monthlyCloudTotal;
+
+			if (m > 0 && cumCloud >= cumNetLocal && breakEvenMonthFound === Infinity) {
+				breakEvenMonthFound = m;
+			}
+
+			monthlyData.push({
+				month: m,
+				grossLocal: cumGrossLocal,
+				netLocal: cumNetLocal,
+				cloud: cumCloud,
+				resaleCredit: cumResaleCredit
+			});
 		}
+
+		// Savings & TCO Comparison
+		const localWins = netLocalTco < cloudTco;
+		const netSavings = Math.abs(cloudTco - netLocalTco);
+		const monthlyDifference = netSavings / timePeriodMonths;
 
 		return {
 			monthlyHours,
@@ -405,8 +449,11 @@ export default function LocalVsCloudGpuCalculator() {
 			hardwareCost,
 			electricityCost,
 			maintenanceCost,
-			localTco,
+			grossLocalTco,
+			resaleValue,
+			netLocalTco,
 			localCostPerHour,
+			effectiveCloudRate,
 			cloudUsageCost,
 			cloudStorageCost,
 			cloudTco,
@@ -414,12 +461,41 @@ export default function LocalVsCloudGpuCalculator() {
 			localWins,
 			netSavings,
 			monthlyDifference,
-			breakEvenMonths: breakEvenMonths === Infinity ? Infinity : parseFloat(breakEvenMonths.toFixed(1))
+			breakEvenMonths: breakEvenMonthFound === Infinity ? Infinity : breakEvenMonthFound,
+			monthlyData,
+			chartMaxMonths
 		};
-	}, [hoursPerDay, daysPerMonth, timePeriodMonths, electricityRate, storageSizeGb, systemCost, activeGpu, activeProvider]);
+	}, [hoursPerDay, daysPerMonth, timePeriodMonths, electricityRate, storageSizeGb, systemCost, activeGpu, activeProvider, cloudGpuCount, resalePercent]);
 
 	return (
 		<>
+			{/* Preset Comparison Banner */}
+			<div className="mb-8 panel-soft rounded-[2rem] p-6 border border-cyan-500/25 bg-gradient-to-r from-cyan-950/40 via-slate-900/60 to-purple-950/40 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+				<div>
+					<div className="flex items-center gap-2">
+						<span className="text-lg">⚡</span>
+						<h3 className="text-base font-bold text-white">Compare Blackwell 96GB vs Cloud Renting Options</h3>
+					</div>
+					<p className="text-xs text-slate-400 mt-1">Quick-load 1x RTX Pro 6000 Blackwell (96GB) against 1x 96GB Cloud GPU or 2x RTX 6000 Ada (48GB x 2 = 96GB pooled).</p>
+				</div>
+				<div className="flex flex-wrap gap-2.5 w-full md:w-auto shrink-0">
+					<button
+						type="button"
+						onClick={() => applyPreset('blackwell-vs-cloud-96')}
+						className="px-4 py-2.5 rounded-xl text-xs font-bold bg-cyan-500 text-slate-950 hover:bg-cyan-400 transition shadow-md shadow-cyan-500/20 cursor-pointer"
+					>
+						1x Blackwell (96GB) vs 1x Cloud (96GB)
+					</button>
+					<button
+						type="button"
+						onClick={() => applyPreset('blackwell-vs-2x-ada')}
+						className="px-4 py-2.5 rounded-xl text-xs font-bold bg-purple-500 text-white hover:bg-purple-400 transition shadow-md shadow-purple-500/20 cursor-pointer"
+					>
+						1x Blackwell (96GB) vs 2x RTX 6000 Ada (96GB Pooled)
+					</button>
+				</div>
+			</div>
+
 			<div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
 			{/* Left Column: User Controls & Sliders */}
 			<div className="space-y-6">
@@ -519,7 +595,7 @@ export default function LocalVsCloudGpuCalculator() {
 						/>
 						<div className="flex justify-between text-[10px] text-slate-500 font-mono">
 							<span>1 month</span>
-							<span>36 months</span>
+							<span>36 months (3 yrs)</span>
 						</div>
 					</div>
 
@@ -534,7 +610,7 @@ export default function LocalVsCloudGpuCalculator() {
 				<div className="panel-soft rounded-[2rem] p-6 lg:p-8 space-y-6">
 					<div className="flex items-center gap-2">
 						<span className="text-xl">🎮</span>
-						<h3 className="text-xl font-bold text-white">Select GPU</h3>
+						<h3 className="text-xl font-bold text-white">Select Local GPU</h3>
 					</div>
 
 					<div>
@@ -583,6 +659,42 @@ export default function LocalVsCloudGpuCalculator() {
 							<p className="text-xs text-slate-500">Power Draw (TDP)</p>
 							<p className="text-lg font-bold text-amber-400 mt-0.5 font-mono">{activeGpu.tdp}W</p>
 						</div>
+					</div>
+
+					{/* 3-Year Resale Value % Slider */}
+					<div className="space-y-2 border-t border-slate-800/60 [.light_&]:border-slate-200/80 pt-4">
+						<div className="flex justify-between items-center text-sm font-semibold text-slate-300">
+							<span>3-Year Hardware Resale Value (%)</span>
+							<div className="flex items-center gap-0.5 bg-slate-950/60 [.light_&]:bg-white rounded-lg px-2 py-0.5 border border-slate-800/80 [.light_&]:border-slate-200 focus-within:border-cyan-500/50">
+								<input
+									type="number"
+									min="0"
+									max="50"
+									step="5"
+									value={resalePercent}
+									onChange={(e) => setResalePercent(Math.min(50, Math.max(0, Number(e.target.value))))}
+									className="w-10 bg-transparent text-right font-mono text-sm font-semibold text-emerald-400 focus:outline-none border-none p-0"
+								/>
+								<span className="text-xs text-slate-500 font-mono">%</span>
+							</div>
+						</div>
+						<input
+							type="range"
+							min="0"
+							max="50"
+							step="5"
+							value={resalePercent}
+							onChange={(e) => setResalePercent(Number(e.target.value))}
+							className="w-full h-2 bg-slate-950 [.light_&]:bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-400 border border-slate-800 [.light_&]:border-slate-300"
+						/>
+						<div className="flex justify-between text-[10px] text-slate-500 font-mono">
+							<span>0% (Full loss)</span>
+							<span>20% (Default)</span>
+							<span>50% (High return)</span>
+						</div>
+						<p className="text-[11px] text-emerald-400 font-mono mt-1">
+							Estimated Salvage Recovery: {formatCurrency(calculations.resaleValue)} after 36 months
+						</p>
 					</div>
 
 					{/* System components price slider */}
@@ -681,6 +793,32 @@ export default function LocalVsCloudGpuCalculator() {
 						</select>
 					</div>
 
+					{/* Multi-GPU Cloud Quantity Selector */}
+					<div className="space-y-2 border-t border-slate-800/60 [.light_&]:border-slate-200/80 pt-4">
+						<div className="flex justify-between items-center text-sm font-semibold text-slate-300">
+							<span>Number of Cloud GPUs to Rent</span>
+							<div className="flex gap-1.5">
+								{[1, 2, 4, 8].map((qty) => (
+									<button
+										key={qty}
+										type="button"
+										onClick={() => setCloudGpuCount(qty)}
+										className={`px-3 py-1 rounded-lg text-xs font-mono font-bold transition cursor-pointer ${
+											cloudGpuCount === qty
+												? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20'
+												: 'bg-slate-950 border border-slate-800 text-slate-400 hover:text-white'
+										}`}
+									>
+										{qty}x
+									</button>
+								))}
+							</div>
+						</div>
+						<p className="text-[11px] text-cyan-400 font-mono">
+							Effective Hourly Rate: {cloudGpuCount}x @ ${activeProvider.rate.toFixed(2)} = ${calculations.effectiveCloudRate.toFixed(2)}/hr
+						</p>
+					</div>
+
 					<div className="rounded-xl border border-slate-800/80 [.light_&]:border-slate-200 bg-slate-950/40 [.light_&]:bg-slate-50/50 p-4 space-y-2">
 						<div className="flex justify-between text-xs">
 							<span className="text-slate-500">Provider:</span>
@@ -736,7 +874,6 @@ export default function LocalVsCloudGpuCalculator() {
 							<span>10 GB</span>
 							<span>1,200 GB</span>
 						</div>
-						<p className="text-[10px] text-slate-500">Persistent storage priced at $0.15 / GB / month</p>
 					</div>
 				</div>
 			</div>
@@ -752,9 +889,9 @@ export default function LocalVsCloudGpuCalculator() {
 
 					{/* Local Hardware Breakdown */}
 					<div className="space-y-3 pb-5 border-b border-slate-800/80 [.light_&]:border-slate-200">
-						<p className="text-sm font-bold text-slate-200 uppercase tracking-wide">Local Hardware</p>
+						<p className="text-sm font-bold text-slate-200 uppercase tracking-wide">Local Hardware (1x {activeGpu.vram})</p>
 						<div className="flex justify-between text-sm text-slate-400">
-							<span>GPU Cost ({activeGpu.vram}):</span>
+							<span>GPU Cost:</span>
 							<span className="font-mono text-white">{formatCurrency(activeGpu.cost)}</span>
 						</div>
 						<div className="flex justify-between text-sm text-slate-400">
@@ -762,36 +899,40 @@ export default function LocalVsCloudGpuCalculator() {
 							<span className="font-mono text-white">{formatCurrency(systemCost)}</span>
 						</div>
 						<div className="flex justify-between text-sm text-slate-400">
-							<span>Electricity ({timePeriodMonths} months):</span>
+							<span>Electricity ({timePeriodMonths} mo):</span>
 							<span className="font-mono text-white">{formatCurrency(calculations.electricityCost)}</span>
 						</div>
 						<div className="flex justify-between text-sm text-slate-400">
 							<span>Maintenance budget:</span>
 							<span className="font-mono text-white">{formatCurrency(calculations.maintenanceCost)}</span>
 						</div>
+						<div className="flex justify-between text-sm text-emerald-400">
+							<span>Less 3-Yr Resale ({resalePercent}%):</span>
+							<span className="font-mono">-{formatCurrency(calculations.resaleValue)}</span>
+						</div>
 						<div className="flex justify-between items-center text-base font-bold text-white pt-2 border-t border-slate-800/40 [.light_&]:border-slate-100">
-							<span>Total Cost:</span>
-							<span className="text-2xl text-amber-400 font-mono">{formatCurrency(calculations.localTco)}</span>
+							<span>Net Local TCO:</span>
+							<span className="text-2xl text-emerald-400 font-mono">{formatCurrency(calculations.netLocalTco)}</span>
 						</div>
 						<div className="flex justify-between text-xs text-slate-400 font-mono">
 							<span>Cost per Hour:</span>
-							<span className="text-cyan-400">${calculations.localCostPerHour.toFixed(3)}/hr</span>
+							<span className="text-emerald-400">${calculations.localCostPerHour.toFixed(3)}/hr</span>
 						</div>
 					</div>
 
 					{/* Cloud GPU Breakdown */}
 					<div className="space-y-3 pt-1">
-						<p className="text-sm font-bold text-slate-200 uppercase tracking-wide">{activeProvider.providerName} ({activeProvider.gpuModel}) Cloud</p>
+						<p className="text-sm font-bold text-slate-200 uppercase tracking-wide">{activeProvider.providerName} ({cloudGpuCount}x {activeProvider.gpuModel})</p>
 						<div className="flex justify-between text-sm text-slate-400">
-							<span>Usage ({timePeriodMonths} months):</span>
+							<span>Usage ({cloudGpuCount}x @ ${activeProvider.rate}/hr):</span>
 							<span className="font-mono text-white">{formatCurrency(calculations.cloudUsageCost)}</span>
 						</div>
 						<div className="flex justify-between text-sm text-slate-400">
-							<span>Storage ({timePeriodMonths} months):</span>
+							<span>Storage ({timePeriodMonths} mo):</span>
 							<span className="font-mono text-white">{formatCurrency(calculations.cloudStorageCost)}</span>
 						</div>
 						<div className="flex justify-between items-center text-base font-bold text-white pt-2 border-t border-slate-800/40 [.light_&]:border-slate-100">
-							<span>Total Cost:</span>
+							<span>Total Cloud Cost:</span>
 							<span className="text-2xl text-cyan-400 font-mono">{formatCurrency(calculations.cloudTco)}</span>
 						</div>
 						<div className="flex justify-between text-xs text-slate-400 font-mono">
@@ -805,8 +946,8 @@ export default function LocalVsCloudGpuCalculator() {
 				<div 
 					className={`panel-soft rounded-[2rem] transition duration-300 border-2 ${
 						calculations.localWins 
-							? 'border-emerald-500 bg-gradient-to-br from-emerald-950/60 via-slate-950/80 to-emerald-900/40 shadow-[0_0_40px_rgba(16,185,129,0.25)] [.light_&]:border-emerald-500 [.light_&]:bg-[linear-gradient(135deg,rgba(167,243,208,0.65),rgba(209,250,229,0.95))] [.light_&]:shadow-[0_15px_35px_rgba(16,185,129,0.15)]' 
-							: 'border-cyan-500 bg-gradient-to-br from-cyan-950/60 via-slate-950/80 to-cyan-900/40 shadow-[0_0_40px_rgba(34,211,238,0.25)] [.light_&]:border-cyan-500 [.light_&]:bg-[linear-gradient(135deg,rgba(165,243,252,0.65),rgba(207,250,254,0.95))] [.light_&]:shadow-[0_15px_35px_rgba(34,211,238,0.15)]'
+							? 'border-emerald-500 bg-gradient-to-br from-emerald-950/60 via-slate-950/80 to-emerald-900/40 shadow-[0_0_40px_rgba(16,185,129,0.25)]' 
+							: 'border-cyan-500 bg-gradient-to-br from-cyan-950/60 via-slate-950/80 to-cyan-900/40 shadow-[0_0_40px_rgba(34,211,238,0.25)]'
 					}`}
 				>
 					<div className="p-6 sm:p-8">
@@ -834,78 +975,52 @@ export default function LocalVsCloudGpuCalculator() {
 					</div>
 				</div>
 
-				{/* Recommendation Card */}
-				<div className="panel-soft rounded-[2rem] border border-pink-500/35 [.light_&]:border-pink-200/60 bg-gradient-to-br from-slate-900/90 to-pink-950/15 [.light_&]:bg-[linear-gradient(135deg,rgba(253,242,248,0.85),rgba(252,231,243,0.4))] p-6 shadow-[0_0_40px_rgba(236,72,153,0.15)] [.light_&]:shadow-[0_15px_30px_rgba(236,72,153,0.05)] flex flex-col gap-4">
-					<div>
-						<p className="font-mono text-xs uppercase tracking-[0.24em] text-pink-400 font-bold">
-							🎯 Recommendation
-						</p>
-						<p className="mt-2 text-sm leading-6 text-slate-200">
-							{calculations.localWins ? (
-								<>
-									For heavy usage of <strong>{calculations.monthlyHours} hours/month</strong>, local hardware becomes cost-effective after <strong>{calculations.breakEvenMonths} months</strong>.
-								</>
-							) : (
-								<>
-									For light usage of <strong>{calculations.monthlyHours} hours/month</strong>, cloud GPUs remain superior to offset the high hardware setup price.
-								</>
-							)}
-						</p>
-					</div>
-					<a
-						href={activeProvider.affiliateUrl}
-						target="_blank"
-						rel="noopener noreferrer"
-						className="w-full text-center py-3.5 px-6 font-bold text-white rounded-xl bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 shadow-lg transition duration-150 cursor-pointer"
-					>
-						{activeProvider.ctaText || `Try ${activeProvider.providerName} (No Upfront Cost) →`}
-					</a>
-				</div>
-
-				{/* Metrics Widgets */}
+				{/* Recommendation & Metrics Widgets */}
 				<div className="grid grid-cols-2 gap-4">
 					<div className="panel-soft rounded-[1.5rem] p-5">
 						<p className="text-xs text-slate-500 font-medium">Break-Even Point</p>
 						<p className="text-2xl font-black text-white mt-1.5 font-mono">
 							{Number.isFinite(calculations.breakEvenMonths)
-								? `${calculations.breakEvenMonths} mo`
+								? `Month ${calculations.breakEvenMonths}`
 								: 'Never'}
 						</p>
 					</div>
 					<div className="panel-soft rounded-[1.5rem] p-5">
-						<p className="text-xs text-slate-500 font-medium">Monthly Difference</p>
-						<p className="text-2xl font-black text-white mt-1.5 font-mono">
-							{formatCurrency(calculations.monthlyDifference)}
+						<p className="text-xs text-slate-500 font-medium">Resale Value Recovery</p>
+						<p className="text-2xl font-black text-emerald-400 mt-1.5 font-mono">
+							{formatCurrency(calculations.resaleValue)}
 						</p>
 					</div>
 				</div>
+			</div>
+		</div>
 
-				{/* Ready to Start tutorials */}
-				<div className="panel-soft rounded-[2rem] p-6 space-y-4">
-					<p className="font-mono text-xs uppercase tracking-[0.24em] text-slate-500 font-bold">
-						Quick Links
+		{/* Interactive Break-Even & Renting vs Owning Chart Section */}
+		<div className="mt-12 panel-soft rounded-[2rem] p-6 lg:p-8 space-y-6 border border-slate-800">
+			<div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+				<div>
+					<h3 className="text-2xl font-bold text-white">Renting vs. Owning Cumulative Cost Timeline</h3>
+					<p className="text-slate-400 text-xs mt-1">
+						Graph of cumulative expenditures over time (0 to 36 months). Intersecting lines graphically highlight the exact Break-Even point.
 					</p>
-					<p className="text-xs text-slate-400">Deploy directly on recommended providers in minutes.</p>
-					<div className="flex flex-wrap gap-3">
-						<a
-							href="https://runpod.io?rc=giniloh"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="py-2.5 px-4 font-semibold text-xs text-slate-300 [.light_&]:text-slate-700 hover:text-white [.light_&]:hover:text-slate-900 rounded-lg border border-slate-800 [.light_&]:border-slate-200 bg-slate-950/60 [.light_&]:bg-white hover:bg-slate-900 [.light_&]:hover:bg-slate-50 transition"
-						>
-							RunPod Cloud
-						</a>
-						<a
-							href="https://vast.ai?ref=giniloh"
-							target="_blank"
-							rel="noopener noreferrer"
-							className="py-2.5 px-4 font-semibold text-xs text-slate-300 [.light_&]:text-slate-700 hover:text-white [.light_&]:hover:text-slate-900 rounded-lg border border-slate-800 [.light_&]:border-slate-200 bg-slate-950/60 [.light_&]:bg-white hover:bg-slate-900 [.light_&]:hover:bg-slate-50 transition"
-						>
-							Vast.ai Marketplace
-						</a>
+				</div>
+				<div className="flex items-center gap-4 text-xs font-mono">
+					<div className="flex items-center gap-2">
+						<span className="w-3 h-3 rounded-full bg-emerald-400 inline-block shadow-[0_0_8px_#10b981]"></span>
+						<span className="text-slate-300">Local Owning Net TCO</span>
+					</div>
+					<div className="flex items-center gap-2">
+						<span className="w-3 h-3 rounded-full bg-cyan-400 inline-block shadow-[0_0_8px_#22d3ee]"></span>
+						<span className="text-slate-300">Cloud Renting ({cloudGpuCount}x)</span>
 					</div>
 				</div>
 			</div>
+
+			<GpuBreakEvenChart
+				data={calculations.monthlyData}
+				breakEvenMonth={calculations.breakEvenMonths}
+				maxMonths={calculations.chartMaxMonths}
+			/>
 		</div>
 
 		{/* Interactive Cloud GPU Directory Section */}
@@ -1107,6 +1222,157 @@ function CloudGpuDirectory({
 					))
 				)}
 			</div>
+		</div>
+	);
+}
+
+interface ChartPoint {
+	month: number;
+	grossLocal: number;
+	netLocal: number;
+	cloud: number;
+	resaleCredit: number;
+}
+
+function GpuBreakEvenChart({
+	data,
+	breakEvenMonth,
+	maxMonths
+}: {
+	data: ChartPoint[];
+	breakEvenMonth: number;
+	maxMonths: number;
+}) {
+	const [hoverIndex, setHoverIndex] = useState<number | null>(null);
+
+	const width = 800;
+	const height = 340;
+	const padding = { top: 35, right: 30, bottom: 40, left: 65 };
+	const chartWidth = width - padding.left - padding.right;
+	const chartHeight = height - padding.top - padding.bottom;
+
+	const maxCost = useMemo(() => {
+		let maxVal = 0;
+		data.forEach(d => {
+			if (d.netLocal > maxVal) maxVal = d.netLocal;
+			if (d.cloud > maxVal) maxVal = d.cloud;
+			if (d.grossLocal > maxVal) maxVal = d.grossLocal;
+		});
+		return Math.max(maxVal * 1.1, 1000);
+	}, [data]);
+
+	const xScale = (m: number) => padding.left + (m / Math.max(1, maxMonths)) * chartWidth;
+	const yScale = (val: number) => padding.top + chartHeight - (val / Math.max(1, maxCost)) * chartHeight;
+
+	// SVG Path generation
+	const localPath = useMemo(() => {
+		return data.reduce((acc, point, idx) => {
+			const x = xScale(point.month);
+			const y = yScale(point.netLocal);
+			return idx === 0 ? `M ${x.toFixed(1)} ${y.toFixed(1)}` : `${acc} L ${x.toFixed(1)} ${y.toFixed(1)}`;
+		}, '');
+	}, [data, maxMonths, maxCost]);
+
+	const cloudPath = useMemo(() => {
+		return data.reduce((acc, point, idx) => {
+			const x = xScale(point.month);
+			const y = yScale(point.cloud);
+			return idx === 0 ? `M ${x.toFixed(1)} ${y.toFixed(1)}` : `${acc} L ${x.toFixed(1)} ${y.toFixed(1)}`;
+		}, '');
+	}, [data, maxMonths, maxCost]);
+
+	// Break-even coordinates
+	const breakEvenX = Number.isFinite(breakEvenMonth) && breakEvenMonth <= maxMonths ? xScale(breakEvenMonth) : null;
+	const breakEvenPoint = Number.isFinite(breakEvenMonth) && breakEvenMonth <= maxMonths ? data.find(d => d.month === breakEvenMonth) : null;
+	const breakEvenY = breakEvenPoint ? yScale(breakEvenPoint.netLocal) : null;
+
+	const activePoint = hoverIndex !== null && data[hoverIndex] ? data[hoverIndex] : null;
+
+	return (
+		<div className="relative w-full overflow-hidden">
+			<svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto overflow-visible select-none">
+				{/* Horizontal Gridlines & Y-Axis Labels */}
+				{[0, 0.25, 0.5, 0.75, 1].map((ratio) => {
+					const val = maxCost * ratio;
+					const y = yScale(val);
+					return (
+						<g key={ratio}>
+							<line x1={padding.left} y1={y} x2={width - padding.right} y2={y} stroke="rgba(255,255,255,0.08)" strokeDasharray="4 4" />
+							<text x={padding.left - 10} y={y + 4} textAnchor="end" className="text-[10px] font-mono fill-slate-400">
+								${(val / 1000).toFixed(0)}k
+							</text>
+						</g>
+					);
+				})}
+
+				{/* Vertical Gridlines & X-Axis Labels */}
+				{[0, 6, 12, 18, 24, 30, 36].filter(m => m <= maxMonths).map((m) => {
+					const x = xScale(m);
+					return (
+						<g key={m}>
+							<line x1={x} y1={padding.top} x2={x} y2={height - padding.bottom} stroke="rgba(255,255,255,0.06)" />
+							<text x={x} y={height - padding.bottom + 20} textAnchor="middle" className="text-[10px] font-mono fill-slate-400">
+								m{m}
+							</text>
+						</g>
+					);
+				})}
+
+				{/* Cloud TCO Line (Cyan) */}
+				<path d={cloudPath} fill="none" stroke="#22d3ee" strokeWidth="3" strokeLinecap="round" className="drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
+
+				{/* Local Owning Net TCO Line (Emerald) */}
+				<path d={localPath} fill="none" stroke="#10b981" strokeWidth="3" strokeLinecap="round" className="drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
+
+				{/* Break-Even Point Vertical Highlight Line */}
+				{breakEvenX !== null && breakEvenY !== null && (
+					<g>
+						<line x1={breakEvenX} y1={padding.top} x2={breakEvenX} y2={height - padding.bottom} stroke="#f59e0b" strokeWidth="2" strokeDasharray="4 4" />
+						<circle cx={breakEvenX} cy={breakEvenY} r="7" fill="#f59e0b" className="animate-pulse shadow-[0_0_12px_#f59e0b]" />
+						<circle cx={breakEvenX} cy={breakEvenY} r="4" fill="#ffffff" />
+						<g transform={`translate(${Math.min(breakEvenX, width - 140)}, ${padding.top - 10})`}>
+							<rect x="-10" y="-14" width="130" height="24" rx="6" fill="#f59e0b" />
+							<text x="55" y="2" textAnchor="middle" className="text-[10px] font-extrabold font-mono fill-slate-950">
+								★ Break-Even: Mo {breakEvenMonth}
+							</text>
+						</g>
+					</g>
+				)}
+
+				{/* Hover Overlay Nodes */}
+				{data.map((pt, idx) => {
+					const cx = xScale(pt.month);
+					const cyLocal = yScale(pt.netLocal);
+					const cyCloud = yScale(pt.cloud);
+
+					return (
+						<g key={pt.month} onMouseEnter={() => setHoverIndex(idx)} className="cursor-pointer">
+							<rect x={cx - 10} y={padding.top} width="20" height={chartHeight} fill="transparent" />
+							{hoverIndex === idx && (
+								<line x1={cx} y1={padding.top} x2={cx} y2={height - padding.bottom} stroke="rgba(255,255,255,0.3)" strokeDasharray="2 2" />
+							)}
+							<circle cx={cx} cy={cyLocal} r={hoverIndex === idx ? "5" : "3"} fill="#10b981" />
+							<circle cx={cx} cy={cyCloud} r={hoverIndex === idx ? "5" : "3"} fill="#22d3ee" />
+						</g>
+					);
+				})}
+			</svg>
+
+			{/* Interactive Hover Tooltip Card */}
+			{activePoint ? (
+				<div className="mt-3 panel-soft rounded-xl p-3 border border-slate-700 bg-slate-950/90 text-xs font-mono flex flex-wrap justify-between items-center gap-4">
+					<span className="text-white font-bold">Month {activePoint.month}</span>
+					<span className="text-emerald-400">Local Net TCO: {formatCurrency(activePoint.netLocal)}</span>
+					<span className="text-cyan-400">Cloud TCO: {formatCurrency(activePoint.cloud)}</span>
+					<span className="text-amber-400">
+						{activePoint.cloud > activePoint.netLocal
+							? `Local Net Savings: ${formatCurrency(activePoint.cloud - activePoint.netLocal)}`
+							: `Cloud Net Savings: ${formatCurrency(activePoint.netLocal - activePoint.cloud)}`}
+					</span>
+				</div>
+			) : (
+				<p className="mt-2 text-center text-[11px] font-mono text-slate-500">Hover over any month on the chart to inspect cumulative expenditure details.</p>
+			)}
 		</div>
 	);
 }

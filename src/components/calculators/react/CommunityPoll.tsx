@@ -45,54 +45,54 @@ export default function CommunityPoll({ occupationCode }: Props) {
 	const disagreePct = 100 - agreePct;
 
 	return (
-		<div class="mt-4 rounded-2xl border border-white/5 bg-slate-900/30 p-4">
+		<div className="mt-4 rounded-2xl border border-white/5 bg-slate-900/30 p-4">
 			{!hasVoted ? (
-				<div class="space-y-4">
-					<p class="text-sm leading-6 text-slate-300">
+				<div className="space-y-4">
+					<p className="text-sm leading-6 text-slate-300">
 						Do you agree with the AI automation risk score calculated for this occupation?
 					</p>
-					<div class="flex gap-3">
+					<div className="flex gap-3">
 						<button
 							onClick={() => handleVote('agree')}
-							class="flex-1 rounded-xl border border-cyan-500/30 bg-cyan-950/20 py-2.5 text-xs font-semibold text-cyan-300 transition hover:bg-cyan-500 hover:text-slate-950"
+							className="flex-1 rounded-xl border border-cyan-500/30 bg-cyan-950/20 py-2.5 text-xs font-semibold text-cyan-300 transition hover:bg-cyan-500 hover:text-slate-950"
 						>
 							Yes, accurate
 						</button>
 						<button
 							onClick={() => handleVote('disagree')}
-							class="flex-1 rounded-xl border border-red-500/30 bg-red-950/20 py-2.5 text-xs font-semibold text-red-300 transition hover:bg-red-500 hover:text-slate-950"
+							className="flex-1 rounded-xl border border-red-500/30 bg-red-950/20 py-2.5 text-xs font-semibold text-red-300 transition hover:bg-red-500 hover:text-slate-950"
 						>
 							No, off target
 						</button>
 					</div>
 				</div>
 			) : (
-				<div class="space-y-4">
-					<p class="text-xs font-mono tracking-wider uppercase text-slate-400">Poll Results</p>
+				<div className="space-y-4">
+					<p className="text-xs font-mono tracking-wider uppercase text-slate-400">Poll Results</p>
 					
-					<div class="space-y-3">
+					<div className="space-y-3">
 						<div>
-							<div class="flex justify-between text-xs text-slate-300">
-								<span class="font-medium">Accurate Risk Rating</span>
-								<span class="font-mono">{agreePct}%</span>
+							<div className="flex justify-between text-xs text-slate-300">
+								<span className="font-medium">Accurate Risk Rating</span>
+								<span className="font-mono">{agreePct}%</span>
 							</div>
-							<div class="mt-1.5 h-1.5 w-full rounded-full bg-slate-800">
-								<div class="h-full rounded-full bg-cyan-500" style={{ width: `${agreePct}%` }}></div>
+							<div className="mt-1.5 h-1.5 w-full rounded-full bg-slate-800">
+								<div className="h-full rounded-full bg-cyan-500" style={{ width: `${agreePct}%` }}></div>
 							</div>
 						</div>
 						
 						<div>
-							<div class="flex justify-between text-xs text-slate-300">
-								<span class="font-medium">Off Target</span>
-								<span class="font-mono">{disagreePct}%</span>
+							<div className="flex justify-between text-xs text-slate-300">
+								<span className="font-medium">Off Target</span>
+								<span className="font-mono">{disagreePct}%</span>
 							</div>
-							<div class="mt-1.5 h-1.5 w-full rounded-full bg-slate-800">
-								<div class="h-full rounded-full bg-red-500" style={{ width: `${disagreePct}%` }}></div>
+							<div className="mt-1.5 h-1.5 w-full rounded-full bg-slate-800">
+								<div className="h-full rounded-full bg-red-500" style={{ width: `${disagreePct}%` }}></div>
 							</div>
 						</div>
 					</div>
 
-					<p class="text-[0.7rem] italic text-slate-500 text-center">
+					<p className="text-[0.7rem] italic text-slate-500 text-center">
 						You voted: {userChoice === 'agree' ? 'Accurate' : 'Off Target'}. Thanks for participating!
 					</p>
 				</div>
