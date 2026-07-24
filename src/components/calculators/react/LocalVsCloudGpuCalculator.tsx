@@ -419,9 +419,8 @@ export default function LocalVsCloudGpuCalculator() {
 
 		for (let m = 0; m <= maxSearchMonths; m++) {
 			const cumGrossLocal = hardwareCost + (monthlyLocalPowerAndMaint * m);
-			// Pro-rated resale value credit over 36 months (salvage value applies after 36 months)
-			const cumResaleCredit = (Math.min(m, 36) / 36) * resaleValue;
-			const cumNetLocal = Math.max(0, cumGrossLocal - cumResaleCredit);
+			// Net Local TCO: Net CapEx (Hardware - Salvage Credit) + Monthly OpEx (Electricity & Maintenance)
+			const cumNetLocal = Math.max(0, (hardwareCost - resaleValue) + (monthlyLocalPowerAndMaint * m));
 			const cumCloud = m * monthlyCloudTotal;
 
 			if (m > 0 && cumCloud >= cumNetLocal && breakEvenMonthFound === Infinity) {
@@ -439,8 +438,7 @@ export default function LocalVsCloudGpuCalculator() {
 		const monthlyData = [];
 		for (let m = 0; m <= chartMaxMonths; m++) {
 			const cumGrossLocal = hardwareCost + (monthlyLocalPowerAndMaint * m);
-			const cumResaleCredit = (Math.min(m, 36) / 36) * resaleValue;
-			const cumNetLocal = Math.max(0, cumGrossLocal - cumResaleCredit);
+			const cumNetLocal = Math.max(0, (hardwareCost - resaleValue) + (monthlyLocalPowerAndMaint * m));
 			const cumCloud = m * monthlyCloudTotal;
 
 			monthlyData.push({
@@ -448,7 +446,7 @@ export default function LocalVsCloudGpuCalculator() {
 				grossLocal: cumGrossLocal,
 				netLocal: cumNetLocal,
 				cloud: cumCloud,
-				resaleCredit: cumResaleCredit
+				resaleCredit: resaleValue
 			});
 		}
 
