@@ -344,9 +344,10 @@ export default function LocalVsCloudGpuCalculator() {
 	const [storageSizeGb, setStorageSizeGb] = useState<number>(100);
 	const [systemCost, setSystemCost] = useState<number>(1000);
 
-	// Multi-GPU & Resale Value States
+	// Multi-GPU, Resale Value & Cost of Capital States
 	const [cloudGpuCount, setCloudGpuCount] = useState<number>(1);
 	const [resalePercent, setResalePercent] = useState<number>(20); // 20% after 3 years
+	const [costOfCapitalPercent, setCostOfCapitalPercent] = useState<number>(5); // 5% annual opportunity cost of capital
 
 	// 2. Selection States
 	const [selectedGpuId, setSelectedGpuId] = useState<string>('rtx-pro-6000-blackwell');
@@ -394,7 +395,10 @@ export default function LocalVsCloudGpuCalculator() {
 		const electricityCost = totalHours * totalPowerDrawKw * electricityRate;
 		const maintenanceCost = hardwareCost * 0.05 * (timePeriodMonths / 12); // 5% maintenance budget per year
 		
-		const grossLocalTco = hardwareCost + electricityCost + maintenanceCost;
+		// Cost of Capital / Opportunity Cost of Upfront CapEx
+		const opportunityCost = hardwareCost * (costOfCapitalPercent / 100) * (timePeriodMonths / 12);
+
+		const grossLocalTco = hardwareCost + electricityCost + maintenanceCost + opportunityCost;
 
 		// Resale Value (Salvage Credit)
 		const resaleValue = activeGpu.cost * (resalePercent / 100);
@@ -409,8 +413,8 @@ export default function LocalVsCloudGpuCalculator() {
 		const cloudTco = cloudUsageCost + cloudStorageCost;
 		const cloudCostPerHour = totalHours > 0 ? cloudTco / totalHours : 0;
 
-		// Monthly rates for time series & break-even calculation
-		const monthlyLocalPowerAndMaint = (monthlyHours * totalPowerDrawKw * electricityRate) + (hardwareCost * 0.05 / 12);
+		// Monthly rates for time series & break-even calculation (power + maint + opportunity cost)
+		const monthlyLocalPowerAndMaint = (monthlyHours * totalPowerDrawKw * electricityRate) + (hardwareCost * 0.05 / 12) + (hardwareCost * (costOfCapitalPercent / 100) / 12);
 		const monthlyCloudTotal = (monthlyHours * effectiveCloudRate) + (storageSizeGb * activeProvider.storageRate);
 
 		// Search for Break-Even month up to 84 months (7 years)
@@ -463,6 +467,7 @@ export default function LocalVsCloudGpuCalculator() {
 			hardwareCost,
 			electricityCost,
 			maintenanceCost,
+			opportunityCost,
 			grossLocalTco,
 			resaleValue,
 			netLocalTco,
@@ -742,6 +747,42 @@ export default function LocalVsCloudGpuCalculator() {
 						</p>
 					</div>
 
+					{/* Annual Cost of Capital / Opportunity Cost (%) Slider */}
+					<div className="space-y-2 border-t border-slate-800/60 [.light_&]:border-slate-200/80 pt-4">
+						<div className="flex justify-between items-center text-sm font-semibold text-slate-300">
+							<span>Cost of Capital / Interest Rate (%/yr)</span>
+							<div className="flex items-center gap-0.5 bg-slate-950/60 [.light_&]:bg-white rounded-lg px-2 py-0.5 border border-slate-800/80 [.light_&]:border-slate-200 focus-within:border-cyan-500/50">
+								<input
+									type="number"
+									min="0"
+									max="15"
+									step="0.5"
+									value={costOfCapitalPercent}
+									onChange={(e) => setCostOfCapitalPercent(Math.min(15, Math.max(0, Number(e.target.value))))}
+									className="w-10 bg-transparent text-right font-mono text-sm font-semibold text-amber-400 focus:outline-none border-none p-0"
+								/>
+								<span className="text-xs text-slate-500 font-mono">%</span>
+							</div>
+						</div>
+						<input
+							type="range"
+							min="0"
+							max="15"
+							step="0.5"
+							value={costOfCapitalPercent}
+							onChange={(e) => setCostOfCapitalPercent(Number(e.target.value))}
+							className="w-full h-2 bg-slate-950 [.light_&]:bg-slate-200 rounded-lg appearance-none cursor-pointer accent-amber-400 border border-slate-800 [.light_&]:border-slate-300"
+						/>
+						<div className="flex justify-between text-[10px] text-slate-500 font-mono">
+							<span>0% (Cash/Zero cost)</span>
+							<span>5% (Treasury Yield)</span>
+							<span>15% (High Debt/WACC)</span>
+						</div>
+						<p className="text-[11px] text-amber-400 font-mono mt-1">
+							Opportunity Cost of Locked CapEx: +{formatCurrency(calculations.opportunityCost)} over {timePeriodMonths} mo
+						</p>
+					</div>
+
 					{/* System components price slider */}
 					<div className="space-y-2 border-t border-slate-800/60 [.light_&]:border-slate-200/80 pt-4">
 						<div className="flex justify-between items-center text-sm font-semibold text-slate-300">
@@ -951,6 +992,12 @@ export default function LocalVsCloudGpuCalculator() {
 							<span>Maintenance budget:</span>
 							<span className="font-mono text-white">{formatCurrency(calculations.maintenanceCost)}</span>
 						</div>
+						{costOfCapitalPercent > 0 && (
+							<div className="flex justify-between text-sm text-amber-400">
+								<span>Cost of Capital ({costOfCapitalPercent}%/yr):</span>
+								<span className="font-mono">+{formatCurrency(calculations.opportunityCost)}</span>
+							</div>
+						)}
 						<div className="flex justify-between text-sm text-emerald-400">
 							<span>Less 3-Yr Resale ({resalePercent}%):</span>
 							<span className="font-mono">-{formatCurrency(calculations.resaleValue)}</span>
