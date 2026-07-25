@@ -1305,11 +1305,30 @@ function GpuBreakEvenChart({
 			if (d.cloud > maxVal) maxVal = d.cloud;
 			if (d.grossLocal > maxVal) maxVal = d.grossLocal;
 		});
-		return Math.max(maxVal * 1.1, 1000);
+		return Math.max(maxVal * 1.05, 1000);
 	}, [data]);
 
+	// Clean round Y-axis tick intervals
+	const { yTicks, yMax } = useMemo(() => {
+		let step = 1000;
+		if (maxCost > 100000) step = 20000;
+		else if (maxCost > 50000) step = 10000;
+		else if (maxCost > 20000) step = 5000;
+		else if (maxCost > 10000) step = 2000;
+		else if (maxCost > 4000) step = 1000;
+		else if (maxCost > 1500) step = 500;
+		else step = 250;
+
+		const ceiling = Math.ceil(maxCost / step) * step;
+		const ticks = [];
+		for (let v = 0; v <= ceiling; v += step) {
+			ticks.push(v);
+		}
+		return { yTicks: ticks, yMax: ceiling };
+	}, [maxCost]);
+
 	const xScale = (m: number) => padding.left + (m / Math.max(1, maxMonths)) * chartWidth;
-	const yScale = (val: number) => padding.top + chartHeight - (val / Math.max(1, maxCost)) * chartHeight;
+	const yScale = (val: number) => padding.top + chartHeight - (val / Math.max(1, yMax)) * chartHeight;
 
 	// SVG Path generation
 	const localPath = useMemo(() => {
@@ -1318,7 +1337,7 @@ function GpuBreakEvenChart({
 			const y = yScale(point.netLocal);
 			return idx === 0 ? `M ${x.toFixed(1)} ${y.toFixed(1)}` : `${acc} L ${x.toFixed(1)} ${y.toFixed(1)}`;
 		}, '');
-	}, [data, maxMonths, maxCost]);
+	}, [data, maxMonths, yMax]);
 
 	const cloudPath = useMemo(() => {
 		return data.reduce((acc, point, idx) => {
@@ -1326,7 +1345,7 @@ function GpuBreakEvenChart({
 			const y = yScale(point.cloud);
 			return idx === 0 ? `M ${x.toFixed(1)} ${y.toFixed(1)}` : `${acc} L ${x.toFixed(1)} ${y.toFixed(1)}`;
 		}, '');
-	}, [data, maxMonths, maxCost]);
+	}, [data, maxMonths, yMax]);
 
 	// Break-even coordinates
 	const breakEvenX = Number.isFinite(breakEvenMonth) && breakEvenMonth <= maxMonths ? xScale(breakEvenMonth) : null;
@@ -1339,14 +1358,14 @@ function GpuBreakEvenChart({
 		<div className="relative w-full overflow-hidden">
 			<svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto overflow-visible select-none">
 				{/* Horizontal Gridlines & Y-Axis Labels */}
-				{[0, 0.25, 0.5, 0.75, 1].map((ratio) => {
-					const val = maxCost * ratio;
+				{yTicks.map((val) => {
 					const y = yScale(val);
+					const label = val === 0 ? '$0' : val >= 1000 ? (val % 1000 === 0 ? `$${val / 1000}k` : `$${(val / 1000).toFixed(1)}k`) : `$${val}`;
 					return (
-						<g key={ratio}>
+						<g key={val}>
 							<line x1={padding.left} y1={y} x2={width - padding.right} y2={y} stroke="rgba(255,255,255,0.08)" strokeDasharray="4 4" />
 							<text x={padding.left - 10} y={y + 4} textAnchor="end" className="text-[10px] font-mono fill-slate-400">
-								${(val / 1000).toFixed(0)}k
+								{label}
 							</text>
 						</g>
 					);
