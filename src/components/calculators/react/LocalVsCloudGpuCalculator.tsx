@@ -489,13 +489,13 @@ export default function LocalVsCloudGpuCalculator() {
 	return (
 		<>
 			{/* Preset Comparison Banner */}
-			<div className="mb-8 panel-soft rounded-[2rem] p-6 border border-cyan-500/25 bg-gradient-to-r from-cyan-950/40 via-slate-900/60 to-purple-950/40 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+			<div className="mb-8 panel-soft rounded-[2rem] p-6 border border-cyan-500/25 [.light_&]:border-cyan-300 bg-gradient-to-r from-cyan-950/40 via-slate-900/60 to-purple-950/40 [.light_&]:bg-gradient-to-r [.light_&]:from-cyan-100/90 [.light_&]:via-slate-100 [.light_&]:to-purple-100/90 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
 				<div>
 					<div className="flex items-center gap-2">
 						<span className="text-lg">⚡</span>
-						<h3 className="text-base font-bold text-white">Compare Blackwell 96GB vs Cloud Renting Options</h3>
+						<h3 className="text-base font-bold text-white [.light_&]:text-slate-900">Compare Blackwell 96GB vs Cloud Renting Options</h3>
 					</div>
-					<p className="text-xs text-slate-400 mt-1">Quick-load 1x RTX Pro 6000 Blackwell (96GB) against 1x 96GB Cloud GPU or 2x RTX 6000 Ada (48GB x 2 = 96GB pooled).</p>
+					<p className="text-xs text-slate-400 [.light_&]:text-slate-700 font-medium mt-1">Quick-load 1x RTX Pro 6000 Blackwell (96GB) against 1x 96GB Cloud GPU or 2x RTX 6000 Ada (48GB x 2 = 96GB pooled).</p>
 				</div>
 				<div className="flex flex-wrap gap-2.5 w-full md:w-auto shrink-0">
 					<button
@@ -508,7 +508,7 @@ export default function LocalVsCloudGpuCalculator() {
 					<button
 						type="button"
 						onClick={() => applyPreset('blackwell-vs-2x-ada')}
-						className="px-4 py-2.5 rounded-xl text-xs font-bold bg-purple-500 text-white hover:bg-purple-400 transition shadow-md shadow-purple-500/20 cursor-pointer"
+						className="px-4 py-2.5 rounded-xl text-xs font-bold bg-purple-600 text-white hover:bg-purple-500 transition shadow-md shadow-purple-500/20 cursor-pointer"
 					>
 						1x Blackwell (96GB) vs 2x RTX 6000 Ada (96GB Pooled)
 					</button>
@@ -1038,40 +1038,66 @@ export default function LocalVsCloudGpuCalculator() {
 				<div 
 					className={`panel-soft rounded-[2rem] transition duration-300 border-2 ${
 						calculations.localWins 
-							? 'border-emerald-500 bg-gradient-to-br from-emerald-950/60 via-slate-950/80 to-emerald-900/40 shadow-[0_0_40px_rgba(16,185,129,0.25)]' 
-							: 'border-cyan-500 bg-gradient-to-br from-cyan-950/60 via-slate-950/80 to-cyan-900/40 shadow-[0_0_40px_rgba(34,211,238,0.25)]'
+							? 'border-emerald-500 [.light_&]:border-emerald-400 bg-gradient-to-br from-emerald-950/60 via-slate-950/80 to-emerald-900/40 [.light_&]:bg-gradient-to-br [.light_&]:from-emerald-50 [.light_&]:via-white [.light_&]:to-emerald-100/60 shadow-[0_0_40px_rgba(16,185,129,0.25)] [.light_&]:shadow-md' 
+							: 'border-cyan-500 [.light_&]:border-cyan-400 bg-gradient-to-br from-cyan-950/60 via-slate-950/80 to-cyan-900/40 [.light_&]:bg-gradient-to-br [.light_&]:from-cyan-50 [.light_&]:via-white [.light_&]:to-cyan-100/60 shadow-[0_0_40px_rgba(34,211,238,0.25)] [.light_&]:shadow-md'
 					}`}
 				>
 					<div className="p-6 sm:p-8">
 						<span className={`inline-flex rounded-full px-3 py-1 font-mono text-[0.68rem] uppercase tracking-[0.24em] font-bold ${
 							calculations.localWins 
-								? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' 
-								: 'bg-cyan-500/10 text-cyan-400 border border-cyan-500/20'
+								? 'bg-emerald-500/10 text-emerald-400 [.light_&]:text-emerald-800 [.light_&]:bg-emerald-100 border border-emerald-500/20 [.light_&]:border-emerald-300' 
+								: 'bg-cyan-500/10 text-cyan-400 [.light_&]:text-cyan-800 [.light_&]:bg-cyan-100 border border-cyan-500/20 [.light_&]:border-cyan-300'
 						}`}>
 							{calculations.localWins ? '🏠 Local Wins!' : '☁️ Cloud Wins!'}
 						</span>
 
-						<h3 className="mt-4 text-3xl font-extrabold text-white leading-tight">
+						<h3 className="mt-4 text-3xl font-extrabold text-white [.light_&]:text-slate-900 leading-tight">
 							{calculations.localWins 
 								? `Local saves ${formatCurrency(calculations.netSavings)}` 
 								: `Cloud saves ${formatCurrency(calculations.netSavings)}`
 							}
 						</h3>
 
-						<p className="mt-3 text-sm leading-6 text-slate-300">
+						<p className="mt-3 text-sm leading-6 text-slate-300 [.light_&]:text-slate-700 font-medium">
 							{calculations.localWins 
 								? `Local hardware pays off after ${Number.isFinite(calculations.breakEvenMonths) ? `${calculations.breakEvenMonths} months` : 'Never'}.`
 								: 'Renting on demand prevents costly hardware depreciation and upfront CapEx.'
 							}
 						</p>
+
+						{/* Direct Provider Link CTA inside Verdict Box */}
+						<div className="mt-6 pt-5 border-t border-white/10 [.light_&]:border-slate-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+							<div>
+								<span className="text-[10px] text-slate-400 [.light_&]:text-slate-600 uppercase tracking-wider font-mono font-bold block">Selected Cloud Provider</span>
+								<div className="flex items-center gap-2 mt-0.5">
+									<span className="text-sm font-bold text-white [.light_&]:text-slate-900">{activeProvider.providerName}</span>
+									<span className="text-xs text-slate-400 [.light_&]:text-slate-600 font-mono">({cloudGpuCount}x {activeProvider.gpuModel})</span>
+								</div>
+							</div>
+							<a
+								href={activeProvider.affiliateUrl}
+								target="_blank"
+								rel="noopener noreferrer"
+								className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition shadow-md cursor-pointer shrink-0 ${
+									calculations.localWins
+										? 'bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-emerald-500/20'
+										: 'bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-cyan-500/20'
+								}`}
+							>
+								<span>{activeProvider.ctaText || `Deploy on ${activeProvider.providerName}`}</span>
+								<svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 6H6a2 2 2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+								</svg>
+							</a>
+						</div>
 					</div>
 				</div>
 
 				{/* Recommendation & Metrics Widgets */}
 				<div className="grid grid-cols-2 gap-4">
 					<div className="panel-soft rounded-[1.5rem] p-5">
-						<p className="text-xs text-slate-500 font-medium">Break-Even Point</p>
-						<p className="text-2xl font-black text-white mt-1.5 font-mono">
+						<p className="text-xs text-slate-500 [.light_&]:text-slate-600 font-medium">Break-Even Point</p>
+						<p className="text-2xl font-black text-white [.light_&]:text-slate-900 mt-1.5 font-mono">
 							{Number.isFinite(calculations.breakEvenMonths)
 								? calculations.breakEvenMonths > 12
 									? `Mo ${calculations.breakEvenMonths} (${(calculations.breakEvenMonths / 12).toFixed(1)} yrs)`
@@ -1080,8 +1106,8 @@ export default function LocalVsCloudGpuCalculator() {
 						</p>
 					</div>
 					<div className="panel-soft rounded-[1.5rem] p-5">
-						<p className="text-xs text-slate-500 font-medium">Resale Value Recovery</p>
-						<p className="text-2xl font-black text-emerald-400 mt-1.5 font-mono">
+						<p className="text-xs text-slate-500 [.light_&]:text-slate-600 font-medium">Resale Value Recovery</p>
+						<p className="text-2xl font-black text-emerald-400 [.light_&]:text-emerald-600 mt-1.5 font-mono">
 							{formatCurrency(calculations.resaleValue)}
 						</p>
 					</div>
@@ -1090,22 +1116,22 @@ export default function LocalVsCloudGpuCalculator() {
 		</div>
 
 		{/* Interactive Break-Even & Renting vs Owning Chart Section */}
-		<div className="mt-12 panel-soft rounded-[2rem] p-6 lg:p-8 space-y-6 border border-slate-800">
+		<div className="mt-12 panel-soft rounded-[2rem] p-6 lg:p-8 space-y-6 border border-slate-800 [.light_&]:border-slate-200">
 			<div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
 				<div>
-					<h3 className="text-2xl font-bold text-white">Renting vs. Owning Cumulative Cost Timeline</h3>
-					<p className="text-slate-400 text-xs mt-1">
+					<h3 className="text-2xl font-bold text-white [.light_&]:text-slate-900">Renting vs. Owning Cumulative Cost Timeline</h3>
+					<p className="text-slate-400 [.light_&]:text-slate-600 text-xs mt-1">
 						Graph of cumulative expenditures over time (0 to 36 months). Intersecting lines graphically highlight the exact Break-Even point.
 					</p>
 				</div>
 				<div className="flex items-center gap-4 text-xs font-mono">
 					<div className="flex items-center gap-2">
 						<span className="w-3 h-3 rounded-full bg-emerald-400 inline-block shadow-[0_0_8px_#10b981]"></span>
-						<span className="text-slate-300">Local Owning Net TCO</span>
+						<span className="text-slate-300 [.light_&]:text-slate-700">Local Owning Net TCO</span>
 					</div>
 					<div className="flex items-center gap-2">
 						<span className="w-3 h-3 rounded-full bg-cyan-400 inline-block shadow-[0_0_8px_#22d3ee]"></span>
-						<span className="text-slate-300">Cloud Renting ({cloudGpuCount}x)</span>
+						<span className="text-slate-300 [.light_&]:text-slate-700">Cloud Renting ({cloudGpuCount}x)</span>
 					</div>
 				</div>
 			</div>
@@ -1120,8 +1146,8 @@ export default function LocalVsCloudGpuCalculator() {
 		{/* Interactive Cloud GPU Directory Section */}
 		<div className="mt-12 border-t border-slate-800/80 [.light_&]:border-slate-200 pt-12 space-y-8">
 			<div>
-				<h3 className="text-2xl font-bold text-white sm:text-3xl">Cloud GPU Directory & Price Explorer</h3>
-				<p className="text-slate-400 text-sm mt-2">
+				<h3 className="text-2xl font-bold text-white [.light_&]:text-slate-900 sm:text-3xl">Cloud GPU Directory & Price Explorer</h3>
+				<p className="text-slate-400 [.light_&]:text-slate-600 text-sm mt-2">
 					Filter and search through detailed specifications, egress policies, storage costs, and hourly rates of 12 major cloud GPU services. Click "Compare" on any GPU configuration to load it into the TCO calculator above.
 				</p>
 			</div>
@@ -1213,53 +1239,53 @@ function CloudGpuDirectory({
 					</div>
 				) : (
 					filteredProviders.map(p => (
-						<div key={p.id} className="panel-soft rounded-[2rem] border border-slate-850 bg-slate-900/30 p-6 lg:p-8 space-y-6 transition duration-200 hover:border-slate-800/80">
+						<div key={p.id} className="panel-soft rounded-[2rem] border border-slate-850 bg-slate-900/30 p-6 lg:p-8 space-y-6 transition duration-200 hover:border-slate-800/80 [.light_&]:bg-white [.light_&]:border-slate-200">
 							{/* Provider header info */}
-							<div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800/60 pb-5">
+							<div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800/60 [.light_&]:border-slate-200 pb-5">
 								<div className="space-y-2">
 									<div className="flex items-center gap-3">
-										<h4 className="text-xl font-bold text-white">{p.name}</h4>
+										<h4 className="text-xl font-bold text-white [.light_&]:text-slate-900">{p.name}</h4>
 										<span className={`text-[9px] uppercase tracking-widest font-mono font-bold px-2.5 py-0.5 rounded-full ${
 											p.type === 'Enterprise'
-												? 'bg-purple-500/10 text-purple-400 border border-purple-500/20'
+												? 'bg-purple-500/10 text-purple-400 [.light_&]:text-purple-700 [.light_&]:bg-purple-100 border border-purple-500/20 [.light_&]:border-purple-300'
 												: p.type === 'Decentralized'
-													? 'bg-amber-500/10 text-amber-400 border border-amber-500/20'
-													: 'bg-cyan-500/10 text-cyan-400 border border-cyan-500/20'
+													? 'bg-amber-500/10 text-amber-400 [.light_&]:text-amber-700 [.light_&]:bg-amber-100 border border-amber-500/20 [.light_&]:border-amber-300'
+													: 'bg-cyan-500/10 text-cyan-400 [.light_&]:text-cyan-700 [.light_&]:bg-cyan-100 border border-cyan-500/20 [.light_&]:border-cyan-300'
 										}`}>
 											{p.type}
 										</span>
 									</div>
-									<p className="text-xs text-slate-400 max-w-3xl leading-5">{p.description}</p>
+									<p className="text-xs text-slate-400 [.light_&]:text-slate-600 max-w-3xl leading-5">{p.description}</p>
 								</div>
 
 								<a
 									href={p.affiliateUrl}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="inline-flex items-center justify-center px-4 py-2 text-xs font-bold text-cyan-300 hover:text-cyan-200 border border-cyan-500/30 hover:border-cyan-500/50 bg-cyan-950/20 rounded-xl transition"
+									className="inline-flex items-center justify-center px-4 py-2 text-xs font-bold text-cyan-300 [.light_&]:text-cyan-700 hover:text-cyan-200 border border-cyan-500/30 [.light_&]:border-cyan-300 hover:border-cyan-500/50 bg-cyan-950/20 [.light_&]:bg-cyan-50 rounded-xl transition"
 								>
 									{p.ctaText || 'Visit site →'}
 								</a>
 							</div>
 
 							{/* Provider specs meta */}
-							<div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono text-slate-400">
-								<div className="bg-slate-950/45 p-3.5 rounded-xl border border-slate-900">
-									<span className="text-[10px] text-slate-500 uppercase tracking-wider block">Billing Unit</span>
-									<span className="text-slate-200 mt-1 block">{p.billingUnit}</span>
+							<div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono text-slate-400 [.light_&]:text-slate-600">
+								<div className="bg-slate-950/45 [.light_&]:bg-slate-50 p-3.5 rounded-xl border border-slate-900 [.light_&]:border-slate-200">
+									<span className="text-[10px] text-slate-500 [.light_&]:text-slate-600 uppercase tracking-wider block">Billing Unit</span>
+									<span className="text-slate-200 [.light_&]:text-slate-900 mt-1 block font-bold">{p.billingUnit}</span>
 								</div>
-								<div className="bg-slate-950/45 p-3.5 rounded-xl border border-slate-900">
-									<span className="text-[10px] text-slate-500 uppercase tracking-wider block">Network Egress</span>
-									<span className="text-emerald-400 mt-1 block">{p.egress}</span>
+								<div className="bg-slate-950/45 [.light_&]:bg-slate-50 p-3.5 rounded-xl border border-slate-900 [.light_&]:border-slate-200">
+									<span className="text-[10px] text-slate-500 [.light_&]:text-slate-600 uppercase tracking-wider block">Network Egress</span>
+									<span className="text-emerald-400 [.light_&]:text-emerald-600 mt-1 block font-bold">{p.egress}</span>
 								</div>
-								<div className="bg-slate-950/45 p-3.5 rounded-xl border border-slate-900">
-									<span className="text-[10px] text-slate-500 uppercase tracking-wider block">Storage Cost</span>
-									<span className="text-cyan-400 mt-1 block">{p.storageCost}</span>
+								<div className="bg-slate-950/45 [.light_&]:bg-slate-50 p-3.5 rounded-xl border border-slate-900 [.light_&]:border-slate-200">
+									<span className="text-[10px] text-slate-500 [.light_&]:text-slate-600 uppercase tracking-wider block">Storage Cost</span>
+									<span className="text-cyan-400 [.light_&]:text-cyan-600 mt-1 block font-bold">{p.storageCost}</span>
 								</div>
 							</div>
 
 							{/* GPU Configs Table/List */}
-							<div className="overflow-x-auto rounded-xl border border-slate-800/80 bg-slate-950/30">
+							<div className="overflow-x-auto rounded-xl border border-slate-800/80 bg-slate-950/30 [.light_&]:bg-slate-50 [.light_&]:border-slate-200">
 								<table className="w-full text-left border-collapse min-w-[600px]">
 									<thead>
 										<tr className="border-b border-slate-800/80 bg-slate-950/50 text-[10px] font-mono uppercase tracking-wider text-slate-500">
