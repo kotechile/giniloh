@@ -701,37 +701,40 @@ export default function MoneyFlowSimulator() {
 				</span>
 			</div>
 
-			{/* Main Simulator Dashboard */}
-			<div className="overflow-hidden rounded-2xl border border-gray-200 bg-slate-900 p-4 md:p-6 shadow-xl [.light_&]:border-slate-200 [.light_&]:bg-white">
-				<div className="flex flex-wrap items-center justify-between gap-6 pb-6 border-b border-slate-200 dark:border-gray-200">
+			{/* Main Simulator Dashboard - Unboxed */}
+			<div className="w-full bg-white py-6">
+				<div className="flex flex-wrap items-center justify-between gap-6 pb-6 border-b border-[#E5E5E5]">
 					<div>
-						<p className="font-mono text-xs uppercase tracking-[0.28em] text-[#5A7A8F] [.light_&]:text-cyan-600">
+						<p className="font-mono text-xs uppercase tracking-[0.28em] text-[#5A7A8F]">
 							{isEnterprise ? 'SPV Waterfall Cash Simulator' : 'High-Fidelity Backtesting & AI Engine'}
 						</p>
-						<h2 className="mt-2 text-2xl font-bold tracking-tight text-[#1A1A1A] [.light_&]:text-slate-900">
+						<h2 className="mt-2 text-2xl font-black tracking-tight text-[#1A1A1A]">
 							{isEnterprise ? 'Enterprise CFO Controls' : 'System Flow Control'}
 						</h2>
 					</div>
 					
-					{/* Status Stats */}
-					<div className="flex flex-wrap gap-3 text-left">
-						<div className="rounded-lg border border-slate-700 bg-gray-200/80 px-4 py-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
-							<span className="block font-mono text-[9px] uppercase tracking-widest text-[#8C8C8C]">Macro Feed</span>
-							<span className="block text-sm font-bold font-sans text-[#1A1A1A] [.light_&]:text-slate-900 mt-1">Index: {currentSAndP.toFixed(2)}</span>
+					{/* Status Stats - Naked Data */}
+					<div className="flex flex-wrap items-center gap-6 text-left">
+						<div className="flex flex-col">
+							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#8C8C8C]">Macro Feed</span>
+							<span className="text-2xl font-black text-[#1A1A1A] mt-1">Index {currentSAndP.toFixed(0)}</span>
 						</div>
-						<div className="rounded-lg border border-slate-700 bg-gray-200/80 px-4 py-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
-							<span className="block font-mono text-[9px] uppercase tracking-widest text-[#8C8C8C]">Inflation</span>
-							<span className="block text-sm font-bold font-sans text-[#B85C5C] [.light_&]:text-red-600 mt-1">{currentInflation.toFixed(1)}%</span>
+						<div className="h-8 w-px bg-[#E5E5E5]"></div>
+						<div className="flex flex-col">
+							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#8C8C8C]">Inflation</span>
+							<span className="text-2xl font-black text-[#B85C5C] mt-1">{currentInflation.toFixed(1)}%</span>
 						</div>
-						<div className="rounded-lg border border-slate-700 bg-gray-200/80 px-4 py-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
-							<span className="block font-mono text-[9px] uppercase tracking-widest text-[#8C8C8C]">Day Count</span>
-							<span className="block text-sm font-bold font-sans text-[#1A1A1A] [.light_&]:text-slate-900 mt-1">{state.day} days</span>
+						<div className="h-8 w-px bg-[#E5E5E5]"></div>
+						<div className="flex flex-col">
+							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#8C8C8C]">Day Count</span>
+							<span className="text-2xl font-black text-[#1A1A1A] mt-1">{state.day} days</span>
 						</div>
-						<div className="rounded-lg border border-slate-700 bg-gray-200/80 px-4 py-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
-							<span className="block font-mono text-[9px] uppercase tracking-widest text-[#8C8C8C]">
-								{isEnterprise ? 'Treasury Net Position' : 'Wealth Projection'}
+						<div className="h-8 w-px bg-[#E5E5E5]"></div>
+						<div className="flex flex-col">
+							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#8C8C8C]">
+								{isEnterprise ? 'Treasury net' : 'Wealth Projection'}
 							</span>
-							<span className="block text-sm font-bold font-sans #1A1A1A [.light_&]:text-emerald-600 mt-1">
+							<span className="text-2xl font-black text-[#5A7A8F] mt-1">
 								{formatCurrency(state.totalWealthAccumulated)}
 							</span>
 						</div>
@@ -744,12 +747,10 @@ export default function MoneyFlowSimulator() {
 							onClick={() => setIsRunning(!isRunning)}
 							disabled={state.isPaused}
 							className={[
-								'py-2 px-5 rounded-lg text-xs font-mono uppercase tracking-wider transition font-bold select-none border cursor-pointer disabled:opacity-30 shadow-sm',
+								'py-2.5 px-5 rounded-lg text-xs font-mono uppercase tracking-wider transition font-bold select-none border cursor-pointer disabled:opacity-30',
 								isRunning
-									? 'bg-red-500/15 border-red-500/30 text-[#B85C5C] hover:bg-red-500/25 [.light_&]:bg-red-50 [.light_&]:border-red-200 [.light_&]:text-red-600 [.light_&]:hover:bg-red-100'
-									: isEnterprise
-										? 'bg-emerald-500/15 border-emerald-500/30 #1A1A1A hover:bg-emerald-500/25 [.light_&]:bg-emerald-50 [.light_&]:border-emerald-200 [.light_&]:text-emerald-600 [.light_&]:hover:bg-emerald-100'
-										: 'bg-cyan-500/15 border-cyan-500/30 text-[#5A7A8F] hover:bg-cyan-500/25 [.light_&]:bg-cyan-50 [.light_&]:border-cyan-200 [.light_&]:text-cyan-700 [.light_&]:hover:bg-cyan-100'
+									? 'bg-[#B85C5C] border-[#B85C5C] text-white hover:bg-[#a64e4e]'
+									: 'bg-[#1A1A1A] border-[#1A1A1A] text-white hover:bg-black'
 							].join(' ')}
 						>
 							{isRunning ? 'Pause clock' : 'Start clock'}
@@ -757,13 +758,13 @@ export default function MoneyFlowSimulator() {
 						<button
 							onClick={handleStep}
 							disabled={isRunning || state.isPaused}
-							className="py-2 px-4 rounded-lg text-xs font-mono uppercase tracking-wider border border-slate-700 bg-gray-200 hover:bg-slate-700 text-[#5E5E5E] disabled:opacity-30 cursor-pointer shadow-sm [.light_&]:border-slate-200 [.light_&]:bg-white [.light_&]:text-slate-700 [.light_&]:hover:bg-slate-50"
+							className="py-2.5 px-4 rounded-lg text-xs font-mono uppercase tracking-wider border border-[#E5E5E5] bg-white hover:border-[#1A1A1A] text-[#1A1A1A] disabled:opacity-30 cursor-pointer"
 						>
 							Step 1 day
 						</button>
 						<button
 							onClick={() => handleReset()}
-							className="py-2 px-4 rounded-lg text-xs font-mono uppercase tracking-wider border border-gray-200 bg-transparent hover:bg-slate-900 text-[#5E5E5E] cursor-pointer shadow-sm [.light_&]:border-slate-200 [.light_&]:bg-white [.light_&]:text-[#8C8C8C] [.light_&]:hover:bg-slate-50"
+							className="py-2.5 px-4 rounded-lg text-xs font-mono uppercase tracking-wider border border-[#E5E5E5] bg-white hover:border-[#1A1A1A] text-[#1A1A1A] cursor-pointer"
 						>
 							Reset
 						</button>
@@ -772,11 +773,11 @@ export default function MoneyFlowSimulator() {
 					<div className="flex flex-wrap items-center gap-6">
 						{/* Backtest Scenarios */}
 						<div className="flex items-center gap-2">
-							<span className="text-xs font-mono text-[#8C8C8C] uppercase tracking-widest">Macro Shock:</span>
+							<span className="text-xs font-mono text-[#8C8C8C] uppercase tracking-[0.2em] font-bold">Macro Shock:</span>
 							<select
 								value={state.macroScenario}
 								onChange={(e) => handleScenarioChange(e.target.value as any)}
-								className="bg-gray-200 border border-slate-700 text-[#5E5E5E] [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-slate-800 rounded-lg px-3 py-1.5 text-xs outline-none cursor-pointer shadow-sm font-medium appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2010L12%2015L17%2010%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E')] bg-[length:20px_20px] bg-no-repeat bg-[position:right_4px_center] pr-8"
+								className="bg-white border border-[#E5E5E5] text-[#1A1A1A] rounded-lg px-3 py-1.5 text-xs outline-none cursor-pointer font-medium appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2010L12%2015L17%2010%22%20stroke%3D%22%231A1A1A%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E')] bg-[length:20px_20px] bg-no-repeat bg-[position:right_4px_center] pr-8 focus:border-[#1A1A1A]"
 							>
 								<option value="baseline">Baseline Growth</option>
 								<option value="inflation">Stagflation Shock</option>
@@ -790,11 +791,11 @@ export default function MoneyFlowSimulator() {
 
 						{/* Daily speed settings */}
 						<div className="flex items-center gap-2">
-							<span className="text-xs font-mono text-[#8C8C8C] uppercase tracking-widest">Speed:</span>
+							<span className="text-xs font-mono text-[#8C8C8C] uppercase tracking-[0.2em] font-bold">Speed:</span>
 							<select
 								value={speedMs}
 								onChange={(e) => setSpeedMs(parseInt(e.target.value))}
-								className="bg-gray-200 border border-slate-700 text-[#5E5E5E] [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-slate-800 rounded-lg px-3 py-1.5 text-xs outline-none cursor-pointer shadow-sm font-medium appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2010L12%2015L17%2010%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E')] bg-[length:20px_20px] bg-no-repeat bg-[position:right_4px_center] pr-8"
+								className="bg-white border border-[#E5E5E5] text-[#1A1A1A] rounded-lg px-3 py-1.5 text-xs outline-none cursor-pointer font-medium appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2010L12%2015L17%2010%22%20stroke%3D%22%231A1A1A%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E')] bg-[length:20px_20px] bg-no-repeat bg-[position:right_4px_center] pr-8 focus:border-[#1A1A1A]"
 							>
 								<option value="800">1x (Slow)</option>
 								<option value="400">2x (Normal)</option>
@@ -804,7 +805,7 @@ export default function MoneyFlowSimulator() {
 
 						{/* Daily savings factor */}
 						<div className="flex items-center gap-2">
-							<span className="text-xs font-mono text-[#8C8C8C] uppercase tracking-widest">
+							<span className="text-xs font-mono text-[#8C8C8C] uppercase tracking-[0.2em] font-bold">
 								{isEnterprise ? 'Daily Base Revenue:' : 'Income/day:'}
 							</span>
 							<input
@@ -813,7 +814,7 @@ export default function MoneyFlowSimulator() {
 								step="10"
 								value={dailyIncome}
 								onChange={(e) => setDailyIncome(parseFloat(e.target.value) || 0)}
-								className="w-20 bg-gray-200 border border-slate-700 text-[#5E5E5E] [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-slate-800 rounded-lg px-3 py-1.5 text-xs outline-none font-mono shadow-sm"
+								className="w-20 bg-white border border-[#E5E5E5] text-[#1A1A1A] rounded-lg px-3 py-1.5 text-xs outline-none font-mono focus:border-[#1A1A1A]"
 							/>
 						</div>
 					</div>
@@ -827,6 +828,7 @@ export default function MoneyFlowSimulator() {
 					setSelectedNodeId={setSelectedNodeId}
 					onNodeUpdate={handleNodeUpdate}
 					mode={state.mode}
+					isRunning={isRunning}
 				/>
 			</div>
 

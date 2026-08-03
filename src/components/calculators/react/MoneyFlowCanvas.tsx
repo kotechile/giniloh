@@ -9,6 +9,7 @@ interface MoneyFlowCanvasProps {
 	setSelectedNodeId: (id: string | null) => void;
 	onNodeUpdate: (updatedNode: AccountNode) => void;
 	mode: 'personal' | 'enterprise';
+	isRunning?: boolean;
 }
 
 
@@ -201,7 +202,8 @@ export default function MoneyFlowCanvas({
 	selectedNodeId,
 	setSelectedNodeId,
 	onNodeUpdate,
-	mode
+	mode,
+	isRunning = false
 }: MoneyFlowCanvasProps) {
 	const selectedNode = nodes.find((n) => n.id === selectedNodeId) || null;
 	const isEnterprise = mode === 'enterprise';
@@ -325,15 +327,32 @@ export default function MoneyFlowCanvas({
 			case 'income':
 			case 'taxes_paid':
 				return { max: 1000000, step: 5000 };
-			default:
+	default:
 				return { max: 100000, step: 500 };
 		}
 	};
 
+	const getIndicatorColor = (nodeId: string, nodeType: string): string => {
+		if (
+			nodeType === 'debt' || 
+			nodeType === 'expense' || 
+			nodeId === 'expenses' || 
+			nodeId === 'debt' || 
+			nodeId === 'payables' || 
+			nodeId === 'cogs' || 
+			nodeId === 'hr_costs' || 
+			nodeId === 'taxes_paid' || 
+			nodeId === 'corp_taxes'
+		) {
+			return '#B85C5C'; // Muted Brick
+		}
+		return '#5A7A8F'; // Steel Blue
+	};
+
 	return (
-		<div ref={containerRef} className="relative w-full rounded-2xl border border-[#E5E5E5] bg-white p-2 md:p-6 overflow-hidden min-h-[600px]">
+		<div ref={containerRef} className="relative w-full overflow-hidden min-h-[600px] py-4 bg-white">
 			{/* Floating Zoom Controls */}
-			<div className="absolute top-4 right-4 z-40 flex items-center gap-1 bg-slate-900/90 border border-gray-200 rounded-lg p-1 shadow-lg backdrop-blur-md text-xs font-mono select-none [.light_&]:bg-white/90 [.light_&]:border-slate-200">
+			<div className="absolute top-4 right-4 z-40 flex items-center gap-1 bg-white border border-[#E5E5E5] rounded-lg p-1 text-xs font-mono select-none">
 				<button 
 					onClick={() => setZoom(z => Math.max(0.4, parseFloat((z - 0.1).toFixed(1))))}
 					className="px-2 py-1 hover:bg-gray-200 rounded cursor-pointer text-[#5E5E5E] hover:text-[#1A1A1A] [.light_&]:text-[#8C8C8C] [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-black font-bold"
@@ -361,15 +380,12 @@ export default function MoneyFlowCanvas({
 				</button>
 				<button 
 					onClick={handleZoomFit}
-					className="px-1.5 py-1 hover:bg-gray-200 rounded cursor-pointer text-[#5A7A8F] hover:#5A7A8F [.light_&]:text-blue-600 [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-blue-700 font-medium"
+					className="px-1.5 py-1 hover:bg-gray-200 rounded cursor-pointer text-[#5A7A8F] hover:text-[#5A7A8F] [.light_&]:text-blue-600 [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-blue-700 font-medium"
 					title="Fit entire flow to screen width"
 				>
 					Fit
 				</button>
 			</div>
-
-			{/* Background Grid Pattern */}
-			<div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTQwIDBIMHY0MGg0MFYweiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM2YzZjRmIiBzdHJva2Utd2lkdGg9IjEiLz48L3N2Zz4=')] pointer-events-none [.light_&]:opacity-[0.05]"></div>
 
 			{/* Visual canvas window */}
 			<div 
@@ -387,11 +403,6 @@ export default function MoneyFlowCanvas({
 					{/* Flow lines (SVG) */}
 					<svg className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
 						<defs>
-							<linearGradient id="activeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-								<stop offset="0%" stopColor="#06b6d4" />
-								<stop offset="50%" stopColor="#3b82f6" />
-								<stop offset="100%" stopColor="#10b981" />
-							</linearGradient>
 							<linearGradient id="corpGradient" x1="0%" y1="0%" x2="100%" y2="0%">
 								<stop offset="0%" stopColor="#10b981" />
 								<stop offset="35%" stopColor="#06b6d4" />
@@ -438,7 +449,7 @@ export default function MoneyFlowCanvas({
 								<path
 									d={calculateBezierPath('income', 'taxes_paid')}
 									fill="none"
-									className="stroke-slate-700/60 [.light_&]:stroke-slate-300"
+									className="stroke-slate-200"
 									strokeWidth="3"
 									markerEnd="url(#arrow)"
 								/>
@@ -448,25 +459,91 @@ export default function MoneyFlowCanvas({
 								{/* Revenues -> Receivables & Operating Cash Flow link */}
 								<path d={calculateBezierPath('revenues', 'operating_cash_flow')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
 								<path d={calculateBezierPath('revenues', 'receivables')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								
+								{/* Receivables -> Operating Cash Flow */}
 								<path d={calculateBezierPath('receivables', 'operating_cash_flow')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
- 
-								{/* Costs links */}
+								
+								{/* Operating Cash Flow -> Capex, COGS, HR Costs */}
+								<path d={calculateBezierPath('operating_cash_flow', 'capex')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
 								<path d={calculateBezierPath('operating_cash_flow', 'cogs')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
 								<path d={calculateBezierPath('operating_cash_flow', 'hr_costs')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
-								<path d={calculateBezierPath('operating_cash_flow', 'capex')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
-								<path d={calculateBezierPath('operating_cash_flow', 'corp_taxes')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								
+								{/* COGS & HR Costs -> Payables */}
 								<path d={calculateBezierPath('cogs', 'payables')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
 								<path d={calculateBezierPath('hr_costs', 'payables')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
-								<path d={calculateBezierPath('capex', 'payables')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
- 
-								{/* Discharges */}
+								
+								{/* Operating Cash Flow & Financing & Payables -> Net Cash Flow */}
 								<path d={calculateBezierPath('payables', 'net_cash_flow')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
 								<path d={calculateBezierPath('financing', 'net_cash_flow')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								
+								{/* Corporate Taxes */}
+								<path d={calculateBezierPath('operating_cash_flow', 'corp_taxes')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('corp_taxes', 'net_cash_flow')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								
+								{/* Net Cash Flow -> MFS (Minimum Funding sweep) */}
 								<path d={calculateBezierPath('net_cash_flow', 'mfs')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
 							</>
 						)}
 
-						{/* Custom interactive connection edges */}
+						{/* Active flow animations */}
+						{isRunning && (
+							<>
+								{/* SVG animated flow dashed overlays */}
+								{!isEnterprise ? (
+									<>
+										{/* Checking Ceiling/Floor active routes */}
+										{state.nodes.map(node => {
+											if (node.id === 'checking' || node.id === 'income' || node.id === 'taxes_paid') return null;
+											return (
+												<path
+													key={`flow-${node.id}`}
+													d={calculateBezierPath('checking', node.id)}
+													fill="none"
+													stroke="#5A7A8F"
+													strokeWidth="3"
+													strokeDasharray="8 8"
+													className="animate-[dash_1.5s_linear_infinite]"
+												/>
+											);
+										})}
+										<path
+											d={calculateBezierPath('income', 'checking')}
+											fill="none"
+											stroke="#5A7A8F"
+											strokeWidth="3"
+											strokeDasharray="8 8"
+											className="animate-[dash_1.5s_linear_infinite]"
+										/>
+										<path
+											d={calculateBezierPath('income', 'taxes_paid')}
+											fill="none"
+											stroke="#5A7A8F"
+											strokeWidth="3"
+											strokeDasharray="8 8"
+											className="animate-[dash_1.5s_linear_infinite]"
+										/>
+									</>
+								) : (
+									<>
+										<path d={calculateBezierPath('revenues', 'operating_cash_flow')} fill="none" stroke="#5A7A8F" strokeWidth="3" strokeDasharray="8 8" className="animate-[dash_1.5s_linear_infinite]" />
+										<path d={calculateBezierPath('revenues', 'receivables')} fill="none" stroke="#5A7A8F" strokeWidth="3" strokeDasharray="8 8" className="animate-[dash_1.5s_linear_infinite]" />
+										<path d={calculateBezierPath('receivables', 'operating_cash_flow')} fill="none" stroke="#5A7A8F" strokeWidth="3" strokeDasharray="8 8" className="animate-[dash_1.5s_linear_infinite]" />
+										<path d={calculateBezierPath('operating_cash_flow', 'capex')} fill="none" stroke="#5A7A8F" strokeWidth="3" strokeDasharray="8 8" className="animate-[dash_1.5s_linear_infinite]" />
+										<path d={calculateBezierPath('operating_cash_flow', 'cogs')} fill="none" stroke="#5A7A8F" strokeWidth="3" strokeDasharray="8 8" className="animate-[dash_1.5s_linear_infinite]" />
+										<path d={calculateBezierPath('operating_cash_flow', 'hr_costs')} fill="none" stroke="#5A7A8F" strokeWidth="3" strokeDasharray="8 8" className="animate-[dash_1.5s_linear_infinite]" />
+										<path d={calculateBezierPath('cogs', 'payables')} fill="none" stroke="#5A7A8F" strokeWidth="3" strokeDasharray="8 8" className="animate-[dash_1.5s_linear_infinite]" />
+										<path d={calculateBezierPath('hr_costs', 'payables')} fill="none" stroke="#5A7A8F" strokeWidth="3" strokeDasharray="8 8" className="animate-[dash_1.5s_linear_infinite]" />
+										<path d={calculateBezierPath('payables', 'net_cash_flow')} fill="none" stroke="#5A7A8F" strokeWidth="3" strokeDasharray="8 8" className="animate-[dash_1.5s_linear_infinite]" />
+										<path d={calculateBezierPath('financing', 'net_cash_flow')} fill="none" stroke="#5A7A8F" strokeWidth="3" strokeDasharray="8 8" className="animate-[dash_1.5s_linear_infinite]" />
+										<path d={calculateBezierPath('operating_cash_flow', 'corp_taxes')} fill="none" stroke="#5A7A8F" strokeWidth="3" strokeDasharray="8 8" className="animate-[dash_1.5s_linear_infinite]" />
+										<path d={calculateBezierPath('corp_taxes', 'net_cash_flow')} fill="none" stroke="#5A7A8F" strokeWidth="3" strokeDasharray="8 8" className="animate-[dash_1.5s_linear_infinite]" />
+										<path d={calculateBezierPath('net_cash_flow', 'mfs')} fill="none" stroke="#5A7A8F" strokeWidth="3" strokeDasharray="8 8" className="animate-[dash_1.5s_linear_infinite]" />
+									</>
+								)}
+							</>
+						)}
+
+						{/* Highlighted active route indicators */}
 						{edges.map((edge) => {
 							const path = calculateBezierPath(edge.source, edge.target);
 							return (
@@ -476,14 +553,14 @@ export default function MoneyFlowCanvas({
 										fill="none"
 										stroke="#5A7A8F"
 										strokeWidth="8"
-										className="opacity-40"
+										className="opacity-20"
 										markerEnd={isEnterprise ? "url(#corpArrow)" : "url(#activeArrow)"}
 									/>
 									<path
 										d={path}
 										fill="none"
 										stroke="#5A7A8F"
-										strokeWidth="5"
+										strokeWidth="4"
 										strokeDasharray="6, 24"
 										className="animate-[dash_1s_linear_infinite]"
 									/>
@@ -497,11 +574,8 @@ export default function MoneyFlowCanvas({
 						const coords = activeCoordinates[node.id];
 						if (!coords) return null;
 
-						const colors = activeColors[node.id] || activeColors.checking;
 						const isSelected = selectedNodeId === node.id;
 						const tooltip = activeTooltips[node.id];
-						
-						// Tooltip placement helpers
 						const isTopRow = node.id === 'hysa' || node.id === 'hsa' || node.id === 'revenues' || node.id === 'capex';
 
 						return (
@@ -510,12 +584,18 @@ export default function MoneyFlowCanvas({
 								onClick={() => setSelectedNodeId(node.id)}
 								style={{ left: `${coords.x}px`, top: `${coords.y}px` }}
 								className={[
-									'absolute w-[240px] h-[96px] text-left p-4 rounded-xl border bg-white transition flex flex-col justify-between hover:scale-105 cursor-pointer z-10 hover:z-30 focus-within:z-30 group shadow-none',
+									'absolute w-[240px] h-[96px] text-left p-4 rounded-lg border bg-white transition flex flex-col justify-between hover:scale-[1.02] cursor-pointer z-10 hover:z-30 focus-within:z-30 group shadow-none',
 									isSelected
 										? 'border-2 border-[#1A1A1A] z-20'
-										: `border-[#E5E5E5] hover:border-[#1A1A1A]`
+										: 'border-[#E5E5E5] hover:border-[#1A1A1A]'
 								].join(' ')}
 							>
+								{/* Semantic indicator bar at the top edge */}
+								<div 
+									className="absolute top-0 left-0 right-0 h-[3px] rounded-t-[7px]" 
+									style={{ backgroundColor: getIndicatorColor(node.id, node.type) }}
+								></div>
+
 								{/* Tooltip Hover Overlay */}
 								{tooltip && (
 									<div className={[
@@ -532,15 +612,12 @@ export default function MoneyFlowCanvas({
 									</div>
 								)}
 
-								<div className="flex items-center justify-between w-full">
-									<span className="font-bold text-[#1A1A1A] text-sm tracking-tight [.light_&]:text-slate-900">{node.name}</span>
-									<span className={`text-[9px] uppercase tracking-widest px-2 py-0.5 rounded font-mono font-semibold ${colors.bg} ${colors.text}`}>
-										{node.type}
-									</span>
+								<div className="flex items-center justify-between w-full mt-1">
+									<span className="font-bold text-[#1A1A1A] text-sm tracking-tight">{node.name}</span>
 								</div>
 
 								<div className="flex items-end justify-between w-full mt-1">
-									<span className="text-xl font-bold font-sans text-[#1A1A1A] [.light_&]:text-black">
+									<span className="text-xl font-black font-sans text-[#1A1A1A]">
 										{formatCurrency(node.balance)}
 									</span>
 									{!isEnterprise ? (
@@ -565,12 +642,12 @@ export default function MoneyFlowCanvas({
 										)
 									)}
 									{node.interestRate !== undefined && (
-										<span className="text-[10px] #1A1A1A font-mono font-bold [.light_&]:text-emerald-600">
+										<span className="text-[10px] text-[#1A1A1A] font-mono font-bold">
 											{node.interestRate}% APY
 										</span>
 									)}
 									{isEnterprise && node.id === 'receivables' && (
-										<span className="text-[10px] text-[#C88D4E] font-mono [.light_&]:text-amber-600">
+										<span className="text-[10px] text-[#C88D4E] font-mono">
 											DSO: {node.dso}d
 										</span>
 									)}
