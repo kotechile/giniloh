@@ -13,11 +13,11 @@ const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://giniloh.co
 const embedCode = `<div class="giniloh-calculator-embed" data-calculator="${slug}"></div>\n<script src="${siteUrl}/embed.js" async></script>`;
 ---
 
-<section class="pt-32">
-	<div class="max-w-3xl">
-		<p class="section-eyebrow">{eyebrow}</p>
-		<h1 class="mt-4 text-5xl font-bold tracking-tight text-white sm:text-6xl">{title}</h1>
-		<p class="mt-6 text-lg leading-8 text-slate-400">{description}</p>
+<section class="pt-28 pb-16">
+	<div class="max-w-4xl">
+		<p class="section-eyebrow font-bold text-xs uppercase tracking-[0.25em]">{eyebrow}</p>
+		<h1 class="mt-4 text-5xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">{title}</h1>
+		<p class="mt-6 text-lg sm:text-xl leading-relaxed text-slate-300 font-normal">{description}</p>
 		<div class="mt-6 flex flex-wrap items-center gap-3 text-xs font-mono tracking-wider text-slate-400 uppercase">
 			<div class="flex items-center gap-2 rounded-full border border-slate-800 bg-slate-900/60 px-3 py-1 text-slate-300 shadow-sm backdrop-blur-sm">
 				<span class="inline-block h-2 w-2 rounded-full bg-emerald-400"></span>
@@ -28,13 +28,13 @@ const embedCode = `<div class="giniloh-calculator-embed" data-calculator="${slug
 		</div>
 	</div>
 
-	<div class="mt-12 flex flex-col gap-12">
-		<div class="panel-soft rounded-[2rem] border border-slate-800/90 bg-slate-900/50 p-6 shadow-[0_22px_70px_rgba(0,0,0,0.55)] backdrop-blur-2xl sm:p-8">
+	<div class="mt-16 flex flex-col gap-16">
+		<div class="w-full">
 			<slot name="calculator" />
 
 			<!-- Embed Block -->
 			{slug && (
-				<div class="mt-8 border-t border-slate-800/80 pt-6">
+				<div class="mt-16 border-t border-slate-800/60 pt-8">
 					<details class="group">
 						<summary class="flex cursor-pointer items-center justify-between font-mono text-xs uppercase tracking-[0.24em] text-slate-400 hover:text-cyan-300 transition select-none">
 							<span class="flex items-center gap-2">

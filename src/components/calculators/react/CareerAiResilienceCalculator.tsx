@@ -409,33 +409,33 @@ export default function CareerAiResilienceCalculator() {
 		<div className="w-full text-slate-100 font-sans">
 			{/* Mode Select Header */}
 			<div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 mb-8">
-				<div className="flex rounded-2xl bg-slate-950/70 p-1.5 border border-slate-800/80 max-w-lg w-full">
+				<div className="flex border-b border-slate-800/60 max-w-xl w-full gap-8">
 					<button
 						onClick={() => setActiveView('profile')}
-						className={`flex-1 rounded-xl px-3 py-2.5 text-center text-xs font-mono tracking-wider uppercase transition-all duration-300 ${
+						className={`pb-3 text-sm font-semibold transition-all duration-200 border-b-2 ${
 							activeView === 'profile'
-								? 'bg-cyan-500/25 border border-cyan-500/40 text-cyan-300 shadow-[0_0_20px_rgba(6,182,212,0.15)] font-bold'
-								: 'text-slate-400 hover:text-white border border-transparent'
+								? 'border-cyan-400 text-white font-bold'
+								: 'border-transparent text-slate-400 hover:text-slate-200'
 						}`}
 					>
 						Career Profile
 					</button>
 					<button
 						onClick={() => setActiveView('finder')}
-						className={`flex-1 rounded-xl px-3 py-2.5 text-center text-xs font-mono tracking-wider uppercase transition-all duration-300 ${
+						className={`pb-3 text-sm font-semibold transition-all duration-200 border-b-2 ${
 							activeView === 'finder'
-								? 'bg-cyan-500/25 border border-cyan-500/40 text-cyan-300 shadow-[0_0_20px_rgba(6,182,212,0.15)] font-bold'
-								: 'text-slate-400 hover:text-white border border-transparent'
+								? 'border-cyan-400 text-white font-bold'
+								: 'border-transparent text-slate-400 hover:text-slate-200'
 						}`}
 					>
 						Career Finder
 					</button>
 					<button
 						onClick={() => setActiveView('explorer')}
-						className={`flex-1 rounded-xl px-3 py-2.5 text-center text-xs font-mono tracking-wider uppercase transition-all duration-300 ${
+						className={`pb-3 text-sm font-semibold transition-all duration-200 border-b-2 ${
 							activeView === 'explorer'
-								? 'bg-cyan-500/25 border border-cyan-500/40 text-cyan-300 shadow-[0_0_20px_rgba(6,182,212,0.15)] font-bold'
-								: 'text-slate-400 hover:text-white border border-transparent'
+								? 'border-cyan-400 text-white font-bold'
+								: 'border-transparent text-slate-400 hover:text-slate-200'
 						}`}
 					>
 						Macro Explorer
@@ -469,9 +469,12 @@ export default function CareerAiResilienceCalculator() {
 			{/* ==================== VIEW 1: CAREER PROFILE & SIMULATOR ==================== */}
 			{activeView === 'profile' && (
 				<div className="grid gap-8">
-					{/* Search & Selector Card */}
-					<div className="relative panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/35 p-6 backdrop-blur-md">
-						<label htmlFor="career-search" className="block font-mono text-[10px] uppercase tracking-[0.25em] text-slate-400 font-bold mb-3">
+			{/* ==================== VIEW 1: CAREER PROFILE & SIMULATOR ==================== */}
+			{activeView === 'profile' && (
+				<div className="grid gap-12">
+					{/* Search & Selector */}
+					<div className="relative py-2">
+						<label htmlFor="career-search" className="block font-mono text-xs uppercase tracking-[0.25em] text-slate-400 font-bold mb-3">
 							Select Occupation
 						</label>
 						<div ref={suggestionsRef} className="relative">
@@ -479,17 +482,17 @@ export default function CareerAiResilienceCalculator() {
 								<input
 									id="career-search"
 									type="text"
-									placeholder="Search by job title (e.g. Accountant, Software Engineer, Nurse)..."
+									placeholder="Search by job title (e.g. Chief Executives, Software Developers)..."
 									value={searchQuery}
 									onChange={(e) => {
 										setSearchQuery(e.target.value);
 										setShowSuggestions(true);
 									}}
 									onFocus={() => setShowSuggestions(true)}
-									className="w-full rounded-2xl border border-slate-850 bg-slate-950/80 py-4 pl-12 pr-10 text-sm font-medium text-white outline-none transition focus:border-cyan-500/50 focus:ring-1 focus:ring-cyan-500/50"
+									className="w-full rounded-xl border border-slate-700/60 bg-slate-950/80 py-4 pl-12 pr-10 text-base font-medium text-white outline-none transition focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"
 								/>
 								<svg
-									className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-500"
+									className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"
 									fill="none"
 									viewBox="0 0 24 24"
 									stroke="currentColor"
@@ -539,7 +542,7 @@ export default function CareerAiResilienceCalculator() {
 
 						{/* Trending Careers Quick selectors */}
 						<div className="mt-4 flex flex-wrap items-center gap-3">
-							<span className="font-mono text-[9px] uppercase tracking-[0.2em] text-slate-500 font-bold">Trending:</span>
+							<span className="font-mono text-xs uppercase tracking-[0.2em] text-slate-500 font-bold">Trending:</span>
 							{[
 								{ title: 'Chief Executives', code: '11-1011.00' },
 								{ title: 'Software Developers', code: '15-1252.00' },
@@ -556,8 +559,8 @@ export default function CareerAiResilienceCalculator() {
 									}}
 									className={`rounded-full border px-3 py-1 text-xs font-medium transition duration-200 ${
 										selectedCode === trend.code
-											? 'border-cyan-500/40 bg-cyan-950/20 text-cyan-300'
-											: 'border-slate-800 bg-slate-950/40 text-slate-400 hover:border-slate-700 hover:text-slate-200'
+											? 'border-cyan-400/50 bg-cyan-950/40 text-cyan-300'
+											: 'border-slate-800 bg-transparent text-slate-400 hover:border-slate-700 hover:text-slate-200'
 									}`}
 								>
 									{trend.title}
@@ -568,9 +571,9 @@ export default function CareerAiResilienceCalculator() {
 
 					{/* Loading Detail Overlay */}
 					{loadingDetail && (
-						<div className="flex h-96 items-center justify-center rounded-[2rem] border border-slate-800 bg-slate-950/40 backdrop-blur-md">
+						<div className="flex h-96 items-center justify-center py-12">
 							<div className="flex flex-col items-center gap-3">
-								<div className="h-10 w-10 animate-spin rounded-full border-2 border-cyan-500 border-t-transparent"></div>
+								<div className="h-10 w-10 animate-spin rounded-full border-2 border-cyan-400 border-t-transparent"></div>
 								<span className="font-mono text-xs text-slate-400 uppercase tracking-widest animate-pulse">Assembling Career Profile...</span>
 							</div>
 						</div>
@@ -578,43 +581,42 @@ export default function CareerAiResilienceCalculator() {
 
 					{/* Main Detail Dashboard Grid */}
 					{!loadingDetail && careerDetail && (
-						<div className="grid gap-8 lg:grid-cols-12 items-start">
+						<div className="grid gap-12 lg:grid-cols-12 items-start">
 							
-							{/* LEFT SIDE: General overview, Risk gauge & Donut mix (8 columns) */}
-							<div className="lg:col-span-7 grid gap-8">
+							{/* LEFT SIDE: General overview, Risk gauge & Donut mix (7 columns) */}
+							<div className="lg:col-span-7 grid gap-10">
 								
-								{/* Core Overview Card */}
-								<div className="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/35 p-6 backdrop-blur-md">
-									<div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-800/80 pb-4 mb-5">
+								{/* Core Overview Section */}
+								<div className="py-2">
+									<div className="flex flex-col md:flex-row md:items-baseline justify-between gap-4 border-b border-slate-800/60 pb-6 mb-6">
 										<div>
-											<span className="rounded-full border border-cyan-500/25 bg-cyan-950/30 px-3 py-0.5 font-mono text-[9px] uppercase tracking-[0.2em] text-cyan-400">
+											<span className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-cyan-400">
 												{careerDetail.code}
 											</span>
-											<h2 className="text-2xl md:text-3xl font-bold tracking-tight text-white mt-2">{careerDetail.title}</h2>
+											<h2 className="text-4xl sm:text-5xl font-black tracking-tight text-white mt-2">{careerDetail.title}</h2>
 										</div>
-										<div className="flex flex-row md:flex-col items-center md:items-end justify-between md:justify-center border-t md:border-t-0 border-slate-850 pt-3 md:pt-0">
-											<p className="font-mono text-[9.5px] uppercase tracking-wider text-slate-500">US National Estimated Salary</p>
-											<p className="text-xl md:text-2xl font-bold text-emerald-400 mt-0.5">{formatUSD(careerDetail.salary)}</p>
-											<span className="md:mt-1 font-mono text-[9.5px] uppercase tracking-wider text-slate-400">Demand: <strong className="text-slate-200 font-bold">{careerDetail.demand}</strong></span>
+										<div className="flex flex-row md:flex-col items-baseline md:items-end justify-between gap-1">
+											<p className="font-mono text-xs uppercase tracking-wider text-slate-500">Salary</p>
+											<p className="text-2xl sm:text-3xl font-extrabold text-emerald-400">{formatUSD(careerDetail.salary)}</p>
 										</div>
 									</div>
-									<p className="text-sm leading-7 text-slate-350">{careerDetail.description}</p>
+									<p className="text-base sm:text-lg leading-relaxed text-slate-300 font-normal">{careerDetail.description}</p>
 								</div>
 
-								{/* The Dashboard Charts Panel */}
-								<div className="grid gap-6 md:grid-cols-2">
+								{/* The Dashboard Charts Section */}
+								<div className="grid gap-8 md:grid-cols-2">
 									
-									{/* Score Gauge Card */}
-									<div className="panel-soft flex flex-col items-center justify-between rounded-[1.8rem] border border-slate-800/90 bg-slate-900/35 p-6 backdrop-blur-md text-center">
+									{/* Score Gauge */}
+									<div className="flex flex-col items-center justify-between py-2 text-center">
 										<div>
-											<p className="font-mono text-[10px] uppercase tracking-[0.24em] text-slate-400 font-bold">Vulnerability Index</p>
-											<p className="mt-1 text-xs text-slate-500 leading-relaxed max-w-[200px] mx-auto">
+											<p className="font-mono text-xs uppercase tracking-[0.24em] text-slate-400 font-bold">Vulnerability Index</p>
+											<p className="mt-1.5 text-sm text-slate-400 leading-relaxed max-w-[220px] mx-auto">
 												Weighted risk of tasks matching standard automation benchmarks
 											</p>
 										</div>
 
 										{/* Radial Gauge SVG */}
-										<div className="relative h-44 w-44 my-4 flex items-center justify-center">
+										<div className="relative h-48 w-48 my-6 flex items-center justify-center">
 											<svg className="w-full h-full transform -rotate-90" viewBox="0 0 120 120">
 												{/* Background track circle */}
 												<circle
@@ -623,8 +625,8 @@ export default function CareerAiResilienceCalculator() {
 													r="50"
 													fill="transparent"
 													stroke="#1e293b"
-													strokeWidth="8"
-													className="opacity-70"
+													strokeWidth="6"
+													className="opacity-60"
 												/>
 												{/* Foreground gauge circle */}
 												<circle
@@ -633,7 +635,7 @@ export default function CareerAiResilienceCalculator() {
 													r="50"
 													fill="transparent"
 													stroke={overallScore > 65 ? '#f43f5e' : overallScore > 35 ? '#f59e0b' : '#06b6d4'}
-													strokeWidth="8.5"
+													strokeWidth="7"
 													strokeDasharray="314.159"
 													strokeDashoffset={314.159 - (overallScore / 100) * 314.159}
 													strokeLinecap="round"
@@ -642,33 +644,33 @@ export default function CareerAiResilienceCalculator() {
 											</svg>
 											{/* Center Text overlay */}
 											<div className="absolute inset-0 flex flex-col items-center justify-center">
-												<span className="text-4xl font-extrabold text-white tracking-tight">{overallScore}</span>
-												<span className="font-mono text-[9px] uppercase tracking-widest text-slate-500 font-bold mt-1">Index Score</span>
+												<span className="text-5xl font-black text-white tracking-tight">{overallScore}</span>
+												<span className="font-mono text-[10px] uppercase tracking-widest text-slate-400 font-bold mt-1">Index Score</span>
 											</div>
 										</div>
 
-										<div className={`rounded-xl px-4 py-1.5 border font-mono text-[11px] uppercase tracking-wider ${
+										<div className={`rounded-full px-5 py-1.5 font-mono text-xs uppercase tracking-wider font-bold ${
 											overallScore > 65
-												? 'border-rose-500/20 bg-rose-950/15 text-rose-400'
+												? 'text-rose-400 bg-rose-950/20'
 												: overallScore > 35
-													? 'border-amber-500/20 bg-amber-950/15 text-amber-400'
-													: 'border-cyan-500/20 bg-cyan-950/15 text-cyan-400'
+													? 'text-amber-400 bg-amber-950/20'
+													: 'text-cyan-400 bg-cyan-950/20'
 										}`}>
 											{overallScore > 65 ? 'High Risk Career' : overallScore > 35 ? 'Medium Risk Career' : 'Low Risk / High Resilience'}
 										</div>
 									</div>
 
-									{/* Donut Task Mix Card */}
-									<div className="panel-soft flex flex-col items-center justify-between rounded-[1.8rem] border border-slate-800/90 bg-slate-900/35 p-6 backdrop-blur-md text-center">
+									{/* Donut Task Mix */}
+									<div className="flex flex-col items-center justify-between py-2 text-center">
 										<div>
-											<p className="font-mono text-[10px] uppercase tracking-[0.24em] text-slate-400 font-bold">Task Risk Composition</p>
-											<p className="mt-1 text-xs text-slate-500 leading-relaxed max-w-[200px] mx-auto">
+											<p className="font-mono text-xs uppercase tracking-[0.24em] text-slate-400 font-bold">Task Risk Composition</p>
+											<p className="mt-1.5 text-sm text-slate-400 leading-relaxed max-w-[220px] mx-auto">
 												Hover segments to isolate corresponding tasks below
 											</p>
 										</div>
 
 										{/* Donut Chart SVG */}
-										<div className="relative h-44 w-44 my-4 flex items-center justify-center">
+										<div className="relative h-48 w-48 my-6 flex items-center justify-center">
 											<svg className="w-full h-full transform -rotate-90" viewBox="-120 -120 240 240">
 												{donutSlices.map((slice) => {
 													const isHovered = hoveredDonutSlice === slice.category;
@@ -696,43 +698,43 @@ export default function CareerAiResilienceCalculator() {
 											<div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
 												{hoveredDonutSlice ? (
 													<>
-														<span className="text-2xl font-bold capitalize" style={{ color: hoveredDonutSlice === 'high' ? '#f43f5e' : hoveredDonutSlice === 'medium' ? '#f59e0b' : '#06b6d4' }}>
+														<span className="text-3xl font-extrabold capitalize" style={{ color: hoveredDonutSlice === 'high' ? '#f43f5e' : hoveredDonutSlice === 'medium' ? '#f59e0b' : '#06b6d4' }}>
 															{weights[hoveredDonutSlice]}%
 														</span>
-														<span className="font-mono text-[9px] uppercase tracking-wider mt-0.5" style={{ color: '#94a3b8' }}>{hoveredDonutSlice} Risk</span>
+														<span className="font-mono text-xs uppercase tracking-wider mt-0.5" style={{ color: '#94a3b8' }}>{hoveredDonutSlice} Risk</span>
 													</>
 												) : (
 													<>
-														<span className="text-2xl font-extrabold" style={{ color: '#ffffff' }}>
+														<span className="text-3xl font-extrabold" style={{ color: '#ffffff' }}>
 															{careerDetail.tasks.length}
 														</span>
-														<span className="font-mono text-[9px] uppercase tracking-wider mt-0.5" style={{ color: '#94a3b8' }}>Total Tasks</span>
+														<span className="font-mono text-xs uppercase tracking-wider mt-0.5" style={{ color: '#94a3b8' }}>Total Tasks</span>
 													</>
 												)}
 											</div>
 										</div>
 
 										{/* Donut Legend */}
-										<div className="flex gap-3 justify-center text-[10.5px] font-mono w-full px-2">
+										<div className="flex gap-4 justify-center text-xs font-mono w-full px-2">
 											<button
 												onClick={() => setTaskFilter(taskFilter === 'high' ? 'all' : 'high')}
 												className={`flex items-center gap-1.5 transition ${taskFilter === 'high' ? 'opacity-100 font-bold scale-105' : 'opacity-70 hover:opacity-100'}`}
 											>
-												<span className="h-2 w-2 rounded-full bg-rose-500"></span>
+												<span className="h-2.5 w-2.5 rounded-full bg-rose-500"></span>
 												<span>H: {weights.high}%</span>
 											</button>
 											<button
 												onClick={() => setTaskFilter(taskFilter === 'medium' ? 'all' : 'medium')}
 												className={`flex items-center gap-1.5 transition ${taskFilter === 'medium' ? 'opacity-100 font-bold scale-105' : 'opacity-70 hover:opacity-100'}`}
 											>
-												<span className="h-2 w-2 rounded-full bg-amber-500"></span>
+												<span className="h-2.5 w-2.5 rounded-full bg-amber-500"></span>
 												<span>M: {weights.medium}%</span>
 											</button>
 											<button
 												onClick={() => setTaskFilter(taskFilter === 'low' ? 'all' : 'low')}
 												className={`flex items-center gap-1.5 transition ${taskFilter === 'low' ? 'opacity-100 font-bold scale-105' : 'opacity-70 hover:opacity-100'}`}
 											>
-												<span className="h-2 w-2 rounded-full bg-cyan-500"></span>
+												<span className="h-2.5 w-2.5 rounded-full bg-cyan-500"></span>
 												<span>L: {weights.low}%</span>
 											</button>
 										</div>
@@ -742,41 +744,41 @@ export default function CareerAiResilienceCalculator() {
 
 							</div>
 
-							{/* RIGHT SIDE: Future-proofing Simulator Sliders (5 columns) */}
-							<div className="lg:col-span-5 grid gap-8">
+							{/* RIGHT SIDE: Upskilling Simulator Sliders (5 columns) */}
+							<div className="lg:col-span-5 grid gap-10">
 								
-								<div className="panel-soft rounded-[1.8rem] border border-cyan-500/20 bg-[linear-gradient(135deg,rgba(8,47,73,0.35),rgba(2,6,23,0.85))] [.light_&]:bg-[linear-gradient(135deg,rgba(240,253,250,0.85),rgba(224,242,254,0.45))] [.light_&]:border-cyan-200/50 p-6 shadow-[0_0_40px_rgba(6,182,212,0.06)] [.light_&]:shadow-[0_15px_30px_rgba(34,211,238,0.04)] backdrop-blur-md">
+								<div className="py-2">
 									
-									<div className="flex items-center justify-between gap-4 border-b border-slate-800/80 [.light_&]:border-slate-200/60 pb-4 mb-5">
+									<div className="flex items-center justify-between gap-4 border-b border-slate-800/60 pb-6 mb-6">
 										<div>
-											<p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-400 [.light_&]:text-cyan-700 font-bold">Resilience Simulator</p>
-											<h3 className="mt-1.5 text-xl font-bold tracking-tight text-white [.light_&]:text-slate-900">Upskilling Simulator</h3>
+											<p className="font-mono text-xs uppercase tracking-[0.25em] text-cyan-400 font-bold">Simulator</p>
+											<h3 className="mt-2 text-3xl font-extrabold tracking-tight text-white">Upskilling Simulator</h3>
 										</div>
 										{isCustomized && (
 											<button
 												onClick={handleResetWeights}
-												className="rounded-lg border border-slate-800 bg-slate-950 px-2.5 py-1.5 font-mono text-[9.5px] uppercase tracking-wider text-slate-400 hover:text-white hover:border-slate-700 transition [.light_&]:bg-slate-100 [.light_&]:border-slate-200 [.light_&]:text-slate-600 hover:[.light_&]:bg-slate-200 hover:[.light_&]:text-slate-900"
+												className="rounded-md border border-slate-700 bg-slate-900 px-3 py-1.5 font-mono text-xs uppercase tracking-wider text-slate-300 hover:text-white hover:border-slate-500 transition"
 											>
 												Reset
 											</button>
 										)}
 									</div>
 
-									<p className="text-xs leading-6 text-slate-400 [.light_&]:text-slate-600 mb-6">
-										Adjust sliders to simulate career upskilling: delegate or reduce routine workloads (High Risk) and increase focus on complex strategy, management, or design (Low Risk) to calculate your personalized vulnerability index.
+									<p className="text-base leading-relaxed text-slate-300 mb-8 font-normal">
+										Adjust sliders to simulate career upskilling: delegate routine workloads and increase focus on complex strategy, management, or design to calculate your updated vulnerability score.
 									</p>
 
-									{/* Sliders Container */}
-									<div className="space-y-6">
+									{/* Sliders Container with generous vertical spacing */}
+									<div className="space-y-8">
 										
 										{/* Slider 1: High Risk */}
-										<div className="rounded-2xl border border-slate-800/80 [.light_&]:border-slate-200/70 bg-slate-950/50 [.light_&]:bg-white/80 p-4">
-											<div className="flex items-center justify-between mb-2">
-												<div className="flex items-center gap-2">
-													<span className="h-2.5 w-2.5 rounded-full bg-rose-500"></span>
-													<span className="text-xs font-semibold text-white [.light_&]:text-slate-800">Routine Tasks (High Risk)</span>
+										<div className="py-1">
+											<div className="flex items-center justify-between mb-3">
+												<div className="flex items-center gap-2.5">
+													<span className="h-3 w-3 rounded-full bg-rose-500"></span>
+													<span className="text-base font-bold text-white">Routine Tasks (High Risk)</span>
 												</div>
-												<span className="font-mono text-sm font-extrabold text-rose-400">{weights.high}%</span>
+												<span className="font-mono text-base font-black text-rose-400">{weights.high}%</span>
 											</div>
 											<input
 												type="range"
@@ -784,21 +786,21 @@ export default function CareerAiResilienceCalculator() {
 												max="100"
 												value={weights.high}
 												onChange={(e) => handleSliderChange('high', parseInt(e.target.value))}
-												className="w-full accent-rose-500 h-1.5 rounded-lg bg-slate-800 [.light_&]:bg-slate-200 outline-none cursor-pointer"
+												className="w-full accent-cyan-400 h-2 rounded-lg bg-slate-800 outline-none cursor-pointer"
 											/>
-											<p className="text-[10px] leading-relaxed text-slate-500 mt-2">
+											<p className="text-xs leading-relaxed text-slate-400 mt-2">
 												Repetitive work like scheduling, typing, transcription, sorting, data formatting.
 											</p>
 										</div>
 
 										{/* Slider 2: Medium Risk */}
-										<div className="rounded-2xl border border-slate-800/80 [.light_&]:border-slate-200/70 bg-slate-950/50 [.light_&]:bg-white/80 p-4">
-											<div className="flex items-center justify-between mb-2">
-												<div className="flex items-center gap-2">
-													<span className="h-2.5 w-2.5 rounded-full bg-amber-500"></span>
-													<span className="text-xs font-semibold text-white [.light_&]:text-slate-800">Analytical Tasks (Medium Risk)</span>
+										<div className="py-1">
+											<div className="flex items-center justify-between mb-3">
+												<div className="flex items-center gap-2.5">
+													<span className="h-3 w-3 rounded-full bg-amber-500"></span>
+													<span className="text-base font-bold text-white">Analytical Tasks (Medium Risk)</span>
 												</div>
-												<span className="font-mono text-sm font-extrabold text-amber-400">{weights.medium}%</span>
+												<span className="font-mono text-base font-black text-amber-400">{weights.medium}%</span>
 											</div>
 											<input
 												type="range"
@@ -806,21 +808,21 @@ export default function CareerAiResilienceCalculator() {
 												max="100"
 												value={weights.medium}
 												onChange={(e) => handleSliderChange('medium', parseInt(e.target.value))}
-												className="w-full accent-amber-500 h-1.5 rounded-lg bg-slate-800 [.light_&]:bg-slate-200 outline-none cursor-pointer"
+												className="w-full accent-cyan-400 h-2 rounded-lg bg-slate-800 outline-none cursor-pointer"
 											/>
-											<p className="text-[10px] leading-relaxed text-slate-500 mt-2">
+											<p className="text-xs leading-relaxed text-slate-400 mt-2">
 												Basic analysis, template drafting, inspection, monitoring, routine audits.
 											</p>
 										</div>
 
 										{/* Slider 3: Low Risk */}
-										<div className="rounded-2xl border border-slate-800/80 [.light_&]:border-slate-200/70 bg-slate-950/50 [.light_&]:bg-white/80 p-4">
-											<div className="flex items-center justify-between mb-2">
-												<div className="flex items-center gap-2">
-													<span className="h-2.5 w-2.5 rounded-full bg-cyan-500"></span>
-													<span className="text-xs font-semibold text-white [.light_&]:text-slate-800">Resilient Tasks (Low Risk)</span>
+										<div className="py-1">
+											<div className="flex items-center justify-between mb-3">
+												<div className="flex items-center gap-2.5">
+													<span className="h-3 w-3 rounded-full bg-cyan-400"></span>
+													<span className="text-base font-bold text-white">Resilient Tasks (Low Risk)</span>
 												</div>
-												<span className="font-mono text-sm font-extrabold text-cyan-400">{weights.low}%</span>
+												<span className="font-mono text-base font-black text-cyan-400">{weights.low}%</span>
 											</div>
 											<input
 												type="range"
@@ -828,24 +830,29 @@ export default function CareerAiResilienceCalculator() {
 												max="100"
 												value={weights.low}
 												onChange={(e) => handleSliderChange('low', parseInt(e.target.value))}
-												className="w-full accent-cyan-500 h-1.5 rounded-lg bg-slate-800 [.light_&]:bg-slate-200 outline-none cursor-pointer"
+												className="w-full accent-cyan-400 h-2 rounded-lg bg-slate-800 outline-none cursor-pointer"
 											/>
-											<p className="text-[10px] leading-relaxed text-slate-500 mt-2">
+											<p className="text-xs leading-relaxed text-slate-400 mt-2">
 												Complex strategy, negotiation, creative innovation, leadership, deep empathy.
 											</p>
 										</div>
 
 									</div>
 
-									{/* Output Result Simulator Banner */}
-									<div className={`mt-6 rounded-2xl border p-4 flex items-center justify-between ${
+									{/* Output Result Simulator Verdict Banner */}
+									<div className={`mt-8 rounded-xl border p-5 flex items-center justify-between ${
 										isCustomized 
-											? 'border-cyan-500/35 bg-cyan-950/20 text-cyan-300 shadow-[0_0_30px_rgba(6,182,212,0.1)] [.light_&]:border-cyan-200/80 [.light_&]:bg-cyan-50/50 [.light_&]:text-cyan-800'
-											: 'border-slate-850 bg-slate-950/70 text-slate-400 [.light_&]:border-slate-200/80 [.light_&]:bg-slate-50/60 [.light_&]:text-slate-600'
+											? 'border-cyan-500/40 bg-cyan-950/30 text-cyan-300'
+											: 'border-slate-800 bg-slate-900/50 text-slate-400'
 									}`}>
 										<div>
-											<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">Simulator Verdict</p>
-											<p className="text-xs font-semibold text-white [.light_&]:text-slate-800 mt-1">
+											<p className="font-mono text-xs uppercase tracking-wider text-slate-400 font-bold">Simulator Verdict</p>
+											<p className="text-sm font-bold text-white mt-1">
+												{isCustomized ? 'Simulating customized upskilled state' : 'Reflecting standard O*NET benchmark'}
+											</p>
+										</div>
+										<span className="text-2xl font-black text-cyan-400 font-mono">{overallScore}</span>
+									</div>
 												{isCustomized ? 'Simulating customized upskilled state' : 'Reflecting standard O*NET benchmark'}
 											</p>
 										</div>
