@@ -853,22 +853,6 @@ export default function CareerAiResilienceCalculator() {
 										</div>
 										<span className="text-2xl font-black text-cyan-400 font-mono">{overallScore}</span>
 									</div>
-												{isCustomized ? 'Simulating customized upskilled state' : 'Reflecting standard O*NET benchmark'}
-											</p>
-										</div>
-										<div className="text-right">
-											<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">New Score</p>
-											<p className={`text-2xl font-extrabold mt-0.5 ${
-												overallScore > 65 
-													? 'text-rose-400 [.light_&]:text-rose-600' 
-													: overallScore > 35 
-														? 'text-amber-400 [.light_&]:text-amber-600' 
-														: 'text-cyan-400 [.light_&]:text-cyan-600'
-											}`}>
-												{overallScore}
-											</p>
-										</div>
-									</div>
 
 								</div>
 
