@@ -1,6 +1,6 @@
 # Editorial Neutral Styleguide (Clay-Inspired Calculator Design System)
 
-This styleguide documents the minimalist, high-contrast, "unboxed" visual identity and Editorial Neutral color palette established for the calculators and interactive tools on Giniloh.com.
+This styleguide documents the minimalist, high-contrast, "unboxed" visual identity and Editorial Neutral color palette established for the calculators, interactive tools, and page layouts on Giniloh.com.
 
 ---
 
@@ -10,7 +10,7 @@ This styleguide documents the minimalist, high-contrast, "unboxed" visual identi
 - **Maximum Contrast & Heavy Hierarchy:** Pair pure white backgrounds (`#FFFFFF`) with rich near-black typography (`#1A1A1A`) and heavy font weights (`font-extrabold`, `font-black`).
 - **Desaturated Accent Discipline:** Eliminate bright neon/alarm colors. Use desaturated, earthy tones for data metrics and quiet steel blue (`#5A7A8F`) for interactive state indicators.
 - **Breathable Controls:** Space interactive components generously so each control feels like a distinct step rather than a cramped dashboard control panel.
-- **8-Point Grid System:** Strictly enforce an 8pt grid system for all margins, padding, and flex/grid gaps. Use standard Tailwind spacing (e.g., `gap-4` for 16px, `gap-8` for 32px, `py-12` for 48px). Do not use arbitrary or odd spacing values.
+- **8-Point Grid System:** Enforce an 8pt grid system for all margins, padding, and flex/grid gaps. Use standard Tailwind spacing (e.g., `gap-4` for 16px, `gap-8` for 32px, `py-12` for 48px).
 
 ### 1.5 STRICT NEGATIVE CONSTRAINTS (CRITICAL)
 Under NO circumstances should you use the following Tailwind classes or CSS properties:
@@ -68,16 +68,27 @@ Eliminate outer card wrappers. Left-align table headers and content (Occupation 
 
 ### E. Button & Action Hierarchy
 - **Primary Button:** Near-black `#1A1A1A` background, white text.
-- **Secondary Action:** Borderless text link using mid-gray `#5E5E5E`.
+- **Secondary Action/Ghost Button:** White `#FFFFFF` background with 1px border `border-[#E5E5E5]`, and near-black text `#1A1A1A`.
 
 ### F. Scatter Plots
 Keep the SVG background fully transparent or set to `#FFFFFF`. Remove outer bounding cards. Draw simple left/bottom axes in `#E5E5E5`. Render dots with semi-transparent opacity of 40% to 60% (`opacity={0.5}`).
 
 ### G. Summary Metrics & KPIs (Naked Data)
-Metrics must be "naked". Never place data points inside colored boxes or outlined containers. Use horizontal whitespace and optional 1px vertical divider lines (`border-l border-[#E5E5E5]`) to separate data.
+Metrics must be "naked". Never place data points inside colored boxes or outlined containers. Make the numbers massive (`text-6xl` or `text-7xl font-black text-[#1A1A1A]`). Rely on horizontal whitespace and optional 1px vertical divider lines (`border-l border-[#E5E5E5]`) to separate data.
 
 ### H. Form Inputs & Controls
 Keep inputs flat and minimal. Never use inset shadows. Background must be `bg-white` (never gray). Use a subtle 1px border `border-[#E5E5E5]`. Text values must be `#1A1A1A`.
+
+### I. Iconography Rule
+- **No Solid Fills:** Never use solid or filled icons. Use line-art icons exclusively.
+- **Light Stroke Width:** Set the stroke width to `1.5px` (or use the "Light" weight variant).
+- **Enlarged Scale:** Render icons at a large, legible scale (`w-10 h-10` or `w-12 h-12`).
+- **Color Discipline:** Color icons strictly using the Steel Blue (`#5A7A8F`) or Near-Black (`#1A1A1A`) tokens.
+
+### J. Ghost Cards & Micro-interactions
+- **Ghost Card:** Change card backgrounds to pure white (`#FFFFFF`) with a `1px` structural gray border (`border-[#E5E5E5]`).
+- **Lifting Translation:** On hover, translate cards upward along the Y-axis (`hover:-translate-y-1`) rather than scaling them, and transition the border color to near-black `#1A1A1A` or Steel Blue `#5A7A8F`.
+- **Sliding Indicators:** Group hover triggers should trigger micro-interactions inside text links, such as translating inline arrows slightly to the right (`group-hover:translate-x-1`).
 
 ---
 
@@ -104,7 +115,7 @@ Keep inputs flat and minimal. Never use inset shadows. Background must be `bg-wh
     <span className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#8C8C8C] mb-2">
       Net Upfront Cost
     </span>
-    <span className="text-4xl font-black text-[#1A1A1A]">
+    <span className="text-6xl font-black text-[#1A1A1A] tracking-tight leading-none">
       $6,595
     </span>
   </div>
@@ -117,11 +128,39 @@ Keep inputs flat and minimal. Never use inset shadows. Background must be `bg-wh
     <span className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#8C8C8C] mb-2">
       Break-Even Period
     </span>
-    <span className="text-4xl font-black text-[#1A1A1A]">
+    <span className="text-6xl font-black text-[#1A1A1A] tracking-tight leading-none">
       4.6 Months
     </span>
   </div>
 </div>
+```
+
+### Ghost Card with Iconography & Micro-interactions
+```html
+<a
+  href="/pillar/"
+  className="group flex flex-col rounded-2xl border border-[#E5E5E5] bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#1A1A1A] hover:shadow-none"
+>
+  <div>
+    <svg className="w-10 h-10 text-[#5A7A8F] transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1.5">
+      <path strokeLinecap="round" strokeLinejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+    </svg>
+    <h2 className="mt-6 text-2xl font-black text-[#1A1A1A] tracking-tight group-hover:text-[#5A7A8F] transition">
+      Buying Decisions
+    </h2>
+    <p className="mt-4 text-sm leading-relaxed text-[#5E5E5E]">
+      Total Cost of Ownership models and frameworks.
+    </p>
+  </div>
+  <div className="mt-8 flex items-center justify-between">
+    <span className="text-xs font-mono font-bold uppercase tracking-[0.25em] text-[#8C8C8C]">
+      6 Articles
+    </span>
+    <span className="text-sm font-bold text-[#1A1A1A] group-hover:text-[#5A7A8F] flex items-center gap-1">
+      Open Pillar <span className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
+    </span>
+  </div>
+</a>
 ```
 
 ---
@@ -133,3 +172,5 @@ To prevent visual inconsistencies ("Frankenstein UI") where dark-mode calculator
 - **Transparent or White Containers:** Replace dark wrappers with pure white (`#FFFFFF`) backgrounds, or leave them transparent so they inherit the page body.
 - **Text Legibility:** Because all backgrounds must be white/transparent, never render text in white or light gray. All primary text must be `#1A1A1A` and secondary text `#5E5E5E`.
 - **Metric Containers:** Replace all boxed wrappers around summary data with pure white (`#FFFFFF`) backgrounds and rely solely on the 8pt grid gap spacing to separate them.
+- **Forced Class Contrast Rule:** The global style system forces class names like `.text-white` or `[class*="text-white"]` to always override generic body/container rules to ensure high-contrast white labels on active/dark buttons remain fully white.
+- **Tailwind v4 Gradients & Color Overrides:** Global overrides explicitly target arbitrary linear/radial gradients inside the compiled React components to convert them flat white and map low-contrast active text variables to the desaturated Steel Blue `#5A7A8F` accent.
