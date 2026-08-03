@@ -331,7 +331,7 @@ export default function MoneyFlowCanvas({
 	};
 
 	return (
-		<div ref={containerRef} className="relative w-full rounded-2xl border border-gray-200 bg-white p-2 md:p-6 shadow-inner overflow-hidden min-h-[600px] [.light_&]:border-slate-300 [.light_&]:bg-slate-100">
+		<div ref={containerRef} className="relative w-full rounded-2xl border border-[#E5E5E5] bg-white p-2 md:p-6 overflow-hidden min-h-[600px]">
 			{/* Floating Zoom Controls */}
 			<div className="absolute top-4 right-4 z-40 flex items-center gap-1 bg-slate-900/90 border border-gray-200 rounded-lg p-1 shadow-lg backdrop-blur-md text-xs font-mono select-none [.light_&]:bg-white/90 [.light_&]:border-slate-200">
 				<button 
@@ -402,13 +402,13 @@ export default function MoneyFlowCanvas({
 								<feDropShadow dx="0" dy="0" stdDeviation="6" floodColor="#3b82f6" floodOpacity="0.5" />
 							</filter>
 							<marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
-								<path d="M 0 0 L 10 5 L 0 10 z" fill="#475569" className="[.light_&]:fill-slate-300" />
+								<path d="M 0 0 L 10 5 L 0 10 z" fill="#8C8C8C" />
 							</marker>
 							<marker id="activeArrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="18" markerHeight="18" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
-								<path d="M 0 0 L 10 5 L 0 10 z" fill="#3b82f6" />
+								<path d="M 0 0 L 10 5 L 0 10 z" fill="#5A7A8F" />
 							</marker>
 							<marker id="corpArrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="18" markerHeight="18" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
-								<path d="M 0 0 L 10 5 L 0 10 z" fill="#10b981" />
+								<path d="M 0 0 L 10 5 L 0 10 z" fill="#5A7A8F" />
 							</marker>
 						</defs>
 
@@ -419,10 +419,10 @@ export default function MoneyFlowCanvas({
 									if (key === 'checking' || key === 'income' || key === 'taxes_paid') return null;
 									return (
 										<path
-											key={`base-${key}`}
+											key={key}
 											d={calculateBezierPath('checking', key)}
 											fill="none"
-											className="stroke-slate-700/60 [.light_&]:stroke-slate-300"
+											stroke="#E5E5E5"
 											strokeWidth="3"
 											markerEnd="url(#arrow)"
 										/>
@@ -431,7 +431,7 @@ export default function MoneyFlowCanvas({
 								<path
 									d={calculateBezierPath('income', 'checking')}
 									fill="none"
-									className="stroke-slate-700/60 [.light_&]:stroke-slate-300"
+									stroke="#E5E5E5"
 									strokeWidth="3"
 									markerEnd="url(#arrow)"
 								/>
@@ -446,23 +446,23 @@ export default function MoneyFlowCanvas({
 						) : (
 							<>
 								{/* Revenues -> Receivables & Operating Cash Flow link */}
-								<path d={calculateBezierPath('revenues', 'operating_cash_flow')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
-								<path d={calculateBezierPath('revenues', 'receivables')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
-								<path d={calculateBezierPath('receivables', 'operating_cash_flow')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
-
+								<path d={calculateBezierPath('revenues', 'operating_cash_flow')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('revenues', 'receivables')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('receivables', 'operating_cash_flow')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+ 
 								{/* Costs links */}
-								<path d={calculateBezierPath('operating_cash_flow', 'cogs')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
-								<path d={calculateBezierPath('operating_cash_flow', 'hr_costs')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
-								<path d={calculateBezierPath('operating_cash_flow', 'capex')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
-								<path d={calculateBezierPath('operating_cash_flow', 'corp_taxes')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
-								<path d={calculateBezierPath('cogs', 'payables')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
-								<path d={calculateBezierPath('hr_costs', 'payables')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
-								<path d={calculateBezierPath('capex', 'payables')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
-
+								<path d={calculateBezierPath('operating_cash_flow', 'cogs')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('operating_cash_flow', 'hr_costs')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('operating_cash_flow', 'capex')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('operating_cash_flow', 'corp_taxes')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('cogs', 'payables')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('hr_costs', 'payables')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('capex', 'payables')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+ 
 								{/* Discharges */}
-								<path d={calculateBezierPath('payables', 'net_cash_flow')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
-								<path d={calculateBezierPath('financing', 'net_cash_flow')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
-								<path d={calculateBezierPath('net_cash_flow', 'mfs')} fill="none" className="stroke-slate-700/60 [.light_&]:stroke-slate-300" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('payables', 'net_cash_flow')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('financing', 'net_cash_flow')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('net_cash_flow', 'mfs')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
 							</>
 						)}
 
@@ -474,16 +474,15 @@ export default function MoneyFlowCanvas({
 									<path
 										d={path}
 										fill="none"
-										stroke={isEnterprise ? "url(#corpGradient)" : "url(#activeGradient)"}
+										stroke="#5A7A8F"
 										strokeWidth="8"
-										filter="url(#glow)"
-										className="opacity-70 [.light_&]:opacity-50"
+										className="opacity-40"
 										markerEnd={isEnterprise ? "url(#corpArrow)" : "url(#activeArrow)"}
 									/>
 									<path
 										d={path}
 										fill="none"
-										stroke={isEnterprise ? "#10b981" : "#3b82f6"}
+										stroke="#5A7A8F"
 										strokeWidth="5"
 										strokeDasharray="6, 24"
 										className="animate-[dash_1s_linear_infinite]"
@@ -511,10 +510,10 @@ export default function MoneyFlowCanvas({
 								onClick={() => setSelectedNodeId(node.id)}
 								style={{ left: `${coords.x}px`, top: `${coords.y}px` }}
 								className={[
-									'absolute w-[240px] h-[96px] text-left p-4 rounded-xl border bg-gray-200 transition flex flex-col justify-between hover:scale-105 cursor-pointer z-10 hover:z-30 focus-within:z-30 group shadow-sm [.light_&]:hover:shadow-md [.light_&]:bg-white',
+									'absolute w-[240px] h-[96px] text-left p-4 rounded-xl border bg-white transition flex flex-col justify-between hover:scale-105 cursor-pointer z-10 hover:z-30 focus-within:z-30 group shadow-none',
 									isSelected
-										? 'border-cyan-400 shadow-[0_0_0_2px_rgba(59,130,246,0.3)] z-20 [.light_&]:border-blue-500'
-										: `border-slate-700 hover:border-slate-600 [.light_&]:border-slate-300 [.light_&]:hover:border-slate-400`
+										? 'border-2 border-[#1A1A1A] z-20'
+										: `border-[#E5E5E5] hover:border-[#1A1A1A]`
 								].join(' ')}
 							>
 								{/* Tooltip Hover Overlay */}
