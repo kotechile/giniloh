@@ -947,7 +947,7 @@ export default function CareerAiResilienceCalculator() {
 			{activeView === 'finder' && (
 				<div className="grid gap-8">
 					{/* Filters Card */}
-					<div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+					<div className="py-6">
 						<div className="flex items-center justify-between border-b border-gray-200 pb-4 mb-6">
 							<div>
 								<h3 className="text-xl font-bold text-[#1A1A1A]">Interactive Career Finder</h3>
@@ -961,7 +961,7 @@ export default function CareerAiResilienceCalculator() {
 									setMinSalaryFilter(0);
 									setDemandFilter('all');
 								}}
-								className="rounded-lg border border-slate-850 bg-slate-950 px-3 py-1.5 font-mono text-[9.5px] uppercase tracking-wider text-slate-400 hover:text-white hover:border-slate-700 transition"
+								className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 font-mono text-[9.5px] uppercase tracking-wider text-[#5E5E5E] hover:text-[#1A1A1A] hover:bg-gray-50 transition"
 							>
 								Clear Filters
 							</button>
@@ -972,7 +972,7 @@ export default function CareerAiResilienceCalculator() {
 							{/* Column 1: Search & Demand */}
 							<div className="md:col-span-4 space-y-4">
 								<div>
-									<label htmlFor="finder-search" className="block font-mono text-[9px] uppercase tracking-[0.2em] text-slate-400 font-bold mb-2">
+									<label htmlFor="finder-search" className="block font-mono text-[9px] uppercase tracking-[0.2em] text-[#8C8C8C] font-bold mb-2">
 										Search Job Title
 									</label>
 									<input
@@ -981,18 +981,18 @@ export default function CareerAiResilienceCalculator() {
 										placeholder="e.g. Designer, Analyst..."
 										value={finderSearchQuery}
 										onChange={(e) => setFinderSearchQuery(e.target.value)}
-										className="w-full rounded-xl border border-slate-800 bg-slate-950/70 px-4 py-2.5 text-sm text-white placeholder-slate-500 outline-none transition focus:border-cyan-500/50"
+										className="w-full rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm text-[#1A1A1A] placeholder-gray-400 outline-none transition focus:border-[#5A7A8F]"
 									/>
 								</div>
 								<div>
-									<label htmlFor="finder-demand" className="block font-mono text-[9px] uppercase tracking-[0.2em] text-slate-400 font-bold mb-2">
+									<label htmlFor="finder-demand" className="block font-mono text-[9px] uppercase tracking-[0.2em] text-[#8C8C8C] font-bold mb-2">
 										Market Demand
 									</label>
 									<select
 										id="finder-demand"
 										value={demandFilter}
 										onChange={(e) => setDemandFilter(e.target.value)}
-										className="w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2.5 text-sm text-slate-350 outline-none focus:border-cyan-500/50"
+										className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-sm text-[#1A1A1A] outline-none focus:border-[#5A7A8F]"
 									>
 										<option value="all">All Demands</option>
 										<option value="Very High">Very High</option>
@@ -1006,14 +1006,14 @@ export default function CareerAiResilienceCalculator() {
 							{/* Column 2: Salary & Sorting */}
 							<div className="md:col-span-4 space-y-4">
 								<div>
-									<label htmlFor="finder-salary" className="block font-mono text-[9px] uppercase tracking-[0.2em] text-slate-400 font-bold mb-2">
+									<label htmlFor="finder-salary" className="block font-mono text-[9px] uppercase tracking-[0.2em] text-[#8C8C8C] font-bold mb-2">
 										Minimum Annual Salary
 									</label>
 									<select
 										id="finder-salary"
 										value={minSalaryFilter}
 										onChange={(e) => setMinSalaryFilter(Number(e.target.value))}
-										className="w-full rounded-xl border border-slate-800 bg-slate-950 px-3 py-2.5 text-sm text-slate-350 outline-none focus:border-cyan-500/50"
+										className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-sm text-[#1A1A1A] outline-none focus:border-[#5A7A8F]"
 									>
 										<option value={0}>All Salaries</option>
 										<option value={40000}>$40,000+</option>
@@ -1025,7 +1025,7 @@ export default function CareerAiResilienceCalculator() {
 									</select>
 								</div>
 								<div>
-									<label htmlFor="finder-sort" className="block font-mono text-[9px] uppercase tracking-[0.2em] text-slate-400 font-bold mb-2">
+									<label htmlFor="finder-sort" className="block font-mono text-[9px] uppercase tracking-[0.2em] text-[#8C8C8C] font-bold mb-2">
 										Sort Results
 									</label>
 									<div className="flex gap-2">
@@ -1033,7 +1033,7 @@ export default function CareerAiResilienceCalculator() {
 											id="finder-sort"
 											value={sortField}
 											onChange={(e) => setSortField(e.target.value as any)}
-											className="flex-1 rounded-xl border border-slate-800 bg-slate-950 px-3 py-2.5 text-sm text-slate-350 outline-none focus:border-cyan-500/50"
+											className="flex-1 rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-sm text-[#1A1A1A] outline-none focus:border-[#5A7A8F]"
 										>
 											<option value="risk_score">AI Vulnerability</option>
 											<option value="title">Occupation Name</option>
@@ -1042,7 +1042,7 @@ export default function CareerAiResilienceCalculator() {
 										</select>
 										<button
 											onClick={() => setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc')}
-											className="px-3 rounded-xl border border-slate-800 bg-slate-950 text-slate-400 hover:text-white transition"
+											className="px-3 rounded-xl border border-gray-200 bg-white text-[#5E5E5E] hover:text-[#1A1A1A] hover:bg-gray-50 transition"
 											aria-label="Toggle sort direction"
 										>
 											{sortDirection === 'asc' ? '↑' : '↓'}
@@ -1052,12 +1052,12 @@ export default function CareerAiResilienceCalculator() {
 							</div>
 
 							{/* Column 3: The Vulnerability Sliders (Min and Max range) */}
-							<div className="md:col-span-4 rounded-2xl border border-slate-800/80 bg-slate-950/50 p-4 space-y-4">
+							<div className="md:col-span-4 p-4 space-y-4">
 								<div className="flex items-center justify-between">
-									<label className="text-xs font-semibold text-white">
+									<label className="text-xs font-bold text-[#1A1A1A]">
 										Vulnerability Range
 									</label>
-									<span className="font-mono text-xs font-extrabold text-cyan-400">
+									<span className="font-mono text-xs font-extrabold text-[#5A7A8F]">
 										{minVulnerability}% – {maxVulnerability}%
 									</span>
 								</div>
@@ -1066,8 +1066,8 @@ export default function CareerAiResilienceCalculator() {
 									{/* Min Slider */}
 									<div>
 										<div className="flex items-center justify-between mb-1.5">
-											<span className="font-mono text-[9px] uppercase tracking-wider text-slate-400 font-bold">Min Vulnerability</span>
-											<span className="font-mono text-[10px] text-slate-300 font-semibold">{minVulnerability}%</span>
+											<span className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C] font-bold">Min Vulnerability</span>
+											<span className="font-mono text-[10px] text-[#5E5E5E] font-semibold">{minVulnerability}%</span>
 										</div>
 										<input
 											type="range"
@@ -1078,15 +1078,15 @@ export default function CareerAiResilienceCalculator() {
 												const val = Math.min(Number(e.target.value), maxVulnerability);
 												setMinVulnerability(val);
 											}}
-											className="w-full accent-cyan-500 h-1.5 rounded-lg bg-slate-800 outline-none cursor-pointer"
+											className="w-full accent-[#5A7A8F] h-1.5 rounded-lg bg-gray-200 outline-none cursor-pointer"
 										/>
 									</div>
 
 									{/* Max Slider */}
 									<div>
 										<div className="flex items-center justify-between mb-1.5">
-											<span className="font-mono text-[9px] uppercase tracking-wider text-slate-400 font-bold">Max Vulnerability</span>
-											<span className="font-mono text-[10px] text-slate-300 font-semibold">{maxVulnerability}%</span>
+											<span className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C] font-bold">Max Vulnerability</span>
+											<span className="font-mono text-[10px] text-[#5E5E5E] font-semibold">{maxVulnerability}%</span>
 										</div>
 										<input
 											type="range"
@@ -1097,7 +1097,7 @@ export default function CareerAiResilienceCalculator() {
 												const val = Math.max(Number(e.target.value), minVulnerability);
 												setMaxVulnerability(val);
 											}}
-											className="w-full accent-cyan-500 h-1.5 rounded-lg bg-slate-800 outline-none cursor-pointer"
+											className="w-full accent-[#5A7A8F] h-1.5 rounded-lg bg-gray-200 outline-none cursor-pointer"
 										/>
 									</div>
 								</div>
@@ -1114,10 +1114,10 @@ export default function CareerAiResilienceCalculator() {
 						</div>
 
 						{/* Results Table */}
-						<div className="overflow-x-auto w-full rounded-2xl border border-slate-850 bg-slate-950/40">
-							<table className="min-w-full divide-y divide-slate-850 text-left border-collapse">
+						<div className="overflow-x-auto w-full rounded-2xl border border-gray-200 bg-white">
+							<table className="min-w-full divide-y divide-gray-200 text-left border-collapse">
 								<thead>
-									<tr className="bg-slate-950 font-mono text-[9.5px] uppercase tracking-[0.15em] text-slate-500">
+									<tr className="bg-white border-b border-gray-200 font-mono text-[9.5px] uppercase tracking-[0.15em] text-[#5E5E5E]">
 										<th scope="col" className="px-6 py-4 font-bold">Occupation Title</th>
 										<th scope="col" className="px-6 py-4 font-bold text-center">Vulnerability Score</th>
 										<th scope="col" className="px-6 py-4 font-bold">Est. Salary</th>
@@ -1125,10 +1125,10 @@ export default function CareerAiResilienceCalculator() {
 										<th scope="col" className="px-6 py-4 font-bold text-right">Action</th>
 									</tr>
 								</thead>
-								<tbody className="divide-y divide-slate-900 text-sm">
+								<tbody className="divide-y divide-gray-200 text-sm">
 									{paginatedFinderCareers.length === 0 ? (
 										<tr>
-											<td colSpan={5} className="px-6 py-12 text-center font-mono text-xs text-slate-500 italic">
+											<td colSpan={5} className="px-6 py-12 text-center font-mono text-xs text-[#8C8C8C] italic">
 												No careers found matching current criteria. Try widening your filters.
 											</td>
 										</tr>
@@ -1136,44 +1136,44 @@ export default function CareerAiResilienceCalculator() {
 										paginatedFinderCareers.map((item) => (
 											<tr
 												key={item.code}
-												className="hover:bg-slate-900/30 transition group cursor-pointer"
+												className="hover:bg-gray-50 bg-white transition group cursor-pointer"
 												onClick={() => handleSelectFromExplorer(item.code)}
 											>
-												<td className="px-6 py-4 font-semibold text-white">
-													<div className="font-medium text-slate-200 group-hover:text-cyan-300 transition line-clamp-1">{item.title}</div>
-													<div className="font-mono text-[9px] text-slate-500 uppercase mt-0.5">{item.code}</div>
+												<td className="px-6 py-4">
+													<div className="font-bold text-[#1A1A1A] group-hover:text-[#5A7A8F] transition line-clamp-1">{item.title}</div>
+													<div className="font-mono text-[9px] text-[#8C8C8C] uppercase mt-0.5">{item.code}</div>
 												</td>
 												<td className="px-6 py-4 text-center">
 													<div className="flex items-center justify-center gap-2">
 														{/* Mini color bar */}
-														<div className="w-12 bg-slate-850 h-2 rounded-full overflow-hidden hidden sm:block">
+														<div className="w-12 bg-gray-100 h-2 rounded-full overflow-hidden hidden sm:block">
 															<div
 																className="h-full rounded-full"
 																style={{
 																	width: `${item.risk_score}%`,
-																	backgroundColor: item.risk_score > 65 ? '#f43f5e' : item.risk_score > 35 ? '#f59e0b' : '#06b6d4'
+																	backgroundColor: item.risk_score > 65 ? '#B85C5C' : item.risk_score > 35 ? '#C88D4E' : '#5A7A8F'
 																}}
 															></div>
 														</div>
 														<span className={`font-mono text-xs font-bold leading-none ${
-															item.risk_score > 65 ? 'text-rose-400' : item.risk_score > 35 ? 'text-amber-400' : 'text-cyan-400'
+															item.risk_score > 65 ? 'text-[#B85C5C]' : item.risk_score > 35 ? 'text-[#C88D4E]' : 'text-[#5A7A8F]'
 														}`}>
 															{item.risk_score}%
 														</span>
 													</div>
 												</td>
-												<td className="px-6 py-4 font-bold text-emerald-400 font-mono">
+												<td className="px-6 py-4 font-bold text-[#1A1A1A] font-mono">
 													{formatUSD(item.salary)}
 												</td>
 												<td className="px-6 py-4">
-													<span className={`inline-flex rounded-full px-2.5 py-0.5 text-[9.5px] font-medium font-mono uppercase border ${
+													<span className={`inline-flex rounded-full px-2.5 py-0.5 text-[9.5px] font-bold font-mono uppercase border ${
 														item.demand === 'Very High'
-															? 'bg-cyan-500/10 text-cyan-300 border-cyan-500/20'
+															? 'bg-[#5A7A8F]/10 text-[#5A7A8F] border-transparent'
 															: item.demand === 'High'
-																? 'bg-emerald-500/10 text-emerald-300 border-emerald-500/20'
+																? 'bg-[#5A7A8F]/10 text-[#5A7A8F] border-transparent'
 																: item.demand === 'Medium'
-																	? 'bg-slate-800 text-slate-300 border-slate-700/50'
-																	: 'bg-rose-500/5 text-slate-455 border-rose-500/10'
+																	? 'bg-gray-100 text-[#5E5E5E] border-transparent'
+																	: 'bg-gray-100 text-[#8C8C8C] border-transparent'
 													}`}>
 														{item.demand}
 													</span>
@@ -1185,7 +1185,7 @@ export default function CareerAiResilienceCalculator() {
 																e.stopPropagation();
 																handleAddToCompare(item);
 															}}
-															className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-1.5 font-mono text-[9.5px] uppercase tracking-wider text-slate-400 hover:text-cyan-300 hover:border-cyan-500/30 transition shadow-sm"
+															className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 font-mono text-[9.5px] uppercase tracking-wider text-[#1A1A1A] hover:bg-gray-50 transition shadow-sm"
 														>
 															+ Compare
 														</button>
@@ -1194,7 +1194,7 @@ export default function CareerAiResilienceCalculator() {
 																e.stopPropagation();
 																handleSelectFromExplorer(item.code);
 															}}
-															className="rounded-lg border border-slate-800 bg-slate-900 px-3 py-1.5 font-mono text-[9.5px] uppercase tracking-wider text-slate-400 group-hover:text-cyan-300 group-hover:border-cyan-500/30 transition shadow-sm"
+															className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 font-mono text-[9.5px] uppercase tracking-wider text-[#1A1A1A] hover:bg-gray-50 transition shadow-sm"
 														>
 															Analyze
 														</button>
@@ -1209,25 +1209,25 @@ export default function CareerAiResilienceCalculator() {
 
 						{/* Pagination Controls */}
 						{totalPages > 1 && (
-							<div className="flex items-center justify-between mt-6 border-t border-slate-900 pt-4">
-								<span className="font-mono text-[10px] text-slate-500">
+							<div className="flex items-center justify-between mt-6 border-t border-gray-200 pt-4">
+								<span className="font-mono text-[10px] text-[#8C8C8C]">
 									Showing {(currentPage - 1) * itemsPerPage + 1} - {Math.min(currentPage * itemsPerPage, filteredFinderCareers.length)} of {filteredFinderCareers.length} careers
 								</span>
 								<div className="flex items-center gap-2">
 									<button
 										disabled={currentPage === 1}
 										onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
-										className="rounded-lg border border-slate-800 bg-slate-950 px-3 py-1.5 font-mono text-[10px] text-slate-400 hover:text-white disabled:opacity-30 disabled:hover:text-slate-400 transition"
+										className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 font-mono text-[10px] text-[#5E5E5E] hover:text-[#1A1A1A] disabled:opacity-30 disabled:hover:text-[#5E5E5E] transition"
 									>
 										← Prev
 									</button>
-									<span className="font-mono text-xs text-slate-400">
+									<span className="font-mono text-xs text-[#5E5E5E]">
 										Page {currentPage} of {totalPages}
 									</span>
 									<button
 										disabled={currentPage === totalPages}
 										onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
-										className="rounded-lg border border-slate-800 bg-slate-950 px-3 py-1.5 font-mono text-[10px] text-slate-400 hover:text-white disabled:opacity-30 disabled:hover:text-slate-400 transition"
+										className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 font-mono text-[10px] text-[#5E5E5E] hover:text-[#1A1A1A] disabled:opacity-30 disabled:hover:text-[#5E5E5E] transition"
 									>
 										Next →
 									</button>
