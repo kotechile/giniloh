@@ -947,11 +947,11 @@ export default function CareerAiResilienceCalculator() {
 			{activeView === 'finder' && (
 				<div className="grid gap-8">
 					{/* Filters Card */}
-					<div className="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/35 p-6 backdrop-blur-md">
-						<div className="flex items-center justify-between border-b border-slate-800/85 pb-4 mb-6">
+					<div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+						<div className="flex items-center justify-between border-b border-gray-200 pb-4 mb-6">
 							<div>
-								<h3 className="text-xl font-bold text-white">Interactive Career Finder</h3>
-								<p className="text-xs text-slate-400 mt-1">Filter, sort, and discover jobs matching your AI risk tolerance and salary targets.</p>
+								<h3 className="text-xl font-bold text-[#1A1A1A]">Interactive Career Finder</h3>
+								<p className="text-xs text-[#5E5E5E] mt-1">Filter, sort, and discover jobs matching your AI risk tolerance and salary targets.</p>
 							</div>
 							<button
 								onClick={() => {
@@ -1106,9 +1106,9 @@ export default function CareerAiResilienceCalculator() {
 					</div>
 
 					{/* Results Card */}
-					<div className="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/35 p-6 backdrop-blur-md overflow-hidden">
+					<div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm overflow-hidden">
 						<div className="flex items-center justify-between mb-6">
-							<span className="font-mono text-[10px] uppercase tracking-[0.24em] text-cyan-300/80 font-bold">
+							<span className="font-mono text-[10px] uppercase tracking-[0.24em] text-[#5A7A8F] font-bold">
 								Found {filteredFinderCareers.length} Matching Careers
 							</span>
 						</div>
@@ -1241,9 +1241,9 @@ export default function CareerAiResilienceCalculator() {
 			{/* ==================== VIEW 3: MACRO CLUSTER EXPLORER ==================== */}
 			{activeView === 'explorer' && (
 				<div className="grid gap-8">
-					<div className="panel-soft rounded-[1.8rem] border border-slate-800/90 bg-slate-900/35 p-6 backdrop-blur-md">
-						<h3 className="text-xl font-bold text-white mb-2">Macro Career Clusters</h3>
-						<p className="text-xs text-slate-400 leading-relaxed max-w-3xl">
+					<div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+						<h3 className="text-xl font-bold text-[#1A1A1A] mb-2">Macro Career Clusters</h3>
+						<p className="text-xs text-[#5E5E5E] leading-relaxed max-w-3xl">
 							Visualize all 1,000+ standard occupations. The X-axis details the estimated Salary Group proxy (based on major O*NET groups), and the Y-axis details the aggregate AI Vulnerability Score. Green/cyan dots indicate highly resilient, high-paying targets. Hover dots to inspect and click to select that profile.
 						</p>
 						

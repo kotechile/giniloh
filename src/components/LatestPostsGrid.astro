@@ -9,18 +9,18 @@ const hasApiBase = hasWordPressApiBase();
 <section class="mt-24">
 	<div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
 		<div>
-			<p class="section-eyebrow text-cyan-400">Zenith Creator Feed</p>
-			<h2 class="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+			<p class="section-eyebrow">Zenith Creator Feed</p>
+			<h2 class="mt-3 text-3xl font-black tracking-tight text-[#1A1A1A] sm:text-4xl">
 				Daily Intelligence Feed
 			</h2>
 		</div>
 		{
 			hasApiBase ? (
-				<p class="max-w-md text-sm leading-6 text-slate-400 font-mono">
+				<p class="max-w-md text-sm leading-relaxed text-[#5E5E5E] font-mono">
 					> Pulling live analysis streams from the central repository.
 				</p>
 			) : (
-				<p class="max-w-md text-sm leading-6 text-amber-500 font-mono">
+				<p class="max-w-md text-sm leading-relaxed text-[#C88D4E] font-mono">
 					> WARNING: PUBLIC_WORDPRESS_API_BASE offline. Displaying static payload.
 				</p>
 			)
@@ -33,12 +33,12 @@ const hasApiBase = hasWordPressApiBase();
 				{posts.map((post) => <PostCard post={post} />)}
 			</div>
 		) : (
-			<div class="mt-8 rounded-[1.5rem] border border-slate-800 bg-slate-900 p-8">
-				<div class="flex items-center gap-3 text-cyan-400 mb-4">
+			<div class="mt-8 rounded-2xl border border-gray-200 bg-white p-8">
+				<div class="flex items-center gap-3 text-[#5A7A8F] mb-4">
 					<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-					<h3 class="text-xl font-semibold font-mono uppercase">Awaiting Feed Integration</h3>
+					<h3 class="text-xl font-bold font-mono uppercase">Awaiting Feed Integration</h3>
 				</div>
-				<p class="max-w-2xl text-sm leading-7 text-slate-400 font-mono">
+				<p class="max-w-2xl text-sm leading-relaxed text-[#5E5E5E] font-mono">
 					{hasApiBase
 						? '> The data stream is currently empty. The system is active and awaiting incoming intelligence briefs.'
 						: '> API connection not established. Connect to the data source to stream live analysis.'}

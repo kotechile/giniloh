@@ -179,7 +179,8 @@ async function fetchWordPress(endpoint: string, query: Record<string, string | n
 				'Cache-Control': 'no-cache, no-store, must-revalidate',
 				Pragma: 'no-cache'
 			},
-			cache: 'no-store'
+			cache: 'no-store',
+			signal: AbortSignal.timeout(8000)
 		});
 		if (!response.ok) {
 			return [];

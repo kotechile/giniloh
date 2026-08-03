@@ -118,15 +118,15 @@ a {
 .section-eyebrow {
 	font-family: var(--font-mono);
 	font-size: 0.72rem;
-	font-weight: 500;
+	font-weight: 750;
 	letter-spacing: 0.28em;
 	text-transform: uppercase;
-	color: var(--brand-cyan);
+	color: #8C8C8C;
 }
 
 .data-point {
 	font-family: var(--font-mono);
-	color: var(--brand-emerald);
+	color: #1A1A1A;
 }
 
 .btn-primary,
@@ -144,24 +144,24 @@ a {
 
 .btn-primary {
 	border-radius: 8px; /* Sharper edges */
-	background: var(--brand-blue);
+	background: #1A1A1A;
 	padding: 0.95rem 1.35rem;
 	color: white;
-	box-shadow: 0 4px 14px 0 rgba(0, 112, 243, 0.39);
+	box-shadow: none;
 }
 
 .btn-secondary {
 	border-radius: 8px; /* Sharper edges */
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	background: rgba(255, 255, 255, 0.05);
+	border: 1px solid #E5E5E5;
+	background: white;
 	padding: 0.95rem 1.35rem;
-	color: var(--brand-ink);
-	box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.2);
+	color: #1A1A1A;
+	box-shadow: none;
 }
 
 .btn-inline {
 	gap: 0.4rem;
-	color: var(--brand-cyan);
+	color: #5A7A8F;
 }
 
 .btn-primary:hover,
@@ -170,21 +170,25 @@ a {
 	transform: translateY(-1px);
 }
 
+.btn-primary:hover {
+	background: #333333;
+}
+
 .btn-secondary:hover {
-	background: rgba(255, 255, 255, 0.1);
+	background: #f9f9f9;
 }
 
 .btn-primary:focus-visible,
 .btn-secondary:focus-visible,
 .btn-inline:focus-visible {
-	outline: 2px solid var(--brand-cyan);
+	outline: 2px solid #5A7A8F;
 	outline-offset: 3px;
 }
 
 /* --- Technical Typography (Prose Overrides) --- */
 .prose {
-  --tw-prose-body: #cbd5e1;
-  --tw-prose-headings: #ffffff;
+  --tw-prose-body: #5E5E5E;
+  --tw-prose-headings: #1A1A1A;
   max-width: none !important;
 }
 
@@ -194,7 +198,7 @@ a {
   line-height: 2.5rem !important;
   font-weight: 800 !important;
   margin-bottom: 2rem !important;
-  color: #ffffff !important;
+  color: #1A1A1A !important;
   letter-spacing: -0.025em !important;
 }
 @media (min-width: 768px) {
@@ -207,8 +211,8 @@ a {
   font-weight: 700 !important;
   margin-top: 4rem !important;
   margin-bottom: 1.5rem !important;
-  color: #ffffff !important;
-  border-left: 4px solid #06b6d4 !important;
+  color: #1A1A1A !important;
+  border-left: 4px solid #5A7A8F !important;
   padding-left: 1.5rem !important;
 }
 
@@ -217,14 +221,14 @@ a {
   font-weight: 700 !important;
   margin-top: 3rem !important;
   margin-bottom: 1rem !important;
-  color: #ffffff !important;
+  color: #1A1A1A !important;
 }
 
 .prose a,
 .article-body a {
-  color: #60a5fa !important;
+  color: #5A7A8F !important;
   text-decoration: underline !important;
-  text-decoration-color: rgba(96, 165, 250, 0.7) !important;
+  text-decoration-color: rgba(90, 122, 143, 0.7) !important;
   text-decoration-thickness: 0.08em !important;
   text-underline-offset: 0.18em !important;
   transition:
@@ -235,14 +239,14 @@ a {
 
 .prose a:hover,
 .article-body a:hover {
-  color: #93c5fd !important;
-  text-decoration-color: rgba(147, 197, 253, 0.95) !important;
-  text-shadow: 0 0 18px rgba(56, 189, 248, 0.22);
+  color: #1A1A1A !important;
+  text-decoration-color: #1A1A1A !important;
+  text-shadow: none;
 }
 
 .prose a:focus-visible,
 .article-body a:focus-visible {
-  outline: 2px solid rgba(125, 211, 252, 0.9) !important;
+  outline: 2px solid #5A7A8F !important;
   outline-offset: 3px !important;
   border-radius: 0.2rem;
 }
@@ -256,7 +260,7 @@ a {
 .prose td {
   background-color: transparent !important; /* Kill all WP injected backgrounds */
   background: none !important;
-  border-color: rgba(51, 65, 85, 0.5) !important; /* subtle slate-700 */
+  border-color: #E5E5E5 !important;
 }
 
 .prose table {
@@ -264,7 +268,7 @@ a {
   margin-bottom: 3rem !important;
   width: 100% !important;
   border-collapse: collapse !important;
-  border-top: 1px solid rgba(34, 211, 238, 0.3) !important; /* subtle cyan top line */
+  border-top: 1px solid #5A7A8F !important; /* Steel blue top line */
 }
 
 .prose th {
@@ -274,17 +278,17 @@ a {
   font-weight: 600 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.2em !important;
-  color: #22d3ee !important; /* Bright Cyan Headers */
+  color: #5A7A8F !important; /* Steel blue Headers */
   text-align: left !important;
-  border-bottom: 2px solid rgba(34, 211, 238, 0.2) !important;
+  border-bottom: 2px solid #E5E5E5 !important;
 }
 
 .prose td {
   padding: 1.25rem 1rem !important;
-  color: #f8fafc !important; /* Bright Slate-50 Text */
+  color: #1A1A1A !important; /* Near-black Text */
   font-size: 0.95rem !important;
   line-height: 1.6 !important;
-  border-bottom: 1px solid rgba(51, 65, 85, 0.3) !important;
+  border-bottom: 1px solid #E5E5E5 !important;
 }
 
 .prose tr:last-child td {
@@ -293,7 +297,7 @@ a {
 
 /* Subtle Row Highlight */
 .prose tr:hover td {
-  background-color: rgba(34, 211, 238, 0.03) !important;
+  background-color: #f9f9f9 !important;
 }
 
 /* Key Takeaway / Light Blocks (Refined) */
@@ -1670,9 +1674,9 @@ code,
   width: 18px !important;
   height: 18px !important;
   border-radius: 9999px !important;
-  background-color: #4a4a4a !important;
+  background-color: #5A7A8F !important;
   border: 2px solid #ffffff !important;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4) !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
   cursor: pointer !important;
   transition: transform 0.1s ease, background-color 0.1s ease !important;
 }
@@ -1683,7 +1687,7 @@ code,
 }
 
 .panel-soft input[type="range"]::-webkit-slider-thumb:active {
-  background-color: #222222 !important;
+  background-color: #1A1A1A !important;
   transform: scale(0.95) !important;
 }
 
@@ -1691,9 +1695,9 @@ code,
   width: 18px !important;
   height: 18px !important;
   border-radius: 9999px !important;
-  background-color: #4a4a4a !important;
+  background-color: #5A7A8F !important;
   border: 2px solid #ffffff !important;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4) !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
   cursor: pointer !important;
   transition: transform 0.1s ease, background-color 0.1s ease !important;
 }
@@ -1704,7 +1708,7 @@ code,
 }
 
 .panel-soft input[type="range"]::-moz-range-thumb:active {
-  background-color: #222222 !important;
+  background-color: #1A1A1A !important;
   transform: scale(0.95) !important;
 }
 
