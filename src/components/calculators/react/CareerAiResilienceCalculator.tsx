@@ -1058,51 +1058,63 @@ export default function CareerAiResilienceCalculator() {
 									</span>
 								</div>
 
-								<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-									{/* Min Slider */}
-									<div>
-										<div className="flex items-center justify-between mb-1.5">
-											<span className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C] font-bold">Min Vulnerability</span>
-											<span className="font-mono text-[10px] text-[#5E5E5E] font-semibold">{minVulnerability}%</span>
-										</div>
-										<input
-											type="range"
-											min="0"
-											max="100"
-											value={minVulnerability}
-											onChange={(e) => {
-												const val = Math.min(Number(e.target.value), maxVulnerability);
-												setMinVulnerability(val);
-											}}
-											className="w-full accent-[#5A7A8F] h-1.5 rounded-lg bg-gray-200 outline-none cursor-pointer"
-										/>
-									</div>
+								{/* Dual-thumb Range Slider wrapper */}
+								<div className="dual-slider-container relative w-full h-8 flex items-center mb-1">
+									{/* Track background */}
+									<div className="absolute left-0 right-0 h-1.5 bg-gray-200 rounded-lg"></div>
+									
+									{/* Colored active range track */}
+									<div 
+										className="absolute h-1.5 bg-[#5A7A8F] rounded-lg"
+										style={{
+											left: `${minVulnerability}%`,
+											width: `${maxVulnerability - minVulnerability}%`
+										}}
+									></div>
+									
+									{/* Min range input */}
+									<input
+										type="range"
+										min="0"
+										max="100"
+										value={minVulnerability}
+										onChange={(e) => {
+											const val = Math.min(Number(e.target.value), maxVulnerability - 1);
+											setMinVulnerability(val);
+										}}
+										className="absolute w-full h-1.5 pointer-events-none appearance-none bg-transparent outline-none cursor-pointer"
+										style={{
+											zIndex: minVulnerability > 50 ? 5 : 4
+										}}
+									/>
 
-									{/* Max Slider */}
-									<div>
-										<div className="flex items-center justify-between mb-1.5">
-											<span className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C] font-bold">Max Vulnerability</span>
-											<span className="font-mono text-[10px] text-[#5E5E5E] font-semibold">{maxVulnerability}%</span>
-										</div>
-										<input
-											type="range"
-											min="0"
-											max="100"
-											value={maxVulnerability}
-											onChange={(e) => {
-												const val = Math.max(Number(e.target.value), minVulnerability);
-												setMaxVulnerability(val);
-											}}
-											className="w-full accent-[#5A7A8F] h-1.5 rounded-lg bg-gray-200 outline-none cursor-pointer"
-										/>
-									</div>
+									{/* Max range input */}
+									<input
+										type="range"
+										min="0"
+										max="100"
+										value={maxVulnerability}
+										onChange={(e) => {
+											const val = Math.max(Number(e.target.value), minVulnerability + 1);
+											setMaxVulnerability(val);
+										}}
+										className="absolute w-full h-1.5 pointer-events-none appearance-none bg-transparent outline-none cursor-pointer"
+										style={{
+											zIndex: minVulnerability > 50 ? 4 : 5
+										}}
+									/>
+								</div>
+								
+								<div className="flex items-center justify-between text-[10px] font-mono text-[#8C8C8C] px-1">
+									<span>0% (Resilient)</span>
+									<span>100% (Vulnerable)</span>
 								</div>
 							</div>
 						</div>
 					</div>
 
 					{/* Results List */}
-					<div className="overflow-hidden">
+					<div className="overflow-hidden mt-10">
 						<div className="flex items-center justify-between mb-6">
 							<span className="font-mono text-[10px] uppercase tracking-[0.24em] text-[#5A7A8F] font-bold">
 								Found {filteredFinderCareers.length} Matching Careers
@@ -1114,11 +1126,11 @@ export default function CareerAiResilienceCalculator() {
 							<table className="min-w-full divide-y divide-gray-200 text-left border-collapse">
 								<thead>
 									<tr className="border-b border-gray-200 font-mono text-[9.5px] uppercase tracking-[0.15em] text-[#5E5E5E]">
-										<th scope="col" className="px-6 py-4 font-bold text-left">Occupation Title</th>
+										<th scope="col" className="pl-0 pr-6 py-4 font-bold text-left">Occupation Title</th>
 										<th scope="col" className="px-6 py-4 font-bold text-left">Vulnerability Score</th>
 										<th scope="col" className="px-6 py-4 font-bold text-left">Est. Salary</th>
 										<th scope="col" className="px-6 py-4 font-bold text-left">Market Demand</th>
-										<th scope="col" className="px-6 py-4 font-bold text-right">Action</th>
+										<th scope="col" className="pl-6 pr-0 py-4 font-bold text-right">Action</th>
 									</tr>
 								</thead>
 								<tbody className="divide-y divide-gray-200 text-sm">
@@ -1135,11 +1147,11 @@ export default function CareerAiResilienceCalculator() {
 												className="hover:bg-gray-50 bg-white transition group cursor-pointer"
 												onClick={() => handleSelectFromExplorer(item.code)}
 											>
-												<td className="px-6 py-4 text-left">
+												<td className="pl-0 pr-6 py-6 text-left">
 													<div className="font-bold text-[#1A1A1A] group-hover:text-[#5A7A8F] transition line-clamp-1">{item.title}</div>
 													<div className="font-mono text-[9px] text-[#8C8C8C] uppercase mt-0.5">{item.code}</div>
 												</td>
-												<td className="px-6 py-4 text-left">
+												<td className="px-6 py-6 text-left">
 													<div className="flex items-center justify-start gap-2">
 														{/* Mini color bar */}
 														<div className="w-12 bg-gray-100 h-2 rounded-full overflow-hidden hidden sm:block">
@@ -1158,10 +1170,10 @@ export default function CareerAiResilienceCalculator() {
 														</span>
 													</div>
 												</td>
-												<td className="px-6 py-4 font-bold text-[#1A1A1A] font-mono text-left">
+												<td className="px-6 py-6 font-bold text-[#1A1A1A] font-mono text-left">
 													{formatUSD(item.salary)}
 												</td>
-												<td className="px-6 py-4 text-left">
+												<td className="px-6 py-6 text-left">
 													<span className={`inline-flex rounded-full px-2.5 py-0.5 text-[9.5px] font-bold font-mono uppercase border ${
 														item.demand === 'Very High'
 															? 'bg-[#5A7A8F]/10 text-[#5A7A8F] border-transparent'
@@ -1174,7 +1186,7 @@ export default function CareerAiResilienceCalculator() {
 														{item.demand}
 													</span>
 												</td>
-												<td className="px-6 py-4 text-right">
+												<td className="pl-6 pr-0 py-6 text-right">
 													<div className="flex justify-end items-center gap-4">
 														<button
 															onClick={(e) => {

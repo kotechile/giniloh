@@ -1732,6 +1732,51 @@ input[type=number] {
   -moz-appearance: textfield !important;
 }
 
+/* Dual-thumb range slider support styles */
+.dual-slider-container input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  pointer-events: none;
+  outline: none;
+}
+
+.dual-slider-container input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #5A7A8F;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+.dual-slider-container input[type="range"]::-webkit-slider-thumb:hover {
+  background-color: #3e5b6e;
+  transform: scale(1.15);
+}
+
+.dual-slider-container input[type="range"]::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #5A7A8F;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+.dual-slider-container input[type="range"]::-moz-range-thumb:hover {
+  background-color: #3e5b6e;
+  transform: scale(1.15);
+}
+
+
 
 
 
