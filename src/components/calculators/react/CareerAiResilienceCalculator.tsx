@@ -468,9 +468,6 @@ export default function CareerAiResilienceCalculator() {
 
 			{/* ==================== VIEW 1: CAREER PROFILE & SIMULATOR ==================== */}
 			{activeView === 'profile' && (
-				<div className="grid gap-8">
-			{/* ==================== VIEW 1: CAREER PROFILE & SIMULATOR ==================== */}
-			{activeView === 'profile' && (
 				<div className="grid gap-12">
 					{/* Search & Selector */}
 					<div className="relative py-2">
