@@ -303,7 +303,7 @@ export default function CareerAiResilienceCalculator() {
 	}, [weights]);
 
 	// Scatter Plot dimensions and mapping parameters
-	const scatterMargin = { top: 20, right: 30, bottom: 50, left: 60 };
+	const scatterMargin = { top: 20, right: 30, bottom: 50, left: 85 };
 	const scatterPlotWidth = scatterDimensions.width - scatterMargin.left - scatterMargin.right;
 	const scatterPlotHeight = scatterDimensions.height - scatterMargin.top - scatterMargin.bottom;
 
@@ -1268,30 +1268,30 @@ export default function CareerAiResilienceCalculator() {
 								<svg
 									width={scatterDimensions.width}
 									height={scatterDimensions.height}
-									className="bg-slate-950/70 border border-slate-850 rounded-2xl overflow-visible shadow-inner"
+									className="overflow-visible"
 								>
 									{/* Horizontal Grid Lines for Risk Score */}
 									{[0, 25, 50, 75, 100].map((riskVal) => {
 										const y = mapRiskToY(riskVal);
 										return (
-											<g key={riskVal} className="opacity-30">
+											<g key={riskVal}>
 												<line
 													x1={scatterMargin.left}
 													y1={y}
 													x2={scatterDimensions.width - scatterMargin.right}
 													y2={y}
-													stroke="#334155"
+													stroke="#E5E5E5"
 													strokeWidth="0.5"
 													strokeDasharray="4 4"
 												/>
 												<text
-													x={scatterMargin.left - 10}
+													x={scatterMargin.left - 12}
 													y={y + 4}
 													textAnchor="end"
-													fill="#94a3b8"
-													className="font-mono text-[9px] font-bold"
+													fill="#5E5E5E"
+													className="font-mono text-[10px] font-semibold"
 												>
-													{riskVal}
+													{riskVal}%
 												</text>
 											</g>
 										);
@@ -1301,22 +1301,22 @@ export default function CareerAiResilienceCalculator() {
 									{[20000, 50000, 80000, 110000, 140000, 160000].map((salVal) => {
 										const x = mapSalaryToX(salVal);
 										return (
-											<g key={salVal} className="opacity-30">
+											<g key={salVal}>
 												<line
 													x1={x}
 													y1={scatterMargin.top}
 													x2={x}
 													y2={scatterDimensions.height - scatterMargin.bottom}
-													stroke="#334155"
+													stroke="#E5E5E5"
 													strokeWidth="0.5"
 													strokeDasharray="4 4"
 												/>
 												<text
 													x={x}
-													y={scatterDimensions.height - scatterMargin.bottom + 18}
+													y={scatterDimensions.height - scatterMargin.bottom + 20}
 													textAnchor="middle"
-													fill="#94a3b8"
-													className="font-mono text-[9px] font-bold"
+													fill="#5E5E5E"
+													className="font-mono text-[10px] font-semibold"
 												>
 													{salVal >= 100000 ? `$${salVal/1000}k` : `$${salVal/1000}k`}
 												</text>
@@ -1324,21 +1324,39 @@ export default function CareerAiResilienceCalculator() {
 										);
 									})}
 
+									{/* The Axis Boundary Lines */}
+									<line
+										x1={scatterMargin.left}
+										y1={scatterMargin.top}
+										x2={scatterMargin.left}
+										y2={scatterDimensions.height - scatterMargin.bottom}
+										stroke="#E5E5E5"
+										strokeWidth="1"
+									/>
+									<line
+										x1={scatterMargin.left}
+										y1={scatterDimensions.height - scatterMargin.bottom}
+										x2={scatterDimensions.width - scatterMargin.right}
+										y2={scatterDimensions.height - scatterMargin.bottom}
+										stroke="#E5E5E5"
+										strokeWidth="1"
+									/>
+
 									{/* Axis Labels */}
 									<text
-										x={scatterMargin.left - 45}
+										x={scatterMargin.left - 55}
 										y={scatterDimensions.height / 2 - 20}
-										fill="#64748b"
+										fill="#1A1A1A"
 										textAnchor="middle"
 										className="font-mono text-[10px] uppercase font-bold tracking-widest"
-										transform={`rotate(-90, ${scatterMargin.left - 45}, ${scatterDimensions.height / 2 - 20})`}
+										transform={`rotate(-90, ${scatterMargin.left - 55}, ${scatterDimensions.height / 2 - 20})`}
 									>
 										AI Vulnerability Index (Y)
 									</text>
 									<text
 										x={scatterMargin.left + scatterPlotWidth / 2}
 										y={scatterDimensions.height - 10}
-										fill="#64748b"
+										fill="#1A1A1A"
 										textAnchor="middle"
 										className="font-mono text-[10px] uppercase font-bold tracking-widest"
 									>
@@ -1353,13 +1371,13 @@ export default function CareerAiResilienceCalculator() {
 										const isSelected = selectedCode === item.code;
 										const isHovered = hoveredScatterCareer?.code === item.code;
 
-										// Determine Dot Accent Neon Colors
+										// Determine Dot Accent Neutral Colors
 										const dotColor =
 											item.risk_score > 65
-												? '#f43f5e' // Hot rose
+												? '#B85C5C' // Muted Brick
 												: item.risk_score > 35
-													? '#f59e0b' // Amber/orange
-													: '#06b6d4'; // Electric Cyan
+													? '#C88D4E' // Soft Ochre
+													: '#5A7A8F'; // Steel Blue
 
 										return (
 											<circle
@@ -1368,8 +1386,8 @@ export default function CareerAiResilienceCalculator() {
 												cy={cy}
 												r={isSelected ? 6.5 : isHovered ? 5.5 : 4.5}
 												fill={dotColor}
-												opacity={hoveredScatterCareer ? (isHovered || isSelected ? 1.0 : 0.45) : 0.65}
-												stroke={isSelected ? '#ffffff' : isHovered ? '#ffffff' : 'transparent'}
+												opacity={hoveredScatterCareer ? (isHovered || isSelected ? 1.0 : 0.2) : 0.5}
+												stroke={isSelected ? '#1A1A1A' : isHovered ? '#1A1A1A' : 'transparent'}
 												strokeWidth={isSelected || isHovered ? 1.5 : 0}
 												onMouseMove={(e) => handleScatterMouseMove(e, item)}
 												onMouseLeave={() => setHoveredScatterCareer(null)}
@@ -1384,7 +1402,7 @@ export default function CareerAiResilienceCalculator() {
 								{/* Dynamic Hover Tooltip inside SVG Container */}
 								{hoveredScatterCareer && (
 									<div
-										className="absolute pointer-events-none z-50 rounded-xl border border-slate-800 bg-slate-950/95 p-3.5 shadow-2xl backdrop-blur-md max-w-xs"
+										className="absolute pointer-events-none z-50 rounded-xl border border-gray-200 bg-white p-3.5 shadow-xl max-w-xs"
 										style={{
 											left: `${tooltipPos.x}px`,
 											top: `${tooltipPos.y - 45}px`,
@@ -1393,34 +1411,34 @@ export default function CareerAiResilienceCalculator() {
 												: 'translate(15px, -50%)'
 										}}
 									>
-										<p className="font-mono text-[8px] uppercase tracking-wider text-cyan-400 font-bold mb-1">
+										<p className="font-mono text-[8px] uppercase tracking-wider text-[#5A7A8F] font-bold mb-1">
 											{hoveredScatterCareer.code}
 										</p>
-										<div className="text-xs font-bold line-clamp-1" style={{ color: '#ffffff' }}>
+										<div className="text-xs font-bold line-clamp-1 text-[#1A1A1A]">
 											{hoveredScatterCareer.title}
 										</div>
 										
-										<div className="mt-2.5 flex items-center justify-between gap-4 border-t border-slate-900 pt-2 font-mono text-[9.5px]">
+										<div className="mt-2.5 flex items-center justify-between gap-4 border-t border-gray-150 pt-2 font-mono text-[9.5px]">
 											<div>
-												<span className="text-slate-500">Risk Score:</span>
+												<span className="text-[#5E5E5E]">Risk Score:</span>
 												<strong className={`ml-1 ${
 													hoveredScatterCareer.risk_score > 65
-														? 'text-rose-400'
+														? 'text-[#B85C5C]'
 														: hoveredScatterCareer.risk_score > 35
-															? 'text-amber-400'
-															: 'text-cyan-400'
+															? 'text-[#C88D4E]'
+															: 'text-[#5A7A8F]'
 												}`}>
-													{hoveredScatterCareer.risk_score}
+													{hoveredScatterCareer.risk_score}%
 												</strong>
 											</div>
 											<div>
-												<span className="text-slate-500">Salary:</span>
-												<strong className="ml-1 text-emerald-400">
+												<span className="text-[#5E5E5E]">Salary:</span>
+												<strong className="ml-1 text-[#1A1A1A]">
 													{formatUSD(hoveredScatterCareer.salary)}
 												</strong>
 											</div>
 										</div>
-										<p className="mt-2 font-mono text-[8px] text-slate-500 italic text-center">Click dot to select profile</p>
+										<p className="mt-2 font-mono text-[8px] text-[#8C8C8C] italic text-center">Click dot to select profile</p>
 									</div>
 								)}
 							</div>
