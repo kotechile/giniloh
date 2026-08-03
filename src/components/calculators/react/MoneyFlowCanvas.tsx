@@ -222,18 +222,20 @@ export default function MoneyFlowCanvas({
 	};
 
 	React.useEffect(() => {
-		const timer = setTimeout(() => {
-			handleZoomFit();
-		}, 100);
-		return () => clearTimeout(timer);
-	}, [mode]);
+		if (!containerRef.current) return;
 
-	React.useEffect(() => {
-		const handleResize = () => {
+		// Initial calculation
+		handleZoomFit();
+
+		// Set up ResizeObserver to track layout container width shifts (e.g. hydration/styling settle)
+		const observer = new ResizeObserver(() => {
 			handleZoomFit();
+		});
+		observer.observe(containerRef.current);
+
+		return () => {
+			observer.disconnect();
 		};
-		window.addEventListener('resize', handleResize);
-		return () => window.removeEventListener('resize', handleResize);
 	}, [mode]);
 
 	const activeCoordinates = isEnterprise ? ENTERPRISE_NODE_COORDINATES : PERSONAL_NODE_COORDINATES;
