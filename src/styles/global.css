@@ -684,6 +684,14 @@ p, .text-base, .text-sm {
   letter-spacing: 0.25em !important;
 }
 
+/* Ensure text-white is always pure white and never overridden by general body text rules */
+.text-white,
+[class*="text-white"],
+[class*="text-slate-100"],
+[class*="text-gray-100"] {
+  color: #FFFFFF !important;
+}
+
 /* 6. Form Inputs & Interactive Controls */
 input[type="text"],
 input[type="number"],
