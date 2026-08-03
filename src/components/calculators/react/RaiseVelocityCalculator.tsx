@@ -323,72 +323,72 @@ export default function RaiseVelocityCalculator() {
 		<div className="grid gap-6">
 			{/* KPI Summary Section */}
 			<div className="grid gap-4 sm:grid-cols-3">
-				<div className="rounded-2xl border border-cyan-500/25 bg-slate-950/40 p-5 backdrop-blur-md shadow-lg">
-					<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-cyan-400">
+				<div className="rounded-2xl border border-cyan-500/25 bg-white p-5 backdrop-blur-md shadow-lg">
+					<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#5A7A8F]">
 						Year 10 Raise Delta Portfolio
 					</p>
-					<h3 className="mt-2 text-3xl font-bold tracking-tight text-white font-sans">
+					<h3 className="mt-2 text-3xl font-bold tracking-tight text-[#1A1A1A] font-sans">
 						{formatCurrency(finalYearNode.compoundedPortfolioDelta)}
 					</h3>
-					<p className="mt-1 text-xs text-slate-400">
+					<p className="mt-1 text-xs text-[#5E5E5E]">
 						Compounded at {marketReturnRate}% annual return
 					</p>
 				</div>
 
-				<div className="rounded-2xl border border-slate-800/80 bg-slate-950/40 p-5 backdrop-blur-md shadow-lg">
-					<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-slate-500">
+				<div className="rounded-2xl border border-gray-200/80 bg-white p-5 backdrop-blur-md shadow-lg">
+					<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#8C8C8C]">
 						Year 10 Salary Comparison
 					</p>
-					<h3 className="mt-2 text-2xl font-bold tracking-tight text-white">
+					<h3 className="mt-2 text-2xl font-bold tracking-tight text-[#1A1A1A]">
 						{formatCurrency(finalYearNode.switcherSalary)}{' '}
-						<span className="text-xs font-normal text-slate-400">vs</span>{' '}
-						<span className="text-slate-400">
+						<span className="text-xs font-normal text-[#5E5E5E]">vs</span>{' '}
+						<span className="text-[#5E5E5E]">
 							{formatCurrency(finalYearNode.stayerSalary)}
 						</span>
 					</h3>
-					<p className="mt-1 text-xs text-cyan-300 font-medium">
+					<p className="mt-1 text-xs #5A7A8F font-medium">
 						+{formatPercent(Math.round(((finalYearNode.switcherSalary - finalYearNode.stayerSalary) / finalYearNode.stayerSalary) * 100))} Switcher premium
 					</p>
 				</div>
 
-				<div className="rounded-2xl border border-slate-800/80 bg-slate-950/40 p-5 backdrop-blur-md shadow-lg">
-					<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-slate-500">
+				<div className="rounded-2xl border border-gray-200/80 bg-white p-5 backdrop-blur-md shadow-lg">
+					<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#8C8C8C]">
 						Year 10 Net Take-home
 					</p>
-					<h3 className="mt-2 text-2xl font-bold tracking-tight text-white">
+					<h3 className="mt-2 text-2xl font-bold tracking-tight text-[#1A1A1A]">
 						{formatCurrency(finalYearNode.switcherNetAnnualCashFlow)}{' '}
-						<span className="text-xs font-normal text-slate-400">vs</span>{' '}
-						<span className="text-slate-400">
+						<span className="text-xs font-normal text-[#5E5E5E]">vs</span>{' '}
+						<span className="text-[#5E5E5E]">
 							{formatCurrency(finalYearNode.stayerNetAnnualCashFlow)}
 						</span>
 					</h3>
-					<p className="mt-1 text-xs text-slate-400">
+					<p className="mt-1 text-xs text-[#5E5E5E]">
 						Inclusive of tax, matches & transition friction
 					</p>
 				</div>
 			</div>
 
 			{/* Chart Section */}
-			<div className="rounded-[1.8rem] border border-slate-800 bg-slate-950/35 p-5 shadow-2xl backdrop-blur-md sm:p-6">
-				<div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-900 pb-4">
+			<div className="rounded-[1.8rem] border border-gray-200 bg-white/35 p-5 shadow-2xl backdrop-blur-md sm:p-6">
+				<div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-200 pb-4">
 					<div>
-						<h2 className="text-lg font-bold tracking-tight text-white font-sans">
+						<h2 className="text-lg font-bold tracking-tight text-[#1A1A1A] font-sans">
 							10-Year Compounding Trajectory
 						</h2>
-						<p className="text-xs text-slate-400 mt-1">
+						<p className="text-xs text-[#5E5E5E] mt-1">
 							Visualize the divergence in salary or compounded raise portfolios.
 						</p>
 					</div>
-					<div className="flex gap-1.5 rounded-lg bg-slate-950/90 border border-slate-800 p-1 font-mono text-[10px] self-start sm:self-center">
+					<div className="flex gap-1.5 rounded-lg bg-white/90 border border-gray-200 p-1 font-mono text-[10px] self-start sm:self-center">
 						<button
 							onClick={() => setChartMode('portfolio')}
-							className={`rounded px-3 py-1.5 font-medium transition cursor-pointer ${chartMode === 'portfolio' ? 'bg-cyan-500/10 border border-cyan-500/25 text-cyan-300' : 'text-slate-400 hover:text-white'}`}
+							className={`rounded px-3 py-1.5 font-medium transition cursor-pointer ${chartMode === 'portfolio' ? 'bg-cyan-500/10 border border-cyan-500/25 #5A7A8F' : 'text-[#5E5E5E] hover:text-[#1A1A1A]'}`}
 						>
 							💼 Portfolio growth
 						</button>
 						<button
 							onClick={() => setChartMode('salary')}
-							className={`rounded px-3 py-1.5 font-medium transition cursor-pointer ${chartMode === 'salary' ? 'bg-cyan-500/10 border border-cyan-500/25 text-cyan-300' : 'text-slate-400 hover:text-white'}`}
+							className={`rounded px-3 py-1.5 font-medium transition cursor-pointer ${chartMode === 'salary' ? 'bg-cyan-500/10 border border-cyan-500/25 #5A7A8F' : 'text-[#5E5E5E] hover:text-[#1A1A1A]'}`}
 						>
 							📈 Salary trajectory
 						</button>
@@ -565,25 +565,25 @@ export default function RaiseVelocityCalculator() {
 
 				{/* Floating tooltip data details */}
 				{hoveredData ? (
-					<div className="mt-5 rounded-2xl border border-slate-800 bg-slate-950/80 p-4 flex flex-col md:flex-row gap-6 text-xs font-mono justify-between animate-fadeIn [.light_&]:bg-slate-50/95 [.light_&]:border-slate-200/80">
-						<div className="flex items-center font-bold text-white pr-4 md:border-r border-slate-800 text-sm [.light_&]:text-slate-800! [.light_&]:border-slate-200">
+					<div className="mt-5 rounded-2xl border border-gray-200 bg-white/80 p-4 flex flex-col md:flex-row gap-6 text-xs font-mono justify-between animate-fadeIn [.light_&]:bg-slate-50/95 [.light_&]:border-slate-200/80">
+						<div className="flex items-center font-bold text-[#1A1A1A] pr-4 md:border-r border-gray-200 text-sm [.light_&]:text-slate-800! [.light_&]:border-slate-200">
 							📅 Year {hoveredData.year} Projections
 						</div>
 						<div className="flex-1 grid gap-4 sm:grid-cols-2">
 							{/* Stayer Details */}
-							<div className="flex flex-col gap-1.5 border-b sm:border-b-0 sm:border-r border-slate-800/60 pb-3 sm:pb-0 pr-3 [.light_&]:border-slate-200">
-								<p className="font-semibold text-slate-400 text-[11px] uppercase tracking-wide">
+							<div className="flex flex-col gap-1.5 border-b sm:border-b-0 sm:border-r border-gray-200/60 pb-3 sm:pb-0 pr-3 [.light_&]:border-slate-200">
+								<p className="font-semibold text-[#5E5E5E] text-[11px] uppercase tracking-wide">
 									Stayer (Annual merit updates)
 								</p>
-								<div className="flex justify-between mt-1 text-[11px] text-slate-400">
+								<div className="flex justify-between mt-1 text-[11px] text-[#5E5E5E]">
 									<span>Base Salary:</span>
-									<span className="text-white font-semibold">{formatCurrency(hoveredData.stayerSalary)}</span>
+									<span className="text-[#1A1A1A] font-semibold">{formatCurrency(hoveredData.stayerSalary)}</span>
 								</div>
-								<div className="flex justify-between text-[11px] text-slate-400">
+								<div className="flex justify-between text-[11px] text-[#5E5E5E]">
 									<span>Effective Hourly Rate:</span>
-									<span className="text-slate-300 font-semibold">{formatCurrency(hoveredData.stayerEffectiveHourlyRate)}/hr</span>
+									<span className="text-[#5E5E5E] font-semibold">{formatCurrency(hoveredData.stayerEffectiveHourlyRate)}/hr</span>
 								</div>
-								<div className="flex justify-between text-[11px] text-slate-400 border-t border-slate-900 pt-1 mt-1 font-semibold text-slate-300 [.light_&]:border-slate-200">
+								<div className="flex justify-between text-[11px] text-[#5E5E5E] border-t border-gray-200 pt-1 mt-1 font-semibold text-[#5E5E5E] [.light_&]:border-slate-200">
 									<span>Take-home Cash Flow:</span>
 									<span>{formatCurrency(hoveredData.stayerNetAnnualCashFlow)}</span>
 								</div>
@@ -591,23 +591,23 @@ export default function RaiseVelocityCalculator() {
 
 							{/* Switcher Details */}
 							<div className="flex flex-col gap-1.5">
-								<p className="font-semibold text-cyan-400 text-[11px] uppercase tracking-wide">
+								<p className="font-semibold text-[#5A7A8F] text-[11px] uppercase tracking-wide">
 									Switcher (Job-hopping strategy)
 								</p>
-								<div className="flex justify-between mt-1 text-[11px] text-slate-400">
+								<div className="flex justify-between mt-1 text-[11px] text-[#5E5E5E]">
 									<span>Base Salary:</span>
-									<span className="text-white font-semibold">{formatCurrency(hoveredData.switcherSalary)}</span>
+									<span className="text-[#1A1A1A] font-semibold">{formatCurrency(hoveredData.switcherSalary)}</span>
 								</div>
-								<div className="flex justify-between text-[11px] text-slate-400">
+								<div className="flex justify-between text-[11px] text-[#5E5E5E]">
 									<span>Effective Hourly Rate:</span>
-									<span className="text-slate-300 font-semibold">{formatCurrency(hoveredData.switcherEffectiveHourlyRate)}/hr</span>
+									<span className="text-[#5E5E5E] font-semibold">{formatCurrency(hoveredData.switcherEffectiveHourlyRate)}/hr</span>
 								</div>
-								<div className="flex justify-between text-[11px] text-slate-400 border-t border-slate-900 pt-1 mt-1 font-semibold text-cyan-300 [.light_&]:border-slate-200 [.light_&]:text-cyan-700!">
+								<div className="flex justify-between text-[11px] text-[#5E5E5E] border-t border-gray-200 pt-1 mt-1 font-semibold #5A7A8F [.light_&]:border-slate-200 [.light_&]:text-cyan-700!">
 									<span>Take-home Cash Flow:</span>
 									<span>{formatCurrency(hoveredData.switcherNetAnnualCashFlow)}</span>
 								</div>
 								{hoveredData.year > 1 && hoveredData.year % switcherConfig.hopIntervalYears === 0 && (
-									<div className="mt-1.5 text-[10px] text-amber-300 bg-amber-500/10 border border-amber-500/25 rounded p-1.5 leading-4 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
+									<div className="mt-1.5 text-[10px] text-[#C88D4E] bg-amber-500/10 border border-amber-500/25 rounded p-1.5 leading-4 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
 										⚠️ Transition Friction applied: COBRA health cost, matching forfeitures, bonus timing cuts, offset by new hire signing bonus.
 									</div>
 								)}
@@ -615,31 +615,31 @@ export default function RaiseVelocityCalculator() {
 						</div>
 					</div>
 				) : (
-					<div className="text-slate-500 text-center font-mono text-[10px] italic mt-5 py-2.5 bg-slate-950/20 border border-slate-900/40 rounded-xl [.light_&]:bg-slate-100/60 [.light_&]:text-slate-600! [.light_&]:border-slate-200/80">
+					<div className="text-[#8C8C8C] text-center font-mono text-[10px] italic mt-5 py-2.5 bg-white/20 border border-gray-200/40 rounded-xl [.light_&]:bg-slate-100/60 [.light_&]:text-[#8C8C8C]! [.light_&]:border-slate-200/80">
 						Hover mouse cursor over the chart nodes to view detailed yearly projections.
 					</div>
 				)}
 			</div>
 
 			{/* Configuration Input Panels */}
-			<div className="rounded-[1.8rem] border border-slate-800 bg-slate-950/35 p-5 shadow-2xl backdrop-blur-md [.light_&]:border-slate-200/80">
+			<div className="rounded-[1.8rem] border border-gray-200 bg-white/35 p-5 shadow-2xl backdrop-blur-md [.light_&]:border-slate-200/80">
 				{/* Tab bar selection */}
-				<div className="flex border-b border-slate-900 mb-6 text-xs font-mono [.light_&]:border-slate-200">
+				<div className="flex border-b border-gray-200 mb-6 text-xs font-mono [.light_&]:border-slate-200">
 					<button
 						onClick={() => setActiveConfigTab('core')}
-						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'core' ? 'border-cyan-400 text-white [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-slate-500 hover:text-slate-300 [.light_&]:text-slate-400 [.light_&]:hover:text-slate-700'}`}
+						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'core' ? 'border-cyan-400 text-[#1A1A1A] [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-[#8C8C8C] hover:text-[#5E5E5E] [.light_&]:text-[#5E5E5E] [.light_&]:hover:text-slate-700'}`}
 					>
 						⚙️ Core parameters
 					</button>
 					<button
 						onClick={() => setActiveConfigTab('stayer')}
-						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'stayer' ? 'border-cyan-400 text-white [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-slate-500 hover:text-slate-300 [.light_&]:text-slate-400 [.light_&]:hover:text-slate-700'}`}
+						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'stayer' ? 'border-cyan-400 text-[#1A1A1A] [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-[#8C8C8C] hover:text-[#5E5E5E] [.light_&]:text-[#5E5E5E] [.light_&]:hover:text-slate-700'}`}
 					>
 						🏠 Stayer settings
 					</button>
 					<button
 						onClick={() => setActiveConfigTab('switcher')}
-						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'switcher' ? 'border-cyan-400 text-white [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-slate-500 hover:text-slate-300 [.light_&]:text-slate-400 [.light_&]:hover:text-slate-700'}`}
+						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'switcher' ? 'border-cyan-400 text-[#1A1A1A] [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-[#8C8C8C] hover:text-[#5E5E5E] [.light_&]:text-[#5E5E5E] [.light_&]:hover:text-slate-700'}`}
 					>
 						🚗 Switcher details
 					</button>

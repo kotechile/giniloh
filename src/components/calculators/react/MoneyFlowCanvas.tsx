@@ -46,32 +46,32 @@ const ENTERPRISE_NODE_COORDINATES: Record<string, { x: number; y: number }> = {
 // Styles mapping for Personal Mode
 const PERSONAL_ACCENT_COLORS: Record<string, { text: string; bg: string }> = {
 	income: { text: 'text-lime-400 [.light_&]:text-lime-700', bg: 'bg-lime-900/40 [.light_&]:bg-lime-100' },
-	checking: { text: 'text-cyan-400 [.light_&]:text-cyan-700', bg: 'bg-cyan-900/40 [.light_&]:bg-cyan-100' },
-	hysa: { text: 'text-emerald-400 [.light_&]:text-emerald-700', bg: 'bg-emerald-900/40 [.light_&]:bg-emerald-100' },
+	checking: { text: 'text-[#5A7A8F] [.light_&]:text-cyan-700', bg: 'bg-cyan-900/40 [.light_&]:bg-cyan-100' },
+	hysa: { text: '#1A1A1A [.light_&]:text-emerald-700', bg: 'bg-emerald-900/40 [.light_&]:bg-emerald-100' },
 	match401k: { text: 'text-blue-400 [.light_&]:text-blue-700', bg: 'bg-blue-900/40 [.light_&]:bg-blue-100' },
-	debt: { text: 'text-red-400 [.light_&]:text-red-700', bg: 'bg-red-900/40 [.light_&]:bg-red-100' },
+	debt: { text: 'text-[#B85C5C] [.light_&]:text-red-700', bg: 'bg-red-900/40 [.light_&]:bg-red-100' },
 	hsa: { text: 'text-teal-400 [.light_&]:text-teal-700', bg: 'bg-teal-900/40 [.light_&]:bg-teal-100' },
 	ira: { text: 'text-indigo-400 [.light_&]:text-indigo-700', bg: 'bg-indigo-900/40 [.light_&]:bg-indigo-100' },
 	max401k: { text: 'text-purple-400 [.light_&]:text-purple-700', bg: 'bg-purple-900/40 [.light_&]:bg-purple-100' },
 	brokerage: { text: 'text-violet-400 [.light_&]:text-violet-700', bg: 'bg-violet-900/40 [.light_&]:bg-violet-100' },
-	taxes_paid: { text: 'text-amber-400 [.light_&]:text-amber-700', bg: 'bg-amber-900/40 [.light_&]:bg-amber-100' },
+	taxes_paid: { text: 'text-[#C88D4E] [.light_&]:text-amber-700', bg: 'bg-amber-900/40 [.light_&]:bg-amber-100' },
 	mortgage: { text: 'text-indigo-400 [.light_&]:text-indigo-700', bg: 'bg-indigo-900/40 [.light_&]:bg-indigo-100' },
-	expenses: { text: 'text-rose-400 [.light_&]:text-rose-700', bg: 'bg-rose-900/40 [.light_&]:bg-rose-100' }
+	expenses: { text: 'text-[#B85C5C] [.light_&]:text-rose-700', bg: 'bg-rose-900/40 [.light_&]:bg-rose-100' }
 };
 
 // Styles mapping for Enterprise Mode
 const ENTERPRISE_ACCENT_COLORS: Record<string, { text: string; bg: string }> = {
-	revenues: { text: 'text-emerald-400 [.light_&]:text-emerald-700', bg: 'bg-emerald-900/40 [.light_&]:bg-emerald-100' },
-	receivables: { text: 'text-amber-400 [.light_&]:text-amber-700', bg: 'bg-amber-900/40 [.light_&]:bg-amber-100' },
-	payables: { text: 'text-rose-400 [.light_&]:text-rose-700', bg: 'bg-rose-900/40 [.light_&]:bg-rose-100' },
-	operating_cash_flow: { text: 'text-cyan-400 [.light_&]:text-cyan-700', bg: 'bg-cyan-900/40 [.light_&]:bg-cyan-100' },
+	revenues: { text: '#1A1A1A [.light_&]:text-emerald-700', bg: 'bg-emerald-900/40 [.light_&]:bg-emerald-100' },
+	receivables: { text: 'text-[#C88D4E] [.light_&]:text-amber-700', bg: 'bg-amber-900/40 [.light_&]:bg-amber-100' },
+	payables: { text: 'text-[#B85C5C] [.light_&]:text-rose-700', bg: 'bg-rose-900/40 [.light_&]:bg-rose-100' },
+	operating_cash_flow: { text: 'text-[#5A7A8F] [.light_&]:text-cyan-700', bg: 'bg-cyan-900/40 [.light_&]:bg-cyan-100' },
 	cogs: { text: 'text-orange-400 [.light_&]:text-orange-700', bg: 'bg-orange-900/40 [.light_&]:bg-orange-100' },
-	hr_costs: { text: 'text-red-400 [.light_&]:text-red-700', bg: 'bg-red-900/40 [.light_&]:bg-red-100' },
+	hr_costs: { text: 'text-[#B85C5C] [.light_&]:text-red-700', bg: 'bg-red-900/40 [.light_&]:bg-red-100' },
 	capex: { text: 'text-fuchsia-400 [.light_&]:text-fuchsia-700', bg: 'bg-fuchsia-900/40 [.light_&]:bg-fuchsia-100' },
 	financing: { text: 'text-violet-400 [.light_&]:text-violet-700', bg: 'bg-violet-900/40 [.light_&]:bg-violet-100' },
 	net_cash_flow: { text: 'text-blue-400 [.light_&]:text-blue-700', bg: 'bg-blue-900/40 [.light_&]:bg-blue-100' },
 	mfs: { text: 'text-teal-400 [.light_&]:text-teal-700', bg: 'bg-teal-900/40 [.light_&]:bg-teal-100' },
-	corp_taxes: { text: 'text-amber-400 [.light_&]:text-amber-700', bg: 'bg-amber-900/40 [.light_&]:bg-amber-100' }
+	corp_taxes: { text: 'text-[#C88D4E] [.light_&]:text-amber-700', bg: 'bg-amber-900/40 [.light_&]:bg-amber-100' }
 };
 
 const PERSONAL_NODE_TOOLTIPS: Record<string, { title: string; desc: string; numbers: string }> = {
@@ -331,37 +331,37 @@ export default function MoneyFlowCanvas({
 	};
 
 	return (
-		<div ref={containerRef} className="relative w-full rounded-2xl border border-slate-800 bg-slate-950 p-2 md:p-6 shadow-inner overflow-hidden min-h-[600px] [.light_&]:border-slate-300 [.light_&]:bg-slate-100">
+		<div ref={containerRef} className="relative w-full rounded-2xl border border-gray-200 bg-white p-2 md:p-6 shadow-inner overflow-hidden min-h-[600px] [.light_&]:border-slate-300 [.light_&]:bg-slate-100">
 			{/* Floating Zoom Controls */}
-			<div className="absolute top-4 right-4 z-40 flex items-center gap-1 bg-slate-900/90 border border-slate-800 rounded-lg p-1 shadow-lg backdrop-blur-md text-xs font-mono select-none [.light_&]:bg-white/90 [.light_&]:border-slate-200">
+			<div className="absolute top-4 right-4 z-40 flex items-center gap-1 bg-slate-900/90 border border-gray-200 rounded-lg p-1 shadow-lg backdrop-blur-md text-xs font-mono select-none [.light_&]:bg-white/90 [.light_&]:border-slate-200">
 				<button 
 					onClick={() => setZoom(z => Math.max(0.4, parseFloat((z - 0.1).toFixed(1))))}
-					className="px-2 py-1 hover:bg-slate-800 rounded cursor-pointer text-slate-300 hover:text-white [.light_&]:text-slate-600 [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-black font-bold"
+					className="px-2 py-1 hover:bg-gray-200 rounded cursor-pointer text-[#5E5E5E] hover:text-[#1A1A1A] [.light_&]:text-[#8C8C8C] [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-black font-bold"
 					title="Zoom Out"
 				>
 					-
 				</button>
-				<span className="px-1 text-slate-400 min-w-[36px] text-center [.light_&]:text-slate-500">
+				<span className="px-1 text-[#5E5E5E] min-w-[36px] text-center [.light_&]:text-[#8C8C8C]">
 					{Math.round(zoom * 100)}%
 				</span>
 				<button 
 					onClick={() => setZoom(z => Math.min(1.5, parseFloat((z + 0.1).toFixed(1))))}
-					className="px-2 py-1 hover:bg-slate-800 rounded cursor-pointer text-slate-300 hover:text-white [.light_&]:text-slate-600 [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-black font-bold"
+					className="px-2 py-1 hover:bg-gray-200 rounded cursor-pointer text-[#5E5E5E] hover:text-[#1A1A1A] [.light_&]:text-[#8C8C8C] [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-black font-bold"
 					title="Zoom In"
 				>
 					+
 				</button>
-				<div className="w-[1px] h-4 bg-slate-800 mx-1 [.light_&]:bg-slate-200"></div>
+				<div className="w-[1px] h-4 bg-gray-200 mx-1 [.light_&]:bg-slate-200"></div>
 				<button 
 					onClick={() => setZoom(1.0)}
-					className="px-1.5 py-1 hover:bg-slate-800 rounded cursor-pointer text-slate-400 hover:text-white [.light_&]:text-slate-500 [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-black"
+					className="px-1.5 py-1 hover:bg-gray-200 rounded cursor-pointer text-[#5E5E5E] hover:text-[#1A1A1A] [.light_&]:text-[#8C8C8C] [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-black"
 					title="Reset Zoom to 100%"
 				>
 					100%
 				</button>
 				<button 
 					onClick={handleZoomFit}
-					className="px-1.5 py-1 hover:bg-slate-800 rounded cursor-pointer text-cyan-400 hover:text-cyan-300 [.light_&]:text-blue-600 [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-blue-700 font-medium"
+					className="px-1.5 py-1 hover:bg-gray-200 rounded cursor-pointer text-[#5A7A8F] hover:#5A7A8F [.light_&]:text-blue-600 [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-blue-700 font-medium"
 					title="Fit entire flow to screen width"
 				>
 					Fit
@@ -511,7 +511,7 @@ export default function MoneyFlowCanvas({
 								onClick={() => setSelectedNodeId(node.id)}
 								style={{ left: `${coords.x}px`, top: `${coords.y}px` }}
 								className={[
-									'absolute w-[240px] h-[96px] text-left p-4 rounded-xl border bg-slate-800 transition flex flex-col justify-between hover:scale-105 cursor-pointer z-10 hover:z-30 focus-within:z-30 group shadow-sm [.light_&]:hover:shadow-md [.light_&]:bg-white',
+									'absolute w-[240px] h-[96px] text-left p-4 rounded-xl border bg-gray-200 transition flex flex-col justify-between hover:scale-105 cursor-pointer z-10 hover:z-30 focus-within:z-30 group shadow-sm [.light_&]:hover:shadow-md [.light_&]:bg-white',
 									isSelected
 										? 'border-cyan-400 shadow-[0_0_0_2px_rgba(59,130,246,0.3)] z-20 [.light_&]:border-blue-500'
 										: `border-slate-700 hover:border-slate-600 [.light_&]:border-slate-300 [.light_&]:hover:border-slate-400`
@@ -520,58 +520,58 @@ export default function MoneyFlowCanvas({
 								{/* Tooltip Hover Overlay */}
 								{tooltip && (
 									<div className={[
-										'absolute w-72 p-4 rounded-xl border border-slate-800 bg-slate-950/95 shadow-xl backdrop-blur-lg opacity-0 pointer-events-none group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-200 z-50 normal-case whitespace-normal leading-relaxed text-[11px] text-slate-300 font-normal [.light_&]:border-slate-200 [.light_&]:bg-white [.light_&]:text-slate-600',
+										'absolute w-72 p-4 rounded-xl border border-gray-200 bg-white/95 shadow-xl backdrop-blur-lg opacity-0 pointer-events-none group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-200 z-50 normal-case whitespace-normal leading-relaxed text-[11px] text-[#5E5E5E] font-normal [.light_&]:border-slate-200 [.light_&]:bg-white [.light_&]:text-[#8C8C8C]',
 										isTopRow ? 'top-full mt-3 left-1/2 -translate-x-1/2' : 'bottom-full mb-3 left-1/2 -translate-x-1/2'
 									].join(' ')}>
-										<div className="flex items-center gap-1.5 pb-2 mb-2 border-b border-slate-800 [.light_&]:border-slate-100">
-											<span className="font-bold text-white text-xs [.light_&]:text-slate-900">{tooltip.title}</span>
+										<div className="flex items-center gap-1.5 pb-2 mb-2 border-b border-gray-200 [.light_&]:border-slate-100">
+											<span className="font-bold text-[#1A1A1A] text-xs [.light_&]:text-slate-900">{tooltip.title}</span>
 										</div>
 										<div className="space-y-2">
-											<p><strong className="text-slate-200 [.light_&]:text-slate-900">Concept:</strong> {tooltip.desc}</p>
-											<p><strong className="text-slate-200 [.light_&]:text-slate-900">Values:</strong> {tooltip.numbers}</p>
+											<p><strong className="text-[#5E5E5E] [.light_&]:text-slate-900">Concept:</strong> {tooltip.desc}</p>
+											<p><strong className="text-[#5E5E5E] [.light_&]:text-slate-900">Values:</strong> {tooltip.numbers}</p>
 										</div>
 									</div>
 								)}
 
 								<div className="flex items-center justify-between w-full">
-									<span className="font-bold text-white text-sm tracking-tight [.light_&]:text-slate-900">{node.name}</span>
+									<span className="font-bold text-[#1A1A1A] text-sm tracking-tight [.light_&]:text-slate-900">{node.name}</span>
 									<span className={`text-[9px] uppercase tracking-widest px-2 py-0.5 rounded font-mono font-semibold ${colors.bg} ${colors.text}`}>
 										{node.type}
 									</span>
 								</div>
 
 								<div className="flex items-end justify-between w-full mt-1">
-									<span className="text-xl font-bold font-sans text-white [.light_&]:text-black">
+									<span className="text-xl font-bold font-sans text-[#1A1A1A] [.light_&]:text-black">
 										{formatCurrency(node.balance)}
 									</span>
 									{!isEnterprise ? (
 										node.type === 'checking' ? (
-											<span className="text-[10px] text-slate-500 font-mono">
+											<span className="text-[10px] text-[#8C8C8C] font-mono">
 												C:{Math.round(node.ceiling)} / F:{Math.round(node.floor)}
 											</span>
 										) : node.type === 'mortgage' ? (
-											<span className="text-[10px] text-slate-500 font-mono">
+											<span className="text-[10px] text-[#8C8C8C] font-mono">
 												Min: {Math.round(node.mortgagePayment || 1800)}/mo
 											</span>
 										) : node.type === 'expense' ? (
-											<span className="text-[10px] text-slate-500 font-mono">
+											<span className="text-[10px] text-[#8C8C8C] font-mono">
 												Budget: {Math.round(node.monthlyExpenses || 2000)}/mo
 											</span>
 										) : null
 									) : (
 										node.type === 'net_cash_flow' && (
-											<span className="text-[10px] text-slate-500 font-mono">
+											<span className="text-[10px] text-[#8C8C8C] font-mono">
 												C:{Math.round(node.ceiling)} / F:{Math.round(node.floor)}
 											</span>
 										)
 									)}
 									{node.interestRate !== undefined && (
-										<span className="text-[10px] text-emerald-400 font-mono font-bold [.light_&]:text-emerald-600">
+										<span className="text-[10px] #1A1A1A font-mono font-bold [.light_&]:text-emerald-600">
 											{node.interestRate}% APY
 										</span>
 									)}
 									{isEnterprise && node.id === 'receivables' && (
-										<span className="text-[10px] text-amber-400 font-mono [.light_&]:text-amber-600">
+										<span className="text-[10px] text-[#C88D4E] font-mono [.light_&]:text-amber-600">
 											DSO: {node.dso}d
 										</span>
 									)}
@@ -590,15 +590,15 @@ export default function MoneyFlowCanvas({
 
 			{/* Parameters Drawer Overlay */}
 			{selectedNode && (
-				<div className="relative z-20 mt-6 p-6 rounded-2xl border border-slate-800 bg-slate-900/60 shadow-xl flex flex-col gap-4 animate-[slideUp_0.2s_ease-out]">
+				<div className="relative z-20 mt-6 p-6 rounded-2xl border border-gray-200 bg-slate-900/60 shadow-xl flex flex-col gap-4 animate-[slideUp_0.2s_ease-out]">
 					<div className="flex items-center justify-between">
 						<div>
-							<h3 className="font-bold text-white text-base">Node Settings: {selectedNode.name}</h3>
-							<p className="text-xs text-slate-400 mt-1">Configure threshold variables and metrics manually.</p>
+							<h3 className="font-bold text-[#1A1A1A] text-base">Node Settings: {selectedNode.name}</h3>
+							<p className="text-xs text-[#5E5E5E] mt-1">Configure threshold variables and metrics manually.</p>
 						</div>
 						<button
 							onClick={() => setSelectedNodeId(null)}
-							className="text-xs font-mono uppercase px-3 py-1 bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white rounded transition cursor-pointer"
+							className="text-xs font-mono uppercase px-3 py-1 bg-gray-200 hover:bg-slate-700 text-[#5E5E5E] hover:text-[#1A1A1A] rounded transition cursor-pointer"
 						>
 							Close
 						</button>
@@ -606,9 +606,9 @@ export default function MoneyFlowCanvas({
 
 					<div className="grid gap-6 sm:grid-cols-3">
 						<div className="flex flex-col gap-2">
-							<div className="flex justify-between text-xs font-mono text-slate-400">
+							<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 								<span>Current Balance</span>
-								<span className="text-white font-bold">{formatCurrency(selectedNode.balance)}</span>
+								<span className="text-[#1A1A1A] font-bold">{formatCurrency(selectedNode.balance)}</span>
 							</div>
 							<input
 								type="range"
@@ -617,7 +617,7 @@ export default function MoneyFlowCanvas({
 								step={getBalanceSliderConfig(selectedNode.id).step}
 								value={selectedNode.balance}
 								onChange={(e) => handleSliderChange('balance', parseFloat(e.target.value))}
-								className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-slate-800 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-slate-800 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
+								className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-gray-200 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-gray-200 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
 							/>
 						</div>
 
@@ -625,9 +625,9 @@ export default function MoneyFlowCanvas({
 						{!isEnterprise && selectedNode.type === 'checking' && (
 							<>
 								<div className="flex flex-col gap-2">
-									<div className="flex justify-between text-xs font-mono text-slate-400">
+									<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 										<span>Ceiling Sweep Threshold (T_over)</span>
-										<span className="text-cyan-400 font-bold">{formatCurrency(selectedNode.ceiling)}</span>
+										<span className="text-[#5A7A8F] font-bold">{formatCurrency(selectedNode.ceiling)}</span>
 									</div>
 									<input
 										type="range"
@@ -636,14 +636,14 @@ export default function MoneyFlowCanvas({
 										step="250"
 										value={selectedNode.ceiling}
 										onChange={(e) => handleSliderChange('ceiling', parseFloat(e.target.value))}
-										className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-slate-800 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-slate-800 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
+										className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-gray-200 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-gray-200 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
 									/>
 								</div>
 
 								<div className="flex flex-col gap-2">
-									<div className="flex justify-between text-xs font-mono text-slate-400">
+									<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 										<span>Floor Safety Threshold (T_under)</span>
-										<span className="text-emerald-400 font-bold">{formatCurrency(selectedNode.floor)}</span>
+										<span className="#1A1A1A font-bold">{formatCurrency(selectedNode.floor)}</span>
 									</div>
 									<input
 										type="range"
@@ -652,7 +652,7 @@ export default function MoneyFlowCanvas({
 										step="100"
 										value={selectedNode.floor}
 										onChange={(e) => handleSliderChange('floor', parseFloat(e.target.value))}
-										className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-slate-800 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-slate-800 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
+										className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-gray-200 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-gray-200 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
 									/>
 								</div>
 							</>
@@ -661,9 +661,9 @@ export default function MoneyFlowCanvas({
 						{!isEnterprise && selectedNode.type === 'income' && (
 							<>
 								<div className="flex flex-col gap-2">
-									<div className="flex justify-between text-xs font-mono text-slate-400">
+									<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 										<span>Gross Paycheck Amount</span>
-										<span className="text-cyan-400 font-bold">{formatCurrency(selectedNode.grossIncome || 3500)}</span>
+										<span className="text-[#5A7A8F] font-bold">{formatCurrency(selectedNode.grossIncome || 3500)}</span>
 									</div>
 									<input
 										type="range"
@@ -672,14 +672,14 @@ export default function MoneyFlowCanvas({
 										step="250"
 										value={selectedNode.grossIncome || 3500}
 										onChange={(e) => handleSliderChange('grossIncome', parseFloat(e.target.value))}
-										className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-slate-800 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-slate-800 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
+										className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-gray-200 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-gray-200 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
 									/>
 								</div>
 
 								<div className="flex flex-col gap-2">
-									<div className="flex justify-between text-xs font-mono text-slate-400">
+									<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 										<span>Tax Withholding Rate (%)</span>
-										<span className="text-emerald-400 font-bold">{selectedNode.taxRate || 20}%</span>
+										<span className="#1A1A1A font-bold">{selectedNode.taxRate || 20}%</span>
 									</div>
 									<input
 										type="range"
@@ -688,16 +688,16 @@ export default function MoneyFlowCanvas({
 										step="1"
 										value={selectedNode.taxRate || 20}
 										onChange={(e) => handleSliderChange('taxRate', parseFloat(e.target.value))}
-										className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-slate-800 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-slate-800 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
+										className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-gray-200 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-gray-200 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
 									/>
 								</div>
 
 								<div className="flex flex-col gap-2">
-									<label className="text-xs font-mono text-slate-400">Pay Frequency</label>
+									<label className="text-xs font-mono text-[#5E5E5E]">Pay Frequency</label>
 									<select
 										value={selectedNode.frequency || 'bi-weekly'}
 										onChange={(e) => handleSliderChange('frequency', e.target.value)}
-										className="bg-slate-950 text-slate-200 border border-slate-800 rounded px-2 py-1 text-xs outline-none font-mono"
+										className="bg-white text-[#5E5E5E] border border-gray-200 rounded px-2 py-1 text-xs outline-none font-mono"
 									>
 										<option value="daily">Daily Pay</option>
 										<option value="bi-weekly">Bi-weekly Paycheck</option>
@@ -710,9 +710,9 @@ export default function MoneyFlowCanvas({
 						{!isEnterprise && selectedNode.type === 'mortgage' && (
 							<>
 								<div className="flex flex-col gap-2">
-									<div className="flex justify-between text-xs font-mono text-slate-400">
+									<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 										<span>Mortgage Interest Rate (%)</span>
-										<span className="text-cyan-400 font-bold">{selectedNode.interestRate || 6.5}% APY</span>
+										<span className="text-[#5A7A8F] font-bold">{selectedNode.interestRate || 6.5}% APY</span>
 									</div>
 									<input
 										type="range"
@@ -721,14 +721,14 @@ export default function MoneyFlowCanvas({
 										step="0.1"
 										value={selectedNode.interestRate || 6.5}
 										onChange={(e) => handleSliderChange('interestRate', parseFloat(e.target.value))}
-										className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-slate-800 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-slate-800 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
+										className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-gray-200 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-gray-200 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
 									/>
 								</div>
 
 								<div className="flex flex-col gap-2">
-									<div className="flex justify-between text-xs font-mono text-slate-400">
+									<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 										<span>Monthly Minimum Payment</span>
-										<span className="text-emerald-400 font-bold">{formatCurrency(selectedNode.mortgagePayment || 1800)}</span>
+										<span className="#1A1A1A font-bold">{formatCurrency(selectedNode.mortgagePayment || 1800)}</span>
 									</div>
 									<input
 										type="range"
@@ -737,7 +737,7 @@ export default function MoneyFlowCanvas({
 										step="50"
 										value={selectedNode.mortgagePayment || 1800}
 										onChange={(e) => handleSliderChange('mortgagePayment', parseFloat(e.target.value))}
-										className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-slate-800 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-slate-800 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
+										className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-gray-200 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-gray-200 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
 									/>
 								</div>
 							</>
@@ -746,9 +746,9 @@ export default function MoneyFlowCanvas({
 						{/* Living Expenses budget drawer */}
 						{!isEnterprise && selectedNode.type === 'expense' && (
 							<div className="flex flex-col gap-2">
-								<div className="flex justify-between text-xs font-mono text-slate-400">
+								<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 									<span>Monthly Living Expenses Budget</span>
-									<span className="text-cyan-400 font-bold">{formatCurrency(selectedNode.monthlyExpenses || 2000)}</span>
+									<span className="text-[#5A7A8F] font-bold">{formatCurrency(selectedNode.monthlyExpenses || 2000)}</span>
 								</div>
 								<input
 									type="range"
@@ -757,7 +757,7 @@ export default function MoneyFlowCanvas({
 									step="100"
 									value={selectedNode.monthlyExpenses || 2000}
 									onChange={(e) => handleSliderChange('monthlyExpenses', parseFloat(e.target.value))}
-									className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-slate-800 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-slate-800 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
+									className="w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none [&::-webkit-slider-runnable-track]:w-full [&::-webkit-slider-runnable-track]:h-1 [&::-webkit-slider-runnable-track]:bg-gray-200 [&::-webkit-slider-runnable-track]:rounded-lg [&::-moz-range-track]:w-full [&::-moz-range-track]:h-1 [&::-moz-range-track]:bg-gray-200 [&::-moz-range-track]:rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 [&::-webkit-slider-thumb]:mt-[-6px] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-white [&::-moz-range-thumb]:border-none [&::-moz-range-thumb]:shadow-[0_0_10px_rgba(6,182,212,0.8)] [&::-moz-range-thumb]:transition-all [&::-moz-range-thumb]:hover:scale-110"
 								/>
 							</div>
 						)}
@@ -769,9 +769,9 @@ export default function MoneyFlowCanvas({
 								{selectedNode.id === 'revenues' && (
 									<>
 										<div className="flex flex-col gap-2">
-											<div className="flex justify-between text-xs font-mono text-slate-400">
+											<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 												<span>VAT Tax Rate (%)</span>
-												<span className="text-emerald-400 font-bold">{selectedNode.vatRate || 19}%</span>
+												<span className="#1A1A1A font-bold">{selectedNode.vatRate || 19}%</span>
 											</div>
 											<input
 												type="range"
@@ -784,9 +784,9 @@ export default function MoneyFlowCanvas({
 											/>
 										</div>
 										<div className="flex flex-col gap-2">
-											<div className="flex justify-between text-xs font-mono text-slate-400">
+											<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 												<span>Factoring Fee Rate (%)</span>
-												<span className="text-cyan-400 font-bold">{selectedNode.factoringRate || 2.5}%</span>
+												<span className="text-[#5A7A8F] font-bold">{selectedNode.factoringRate || 2.5}%</span>
 											</div>
 											<input
 												type="range"
@@ -805,9 +805,9 @@ export default function MoneyFlowCanvas({
 								{selectedNode.id === 'receivables' && (
 									<>
 										<div className="flex flex-col gap-2">
-											<div className="flex justify-between text-xs font-mono text-slate-400">
+											<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 												<span>Days Sales Outstanding (DSO)</span>
-												<span className="text-amber-400 font-bold">{selectedNode.dso || 35} days</span>
+												<span className="text-[#C88D4E] font-bold">{selectedNode.dso || 35} days</span>
 											</div>
 											<input
 												type="range"
@@ -820,9 +820,9 @@ export default function MoneyFlowCanvas({
 											/>
 										</div>
 										<div className="flex flex-col gap-2">
-											<div className="flex justify-between text-xs font-mono text-slate-400">
+											<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 												<span>Insolvency Default Risk (%)</span>
-												<span className="text-red-400 font-bold">{selectedNode.insolvencyRisk || 3.5}%</span>
+												<span className="text-[#B85C5C] font-bold">{selectedNode.insolvencyRisk || 3.5}%</span>
 											</div>
 											<input
 												type="range"
@@ -841,7 +841,7 @@ export default function MoneyFlowCanvas({
 								{['cogs', 'hr_costs', 'capex'].includes(selectedNode.id) && (
 									<>
 										<div className="flex flex-col gap-2">
-											<div className="flex justify-between text-xs font-mono text-slate-400">
+											<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 												<span>Days Payable Outstanding (DPO)</span>
 												<span className="text-orange-400 font-bold">
 													{selectedNode.id === 'cogs' ? selectedNode.dpoVariable : selectedNode.dpoFixed} days
@@ -861,12 +861,12 @@ export default function MoneyFlowCanvas({
 											/>
 										</div>
 										<div className="flex flex-col gap-2">
-											<label className="text-xs font-mono text-slate-400">Legal Entity Assignment</label>
+											<label className="text-xs font-mono text-[#5E5E5E]">Legal Entity Assignment</label>
 											<input
 												type="text"
 												value={selectedNode.legalEntity || 'Entity A'}
 												onChange={(e) => handleSliderChange('legalEntity', e.target.value)}
-												className="bg-slate-950 text-slate-200 border border-slate-800 rounded px-2.5 py-1 text-xs outline-none font-mono"
+												className="bg-white text-[#5E5E5E] border border-gray-200 rounded px-2.5 py-1 text-xs outline-none font-mono"
 											/>
 										</div>
 									</>
@@ -876,18 +876,18 @@ export default function MoneyFlowCanvas({
 								{selectedNode.id === 'financing' && (
 									<>
 										<div className="flex flex-col gap-2">
-											<label className="text-xs font-mono text-slate-400">Financing Product Type</label>
+											<label className="text-xs font-mono text-[#5E5E5E]">Financing Product Type</label>
 											<select
 												value={selectedNode.loanType || 'revolving'}
 												onChange={(e) => handleSliderChange('loanType', e.target.value)}
-												className="bg-slate-950 text-slate-200 border border-slate-800 rounded px-2 py-1 text-xs outline-none font-mono"
+												className="bg-white text-[#5E5E5E] border border-gray-200 rounded px-2 py-1 text-xs outline-none font-mono"
 											>
 												<option value="revolving">Revolving Line of Credit</option>
 												<option value="term">Term Loan Agreement</option>
 											</select>
 										</div>
 										<div className="flex flex-col gap-2">
-											<div className="flex justify-between text-xs font-mono text-slate-400">
+											<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 												<span>Spread over Index (%)</span>
 												<span className="text-violet-400 font-bold">{selectedNode.fixedSpread || 3.5}%</span>
 											</div>
@@ -908,9 +908,9 @@ export default function MoneyFlowCanvas({
 								{selectedNode.id === 'net_cash_flow' && (
 									<>
 										<div className="flex flex-col gap-2">
-											<div className="flex justify-between text-xs font-mono text-slate-400">
+											<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 												<span>MMF Sweep Trigger (Ceiling)</span>
-												<span className="text-cyan-400 font-bold">{formatCurrency(selectedNode.ceiling)}</span>
+												<span className="text-[#5A7A8F] font-bold">{formatCurrency(selectedNode.ceiling)}</span>
 											</div>
 											<input
 												type="range"
@@ -923,9 +923,9 @@ export default function MoneyFlowCanvas({
 											/>
 										</div>
 										<div className="flex flex-col gap-2">
-											<div className="flex justify-between text-xs font-mono text-slate-400">
+											<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 												<span>Safety Buffers (Floor)</span>
-												<span className="text-emerald-400 font-bold">{formatCurrency(selectedNode.floor)}</span>
+												<span className="#1A1A1A font-bold">{formatCurrency(selectedNode.floor)}</span>
 											</div>
 											<input
 												type="range"
@@ -943,9 +943,9 @@ export default function MoneyFlowCanvas({
 								{/* 6. MMF interest rate settings */}
 								{selectedNode.id === 'mfs' && (
 									<div className="flex flex-col gap-2">
-										<div className="flex justify-between text-xs font-mono text-slate-400">
+										<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 											<span>MMF Yield Rate (% APY)</span>
-											<span className="text-emerald-400 font-bold">{selectedNode.interestRate || 4.2}%</span>
+											<span className="#1A1A1A font-bold">{selectedNode.interestRate || 4.2}%</span>
 										</div>
 										<input
 											type="range"

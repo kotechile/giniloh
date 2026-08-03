@@ -85,7 +85,7 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 	// Default empty fallback
 	if (!history || history.length === 0) {
 		return (
-			<div className="rounded-2xl border border-slate-800 bg-slate-950 p-6 flex items-center justify-center h-[260px] text-xs font-mono text-slate-500 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
+			<div className="rounded-2xl border border-gray-200 bg-white p-6 flex items-center justify-center h-[260px] text-xs font-mono text-[#8C8C8C] [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
 				No simulation history data collected yet.
 			</div>
 		);
@@ -236,13 +236,13 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 	const hoverPoint = hoverIndex !== null ? history[hoverIndex] : null;
 
 	return (
-		<div className="rounded-[1.8rem] border border-slate-800 bg-slate-950/70 p-6 shadow-xl backdrop-blur-md flex flex-col gap-4 animate-[fadeIn_0.3s_ease-out] [.light_&]:border-slate-200 [.light_&]:bg-white/90">
-			<div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-900 pb-4 [.light_&]:border-slate-100">
+		<div className="rounded-[1.8rem] border border-gray-200 bg-white/70 p-6 shadow-xl backdrop-blur-md flex flex-col gap-4 animate-[fadeIn_0.3s_ease-out] [.light_&]:border-slate-200 [.light_&]:bg-white/90">
+			<div className="flex flex-wrap items-center justify-between gap-4 border-b border-gray-200 pb-4 [.light_&]:border-slate-100">
 				<div>
-					<h3 className="text-base font-bold text-white tracking-tight [.light_&]:text-slate-900">
+					<h3 className="text-base font-bold text-[#1A1A1A] tracking-tight [.light_&]:text-slate-900">
 						{isEnterprise ? 'Treasury Evolution History' : 'Historical Trend Evolution'}
 					</h3>
-					<p className="text-[11px] text-slate-500 font-mono mt-0.5 uppercase tracking-wider">
+					<p className="text-[11px] text-[#8C8C8C] font-mono mt-0.5 uppercase tracking-wider">
 						Visualizing daily variable logs over {maxDay} days
 					</p>
 				</div>
@@ -262,8 +262,8 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 								className={[
 									'px-2.5 py-1 rounded-full border transition hover:scale-105 cursor-pointer font-bold',
 									isVisible 
-										? 'text-white' 
-										: 'text-slate-500 [.light_&]:bg-slate-100 [.light_&]:text-slate-400'
+										? 'text-[#1A1A1A]' 
+										: 'text-[#8C8C8C] [.light_&]:bg-slate-100 [.light_&]:text-[#5E5E5E]'
 								].join(' ')}
 							>
 								<span 
@@ -285,7 +285,7 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 					height={dimensions.height}
 					onMouseMove={handleMouseMove}
 					onMouseLeave={handleMouseLeave}
-					className="overflow-visible select-none cursor-crosshair font-mono text-[9px] text-slate-500"
+					className="overflow-visible select-none cursor-crosshair font-mono text-[9px] text-[#8C8C8C]"
 				>
 					{/* Grid lines */}
 					{yGridLines.map((line, idx) => (
@@ -413,8 +413,8 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 
 			{/* Hover tooltip values overlay */}
 			{hoverPoint ? (
-				<div className="bg-slate-900/40 border border-slate-800/80 rounded-2xl p-4 flex flex-wrap gap-x-6 gap-y-2 text-xs font-mono select-none [.light_&]:bg-slate-50 [.light_&]:border-slate-200">
-					<div className="flex-shrink-0 text-white font-bold [.light_&]:text-slate-900 border-r border-slate-800 pr-4 mr-2 [.light_&]:border-slate-200 flex items-center">
+				<div className="bg-slate-900/40 border border-gray-200/80 rounded-2xl p-4 flex flex-wrap gap-x-6 gap-y-2 text-xs font-mono select-none [.light_&]:bg-slate-50 [.light_&]:border-slate-200">
+					<div className="flex-shrink-0 text-[#1A1A1A] font-bold [.light_&]:text-slate-900 border-r border-gray-200 pr-4 mr-2 [.light_&]:border-slate-200 flex items-center">
 						📅 Day {hoverPoint.day}
 					</div>
 					{visibleSeriesDef.map((def) => {
@@ -425,8 +425,8 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 									className="w-2.5 h-2.5 rounded-full" 
 									style={{ backgroundColor: def.stroke }} 
 								/>
-								<span className="text-slate-400 font-semibold">{def.label}:</span>
-								<span className="text-white font-bold [.light_&]:text-slate-900">
+								<span className="text-[#5E5E5E] font-semibold">{def.label}:</span>
+								<span className="text-[#1A1A1A] font-bold [.light_&]:text-slate-900">
 									{formatCurrency(val)}
 								</span>
 							</div>
@@ -434,7 +434,7 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 					})}
 				</div>
 			) : (
-				<div className="text-slate-500 text-center font-mono text-[10px] italic py-2">
+				<div className="text-[#8C8C8C] text-center font-mono text-[10px] italic py-2">
 					Hover mouse pointer over the chart to read daily balances.
 				</div>
 			)}

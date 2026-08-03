@@ -192,13 +192,13 @@ export default function TotalCompCalculator() {
 	return (
 		<div className="grid gap-8">
 			{/* Sticky Global Controls Panel */}
-			<div className="panel-soft rounded-[1.8rem] border border-cyan-500/15 bg-slate-950/70 p-5 shadow-xl backdrop-blur-md">
-				<p className="font-mono text-[10px] uppercase tracking-[0.28em] text-cyan-400">Global Trajectory Parameters</p>
+			<div className="panel-soft rounded-[1.8rem] border border-cyan-500/15 bg-white/70 p-5 shadow-xl backdrop-blur-md">
+				<p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A7A8F]">Global Trajectory Parameters</p>
 				<div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 					
 					{/* Tax Model Selection */}
 					<div className="flex flex-col gap-2">
-						<label htmlFor={`${fieldId}-tax-model`} className="text-xs font-semibold text-slate-300">Tax Location / Override</label>
+						<label htmlFor={`${fieldId}-tax-model`} className="text-xs font-semibold text-[#5E5E5E]">Tax Location / Override</label>
 						<select
 							id={`${fieldId}-tax-model`}
 							value={globalInputs.useManualTax ? 'manual' : globalInputs.taxState}
@@ -211,7 +211,7 @@ export default function TotalCompCalculator() {
 									updateGlobal('taxState', val);
 								}
 							}}
-							className="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white outline-none focus:border-cyan-400"
+							className="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-[#1A1A1A] outline-none focus:border-cyan-400"
 						>
 							<option value="CA">California (CA - 9.3%)</option>
 							<option value="NY">New York (NY - 6.5%)</option>
@@ -225,7 +225,7 @@ export default function TotalCompCalculator() {
 					{/* Custom Tax Input (Only shown if Custom Selected) */}
 					{globalInputs.useManualTax ? (
 						<div className="flex flex-col gap-2">
-							<label htmlFor={`${fieldId}-manual-tax-rate`} className="text-xs font-semibold text-slate-300">Effective Tax Rate (%)</label>
+							<label htmlFor={`${fieldId}-manual-tax-rate`} className="text-xs font-semibold text-[#5E5E5E]">Effective Tax Rate (%)</label>
 							<input
 								id={`${fieldId}-manual-tax-rate`}
 								type="number"
@@ -233,17 +233,17 @@ export default function TotalCompCalculator() {
 								max="100"
 								value={globalInputs.manualTaxRate}
 								onChange={(e) => updateGlobal('manualTaxRate', Math.max(0, Math.min(100, Number(e.target.value))))}
-								className="rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white outline-none focus:border-cyan-400"
+								className="rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-[#1A1A1A] outline-none focus:border-cyan-400"
 							/>
 						</div>
 					) : (
 						<div className="flex flex-col gap-2">
-							<label htmlFor={`${fieldId}-filing-status`} className="text-xs font-semibold text-slate-300">Tax Filing Status</label>
+							<label htmlFor={`${fieldId}-filing-status`} className="text-xs font-semibold text-[#5E5E5E]">Tax Filing Status</label>
 							<select
 								id={`${fieldId}-filing-status`}
 								value={globalInputs.filingStatus}
 								onChange={(e) => updateGlobal('filingStatus', e.target.value as any)}
-								className="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white outline-none focus:border-cyan-400"
+								className="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-[#1A1A1A] outline-none focus:border-cyan-400"
 							>
 								<option value="single">Single Filer</option>
 								<option value="married">Married Filing Jointly</option>
@@ -253,12 +253,12 @@ export default function TotalCompCalculator() {
 
 					{/* Growth Assumption */}
 					<div className="flex flex-col gap-2">
-						<label htmlFor={`${fieldId}-growth`} className="text-xs font-semibold text-slate-300">Stock Growth Assumption</label>
+						<label htmlFor={`${fieldId}-growth`} className="text-xs font-semibold text-[#5E5E5E]">Stock Growth Assumption</label>
 						<select
 							id={`${fieldId}-growth`}
 							value={globalInputs.growthAssumption}
 							onChange={(e) => updateGlobal('growthAssumption', Number(e.target.value))}
-							className="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white outline-none focus:border-cyan-400"
+							className="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-[#1A1A1A] outline-none focus:border-cyan-400"
 						>
 							<option value="0">0% (Flat stock value)</option>
 							<option value="0.1">10% Annual Growth</option>
@@ -275,8 +275,8 @@ export default function TotalCompCalculator() {
 								onChange={(e) => updateGlobal('autoExercise', e.target.checked)}
 								className="sr-only peer"
 							/>
-							<div className="relative w-11 h-6 bg-slate-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-slate-400 after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-500 peer-checked:after:bg-white"></div>
-							<span className="text-xs font-semibold text-slate-300">Auto-Exercise Options</span>
+							<div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-slate-400 after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-500 peer-checked:after:bg-white"></div>
+							<span className="text-xs font-semibold text-[#5E5E5E]">Auto-Exercise Options</span>
 						</label>
 					</div>
 
@@ -284,16 +284,16 @@ export default function TotalCompCalculator() {
 			</div>
 
 			{/* SVG Chart Comparison Screen */}
-			<div className="rounded-[2rem] border border-slate-800 bg-slate-950/45 p-6 shadow-xl relative select-none">
-				<div className="flex items-center justify-between border-b border-slate-900 pb-4 mb-4">
+			<div className="rounded-[2rem] border border-gray-200 bg-white p-6 shadow-xl relative select-none">
+				<div className="flex items-center justify-between border-b border-gray-200 pb-4 mb-4">
 					<div>
-						<h3 className="text-base font-bold text-white tracking-tight">Spendable Cash & Tax Drag Projections</h3>
-						<p className="text-[10px] text-slate-500 font-mono mt-0.5 uppercase tracking-wider">
+						<h3 className="text-base font-bold text-[#1A1A1A] tracking-tight">Spendable Cash & Tax Drag Projections</h3>
+						<p className="text-[10px] text-[#8C8C8C] font-mono mt-0.5 uppercase tracking-wider">
 							Year-by-year side-by-side analysis (Offer A Left, Offer B Right)
 						</p>
 					</div>
 					<div className="flex items-center gap-4 text-[10px] font-mono">
-						<div className="flex items-center gap-1.5 text-cyan-400 font-semibold">
+						<div className="flex items-center gap-1.5 text-[#5A7A8F] font-semibold">
 							<span className="w-2.5 h-1.5 bg-cyan-400 rounded-full" />
 							Offer A Cash Line
 						</div>
@@ -311,7 +311,7 @@ export default function TotalCompCalculator() {
 						height={dimensions.height}
 						onMouseMove={handleMouseMove}
 						onMouseLeave={handleMouseLeave}
-						className="overflow-visible cursor-crosshair font-mono text-[9px] text-slate-500"
+						className="overflow-visible cursor-crosshair font-mono text-[9px] text-[#8C8C8C]"
 					>
 						{/* Grid Lines */}
 						{[0, 0.25, 0.5, 0.75, 1].map((p, idx) => {
@@ -526,35 +526,35 @@ export default function TotalCompCalculator() {
 
 				{/* Floating Tooltip Data Panel */}
 				{hoveredData ? (
-					<div className="mt-4 bg-slate-900/90 border border-slate-800/90 rounded-2xl p-4 flex flex-col md:flex-row gap-6 text-xs font-mono justify-between animate-fadeIn [.light_&]:bg-slate-50/95 [.light_&]:border-slate-200/80">
-						<div className="flex items-center font-bold text-white pr-4 md:border-r border-slate-800 text-sm [.light_&]:text-slate-800! [.light_&]:border-slate-200">
+					<div className="mt-4 bg-slate-900/90 border border-gray-200/90 rounded-2xl p-4 flex flex-col md:flex-row gap-6 text-xs font-mono justify-between animate-fadeIn [.light_&]:bg-slate-50/95 [.light_&]:border-slate-200/80">
+						<div className="flex items-center font-bold text-[#1A1A1A] pr-4 md:border-r border-gray-200 text-sm [.light_&]:text-slate-800! [.light_&]:border-slate-200">
 							📅 Year {hoveredData.year} Projections
 						</div>
 						<div className="flex-1 grid gap-4 sm:grid-cols-2">
 							{/* Offer A Tooltip */}
-							<div className="flex flex-col gap-1 border-b sm:border-b-0 sm:border-r border-slate-800/60 pb-3 sm:pb-0 pr-3 [.light_&]:border-slate-200">
-								<p className="font-semibold text-cyan-400 text-[11px] truncate uppercase">{offerA.name}</p>
-								<div className="flex justify-between mt-1 text-[11px] text-slate-400">
+							<div className="flex flex-col gap-1 border-b sm:border-b-0 sm:border-r border-gray-200/60 pb-3 sm:pb-0 pr-3 [.light_&]:border-slate-200">
+								<p className="font-semibold text-[#5A7A8F] text-[11px] truncate uppercase">{offerA.name}</p>
+								<div className="flex justify-between mt-1 text-[11px] text-[#5E5E5E]">
 									<span>Base + Bonus Cash:</span>
-									<span className="text-white font-semibold">{formatCurrency(hoveredData.offerA.baseCash + hoveredData.offerA.bonusCash)}</span>
+									<span className="text-[#1A1A1A] font-semibold">{formatCurrency(hoveredData.offerA.baseCash + hoveredData.offerA.bonusCash)}</span>
 								</div>
 								{hoveredData.offerA.liquidStockUnits > 0 && (
-									<div className="flex justify-between text-[11px] text-slate-400">
+									<div className="flex justify-between text-[11px] text-[#5E5E5E]">
 										<span>Vested Liquid Stock Units:</span>
-										<span className="text-emerald-400 font-semibold">{formatCurrency(hoveredData.offerA.liquidStockUnits)}</span>
+										<span className="#1A1A1A font-semibold">{formatCurrency(hoveredData.offerA.liquidStockUnits)}</span>
 									</div>
 								)}
 								{hoveredData.offerA.paperLtip > 0 && (
-									<div className="flex justify-between text-[11px] text-slate-500">
+									<div className="flex justify-between text-[11px] text-[#8C8C8C]">
 										<span>Paper LTIP Wealth (Illiquid):</span>
-										<span className="text-slate-400 font-semibold">{formatCurrency(hoveredData.offerA.paperLtip)}</span>
+										<span className="text-[#5E5E5E] font-semibold">{formatCurrency(hoveredData.offerA.paperLtip)}</span>
 									</div>
 								)}
-								<div className="flex justify-between text-[11px] text-slate-400">
+								<div className="flex justify-between text-[11px] text-[#5E5E5E]">
 									<span>Perks (401k/ESPP):</span>
 									<span className="text-indigo-300 font-semibold [.light_&]:text-indigo-600!">{formatCurrency(hoveredData.offerA.perksValue)}</span>
 								</div>
-								<div className="flex justify-between text-[11px] text-rose-400/80 [.light_&]:text-rose-600!">
+								<div className="flex justify-between text-[11px] text-[#B85C5C]/80 [.light_&]:text-rose-600!">
 									<span>Tax Drag:</span>
 									<span>-{formatCurrency(hoveredData.offerA.taxDrag)}</span>
 								</div>
@@ -564,17 +564,17 @@ export default function TotalCompCalculator() {
 										<span>-{formatCurrency(hoveredData.offerA.purchaseCost)} {globalInputs.autoExercise ? '(Subtracted)' : '(Deferred)'}</span>
 									</div>
 								)}
-								<div className="flex justify-between border-t border-slate-800/80 mt-1 pt-1 text-white font-bold [.light_&]:border-slate-200">
+								<div className="flex justify-between border-t border-gray-200/80 mt-1 pt-1 text-[#1A1A1A] font-bold [.light_&]:border-slate-200">
 									<span>Spendable Cash Flow:</span>
-									<span className="text-cyan-300 [.light_&]:text-cyan-700!">{formatCurrency(hoveredData.offerA.netSpendableCash)}</span>
+									<span className="#5A7A8F [.light_&]:text-cyan-700!">{formatCurrency(hoveredData.offerA.netSpendableCash)}</span>
 								</div>
 								{hoveredData.offerA.isClawbackRisk && (
-									<div className="mt-2 text-[10px] text-amber-400 bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
+									<div className="mt-2 text-[10px] text-[#C88D4E] bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
 										⚠️ Clawback risk: {formatCurrency(hoveredData.offerA.clawbackAmount)} clawed back if departing before Month {offerA.cash.clawbackMonths}.
 									</div>
 								)}
 								{hoveredData.offerA.rsuTaxShortfall > 0 && (
-									<div className="mt-2 text-[10px] text-amber-400 bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
+									<div className="mt-2 text-[10px] text-[#C88D4E] bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
 										⚠️ RSU Underwithholding: Est. federal tax shortfall of {formatCurrency(hoveredData.offerA.rsuTaxShortfall)} due to flat 22% sell-to-cover rate vs your estimated {Math.round(hoveredData.offerA.mtrFed * 100)}% marginal rate.
 									</div>
 								)}
@@ -583,27 +583,27 @@ export default function TotalCompCalculator() {
 							{/* Offer B Tooltip */}
 							<div className="flex flex-col gap-1">
 								<p className="font-semibold text-purple-400 text-[11px] truncate uppercase [.light_&]:text-purple-700!">{offerB.name}</p>
-								<div className="flex justify-between mt-1 text-[11px] text-slate-400">
+								<div className="flex justify-between mt-1 text-[11px] text-[#5E5E5E]">
 									<span>Base + Bonus Cash:</span>
-									<span className="text-white font-semibold">{formatCurrency(hoveredData.offerB.baseCash + hoveredData.offerB.bonusCash)}</span>
+									<span className="text-[#1A1A1A] font-semibold">{formatCurrency(hoveredData.offerB.baseCash + hoveredData.offerB.bonusCash)}</span>
 								</div>
 								{hoveredData.offerB.liquidStockUnits > 0 && (
-									<div className="flex justify-between text-[11px] text-slate-400">
+									<div className="flex justify-between text-[11px] text-[#5E5E5E]">
 										<span>Vested Liquid Stock Units:</span>
-										<span className="text-emerald-400 font-semibold">{formatCurrency(hoveredData.offerB.liquidStockUnits)}</span>
+										<span className="#1A1A1A font-semibold">{formatCurrency(hoveredData.offerB.liquidStockUnits)}</span>
 									</div>
 								)}
 								{hoveredData.offerB.paperLtip > 0 && (
-									<div className="flex justify-between text-[11px] text-slate-500">
+									<div className="flex justify-between text-[11px] text-[#8C8C8C]">
 										<span>Paper LTIP Wealth (Illiquid):</span>
-										<span className="text-slate-400 font-semibold">{formatCurrency(hoveredData.offerB.paperLtip)}</span>
+										<span className="text-[#5E5E5E] font-semibold">{formatCurrency(hoveredData.offerB.paperLtip)}</span>
 									</div>
 								)}
-								<div className="flex justify-between text-[11px] text-slate-400">
+								<div className="flex justify-between text-[11px] text-[#5E5E5E]">
 									<span>Perks (401k/ESPP):</span>
 									<span className="text-indigo-300 font-semibold [.light_&]:text-indigo-600!">{formatCurrency(hoveredData.offerB.perksValue)}</span>
 								</div>
-								<div className="flex justify-between text-[11px] text-rose-400/80 [.light_&]:text-rose-600!">
+								<div className="flex justify-between text-[11px] text-[#B85C5C]/80 [.light_&]:text-rose-600!">
 									<span>Tax Drag:</span>
 									<span>-{formatCurrency(hoveredData.offerB.taxDrag)}</span>
 								</div>
@@ -613,17 +613,17 @@ export default function TotalCompCalculator() {
 										<span>-{formatCurrency(hoveredData.offerB.purchaseCost)} {globalInputs.autoExercise ? '(Subtracted)' : '(Deferred)'}</span>
 									</div>
 								)}
-								<div className="flex justify-between border-t border-slate-800/80 mt-1 pt-1 text-white font-bold [.light_&]:border-slate-200">
+								<div className="flex justify-between border-t border-gray-200/80 mt-1 pt-1 text-[#1A1A1A] font-bold [.light_&]:border-slate-200">
 									<span>Spendable Cash Flow:</span>
 									<span className="text-purple-300 [.light_&]:text-purple-700!">{formatCurrency(hoveredData.offerB.netSpendableCash)}</span>
 								</div>
 								{hoveredData.offerB.isClawbackRisk && (
-									<div className="mt-2 text-[10px] text-amber-400 bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
+									<div className="mt-2 text-[10px] text-[#C88D4E] bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
 										⚠️ Clawback risk: {formatCurrency(hoveredData.offerB.clawbackAmount)} clawed back if departing before Month {offerB.cash.clawbackMonths}.
 									</div>
 								)}
 								{hoveredData.offerB.rsuTaxShortfall > 0 && (
-									<div className="mt-2 text-[10px] text-amber-400 bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
+									<div className="mt-2 text-[10px] text-[#C88D4E] bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
 										⚠️ RSU Underwithholding: Est. federal tax shortfall of {formatCurrency(hoveredData.offerB.rsuTaxShortfall)} due to flat 22% sell-to-cover rate vs your estimated {Math.round(hoveredData.offerB.mtrFed * 100)}% marginal rate.
 									</div>
 								)}
@@ -631,7 +631,7 @@ export default function TotalCompCalculator() {
 						</div>
 					</div>
 				) : (
-					<div className="text-slate-500 text-center font-mono text-[10px] italic mt-4 py-2 bg-slate-950/20 border border-slate-900/40 rounded-xl [.light_&]:bg-slate-100/60 [.light_&]:text-slate-700! [.light_&]:border-slate-200/80">
+					<div className="text-[#8C8C8C] text-center font-mono text-[10px] italic mt-4 py-2 bg-white/20 border border-gray-200/40 rounded-xl [.light_&]:bg-slate-100/60 [.light_&]:text-slate-700! [.light_&]:border-slate-200/80">
 						Hover mouse cursor over the chart columns to read exact yearly breakdowns.
 					</div>
 				)}
@@ -641,35 +641,35 @@ export default function TotalCompCalculator() {
 			<div className="grid gap-6 md:grid-cols-2">
 
 				{/* Offer A Box */}
-				<div className="rounded-[1.8rem] border border-slate-800 bg-slate-950/20 p-5 shadow-sm">
+				<div className="rounded-[1.8rem] border border-gray-200 bg-white/20 p-5 shadow-sm">
 					<div className="flex items-center gap-3 mb-4">
 						<span className="w-3.5 h-3.5 rounded-full bg-cyan-400" />
 						<input
 							type="text"
 							value={offerA.name}
 							onChange={(e) => updateOffer('A', 'name' as any, '', e.target.value)}
-							className="text-lg font-bold text-white bg-transparent border-b border-transparent focus:border-cyan-400 outline-none w-full"
+							className="text-lg font-bold text-[#1A1A1A] bg-transparent border-b border-transparent focus:border-cyan-400 outline-none w-full"
 							placeholder="Enter Offer A Name"
 						/>
 					</div>
 
 					{/* Internal offer tabs */}
-					<div className="flex border-b border-slate-900 mb-4 text-xs font-mono">
+					<div className="flex border-b border-gray-200 mb-4 text-xs font-mono">
 						<button
 							onClick={() => setActiveASection('cash')}
-							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeASection === 'cash' ? 'border-cyan-400 text-white' : 'border-transparent text-slate-500 hover:text-slate-300'}`}
+							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeASection === 'cash' ? 'border-cyan-400 text-[#1A1A1A]' : 'border-transparent text-[#8C8C8C] hover:text-[#5E5E5E]'}`}
 						>
 							💵 Cash
 						</button>
 						<button
 							onClick={() => setActiveASection('equity')}
-							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeASection === 'equity' ? 'border-cyan-400 text-white' : 'border-transparent text-slate-500 hover:text-slate-300'}`}
+							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeASection === 'equity' ? 'border-cyan-400 text-[#1A1A1A]' : 'border-transparent text-[#8C8C8C] hover:text-[#5E5E5E]'}`}
 						>
 							📈 LTIP
 						</button>
 						<button
 							onClick={() => setActiveASection('perks')}
-							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeASection === 'perks' ? 'border-cyan-400 text-white' : 'border-transparent text-slate-500 hover:text-slate-300'}`}
+							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeASection === 'perks' ? 'border-cyan-400 text-[#1A1A1A]' : 'border-transparent text-[#8C8C8C] hover:text-[#5E5E5E]'}`}
 						>
 							🎁 Perks
 						</button>
@@ -719,12 +719,12 @@ export default function TotalCompCalculator() {
 					{activeASection === 'equity' && (
 						<div className="grid gap-4 animate-[fadeIn_0.15s_ease-out]">
 							{/* Equity Type Selection */}
-							<label className="grid gap-2 rounded-[1.5rem] border border-slate-800/80 bg-slate-950/45 p-4">
-								<span className="text-sm font-semibold text-slate-100">LTIP / Stock Unit Type</span>
+							<label className="grid gap-2 rounded-[1.5rem] border border-gray-200/80 bg-white p-4">
+								<span className="text-sm font-semibold text-[#1A1A1A]">LTIP / Stock Unit Type</span>
 								<select
 									value={offerA.equity.type}
 									onChange={(e) => updateOffer('A', 'equity', 'type', e.target.value)}
-									className="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white outline-none focus:border-cyan-400"
+									className="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-[#1A1A1A] outline-none focus:border-cyan-400"
 								>
 									<option value="PUBLIC_STOCK_UNIT">Public Stock Unit (Liquid immediately)</option>
 									<option value="PRIVATE_STOCK_UNIT">Private Stock Unit (Illiquid Paper)</option>
@@ -784,15 +784,15 @@ export default function TotalCompCalculator() {
 									onChange={(val) => updateOffer('A', 'equity', 'vestingYears', val)}
 									helpText="Standard horizon for full vesting."
 								/>
-								<label className="flex items-center gap-3 cursor-pointer p-4 rounded-[1.5rem] border border-slate-800/80 bg-slate-950/45 w-full">
+								<label className="flex items-center gap-3 cursor-pointer p-4 rounded-[1.5rem] border border-gray-200/80 bg-white w-full">
 									<input
 										type="checkbox"
 										checked={offerA.equity.hasOneYearCliff}
 										onChange={(e) => updateOffer('A', 'equity', 'hasOneYearCliff', e.target.checked)}
 										className="sr-only peer"
 									/>
-									<div className="relative w-11 h-6 bg-slate-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-slate-400 after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-500 peer-checked:after:bg-white"></div>
-									<span className="text-xs font-semibold text-slate-300">1-Year Vesting Cliff</span>
+									<div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-slate-400 after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-500 peer-checked:after:bg-white"></div>
+									<span className="text-xs font-semibold text-[#5E5E5E]">1-Year Vesting Cliff</span>
 								</label>
 							</div>
 						</div>
@@ -875,35 +875,35 @@ export default function TotalCompCalculator() {
 				</div>
 
 				{/* Offer B Box */}
-				<div className="rounded-[1.8rem] border border-slate-800 bg-slate-950/20 p-5 shadow-sm">
+				<div className="rounded-[1.8rem] border border-gray-200 bg-white/20 p-5 shadow-sm">
 					<div className="flex items-center gap-3 mb-4">
 						<span className="w-3.5 h-3.5 rounded-full bg-purple-400" />
 						<input
 							type="text"
 							value={offerB.name}
 							onChange={(e) => updateOffer('B', 'name' as any, '', e.target.value)}
-							className="text-lg font-bold text-white bg-transparent border-b border-transparent focus:border-purple-400 outline-none w-full"
+							className="text-lg font-bold text-[#1A1A1A] bg-transparent border-b border-transparent focus:border-purple-400 outline-none w-full"
 							placeholder="Enter Offer B Name"
 						/>
 					</div>
 
 					{/* Internal offer tabs */}
-					<div className="flex border-b border-slate-900 mb-4 text-xs font-mono">
+					<div className="flex border-b border-gray-200 mb-4 text-xs font-mono">
 						<button
 							onClick={() => setActiveBSection('cash')}
-							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeBSection === 'cash' ? 'border-purple-400 text-white' : 'border-transparent text-slate-500 hover:text-slate-300'}`}
+							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeBSection === 'cash' ? 'border-purple-400 text-[#1A1A1A]' : 'border-transparent text-[#8C8C8C] hover:text-[#5E5E5E]'}`}
 						>
 							💵 Cash
 						</button>
 						<button
 							onClick={() => setActiveBSection('equity')}
-							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeBSection === 'equity' ? 'border-purple-400 text-white' : 'border-transparent text-slate-500 hover:text-slate-300'}`}
+							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeBSection === 'equity' ? 'border-purple-400 text-[#1A1A1A]' : 'border-transparent text-[#8C8C8C] hover:text-[#5E5E5E]'}`}
 						>
 							📈 LTIP
 						</button>
 						<button
 							onClick={() => setActiveBSection('perks')}
-							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeBSection === 'perks' ? 'border-purple-400 text-white' : 'border-transparent text-slate-500 hover:text-slate-300'}`}
+							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeBSection === 'perks' ? 'border-purple-400 text-[#1A1A1A]' : 'border-transparent text-[#8C8C8C] hover:text-[#5E5E5E]'}`}
 						>
 							🎁 Perks
 						</button>
@@ -953,12 +953,12 @@ export default function TotalCompCalculator() {
 					{activeBSection === 'equity' && (
 						<div className="grid gap-4 animate-[fadeIn_0.15s_ease-out]">
 							{/* Equity Type Selection */}
-							<label className="grid gap-2 rounded-[1.5rem] border border-slate-800/80 bg-slate-950/45 p-4">
-								<span className="text-sm font-semibold text-slate-100">LTIP / Stock Unit Type</span>
+							<label className="grid gap-2 rounded-[1.5rem] border border-gray-200/80 bg-white p-4">
+								<span className="text-sm font-semibold text-[#1A1A1A]">LTIP / Stock Unit Type</span>
 								<select
 									value={offerB.equity.type}
 									onChange={(e) => updateOffer('B', 'equity', 'type', e.target.value)}
-									className="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-white outline-none focus:border-purple-400"
+									className="w-full rounded-xl border border-slate-700 bg-slate-900 px-3 py-2 text-sm text-[#1A1A1A] outline-none focus:border-purple-400"
 								>
 									<option value="PUBLIC_STOCK_UNIT">Public Stock Unit (Liquid immediately)</option>
 									<option value="PRIVATE_STOCK_UNIT">Private Stock Unit (Illiquid Paper)</option>
@@ -1018,15 +1018,15 @@ export default function TotalCompCalculator() {
 									onChange={(val) => updateOffer('B', 'equity', 'vestingYears', val)}
 									helpText="Standard horizon for full vesting."
 								/>
-								<label className="flex items-center gap-3 cursor-pointer p-4 rounded-[1.5rem] border border-slate-800/80 bg-slate-950/45 w-full">
+								<label className="flex items-center gap-3 cursor-pointer p-4 rounded-[1.5rem] border border-gray-200/80 bg-white w-full">
 									<input
 										type="checkbox"
 										checked={offerB.equity.hasOneYearCliff}
 										onChange={(e) => updateOffer('B', 'equity', 'hasOneYearCliff', e.target.checked)}
 										className="sr-only peer"
 									/>
-									<div className="relative w-11 h-6 bg-slate-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-slate-400 after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-500 peer-checked:after:bg-white"></div>
-									<span className="text-xs font-semibold text-slate-300">1-Year Vesting Cliff</span>
+									<div className="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-slate-400 after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-purple-500 peer-checked:after:bg-white"></div>
+									<span className="text-xs font-semibold text-[#5E5E5E]">1-Year Vesting Cliff</span>
 								</label>
 							</div>
 						</div>
@@ -1114,35 +1114,35 @@ export default function TotalCompCalculator() {
 			<div className="grid gap-6 md:grid-cols-2">
 
 				{/* Offer A Summary Cards */}
-				<div className={`rounded-[2rem] border p-6 bg-slate-900/40 transition duration-300 hover:scale-[1.01] flex flex-col gap-4 ${summaryA.total4YearLiquidity >= summaryB.total4YearLiquidity ? 'border-cyan-500/30 shadow-[0_0_30px_rgba(34,211,238,0.08)]' : 'border-slate-800'}`}>
-					<div className="flex justify-between items-center border-b border-slate-900 pb-3">
-						<h4 className="text-base font-bold text-white tracking-wide truncate">{offerA.name} Outcomes</h4>
+				<div className={`rounded-[2rem] border p-6 bg-slate-900/40 transition duration-300 hover:scale-[1.01] flex flex-col gap-4 ${summaryA.total4YearLiquidity >= summaryB.total4YearLiquidity ? 'border-cyan-500/30 shadow-[0_0_30px_rgba(34,211,238,0.08)]' : 'border-gray-200'}`}>
+					<div className="flex justify-between items-center border-b border-gray-200 pb-3">
+						<h4 className="text-base font-bold text-[#1A1A1A] tracking-wide truncate">{offerA.name} Outcomes</h4>
 						{summaryA.total4YearLiquidity >= summaryB.total4YearLiquidity && (
-							<span className="rounded-full bg-cyan-500/10 border border-cyan-500/20 px-2.5 py-1 text-[9px] font-mono font-bold uppercase tracking-wider text-cyan-300">
+							<span className="rounded-full bg-cyan-500/10 border border-cyan-500/20 px-2.5 py-1 text-[9px] font-mono font-bold uppercase tracking-wider #5A7A8F">
 								Highest Cash Yield
 							</span>
 						)}
 					</div>
 					<div className="grid gap-4 grid-cols-2 lg:grid-cols-4">
-						<div className="rounded-2xl border border-white/5 bg-slate-950/45 p-4 hover:border-cyan-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">4-Yr Spendable Cash</p>
-							<p className="mt-2 text-lg font-bold text-white">{formatCurrency(summaryA.total4YearLiquidity)}</p>
-							<p className="text-[10px] text-slate-400 mt-1">Liquid, post-tax cash</p>
+						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-cyan-500/20 transition">
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C]">4-Yr Spendable Cash</p>
+							<p className="mt-2 text-lg font-bold text-[#1A1A1A]">{formatCurrency(summaryA.total4YearLiquidity)}</p>
+							<p className="text-[10px] text-[#5E5E5E] mt-1">Liquid, post-tax cash</p>
 						</div>
-						<div className="rounded-2xl border border-white/5 bg-slate-950/45 p-4 hover:border-cyan-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">Total Paper Wealth</p>
-							<p className="mt-2 text-lg font-bold text-slate-300">{formatCurrency(summaryA.totalPaperValue)}</p>
-							<p className="text-[10px] text-slate-500 mt-1">Illiquid LTIP value</p>
+						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-cyan-500/20 transition">
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C]">Total Paper Wealth</p>
+							<p className="mt-2 text-lg font-bold text-[#5E5E5E]">{formatCurrency(summaryA.totalPaperValue)}</p>
+							<p className="text-[10px] text-[#8C8C8C] mt-1">Illiquid LTIP value</p>
 						</div>
-						<div className="rounded-2xl border border-white/5 bg-slate-950/45 p-4 hover:border-rose-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">Out-of-Pocket Drag</p>
-							<p className="mt-2 text-lg font-bold text-rose-300">-{formatCurrency(summaryA.totalOutofPocketDrag)}</p>
-							<p className="text-[10px] text-slate-500 mt-1">Purchase cost + health</p>
+						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-rose-500/20 transition">
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C]">Out-of-Pocket Drag</p>
+							<p className="mt-2 text-lg font-bold text-[#B85C5C]">-{formatCurrency(summaryA.totalOutofPocketDrag)}</p>
+							<p className="text-[10px] text-[#8C8C8C] mt-1">Purchase cost + health</p>
 						</div>
-						<div className="rounded-2xl border border-white/5 bg-slate-950/45 p-4 hover:border-amber-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">Exit Readiness No.</p>
-							<p className="mt-2 text-lg font-bold text-amber-300">{formatCurrency(summaryA.exitReadinessNumber)}</p>
-							<div className="text-[10px] text-slate-500 mt-1">
+						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-amber-500/20 transition">
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C]">Exit Readiness No.</p>
+							<p className="mt-2 text-lg font-bold text-[#C88D4E]">{formatCurrency(summaryA.exitReadinessNumber)}</p>
+							<div className="text-[10px] text-[#8C8C8C] mt-1">
 								Option purchase cost
 								<p className="text-[9px] text-amber-500/90 mt-0.5" title="Alternative Minimum Tax (AMT) liabilities are not included in this figure">⚠️ Excludes AMT</p>
 							</div>
@@ -1151,9 +1151,9 @@ export default function TotalCompCalculator() {
 				</div>
 
 				{/* Offer B Summary Cards */}
-				<div className={`rounded-[2rem] border p-6 bg-slate-900/40 transition duration-300 hover:scale-[1.01] flex flex-col gap-4 ${summaryB.total4YearLiquidity >= summaryA.total4YearLiquidity ? 'border-purple-500/30 shadow-[0_0_30px_rgba(168,85,247,0.08)]' : 'border-slate-800'}`}>
-					<div className="flex justify-between items-center border-b border-slate-900 pb-3">
-						<h4 className="text-base font-bold text-white tracking-wide truncate">{offerB.name} Outcomes</h4>
+				<div className={`rounded-[2rem] border p-6 bg-slate-900/40 transition duration-300 hover:scale-[1.01] flex flex-col gap-4 ${summaryB.total4YearLiquidity >= summaryA.total4YearLiquidity ? 'border-purple-500/30 shadow-[0_0_30px_rgba(168,85,247,0.08)]' : 'border-gray-200'}`}>
+					<div className="flex justify-between items-center border-b border-gray-200 pb-3">
+						<h4 className="text-base font-bold text-[#1A1A1A] tracking-wide truncate">{offerB.name} Outcomes</h4>
 						{summaryB.total4YearLiquidity >= summaryA.total4YearLiquidity && (
 							<span className="rounded-full bg-purple-500/10 border border-purple-500/20 px-2.5 py-1 text-[9px] font-mono font-bold uppercase tracking-wider text-purple-300">
 								Highest Cash Yield
@@ -1161,25 +1161,25 @@ export default function TotalCompCalculator() {
 						)}
 					</div>
 					<div className="grid gap-4 grid-cols-2 lg:grid-cols-4">
-						<div className="rounded-2xl border border-white/5 bg-slate-950/45 p-4 hover:border-purple-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">4-Yr Spendable Cash</p>
-							<p className="mt-2 text-lg font-bold text-white">{formatCurrency(summaryB.total4YearLiquidity)}</p>
-							<p className="text-[10px] text-slate-400 mt-1">Liquid, post-tax cash</p>
+						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-purple-500/20 transition">
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C]">4-Yr Spendable Cash</p>
+							<p className="mt-2 text-lg font-bold text-[#1A1A1A]">{formatCurrency(summaryB.total4YearLiquidity)}</p>
+							<p className="text-[10px] text-[#5E5E5E] mt-1">Liquid, post-tax cash</p>
 						</div>
-						<div className="rounded-2xl border border-white/5 bg-slate-950/45 p-4 hover:border-purple-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">Total Paper Wealth</p>
-							<p className="mt-2 text-lg font-bold text-slate-300">{formatCurrency(summaryB.totalPaperValue)}</p>
-							<p className="text-[10px] text-slate-500 mt-1">Illiquid LTIP value</p>
+						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-purple-500/20 transition">
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C]">Total Paper Wealth</p>
+							<p className="mt-2 text-lg font-bold text-[#5E5E5E]">{formatCurrency(summaryB.totalPaperValue)}</p>
+							<p className="text-[10px] text-[#8C8C8C] mt-1">Illiquid LTIP value</p>
 						</div>
-						<div className="rounded-2xl border border-white/5 bg-slate-950/45 p-4 hover:border-rose-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">Out-of-Pocket Drag</p>
-							<p className="mt-2 text-lg font-bold text-rose-300">-{formatCurrency(summaryB.totalOutofPocketDrag)}</p>
-							<p className="text-[10px] text-slate-500 mt-1">Purchase cost + health</p>
+						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-rose-500/20 transition">
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C]">Out-of-Pocket Drag</p>
+							<p className="mt-2 text-lg font-bold text-[#B85C5C]">-{formatCurrency(summaryB.totalOutofPocketDrag)}</p>
+							<p className="text-[10px] text-[#8C8C8C] mt-1">Purchase cost + health</p>
 						</div>
-						<div className="rounded-2xl border border-white/5 bg-slate-950/45 p-4 hover:border-purple-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-slate-500">Exit Readiness No.</p>
-							<p className="mt-2 text-lg font-bold text-amber-300">{formatCurrency(summaryB.exitReadinessNumber)}</p>
-							<div className="text-[10px] text-slate-500 mt-1">
+						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-purple-500/20 transition">
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C]">Exit Readiness No.</p>
+							<p className="mt-2 text-lg font-bold text-[#C88D4E]">{formatCurrency(summaryB.exitReadinessNumber)}</p>
+							<div className="text-[10px] text-[#8C8C8C] mt-1">
 								Option purchase cost
 								<p className="text-[9px] text-amber-500/90 mt-0.5" title="Alternative Minimum Tax (AMT) liabilities are not included in this figure">⚠️ Excludes AMT</p>
 							</div>

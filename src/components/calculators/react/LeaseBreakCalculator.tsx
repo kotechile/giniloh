@@ -44,10 +44,10 @@ export default function LeaseBreakCalculator() {
 			{/* Left Column: Interactive Form Steps */}
 			<div className="grid gap-6">
 				{/* Step 1: Core Lease Details */}
-				<div className="rounded-[1.5rem] border border-slate-800/80 bg-slate-950/40 p-6 shadow-sm">
+				<div className="rounded-[1.5rem] border border-gray-200/80 bg-white p-6 shadow-sm">
 					<div className="flex items-center gap-2 mb-4">
-						<span className="flex h-6 w-6 items-center justify-center rounded-full bg-cyan-950 [.light_&]:bg-cyan-100 text-xs font-bold text-cyan-400 [.light_&]:text-cyan-600">1</span>
-						<h3 className="text-lg font-bold text-white">Base Rent Details</h3>
+						<span className="flex h-6 w-6 items-center justify-center rounded-full bg-cyan-950 [.light_&]:bg-cyan-100 text-xs font-bold text-[#5A7A8F] [.light_&]:text-cyan-600">1</span>
+						<h3 className="text-lg font-bold text-[#1A1A1A]">Base Rent Details</h3>
 					</div>
 					<div className="grid gap-5 md:grid-cols-2">
 						<CurrencyInput
@@ -71,17 +71,17 @@ export default function LeaseBreakCalculator() {
 							helpText="Whole months left on the lease agreement."
 						/>
 					</div>
-					<div className="mt-4 flex items-center justify-between rounded-[1rem] bg-slate-950/50 p-4 border border-slate-800/80">
-						<span className="text-sm font-medium text-slate-500">Remaining Lease Value:</span>
-						<span className="text-base font-bold text-white">{formatCurrency(remainingLeaseValue)}</span>
+					<div className="mt-4 flex items-center justify-between rounded-[1rem] bg-white p-4 border border-gray-200/80">
+						<span className="text-sm font-medium text-[#8C8C8C]">Remaining Lease Value:</span>
+						<span className="text-base font-bold text-[#1A1A1A]">{formatCurrency(remainingLeaseValue)}</span>
 					</div>
 				</div>
 
 				{/* Step 2: Penalty Structure */}
-				<div className="rounded-[1.5rem] border border-slate-800/80 bg-slate-950/40 p-6 shadow-sm">
+				<div className="rounded-[1.5rem] border border-gray-200/80 bg-white p-6 shadow-sm">
 					<div className="flex items-center gap-2 mb-4">
-						<span className="flex h-6 w-6 items-center justify-center rounded-full bg-cyan-950 [.light_&]:bg-cyan-100 text-xs font-bold text-cyan-400 [.light_&]:text-cyan-600">2</span>
-						<h3 className="text-lg font-bold text-white">Lease Break Penalty</h3>
+						<span className="flex h-6 w-6 items-center justify-center rounded-full bg-cyan-950 [.light_&]:bg-cyan-100 text-xs font-bold text-[#5A7A8F] [.light_&]:text-cyan-600">2</span>
+						<h3 className="text-lg font-bold text-[#1A1A1A]">Lease Break Penalty</h3>
 					</div>
 					<div className="grid gap-5">
 						<SelectField
@@ -134,12 +134,12 @@ export default function LeaseBreakCalculator() {
 						)}
 
 						{inputs.selectedMethod === 'remaining' && (
-							<div className="rounded-[1.1rem] border border-amber-500/20 bg-amber-500/5 p-4 text-sm text-amber-700 dark:text-amber-300">
+							<div className="rounded-[1.1rem] border border-amber-500/20 bg-amber-500/5 p-4 text-sm text-amber-700 dark:text-[#C88D4E]">
 								<p className="font-semibold mb-1 flex items-center gap-1">
 									⚠️ Full Lease Payout Applies
 								</p>
 								<p>
-									No buyout clause is defined. You will be responsible for the full rent of the remaining lease term ({inputs.remainingMonths} months), totaling <strong className="text-slate-900 dark:text-white">{formatCurrency(remainingLeaseValue)}</strong>.
+									No buyout clause is defined. You will be responsible for the full rent of the remaining lease term ({inputs.remainingMonths} months), totaling <strong className="text-slate-900 dark:text-[#1A1A1A]">{formatCurrency(remainingLeaseValue)}</strong>.
 								</p>
 							</div>
 						)}
@@ -147,10 +147,10 @@ export default function LeaseBreakCalculator() {
 				</div>
 
 				{/* Step 3: Offsets & Adjustments */}
-				<div className="rounded-[1.5rem] border border-slate-800/80 bg-slate-950/40 p-6 shadow-sm">
+				<div className="rounded-[1.5rem] border border-gray-200/80 bg-white p-6 shadow-sm">
 					<div className="flex items-center gap-2 mb-4">
-						<span className="flex h-6 w-6 items-center justify-center rounded-full bg-cyan-950 [.light_&]:bg-cyan-100 text-xs font-bold text-cyan-400 [.light_&]:text-cyan-600">3</span>
-						<h3 className="text-lg font-bold text-white">Offsets & Repairs</h3>
+						<span className="flex h-6 w-6 items-center justify-center rounded-full bg-cyan-950 [.light_&]:bg-cyan-100 text-xs font-bold text-[#5A7A8F] [.light_&]:text-cyan-600">3</span>
+						<h3 className="text-lg font-bold text-[#1A1A1A]">Offsets & Repairs</h3>
 					</div>
 					<div className="grid gap-5 md:grid-cols-2">
 						<CurrencyInput
@@ -178,57 +178,57 @@ export default function LeaseBreakCalculator() {
 			{/* Right Column: Real-time Exposure Summary */}
 			<div className="lg:sticky lg:top-24">
 				<div className="rounded-[1.8rem] border border-cyan-500/20 bg-[linear-gradient(180deg,rgba(14,165,233,0.12),rgba(2,6,23,0.82))] p-6 shadow-lg">
-					<p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-600 dark:text-cyan-400 font-semibold">
+					<p className="font-mono text-xs uppercase tracking-[0.24em] text-cyan-600 dark:text-[#5A7A8F] font-semibold">
 						Estimated Exposure
 					</p>
 					
 					<div className="mt-4 mb-6">
-						<h3 className="text-5xl font-black tracking-tight text-white">
+						<h3 className="text-5xl font-black tracking-tight text-[#1A1A1A]">
 							{formatCurrency(breakdown.netPenalty)}
 						</h3>
-						<p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
+						<p className="mt-2 text-sm text-[#8C8C8C] dark:text-[#5E5E5E]">
 							Net amount owed after applying deposit offsets and additional costs.
 						</p>
 					</div>
 
-					<hr className="border-slate-200 dark:border-slate-800/80 my-5" />
+					<hr className="border-slate-200 dark:border-gray-200/80 my-5" />
 
 					{/* Math Breakdown */}
 					<div className="grid gap-3.5">
 						<div className="flex justify-between items-center text-sm">
-							<span className="text-slate-500 dark:text-slate-400">Base Penalty Fee</span>
-							<span className="font-bold text-white">
+							<span className="text-[#8C8C8C] dark:text-[#5E5E5E]">Base Penalty Fee</span>
+							<span className="font-bold text-[#1A1A1A]">
 								{formatCurrency(breakdown.basePenalty)}
 							</span>
 						</div>
 						<div className="flex justify-between items-center text-sm">
-							<span className="text-slate-500 dark:text-slate-400">Expected Cleaning & Repairs</span>
-							<span className="font-bold text-white">
+							<span className="text-[#8C8C8C] dark:text-[#5E5E5E]">Expected Cleaning & Repairs</span>
+							<span className="font-bold text-[#1A1A1A]">
 								+{formatCurrency(breakdown.additionalCosts)}
 							</span>
 						</div>
 						<div className="flex justify-between items-center text-sm">
-							<span className="text-emerald-450 dark:text-emerald-400">Security Deposit Offset</span>
-							<span className="font-bold text-emerald-400">
+							<span className="text-emerald-450 dark:#1A1A1A">Security Deposit Offset</span>
+							<span className="font-bold #1A1A1A">
 								-{formatCurrency(breakdown.securityDepositOffset)}
 							</span>
 						</div>
 						
-						<div className="mt-2 pt-3.5 border-t border-dashed border-slate-200 dark:border-slate-800 flex justify-between items-center">
-							<span className="text-base font-bold text-white">Net Estimated Penalty</span>
-							<span className="text-xl font-extrabold text-cyan-600 dark:text-cyan-400">
+						<div className="mt-2 pt-3.5 border-t border-dashed border-slate-200 dark:border-gray-200 flex justify-between items-center">
+							<span className="text-base font-bold text-[#1A1A1A]">Net Estimated Penalty</span>
+							<span className="text-xl font-extrabold text-cyan-600 dark:text-[#5A7A8F]">
 								{formatCurrency(breakdown.netPenalty)}
 							</span>
 						</div>
 					</div>
 
 					{/* Deposit Offset Coverage Progress */}
-					<div className="mt-6 p-4 rounded-[1.2rem] bg-slate-950/50 border border-slate-800/80">
+					<div className="mt-6 p-4 rounded-[1.2rem] bg-white border border-gray-200/80">
 						<div className="flex items-center justify-between gap-3 mb-2">
-							<p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">
+							<p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-[#8C8C8C]">
 								Deposit Coverage
 							</p>
-							<p className="text-sm font-bold text-emerald-600 dark:text-emerald-400">
+							<p className="text-sm font-bold text-emerald-600 dark:#1A1A1A">
 								{Math.round(depositCoverage)}%
 							</p>
 						</div>
@@ -238,7 +238,7 @@ export default function LeaseBreakCalculator() {
 								style={{ width: `${depositCoverage}%` }}
 							/>
 						</div>
-						<p className="mt-2 text-xs text-slate-400">
+						<p className="mt-2 text-xs text-[#5E5E5E]">
 							Percent of penalty covered by security deposit offset.
 						</p>
 					</div>

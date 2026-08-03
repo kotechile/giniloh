@@ -637,49 +637,49 @@ export default function MoneyFlowSimulator() {
 		<div className="grid gap-6 relative">
 			{/* Ardal Loh-Gronager Safeguard Overlay */}
 			{state.isPaused && !state.checklistCompleted && state.macroScenario === 'crash' && (
-				<div className="absolute inset-0 bg-slate-950/90 z-50 rounded-[2rem] flex flex-col items-center justify-center p-8 backdrop-blur-lg animate-[fadeIn_0.3s_ease-out]">
+				<div className="absolute inset-0 bg-white/90 z-50 rounded-[2rem] flex flex-col items-center justify-center p-8 backdrop-blur-lg animate-[fadeIn_0.3s_ease-out]">
 					<div className="max-w-xl w-full bg-slate-900 border border-red-500/30 p-8 rounded-3xl shadow-2xl flex flex-col gap-6">
-						<div className="flex items-center gap-3 border-b border-slate-800 pb-4">
+						<div className="flex items-center gap-3 border-b border-gray-200 pb-4">
 							<span className="h-2.5 w-2.5 rounded-full bg-red-500 animate-ping"></span>
-							<h3 className="text-xl font-bold text-white tracking-tight">Safeguard Active: Behavioral Intervention</h3>
+							<h3 className="text-xl font-bold text-[#1A1A1A] tracking-tight">Safeguard Active: Behavioral Intervention</h3>
 						</div>
-						<p className="text-sm text-slate-300 leading-relaxed">
+						<p className="text-sm text-[#5E5E5E] leading-relaxed">
 							The macro backtest has encountered a severe market drop (&gt;10%). To avoid panic-driven portfolio liquidation, you must complete the Ardal Loh-Gronager emotional centering assessment.
 						</p>
 
 						{state.checklistProgress < EMOTIONAL_QUESTIONS.length ? (
-							<div className="bg-slate-950 p-6 rounded-2xl border border-slate-800 flex flex-col gap-4">
-								<div className="flex justify-between text-xs font-mono text-slate-500">
+							<div className="bg-white p-6 rounded-2xl border border-gray-200 flex flex-col gap-4">
+								<div className="flex justify-between text-xs font-mono text-[#8C8C8C]">
 									<span>EXERCISE {state.checklistProgress + 1} OF {EMOTIONAL_QUESTIONS.length}</span>
 									<span>{Math.round(((state.checklistProgress) / EMOTIONAL_QUESTIONS.length) * 100)}%</span>
 								</div>
-								<p className="text-sm text-white font-medium">{EMOTIONAL_QUESTIONS[state.checklistProgress]}</p>
+								<p className="text-sm text-[#1A1A1A] font-medium">{EMOTIONAL_QUESTIONS[state.checklistProgress]}</p>
 								<div className="flex gap-3 mt-2">
 									<button 
 										onClick={handleChecklistNext}
-										className="flex-1 py-2 bg-cyan-600 hover:bg-cyan-500 text-white font-mono text-xs rounded-xl transition cursor-pointer"
+										className="flex-1 py-2 bg-cyan-600 hover:bg-cyan-500 text-[#1A1A1A] font-mono text-xs rounded-xl transition cursor-pointer"
 									>
 										Acknowledge & Proceed
 									</button>
 								</div>
 							</div>
 						) : (
-							<p className="text-emerald-400 text-sm font-mono">Checklist complete. Ready to resume.</p>
+							<p className="#1A1A1A text-sm font-mono">Checklist complete. Ready to resume.</p>
 						)}
 					</div>
 				</div>
 			)}
 
 			{/* Mode Toggles Header Section */}
-			<div className="flex items-center justify-between bg-slate-900/50 p-3 rounded-2xl border border-slate-800/80 backdrop-blur-sm">
+			<div className="flex items-center justify-between bg-slate-900/50 p-3 rounded-2xl border border-gray-200/80 backdrop-blur-sm">
 				<div className="flex gap-2">
 					<button
 						onClick={() => handleModeSwitch('personal')}
 						className={[
 							'px-4 py-1.5 rounded-lg text-xs font-semibold tracking-tight transition duration-200 cursor-pointer',
 							state.mode === 'personal'
-								? 'bg-slate-800 text-white dark:bg-slate-700'
-								: 'bg-transparent text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200'
+								? 'bg-gray-200 text-[#1A1A1A] dark:bg-slate-700'
+								: 'bg-transparent text-[#8C8C8C] hover:text-slate-800 dark:text-[#5E5E5E] dark:hover:text-[#5E5E5E]'
 						].join(' ')}
 					>
 						👤 Personal Wealth Orchestrator
@@ -689,49 +689,49 @@ export default function MoneyFlowSimulator() {
 						className={[
 							'px-4 py-1.5 rounded-lg text-xs font-semibold tracking-tight transition duration-200 cursor-pointer',
 							state.mode === 'enterprise'
-								? 'bg-slate-800 text-white dark:bg-slate-700'
-								: 'bg-transparent text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200'
+								? 'bg-gray-200 text-[#1A1A1A] dark:bg-slate-700'
+								: 'bg-transparent text-[#8C8C8C] hover:text-slate-800 dark:text-[#5E5E5E] dark:hover:text-[#5E5E5E]'
 						].join(' ')}
 					>
 						🏢 Enterprise CFO Simulation Room
 					</button>
 				</div>
-				<span className="text-[10px] font-mono text-slate-500 uppercase tracking-widest px-3">
+				<span className="text-[10px] font-mono text-[#8C8C8C] uppercase tracking-widest px-3">
 					Active Engine Core: T+1 Event loops
 				</span>
 			</div>
 
 			{/* Main Simulator Dashboard */}
-			<div className="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 p-4 md:p-6 shadow-xl [.light_&]:border-slate-200 [.light_&]:bg-white">
-				<div className="flex flex-wrap items-center justify-between gap-6 pb-6 border-b border-slate-200 dark:border-slate-800">
+			<div className="overflow-hidden rounded-2xl border border-gray-200 bg-slate-900 p-4 md:p-6 shadow-xl [.light_&]:border-slate-200 [.light_&]:bg-white">
+				<div className="flex flex-wrap items-center justify-between gap-6 pb-6 border-b border-slate-200 dark:border-gray-200">
 					<div>
-						<p className="font-mono text-xs uppercase tracking-[0.28em] text-cyan-400 [.light_&]:text-cyan-600">
+						<p className="font-mono text-xs uppercase tracking-[0.28em] text-[#5A7A8F] [.light_&]:text-cyan-600">
 							{isEnterprise ? 'SPV Waterfall Cash Simulator' : 'High-Fidelity Backtesting & AI Engine'}
 						</p>
-						<h2 className="mt-2 text-2xl font-bold tracking-tight text-white [.light_&]:text-slate-900">
+						<h2 className="mt-2 text-2xl font-bold tracking-tight text-[#1A1A1A] [.light_&]:text-slate-900">
 							{isEnterprise ? 'Enterprise CFO Controls' : 'System Flow Control'}
 						</h2>
 					</div>
 					
 					{/* Status Stats */}
 					<div className="flex flex-wrap gap-3 text-left">
-						<div className="rounded-lg border border-slate-700 bg-slate-800/80 px-4 py-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
-							<span className="block font-mono text-[9px] uppercase tracking-widest text-slate-500">Macro Feed</span>
-							<span className="block text-sm font-bold font-sans text-white [.light_&]:text-slate-900 mt-1">Index: {currentSAndP.toFixed(2)}</span>
+						<div className="rounded-lg border border-slate-700 bg-gray-200/80 px-4 py-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
+							<span className="block font-mono text-[9px] uppercase tracking-widest text-[#8C8C8C]">Macro Feed</span>
+							<span className="block text-sm font-bold font-sans text-[#1A1A1A] [.light_&]:text-slate-900 mt-1">Index: {currentSAndP.toFixed(2)}</span>
 						</div>
-						<div className="rounded-lg border border-slate-700 bg-slate-800/80 px-4 py-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
-							<span className="block font-mono text-[9px] uppercase tracking-widest text-slate-500">Inflation</span>
-							<span className="block text-sm font-bold font-sans text-red-400 [.light_&]:text-red-600 mt-1">{currentInflation.toFixed(1)}%</span>
+						<div className="rounded-lg border border-slate-700 bg-gray-200/80 px-4 py-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
+							<span className="block font-mono text-[9px] uppercase tracking-widest text-[#8C8C8C]">Inflation</span>
+							<span className="block text-sm font-bold font-sans text-[#B85C5C] [.light_&]:text-red-600 mt-1">{currentInflation.toFixed(1)}%</span>
 						</div>
-						<div className="rounded-lg border border-slate-700 bg-slate-800/80 px-4 py-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
-							<span className="block font-mono text-[9px] uppercase tracking-widest text-slate-500">Day Count</span>
-							<span className="block text-sm font-bold font-sans text-white [.light_&]:text-slate-900 mt-1">{state.day} days</span>
+						<div className="rounded-lg border border-slate-700 bg-gray-200/80 px-4 py-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
+							<span className="block font-mono text-[9px] uppercase tracking-widest text-[#8C8C8C]">Day Count</span>
+							<span className="block text-sm font-bold font-sans text-[#1A1A1A] [.light_&]:text-slate-900 mt-1">{state.day} days</span>
 						</div>
-						<div className="rounded-lg border border-slate-700 bg-slate-800/80 px-4 py-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
-							<span className="block font-mono text-[9px] uppercase tracking-widest text-slate-500">
+						<div className="rounded-lg border border-slate-700 bg-gray-200/80 px-4 py-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
+							<span className="block font-mono text-[9px] uppercase tracking-widest text-[#8C8C8C]">
 								{isEnterprise ? 'Treasury Net Position' : 'Wealth Projection'}
 							</span>
-							<span className="block text-sm font-bold font-sans text-emerald-400 [.light_&]:text-emerald-600 mt-1">
+							<span className="block text-sm font-bold font-sans #1A1A1A [.light_&]:text-emerald-600 mt-1">
 								{formatCurrency(state.totalWealthAccumulated)}
 							</span>
 						</div>
@@ -746,10 +746,10 @@ export default function MoneyFlowSimulator() {
 							className={[
 								'py-2 px-5 rounded-lg text-xs font-mono uppercase tracking-wider transition font-bold select-none border cursor-pointer disabled:opacity-30 shadow-sm',
 								isRunning
-									? 'bg-red-500/15 border-red-500/30 text-red-400 hover:bg-red-500/25 [.light_&]:bg-red-50 [.light_&]:border-red-200 [.light_&]:text-red-600 [.light_&]:hover:bg-red-100'
+									? 'bg-red-500/15 border-red-500/30 text-[#B85C5C] hover:bg-red-500/25 [.light_&]:bg-red-50 [.light_&]:border-red-200 [.light_&]:text-red-600 [.light_&]:hover:bg-red-100'
 									: isEnterprise
-										? 'bg-emerald-500/15 border-emerald-500/30 text-emerald-400 hover:bg-emerald-500/25 [.light_&]:bg-emerald-50 [.light_&]:border-emerald-200 [.light_&]:text-emerald-600 [.light_&]:hover:bg-emerald-100'
-										: 'bg-cyan-500/15 border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/25 [.light_&]:bg-cyan-50 [.light_&]:border-cyan-200 [.light_&]:text-cyan-700 [.light_&]:hover:bg-cyan-100'
+										? 'bg-emerald-500/15 border-emerald-500/30 #1A1A1A hover:bg-emerald-500/25 [.light_&]:bg-emerald-50 [.light_&]:border-emerald-200 [.light_&]:text-emerald-600 [.light_&]:hover:bg-emerald-100'
+										: 'bg-cyan-500/15 border-cyan-500/30 text-[#5A7A8F] hover:bg-cyan-500/25 [.light_&]:bg-cyan-50 [.light_&]:border-cyan-200 [.light_&]:text-cyan-700 [.light_&]:hover:bg-cyan-100'
 							].join(' ')}
 						>
 							{isRunning ? 'Pause clock' : 'Start clock'}
@@ -757,13 +757,13 @@ export default function MoneyFlowSimulator() {
 						<button
 							onClick={handleStep}
 							disabled={isRunning || state.isPaused}
-							className="py-2 px-4 rounded-lg text-xs font-mono uppercase tracking-wider border border-slate-700 bg-slate-800 hover:bg-slate-700 text-slate-300 disabled:opacity-30 cursor-pointer shadow-sm [.light_&]:border-slate-200 [.light_&]:bg-white [.light_&]:text-slate-700 [.light_&]:hover:bg-slate-50"
+							className="py-2 px-4 rounded-lg text-xs font-mono uppercase tracking-wider border border-slate-700 bg-gray-200 hover:bg-slate-700 text-[#5E5E5E] disabled:opacity-30 cursor-pointer shadow-sm [.light_&]:border-slate-200 [.light_&]:bg-white [.light_&]:text-slate-700 [.light_&]:hover:bg-slate-50"
 						>
 							Step 1 day
 						</button>
 						<button
 							onClick={() => handleReset()}
-							className="py-2 px-4 rounded-lg text-xs font-mono uppercase tracking-wider border border-slate-800 bg-transparent hover:bg-slate-900 text-slate-400 cursor-pointer shadow-sm [.light_&]:border-slate-200 [.light_&]:bg-white [.light_&]:text-slate-600 [.light_&]:hover:bg-slate-50"
+							className="py-2 px-4 rounded-lg text-xs font-mono uppercase tracking-wider border border-gray-200 bg-transparent hover:bg-slate-900 text-[#5E5E5E] cursor-pointer shadow-sm [.light_&]:border-slate-200 [.light_&]:bg-white [.light_&]:text-[#8C8C8C] [.light_&]:hover:bg-slate-50"
 						>
 							Reset
 						</button>
@@ -772,11 +772,11 @@ export default function MoneyFlowSimulator() {
 					<div className="flex flex-wrap items-center gap-6">
 						{/* Backtest Scenarios */}
 						<div className="flex items-center gap-2">
-							<span className="text-xs font-mono text-slate-500 uppercase tracking-widest">Macro Shock:</span>
+							<span className="text-xs font-mono text-[#8C8C8C] uppercase tracking-widest">Macro Shock:</span>
 							<select
 								value={state.macroScenario}
 								onChange={(e) => handleScenarioChange(e.target.value as any)}
-								className="bg-slate-800 border border-slate-700 text-slate-200 [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-slate-800 rounded-lg px-3 py-1.5 text-xs outline-none cursor-pointer shadow-sm font-medium appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2010L12%2015L17%2010%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E')] bg-[length:20px_20px] bg-no-repeat bg-[position:right_4px_center] pr-8"
+								className="bg-gray-200 border border-slate-700 text-[#5E5E5E] [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-slate-800 rounded-lg px-3 py-1.5 text-xs outline-none cursor-pointer shadow-sm font-medium appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2010L12%2015L17%2010%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E')] bg-[length:20px_20px] bg-no-repeat bg-[position:right_4px_center] pr-8"
 							>
 								<option value="baseline">Baseline Growth</option>
 								<option value="inflation">Stagflation Shock</option>
@@ -790,11 +790,11 @@ export default function MoneyFlowSimulator() {
 
 						{/* Daily speed settings */}
 						<div className="flex items-center gap-2">
-							<span className="text-xs font-mono text-slate-500 uppercase tracking-widest">Speed:</span>
+							<span className="text-xs font-mono text-[#8C8C8C] uppercase tracking-widest">Speed:</span>
 							<select
 								value={speedMs}
 								onChange={(e) => setSpeedMs(parseInt(e.target.value))}
-								className="bg-slate-800 border border-slate-700 text-slate-200 [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-slate-800 rounded-lg px-3 py-1.5 text-xs outline-none cursor-pointer shadow-sm font-medium appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2010L12%2015L17%2010%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E')] bg-[length:20px_20px] bg-no-repeat bg-[position:right_4px_center] pr-8"
+								className="bg-gray-200 border border-slate-700 text-[#5E5E5E] [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-slate-800 rounded-lg px-3 py-1.5 text-xs outline-none cursor-pointer shadow-sm font-medium appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2010L12%2015L17%2010%22%20stroke%3D%22%2364748B%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E')] bg-[length:20px_20px] bg-no-repeat bg-[position:right_4px_center] pr-8"
 							>
 								<option value="800">1x (Slow)</option>
 								<option value="400">2x (Normal)</option>
@@ -804,7 +804,7 @@ export default function MoneyFlowSimulator() {
 
 						{/* Daily savings factor */}
 						<div className="flex items-center gap-2">
-							<span className="text-xs font-mono text-slate-500 uppercase tracking-widest">
+							<span className="text-xs font-mono text-[#8C8C8C] uppercase tracking-widest">
 								{isEnterprise ? 'Daily Base Revenue:' : 'Income/day:'}
 							</span>
 							<input
@@ -813,7 +813,7 @@ export default function MoneyFlowSimulator() {
 								step="10"
 								value={dailyIncome}
 								onChange={(e) => setDailyIncome(parseFloat(e.target.value) || 0)}
-								className="w-20 bg-slate-800 border border-slate-700 text-slate-200 [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-slate-800 rounded-lg px-3 py-1.5 text-xs outline-none font-mono shadow-sm"
+								className="w-20 bg-gray-200 border border-slate-700 text-[#5E5E5E] [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-slate-800 rounded-lg px-3 py-1.5 text-xs outline-none font-mono shadow-sm"
 							/>
 						</div>
 					</div>
@@ -835,41 +835,41 @@ export default function MoneyFlowSimulator() {
 
 			{/* Interactive Bottom-up Liquidity Projections Grid */}
 			{isEnterprise && liquidityRows.length > 0 && (
-				<div className="rounded-[1.8rem] border border-slate-800 bg-slate-950/75 p-6 shadow-xl backdrop-blur-sm animate-[fadeIn_0.3s_ease-out] [.light_&]:bg-slate-50 [.light_&]:border-slate-200 [.light_&]:shadow-lg">
-					<h3 className="text-lg font-bold text-white mb-2 [.light_&]:text-slate-900">Liquidity Projections Data Grid</h3>
-					<p className="text-xs text-slate-400 mb-4 leading-normal [.light_&]:text-slate-500">
+				<div className="rounded-[1.8rem] border border-gray-200 bg-white/75 p-6 shadow-xl backdrop-blur-sm animate-[fadeIn_0.3s_ease-out] [.light_&]:bg-slate-50 [.light_&]:border-slate-200 [.light_&]:shadow-lg">
+					<h3 className="text-lg font-bold text-[#1A1A1A] mb-2 [.light_&]:text-slate-900">Liquidity Projections Data Grid</h3>
+					<p className="text-xs text-[#5E5E5E] mb-4 leading-normal [.light_&]:text-[#8C8C8C]">
 						Effortless top-down projection calculated bottom-up by running simulated clock steps forwards in real time.
 					</p>
 					
 					<div className="overflow-x-auto">
 						<table className="w-full text-left font-mono text-xs border-collapse">
 							<thead>
-								<tr className="border-b border-slate-800 text-slate-500 [.light_&]:border-slate-200 [.light_&]:text-slate-600">
+								<tr className="border-b border-gray-200 text-[#8C8C8C] [.light_&]:border-slate-200 [.light_&]:text-[#8C8C8C]">
 									<th className="py-2.5 px-3">Treasury Account Node</th>
 									<th className="py-2.5 px-3">Category</th>
 									<th className="py-2.5 px-3 text-right">Current Ledger</th>
-									<th className="py-2.5 px-3 text-right text-cyan-400 [.light_&]:text-cyan-700">Month-End Forecast (30d)</th>
-									<th className="py-2.5 px-3 text-right text-emerald-400 [.light_&]:text-emerald-700">Year-End Forecast (365d)</th>
+									<th className="py-2.5 px-3 text-right text-[#5A7A8F] [.light_&]:text-cyan-700">Month-End Forecast (30d)</th>
+									<th className="py-2.5 px-3 text-right #1A1A1A [.light_&]:text-emerald-700">Year-End Forecast (365d)</th>
 								</tr>
 							</thead>
-							<tbody className="divide-y divide-slate-800 text-slate-300 [.light_&]:divide-slate-200 [.light_&]:text-slate-700">
+							<tbody className="divide-y divide-slate-800 text-[#5E5E5E] [.light_&]:divide-slate-200 [.light_&]:text-slate-700">
 								{liquidityRows.map((row, idx) => {
 									const isTotal = row.type === 'net';
 									return (
 										<tr 
 											key={idx} 
 											className={[
-												isTotal ? 'bg-slate-900/35 font-bold text-white [.light_&]:bg-slate-100 [.light_&]:text-slate-900' : 'hover:bg-slate-900/10 [.light_&]:hover:bg-slate-50',
-												row.type === 'liability' ? 'text-rose-300 [.light_&]:text-rose-600' : ''
+												isTotal ? 'bg-slate-900/35 font-bold text-[#1A1A1A] [.light_&]:bg-slate-100 [.light_&]:text-slate-900' : 'hover:bg-slate-900/10 [.light_&]:hover:bg-slate-50',
+												row.type === 'liability' ? 'text-[#B85C5C] [.light_&]:text-rose-600' : ''
 											].join(' ')}
 										>
 											<td className="py-2.5 px-3">{row.name}</td>
-											<td className="py-2.5 px-3 uppercase text-[10px] tracking-wider text-slate-500">
+											<td className="py-2.5 px-3 uppercase text-[10px] tracking-wider text-[#8C8C8C]">
 												{row.type}
 											</td>
 											<td className="py-2.5 px-3 text-right">{formatCurrency(row.cur)}</td>
-											<td className="py-2.5 px-3 text-right text-cyan-400">{formatCurrency(row.month)}</td>
-											<td className="py-2.5 px-3 text-right text-emerald-400">{formatCurrency(row.year)}</td>
+											<td className="py-2.5 px-3 text-right text-[#5A7A8F]">{formatCurrency(row.month)}</td>
+											<td className="py-2.5 px-3 text-right #1A1A1A">{formatCurrency(row.year)}</td>
 										</tr>
 									);
 								})}
@@ -891,17 +891,17 @@ export default function MoneyFlowSimulator() {
 							<div key={scKey} className={["p-5 rounded-2xl border flex flex-col justify-between gap-4 [.light_&]:border-slate-200 [.light_&]:bg-slate-50", colorClass].join(' ')}>
 								<div>
 									<div className="flex items-center justify-between">
-										<span className="text-xs font-mono uppercase font-bold text-slate-400 [.light_&]:text-slate-600">{scKey}</span>
-										<span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-slate-400 [.light_&]:bg-slate-200 [.light_&]:text-slate-600">
+										<span className="text-xs font-mono uppercase font-bold text-[#5E5E5E] [.light_&]:text-[#8C8C8C]">{scKey}</span>
+										<span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-[#5E5E5E] [.light_&]:bg-slate-200 [.light_&]:text-[#8C8C8C]">
 											{scState.day}d Simulated
 										</span>
 									</div>
-									<h4 className="text-sm font-bold text-white mt-2 leading-tight [.light_&]:text-slate-900">{label}</h4>
+									<h4 className="text-sm font-bold text-[#1A1A1A] mt-2 leading-tight [.light_&]:text-slate-900">{label}</h4>
 									
-									<div className="mt-4 space-y-2 font-mono text-[11px] text-slate-300 [.light_&]:text-slate-600">
+									<div className="mt-4 space-y-2 font-mono text-[11px] text-[#5E5E5E] [.light_&]:text-[#8C8C8C]">
 										<div className="flex justify-between">
 											<span>Total Net Assets:</span>
-											<span className="font-bold text-white [.light_&]:text-slate-900">{formatCurrency(scState.totalWealthAccumulated)}</span>
+											<span className="font-bold text-[#1A1A1A] [.light_&]:text-slate-900">{formatCurrency(scState.totalWealthAccumulated)}</span>
 										</div>
 										<div className="flex justify-between">
 											<span>Receivables Outstanding:</span>
@@ -916,7 +916,7 @@ export default function MoneyFlowSimulator() {
 
 								<button
 									onClick={() => applyScenarioForecast(scKey)}
-									className="w-full py-2 bg-slate-900 hover:bg-slate-800 border border-slate-700/60 rounded-xl text-xs font-mono text-slate-200 transition cursor-pointer text-center [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-slate-700"
+									className="w-full py-2 bg-slate-900 hover:bg-gray-200 border border-slate-700/60 rounded-xl text-xs font-mono text-[#5E5E5E] transition cursor-pointer text-center [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-slate-700"
 								>
 									Apply to Active Canvas
 								</button>
@@ -929,13 +929,13 @@ export default function MoneyFlowSimulator() {
 			{/* AI Chat & Scripting bottom panel */}
 			<div className={["grid gap-6", isEnterprise ? "md:grid-cols-3" : "md:grid-cols-4"].join(' ')}>
 				{/* AI Conversational Assistant */}
-				<div className="flex flex-col h-[350px] rounded-2xl border border-slate-800 bg-slate-950/90 font-mono text-xs shadow-2xl overflow-hidden md:col-span-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50 [.light_&]:shadow-lg">
-					<div className="h-9 border-b border-slate-800 bg-slate-900/60 flex items-center px-4 justify-between [.light_&]:border-slate-200 [.light_&]:bg-slate-100">
+				<div className="flex flex-col h-[350px] rounded-2xl border border-gray-200 bg-white/90 font-mono text-xs shadow-2xl overflow-hidden md:col-span-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50 [.light_&]:shadow-lg">
+					<div className="h-9 border-b border-gray-200 bg-slate-900/60 flex items-center px-4 justify-between [.light_&]:border-slate-200 [.light_&]:bg-slate-100">
 						<div className="flex items-center gap-1.5">
 							<span className="inline-flex h-1.5 w-1.5 rounded-full bg-cyan-400 animate-ping"></span>
-							<span className="font-semibold text-slate-400 text-[10px] tracking-wider uppercase [.light_&]:text-slate-600">AI_Orchestration_Chat</span>
+							<span className="font-semibold text-[#5E5E5E] text-[10px] tracking-wider uppercase [.light_&]:text-[#8C8C8C]">AI_Orchestration_Chat</span>
 						</div>
-						<span className="text-[9px] text-slate-500 [.light_&]:text-slate-400">LOW-COST LLM WRAPPER</span>
+						<span className="text-[9px] text-[#8C8C8C] [.light_&]:text-[#5E5E5E]">LOW-COST LLM WRAPPER</span>
 					</div>
 					
 					{/* Message Logs */}
@@ -949,10 +949,10 @@ export default function MoneyFlowSimulator() {
 									className={[
 										'p-3 rounded-xl max-w-[85%] leading-relaxed whitespace-pre-wrap',
 										isUser 
-											? 'ml-auto bg-cyan-950/40 border border-cyan-800/40 text-cyan-200 [.light_&]:bg-cyan-50 [.light_&]:border-cyan-200 [.light_&]:text-cyan-800' 
+											? 'ml-auto bg-cyan-950/40 border border-cyan-800/40 text-[#5A7A8F] [.light_&]:bg-cyan-50 [.light_&]:border-cyan-200 [.light_&]:text-cyan-800' 
 											: isSystem 
 												? 'bg-red-950/40 border border-red-900/40 text-red-300 [.light_&]:bg-red-50 [.light_&]:border-red-200 [.light_&]:text-red-800' 
-												: 'bg-slate-900/60 border border-slate-800 text-slate-300 [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-slate-700'
+												: 'bg-slate-900/60 border border-gray-200 text-[#5E5E5E] [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-slate-700'
 									].join(' ')}
 								>
 									{chat.text}
@@ -960,11 +960,11 @@ export default function MoneyFlowSimulator() {
 							);
 						})}
 						{isPendingAI && (
-							<div className="text-slate-500 italic animate-pulse">Assistant is translating prompt...</div>
+							<div className="text-[#8C8C8C] italic animate-pulse">Assistant is translating prompt...</div>
 						)}
 					</div>
 
-					<form onSubmit={handleChatSubmit} className="border-t border-slate-800 bg-slate-900/80 p-4 flex gap-3 [.light_&]:border-slate-200 [.light_&]:bg-slate-100/80">
+					<form onSubmit={handleChatSubmit} className="border-t border-gray-200 bg-slate-900/80 p-4 flex gap-3 [.light_&]:border-slate-200 [.light_&]:bg-slate-100/80">
 						<div className="flex-1 relative flex items-center">
 							<div className="absolute left-3 text-cyan-500/70 [.light_&]:text-cyan-600">
 								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
@@ -974,13 +974,13 @@ export default function MoneyFlowSimulator() {
 								value={chatInput}
 								onChange={(e) => setChatInput(e.target.value)}
 								placeholder={isEnterprise ? "Command the AI (e.g. 'Set receivables DSO to 45')..." : "Command the AI (e.g. 'Route $600 from checking to Roth IRA')..."}
-								className="w-full bg-slate-950 border border-slate-700 rounded-xl outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 py-3 pl-10 pr-4 text-xs text-slate-200 placeholder:text-slate-500 [.light_&]:bg-white [.light_&]:border-slate-300 [.light_&]:text-slate-800 [.light_&]:placeholder:text-slate-400 font-mono transition-all shadow-inner"
+								className="w-full bg-white border border-slate-700 rounded-xl outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 py-3 pl-10 pr-4 text-xs text-[#5E5E5E] placeholder:text-[#8C8C8C] [.light_&]:bg-white [.light_&]:border-slate-300 [.light_&]:text-slate-800 [.light_&]:placeholder:text-[#5E5E5E] font-mono transition-all shadow-inner"
 							/>
 						</div>
 						<button 
 							type="submit" 
 							disabled={!chatInput.trim() || isPendingAI}
-							className="px-6 py-2 bg-cyan-600 hover:bg-cyan-500 disabled:opacity-50 text-white font-bold rounded-xl text-xs uppercase tracking-wider transition cursor-pointer shadow-[0_0_15px_rgba(8,145,178,0.3)] hover:shadow-[0_0_20px_rgba(8,145,178,0.5)]"
+							className="px-6 py-2 bg-cyan-600 hover:bg-cyan-500 disabled:opacity-50 text-[#1A1A1A] font-bold rounded-xl text-xs uppercase tracking-wider transition cursor-pointer shadow-[0_0_15px_rgba(8,145,178,0.3)] hover:shadow-[0_0_20px_rgba(8,145,178,0.5)]"
 						>
 							Send
 						</button>
@@ -988,22 +988,22 @@ export default function MoneyFlowSimulator() {
 				</div>
 
 				{/* Scripting Rules & Audit Logs */}
-				<div className="flex flex-col h-[350px] rounded-2xl border border-slate-800 bg-slate-950/90 font-mono text-xs shadow-2xl overflow-hidden [.light_&]:border-slate-200 [.light_&]:bg-slate-50 [.light_&]:shadow-lg">
-					<div className="h-9 border-b border-slate-800 bg-slate-900/60 flex items-center px-4 justify-between [.light_&]:border-slate-200 [.light_&]:bg-slate-100">
-						<span className="font-semibold text-slate-400 text-[10px] tracking-wider uppercase [.light_&]:text-slate-600">Market_Scripting_Rules</span>
-						<span className="text-[9px] text-slate-500 [.light_&]:text-slate-400">CONDITIONAL RUNNER</span>
+				<div className="flex flex-col h-[350px] rounded-2xl border border-gray-200 bg-white/90 font-mono text-xs shadow-2xl overflow-hidden [.light_&]:border-slate-200 [.light_&]:bg-slate-50 [.light_&]:shadow-lg">
+					<div className="h-9 border-b border-gray-200 bg-slate-900/60 flex items-center px-4 justify-between [.light_&]:border-slate-200 [.light_&]:bg-slate-100">
+						<span className="font-semibold text-[#5E5E5E] text-[10px] tracking-wider uppercase [.light_&]:text-[#8C8C8C]">Market_Scripting_Rules</span>
+						<span className="text-[9px] text-[#8C8C8C] [.light_&]:text-[#5E5E5E]">CONDITIONAL RUNNER</span>
 					</div>
 					
 					<div className="flex-1 p-4 overflow-y-auto space-y-4 scrollbar-thin scrollbar-thumb-slate-800 [.light_&]:scrollbar-thumb-slate-300">
 						<div className="space-y-3">
 							{rules.map((rule) => (
-								<div key={rule.id} className="p-3 bg-slate-900/40 border border-slate-800 rounded-xl flex items-start justify-between gap-2 [.light_&]:bg-white [.light_&]:border-slate-200">
+								<div key={rule.id} className="p-3 bg-slate-900/40 border border-gray-200 rounded-xl flex items-start justify-between gap-2 [.light_&]:bg-white [.light_&]:border-slate-200">
 									<div className="flex-1">
-										<p className="font-bold text-slate-200 text-xs">{rule.name}</p>
-										<p className="text-[10px] text-slate-400 mt-1 leading-normal">{rule.description}</p>
+										<p className="font-bold text-[#5E5E5E] text-xs">{rule.name}</p>
+										<p className="text-[10px] text-[#5E5E5E] mt-1 leading-normal">{rule.description}</p>
 										<div className="mt-2 flex gap-2 text-[9px] font-mono">
-											<span className="bg-slate-950 px-1.5 py-0.5 rounded text-cyan-400">IF: {rule.conditionStr}</span>
-											<span className="bg-slate-950 px-1.5 py-0.5 rounded text-emerald-400">THEN: {rule.actionStr}</span>
+											<span className="bg-white px-1.5 py-0.5 rounded text-[#5A7A8F]">IF: {rule.conditionStr}</span>
+											<span className="bg-white px-1.5 py-0.5 rounded #1A1A1A">THEN: {rule.actionStr}</span>
 										</div>
 									</div>
 									<button 
@@ -1011,8 +1011,8 @@ export default function MoneyFlowSimulator() {
 										className={[
 											'px-2 py-1 rounded text-[9px] font-mono cursor-pointer uppercase transition font-bold',
 											rule.isActive 
-												? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30' 
-												: 'bg-slate-800 text-slate-500 border border-slate-700'
+												? 'bg-emerald-500/20 #1A1A1A border border-emerald-500/30' 
+												: 'bg-gray-200 text-[#8C8C8C] border border-slate-700'
 										].join(' ')}
 									>
 										{rule.isActive ? 'Active' : 'Disabled'}
@@ -1026,14 +1026,14 @@ export default function MoneyFlowSimulator() {
 
 				{/* Waterfall Priorities (Only in Personal Mode) */}
 				{!isEnterprise && (
-					<div className="flex flex-col h-[350px] rounded-2xl border border-slate-800 bg-slate-950/90 font-mono text-xs shadow-2xl overflow-hidden [.light_&]:border-slate-200 [.light_&]:bg-slate-50 [.light_&]:shadow-lg">
-						<div className="h-9 border-b border-slate-800 bg-slate-900/60 flex items-center px-4 justify-between [.light_&]:border-slate-200 [.light_&]:bg-slate-100">
-							<span className="font-semibold text-slate-400 text-[10px] tracking-wider uppercase [.light_&]:text-slate-600">Savings_Waterfall_Order</span>
-							<span className="text-[9px] text-slate-500 [.light_&]:text-slate-400">PRIORITY CONFIG</span>
+					<div className="flex flex-col h-[350px] rounded-2xl border border-gray-200 bg-white/90 font-mono text-xs shadow-2xl overflow-hidden [.light_&]:border-slate-200 [.light_&]:bg-slate-50 [.light_&]:shadow-lg">
+						<div className="h-9 border-b border-gray-200 bg-slate-900/60 flex items-center px-4 justify-between [.light_&]:border-slate-200 [.light_&]:bg-slate-100">
+							<span className="font-semibold text-[#5E5E5E] text-[10px] tracking-wider uppercase [.light_&]:text-[#8C8C8C]">Savings_Waterfall_Order</span>
+							<span className="text-[9px] text-[#8C8C8C] [.light_&]:text-[#5E5E5E]">PRIORITY CONFIG</span>
 						</div>
 						
 						<div className="flex-1 p-4 overflow-y-auto space-y-2.5 scrollbar-thin scrollbar-thumb-slate-800 [.light_&]:scrollbar-thumb-slate-300">
-							<p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider mb-2 leading-tight">Sweep Priority Order</p>
+							<p className="text-[10px] text-[#8C8C8C] font-bold uppercase tracking-wider mb-2 leading-tight">Sweep Priority Order</p>
 							{state.waterfallOrder.map((type, idx) => {
 								const node = state.nodes.find(n => n.type === type);
 								const displayName = node ? node.name : type;
@@ -1065,17 +1065,17 @@ export default function MoneyFlowSimulator() {
 								};
 
 								return (
-									<div key={type} className="flex items-center justify-between p-2.5 bg-slate-900/40 border border-slate-800 rounded-xl [.light_&]:bg-white [.light_&]:border-slate-200 hover:border-slate-700/60 transition">
+									<div key={type} className="flex items-center justify-between p-2.5 bg-slate-900/40 border border-gray-200 rounded-xl [.light_&]:bg-white [.light_&]:border-slate-200 hover:border-slate-700/60 transition">
 										<div className="flex items-center gap-2 overflow-hidden mr-2">
-											<span className="text-slate-500 font-bold text-[10px]">{idx + 1}.</span>
-											<span className="text-slate-200 font-bold truncate text-[10px] [.light_&]:text-slate-800">{displayName}</span>
+											<span className="text-[#8C8C8C] font-bold text-[10px]">{idx + 1}.</span>
+											<span className="text-[#5E5E5E] font-bold truncate text-[10px] [.light_&]:text-slate-800">{displayName}</span>
 										</div>
 										<div className="flex items-center gap-1.5 flex-shrink-0">
 											<button
 												onClick={handleMoveUp}
 												disabled={idx === 0}
 												title="Move Up"
-												className="p-1 rounded bg-slate-800 hover:bg-slate-700 border border-slate-700 disabled:opacity-20 transition text-slate-300 font-bold text-[9px] cursor-pointer [.light_&]:bg-slate-100 [.light_&]:border-slate-200 [.light_&]:text-slate-700"
+												className="p-1 rounded bg-gray-200 hover:bg-slate-700 border border-slate-700 disabled:opacity-20 transition text-[#5E5E5E] font-bold text-[9px] cursor-pointer [.light_&]:bg-slate-100 [.light_&]:border-slate-200 [.light_&]:text-slate-700"
 											>
 												▲
 											</button>
@@ -1083,7 +1083,7 @@ export default function MoneyFlowSimulator() {
 												onClick={handleMoveDown}
 												disabled={idx === state.waterfallOrder.length - 1}
 												title="Move Down"
-												className="p-1 rounded bg-slate-800 hover:bg-slate-700 border border-slate-700 disabled:opacity-20 transition text-slate-300 font-bold text-[9px] cursor-pointer [.light_&]:bg-slate-100 [.light_&]:border-slate-200 [.light_&]:text-slate-700"
+												className="p-1 rounded bg-gray-200 hover:bg-slate-700 border border-slate-700 disabled:opacity-20 transition text-[#5E5E5E] font-bold text-[9px] cursor-pointer [.light_&]:bg-slate-100 [.light_&]:border-slate-200 [.light_&]:text-slate-700"
 											>
 												▼
 											</button>
@@ -1097,15 +1097,15 @@ export default function MoneyFlowSimulator() {
 			</div>
 
 			{/* Dedicated System Audit Ledger & Console */}
-			<div className="rounded-[1.8rem] border border-slate-800 bg-slate-950/80 p-6 shadow-2xl backdrop-blur-md flex flex-col gap-4 font-mono text-xs animate-[fadeIn_0.3s_ease-out] [.light_&]:border-slate-200 [.light_&]:bg-white/95">
-				<div className="flex items-center justify-between border-b border-slate-900 pb-3 [.light_&]:border-slate-100">
+			<div className="rounded-[1.8rem] border border-gray-200 bg-white/80 p-6 shadow-2xl backdrop-blur-md flex flex-col gap-4 font-mono text-xs animate-[fadeIn_0.3s_ease-out] [.light_&]:border-slate-200 [.light_&]:bg-white/95">
+				<div className="flex items-center justify-between border-b border-gray-200 pb-3 [.light_&]:border-slate-100">
 					<div className="flex items-center gap-2">
 						<span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-						<span className="font-bold text-slate-400 uppercase tracking-widest text-[10px] [.light_&]:text-slate-600">
+						<span className="font-bold text-[#5E5E5E] uppercase tracking-widest text-[10px] [.light_&]:text-[#8C8C8C]">
 							System Audit Ledger & Console
 						</span>
 					</div>
-					<span className="text-[9px] text-slate-500">REAL-TIME SIMULATION ENGINE AUDIT TRAIL</span>
+					<span className="text-[9px] text-[#8C8C8C]">REAL-TIME SIMULATION ENGINE AUDIT TRAIL</span>
 				</div>
 				<div 
 					ref={logsContainerRef}
@@ -1120,16 +1120,16 @@ export default function MoneyFlowSimulator() {
 							const isInterest = line.includes('interest') || line.includes('yield') || line.includes('earned') || line.includes('charged');
 							
 							const colorClass = isWarning 
-								? 'text-rose-400 font-bold' 
+								? 'text-[#B85C5C] font-bold' 
 								: isPayday 
-									? 'text-cyan-400 font-bold' 
+									? 'text-[#5A7A8F] font-bold' 
 									: isSweep 
-										? 'text-emerald-400' 
+										? '#1A1A1A' 
 										: isDraw
-											? 'text-amber-400 font-bold'
+											? 'text-[#C88D4E] font-bold'
 											: isInterest
 												? 'text-purple-400'
-												: 'text-slate-300 [.light_&]:text-slate-700';
+												: 'text-[#5E5E5E] [.light_&]:text-slate-700';
 							return (
 								<div key={idx} className={colorClass}>
 									&gt; {line}
@@ -1137,7 +1137,7 @@ export default function MoneyFlowSimulator() {
 							);
 						})
 					) : (
-						<div className="text-slate-600 italic">No transactions or events logged yet. Advance the clock to run.</div>
+						<div className="text-[#8C8C8C] italic">No transactions or events logged yet. Advance the clock to run.</div>
 					)}
 				</div>
 			</div>

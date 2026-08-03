@@ -67,75 +67,75 @@ export default function TimeDrainTemplate({ config }: TimeDrainTemplateProps) {
 			{/* Left Column: Inputs */}
 			<div className="panel-soft rounded-[1.8rem] p-6 lg:p-8 space-y-6">
 				<div>
-					<p className="font-mono text-xs uppercase tracking-[0.3em] text-cyan-400/80">
+					<p className="font-mono text-xs uppercase tracking-[0.3em] text-[#5A7A8F]/80">
 						{config.eyebrow || 'Time Tinkering Tax Audit'}
 					</p>
-					<h2 className="mt-2 text-2xl font-bold tracking-tight text-white sm:text-3xl">
+					<h2 className="mt-2 text-2xl font-bold tracking-tight text-[#1A1A1A] sm:text-3xl">
 						Configure Parameters
 					</h2>
-					<p className="mt-2 text-sm text-slate-400">
+					<p className="mt-2 text-sm text-[#5E5E5E]">
 						Model the time lost tweaking or troubleshooting vs. the cost of a premium solution.
 					</p>
 				</div>
 
 				<div className="grid gap-6 sm:grid-cols-2">
 					{/* Hours Wasted */}
-					<div className="flex flex-col gap-2 rounded-2xl border border-slate-800/80 [.light_&]:border-slate-200 bg-slate-950/40 [.light_&]:bg-slate-50 p-4">
-						<span className="text-sm font-semibold text-slate-200">{config.hoursLabel}</span>
-						<div className="flex items-center rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-slate-950 [.light_&]:bg-white mt-1">
+					<div className="flex flex-col gap-2 rounded-2xl border border-gray-200/80 [.light_&]:border-slate-200 bg-white [.light_&]:bg-slate-50 p-4">
+						<span className="text-sm font-semibold text-[#5E5E5E]">{config.hoursLabel}</span>
+						<div className="flex items-center rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-white [.light_&]:bg-white mt-1">
 							<button
 								type="button"
 								onClick={() => setHoursWasted(prev => Math.max(config.hoursMin || 0, prev - (config.hoursStep || 1)))}
-								className="h-12 w-12 text-lg text-slate-400 hover:bg-slate-900 rounded-l-xl border-r border-slate-800 cursor-pointer"
+								className="h-12 w-12 text-lg text-[#5E5E5E] hover:bg-slate-900 rounded-l-xl border-r border-gray-200 cursor-pointer"
 								aria-label="Decrease hours"
 							>
 								−
 							</button>
-							<span className="flex-1 text-center font-mono font-semibold text-white">
+							<span className="flex-1 text-center font-mono font-semibold text-[#1A1A1A]">
 								{hoursWasted} {hoursUnit}
 							</span>
 							<button
 								type="button"
 								onClick={() => setHoursWasted(prev => Math.min(config.hoursMax || 720, prev + (config.hoursStep || 1)))}
-								className="h-12 w-12 text-lg text-slate-400 hover:bg-slate-900 rounded-r-xl border-l border-slate-800 cursor-pointer"
+								className="h-12 w-12 text-lg text-[#5E5E5E] hover:bg-slate-900 rounded-r-xl border-l border-gray-200 cursor-pointer"
 								aria-label="Increase hours"
 							>
 								+
 							</button>
 						</div>
-						<span className="text-xs text-slate-500 mt-1">{config.hoursHelp}</span>
+						<span className="text-xs text-[#8C8C8C] mt-1">{config.hoursHelp}</span>
 					</div>
 
 					{/* Time Value */}
-					<div className="flex flex-col gap-2 rounded-2xl border border-slate-800/80 [.light_&]:border-slate-200 bg-slate-950/40 [.light_&]:bg-slate-50 p-4">
-						<span className="text-sm font-semibold text-slate-200">{config.timeValueLabel}</span>
+					<div className="flex flex-col gap-2 rounded-2xl border border-gray-200/80 [.light_&]:border-slate-200 bg-white [.light_&]:bg-slate-50 p-4">
+						<span className="text-sm font-semibold text-[#5E5E5E]">{config.timeValueLabel}</span>
 						<div className="relative mt-1">
-							<span className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-slate-500">{currencySymbol}</span>
+							<span className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-[#8C8C8C]">{currencySymbol}</span>
 							<input
 								type="number"
 								min="0"
 								value={timeValue}
 								onChange={(e) => setTimeValue(Math.max(0, Number(e.target.value)))}
-								className="w-full rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-slate-950 [.light_&]:bg-white px-10 py-3 text-base font-semibold text-white [.light_&]:text-slate-800 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+								className="w-full rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-white [.light_&]:bg-white px-10 py-3 text-base font-semibold text-[#1A1A1A] [.light_&]:text-slate-800 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 							/>
 						</div>
-						<span className="text-xs text-slate-500 mt-1">{config.timeValueHelp}</span>
+						<span className="text-xs text-[#8C8C8C] mt-1">{config.timeValueHelp}</span>
 					</div>
 
 					{/* Premium Software Cost */}
-					<div className="flex flex-col gap-2 rounded-2xl border border-slate-800/80 [.light_&]:border-slate-200 bg-slate-950/40 [.light_&]:bg-slate-50 p-4 sm:col-span-2">
-						<span className="text-sm font-semibold text-slate-200">{config.premiumLabel}</span>
+					<div className="flex flex-col gap-2 rounded-2xl border border-gray-200/80 [.light_&]:border-slate-200 bg-white [.light_&]:bg-slate-50 p-4 sm:col-span-2">
+						<span className="text-sm font-semibold text-[#5E5E5E]">{config.premiumLabel}</span>
 						<div className="relative mt-1">
-							<span className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-slate-500">{currencySymbol}</span>
+							<span className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-[#8C8C8C]">{currencySymbol}</span>
 							<input
 								type="number"
 								min="0"
 								value={premiumCost}
 								onChange={(e) => setPremiumCost(Math.max(0, Number(e.target.value)))}
-								className="w-full rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-slate-950 [.light_&]:bg-white px-10 py-3 text-base font-semibold text-white [.light_&]:text-slate-800 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+								className="w-full rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-white [.light_&]:bg-white px-10 py-3 text-base font-semibold text-[#1A1A1A] [.light_&]:text-slate-800 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 							/>
 						</div>
-						<span className="text-xs text-slate-500 mt-1">{config.premiumHelp}</span>
+						<span className="text-xs text-[#8C8C8C] mt-1">{config.premiumHelp}</span>
 					</div>
 				</div>
 			</div>
@@ -153,30 +153,30 @@ export default function TimeDrainTemplate({ config }: TimeDrainTemplateProps) {
 					<div className="p-6 sm:p-8">
 						<span className={`inline-flex rounded-full px-3 py-1 font-mono text-[0.68rem] uppercase tracking-[0.24em] font-semibold ${
 							calculations.isUpgrade 
-								? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold' 
-								: 'bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-bold'
+								? 'bg-emerald-500/10 #1A1A1A border border-emerald-500/20 font-bold' 
+								: 'bg-cyan-500/10 text-[#5A7A8F] border border-cyan-500/20 font-bold'
 						}`}>
 							Verdict: {calculations.isUpgrade ? 'UPGRADE / BUY' : 'SKIP / WAIT'}
 						</span>
 
-						<h3 className="mt-4 text-2xl font-bold tracking-tight text-white leading-tight">
+						<h3 className="mt-4 text-2xl font-bold tracking-tight text-[#1A1A1A] leading-tight">
 							{calculations.isUpgrade ? config.buyVerdictTitle : config.waitVerdictTitle}
 						</h3>
 
-						<p className="mt-3 text-sm leading-6 text-slate-300">
+						<p className="mt-3 text-sm leading-6 text-[#5E5E5E]">
 							{calculations.isUpgrade ? config.buyVerdictSubtitle : config.waitVerdictSubtitle}
 						</p>
 
 						{calculations.netSavings !== 0 && (
-							<div className="mt-6 border-t border-slate-800/80 [.light_&]:border-slate-200 pt-6">
-								<p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-slate-500">
+							<div className="mt-6 border-t border-gray-200/80 [.light_&]:border-slate-200 pt-6">
+								<p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-[#8C8C8C]">
 									3-Year Net Opportunity Reclaimed
 								</p>
-								<p className={`mt-1 text-3xl font-extrabold tracking-tight ${calculations.isUpgrade ? 'text-emerald-400' : 'text-cyan-400'}`}>
+								<p className={`mt-1 text-3xl font-extrabold tracking-tight ${calculations.isUpgrade ? '#1A1A1A' : 'text-[#5A7A8F]'}`}>
 									{calculations.isUpgrade ? '+' : ''}
 									{formatCurrency(calculations.netSavings)}
 								</p>
-								<p className="mt-1 text-xs text-slate-400">
+								<p className="mt-1 text-xs text-[#5E5E5E]">
 									Based on your opportunity value of time over 36 months.
 								</p>
 							</div>
@@ -186,29 +186,29 @@ export default function TimeDrainTemplate({ config }: TimeDrainTemplateProps) {
 
 				{/* Detailed Stats Panel */}
 				<div className="panel-soft rounded-[1.8rem] p-6 sm:p-8 space-y-4">
-					<p className="font-mono text-xs uppercase tracking-[0.28em] text-slate-400">
+					<p className="font-mono text-xs uppercase tracking-[0.28em] text-[#5E5E5E]">
 						Cost breakdown
 					</p>
 
-					<div className="grid grid-cols-2 gap-4 border-b border-slate-800/80 [.light_&]:border-slate-200 pb-4">
+					<div className="grid grid-cols-2 gap-4 border-b border-gray-200/80 [.light_&]:border-slate-200 pb-4">
 						<div>
-							<p className="text-xs text-slate-500 font-medium">Monthly Time Cost</p>
-							<p className="text-lg font-bold text-white mt-0.5 font-mono">{formatCurrency(calculations.monthlyTimeCost)}</p>
+							<p className="text-xs text-[#8C8C8C] font-medium">Monthly Time Cost</p>
+							<p className="text-lg font-bold text-[#1A1A1A] mt-0.5 font-mono">{formatCurrency(calculations.monthlyTimeCost)}</p>
 						</div>
 						<div>
-							<p className="text-xs text-slate-500 font-medium">Monthly Premium Cost</p>
-							<p className="text-lg font-bold text-white mt-0.5 font-mono">{formatCurrency(premiumCost)}</p>
+							<p className="text-xs text-[#8C8C8C] font-medium">Monthly Premium Cost</p>
+							<p className="text-lg font-bold text-[#1A1A1A] mt-0.5 font-mono">{formatCurrency(premiumCost)}</p>
 						</div>
 					</div>
 
 					<div className="grid grid-cols-2 gap-4 pt-1">
 						<div>
-							<p className="text-xs text-slate-500 font-medium">3-Year Time Leak</p>
-							<p className="text-sm font-semibold text-slate-300 font-mono">{formatCurrency(calculations.timeCost3Yr)}</p>
+							<p className="text-xs text-[#8C8C8C] font-medium">3-Year Time Leak</p>
+							<p className="text-sm font-semibold text-[#5E5E5E] font-mono">{formatCurrency(calculations.timeCost3Yr)}</p>
 						</div>
 						<div>
-							<p className="text-xs text-slate-500 font-medium">3-Year Solution Cost</p>
-							<p className="text-sm font-semibold text-slate-300 font-mono">{formatCurrency(calculations.premiumCost3Yr)}</p>
+							<p className="text-xs text-[#8C8C8C] font-medium">3-Year Solution Cost</p>
+							<p className="text-sm font-semibold text-[#5E5E5E] font-mono">{formatCurrency(calculations.premiumCost3Yr)}</p>
 						</div>
 					</div>
 				</div>
