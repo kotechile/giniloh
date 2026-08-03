@@ -18,7 +18,7 @@ const pseudoMetric = (title: string) => {
 const metric = pseudoMetric(post.title);
 ---
 
-<article class="group h-full overflow-hidden rounded-2xl border border-gray-200 bg-white transition duration-300 ease-out hover:-translate-y-1 hover:border-[#1A1A1A] hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)]">
+<article class="group h-full overflow-hidden rounded-2xl border border-gray-200 bg-white transition duration-300 ease-out hover:-translate-y-1 hover:border-[#1A1A1A] hover:shadow-none">
 	<a
 		href={`/${post.slug}/`}
 		class="flex h-full flex-col focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A1A1A]"
@@ -50,12 +50,12 @@ const metric = pseudoMetric(post.title);
 				> {post.excerpt || 'Signal detected. Full analysis available in the Zenith portal.'}
 			</p>
 			
-			<div class="mt-6 p-3 bg-gray-50 rounded-lg border border-gray-200 flex justify-between items-center font-mono text-[0.7rem]">
+			<div class="mt-6 pt-3 border-t border-[#E5E5E5] flex justify-between items-center font-mono text-[0.7rem]">
 				<div>
 					<span class="text-[#8C8C8C] uppercase tracking-tighter">Exp. ROI:</span> 
 					<span class="text-[#5A7A8F] ml-1 font-bold">{metric.roi}</span>
 				</div>
-				<div class="h-4 w-px bg-gray-200"></div>
+				<div class="h-4 w-px bg-[#E5E5E5]"></div>
 				<div>
 					<span class="text-[#8C8C8C] uppercase tracking-tighter">Effort:</span> 
 					<span class="text-[#1A1A1A] ml-1 font-bold">{metric.effort}</span>

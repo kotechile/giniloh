@@ -596,1185 +596,321 @@ html.light .article-body pre code {
 
 
 /* ============================================================
-   LIGHT MODE OVERRIDES
-   Activated by adding class="light" to <html>.
-   Uses CSS specificity to override dark-mode defaults.
+   EDITORIAL NEUTRAL STYLEGUIDE & OVERRIDES (CLAY-INSPIRED)
+   Sitewide enforcement of the unboxed, flat design system.
    ============================================================ */
 
-html.light {
-  --site-bg: #f8fafc;
-  --brand-ink: #0f172a;
-  --brand-navy: #f8fafc;
-  --brand-slate: #f1f5f9;
-  --brand-deep-slate: #f8fafc;
-}
-
-html.light body {
-  color: #1e293b;
-}
-
-/* --- Background & Orbs (light mode) --- */
-html.light .site-background {
-  background-image:
-    linear-gradient(to right, rgba(15, 23, 42, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
-}
-
-html.light .orb-one {
-  background: radial-gradient(circle, rgba(96, 165, 250, 0.35), transparent 70%);
-  opacity: 0.12;
-}
-
-html.light .orb-two {
-  background: radial-gradient(circle, rgba(52, 211, 153, 0.3), transparent 70%);
-  opacity: 0.1;
-}
-
-html.light .orb-three {
-  background: radial-gradient(circle, rgba(167, 139, 250, 0.3), transparent 70%);
-  opacity: 0.1;
-}
-
-/* --- Glass panels (light mode) --- */
-html.light .panel-soft {
-  background-color: rgba(255, 255, 255, 0.55);
-  border-color: rgba(15, 23, 42, 0.08);
-  box-shadow:
-    0 18px 40px rgba(0, 0, 0, 0.06),
-    inset 1px 1px 0 rgba(255, 255, 255, 0.7);
-}
-
-html.light .panel-shell {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-/* --- Section eyebrow (light mode) --- */
-html.light .section-eyebrow {
-  color: #0369a1;
-}
-
-/* --- Buttons (light mode) --- */
-html.light .btn-primary {
-  background: #0f172a;
-  color: #ffffff;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18);
-}
-
-html.light .btn-primary:hover {
-  background: #1e293b;
-}
-
-html.light .btn-secondary {
-  border-color: rgba(15, 23, 42, 0.15);
-  background: rgba(15, 23, 42, 0.04);
-  color: #0f172a;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
-}
-
-html.light .btn-secondary:hover {
-  background: rgba(15, 23, 42, 0.08);
-}
-
-html.light .btn-inline {
-  color: #0369a1;
-}
-
-/* --- Navigation bar (light mode) --- */
-html.light header > div {
-  border-color: rgba(15, 23, 42, 0.1);
-  background-color: rgba(255, 255, 255, 0.75);
-  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.08);
-}
-
-html.light header a,
-html.light header span {
-  color: #334155;
-}
-
-html.light header a[aria-current="page"] {
-  background-color: rgba(15, 23, 42, 0.06);
-  color: #0369a1;
-  box-shadow: inset 0 0 0 1px rgba(3, 105, 161, 0.15);
-}
-
-html.light header nav a:hover {
-  background-color: rgba(15, 23, 42, 0.05);
-  color: #0f172a;
-}
-
-/* Nav logo area */
-html.light header .text-cyan-400,
-html.light header .text-cyan-400\/80 {
-  color: #0369a1 !important;
-}
-
-html.light header .text-slate-300 {
-  color: #475569 !important;
-}
-
-html.light header .text-slate-100 {
-  color: #0f172a !important;
-}
-
-/* Nav icon buttons */
-html.light header button,
-html.light header summary {
-  border-color: rgba(15, 23, 42, 0.1);
-  background-color: rgba(15, 23, 42, 0.04);
-  color: #475569;
-}
-
-html.light header button:hover,
-html.light header summary:hover {
-  background-color: rgba(15, 23, 42, 0.08);
-  color: #0f172a;
-}
-
-/* Nav logo badge */
-html.light header span.bg-slate-800 {
-  background-color: #e2e8f0 !important;
-  border-color: #cbd5e1 !important;
-  color: #0369a1 !important;
-}
-
-
-
-/* Mobile dropdown */
-html.light header details > div {
-  border-color: rgba(15, 23, 42, 0.15);
-  background-color: #ffffff;
-  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.12);
-}
-
-html.light header details nav a {
-  color: #334155;
-  font-weight: 500;
-}
-
-html.light header details nav a:hover {
-  background-color: rgba(15, 23, 42, 0.05);
-  color: #0f172a;
-}
-
-html.light header details nav a[aria-current="page"] {
-  background-color: rgba(3, 105, 161, 0.08);
-  color: #0369a1;
-}
-
-/* --- Hero section (light mode) --- */
-html.light h1,
-html.light h2,
-html.light h3,
-html.light h4 {
-  color: #0f172a;
-}
-
-html.light .text-white {
-  color: #0f172a !important;
-}
-
-html.light .text-slate-100 {
-  color: #1e293b !important;
-}
-
-html.light .text-slate-200 {
-  color: #334155 !important;
-}
-
-html.light .text-slate-300 {
-  color: #475569 !important;
-}
-
-html.light .text-slate-400 {
-  color: #64748b !important;
-}
-
-html.light .text-slate-500 {
-  color: #94a3b8 !important;
-}
-
-/* Accent colors - keep vibrant but slightly deeper for light bg */
-html.light .text-cyan-400 {
-  color: #0891b2 !important;
-}
-
-html.light .text-cyan-300 {
-  color: #0e7490 !important;
-}
-
-html.light .text-cyan-200\/80 {
-  color: rgba(14, 116, 144, 0.8) !important;
-}
-
-html.light .text-emerald-400 {
-  color: #059669 !important;
-}
-
-html.light .text-emerald-300\/75 {
-  color: rgba(5, 150, 105, 0.85) !important;
-}
-
-html.light .text-blue-400 {
-  color: #2563eb !important;
-}
-
-html.light .text-cyan-50 {
-  color: #0369a1 !important;
-}
-
-html.light .text-cyan-100 {
-  color: #0e7490 !important;
-}
-
-/* --- Border overrides (light mode) --- */
-html.light .border-slate-700,
-html.light .border-slate-700\/50,
-html.light .border-slate-700\/80,
-html.light .border-slate-800,
-html.light .border-slate-800\/50 {
-  border-color: rgba(15, 23, 42, 0.08) !important;
-}
-
-/* --- Background overrides (light mode) --- */
-html.light .bg-slate-800,
-html.light .bg-slate-800\/30,
-html.light .bg-slate-800\/50 {
-  background-color: rgba(241, 245, 249, 0.8) !important;
-}
-
-html.light .bg-slate-900,
-html.light .bg-slate-900\/40,
-html.light .bg-slate-900\/45,
-html.light .bg-slate-900\/50,
-html.light .bg-slate-900\/60,
-html.light .bg-slate-900\/80,
-html.light .bg-slate-900\/90,
-html.light .bg-slate-900\/95 {
-  background-color: rgba(255, 255, 255, 0.6) !important;
-}
-
-html.light .bg-slate-950,
-html.light .bg-slate-950\/35,
-html.light .bg-slate-950\/45,
-html.light .bg-slate-950\/50,
-html.light .bg-slate-950\/70,
-html.light .bg-slate-950\/80 {
-  background-color: rgba(248, 250, 252, 0.9) !important;
-}
-
-/* Cyan accent backgrounds */
-html.light .bg-cyan-500\/10 {
-  background-color: rgba(6, 182, 212, 0.08) !important;
-}
-
-html.light .bg-emerald-500\/10 {
-  background-color: rgba(16, 185, 129, 0.08) !important;
-}
-
-html.light .bg-blue-500\/10 {
-  background-color: rgba(59, 130, 246, 0.08) !important;
-}
-
-html.light .bg-purple-500\/10 {
-  background-color: rgba(168, 85, 247, 0.08) !important;
-}
-
-/* --- Cards & Posts (light mode) --- */
-html.light article.group {
-  border-color: rgba(15, 23, 42, 0.08);
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-html.light article.group:hover {
-  border-color: rgba(6, 182, 212, 0.3);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
-}
-
-/* Card inner metrics box */
-html.light .bg-slate-950\/80.rounded-lg {
-  background-color: rgba(241, 245, 249, 0.8) !important;
-  border-color: rgba(15, 23, 42, 0.06) !important;
-}
-
-/* --- Category Bento cards (light mode) --- */
-html.light button[data-pillar-trigger] {
-  border-color: rgba(15, 23, 42, 0.08);
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-html.light button[data-pillar-trigger]:hover {
-  border-color: rgba(6, 182, 212, 0.25);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
-}
-
-html.light button[data-pillar-trigger][data-active="true"] {
-  border-color: rgba(6, 182, 212, 0.35);
-  box-shadow: 0 0 42px rgba(6, 182, 212, 0.08);
-}
-
-/* --- Search overlay (light mode) --- */
-html.light #search-overlay button[data-search-close]:first-child {
-  background-color: rgba(248, 250, 252, 0.72);
-}
-
-html.light #search-overlay > div > div {
-  border-color: rgba(15, 23, 42, 0.1);
-  background-color: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.12);
-  color: #0f172a;
-}
-
-html.light #search-overlay input {
-  border-color: rgba(15, 23, 42, 0.12);
-  background-color: rgba(241, 245, 249, 0.8);
-  color: #0f172a;
-}
-
-html.light #search-overlay input::placeholder {
-  color: #94a3b8;
-}
-
-html.light #search-overlay input:focus {
-  border-color: #0891b2;
-  box-shadow: 0 0 0 1px rgba(8, 145, 178, 0.3);
-}
-
-html.light #search-overlay .rounded-\[1\.5rem\] {
-  border-color: rgba(15, 23, 42, 0.06);
-  background-color: rgba(248, 250, 252, 0.6);
-}
-
-/* Search results */
-html.light #search-results a {
-  border-color: rgba(15, 23, 42, 0.06);
-  background-color: rgba(255, 255, 255, 0.6);
-}
-
-html.light #search-results a:hover {
-  border-color: rgba(6, 182, 212, 0.3);
-  background-color: rgba(248, 250, 252, 0.8);
-}
-
-/* --- Footer (light mode) --- */
-html.light footer {
-  border-color: rgba(15, 23, 42, 0.08);
-  background-color: #f1f5f9;
-}
-
-html.light footer .bg-slate-900\/50,
-html.light footer .rounded-xl {
-  background-color: rgba(255, 255, 255, 0.6) !important;
-  border-color: rgba(15, 23, 42, 0.06) !important;
-}
-
-html.light footer a:hover {
-  color: #0891b2 !important;
-}
-
-/* --- Article page prose (light mode) --- */
-html.light .prose {
-  --tw-prose-body: #334155;
-  --tw-prose-headings: #0f172a;
-}
-
-html.light .prose h1,
-html.light .prose h2,
-html.light .prose h3 {
-  color: #0f172a !important;
-}
-
-html.light .prose h2 {
-  border-left-color: #0891b2 !important;
-}
-
-html.light .prose a,
-html.light .article-body a {
-  color: #2563eb !important;
-  text-decoration-color: rgba(37, 99, 235, 0.5) !important;
-}
-
-html.light .prose a:hover,
-html.light .article-body a:hover {
-  color: #1d4ed8 !important;
-  text-decoration-color: rgba(29, 78, 216, 0.8) !important;
+/* 1. Global Flatness Constraint */
+*, *::before, *::after {
+  box-shadow: none !important;
   text-shadow: none !important;
-}
-
-html.light .prose p,
-html.light .prose li,
-html.light .prose td {
-  color: #334155 !important;
-}
-
-html.light .prose th {
-  color: #0891b2 !important;
-  border-bottom-color: rgba(8, 145, 178, 0.2) !important;
-}
-
-html.light .prose table {
-  border-top-color: rgba(8, 145, 178, 0.2) !important;
-}
-
-html.light .prose tr:hover td {
-  background-color: rgba(8, 145, 178, 0.03) !important;
-}
-
-html.light .prose blockquote {
-  border-left-color: #0891b2 !important;
-  background-color: rgba(241, 245, 249, 0.6) !important;
-  color: #334155 !important;
-}
-
-html.light .prose img {
-  border-color: rgba(15, 23, 42, 0.08) !important;
-}
-
-/* Article detail sidebar */
-html.light .prose + aside div,
-html.light aside .bg-slate-900\/40,
-html.light aside .bg-slate-900\/20 {
-  background-color: rgba(255, 255, 255, 0.6) !important;
-  border-color: rgba(15, 23, 42, 0.08) !important;
-}
-
-/* Article hero gradient glow */
-html.light .group .bg-gradient-to-r {
-  opacity: 0.08;
-}
-
-/* Key Takeaways (light mode) */
-html.light .prose .geo-key-takeaways,
-html.light .prose [data-geo-injected="key-takeaways"] {
-  background: rgba(241, 245, 249, 0.7) !important;
-  border-color: rgba(8, 145, 178, 0.15) !important;
-  color: #334155 !important;
-}
-
-html.light .prose .geo-key-takeaways h2,
-html.light .prose [data-geo-injected="key-takeaways"] h2 {
-  color: #0f172a !important;
-}
-
-html.light .prose .geo-key-takeaways li,
-html.light .prose [data-geo-injected="key-takeaways"] li,
-html.light .prose .geo-key-takeaways p,
-html.light .prose [data-geo-injected="key-takeaways"] p {
-  color: #334155 !important;
-}
-
-html.light .prose .geo-key-takeaways li::marker,
-html.light .prose [data-geo-injected="key-takeaways"] li::marker {
-  color: #0891b2 !important;
-}
-
-/* Article summary box (light mode) */
-html.light .prose .font-mono.bg-slate-900\/60 {
-  background-color: rgba(241, 245, 249, 0.7) !important;
-  border-color: rgba(8, 145, 178, 0.15) !important;
-  color: #334155 !important;
-}
-
-html.light .prose .font-mono .text-cyan-400 {
-  color: #0891b2 !important;
-}
-
-/* Hero radial gradients */
-html.light .bg-\[radial-gradient\(circle_at_top\,rgba\(0\,112\,243\,0\.15\)\,transparent_58\%\)\] {
-  background: radial-gradient(circle at top, rgba(96, 165, 250, 0.08), transparent 58%);
-}
-
-html.light .bg-\[radial-gradient\(circle_at_top\,rgba\(0\,112\,243\,0\.1\)\,transparent_60\%\)\] {
-  background: radial-gradient(circle at top, rgba(96, 165, 250, 0.06), transparent 60%);
-}
-
-/* Horizontal dividers */
-html.light .border-t.border-slate-800 {
-  border-color: rgba(15, 23, 42, 0.08) !important;
-}
-
-/* The bottom CTA triple-grid section */
-html.light .bg-slate-800.gap-px {
-  background-color: rgba(15, 23, 42, 0.06) !important;
-}
-
-/* Decorative blurs */
-html.light .blur-3xl,
-html.light .blur-2xl {
-  opacity: 0.06;
-}
-
-/* Article deck (inline styles override) */
-html.light .article-deck {
-  color: #64748b !important;
-  border-left-color: #2563eb !important;
-}
-
-/* Progress bars in sidebar */
-html.light .bg-slate-800\/50.rounded-full {
-  background-color: rgba(226, 232, 240, 0.6) !important;
-}
-
-/* Shadow overrides */
-html.light .shadow-2xl {
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.06) !important;
-}
-
-/* Hover glow adjustments */
-html.light .hover\:shadow-\[0_0_40px_rgba\(56\,189\,248\,0\.35\)\]:hover {
-  box-shadow: 0 0 40px rgba(6, 182, 212, 0.1) !important;
-}
-
-html.light .hover\:shadow-\[0_0_40px_rgba\(56\,189\,248\,0\.2\)\]:hover {
-  box-shadow: 0 0 40px rgba(6, 182, 212, 0.08) !important;
-}
-
-/* Animate pulse dots */
-html.light .bg-emerald-500 {
-  background-color: #059669 !important;
-}
-
-html.light .bg-cyan-400 {
-  background-color: #0891b2 !important;
-}
-
-/* Category bento calculator card gradient */
-html.light .bg-\[linear-gradient\(135deg\,rgba\(14\,165\,233\,0\.16\)\,rgba\(15\,23\,42\,0\.5\)_55\%\,rgba\(16\,185\,129\,0\.12\)\)\] {
-  background: linear-gradient(135deg, rgba(14, 165, 233, 0.08), rgba(255, 255, 255, 0.5) 55%, rgba(16, 185, 129, 0.06)) !important;
-}
-
-/* Data point mono accent */
-html.light .data-point {
-  color: #059669;
-}
-
-/* ============================================================
-   MONEY FLOW SIMULATOR (LIGHT MODE OVERRIDES)
-   ============================================================ */
-
-/* Top Cards in money-flow.astro */
-html.light .bg-\[linear-gradient\(135deg\,rgba\(46\,16\,101\,0\.92\)\,rgba\(2\,6\,23\,0\.98\)_70\%\,rgba\(139\,92\,246\,0\.12\)\)\] {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(255, 255, 255, 0.6) 70%, rgba(139, 92, 246, 0.05)) !important;
-  border-color: rgba(139, 92, 246, 0.2) !important;
-}
-
-html.light .bg-\[linear-gradient\(135deg\,rgba\(8\,47\,73\,0\.92\)\,rgba\(2\,6\,23\,0\.98\)_70\%\,rgba\(34\,211\,238\,0\.12\)\)\] {
-  background: linear-gradient(135deg, rgba(6, 182, 212, 0.08), rgba(255, 255, 255, 0.6) 70%, rgba(6, 182, 212, 0.05)) !important;
-  border-color: rgba(6, 182, 212, 0.2) !important;
-}
-
-/* Simulator Main Dashboard & Wrappers */
-html.light .bg-slate-950\/60,
-html.light .bg-slate-950\/90,
-html.light .bg-slate-950\/45,
-html.light .bg-slate-900\/60 {
-  background-color: rgba(255, 255, 255, 0.7) !important;
-}
-
-/* Chat user message (light mode) */
-html.light .bg-cyan-950\/40 {
-  background-color: rgba(6, 182, 212, 0.1) !important;
-  border-color: rgba(6, 182, 212, 0.2) !important;
-}
-html.light .border-cyan-800\/40 {
-  border-color: rgba(6, 182, 212, 0.2) !important;
-}
-html.light .text-cyan-200 {
-  color: #0e7490 !important;
-}
-
-/* Chat system message */
-html.light .bg-red-950\/40 {
-  background-color: rgba(239, 68, 68, 0.1) !important;
-}
-html.light .border-red-900\/40 {
-  border-color: rgba(239, 68, 68, 0.2) !important;
-}
-html.light .text-red-300 {
-  color: #b91c1c !important;
-}
-
-/* Scripting rule blocks & chat bubbles */
-html.light .bg-slate-900\/40,
-html.light .bg-slate-900\/60 {
-  background-color: #f8fafc !important;
-  border-color: rgba(15, 23, 42, 0.1) !important;
-  color: #334155 !important;
-}
-
-/* Node borders darker (light mode) */
-html.light .border-cyan-500\/30 { border-color: rgba(6, 182, 212, 0.5) !important; }
-html.light .border-emerald-500\/30 { border-color: rgba(16, 185, 129, 0.5) !important; }
-html.light .border-blue-500\/30 { border-color: rgba(59, 130, 246, 0.5) !important; }
-html.light .border-red-500\/30 { border-color: rgba(239, 68, 68, 0.5) !important; }
-html.light .border-teal-500\/30 { border-color: rgba(20, 184, 166, 0.5) !important; }
-html.light .border-indigo-500\/30 { border-color: rgba(99, 102, 241, 0.5) !important; }
-html.light .border-purple-500\/30 { border-color: rgba(168, 85, 247, 0.5) !important; }
-html.light .border-violet-500\/30 { border-color: rgba(139, 92, 246, 0.5) !important; }
-html.light .border-amber-500\/30 { border-color: rgba(245, 158, 11, 0.5) !important; }
-html.light .border-rose-500\/30 { border-color: rgba(244, 63, 94, 0.5) !important; }
-html.light .border-orange-500\/30 { border-color: rgba(249, 115, 22, 0.5) !important; }
-html.light .border-fuchsia-500\/30 { border-color: rgba(217, 70, 239, 0.5) !important; }
-
-/* Text colors inside components */
-html.light .text-violet-200\/80 { color: rgba(109, 40, 217, 0.8) !important; }
-html.light .text-cyan-300\/80 { color: rgba(8, 145, 178, 0.8) !important; }
-html.light .text-slate-300 { color: #475569 !important; }
-html.light .text-slate-400 { color: #64748b !important; }
-html.light .text-slate-200 { color: #334155 !important; }
-html.light .text-white { color: #0f172a !important; }
-html.light .text-cyan-400 { color: #0891b2 !important; }
-html.light .text-emerald-400 { color: #059669 !important; }
-html.light .text-amber-400 { color: #d97706 !important; }
-html.light .text-rose-400 { color: #e11d48 !important; }
-html.light .text-blue-400 { color: #2563eb !important; }
-html.light .text-teal-400 { color: #0d9488 !important; }
-html.light .text-indigo-400 { color: #4f46e5 !important; }
-html.light .text-purple-400 { color: #9333ea !important; }
-html.light .text-violet-400 { color: #7c3aed !important; }
-html.light .text-orange-400 { color: #ea580c !important; }
-html.light .text-fuchsia-400 { color: #c026d3 !important; }
-
-/* ============================================================
-   LEASE BREAK CALCULATOR (LIGHT MODE OVERRIDES)
-   ============================================================ */
-
-/* Main calculator hero card */
-html.light .bg-\[linear-gradient\(135deg\,rgba\(8\,47\,73\,0\.9\)\,rgba\(2\,6\,23\,0\.96\)_65\%\,rgba\(16\,185\,129\,0\.16\)\)\] {
-  background: linear-gradient(135deg, rgba(224, 242, 254, 0.8), rgba(255, 255, 255, 0.9) 65%, rgba(209, 250, 229, 0.4)) !important;
-  border-color: rgba(14, 165, 233, 0.2) !important;
-}
-
-/* Page hero wrapper (lease-break.astro) */
-html.light .bg-\[linear-gradient\(135deg\,rgba\(8\,47\,73\,0\.92\)\,rgba\(2\,6\,23\,0\.98\)_70\%\,rgba\(16\,185\,129\,0\.12\)\)\] {
-  background: linear-gradient(135deg, rgba(224, 242, 254, 0.8), rgba(255, 255, 255, 0.9) 70%, rgba(209, 250, 229, 0.4)) !important;
-  border-color: rgba(14, 165, 233, 0.2) !important;
-}
-
-/* Estimated termination summary block */
-html.light .bg-\[linear-gradient\(180deg\,rgba\(14\,165\,233\,0\.12\)\,rgba\(2\,6\,23\,0\.82\)\)\] {
-  background: linear-gradient(180deg, rgba(224, 242, 254, 0.6), rgba(255, 255, 255, 0.9)) !important;
-  border-color: rgba(14, 165, 233, 0.2) !important;
-}
-
-/* Planning note block */
-html.light .bg-\[linear-gradient\(180deg\,rgba\(120\,53\,15\,0\.18\)\,rgba\(2\,6\,23\,0\.96\)\)\] {
-  background: linear-gradient(180deg, rgba(254, 243, 199, 0.8), rgba(255, 255, 255, 0.9)) !important;
-  border-color: rgba(245, 158, 11, 0.3) !important;
-}
-
-/* Pills inside hero */
-html.light .bg-white\/5 {
-  background-color: rgba(15, 23, 42, 0.04) !important;
-}
-html.light .bg-white\/6 {
-  background-color: rgba(15, 23, 42, 0.08) !important;
-}
-html.light .border-white\/8,
-html.light .border-white\/10 {
-  border-color: rgba(15, 23, 42, 0.1) !important;
-}
-
-/* Missing slate overrides for Lease Break specific opacities */
-html.light .bg-slate-950\/55,
-html.light .bg-slate-950\/40 {
-  background-color: rgba(255, 255, 255, 0.65) !important;
-}
-html.light .bg-slate-900\/70 {
-  background-color: rgba(241, 245, 249, 0.9) !important;
-}
-html.light .bg-slate-900\/45 {
-  background-color: rgba(255, 255, 255, 0.65) !important;
-}
-
-/* Cyan 500/8 specific to lease break selected path max border */
-html.light .bg-cyan-500\/8 {
-  background-color: rgba(6, 182, 212, 0.05) !important;
-}
-
-/* Text overrides for readability in pills */
-html.light .text-cyan-200\/80 {
-  color: #0369a1 !important; /* darker cyan */
-}
-
-/* Print Stylesheet overrides for Relocation & Tax dashboard */
-@media print {
-	nav, 
-	header, 
-	footer, 
-	.print\:hidden,
-	[slot="aside"],
-	.site-background,
-	.orb {
-		display: none !important;
-	}
-	
-	body, 
-	html {
-		background: #ffffff !important;
-		color: #000000 !important;
-	}
-	
-	main,
-	.calculator-shell,
-	.calculator-shell-grid {
-		width: 100% !important;
-		max-width: 100% !important;
-		margin: 0 !important;
-		padding: 0 !important;
-		display: block !important;
-	}
-}
-
-/* ============================================================
-   RELOCATION MODELER (LIGHT MODE OVERRIDES)
-   ============================================================ */
-
-/* Main Header Gradient Card */
-html.light .bg-\[linear-gradient\(135deg\,rgba\(15\,23\,42\,0\.9\)\,rgba\(2\,6\,23\,0\.96\)_65\%\,rgba\(59\,130\,246\,0\.1\)\)\] {
-  background: linear-gradient(135deg, rgba(219, 234, 254, 0.9), rgba(255, 255, 255, 0.95) 65%, rgba(186, 230, 253, 0.3)) !important;
-  border-color: rgba(59, 130, 246, 0.2) !important;
-}
-
-/* Sidebar Operator notes card */
-html.light .bg-\[linear-gradient\(135deg\,rgba\(15\,23\,42\,0\.92\)\,rgba\(2\,6\,23\,0\.98\)_70\%\,rgba\(59\,130\,246\,0\.12\)\)\] {
-  background: linear-gradient(135deg, rgba(219, 234, 254, 0.8), rgba(255, 255, 255, 0.9) 70%, rgba(186, 230, 253, 0.2)) !important;
-  border-color: rgba(59, 130, 246, 0.2) !important;
-}
-
-/* Ensure text on Operator notes card is dark slate */
-html.light .text-blue-200\/80 {
-  color: #1e3a8a !important; /* Deep dark blue */
-}
-
-html.light h2.text-white {
-  color: #0f172a !important;
-}
-
-html.light ol.text-slate-300 li {
-  color: #334155 !important;
-}
-
-/* Text on header info card */
-html.light .text-blue-300 {
-  color: #1d4ed8 !important; /* Dark blue */
-}
-
-html.light h2.text-white {
-  color: #0f172a !important;
-}
-
-html.light p.text-slate-300 {
-  color: #475569 !important;
-}
-
-html.light .bg-white\/5 {
-  background-color: rgba(15, 23, 42, 0.05) !important;
-  color: #334155 !important;
-  border-color: rgba(15, 23, 42, 0.1) !important;
-}
-
-/* Formula code block background */
-html.light .bg-slate-950\/60 {
-  background-color: #f8fafc !important;
-  border-color: rgba(15, 23, 42, 0.1) !important;
-  color: #0f172a !important;
-}
-
-html.light .text-cyan-300\/70,
-html.light .text-cyan-300 {
-  color: #0891b2 !important;
-}
-
-/* Tabs inside calculator inputs */
-html.light select.bg-slate-950,
-html.light input.bg-slate-950 {
-  background-color: #ffffff !important;
-  color: #0f172a !important;
-  border-color: #cbd5e1 !important;
-}
-
-html.light select,
-html.light input {
-  color: #0f172a !important;
-}
-
-/* Geographic Location Boxes */
-html.light .bg-slate-900\/10 {
-  background-color: rgba(241, 245, 249, 0.6) !important;
-  border-color: #e2e8f0 !important;
-}
-
-html.light h4.text-blue-300 {
-  color: #2563eb !important;
-}
-
-html.light label.text-slate-400 {
-  color: #475569 !important;
-}
-
-/* Info Tooltip */
-html.light .bg-slate-950 {
-  background-color: #ffffff !important;
-  color: #1e293b !important;
-  border-color: #cbd5e1 !important;
-}
-
-/* ============================================================
-   DECISION-INTELLIGENCE CALCULATOR (LIGHT MODE OVERRIDES)
-   ============================================================ */
-
-/* 1. Mode Switcher */
-html.light .decision-intelligence-calculator .bg-slate-950\/80 {
-  background-color: rgba(241, 245, 249, 0.9) !important;
-  border-color: rgba(15, 23, 42, 0.1) !important;
-}
-
-html.light .decision-intelligence-calculator button.text-slate-400 {
-  color: #475569 !important;
-}
-
-html.light .decision-intelligence-calculator button.text-slate-400:hover {
-  color: #0f172a !important;
-}
-
-html.light .decision-intelligence-calculator button.bg-cyan-500\/10 {
-  background-color: #ffffff !important;
-  border-color: rgba(6, 182, 212, 0.3) !important;
-  color: #0891b2 !important;
-  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.1) !important;
-}
-
-/* 2. Verdict Banner Cards (Emerald, Indigo, Rose) */
-html.light .decision-intelligence-calculator .border-emerald-500\/30 {
-  background: linear-gradient(135deg, rgba(209, 250, 229, 0.8), rgba(255, 255, 255, 0.9) 65%, rgba(16, 185, 129, 0.1)) !important;
-  border-color: rgba(16, 185, 129, 0.3) !important;
-  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.08) !important;
-}
-
-html.light .decision-intelligence-calculator .border-indigo-500\/30 {
-  background: linear-gradient(135deg, rgba(224, 231, 255, 0.8), rgba(255, 255, 255, 0.9) 65%, rgba(99, 102, 241, 0.1)) !important;
-  border-color: rgba(99, 102, 241, 0.3) !important;
-  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.08) !important;
-}
-
-html.light .decision-intelligence-calculator .border-rose-500\/30 {
-  background: linear-gradient(135deg, rgba(254, 226, 226, 0.8), rgba(255, 255, 255, 0.9) 65%, rgba(244, 63, 94, 0.1)) !important;
-  border-color: rgba(244, 63, 94, 0.3) !important;
-  box-shadow: 0 10px 30px rgba(244, 63, 94, 0.08) !important;
-}
-
-/* Verdict Text color fixes */
-html.light .decision-intelligence-calculator .border-rose-500\/30 p,
-html.light .decision-intelligence-calculator .border-rose-500\/30 span,
-html.light .decision-intelligence-calculator .border-rose-500\/30 div {
-  color: #881337 !important;
-}
-html.light .decision-intelligence-calculator .border-rose-500\/30 h3 {
-  color: #be123c !important;
-}
-
-html.light .decision-intelligence-calculator .border-emerald-500\/30 p,
-html.light .decision-intelligence-calculator .border-emerald-500\/30 span,
-html.light .decision-intelligence-calculator .border-emerald-500\/30 div {
-  color: #064e3b !important;
-}
-html.light .decision-intelligence-calculator .border-emerald-500\/30 h3 {
-  color: #047857 !important;
-}
-
-html.light .decision-intelligence-calculator .border-indigo-500\/30 p,
-html.light .decision-intelligence-calculator .border-indigo-500\/30 span,
-html.light .decision-intelligence-calculator .border-indigo-500\/30 div {
-  color: #1e1b4b !important;
-}
-html.light .decision-intelligence-calculator .border-indigo-500\/30 h3 {
-  color: #4338ca !important;
-}
-
-/* 3. Step 2 & 3 Input Parameter Cards */
-html.light .decision-intelligence-calculator .bg-slate-950\/20 {
-  background-color: rgba(255, 255, 255, 0.7) !important;
-  border-color: rgba(15, 23, 42, 0.08) !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02) !important;
-}
-
-html.light .decision-intelligence-calculator .bg-slate-950\/45 {
-  background-color: rgba(248, 250, 252, 0.9) !important;
-  border-color: rgba(15, 23, 42, 0.06) !important;
-}
-
-/* Tab Selection in Asset Classification */
-html.light .decision-intelligence-calculator .bg-slate-950\/85 {
-  background-color: rgba(241, 245, 249, 0.85) !important;
-  border-color: rgba(15, 23, 42, 0.08) !important;
-}
-
-html.light .decision-intelligence-calculator .bg-slate-950\/85 button {
-  color: #475569 !important;
-}
-
-html.light .decision-intelligence-calculator .bg-slate-950\/85 button.bg-cyan-500\/10 {
-  background-color: #ffffff !important;
-  color: #0891b2 !important;
-  border-color: rgba(6, 182, 212, 0.25) !important;
-  box-shadow: 0 4px 10px rgba(6, 182, 212, 0.08) !important;
-}
-
-/* Sliders and badging */
-html.light .decision-intelligence-calculator .bg-cyan-500\/10.font-mono {
-  background-color: rgba(6, 182, 212, 0.06) !important;
-  color: #0891b2 !important;
-  border-color: rgba(6, 182, 212, 0.2) !important;
-}
-
-html.light .decision-intelligence-calculator input[type="range"] {
-  background-color: #cbd5e1 !important;
-}
-
-/* Stepper inputs */
-html.light .decision-intelligence-calculator .bg-slate-950\/60 {
-  background-color: rgba(255, 255, 255, 0.95) !important;
-  border-color: rgba(15, 23, 42, 0.08) !important;
-}
-
-html.light .decision-intelligence-calculator .bg-slate-950\/60 button {
-  color: #475569 !important;
-}
-
-html.light .decision-intelligence-calculator .bg-slate-950\/60 button:hover {
-  background-color: rgba(15, 23, 42, 0.05) !important;
-  color: #0f172a !important;
-}
-
-/* CPU Presets Buttons */
-html.light .decision-intelligence-calculator .bg-slate-900 {
-  background-color: rgba(241, 245, 249, 0.95) !important;
-  border-color: rgba(15, 23, 42, 0.08) !important;
-  color: #475569 !important;
-}
-
-html.light .decision-intelligence-calculator .bg-slate-900:hover {
-  background-color: #ffffff !important;
-  border-color: rgba(6, 182, 212, 0.3) !important;
-  color: #0891b2 !important;
-}
-
-/* 4. Bottom Matrix Cards */
-html.light .decision-intelligence-calculator .border-cyan-500\/25 {
-  background: linear-gradient(135deg, rgba(224, 242, 254, 0.8), rgba(255, 255, 255, 0.95) 80%, rgba(34, 211, 238, 0.05)) !important;
-  border-color: rgba(6, 182, 212, 0.25) !important;
-  box-shadow: 0 10px 30px rgba(6, 182, 212, 0.04) !important;
-}
-
-html.light .decision-intelligence-calculator .border-rose-500\/20 {
-  background: linear-gradient(135deg, rgba(254, 242, 242, 0.8), rgba(255, 255, 255, 0.95) 80%, rgba(244, 63, 94, 0.05)) !important;
-  border-color: rgba(244, 63, 94, 0.2) !important;
-  box-shadow: 0 10px 30px rgba(244, 63, 94, 0.04) !important;
-}
-
-/* Inner sub-cards in matrices */
-html.light .decision-intelligence-calculator .bg-slate-950\/65 {
-  background-color: rgba(255, 255, 255, 0.8) !important;
-  border-color: rgba(15, 23, 42, 0.08) !important;
-}
-
-html.light .decision-intelligence-calculator .text-slate-500 {
-  color: #475569 !important;
-}
-html.light .decision-intelligence-calculator .text-slate-400 {
-  color: #334155 !important;
-}
-html.light .decision-intelligence-calculator .text-slate-300 {
-  color: #1e293b !important;
-}
-html.light .decision-intelligence-calculator .text-slate-200 {
-  color: #0f172a !important;
-}
-html.light .decision-intelligence-calculator .text-white {
-  color: #0f172a !important;
-}
-
-/* Sidebar Notes Info Card on decision-intelligence page */
-html.light .bg-\[linear-gradient\(135deg\,rgba\(8\,47\,73\,0\.92\)\,rgba\(2\,6\,23\,0\.98\)_70\%\,rgba\(16\,185\,129\,0\.12\)\)\] {
-  background: linear-gradient(135deg, rgba(224, 242, 254, 0.9), rgba(255, 255, 255, 0.95) 70%, rgba(16, 185, 129, 0.05)) !important;
-  border-color: rgba(14, 165, 233, 0.25) !important;
-}
-
-html.light .bg-white\/5.p-4 {
-  background-color: rgba(255, 255, 255, 0.9) !important;
-  border-color: rgba(15, 23, 42, 0.08) !important;
-}
-
-html.light .text-cyan-200\/80 {
-  color: #0369a1 !important;
-}
-
-html.light .text-slate-200 {
-  color: #1e293b !important;
-}
-
-/* Force light mode variables for Tailwind Typography code blocks */
-html.light {
-  --tw-prose-pre-bg: #f1f5f9 !important;
-  --tw-prose-pre-code: #0f172a !important;
-  --tw-prose-code: #0f766e !important;
-  --tw-prose-invert-pre-bg: #f1f5f9 !important;
-  --tw-prose-invert-pre-code: #0f172a !important;
-  --tw-prose-invert-code: #0f766e !important;
-}
-
-/* Fallback explicit overrides for pre & code elements */
-html.light pre,
-html.light pre *,
-html.light code,
-html.light .prose pre,
-html.light .prose code,
-html.light .article-body pre,
-html.light .article-body code {
-  background-color: #f1f5f9 !important;
-  color: #0f172a !important;
-  border-color: rgba(15, 23, 42, 0.1) !important;
-}
-
-html.light code,
-html.light .prose code,
-html.light .article-body code {
-  color: #0f766e !important;
-  background-color: rgba(13, 148, 136, 0.1) !important;
-}
-
-html.light pre code,
-html.light .prose pre code,
-html.light .article-body pre code {
-  color: #0f172a !important;
-  background-color: transparent !important;
-  padding: 0 !important;
-}
-
-/* Ensure code blocks wrap text and do not get cut off */
-pre,
-code,
-.prose pre,
-.prose code,
-.article-body pre,
-.article-body code {
-  white-space: pre-wrap !important;
-  word-wrap: break-word !important;
-  word-break: break-word !important;
-}
-
-/* Premium range slider handle styles for all calculators */
-.panel-soft input[type="range"] {
-  overflow: visible !important;
-}
-
-.panel-soft input[type="range"]::-webkit-slider-thumb {
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* 2. Ditch Background Grids and Orbs */
+.site-background {
+  background-color: #FFFFFF !important;
+  background-image: none !important;
+}
+.orb, .orb-one, .orb-two, .orb-three {
+  display: none !important;
+}
+
+/* 3. Ditch All Gradients Sitewide */
+[class*="bg-gradient-"],
+[class*="from-"],
+[class*="to-"],
+[class*="via-"],
+[class*="[.light_&]:bg-[linear-gradient("] {
+  background-image: none !important;
+  background: transparent !important;
+}
+
+/* 4. Ditch Bounding Boxes & Gray Metric Containers */
+.panel-soft,
+.panel-shell,
+.bg-slate-900,
+.bg-slate-950,
+.bg-slate-900\/40,
+.bg-slate-950\/60,
+.bg-slate-950\/20,
+.bg-slate-950\/85,
+.bg-slate-950\/65,
+.bg-slate-900\/50,
+.bg-gray-100,
+.bg-slate-50,
+.bg-slate-50\/95,
+.bg-gray-50,
+.bg-gray-50\/50,
+.bg-gray-50\/30,
+.bg-white\/5,
+.bg-white\/6,
+.bg-white\/8,
+.bg-white\/10 {
+  background-color: #FFFFFF !important;
+  border-color: #E5E5E5 !important;
+}
+
+/* 5. Typography and High-Contrast Hierarchy */
+h1, .text-5xl, .text-6xl {
+  color: #1A1A1A !important;
+  font-weight: 800 !important; /* font-extrabold */
+  font-family: var(--font-sans) !important;
+}
+h2, h3, .text-3xl, .text-4xl {
+  color: #1A1A1A !important;
+  font-weight: 900 !important; /* font-black */
+  font-family: var(--font-sans) !important;
+}
+h4, .text-xl, .text-lg {
+  color: #1A1A1A !important;
+  font-weight: 700 !important; /* font-bold */
+  font-family: var(--font-sans) !important;
+}
+p, .text-base, .text-sm {
+  color: #5E5E5E !important;
+  font-weight: 400 !important; /* font-normal */
+}
+.section-eyebrow,
+.font-mono.text-xs,
+.font-mono.text-\[0\.65rem\],
+.font-mono.text-\[0\.68rem\],
+.font-mono.text-\[0\.72rem\],
+.font-mono.text-\[10px\] {
+  color: #8C8C8C !important;
+  font-weight: 700 !important; /* font-bold */
+  text-transform: uppercase !important;
+  letter-spacing: 0.25em !important;
+}
+
+/* 6. Form Inputs & Interactive Controls */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="search"],
+select,
+textarea {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E5E5E5 !important;
+  color: #1A1A1A !important;
+  border-radius: 8px !important;
+  padding: 0.75rem 1rem !important; /* Breathable controls */
+  font-family: var(--font-mono) !important;
+  outline: none !important;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: #5A7A8F !important;
+}
+
+/* Range Slider Styling */
+input[type="range"] {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  height: 8px !important;
+  border-radius: 8px !important;
+  background-color: #E5E5E5 !important; /* Inactive slider track */
+  accent-color: #5A7A8F !important;
+  outline: none !important;
+  border: none !important;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px !important;
+  background-color: #E5E5E5 !important;
+  border-radius: 8px !important;
+  border: none !important;
+}
+
+input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none !important;
   appearance: none !important;
   width: 18px !important;
   height: 18px !important;
   border-radius: 9999px !important;
-  background-color: #5A7A8F !important;
-  border: 2px solid #ffffff !important;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+  background-color: #5A7A8F !important; /* Active indicator */
+  border: 2px solid #FFFFFF !important; /* Clay-inspired stroke */
   cursor: pointer !important;
-  transition: transform 0.1s ease, background-color 0.1s ease !important;
+  margin-top: -5px !important;
 }
 
-.panel-soft input[type="range"]::-webkit-slider-thumb:hover {
-  background-color: #333333 !important;
-  transform: scale(1.15) !important;
+input[type="range"]::-moz-range-track {
+  height: 8px !important;
+  background-color: #E5E5E5 !important;
+  border-radius: 8px !important;
+  border: none !important;
 }
 
-.panel-soft input[type="range"]::-webkit-slider-thumb:active {
-  background-color: #1A1A1A !important;
-  transform: scale(0.95) !important;
-}
-
-.panel-soft input[type="range"]::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
   width: 18px !important;
   height: 18px !important;
   border-radius: 9999px !important;
   background-color: #5A7A8F !important;
-  border: 2px solid #ffffff !important;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+  border: 2px solid #FFFFFF !important;
   cursor: pointer !important;
-  transition: transform 0.1s ease, background-color 0.1s ease !important;
 }
 
-.panel-soft input[type="range"]::-moz-range-thumb:hover {
-  background-color: #333333 !important;
-  transform: scale(1.15) !important;
-}
-
-.panel-soft input[type="range"]::-moz-range-thumb:active {
+/* 7. Buttons & Actions */
+.btn-primary,
+button.bg-\[\#1A1A1A\],
+button.bg-slate-950,
+button.bg-black {
   background-color: #1A1A1A !important;
-  transform: scale(0.95) !important;
+  color: #FFFFFF !important;
+  border-radius: 8px !important;
+  border: none !important;
+}
+.btn-secondary {
+  background-color: #FFFFFF !important;
+  color: #1A1A1A !important;
+  border: 1px solid #E5E5E5 !important;
+  border-radius: 8px !important;
+}
+.btn-inline,
+.secondary-action {
+  background-color: transparent !important;
+  color: #5E5E5E !important;
+  border: none !important;
+  text-decoration: underline !important;
 }
 
-html.light .panel-soft input[type="range"]::-webkit-slider-thumb {
-  border: 2px solid #ffffff !important;
-  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.3) !important;
+/* 8. Table Alignment and Formatting */
+.prose table {
+  border-top: 1px solid #E5E5E5 !important;
+  width: 100% !important;
+}
+.prose th {
+  text-align: left !important;
+  color: #8C8C8C !important;
+  border-bottom: 2px solid #E5E5E5 !important;
+}
+.prose td {
+  text-align: left !important;
+  color: #1A1A1A !important;
+  border-bottom: 1px solid #E5E5E5 !important;
+}
+.prose tr:hover td {
+  background-color: transparent !important; /* No hover grey highlight */
 }
 
-html.light .panel-soft input[type="range"]::-moz-range-thumb {
-  border: 2px solid #ffffff !important;
-  box-shadow: 0 2px 5px rgba(15, 23, 42, 0.3) !important;
+/* 9. Risk & Active UI Semantic Override Colors */
+.text-risk-high, .text-[#B85C5C], .text-red-500, .text-red-400 { color: #B85C5C !important; }
+.bg-risk-high, .bg-[#B85C5C], .bg-red-500, .bg-red-600 { background-color: #B85C5C !important; }
+.text-risk-medium, .text-[#C88D4E], .text-amber-500, .text-amber-400 { color: #C88D4E !important; }
+.bg-risk-medium, .bg-[#C88D4E], .bg-amber-500, .bg-amber-600 { background-color: #C88D4E !important; }
+.text-risk-low, .text-[#5A7A8F], .text-cyan-500, .text-cyan-400, .text-emerald-500, .text-emerald-400, .text-blue-500, .text-blue-400 { color: #5A7A8F !important; }
+.bg-risk-low, .bg-[#5A7A8F], .bg-cyan-500, .bg-cyan-600, .bg-emerald-500, .bg-emerald-600, .bg-blue-500, .bg-blue-600 { background-color: #5A7A8F !important; }
+
+/* Inactive tracks or indicators */
+.bg-gray-200, .bg-slate-200, .border-gray-200, .border-slate-200 {
+  background-color: #E5E5E5 !important;
+  border-color: #E5E5E5 !important;
 }
 
-/* Hide number input spin buttons for cleaner UI */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none !important;
-  margin: 0 !important;
-}
-input[type=number] {
-  -moz-appearance: textfield !important;
+/* 10. Horizontal whitespace division for Metrics and KPIs */
+.naked-divider {
+  border-left: 1px solid #E5E5E5 !important;
 }
 
-/* Dual-thumb range slider support styles */
-.dual-slider-container input[type="range"] {
-  -webkit-appearance: none;
-  appearance: none;
-  pointer-events: none;
-  outline: none;
+/* 11. Calculator-Specific Layout & Background Overrides */
+[class*="bg-[linear-gradient"],
+[class*="bg-[radial-gradient"],
+[class*="bg-slate-900"],
+[class*="bg-slate-950"],
+[class*="bg-gray-50"],
+[class*="bg-slate-50"],
+[class*="bg-white/5"],
+[class*="bg-white/6"],
+[class*="bg-white/8"],
+[class*="bg-white/10"],
+.rounded-\[1\.8rem\] {
+  background-image: none !important;
+  background-color: #FFFFFF !important;
+  background: #FFFFFF !important;
+  border-color: #E5E5E5 !important;
 }
 
-.dual-slider-container input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #5A7A8F;
-  border: 2px solid #ffffff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  pointer-events: auto;
-  transition: transform 0.1s ease, background-color 0.1s ease;
+/* Reset and ensure high contrast for all text inside overridden headers/banners */
+[class*="bg-[linear-gradient"] h2,
+[class*="bg-[linear-gradient"] h3,
+[class*="bg-[linear-gradient"] p,
+[class*="bg-[linear-gradient"] span,
+[class*="bg-[linear-gradient"] div,
+[class*="bg-[radial-gradient"] h2,
+[class*="bg-[radial-gradient"] h3,
+[class*="bg-[radial-gradient"] p,
+[class*="bg-[radial-gradient"] span,
+[class*="bg-[radial-gradient"] div,
+.rounded-\[1\.8rem\] h2,
+.rounded-\[1\.8rem\] h3,
+.rounded-\[1\.8rem\] p,
+.rounded-\[1\.8rem\] span {
+  color: inherit;
 }
 
-.dual-slider-container input[type="range"]::-webkit-slider-thumb:hover {
-  background-color: #3e5b6e;
-  transform: scale(1.15);
+/* Specific text colors used in dark sections that must remain readable on white background */
+[class*="text-blue-300"],
+[class*="text-cyan-300"],
+[class*="text-cyan-200"],
+[class*="text-violet-200"],
+[class*="text-pink-400"] {
+  color: #5A7A8F !important;
 }
 
-.dual-slider-container input[type="range"]::-moz-range-thumb {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #5A7A8F;
-  border: 2px solid #ffffff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  pointer-events: auto;
-  transition: transform 0.1s ease, background-color 0.1s ease;
+/* Make sure all metric cards inside KPI cards are flat and unboxed */
+div[class*="bg-slate-900/40"],
+div[class*="bg-slate-900/30"],
+div[class*="bg-gray-50"],
+div[class*="bg-slate-50"],
+div[class*="bg-blue-500/5"] {
+  background-color: #FFFFFF !important;
+  background: #FFFFFF !important;
+  border: 1px solid #E5E5E5 !important;
+  border-color: #E5E5E5 !important;
 }
 
-.dual-slider-container input[type="range"]::-moz-range-thumb:hover {
-  background-color: #3e5b6e;
-  transform: scale(1.15);
+/* Unboxed layout for inner values of KPI lists */
+div[class*="bg-slate-900/40"] p,
+div[class*="bg-slate-900/30"] p,
+div[class*="bg-gray-50"] p,
+div[class*="bg-slate-50"] p,
+div[class*="bg-blue-500/5"] p {
+  color: #1A1A1A !important;
 }
+div[class*="bg-slate-900/40"] p[class*="text-[#8C8C8C]"],
+div[class*="bg-slate-900/40"] p[class*="text-blue-300"],
+div[class*="bg-blue-500/5"] p[class*="text-blue-300"] {
+  color: #8C8C8C !important;
+}
+
+/* Print PDF or secondary buttons in headers */
+[class*="bg-[linear-gradient"] button,
+.rounded-\[1\.8rem\] button {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E5E5E5 !important;
+  color: #1A1A1A !important;
+}
+[class*="bg-[linear-gradient"] button:hover,
+.rounded-\[1\.8rem\] button:hover {
+  background-color: #E5E5E5 !important;
+}
+
+/* Badges inside calculator headers */
+[class*="bg-[linear-gradient"] span.rounded-full,
+.rounded-\[1\.8rem\] span.rounded-full {
+  background-color: #FFFFFF !important;
+  border: 1px solid #E5E5E5 !important;
+  color: #8C8C8C !important;
+}
+
+/* Checkbox inputs flat styling */
+input[type="checkbox"] {
+  accent-color: #5A7A8F !important;
+  background-color: #FFFFFF !important;
+  border: 1px solid #E5E5E5 !important;
+}
+
+
 
 
 
