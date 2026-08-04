@@ -1,4 +1,6 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { useMotionValue, animate } from 'framer-motion';
+import { Cpu, Server, Zap, Wrench, Coins, Tag, Database, DollarSign, Cloud, CreditCard, Sparkles } from 'lucide-react';
 import { formatCurrency } from '../../../lib/calculators/format';
 
 interface GpuModel {
@@ -171,7 +173,7 @@ const CLOUD_PROVIDERS_EXPLORER: CloudProviderDetail[] = [
 		storageCost: '$0.12 per GB / month',
 		storageRate: 0.12,
 		affiliateUrl: 'https://upcloud.com',
-		ctaText: 'Deploy on UpCloud →',
+		ctaText: 'Try UpCloud →',
 		type: 'Standard',
 		gpus: [
 			{ gpuModel: 'NVIDIA B200', vram: '180 GB', rate: 5.20, note: 'Range: $5.16 - $5.23' },
@@ -335,6 +337,158 @@ const PRESET_FLAT_LIST = CLOUD_PROVIDERS_EXPLORER.flatMap(provider =>
 	}))
 );
 
+// ----------------------------------------------------
+// UI Custom Components
+// ----------------------------------------------------
+
+interface SliderProps {
+	min: number;
+	max: number;
+	step?: number;
+	value: number;
+	onChange: (v: number) => void;
+}
+
+function CustomSlider({ min, max, step = 1, value, onChange }: SliderProps) {
+	const pct = ((value - min) / (max - min)) * 100;
+	return (
+		<div className="relative w-full flex items-center h-6 group select-none">
+			{/* Background Track */}
+			<div className="absolute left-0 right-0 h-2 bg-[#E5E5E5] rounded-full pointer-events-none" />
+			{/* Active Fill Track */}
+			<div 
+				className="absolute left-0 h-2 bg-cyan-500 rounded-full pointer-events-none" 
+				style={{ width: `${pct}%` }}
+			/>
+			{/* Native Invisible Range Input */}
+			<input
+				type="range"
+				min={min}
+				max={max}
+				step={step}
+				value={value}
+				onChange={(e) => onChange(Number(e.target.value))}
+				className="relative w-full h-6 bg-transparent appearance-none cursor-pointer focus:outline-none z-10
+					[&::-webkit-slider-runnable-track]:bg-transparent
+					[&::-webkit-slider-thumb]:appearance-none
+					[&::-webkit-slider-thumb]:w-5
+					[&::-webkit-slider-thumb]:h-5
+					[&::-webkit-slider-thumb]:bg-white
+					[&::-webkit-slider-thumb]:border-2
+					[&::-webkit-slider-thumb]:border-cyan-500
+					[&::-webkit-slider-thumb]:rounded-full
+					[&::-webkit-slider-thumb]:cursor-pointer
+					[&::-webkit-slider-thumb]:transition-transform
+					[&::-webkit-slider-thumb]:duration-150
+					[&::-webkit-slider-thumb]:hover:scale-110
+					[&::-moz-range-track]:bg-transparent
+					[&::-moz-range-thumb]:w-5
+					[&::-moz-range-thumb]:h-5
+					[&::-moz-range-thumb]:bg-white
+					[&::-moz-range-thumb]:border-2
+					[&::-moz-range-thumb]:border-cyan-500
+					[&::-moz-range-thumb]:rounded-full
+					[&::-moz-range-thumb]:cursor-pointer
+					[&::-moz-range-thumb]:transition-transform
+					[&::-moz-range-thumb]:duration-150
+					[&::-moz-range-thumb]:hover:scale-110"
+			/>
+		</div>
+	);
+}
+
+interface InteractiveBadgeProps {
+	value: number;
+	min: number;
+	max: number;
+	step?: number;
+	unit?: string;
+	prefix?: string;
+	onChange: (v: number) => void;
+}
+
+function InteractiveBadge({ value, min, max, step = 1, unit, prefix, onChange }: InteractiveBadgeProps) {
+	const [inputValue, setInputValue] = useState(value.toString());
+
+	useEffect(() => {
+		setInputValue(value.toString());
+	}, [value]);
+
+	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setInputValue(e.target.value);
+		const parsed = Number(e.target.value);
+		if (!isNaN(parsed) && parsed >= min && parsed <= max) {
+			onChange(parsed);
+		}
+	};
+
+	const handleBlur = () => {
+		let parsed = Number(inputValue);
+		if (isNaN(parsed)) {
+			parsed = min;
+		}
+		const clamped = Math.min(max, Math.max(min, parsed));
+		const rounded = Math.round(clamped / step) * step;
+		const finalVal = Number(rounded.toFixed(4));
+		onChange(finalVal);
+		setInputValue(finalVal.toString());
+	};
+
+	return (
+		<div className="flex items-center gap-1 bg-white rounded-md px-2.5 py-1 border border-gray-200 focus-within:border-cyan-500 focus-within:ring-1 focus-within:ring-cyan-500 transition-all shrink-0">
+			{prefix && <span className="text-xs text-gray-400 font-mono font-bold">{prefix}</span>}
+			<input
+				type="number"
+				min={min}
+				max={max}
+				step={step}
+				value={inputValue}
+				onChange={handleInputChange}
+				onBlur={handleBlur}
+				className="w-14 bg-transparent text-right font-mono text-sm font-bold text-cyan-600 focus:outline-none border-none p-0 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+			/>
+			{unit && <span className="text-xs text-gray-400 font-mono font-bold uppercase">{unit}</span>}
+		</div>
+	);
+}
+
+interface AnimatedCounterProps {
+	value: number;
+	formatter: (val: number) => string;
+}
+
+function AnimatedCounter({ value, formatter }: AnimatedCounterProps) {
+	const ref = useRef<HTMLSpanElement>(null);
+	const motionValue = useMotionValue(value);
+	const formatterRef = useRef(formatter);
+
+	useEffect(() => {
+		formatterRef.current = formatter;
+	}, [formatter]);
+
+	useEffect(() => {
+		const controls = animate(motionValue, value, {
+			duration: 0.5,
+			ease: "easeOut"
+		});
+		return () => controls.stop();
+	}, [value, motionValue]);
+
+	useEffect(() => {
+		return motionValue.on("change", (latest) => {
+			if (ref.current) {
+				ref.current.textContent = formatterRef.current(latest);
+			}
+		});
+	}, [motionValue]);
+
+	return <span ref={ref} className="font-mono">{formatter(value)}</span>;
+}
+
+// ----------------------------------------------------
+// Main Calculator Component
+// ----------------------------------------------------
+
 export default function LocalVsCloudGpuCalculator() {
 	// 1. Usage Pattern States (Sliders)
 	const [hoursPerDay, setHoursPerDay] = useState<number>(6);
@@ -484,682 +638,693 @@ export default function LocalVsCloudGpuCalculator() {
 			monthlyData,
 			chartMaxMonths
 		};
-	}, [hoursPerDay, daysPerMonth, timePeriodMonths, electricityRate, storageSizeGb, systemCost, activeGpu, activeProvider, cloudGpuCount, resalePercent]);
+	}, [hoursPerDay, daysPerMonth, timePeriodMonths, electricityRate, storageSizeGb, systemCost, activeGpu, activeProvider, cloudGpuCount, resalePercent, costOfCapitalPercent]);
 
 	return (
 		<>
 			{/* Preset Comparison Banner */}
-			<div className="mb-8 panel-soft rounded-[2rem] p-6 sm:p-7 border border-cyan-500/25 [.light_&]:border-cyan-300 bg-gradient-to-r from-cyan-950/40 via-slate-900/60 to-purple-950/40 [.light_&]:bg-gradient-to-r [.light_&]:from-cyan-100/90 [.light_&]:via-slate-100 [.light_&]:to-purple-100/90 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5">
+			<div className="mb-8 bg-white border border-cyan-200 rounded-xl p-6 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5">
 				<div>
 					<div className="flex items-center gap-2.5">
 						<span className="text-xl">⚡</span>
-						<h3 className="text-lg font-bold text-[#1A1A1A] [.light_&]:text-slate-900">Compare Blackwell 96GB vs Cloud Renting Options</h3>
+						<h3 className="text-lg font-bold text-[#1A1A1A]">Compare Blackwell 96GB vs Cloud Renting Options</h3>
 					</div>
-					<p className="text-sm text-[#5E5E5E] [.light_&]:text-slate-700 font-medium mt-1.5 leading-relaxed">Quick-load 1x RTX Pro 6000 Blackwell (96GB) against 1x 96GB Cloud GPU or 2x RTX 6000 Ada (48GB x 2 = 96GB pooled).</p>
+					<p className="text-sm text-[#5E5E5E] font-medium mt-1.5 leading-relaxed">Quick-load 1x RTX Pro 6000 Blackwell (96GB) against 1x 96GB Cloud GPU or 2x RTX 6000 Ada (48GB x 2 = 96GB pooled).</p>
 				</div>
 				<div className="flex flex-wrap gap-3 w-full lg:w-auto shrink-0">
 					<button
 						type="button"
 						onClick={() => applyPreset('blackwell-vs-cloud-96')}
-						className="px-4 py-3 rounded-xl text-xs sm:text-sm font-bold bg-cyan-500 text-slate-950 hover:bg-cyan-400 transition shadow-md shadow-cyan-500/20 cursor-pointer"
+						className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-cyan-500 text-white hover:bg-cyan-600 transition shadow-sm cursor-pointer"
 					>
 						1x Blackwell (96GB) vs 1x Cloud (96GB)
 					</button>
 					<button
 						type="button"
 						onClick={() => applyPreset('blackwell-vs-2x-ada')}
-						className="px-4 py-3 rounded-xl text-xs sm:text-sm font-bold bg-purple-600 text-[#1A1A1A] hover:bg-purple-500 transition shadow-md shadow-purple-500/20 cursor-pointer"
+						className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-purple-655 bg-purple-600 text-white hover:bg-purple-750 hover:bg-purple-750 transition shadow-sm cursor-pointer"
 					>
-						1x Blackwell (96GB) vs 2x RTX 6000 Ada (96GB Pooled)
+						1x Blackwell vs 2x RTX 6000 Ada
 					</button>
 				</div>
 			</div>
 
 			<div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
-			{/* Left Column: User Controls & Sliders */}
-			<div className="space-y-6">
-				{/* Usage Pattern Card */}
-				<div className="panel-soft rounded-[2rem] p-6 lg:p-8 space-y-7">
-					<div className="flex items-center gap-2.5">
-						<span className="text-2xl">⚙️</span>
-						<h3 className="text-2xl font-bold text-[#1A1A1A] [.light_&]:text-slate-900">Your Usage Pattern</h3>
-					</div>
+				{/* Left Column: User Controls & Sliders */}
+				<div className="space-y-6">
+					{/* Usage Pattern Card */}
+					<div className="bg-white border border-gray-100 rounded-xl shadow-sm p-6 space-y-6">
+						<div className="flex items-center gap-2.5">
+							<span className="text-2xl">⚙️</span>
+							<h3 className="text-xl font-bold text-[#1A1A1A]">Your Usage Pattern</h3>
+						</div>
 
-					{/* Hours per Day Slider */}
-					<div className="space-y-3">
-						<div className="flex justify-between items-center text-sm sm:text-base font-bold text-[#5E5E5E] [.light_&]:text-slate-800">
-							<span>Hours per Day</span>
-							<div className="flex items-center gap-1 bg-white/80 [.light_&]:bg-white rounded-xl px-3 py-1 border border-slate-700/80 [.light_&]:border-slate-300 focus-within:border-cyan-400">
-								<input
-									type="number"
-									min="1"
-									max="24"
+						{/* Hours per Day Slider */}
+						<div className="space-y-2">
+							<div className="flex justify-between items-center text-sm font-bold text-[#5E5E5E]">
+								<span>Hours per Day</span>
+								<InteractiveBadge
 									value={hoursPerDay}
-									onChange={(e) => setHoursPerDay(Math.min(24, Math.max(1, Number(e.target.value))))}
-									className="w-10 bg-transparent text-right font-mono text-base font-extrabold text-[#5A7A8F] [.light_&]:text-cyan-600 focus:outline-none border-none p-0"
+									min={1}
+									max={24}
+									step={1}
+									unit="hrs"
+									onChange={setHoursPerDay}
 								/>
-								<span className="text-xs text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono font-bold">hrs</span>
+							</div>
+							<CustomSlider
+								min={1}
+								max={24}
+								step={1}
+								value={hoursPerDay}
+								onChange={setHoursPerDay}
+							/>
+							<div className="flex justify-between text-xs font-semibold text-[#8C8C8C] font-mono">
+								<span>1 hour</span>
+								<span>24 hours</span>
 							</div>
 						</div>
-						<input
-							type="range"
-							min="1"
-							max="24"
-							step="1"
-							value={hoursPerDay}
-							onChange={(e) => setHoursPerDay(Number(e.target.value))}
-							className="w-full h-2.5 bg-white [.light_&]:bg-slate-200 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-gray-200 [.light_&]:border-slate-300"
-						/>
-						<div className="flex justify-between text-xs font-semibold text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono">
-							<span>1 hour</span>
-							<span>24 hours</span>
-						</div>
-					</div>
 
-					{/* Days per Month Slider */}
-					<div className="space-y-3">
-						<div className="flex justify-between items-center text-sm sm:text-base font-bold text-[#5E5E5E] [.light_&]:text-slate-800">
-							<span>Days per Month</span>
-							<div className="flex items-center gap-1 bg-white/80 [.light_&]:bg-white rounded-xl px-3 py-1 border border-slate-700/80 [.light_&]:border-slate-300 focus-within:border-cyan-400">
-								<input
-									type="number"
-									min="1"
-									max="30"
+						{/* Days per Month Slider */}
+						<div className="space-y-2">
+							<div className="flex justify-between items-center text-sm font-bold text-[#5E5E5E]">
+								<span>Days per Month</span>
+								<InteractiveBadge
 									value={daysPerMonth}
-									onChange={(e) => setDaysPerMonth(Math.min(30, Math.max(1, Number(e.target.value))))}
-									className="w-10 bg-transparent text-right font-mono text-base font-extrabold text-[#5A7A8F] [.light_&]:text-cyan-600 focus:outline-none border-none p-0"
+									min={1}
+									max={30}
+									step={1}
+									unit="days"
+									onChange={setDaysPerMonth}
 								/>
-								<span className="text-xs text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono font-bold">days</span>
+							</div>
+							<CustomSlider
+								min={1}
+								max={30}
+								step={1}
+								value={daysPerMonth}
+								onChange={setDaysPerMonth}
+							/>
+							<div className="flex justify-between text-xs font-semibold text-[#8C8C8C] font-mono">
+								<span>1 day</span>
+								<span>30 days</span>
 							</div>
 						</div>
-						<input
-							type="range"
-							min="1"
-							max="30"
-							step="1"
-							value={daysPerMonth}
-							onChange={(e) => setDaysPerMonth(Number(e.target.value))}
-							className="w-full h-2.5 bg-white [.light_&]:bg-slate-200 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-gray-200 [.light_&]:border-slate-300"
-						/>
-						<div className="flex justify-between text-xs font-semibold text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono">
-							<span>1 day</span>
-							<span>30 days</span>
-						</div>
-					</div>
 
-					{/* Evaluation Horizon (Time Period) Variable Control */}
-					<div className="space-y-3">
-						<div className="flex justify-between items-center text-sm sm:text-base font-bold text-[#5E5E5E] [.light_&]:text-slate-800">
-							<div className="flex items-center gap-2">
-								<span>Evaluation Horizon</span>
-								<span className="text-xs text-[#5A7A8F] [.light_&]:text-cyan-600 font-mono font-bold bg-cyan-950/40 [.light_&]:bg-cyan-100 px-2 py-0.5 rounded-md border border-cyan-500/20 [.light_&]:border-cyan-300">
-									{(timePeriodMonths / 12).toFixed(1)} yrs
-								</span>
-							</div>
-							<div className="flex items-center gap-1 bg-white/80 [.light_&]:bg-white rounded-xl px-3 py-1 border border-slate-700/80 [.light_&]:border-slate-300 focus-within:border-cyan-400">
-								<input
-									type="number"
-									min="1"
-									max="84"
+						{/* Evaluation Horizon Slider */}
+						<div className="space-y-2">
+							<div className="flex justify-between items-center text-sm font-bold text-[#5E5E5E]">
+								<div className="flex items-center gap-2">
+									<span>Evaluation Horizon</span>
+									<span className="text-xs text-cyan-600 font-mono font-bold bg-cyan-50 px-2 py-0.5 rounded-md border border-cyan-200">
+										{(timePeriodMonths / 12).toFixed(1)} yrs
+									</span>
+								</div>
+								<InteractiveBadge
 									value={timePeriodMonths}
-									onChange={(e) => setTimePeriodMonths(Math.min(84, Math.max(1, Number(e.target.value))))}
-									className="w-12 bg-transparent text-right font-mono text-base font-extrabold text-[#5A7A8F] [.light_&]:text-cyan-600 focus:outline-none border-none p-0"
-								/>
-								<span className="text-xs text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono font-bold">mo</span>
-							</div>
-						</div>
-
-						{/* Quick Horizon Presets */}
-						<div className="flex gap-2 flex-wrap pt-1">
-							{[
-								{ label: '1 Yr', months: 12 },
-								{ label: '3 Yrs', months: 36 },
-								{ label: '5 Yrs', months: 60 },
-								{ label: '7 Yrs', months: 84 }
-							].map((horizon) => (
-								<button
-									key={horizon.months}
-									type="button"
-									onClick={() => setTimePeriodMonths(horizon.months)}
-									className={`px-3 py-1.5 rounded-xl text-xs sm:text-sm font-mono font-extrabold transition cursor-pointer ${
-										timePeriodMonths === horizon.months
-											? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20'
-											: 'bg-white border border-gray-200 text-[#5E5E5E] hover:text-[#1A1A1A] [.light_&]:bg-white [.light_&]:border-slate-300 [.light_&]:text-slate-700'
-									}`}
-								>
-									{horizon.label}
-								</button>
-							))}
-						</div>
-
-						<input
-							type="range"
-							min="1"
-							max="84"
-							step="1"
-							value={timePeriodMonths}
-							onChange={(e) => setTimePeriodMonths(Number(e.target.value))}
-							className="w-full h-2.5 bg-white [.light_&]:bg-slate-200 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-gray-200 [.light_&]:border-slate-300"
-						/>
-						<div className="flex justify-between text-xs font-semibold text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono">
-							<span>1 mo</span>
-							<span>36 mo (3 yrs)</span>
-							<span>60 mo (5 yrs)</span>
-							<span>84 mo (7 yrs)</span>
-						</div>
-					</div>
-
-					{/* Computed Monthly Hours Summary */}
-					<div className="rounded-[1.4rem] border border-cyan-500/25 [.light_&]:border-cyan-300 bg-cyan-950/20 [.light_&]:bg-cyan-50/80 p-5">
-						<p className="font-mono text-xs uppercase tracking-wider font-bold text-[#5E5E5E] [.light_&]:text-[#8C8C8C]">Monthly Usage</p>
-						<p className="text-3xl sm:text-4xl font-black text-[#5A7A8F] [.light_&]:text-cyan-700 mt-1 font-mono">{calculations.monthlyHours} hours</p>
-					</div>
-				</div>
-
-				{/* Select GPU Card */}
-				<div className="panel-soft rounded-[2rem] p-6 lg:p-8 space-y-7">
-					<div className="flex items-center gap-2.5">
-						<span className="text-2xl">🎮</span>
-						<h3 className="text-2xl font-bold text-[#1A1A1A] [.light_&]:text-slate-900">Select Local GPU</h3>
-					</div>
-
-					<div>
-						<label htmlFor="gpu-select" className="sr-only">GPU Model Option</label>
-						<select
-							id="gpu-select"
-							value={selectedGpuId}
-							onChange={(e) => setSelectedGpuId(e.target.value)}
-							className="w-full rounded-xl border border-slate-700/80 [.light_&]:border-slate-300 bg-white [.light_&]:bg-white px-4 py-3.5 text-base font-bold text-[#1A1A1A] [.light_&]:text-slate-900 outline-none focus:border-cyan-400 cursor-pointer"
-						>
-							<optgroup label="Tier 1: Apple Silicon (Unified Memory)">
-								{GPU_MODELS.filter(g => g.tier === 'Apple Silicon').map(g => (
-									<option key={g.id} value={g.id}>{g.name}</option>
-								))}
-							</optgroup>
-							<optgroup label="Tier 2: AMD Mini PCs (Budget Always-On)">
-								{GPU_MODELS.filter(g => g.tier === 'AMD Mini PC').map(g => (
-									<option key={g.id} value={g.id}>{g.name}</option>
-								))}
-							</optgroup>
-							<optgroup label="Tier 3: Professional CUDA Workstations">
-								{GPU_MODELS.filter(g => g.tier === 'NVIDIA CUDA Workstation').map(g => (
-									<option key={g.id} value={g.id}>{g.name}</option>
-								))}
-							</optgroup>
-							<optgroup label="Tier 4: Consumer & Used NVIDIA GPUs">
-								{GPU_MODELS.filter(g => g.tier === 'NVIDIA CUDA GPU').map(g => (
-									<option key={g.id} value={g.id}>{g.name}</option>
-								))}
-							</optgroup>
-							<optgroup label="Tier 5: Enterprise AI Workstations & Servers">
-								{GPU_MODELS.filter(g => g.tier === 'Enterprise AI Hardware').map(g => (
-									<option key={g.id} value={g.id}>{g.name}</option>
-								))}
-							</optgroup>
-						</select>
-					</div>
-
-					{/* GPU Metric displays */}
-					<div className="grid grid-cols-2 gap-4">
-						<div className="rounded-xl border border-gray-200/80 [.light_&]:border-slate-200 bg-white [.light_&]:bg-slate-50 p-4">
-							<p className="text-xs sm:text-sm font-semibold text-[#5E5E5E] [.light_&]:text-[#8C8C8C]">Hardware Cost</p>
-							<p className="text-xl sm:text-2xl font-black #1A1A1A [.light_&]:text-emerald-600 mt-1 font-mono">{formatCurrency(activeGpu.cost)}</p>
-						</div>
-						<div className="rounded-xl border border-gray-200/80 [.light_&]:border-slate-200 bg-white [.light_&]:bg-slate-50 p-4">
-							<p className="text-xs sm:text-sm font-semibold text-[#5E5E5E] [.light_&]:text-[#8C8C8C]">Power Draw (TDP)</p>
-							<p className="text-xl sm:text-2xl font-black text-[#C88D4E] [.light_&]:text-amber-600 mt-1 font-mono">{activeGpu.tdp}W</p>
-						</div>
-					</div>
-
-					{/* 3-Year Resale Value % Slider */}
-					<div className="space-y-3 border-t border-gray-200/60 [.light_&]:border-slate-200/80 pt-5">
-						<div className="flex justify-between items-center text-sm sm:text-base font-bold text-[#5E5E5E] [.light_&]:text-slate-800">
-							<span>3-Year Hardware Resale Value (%)</span>
-							<div className="flex items-center gap-0.5 bg-white/80 [.light_&]:bg-white rounded-xl px-3 py-1 border border-slate-700/80 [.light_&]:border-slate-300 focus-within:border-cyan-400">
-								<input
-									type="number"
-									min="0"
-									max="50"
-									step="5"
-									value={resalePercent}
-									onChange={(e) => setResalePercent(Math.min(50, Math.max(0, Number(e.target.value))))}
-									className="w-12 bg-transparent text-right font-mono text-base font-extrabold #1A1A1A [.light_&]:text-emerald-600 focus:outline-none border-none p-0"
-								/>
-								<span className="text-xs text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono font-bold">%</span>
-							</div>
-						</div>
-						<input
-							type="range"
-							min="0"
-							max="50"
-							step="5"
-							value={resalePercent}
-							onChange={(e) => setResalePercent(Number(e.target.value))}
-							className="w-full h-2.5 bg-white [.light_&]:bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-400 border border-gray-200 [.light_&]:border-slate-300"
-						/>
-						<div className="flex justify-between text-xs font-semibold text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono">
-							<span>0% (Full loss)</span>
-							<span>20% (Default)</span>
-							<span>50% (High return)</span>
-						</div>
-						<p className="text-xs sm:text-sm font-semibold #1A1A1A [.light_&]:text-emerald-700 font-mono mt-1.5">
-							Estimated Salvage Recovery: {formatCurrency(calculations.resaleValue)} after 36 months
-						</p>
-					</div>
-
-					{/* Annual Cost of Capital / Opportunity Cost (%) Slider */}
-					<div className="space-y-3 border-t border-gray-200/60 [.light_&]:border-slate-200/80 pt-5">
-						<div className="flex justify-between items-center text-sm sm:text-base font-bold text-[#5E5E5E] [.light_&]:text-slate-800">
-							<span>Cost of Capital / Interest Rate (%/yr)</span>
-							<div className="flex items-center gap-0.5 bg-white/80 [.light_&]:bg-white rounded-xl px-3 py-1 border border-slate-700/80 [.light_&]:border-slate-300 focus-within:border-cyan-400">
-								<input
-									type="number"
-									min="0"
-									max="15"
-									step="0.5"
-									value={costOfCapitalPercent}
-									onChange={(e) => setCostOfCapitalPercent(Math.min(15, Math.max(0, Number(e.target.value))))}
-									className="w-12 bg-transparent text-right font-mono text-base font-extrabold text-[#C88D4E] [.light_&]:text-amber-600 focus:outline-none border-none p-0"
-								/>
-								<span className="text-xs text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono font-bold">%</span>
-							</div>
-						</div>
-						<input
-							type="range"
-							min="0"
-							max="15"
-							step="0.5"
-							value={costOfCapitalPercent}
-							onChange={(e) => setCostOfCapitalPercent(Number(e.target.value))}
-							className="w-full h-2.5 bg-white [.light_&]:bg-slate-200 rounded-lg appearance-none cursor-pointer accent-amber-400 border border-gray-200 [.light_&]:border-slate-300"
-						/>
-						<div className="flex justify-between text-xs font-semibold text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono">
-							<span>0% (Cash/Zero cost)</span>
-							<span>5% (Treasury Yield)</span>
-							<span>15% (High Debt/WACC)</span>
-						</div>
-						<p className="text-xs sm:text-sm font-semibold text-[#C88D4E] [.light_&]:text-amber-700 font-mono mt-1.5">
-							Opportunity Cost of Locked CapEx: +{formatCurrency(calculations.opportunityCost)} over {timePeriodMonths} mo
-						</p>
-					</div>
-
-					{/* System components price slider */}
-					<div className="space-y-3 border-t border-gray-200/60 [.light_&]:border-slate-200/80 pt-5">
-						<div className="flex justify-between items-center text-sm sm:text-base font-bold text-[#5E5E5E] [.light_&]:text-slate-800">
-							<span>System components (CPU, RAM, Motherboard, etc.)</span>
-							<div className="flex items-center gap-0.5 bg-white/80 [.light_&]:bg-white rounded-xl px-3 py-1 border border-slate-700/80 [.light_&]:border-slate-300 focus-within:border-cyan-400">
-								<span className="text-xs text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono font-bold">$</span>
-								<input
-									type="number"
-									min="0"
-									max="5000"
-									step="50"
-									value={systemCost}
-									onChange={(e) => setSystemCost(Math.min(5000, Math.max(0, Number(e.target.value))))}
-									className="w-16 bg-transparent text-right font-mono text-base font-extrabold #1A1A1A [.light_&]:text-emerald-600 focus:outline-none border-none p-0"
+									min={1}
+									max={84}
+									step={1}
+									unit="mo"
+									onChange={setTimePeriodMonths}
 								/>
 							</div>
-						</div>
-						<input
-							type="range"
-							min="0"
-							max="5000"
-							step="50"
-							value={systemCost}
-							onChange={(e) => setSystemCost(Number(e.target.value))}
-							className="w-full h-2.5 bg-white [.light_&]:bg-slate-200 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-gray-200 [.light_&]:border-slate-300"
-						/>
-						<div className="flex justify-between text-xs font-semibold text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono">
-							<span>$0</span>
-							<span>$5,000</span>
-						</div>
-					</div>
 
-					{/* Electricity Rate Slider */}
-					<div className="space-y-3 border-t border-gray-200/60 [.light_&]:border-slate-200/80 pt-5">
-						<div className="flex justify-between items-center text-sm sm:text-base font-bold text-[#5E5E5E] [.light_&]:text-slate-800">
-							<span>Local Electricity Rate</span>
-							<div className="flex items-center gap-0.5 bg-white/80 [.light_&]:bg-white rounded-xl px-3 py-1 border border-slate-700/80 [.light_&]:border-slate-300 focus-within:border-cyan-400">
-								<span className="text-xs text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono font-bold">$</span>
-								<input
-									type="number"
-									min="0.05"
-									max="0.60"
-									step="0.01"
-									value={electricityRate}
-									onChange={(e) => setElectricityRate(Math.min(0.60, Math.max(0.05, Number(e.target.value))))}
-									className="w-14 bg-transparent text-right font-mono text-base font-extrabold text-[#5A7A8F] [.light_&]:text-cyan-600 focus:outline-none border-none p-0"
-								/>
-								<span className="text-xs text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono font-bold">/kWh</span>
-							</div>
-						</div>
-						<input
-							type="range"
-							min="0.05"
-							max="0.60"
-							step="0.01"
-							value={electricityRate}
-							onChange={(e) => setElectricityRate(Number(e.target.value))}
-							className="w-full h-2.5 bg-white [.light_&]:bg-slate-200 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-gray-200 [.light_&]:border-slate-300"
-						/>
-						<div className="flex justify-between text-xs font-semibold text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono">
-							<span>$0.05/kWh</span>
-							<span>$0.60/kWh</span>
-						</div>
-					</div>
-				</div>
-
-				{/* Select Cloud Provider Card */}
-				<div className="panel-soft rounded-[2rem] p-6 lg:p-8 space-y-7">
-					<div className="flex items-center gap-2.5">
-						<span className="text-2xl">☁️</span>
-						<h3 className="text-2xl font-bold text-[#1A1A1A] [.light_&]:text-slate-900">Select Cloud Provider & GPU</h3>
-					</div>
-
-					<div>
-						<label htmlFor="cloud-provider-select" className="sr-only">Compare Cloud Provider & GPU</label>
-						<select
-							id="cloud-provider-select"
-							value={selectedProviderId}
-							onChange={(e) => setSelectedProviderId(e.target.value)}
-							className="w-full rounded-xl border border-slate-700/80 [.light_&]:border-slate-300 bg-white [.light_&]:bg-white px-4 py-3.5 text-base font-bold text-[#1A1A1A] [.light_&]:text-slate-900 outline-none focus:border-cyan-400 cursor-pointer"
-						>
-							{CLOUD_PROVIDERS_EXPLORER.map(provider => (
-								<optgroup key={provider.id} label={provider.name}>
-									{provider.gpus.map((gpu) => {
-										const presetId = `${provider.id}-${gpu.gpuModel.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
-										return (
-											<option key={presetId} value={presetId}>
-												{gpu.gpuModel} ({gpu.vram}) — ${gpu.rate.toFixed(2)}/hr
-											</option>
-										);
-									})}
-								</optgroup>
-							))}
-						</select>
-					</div>
-
-					{/* Multi-GPU Cloud Quantity Selector */}
-					<div className="space-y-3 border-t border-gray-200/60 [.light_&]:border-slate-200/80 pt-5">
-						<div className="flex justify-between items-center text-sm sm:text-base font-bold text-[#5E5E5E] [.light_&]:text-slate-800">
-							<span>Number of Cloud GPUs to Rent</span>
-							<div className="flex gap-2">
-								{[1, 2, 4, 8].map((qty) => (
+							{/* Quick Horizon Presets */}
+							<div className="flex gap-2 flex-wrap pt-1">
+								{[
+									{ label: '1 Yr', months: 12 },
+									{ label: '3 Yrs', months: 36 },
+									{ label: '5 Yrs', months: 60 },
+									{ label: '7 Yrs', months: 84 }
+								].map((horizon) => (
 									<button
-										key={qty}
+										key={horizon.months}
 										type="button"
-										onClick={() => setCloudGpuCount(qty)}
-										className={`px-3.5 py-1.5 rounded-xl text-xs sm:text-sm font-mono font-extrabold transition cursor-pointer ${
-											cloudGpuCount === qty
-												? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20'
-												: 'bg-white border border-gray-200 text-[#5E5E5E] hover:text-[#1A1A1A] [.light_&]:bg-white [.light_&]:border-slate-300 [.light_&]:text-slate-700'
+										onClick={() => setTimePeriodMonths(horizon.months)}
+										className={`px-3 py-1.5 rounded-lg text-xs font-mono font-extrabold transition cursor-pointer ${
+											timePeriodMonths === horizon.months
+												? 'bg-cyan-500 text-white shadow-sm'
+												: 'bg-white border border-gray-250 text-[#5E5E5E] hover:text-[#1A1A1A] hover:border-gray-400'
 										}`}
 									>
-										{qty}x
+										{horizon.label}
 									</button>
 								))}
 							</div>
-						</div>
-						<p className="text-xs sm:text-sm font-semibold text-[#5A7A8F] [.light_&]:text-cyan-700 font-mono">
-							Effective Hourly Rate: {cloudGpuCount}x @ ${activeProvider.rate.toFixed(2)} = ${calculations.effectiveCloudRate.toFixed(2)}/hr
-						</p>
-					</div>
 
-					<div className="rounded-xl border border-gray-200/80 [.light_&]:border-slate-200 bg-white [.light_&]:bg-slate-50 p-4 space-y-3">
-						<div className="flex justify-between text-sm">
-							<span className="font-semibold text-[#5E5E5E] [.light_&]:text-[#8C8C8C]">Provider:</span>
-							<span className="font-bold text-[#1A1A1A] [.light_&]:text-slate-900">{activeProvider.providerName}</span>
+							<CustomSlider
+								min={1}
+								max={84}
+								step={1}
+								value={timePeriodMonths}
+								onChange={setTimePeriodMonths}
+							/>
+							<div className="flex justify-between text-xs font-semibold text-[#8C8C8C] font-mono">
+								<span>1 mo</span>
+								<span>36 mo (3 yrs)</span>
+								<span>60 mo (5 yrs)</span>
+								<span>84 mo (7 yrs)</span>
+							</div>
 						</div>
-						<div className="flex justify-between text-sm">
-							<span className="font-semibold text-[#5E5E5E] [.light_&]:text-[#8C8C8C]">Billing Model:</span>
-							<span className="font-bold text-[#5E5E5E] [.light_&]:text-slate-800">
-								{CLOUD_PROVIDERS_EXPLORER.find(p => p.id === activeProvider.providerId)?.billingUnit}
-							</span>
-						</div>
-						<div className="flex justify-between text-sm">
-							<span className="font-semibold text-[#5E5E5E] [.light_&]:text-[#8C8C8C]">Network Egress:</span>
-							<span className="font-bold #1A1A1A [.light_&]:text-emerald-600">
-								{CLOUD_PROVIDERS_EXPLORER.find(p => p.id === activeProvider.providerId)?.egress}
-							</span>
-						</div>
-						<div className="flex justify-between text-sm">
-							<span className="font-semibold text-[#5E5E5E] [.light_&]:text-[#8C8C8C]">Storage rate:</span>
-							<span className="font-bold text-[#5A7A8F] [.light_&]:text-cyan-600 font-mono">
-								${activeProvider.storageRate.toFixed(2)}/GB/mo
-							</span>
+
+						{/* Computed Monthly Hours Summary */}
+						<div className="rounded-xl border border-cyan-200 bg-cyan-50/50 p-4">
+							<p className="font-mono text-xs uppercase tracking-wider font-bold text-[#8C8C8C]">Monthly Usage</p>
+							<p className="text-2xl font-black text-cyan-700 mt-1 font-mono">
+								<AnimatedCounter value={calculations.monthlyHours} formatter={(v) => `${Math.round(v)} hours`} />
+							</p>
 						</div>
 					</div>
 
-					{/* Persistent Cloud Storage Slider */}
-					<div className="space-y-3 border-t border-gray-200/60 [.light_&]:border-slate-200/80 pt-5">
-						<div className="flex justify-between items-center text-sm sm:text-base font-bold text-[#5E5E5E] [.light_&]:text-slate-800">
-							<span>Cloud Storage Size</span>
-							<div className="flex items-center gap-1 bg-white/80 [.light_&]:bg-white rounded-xl px-3 py-1 border border-slate-700/80 [.light_&]:border-slate-300 focus-within:border-cyan-400">
-								<input
-									type="number"
-									min="10"
-									max="1200"
-									step="10"
-									value={storageSizeGb}
-									onChange={(e) => setStorageSizeGb(Math.min(1200, Math.max(10, Number(e.target.value))))}
-									className="w-14 bg-transparent text-right font-mono text-base font-extrabold text-[#5A7A8F] [.light_&]:text-cyan-600 focus:outline-none border-none p-0"
+					{/* Select GPU Card */}
+					<div className="bg-white border border-gray-100 rounded-xl shadow-sm p-6 space-y-6">
+						<div className="flex items-center gap-2.5">
+							<span className="text-2xl">🎮</span>
+							<h3 className="text-xl font-bold text-[#1A1A1A]">Select Local GPU</h3>
+						</div>
+
+						<div>
+							<label htmlFor="gpu-select" className="sr-only">GPU Model Option</label>
+							<select
+								id="gpu-select"
+								value={selectedGpuId}
+								onChange={(e) => setSelectedGpuId(e.target.value)}
+								className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-bold text-[#1A1A1A] outline-none focus:border-cyan-500 cursor-pointer"
+							>
+								<optgroup label="Tier 1: Apple Silicon (Unified Memory)">
+									{GPU_MODELS.filter(g => g.tier === 'Apple Silicon').map(g => (
+										<option key={g.id} value={g.id}>{g.name}</option>
+									))}
+								</optgroup>
+								<optgroup label="Tier 2: AMD Mini PCs (Budget Always-On)">
+									{GPU_MODELS.filter(g => g.tier === 'AMD Mini PC').map(g => (
+										<option key={g.id} value={g.id}>{g.name}</option>
+									))}
+								</optgroup>
+								<optgroup label="Tier 3: Professional CUDA Workstations">
+									{GPU_MODELS.filter(g => g.tier === 'NVIDIA CUDA Workstation').map(g => (
+										<option key={g.id} value={g.id}>{g.name}</option>
+									))}
+								</optgroup>
+								<optgroup label="Tier 4: Consumer & Used NVIDIA GPUs">
+									{GPU_MODELS.filter(g => g.tier === 'NVIDIA CUDA GPU').map(g => (
+										<option key={g.id} value={g.id}>{g.name}</option>
+									))}
+								</optgroup>
+								<optgroup label="Tier 5: Enterprise AI Workstations & Servers">
+									{GPU_MODELS.filter(g => g.tier === 'Enterprise AI Hardware').map(g => (
+										<option key={g.id} value={g.id}>{g.name}</option>
+									))}
+								</optgroup>
+							</select>
+						</div>
+
+						{/* GPU Metric displays */}
+						<div className="grid grid-cols-2 gap-4">
+							<div className="rounded-xl border border-gray-200 bg-gray-50/50 p-4">
+								<p className="text-xs font-semibold text-[#8C8C8C]">Hardware Cost</p>
+								<p className="text-lg font-black text-emerald-600 mt-1 font-mono">{formatCurrency(activeGpu.cost)}</p>
+							</div>
+							<div className="rounded-xl border border-gray-200 bg-gray-50/50 p-4">
+								<p className="text-xs font-semibold text-[#8C8C8C]">Power Draw (TDP)</p>
+								<p className="text-lg font-black text-amber-600 mt-1 font-mono">{activeGpu.tdp}W</p>
+							</div>
+						</div>
+
+						{/* Sub card: 3-Year Resale Value % Slider */}
+						<div className="bg-white border border-gray-100 rounded-xl shadow-sm p-5 space-y-3">
+							<div className="flex justify-between items-center text-sm font-bold text-[#5E5E5E]">
+								<span>3-Year Hardware Resale Value (%)</span>
+								<InteractiveBadge
+									value={resalePercent}
+									min={0}
+									max={50}
+									step={5}
+									unit="%"
+									onChange={setResalePercent}
 								/>
-								<span className="text-xs text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono font-bold">GB</span>
+							</div>
+							<CustomSlider
+								min={0}
+								max={50}
+								step={5}
+								value={resalePercent}
+								onChange={setResalePercent}
+							/>
+							<div className="flex justify-between text-xs font-semibold text-[#8C8C8C] font-mono">
+								<span>0% (Full loss)</span>
+								<span>20% (Default)</span>
+								<span>50% (High return)</span>
+							</div>
+							<p className="text-xs font-semibold text-emerald-700 font-mono mt-1 pt-1 border-t border-gray-100">
+								Estimated Salvage Recovery: {formatCurrency(calculations.resaleValue)} after 36 months
+							</p>
+						</div>
+
+						{/* Sub card: Annual Cost of Capital / Opportunity Cost (%) Slider */}
+						<div className="bg-white border border-gray-100 rounded-xl shadow-sm p-5 space-y-3">
+							<div className="flex justify-between items-center text-sm font-bold text-[#5E5E5E]">
+								<span>Cost of Capital / Interest Rate (%/yr)</span>
+								<InteractiveBadge
+									value={costOfCapitalPercent}
+									min={0}
+									max={15}
+									step={0.5}
+									unit="%"
+									onChange={setCostOfCapitalPercent}
+								/>
+							</div>
+							<CustomSlider
+								min={0}
+								max={15}
+								step={0.5}
+								value={costOfCapitalPercent}
+								onChange={setCostOfCapitalPercent}
+							/>
+							<div className="flex justify-between text-xs font-semibold text-[#8C8C8C] font-mono">
+								<span>0% (Cash/Zero cost)</span>
+								<span>5% (Treasury Yield)</span>
+								<span>15% (High Debt/WACC)</span>
+							</div>
+							<p className="text-xs font-semibold text-amber-700 font-mono mt-1 pt-1 border-t border-gray-100">
+								Opportunity Cost of Locked CapEx: +{formatCurrency(calculations.opportunityCost)} over {timePeriodMonths} mo
+							</p>
+						</div>
+
+						{/* Sub card: System components price slider */}
+						<div className="bg-white border border-gray-100 rounded-xl shadow-sm p-5 space-y-3">
+							<div className="flex justify-between items-center text-sm font-bold text-[#5E5E5E]">
+								<span>System components (CPU, RAM, Motherboard, etc.)</span>
+								<InteractiveBadge
+									value={systemCost}
+									min={0}
+									max={5000}
+									step={50}
+									prefix="$"
+									onChange={setSystemCost}
+								/>
+							</div>
+							<CustomSlider
+								min={0}
+								max={5000}
+								step={50}
+								value={systemCost}
+								onChange={setSystemCost}
+							/>
+							<div className="flex justify-between text-xs font-semibold text-[#8C8C8C] font-mono">
+								<span>$0</span>
+								<span>$5,000</span>
 							</div>
 						</div>
-						<input
-							type="range"
-							min="10"
-							max="1200"
-							step="10"
-							value={storageSizeGb}
-							onChange={(e) => setStorageSizeGb(Number(e.target.value))}
-							className="w-full h-2.5 bg-white [.light_&]:bg-slate-200 rounded-lg appearance-none cursor-pointer accent-cyan-400 border border-gray-200 [.light_&]:border-slate-300"
-						/>
-						<div className="flex justify-between text-xs font-semibold text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono">
-							<span>10 GB</span>
-							<span>1,200 GB</span>
-						</div>
-					</div>
-				</div>
-			</div>
 
-			{/* Right Column: Output / Verdict Panels */}
-			<div className="space-y-6">
-				{/* Cost Analysis Card */}
-				<div className="panel-soft rounded-[2rem] p-6 sm:p-8 space-y-6">
-					<div className="flex items-center gap-2.5">
-						<span className="text-2xl">💰</span>
-						<h3 className="text-2xl font-bold text-[#1A1A1A] [.light_&]:text-slate-900">Cost Analysis</h3>
-					</div>
-
-					{/* Local Hardware Breakdown */}
-					<div className="space-y-3.5 pb-6 border-b border-gray-200/80 [.light_&]:border-slate-200">
-						<p className="text-sm font-extrabold text-[#5E5E5E] [.light_&]:text-slate-800 uppercase tracking-wide">Local Hardware (1x {activeGpu.vram})</p>
-						<div className="flex justify-between text-sm sm:text-base font-medium text-[#5E5E5E] [.light_&]:text-slate-700">
-							<span>GPU Cost:</span>
-							<span className="font-mono font-bold text-[#1A1A1A] [.light_&]:text-slate-900">{formatCurrency(activeGpu.cost)}</span>
-						</div>
-						<div className="flex justify-between text-sm sm:text-base font-medium text-[#5E5E5E] [.light_&]:text-slate-700">
-							<span>System components:</span>
-							<span className="font-mono font-bold text-[#1A1A1A] [.light_&]:text-slate-900">{formatCurrency(systemCost)}</span>
-						</div>
-						<div className="flex justify-between text-sm sm:text-base font-medium text-[#5E5E5E] [.light_&]:text-slate-700">
-							<span>Electricity ({timePeriodMonths} mo):</span>
-							<span className="font-mono font-bold text-[#1A1A1A] [.light_&]:text-slate-900">{formatCurrency(calculations.electricityCost)}</span>
-						</div>
-						<div className="flex justify-between text-sm sm:text-base font-medium text-[#5E5E5E] [.light_&]:text-slate-700">
-							<span>Maintenance budget:</span>
-							<span className="font-mono font-bold text-[#1A1A1A] [.light_&]:text-slate-900">{formatCurrency(calculations.maintenanceCost)}</span>
-						</div>
-						{costOfCapitalPercent > 0 && (
-							<div className="flex justify-between text-sm sm:text-base font-bold text-[#C88D4E] [.light_&]:text-amber-600">
-								<span>Cost of Capital ({costOfCapitalPercent}%/yr):</span>
-								<span className="font-mono">+{formatCurrency(calculations.opportunityCost)}</span>
+						{/* Sub card: Electricity Rate Slider */}
+						<div className="bg-white border border-gray-100 rounded-xl shadow-sm p-5 space-y-3">
+							<div className="flex justify-between items-center text-sm font-bold text-[#5E5E5E]">
+								<span>Local Electricity Rate</span>
+								<InteractiveBadge
+									value={electricityRate}
+									min={0.05}
+									max={0.60}
+									step={0.01}
+									prefix="$"
+									unit="/kWh"
+									onChange={setElectricityRate}
+								/>
 							</div>
-						)}
-						<div className="flex justify-between text-sm sm:text-base font-bold #1A1A1A [.light_&]:text-emerald-600">
-							<span>Less 3-Yr Resale ({resalePercent}%):</span>
-							<span className="font-mono">-{formatCurrency(calculations.resaleValue)}</span>
-						</div>
-						<div className="flex justify-between items-center text-lg font-extrabold text-[#1A1A1A] [.light_&]:text-slate-900 pt-3 border-t border-gray-200/50 [.light_&]:border-slate-200">
-							<span>Net Local TCO:</span>
-							<span className="text-2xl sm:text-3xl #1A1A1A [.light_&]:text-emerald-600 font-mono font-black">{formatCurrency(calculations.netLocalTco)}</span>
-						</div>
-						<div className="flex justify-between text-xs sm:text-sm font-semibold text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono">
-							<span>Cost per Hour:</span>
-							<span className="#1A1A1A [.light_&]:text-emerald-600 font-bold">${calculations.localCostPerHour.toFixed(3)}/hr</span>
-						</div>
-					</div>
-
-					{/* Cloud GPU Breakdown */}
-					<div className="space-y-3.5 pt-2">
-						<p className="text-sm font-extrabold text-[#5E5E5E] [.light_&]:text-slate-800 uppercase tracking-wide">{activeProvider.providerName} ({cloudGpuCount}x {activeProvider.gpuModel})</p>
-						<div className="flex justify-between text-sm sm:text-base font-medium text-[#5E5E5E] [.light_&]:text-slate-700">
-							<span>Usage ({cloudGpuCount}x @ ${activeProvider.rate}/hr):</span>
-							<span className="font-mono font-bold text-[#1A1A1A] [.light_&]:text-slate-900">{formatCurrency(calculations.cloudUsageCost)}</span>
-						</div>
-						<div className="flex justify-between text-sm sm:text-base font-medium text-[#5E5E5E] [.light_&]:text-slate-700">
-							<span>Storage ({timePeriodMonths} mo):</span>
-							<span className="font-mono font-bold text-[#1A1A1A] [.light_&]:text-slate-900">{formatCurrency(calculations.cloudStorageCost)}</span>
-						</div>
-						<div className="flex justify-between items-center text-lg font-extrabold text-[#1A1A1A] [.light_&]:text-slate-900 pt-3 border-t border-gray-200/50 [.light_&]:border-slate-200">
-							<span>Total Cloud Cost:</span>
-							<span className="text-2xl sm:text-3xl text-[#5A7A8F] [.light_&]:text-cyan-600 font-mono font-black">{formatCurrency(calculations.cloudTco)}</span>
-						</div>
-						<div className="flex justify-between text-xs sm:text-sm font-semibold text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono">
-							<span>Cost per Hour:</span>
-							<span className="text-[#5A7A8F] [.light_&]:text-cyan-600 font-bold">${calculations.cloudCostPerHour.toFixed(3)}/hr</span>
+							<CustomSlider
+								min={0.05}
+								max={0.60}
+								step={0.01}
+								value={electricityRate}
+								onChange={setElectricityRate}
+							/>
+							<div className="flex justify-between text-xs font-semibold text-[#8C8C8C] font-mono">
+								<span>$0.05/kWh</span>
+								<span>$0.60/kWh</span>
+							</div>
 						</div>
 					</div>
-				</div>
 
-				{/* Verdict Card */}
-				<div 
-					className={`panel-soft rounded-[2rem] transition duration-300 border-2 ${
-						calculations.localWins 
-							? 'border-emerald-500 [.light_&]:border-emerald-400 bg-gradient-to-br from-emerald-950/60 via-slate-950/80 to-emerald-900/40 [.light_&]:bg-gradient-to-br [.light_&]:from-emerald-50 [.light_&]:via-white [.light_&]:to-emerald-100/60 shadow-[0_0_40px_rgba(16,185,129,0.25)] [.light_&]:shadow-md' 
-							: 'border-cyan-500 [.light_&]:border-cyan-400 bg-gradient-to-br from-cyan-950/60 via-slate-950/80 to-cyan-900/40 [.light_&]:bg-gradient-to-br [.light_&]:from-cyan-50 [.light_&]:via-white [.light_&]:to-cyan-100/60 shadow-[0_0_40px_rgba(34,211,238,0.25)] [.light_&]:shadow-md'
-					}`}
-				>
-					<div className="p-6 sm:p-8">
-						<span className={`inline-flex rounded-full px-3 py-1 font-mono text-[0.68rem] uppercase tracking-[0.24em] font-bold ${
-							calculations.localWins 
-								? 'bg-emerald-500/10 #1A1A1A [.light_&]:text-emerald-800 [.light_&]:bg-emerald-100 border border-emerald-500/20 [.light_&]:border-emerald-300' 
-								: 'bg-cyan-500/10 text-[#5A7A8F] [.light_&]:text-cyan-800 [.light_&]:bg-cyan-100 border border-cyan-500/20 [.light_&]:border-cyan-300'
-						}`}>
-							{calculations.localWins ? '🏠 Local Wins!' : '☁️ Cloud Wins!'}
-						</span>
+					{/* Select Cloud Provider Card */}
+					<div className="bg-white border border-gray-100 rounded-xl shadow-sm p-6 space-y-6">
+						<div className="flex items-center gap-2.5">
+							<span className="text-2xl">☁️</span>
+							<h3 className="text-xl font-bold text-[#1A1A1A]">Select Cloud Provider & GPU</h3>
+						</div>
 
-						<h3 className="mt-4 text-3xl font-extrabold text-[#1A1A1A] [.light_&]:text-slate-900 leading-tight">
-							{calculations.localWins 
-								? `Local saves ${formatCurrency(calculations.netSavings)}` 
-								: `Cloud saves ${formatCurrency(calculations.netSavings)}`
-							}
-						</h3>
+						<div>
+							<label htmlFor="cloud-provider-select" className="sr-only">Compare Cloud Provider & GPU</label>
+							<select
+								id="cloud-provider-select"
+								value={selectedProviderId}
+								onChange={(e) => setSelectedProviderId(e.target.value)}
+								className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-bold text-[#1A1A1A] outline-none focus:border-cyan-500 cursor-pointer"
+							>
+								{CLOUD_PROVIDERS_EXPLORER.map(provider => (
+									<optgroup key={provider.id} label={provider.name}>
+										{provider.gpus.map((gpu) => {
+											const presetId = `${provider.id}-${gpu.gpuModel.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
+											return (
+												<option key={presetId} value={presetId}>
+													{gpu.gpuModel} ({gpu.vram}) — ${gpu.rate.toFixed(2)}/hr
+												</option>
+											);
+										})}
+									</optgroup>
+								))}
+							</select>
+						</div>
 
-						<p className="mt-3 text-sm leading-6 text-[#5E5E5E] [.light_&]:text-slate-700 font-medium">
-							{calculations.localWins 
-								? `Local hardware pays off after ${Number.isFinite(calculations.breakEvenMonths) ? `${calculations.breakEvenMonths} months` : 'Never'}.`
-								: 'Renting on demand prevents costly hardware depreciation and upfront CapEx.'
-							}
-						</p>
+						{/* Multi-GPU Cloud Quantity Selector & Storage size slider */}
+						<div className="bg-white border border-gray-100 rounded-xl shadow-sm p-5 space-y-5">
+							<div className="space-y-2">
+								<div className="flex justify-between items-center text-sm font-bold text-[#5E5E5E]">
+									<span>Number of Cloud GPUs to Rent</span>
+									<div className="flex gap-2">
+										{[1, 2, 4, 8].map((qty) => (
+											<button
+												key={qty}
+												type="button"
+												onClick={() => setCloudGpuCount(qty)}
+												className={`px-3 py-1 rounded-lg text-xs font-mono font-extrabold transition cursor-pointer ${
+													cloudGpuCount === qty
+														? 'bg-cyan-500 text-white shadow-sm'
+														: 'bg-white border border-gray-250 text-[#5E5E5E] hover:text-[#1A1A1A]'
+												}`}
+											>
+												{qty}x
+											</button>
+										))}
+									</div>
+								</div>
+								<p className="text-xs font-semibold text-cyan-700 font-mono">
+									Effective Hourly Rate: {cloudGpuCount}x @ ${activeProvider.rate.toFixed(2)} = ${calculations.effectiveCloudRate.toFixed(2)}/hr
+								</p>
+							</div>
 
-						{/* Direct Provider Link CTA inside Verdict Box */}
-						<div className="mt-6 pt-5 border-t border-white/10 [.light_&]:border-slate-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-							<div>
-								<span className="text-[10px] text-[#5E5E5E] [.light_&]:text-[#8C8C8C] uppercase tracking-wider font-mono font-bold block">Selected Cloud Provider</span>
-								<div className="flex items-center gap-2 mt-0.5">
-									<span className="text-sm font-bold text-[#1A1A1A] [.light_&]:text-slate-900">{activeProvider.providerName}</span>
-									<span className="text-xs text-[#5E5E5E] [.light_&]:text-[#8C8C8C] font-mono">({cloudGpuCount}x {activeProvider.gpuModel})</span>
+							<div className="border-t border-gray-100 pt-4 space-y-3">
+								<div className="flex justify-between items-center text-sm font-bold text-[#5E5E5E]">
+									<span>Cloud Storage Size</span>
+									<InteractiveBadge
+										value={storageSizeGb}
+										min={10}
+										max={1200}
+										step={10}
+										unit="GB"
+										onChange={setStorageSizeGb}
+									/>
+								</div>
+								<CustomSlider
+									min={10}
+									max={1200}
+									step={10}
+									value={storageSizeGb}
+									onChange={setStorageSizeGb}
+								/>
+								<div className="flex justify-between text-xs font-semibold text-[#8C8C8C] font-mono">
+									<span>10 GB</span>
+									<span>1,200 GB</span>
 								</div>
 							</div>
-							<a
-								href={activeProvider.affiliateUrl}
-								target="_blank"
-								rel="noopener noreferrer"
-								className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition shadow-md cursor-pointer shrink-0 ${
-									calculations.localWins
-										? 'bg-emerald-500 hover:bg-emerald-400 text-slate-950 shadow-emerald-500/20'
-										: 'bg-cyan-500 hover:bg-cyan-400 text-slate-950 shadow-cyan-500/20'
-								}`}
-							>
-								<span>{activeProvider.ctaText || `Deploy on ${activeProvider.providerName}`}</span>
-								<svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 6H6a2 2 2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-								</svg>
-							</a>
+						</div>
+
+						<div className="rounded-xl border border-gray-200 bg-gray-50/50 p-4 space-y-3">
+							<div className="flex justify-between text-sm">
+								<span className="font-semibold text-[#8C8C8C]">Provider:</span>
+								<span className="font-bold text-[#1A1A1A]">{activeProvider.providerName}</span>
+							</div>
+							<div className="flex justify-between text-sm">
+								<span className="font-semibold text-[#8C8C8C]">Billing Model:</span>
+								<span className="font-bold text-slate-800">
+									{CLOUD_PROVIDERS_EXPLORER.find(p => p.id === activeProvider.providerId)?.billingUnit}
+								</span>
+							</div>
+							<div className="flex justify-between text-sm">
+								<span className="font-semibold text-[#8C8C8C]">Network Egress:</span>
+								<span className="font-bold text-emerald-600">
+									{CLOUD_PROVIDERS_EXPLORER.find(p => p.id === activeProvider.providerId)?.egress}
+								</span>
+							</div>
+							<div className="flex justify-between text-sm">
+								<span className="font-semibold text-[#8C8C8C]">Storage rate:</span>
+								<span className="font-bold text-cyan-600 font-mono">
+									${activeProvider.storageRate.toFixed(2)}/GB/mo
+								</span>
+							</div>
 						</div>
 					</div>
 				</div>
 
-				{/* Recommendation & Metrics Widgets */}
-				<div className="grid grid-cols-2 gap-4">
-					<div className="panel-soft rounded-[1.5rem] p-5">
-						<p className="text-xs text-[#8C8C8C] [.light_&]:text-[#8C8C8C] font-medium">Break-Even Point</p>
-						<p className="text-2xl font-black text-[#1A1A1A] [.light_&]:text-slate-900 mt-1.5 font-mono">
-							{Number.isFinite(calculations.breakEvenMonths)
-								? calculations.breakEvenMonths > 12
-									? `Mo ${calculations.breakEvenMonths} (${(calculations.breakEvenMonths / 12).toFixed(1)} yrs)`
-									: `Month ${calculations.breakEvenMonths}`
-								: '> 7 Years'}
-						</p>
+				{/* Right Column: Output / Verdict Panels */}
+				<div className="space-y-6">
+					{/* Cost Analysis Card Styled like a Digital Receipt */}
+					<div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-6 relative overflow-hidden shadow-sm">
+						{/* Receipt Header */}
+						<div className="text-center pb-4 border-b border-dashed border-slate-350">
+							<h3 className="text-lg font-black text-[#1A1A1A] tracking-wider uppercase">GPU TCO RECEIPT</h3>
+							<p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mt-1">Cost Analysis Breakdown</p>
+						</div>
+
+						{/* Local Hardware Breakdown */}
+						<div className="space-y-3.5 pb-6 border-b border-dashed border-slate-250">
+							<p className="text-xs font-mono font-bold text-[#8C8C8C] uppercase tracking-[0.2em]">LOCAL HARDWARE (1x {activeGpu.vram})</p>
+							
+							<div className="flex justify-between items-center text-sm text-[#5E5E5E]">
+								<div className="flex items-center gap-2">
+									<Cpu className="w-4 h-4 text-[#5A7A8F] shrink-0" strokeWidth={1.5} />
+									<span>GPU Cost:</span>
+								</div>
+								<span className="font-mono font-bold text-[#1A1A1A]">{formatCurrency(activeGpu.cost)}</span>
+							</div>
+							
+							<div className="flex justify-between items-center text-sm text-[#5E5E5E]">
+								<div className="flex items-center gap-2">
+									<Server className="w-4 h-4 text-[#5A7A8F] shrink-0" strokeWidth={1.5} />
+									<span>System components:</span>
+								</div>
+								<span className="font-mono font-bold text-[#1A1A1A]">{formatCurrency(systemCost)}</span>
+							</div>
+							
+							<div className="flex justify-between items-center text-sm text-[#5E5E5E]">
+								<div className="flex items-center gap-2">
+									<Zap className="w-4 h-4 text-[#5A7A8F] shrink-0" strokeWidth={1.5} />
+									<span>Electricity ({timePeriodMonths} mo):</span>
+								</div>
+								<span className="font-mono font-bold text-[#1A1A1A]">{formatCurrency(calculations.electricityCost)}</span>
+							</div>
+							
+							<div className="flex justify-between items-center text-sm text-[#5E5E5E]">
+								<div className="flex items-center gap-2">
+									<Wrench className="w-4 h-4 text-[#5A7A8F] shrink-0" strokeWidth={1.5} />
+									<span>Maintenance budget:</span>
+								</div>
+								<span className="font-mono font-bold text-[#1A1A1A]">{formatCurrency(calculations.electricityCost)}</span>
+							</div>
+
+							{costOfCapitalPercent > 0 && (
+								<div className="flex justify-between items-center text-sm text-amber-700 font-medium">
+									<div className="flex items-center gap-2">
+										<Coins className="w-4 h-4 text-[#C88D4E] shrink-0" strokeWidth={1.5} />
+										<span>Cost of Capital ({costOfCapitalPercent}%/yr):</span>
+									</div>
+									<span className="font-mono font-bold">+{formatCurrency(calculations.opportunityCost)}</span>
+								</div>
+							)}
+
+							<div className="flex justify-between items-center text-sm text-emerald-700 font-medium">
+								<div className="flex items-center gap-2">
+									<Tag className="w-4 h-4 text-emerald-600 shrink-0" strokeWidth={1.5} />
+									<span>Less {timePeriodMonths >= 36 ? '3-Yr' : 'Est.'} Resale ({resalePercent}%):</span>
+								</div>
+								<span className="font-mono font-bold">-{formatCurrency(calculations.resaleValue)}</span>
+							</div>
+
+							<div className="flex justify-between items-center text-md font-extrabold text-[#1A1A1A] pt-4 border-t border-slate-200">
+								<div className="flex items-center gap-2">
+									<DollarSign className="w-4.5 h-4.5 text-[#1A1A1A] shrink-0" strokeWidth={1.5} />
+									<span>Net Local TCO:</span>
+								</div>
+								<span className="text-xl sm:text-2xl text-emerald-600 font-mono font-black">
+									<AnimatedCounter value={calculations.netLocalTco} formatter={formatCurrency} />
+								</span>
+							</div>
+							
+							<div className="flex justify-between text-xs text-[#8C8C8C] font-mono pl-6">
+								<span>Cost per Hour:</span>
+								<span className="text-emerald-600 font-bold">${calculations.localCostPerHour.toFixed(3)}/hr</span>
+							</div>
+						</div>
+
+						{/* Cloud GPU Breakdown */}
+						<div className="space-y-3.5 pt-2">
+							<p className="text-xs font-mono font-bold text-[#8C8C8C] uppercase tracking-[0.2em]">{activeProvider.providerName} ({cloudGpuCount}x {activeProvider.gpuModel})</p>
+							
+							<div className="flex justify-between items-center text-sm text-[#5E5E5E]">
+								<div className="flex items-center gap-2">
+									<Cloud className="w-4 h-4 text-[#5A7A8F] shrink-0" strokeWidth={1.5} />
+									<span>Usage ({cloudGpuCount}x @ ${activeProvider.rate}/hr):</span>
+								</div>
+								<span className="font-mono font-bold text-[#1A1A1A]">{formatCurrency(calculations.cloudUsageCost)}</span>
+							</div>
+
+							<div className="flex justify-between items-center text-sm text-[#5E5E5E]">
+								<div className="flex items-center gap-2">
+									<Database className="w-4 h-4 text-[#5A7A8F] shrink-0" strokeWidth={1.5} />
+									<span>Storage ({timePeriodMonths} mo):</span>
+								</div>
+								<span className="font-mono font-bold text-[#1A1A1A]">{formatCurrency(calculations.cloudStorageCost)}</span>
+							</div>
+
+							<div className="flex justify-between items-center text-md font-extrabold text-[#1A1A1A] pt-4 border-t border-slate-200">
+								<div className="flex items-center gap-2">
+									<CreditCard className="w-4.5 h-4.5 text-[#1A1A1A] shrink-0" strokeWidth={1.5} />
+									<span>Total Cloud Cost:</span>
+								</div>
+								<span className="text-xl sm:text-2xl text-cyan-600 font-mono font-black">
+									<AnimatedCounter value={calculations.cloudTco} formatter={formatCurrency} />
+								</span>
+							</div>
+							
+							<div className="flex justify-between text-xs text-[#8C8C8C] font-mono pl-6">
+								<span>Cost per Hour:</span>
+								<span className="text-cyan-600 font-bold">${calculations.cloudCostPerHour.toFixed(3)}/hr</span>
+							</div>
+						</div>
 					</div>
-					<div className="panel-soft rounded-[1.5rem] p-5">
-						<p className="text-xs text-[#8C8C8C] [.light_&]:text-[#8C8C8C] font-medium">Resale Value Recovery</p>
-						<p className="text-2xl font-black #1A1A1A [.light_&]:text-emerald-600 mt-1.5 font-mono">
-							{formatCurrency(calculations.resaleValue)}
-						</p>
+
+					{/* Verdict Card */}
+					<div 
+						className={`border-2 rounded-2xl transition duration-300 ${
+							calculations.localWins 
+								? 'border-emerald-500 bg-emerald-50/20 shadow-sm' 
+								: 'border-cyan-500 bg-cyan-50/20 shadow-sm'
+						}`}
+					>
+						<div className="p-6">
+							<span className={`inline-flex rounded-full px-3 py-1 font-mono text-[0.68rem] uppercase tracking-[0.24em] font-bold ${
+								calculations.localWins 
+									? 'bg-emerald-100 text-emerald-800 border border-emerald-300' 
+									: 'bg-cyan-100 text-cyan-800 border border-cyan-300'
+							}`}>
+								{calculations.localWins ? '🏠 Local Wins!' : '☁️ Cloud Wins!'}
+							</span>
+
+							<h3 className="mt-4 text-2xl font-extrabold text-[#1A1A1A] leading-tight">
+								{calculations.localWins ? (
+									<>
+										Local saves <span className="text-emerald-500 font-black"><AnimatedCounter value={calculations.netSavings} formatter={formatCurrency} /></span>
+									</>
+								) : (
+									<>
+										Cloud saves <span className="text-cyan-600 font-black"><AnimatedCounter value={calculations.netSavings} formatter={formatCurrency} /></span>
+									</>
+								)}
+							</h3>
+
+							<p className="mt-3 text-sm leading-relaxed text-[#5E5E5E] font-medium">
+								{calculations.localWins 
+									? `Local hardware pays off after ${Number.isFinite(calculations.breakEvenMonths) ? `${calculations.breakEvenMonths} months` : 'Never'}.`
+									: 'Renting on demand prevents costly hardware depreciation and upfront CapEx.'
+								}
+							</p>
+
+							{/* Direct Provider Link CTA inside Verdict Box */}
+							<div className="mt-6 pt-5 border-t border-gray-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+								<div>
+									<span className="text-[10px] text-[#8C8C8C] uppercase tracking-wider font-mono font-bold block">Selected Cloud Provider</span>
+									<div className="flex items-center gap-2 mt-0.5">
+										<span className="text-sm font-bold text-[#1A1A1A]">{activeProvider.providerName}</span>
+										<span className="text-xs text-[#8C8C8C] font-mono">({cloudGpuCount}x {activeProvider.gpuModel})</span>
+									</div>
+								</div>
+								<a
+									href={activeProvider.affiliateUrl}
+									target="_blank"
+									rel="noopener noreferrer"
+									className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold transition cursor-pointer shrink-0 text-white ${
+										calculations.localWins
+											? 'bg-emerald-500 hover:bg-emerald-400 shadow-sm'
+											: 'bg-cyan-500 hover:bg-cyan-400 shadow-sm'
+									}`}
+								>
+									<span>{activeProvider.ctaText || `Deploy on ${activeProvider.providerName}`}</span>
+									<svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 6H6a2 2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					{/* Recommendation & Metrics Widgets */}
+					<div className="grid grid-cols-2 gap-4">
+						<div className="bg-white border border-gray-100 rounded-xl shadow-sm p-5">
+							<p className="text-xs text-[#8C8C8C] font-medium">Break-Even Point</p>
+							<p className="text-2xl font-black text-[#1A1A1A] mt-1.5 font-mono">
+								{Number.isFinite(calculations.breakEvenMonths)
+									? calculations.breakEvenMonths > 12
+										? `Mo ${calculations.breakEvenMonths} (${(calculations.breakEvenMonths / 12).toFixed(1)} yrs)`
+										: `Month ${calculations.breakEvenMonths}`
+									: '> 7 Years'}
+							</p>
+						</div>
+						<div className="bg-white border border-gray-100 rounded-xl shadow-sm p-5">
+							<p className="text-xs text-[#8C8C8C] font-medium">Resale Value Recovery</p>
+							<p className="text-2xl font-black text-emerald-600 mt-1.5 font-mono">
+								{formatCurrency(calculations.resaleValue)}
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 
-		{/* Interactive Break-Even & Renting vs Owning Chart Section */}
-		<div className="mt-12 panel-soft rounded-[2rem] p-6 lg:p-8 space-y-6 border border-gray-200 [.light_&]:border-slate-200">
-			<div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+			{/* Interactive Break-Even & Renting vs Owning Chart Section */}
+			<div className="mt-12 bg-white border border-gray-100 rounded-xl shadow-sm p-6 lg:p-8 space-y-6">
+				<div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+					<div>
+						<h3 className="text-2xl font-bold text-[#1A1A1A]">Renting vs. Owning Cumulative Cost Timeline</h3>
+						<p className="text-[#8C8C8C] text-xs mt-1">
+							Graph of cumulative expenditures over time (0 to 36 months). Intersecting lines graphically highlight the exact Break-Even point.
+						</p>
+					</div>
+					<div className="flex items-center gap-4 text-xs font-mono">
+						<div className="flex items-center gap-2">
+							<span className="w-3 h-3 rounded-full bg-emerald-500 inline-block shadow-[0_0_8px_#10b981]"></span>
+							<span className="text-[#5E5E5E] font-bold">Local Owning Net TCO</span>
+						</div>
+						<div className="flex items-center gap-2">
+							<span className="w-3 h-3 rounded-full bg-cyan-500 inline-block shadow-[0_0_8px_#22d3ee]"></span>
+							<span className="text-[#5E5E5E] font-bold">Cloud Renting ({cloudGpuCount}x)</span>
+						</div>
+					</div>
+				</div>
+
+				<GpuBreakEvenChart
+					data={calculations.monthlyData}
+					breakEvenMonth={calculations.breakEvenMonths}
+					maxMonths={calculations.chartMaxMonths}
+					resalePercent={resalePercent}
+				/>
+			</div>
+
+			{/* Interactive Cloud GPU Directory Section */}
+			<div className="mt-12 border-t border-gray-200/80 pt-12 space-y-8">
 				<div>
-					<h3 className="text-2xl font-bold text-[#1A1A1A] [.light_&]:text-slate-900">Renting vs. Owning Cumulative Cost Timeline</h3>
-					<p className="text-[#5E5E5E] [.light_&]:text-[#8C8C8C] text-xs mt-1">
-						Graph of cumulative expenditures over time (0 to 36 months). Intersecting lines graphically highlight the exact Break-Even point.
+					<h3 className="text-2xl font-bold text-[#1A1A1A] sm:text-3xl">Cloud GPU Directory & Price Explorer</h3>
+					<p className="text-[#5E5E5E] text-sm mt-2">
+						Filter and search through detailed specifications, egress policies, storage costs, and hourly rates of 12 major cloud GPU services. Click "Compare" on any GPU configuration to load it into the TCO calculator above.
 					</p>
 				</div>
-				<div className="flex items-center gap-4 text-xs font-mono">
-					<div className="flex items-center gap-2">
-						<span className="w-3 h-3 rounded-full bg-emerald-400 inline-block shadow-[0_0_8px_#10b981]"></span>
-						<span className="text-[#5E5E5E] [.light_&]:text-slate-700">Local Owning Net TCO</span>
-					</div>
-					<div className="flex items-center gap-2">
-						<span className="w-3 h-3 rounded-full bg-cyan-400 inline-block shadow-[0_0_8px_#22d3ee]"></span>
-						<span className="text-[#5E5E5E] [.light_&]:text-slate-700">Cloud Renting ({cloudGpuCount}x)</span>
-					</div>
-				</div>
+
+				<CloudGpuDirectory
+					selectedPresetId={selectedProviderId}
+					onSelectPreset={(presetId) => {
+						setSelectedProviderId(presetId);
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+					}}
+				/>
 			</div>
-
-			<GpuBreakEvenChart
-				data={calculations.monthlyData}
-				breakEvenMonth={calculations.breakEvenMonths}
-				maxMonths={calculations.chartMaxMonths}
-			/>
-		</div>
-
-		{/* Interactive Cloud GPU Directory Section */}
-		<div className="mt-12 border-t border-gray-200/80 [.light_&]:border-slate-200 pt-12 space-y-8">
-			<div>
-				<h3 className="text-2xl font-bold text-[#1A1A1A] [.light_&]:text-slate-900 sm:text-3xl">Cloud GPU Directory & Price Explorer</h3>
-				<p className="text-[#5E5E5E] [.light_&]:text-[#8C8C8C] text-sm mt-2">
-					Filter and search through detailed specifications, egress policies, storage costs, and hourly rates of 12 major cloud GPU services. Click "Compare" on any GPU configuration to load it into the TCO calculator above.
-				</p>
-			</div>
-
-			<CloudGpuDirectory
-				selectedPresetId={selectedProviderId}
-				onSelectPreset={(presetId) => {
-					setSelectedProviderId(presetId);
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-				}}
-			/>
-		</div>
 		</>
 	);
 }
@@ -1210,8 +1375,8 @@ function CloudGpuDirectory({
 							onClick={() => setActiveTab(tab)}
 							className={`px-4 py-2 rounded-xl text-xs font-bold transition cursor-pointer ${
 								activeTab === tab
-									? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/20'
-									: 'bg-slate-900 border border-gray-200 text-[#5E5E5E] hover:text-[#1A1A1A] hover:border-slate-700 [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-[#8C8C8C] [.light_&]:hover:text-slate-900'
+									? 'bg-cyan-500 text-white shadow-sm'
+									: 'bg-white border border-gray-250 text-[#5E5E5E] hover:text-[#1A1A1A] hover:border-gray-400'
 							}`}
 						>
 							{tab}
@@ -1225,7 +1390,7 @@ function CloudGpuDirectory({
 						placeholder="Search provider or GPU..."
 						value={searchTerm}
 						onChange={(e) => setSearchTerm(e.target.value)}
-						className="w-full pl-4 pr-10 py-2.5 rounded-xl text-xs bg-white border border-gray-200 [.light_&]:bg-white [.light_&]:border-slate-200 text-[#1A1A1A] [.light_&]:text-slate-800 placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition"
+						className="w-full pl-4 pr-10 py-2.5 rounded-xl text-xs bg-white border border-gray-200 text-[#1A1A1A] placeholder-slate-400 focus:outline-none focus:border-cyan-500 transition"
 					/>
 					<span className="absolute right-3 top-3 text-[#8C8C8C] text-xs">🔍</span>
 				</div>
@@ -1234,61 +1399,61 @@ function CloudGpuDirectory({
 			{/* List layout of Providers */}
 			<div className="space-y-8">
 				{filteredProviders.length === 0 ? (
-					<div className="text-center py-12 panel-soft rounded-2xl border border-slate-850">
+					<div className="text-center py-12 bg-white border border-gray-150 rounded-2xl">
 						<p className="text-[#8C8C8C] text-sm">No GPU cloud services found matching your criteria.</p>
 					</div>
 				) : (
 					filteredProviders.map(p => (
-						<div key={p.id} className="panel-soft rounded-[2rem] border border-slate-850 bg-slate-900/30 p-6 lg:p-8 space-y-6 transition duration-200 hover:border-gray-200/80 [.light_&]:bg-white [.light_&]:border-slate-200">
+						<div key={p.id} className="bg-white border border-gray-100 rounded-xl shadow-sm p-6 lg:p-8 space-y-6 transition-all duration-300 hover:border-cyan-500 hover:-translate-y-1">
 							{/* Provider header info */}
-							<div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-200/60 [.light_&]:border-slate-200 pb-5">
+							<div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-100 pb-5">
 								<div className="space-y-2">
 									<div className="flex items-center gap-3">
-										<h4 className="text-xl font-bold text-[#1A1A1A] [.light_&]:text-slate-900">{p.name}</h4>
+										<h4 className="text-xl font-bold text-[#1A1A1A]">{p.name}</h4>
 										<span className={`text-[9px] uppercase tracking-widest font-mono font-bold px-2.5 py-0.5 rounded-full ${
 											p.type === 'Enterprise'
-												? 'bg-purple-500/10 text-purple-400 [.light_&]:text-purple-700 [.light_&]:bg-purple-100 border border-purple-500/20 [.light_&]:border-purple-300'
+												? 'bg-purple-100 text-purple-700 border border-purple-300'
 												: p.type === 'Decentralized'
-													? 'bg-amber-500/10 text-[#C88D4E] [.light_&]:text-amber-700 [.light_&]:bg-amber-100 border border-amber-500/20 [.light_&]:border-amber-300'
-													: 'bg-cyan-500/10 text-[#5A7A8F] [.light_&]:text-cyan-700 [.light_&]:bg-cyan-100 border border-cyan-500/20 [.light_&]:border-cyan-300'
+													? 'bg-amber-100 text-amber-700 border border-amber-300'
+													: 'bg-cyan-100 text-cyan-700 border border-cyan-300'
 										}`}>
 											{p.type}
 										</span>
 									</div>
-									<p className="text-xs text-[#5E5E5E] [.light_&]:text-[#8C8C8C] max-w-3xl leading-5">{p.description}</p>
+									<p className="text-xs text-[#5E5E5E] max-w-3xl leading-5">{p.description}</p>
 								</div>
 
 								<a
 									href={p.affiliateUrl}
 									target="_blank"
 									rel="noopener noreferrer"
-									className="inline-flex items-center justify-center px-4 py-2 text-xs font-bold #5A7A8F [.light_&]:text-cyan-700 hover:text-[#5A7A8F] border border-cyan-500/30 [.light_&]:border-cyan-300 hover:border-cyan-500/50 bg-cyan-950/20 [.light_&]:bg-cyan-50 rounded-xl transition"
+									className="inline-flex items-center justify-center px-4 py-2 text-xs font-bold text-cyan-700 hover:text-cyan-800 border border-cyan-300 bg-cyan-50 rounded-xl transition"
 								>
 									{p.ctaText || 'Visit site →'}
 								</a>
 							</div>
 
 							{/* Provider specs meta */}
-							<div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono text-[#5E5E5E] [.light_&]:text-[#8C8C8C]">
-								<div className="bg-white [.light_&]:bg-slate-50 p-3.5 rounded-xl border border-gray-200 [.light_&]:border-slate-200">
-									<span className="text-[10px] text-[#8C8C8C] [.light_&]:text-[#8C8C8C] uppercase tracking-wider block">Billing Unit</span>
-									<span className="text-[#5E5E5E] [.light_&]:text-slate-900 mt-1 block font-bold">{p.billingUnit}</span>
+							<div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-mono text-[#8C8C8C]">
+								<div className="bg-gray-50/50 p-3.5 rounded-xl border border-gray-100">
+									<span className="text-[10px] uppercase tracking-wider block">Billing Unit</span>
+									<span className="text-[#1A1A1A] mt-1 block font-bold">{p.billingUnit}</span>
 								</div>
-								<div className="bg-white [.light_&]:bg-slate-50 p-3.5 rounded-xl border border-gray-200 [.light_&]:border-slate-200">
-									<span className="text-[10px] text-[#8C8C8C] [.light_&]:text-[#8C8C8C] uppercase tracking-wider block">Network Egress</span>
-									<span className="#1A1A1A [.light_&]:text-emerald-600 mt-1 block font-bold">{p.egress}</span>
+								<div className="bg-gray-50/50 p-3.5 rounded-xl border border-gray-100">
+									<span className="text-[10px] uppercase tracking-wider block">Network Egress</span>
+									<span className="text-emerald-600 mt-1 block font-bold">{p.egress}</span>
 								</div>
-								<div className="bg-white [.light_&]:bg-slate-50 p-3.5 rounded-xl border border-gray-200 [.light_&]:border-slate-200">
-									<span className="text-[10px] text-[#8C8C8C] [.light_&]:text-[#8C8C8C] uppercase tracking-wider block">Storage Cost</span>
-									<span className="text-[#5A7A8F] [.light_&]:text-cyan-600 mt-1 block font-bold">{p.storageCost}</span>
+								<div className="bg-gray-50/50 p-3.5 rounded-xl border border-gray-100">
+									<span className="text-[10px] uppercase tracking-wider block">Storage Cost</span>
+									<span className="text-cyan-600 mt-1 block font-bold">{p.storageCost}</span>
 								</div>
 							</div>
 
 							{/* GPU Configs Table/List */}
-							<div className="overflow-x-auto rounded-xl border border-gray-200/80 bg-white [.light_&]:bg-slate-50 [.light_&]:border-slate-200">
+							<div className="overflow-x-auto rounded-xl border border-gray-150 bg-gray-50/20">
 								<table className="w-full text-left border-collapse min-w-[600px]">
 									<thead>
-										<tr className="border-b border-gray-200/80 bg-white text-[10px] font-mono uppercase tracking-wider text-[#8C8C8C]">
+										<tr className="border-b border-gray-150 bg-gray-50/50 text-[10px] font-mono uppercase tracking-wider text-[#8C8C8C]">
 											<th className="py-3 px-4">GPU Model</th>
 											<th className="py-3 px-4">VRAM</th>
 											<th className="py-3 px-4 text-right">Rate ($/hr)</th>
@@ -1296,23 +1461,23 @@ function CloudGpuDirectory({
 											<th className="py-3 px-4 text-right">Compare</th>
 										</tr>
 									</thead>
-									<tbody className="divide-y divide-slate-800/40 text-xs font-mono">
+									<tbody className="divide-y divide-gray-100 text-xs font-mono">
 										{p.gpus.map((gpu) => {
 											const presetId = `${p.id}-${gpu.gpuModel.toLowerCase().replace(/[^a-z0-9]/g, '-')}`;
 											const isCurrentlySelected = selectedPresetId === presetId;
 
 											return (
-												<tr key={gpu.gpuModel} className={`hover:bg-slate-900/30 transition ${isCurrentlySelected ? 'bg-cyan-500/5' : ''}`}>
+												<tr key={gpu.gpuModel} className={`hover:bg-slate-100/30 transition ${isCurrentlySelected ? 'bg-cyan-500/5' : ''}`}>
 													<td className="py-3.5 px-4 font-semibold text-[#5E5E5E]">{gpu.gpuModel}</td>
 													<td className="py-3.5 px-4 text-[#5E5E5E]">{gpu.vram}</td>
-													<td className="py-3.5 px-4 text-right text-[#5A7A8F] font-bold">
+													<td className="py-3.5 px-4 text-right text-cyan-600 font-bold">
 														${gpu.rate.toFixed(2)}/hr
 													</td>
 													<td className="py-3.5 px-4 text-center text-[#8C8C8C] text-[10px]">
 														{gpu.spotRate ? (
 															<span className="text-[#C88D4E]">Spot: ${gpu.spotRate.toFixed(2)}/hr</span>
 														) : gpu.communityRate ? (
-															<span className="text-indigo-400">P2P: ${gpu.communityRate.toFixed(2)}/hr</span>
+															<span className="text-indigo-650 font-semibold">P2P: ${gpu.communityRate.toFixed(2)}/hr</span>
 														) : gpu.note ? (
 															<span>{gpu.note}</span>
 														) : (
@@ -1325,8 +1490,8 @@ function CloudGpuDirectory({
 															onClick={() => onSelectPreset(presetId)}
 															className={`px-3 py-1.5 rounded-lg font-bold text-[10px] transition cursor-pointer ${
 																isCurrentlySelected
-																	? 'bg-emerald-500/10 #1A1A1A border border-emerald-500/30 font-extrabold shadow-[0_0_12px_rgba(16,185,129,0.15)]'
-																	: 'bg-cyan-500 text-slate-950 hover:bg-cyan-400 shadow-md shadow-cyan-500/10'
+																	? 'bg-emerald-100 text-emerald-800 border border-emerald-300 font-extrabold'
+																	: 'bg-cyan-500 text-white hover:bg-cyan-600 shadow-sm'
 															}`}
 														>
 															{isCurrentlySelected ? 'Selected' : 'Compare'}
@@ -1357,17 +1522,20 @@ interface ChartPoint {
 function GpuBreakEvenChart({
 	data,
 	breakEvenMonth,
-	maxMonths
+	maxMonths,
+	resalePercent
 }: {
 	data: ChartPoint[];
 	breakEvenMonth: number;
 	maxMonths: number;
+	resalePercent: number;
 }) {
 	const [hoverIndex, setHoverIndex] = useState<number | null>(null);
+	const [isHoveredBreakEven, setIsHoveredBreakEven] = useState(false);
 
 	const width = 800;
 	const height = 340;
-	const padding = { top: 35, right: 30, bottom: 40, left: 65 };
+	const padding = { top: 45, right: 30, bottom: 40, left: 65 };
 	const chartWidth = width - padding.left - padding.right;
 	const chartHeight = height - padding.top - padding.bottom;
 
@@ -1403,7 +1571,7 @@ function GpuBreakEvenChart({
 	const xScale = (m: number) => padding.left + (m / Math.max(1, maxMonths)) * chartWidth;
 	const yScale = (val: number) => padding.top + chartHeight - (val / Math.max(1, yMax)) * chartHeight;
 
-	// SVG Path generation
+	// SVG Path generation (Lines)
 	const localPath = useMemo(() => {
 		return data.reduce((acc, point, idx) => {
 			const x = xScale(point.month);
@@ -1420,6 +1588,23 @@ function GpuBreakEvenChart({
 		}, '');
 	}, [data, maxMonths, yMax]);
 
+	// SVG Path generation (Area shapes)
+	const localAreaPath = useMemo(() => {
+		if (data.length === 0) return '';
+		const firstX = xScale(data[0].month);
+		const lastX = xScale(data[data.length - 1].month);
+		const zeroY = yScale(0);
+		return `${localPath} L ${lastX.toFixed(1)} ${zeroY.toFixed(1)} L ${firstX.toFixed(1)} ${zeroY.toFixed(1)} Z`;
+	}, [data, localPath, maxMonths, yMax]);
+
+	const cloudAreaPath = useMemo(() => {
+		if (data.length === 0) return '';
+		const firstX = xScale(data[0].month);
+		const lastX = xScale(data[data.length - 1].month);
+		const zeroY = yScale(0);
+		return `${cloudPath} L ${lastX.toFixed(1)} ${zeroY.toFixed(1)} L ${firstX.toFixed(1)} ${zeroY.toFixed(1)} Z`;
+	}, [data, cloudPath, maxMonths, yMax]);
+
 	// Break-even coordinates
 	const breakEvenX = Number.isFinite(breakEvenMonth) && breakEvenMonth <= maxMonths ? xScale(breakEvenMonth) : null;
 	const breakEvenPoint = Number.isFinite(breakEvenMonth) && breakEvenMonth <= maxMonths ? data.find(d => d.month === breakEvenMonth) : null;
@@ -1428,15 +1613,34 @@ function GpuBreakEvenChart({
 	const activePoint = hoverIndex !== null && data[hoverIndex] ? data[hoverIndex] : null;
 
 	return (
-		<div className="relative w-full overflow-hidden">
+		<div className="relative w-full">
 			<svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto overflow-visible select-none">
-				{/* Horizontal Gridlines & Y-Axis Labels */}
+				{/* Gradient definitions for area fills */}
+				<defs>
+					<linearGradient id="localAreaGradient" x1="0" y1="0" x2="0" y2="1">
+						<stop offset="0%" stopColor="#10b981" stopOpacity="0.25" />
+						<stop offset="100%" stopColor="#10b981" stopOpacity="0" />
+					</linearGradient>
+					<linearGradient id="cloudAreaGradient" x1="0" y1="0" x2="0" y2="1">
+						<stop offset="0%" stopColor="#22d3ee" stopOpacity="0.25" />
+						<stop offset="100%" stopColor="#22d3ee" stopOpacity="0" />
+					</linearGradient>
+				</defs>
+
+				{/* Subtle dashed horizontal grid lines aligned with Y-axis ticks */}
 				{yTicks.map((val) => {
 					const y = yScale(val);
 					const label = val === 0 ? '$0' : val >= 1000 ? (val % 1000 === 0 ? `$${val / 1000}k` : `$${(val / 1000).toFixed(1)}k`) : `$${val}`;
 					return (
 						<g key={val}>
-							<line x1={padding.left} y1={y} x2={width - padding.right} y2={y} stroke="rgba(255,255,255,0.08)" strokeDasharray="4 4" />
+							<line 
+								x1={padding.left} 
+								y1={y} 
+								x2={width - padding.right} 
+								y2={y} 
+								stroke="#e5e7eb" 
+								strokeDasharray="3 3" 
+							/>
 							<text x={padding.left - 10} y={y + 4} textAnchor="end" className="text-xs font-mono font-bold fill-slate-400">
 								{label}
 							</text>
@@ -1449,7 +1653,7 @@ function GpuBreakEvenChart({
 					const x = xScale(m);
 					return (
 						<g key={m}>
-							<line x1={x} y1={padding.top} x2={x} y2={height - padding.bottom} stroke="rgba(255,255,255,0.06)" />
+							<line x1={x} y1={padding.top} x2={x} y2={height - padding.bottom} stroke="rgba(0,0,0,0.04)" />
 							<text x={x} y={height - padding.bottom + 22} textAnchor="middle" className="text-xs font-mono font-bold fill-slate-400">
 								m{m}
 							</text>
@@ -1457,40 +1661,67 @@ function GpuBreakEvenChart({
 					);
 				})}
 
+				{/* Area chart gradients */}
+				<path d={cloudAreaPath} fill="url(#cloudAreaGradient)" />
+				<path d={localAreaPath} fill="url(#localAreaGradient)" />
+
 				{/* Cloud TCO Line (Cyan) */}
 				<path d={cloudPath} fill="none" stroke="#22d3ee" strokeWidth="3" strokeLinecap="round" className="drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]" />
 
 				{/* Local Owning Net TCO Line (Emerald) */}
 				<path d={localPath} fill="none" stroke="#10b981" strokeWidth="3" strokeLinecap="round" className="drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]" />
 
-				{/* Break-Even Point Vertical Highlight Line */}
+				{/* Break-Even Point glowing vertical marker & pulsing dot */}
 				{breakEvenX !== null && breakEvenY !== null && (
-					<g>
+					<g 
+						className="cursor-pointer"
+						onMouseEnter={() => setIsHoveredBreakEven(true)}
+						onMouseLeave={() => setIsHoveredBreakEven(false)}
+					>
+						{/* Glowing vertical marker */}
 						<line x1={breakEvenX} y1={padding.top} x2={breakEvenX} y2={height - padding.bottom} stroke="#f59e0b" strokeWidth="2" strokeDasharray="4 4" />
-						<circle cx={breakEvenX} cy={breakEvenY} r="7" fill="#f59e0b" className="animate-pulse shadow-[0_0_12px_#f59e0b]" />
+						
+						{/* Pulsing ring */}
+						<circle 
+							cx={breakEvenX} 
+							cy={breakEvenY} 
+							r="14" 
+							fill="#f59e0b" 
+							className="animate-ping opacity-35" 
+							style={{ transformOrigin: `${breakEvenX}px ${breakEvenY}px` }} 
+						/>
+						{/* Pulsing dot intersection */}
+						<circle cx={breakEvenX} cy={breakEvenY} r="8" fill="#f59e0b" className="drop-shadow-[0_0_8px_#f59e0b]" />
 						<circle cx={breakEvenX} cy={breakEvenY} r="4" fill="#ffffff" />
-						<g transform={`translate(${Math.min(breakEvenX, width - 150)}, ${padding.top - 10})`}>
-							<rect x="-10" y="-16" width="145" height="26" rx="6" fill="#f59e0b" />
-							<text x="62" y="2" textAnchor="middle" className="text-xs font-extrabold font-mono fill-slate-950">
-								★ Break-Even: Mo {breakEvenMonth}
+						
+						{/* Static Label (Optional indicator if not hovered) */}
+						<g transform={`translate(${Math.min(breakEvenX, width - 150)}, ${padding.top - 20})`}>
+							<rect x="-10" y="-14" width="145" height="22" rx="11" fill="#f59e0b" />
+							<text x="62.5" y="1" textAnchor="middle" className="text-[10px] font-black font-sans fill-slate-950 uppercase tracking-wider">
+								★ Break-Even
 							</text>
 						</g>
 					</g>
 				)}
 
-				{/* 36-Month Resale Offset Marker */}
-				{maxMonths >= 36 && data.find(d => d.month === 36) && (
-					<g transform={`translate(${xScale(36)}, ${yScale(data.find(d => d.month === 36)!.netLocal)})`}>
-						<line x1="0" y1="-15" x2="0" y2="15" stroke="#10b981" strokeWidth="1.5" strokeDasharray="2 2" />
-						<circle cx="0" cy="0" r="5" fill="#10b981" />
-						<g transform="translate(-65, -30)">
-							<rect width="130" height="20" rx="5" fill="#022c22" stroke="#10b981" strokeWidth="1" />
-							<text x="65" y="14" textAnchor="middle" className="text-xs font-bold font-mono fill-emerald-300">
-								💵 Resale Offset (-20%)
-							</text>
+				{/* 36-Month Resale Offset Marker (Floating Pill with shadow-md to avoid intersections) */}
+				{maxMonths >= 36 && data.find(d => d.month === 36) && (() => {
+					const pt36 = data.find(d => d.month === 36)!;
+					const x36 = xScale(36);
+					const y36 = yScale(pt36.netLocal);
+					return (
+						<g transform={`translate(${x36}, ${y36})`}>
+							<line x1="0" y1="0" x2="0" y2="-45" stroke="#10b981" strokeWidth="1.5" strokeDasharray="3 3" />
+							<circle cx="0" cy="0" r="4.5" fill="#10b981" />
+							<g transform="translate(-75, -70)" className="filter drop-shadow-[0_4px_6px_rgba(0,0,0,0.15)]">
+								<rect width="150" height="24" rx="12" fill="#ffffff" stroke="#10b981" strokeWidth="1.5" />
+								<text x="75" y="15" textAnchor="middle" className="text-[9px] font-black font-sans fill-[#1a1a1a] tracking-wider uppercase">
+									💵 RESALE OFFSET (-{resalePercent}%)
+								</text>
+							</g>
 						</g>
-					</g>
-				)}
+					);
+				})()}
 
 				{/* Hover Overlay Nodes */}
 				{data.map((pt, idx) => {
@@ -1502,7 +1733,7 @@ function GpuBreakEvenChart({
 						<g key={pt.month} onMouseEnter={() => setHoverIndex(idx)} className="cursor-pointer">
 							<rect x={cx - 10} y={padding.top} width="20" height={chartHeight} fill="transparent" />
 							{hoverIndex === idx && (
-								<line x1={cx} y1={padding.top} x2={cx} y2={height - padding.bottom} stroke="rgba(255,255,255,0.3)" strokeDasharray="2 2" />
+								<line x1={cx} y1={padding.top} x2={cx} y2={height - padding.bottom} stroke="rgba(0,0,0,0.15)" strokeDasharray="2 2" />
 							)}
 							<circle cx={cx} cy={cyLocal} r={hoverIndex === idx ? "6" : "3.5"} fill="#10b981" />
 							<circle cx={cx} cy={cyCloud} r={hoverIndex === idx ? "6" : "3.5"} fill="#22d3ee" />
@@ -1511,20 +1742,51 @@ function GpuBreakEvenChart({
 				})}
 			</svg>
 
+			{/* Floating Tooltip for Break-Even Dot Hover */}
+			{isHoveredBreakEven && breakEvenPoint && breakEvenX !== null && breakEvenY !== null && (
+				<div 
+					className="absolute z-30 pointer-events-none bg-slate-900 text-white rounded-lg p-2.5 text-xs font-mono shadow-md border border-slate-700 max-w-[200px]"
+					style={{
+						left: `${(breakEvenX / width) * 100}%`,
+						top: `${(breakEvenY / height) * 100}%`,
+						transform: 'translate(-50%, -120%)',
+					}}
+				>
+					<div className="font-extrabold text-[#f59e0b] flex items-center gap-1">
+						<Sparkles className="w-3.5 h-3.5 inline text-[#f59e0b]" />
+						<span>Break-Even Point</span>
+					</div>
+					<div className="mt-1.5 border-t border-slate-800 pt-1">
+						<div className="flex justify-between gap-4 text-slate-400">
+							<span>Period:</span>
+							<span className="font-bold text-white">Month {breakEvenMonth}</span>
+						</div>
+						<div className="flex justify-between gap-4 text-emerald-400 font-bold">
+							<span>Local TCO:</span>
+							<span>{formatCurrency(breakEvenPoint.netLocal)}</span>
+						</div>
+						<div className="flex justify-between gap-4 text-cyan-400 font-bold">
+							<span>Cloud TCO:</span>
+							<span>{formatCurrency(breakEvenPoint.cloud)}</span>
+						</div>
+					</div>
+				</div>
+			)}
+
 			{/* Interactive Hover Tooltip Card */}
 			{activePoint ? (
-				<div className="mt-4 panel-soft rounded-xl p-4 border border-slate-700 bg-white/90 text-sm font-mono flex flex-wrap justify-between items-center gap-4">
+				<div className="mt-4 bg-white border border-gray-150 rounded-xl p-4 text-sm font-mono flex flex-wrap justify-between items-center gap-4 shadow-sm">
 					<span className="text-[#1A1A1A] font-extrabold text-base">Month {activePoint.month}</span>
-					<span className="#1A1A1A font-bold">Local Net TCO: {formatCurrency(activePoint.netLocal)}</span>
-					<span className="text-[#5A7A8F] font-bold">Cloud TCO: {formatCurrency(activePoint.cloud)}</span>
-					<span className="text-[#C88D4E] font-bold">
+					<span className="text-[#1A1A1A] font-bold">Local Net TCO: {formatCurrency(activePoint.netLocal)}</span>
+					<span className="text-cyan-600 font-bold">Cloud TCO: {formatCurrency(activePoint.cloud)}</span>
+					<span className="text-amber-700 font-bold">
 						{activePoint.cloud > activePoint.netLocal
 							? `Local Net Savings: ${formatCurrency(activePoint.cloud - activePoint.netLocal)}`
 							: `Cloud Net Savings: ${formatCurrency(activePoint.netLocal - activePoint.cloud)}`}
 					</span>
 				</div>
 			) : (
-				<div className="mt-4 panel-soft rounded-xl p-3 border border-gray-200/80 bg-white text-xs font-mono text-[#5E5E5E] text-center">
+				<div className="mt-4 bg-white border border-gray-150 rounded-xl p-3 text-xs font-mono text-[#8C8C8C] text-center shadow-sm">
 					Hover over any month on the graph to inspect exact TCO numbers & savings breakdown.
 				</div>
 			)}
