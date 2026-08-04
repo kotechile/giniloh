@@ -662,10 +662,28 @@ export default function LocalVsCloudGpuCalculator() {
 					<button
 						type="button"
 						onClick={() => applyPreset('blackwell-vs-2x-ada')}
-						className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-purple-655 bg-purple-600 text-white hover:bg-purple-750 hover:bg-purple-750 transition shadow-sm cursor-pointer"
+						className="px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold bg-purple-600 text-white hover:bg-purple-700 transition shadow-sm cursor-pointer"
 					>
 						1x Blackwell vs 2x RTX 6000 Ada
 					</button>
+				</div>
+			</div>
+
+			{/* Active Comparison Status Bar */}
+			<div className="mb-6 bg-slate-50 border border-slate-200 rounded-xl p-4 flex flex-wrap items-center justify-between gap-4">
+				<div className="flex items-center gap-3">
+					<span className="flex h-2.5 w-2.5 rounded-full bg-cyan-500 animate-pulse" />
+					<span className="text-xs font-mono font-bold uppercase tracking-wider text-gray-400">Comparing:</span>
+					<span className="text-sm font-extrabold text-[#1A1A1A]">
+						🏠 Local {activeGpu.name.split(' - ')[0]} ({activeGpu.vram})
+					</span>
+					<span className="text-xs text-gray-400 font-mono">vs</span>
+					<span className="text-sm font-extrabold text-cyan-600">
+						☁️ Cloud {cloudGpuCount}x {activeProvider.providerName} {activeProvider.gpuModel} ({activeProvider.vram})
+					</span>
+				</div>
+				<div className="text-xs font-mono bg-cyan-100 text-cyan-800 px-2.5 py-1 rounded-md font-bold uppercase">
+					Active Cloud Option: {activeProvider.providerName}
 				</div>
 			</div>
 
@@ -1081,9 +1099,12 @@ export default function LocalVsCloudGpuCalculator() {
 					{/* Cost Analysis Card Styled like a Digital Receipt */}
 					<div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-6 relative overflow-hidden shadow-sm">
 						{/* Receipt Header */}
-						<div className="text-center pb-4 border-b border-dashed border-slate-350">
+						<div className="text-center pb-4 border-b border-dashed border-slate-250">
 							<h3 className="text-lg font-black text-[#1A1A1A] tracking-wider uppercase">GPU TCO RECEIPT</h3>
 							<p className="text-[10px] font-mono text-gray-400 uppercase tracking-widest mt-1">Cost Analysis Breakdown</p>
+							<div className="mt-2 text-xs font-extrabold text-cyan-650 text-cyan-600 uppercase tracking-wider">
+								Comparing Local vs {activeProvider.providerName}
+							</div>
 						</div>
 
 						{/* Local Hardware Breakdown */}
@@ -1119,7 +1140,7 @@ export default function LocalVsCloudGpuCalculator() {
 									<Wrench className="w-4 h-4 text-[#5A7A8F] shrink-0" strokeWidth={1.5} />
 									<span>Maintenance budget:</span>
 								</div>
-								<span className="font-mono font-bold text-[#1A1A1A]">{formatCurrency(calculations.electricityCost)}</span>
+								<span className="font-mono font-bold text-[#1A1A1A]">{formatCurrency(calculations.maintenanceCost)}</span>
 							</div>
 
 							{costOfCapitalPercent > 0 && (
