@@ -35,22 +35,22 @@ const embedCode = `<div class="giniloh-calculator-embed" data-calculator="${slug
 			<!-- Embed Block -->
 			{slug && (
 				<div class="mt-16 border-t border-gray-200 pt-8">
-					<details class="group">
-						<summary class="flex cursor-pointer items-center justify-between font-mono text-xs uppercase tracking-[0.24em] text-[#8C8C8C] hover:text-[#1A1A1A] transition select-none">
+					<details class="group rounded-[1.8rem] border border-gray-200 bg-white p-6 shadow-sm">
+						<summary class="flex cursor-pointer items-center justify-between font-mono text-xs uppercase tracking-[0.24em] text-slate-400 hover:text-slate-900 transition select-none">
 							<span class="flex items-center gap-2">
-								<svg class="h-4 w-4 text-[#5A7A8F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<svg class="h-4 w-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 								</svg>
 								Embed this calculator on your site
 							</span>
 							<span class="text-gray-400 group-open:rotate-180 transition-transform duration-200">↓</span>
 						</summary>
-						<div class="mt-4 rounded-xl border border-[#E5E5E5] bg-white p-4 font-mono text-xs">
-							<p class="text-[#5E5E5E] mb-3 leading-relaxed font-sans">
+						<div class="mt-6 flex flex-col gap-4">
+							<p class="text-sm text-slate-600 leading-relaxed font-sans">
 								<strong>Bloggers & authors:</strong> Embed this interactive calculator directly in your articles or comparison guides. It loads dynamically via a responsive iframe (auto-resizing to prevent double scrollbars) and provides a direct, high-value tool for your audience.
 							</p>
-							<div class="relative flex items-center justify-between gap-4 rounded-lg bg-white p-3 border border-[#E5E5E5]">
-								<code class="text-[#5A7A8F] break-all select-all block pr-20">{embedCode}</code>
+							<div class="relative flex items-center justify-between gap-4 rounded-xl bg-gray-50 p-4 border border-gray-200">
+								<code class="text-slate-700 break-all select-all block pr-20">{embedCode}</code>
 								<button
 									type="button"
 									data-copy-embed
@@ -65,7 +65,7 @@ const embedCode = `<div class="giniloh-calculator-embed" data-calculator="${slug
 				</div>
 			)}
 		</div>
-		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+		<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3 calculator-aside-grid">
 			<slot name="aside" />
 		</div>
 	</div>

@@ -918,6 +918,20 @@ input[type="checkbox"] {
   border: 1px solid #E5E5E5 !important;
 }
 
+/* Sidebar Padding Fixes to prevent resets */
+.sidebar-card,
+.calculator-aside-grid > article {
+  padding: 1.5rem !important; /* 24px */
+}
+
+.sidebar-sub-card,
+.calculator-aside-grid > article .p-4,
+.calculator-aside-grid > article [class*="p-4"] {
+  padding: 1rem !important; /* 16px */
+}
+
+
+
 
 
 
