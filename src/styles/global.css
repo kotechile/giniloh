@@ -462,14 +462,15 @@ a {
 /* WordPress injected takeaway summary block */
 .prose .geo-key-takeaways,
 .prose [data-geo-injected="key-takeaways"] {
-  background: rgba(15, 23, 42, 0.6) !important;
-  color: #e2e8f0 !important;
-  border: 1px solid rgba(56, 189, 248, 0.2) !important;
+  background: #F4F6F8 !important; /* Cool pale gray background */
+  color: #333333 !important;      /* Crisp charcoal body text */
+  border: 1px solid #E5E5E5 !important;
+  border-left: 4px solid #5A7A8F !important; /* Steel blue left accent border */
   border-radius: 18px !important;
   padding: 2rem 2.25rem !important;
   margin: 0 0 24px 0 !important;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4) !important;
-  backdrop-filter: blur(8px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important; /* Soft floating shadow */
+  backdrop-filter: none !important;
 }
 
 .prose .geo-key-takeaways h2,
@@ -477,7 +478,7 @@ a {
   margin: 0 0 1.25rem 0 !important;
   padding-left: 0 !important;
   border-left: 0 !important;
-  color: #ffffff !important;
+  color: #2C3E50 !important; /* Crisp dark slate heading */
   font-size: 1.875rem !important;
   line-height: 2.25rem !important;
   font-weight: 700 !important;
@@ -488,7 +489,7 @@ a {
 .prose [data-geo-injected="key-takeaways"] ul {
   margin: 0 !important;
   padding-left: 1.5rem !important;
-  color: #cbd5e1 !important;
+  color: #333333 !important; /* Crisp charcoal text */
   list-style: disc !important;
   list-style-position: outside !important;
 }
@@ -497,7 +498,7 @@ a {
 .prose [data-geo-injected="key-takeaways"] li,
 .prose .geo-key-takeaways p,
 .prose [data-geo-injected="key-takeaways"] p {
-  color: #cbd5e1 !important;
+  color: #333333 !important; /* Crisp charcoal text */
   font-size: 1.05rem !important;
   line-height: 1.8 !important;
 }
@@ -510,7 +511,7 @@ a {
 
 .prose .geo-key-takeaways li::marker,
 .prose [data-geo-injected="key-takeaways"] li::marker {
-  color: #06b6d4 !important;
+  color: #5A7A8F !important; /* Steel blue bullets */
   font-size: 0.95em !important;
 }
 

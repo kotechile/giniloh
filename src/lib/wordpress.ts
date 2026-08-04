@@ -126,7 +126,8 @@ function normalizePost(post: WordPressPostResponse): WordPressPost {
 	// Remove redundant "Short Answer" section and the "article-context" block inserted by WordPress
 	htmlContent = htmlContent
 		.replace(/<div class="article-context"[^>]*>[\s\S]*?<\/div>\s*<\/div>/ig, '')
-		.replace(/<h2[^>]*>\s*Short Answer\s*<\/h2>\s*<p[^>]*>[\s\S]*?<\/p>/ig, '');
+		.replace(/<h2[^>]*>\s*Short Answer\s*<\/h2>\s*<p[^>]*>[\s\S]*?<\/p>/ig, '')
+		.replace(/(<h[2-4][^>]*>)\s*Key Takeaways\s*(<\/h[2-4]>)/gi, '$1The Strategy Brief$2');
 
 	// Clean up wpautop formatting inside LaTeX blocks so KaTeX doesn't choke on <br> tags
 	// Matches $$...$$ or \[...\]
