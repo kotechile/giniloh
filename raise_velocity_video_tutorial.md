@@ -7,23 +7,23 @@ This guide provides a step-by-step video outline, storyboard, and voiceover scri
 ## 🎥 Video Details
 * **Target Length**: 3 - 4 minutes (YouTube / LinkedIn) or 60 seconds (Shorts/Reels split)
 * **Visual Style**: Clean screenshares of the calculator UI, mixed with zoom-ins on interactive charts and data highlights.
-* **Goal**: Show professionals how to calculate their true "Loyalty Tax" versus "Job-Hopping Friction".
+* **Goal**: Show professionals how to calculate their true "Loyalty Tax" and find their optimal career trajectory.
 
 ---
 
 ## 🎬 Storyboard & Script
 
 ### Hook (0:00 - 0:25)
-* **Visual**: Show the user's cursor hovering over the **compounding chart** showing the gap widening over 10 years, then zoom in on the **$11,576 delta** metric.
+* **Visual**: Show the user's cursor hovering over the **compounding chart** showing the gap widening over 10 years, then zoom in on the **+$19,285 portfolio delta** and the **+17% Switcher premium** metrics.
 * **Voiceover**: 
-  > *"Did you know switching jobs isn't always as profitable as it looks on paper? It’s called the 'Job-Hopping Tax.' While you might get a higher base salary, unvested 401(k) matches, bonus clawbacks, and health insurance gaps can destroy your gains. Today, we're using Giniloh's Raise Velocity Calculator to find your mathematical sweet spot."*
+  > *"Did you know staying loyal to your employer could be costing you a 17% pay cut? It’s called the 'Loyalty Tax.' Today, we’re using Giniloh's Raise Velocity Calculator to see exactly how much you stand to gain by switching jobs, even after accounting for 401(k) match forfeitures, COBRA health gaps, and bonus losses. Let's look at how this path unlocks an extra $19,285 in compounded wealth."*
 
 ---
 
 ### Step 1: Set the Baseline (0:25 - 0:55)
-* **Visual**: Click on the **⚙️ Core parameters** tab. Clear the starting salary box and type in `100000` (highlighting the newly updated alignment!). Show the tax rate slider set to `30%`.
+* **Visual**: Click on the **⚙️ Core parameters** tab. Highlight the starting salary set to `10000` (which we compound over 10 years). Show the tax rate slider set to `30%`.
 * **Voiceover**:
-  > *"First, let's open the Core Parameters. We'll start with a baseline salary of $100,000. Next, enter your combined marginal tax rate—let's keep it at 30%. We'll also assume you invest your raise differences in a brokerage account compounding at an average annual return of 8%."*
+  > *"First, let's open the Core Parameters. We'll start with a baseline salary of $10,000 to keep the math clean. Next, enter your combined marginal tax rate—let's keep it at 30%. We'll also assume you invest your raise differences in a brokerage account compounding at an average annual return of 8%."*
 
 ---
 
@@ -56,9 +56,9 @@ This guide provides a step-by-step video outline, storyboard, and voiceover scri
 ---
 
 ### Step 6: Read the Chart & Analyze the Results (3:05 - 3:45)
-* **Visual**: Toggle the chart from **Salary trajectory** (showing Switcher salary climb to **$167,756** vs Stayer salary of **$143,568**) to **Portfolio growth** (showing the final Year 10 compounded value of **$11,576**).
+* **Visual**: Toggle the chart from **Salary trajectory** (showing Switcher salary climb to **$16,776** vs Stayer salary of **$143,568**) to **Portfolio growth** (showing the final Year 10 compounded value of **$19,285**).
 * **Voiceover**:
-  > *"Now look at the charts. On the Salary Trajectory view, the Switcher's base salary climbs to $167,756 compared to the Stayer's $143,568 (+17% premium). But look at the Portfolio Growth view. Even with that higher salary, the Switcher only walks away with an extra $11,576 in invested wealth over 10 years. Why? Because the unvested 401(k) matches and lost bonuses ate away almost all of their gains. This proves that you must negotiate a higher signing bonus to cover those forfeited assets!"*
+  > *"Now look at the charts. On the Salary Trajectory view, the Switcher's base salary climbs to $16,776 compared to the Stayer's $143,568 (+17% premium). And on the Portfolio Growth view, even after paying COBRA and losing some unvested matches along the way, the Switcher still walks away with an extra $19,285 in compounded wealth over 10 years! Job-hopping clearly wins in this scenario."*
 
 ---
 
