@@ -56,7 +56,8 @@ export function CurrencyInput({
 					step={step}
 					value={value}
 					onChange={(event) => onChange(parseNumberInput(event))}
-					className="w-full rounded-xl border border-gray-200 bg-white px-10 py-3.5 text-base font-bold text-[#1A1A1A] outline-none transition focus:border-[#5A7A8F]"
+					className="w-full rounded-xl border border-gray-200 bg-white !pl-10 !pr-10 !py-3.5 text-base font-bold text-[#1A1A1A] outline-none transition focus:border-[#5A7A8F]"
+					style={{ paddingLeft: '2.5rem', paddingRight: '2.5rem' }}
 				/>
 			</div>
 			<p className="text-sm leading-6 text-[#5E5E5E]">{helpText}</p>

@@ -704,7 +704,7 @@ textarea {
   border: 1px solid #E5E5E5 !important;
   color: #1A1A1A !important;
   border-radius: 8px !important;
-  padding: 0.75rem 1rem !important; /* Breathable controls */
+  padding: 0.75rem 1rem; /* Breathable controls */
   font-family: var(--font-mono) !important;
   outline: none !important;
 }

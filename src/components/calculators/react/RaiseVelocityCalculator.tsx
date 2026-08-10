@@ -84,6 +84,30 @@ export default function RaiseVelocityCalculator() {
 		}
 		setIsLoaded(true);
 	}, []);
+ 
+	const handleReset = () => {
+		setStartingSalary(100000);
+		setCombinedTaxRate(30);
+		setMarketReturnRate(8);
+		setBonusPercentage(10);
+		setEmployerMatchLimit(3);
+		setDeferralContribution(6);
+		setStayerRaiseRate(4.1);
+		setStayerCoL(1.0);
+		setStayerHours(40);
+		setStayerPto(15);
+		setNonHopRaiseRate(3.0);
+		setHopRaiseRate(15.0);
+		setHopIntervalYears(3);
+		setUnvestedMatchLossRate(100);
+		setUnvestedBonusLossRate(50);
+		setCobraCost(1200);
+		setSigningBonus(5000);
+		setSwitcherCoL(1.0);
+		setSwitcherHours(40);
+		setSwitcherPto(15);
+		localStorage.removeItem('gini_raise_velocity_inputs');
+	};
 
 	// Write back to localStorage on change
 	useEffect(() => {
@@ -623,6 +647,15 @@ export default function RaiseVelocityCalculator() {
 
 			{/* Configuration Input Panels */}
 			<div className="rounded-[1.8rem] border border-gray-200 bg-white/35 p-5 shadow-2xl backdrop-blur-md [.light_&]:border-slate-200/80">
+				<div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4 border-b border-gray-200 pb-3 [.light_&]:border-slate-200">
+					<span className="text-sm font-bold tracking-tight text-[#1A1A1A]">Calculator Configuration</span>
+					<button
+						onClick={handleReset}
+						className="text-xs font-mono text-[#5E5E5E] hover:text-[#1A1A1A] transition border border-gray-200 bg-white px-3 py-1.5 rounded-lg cursor-pointer hover:border-slate-400"
+					>
+						🔄 Reset to script defaults
+					</button>
+				</div>
 				{/* Tab bar selection */}
 				<div className="flex border-b border-gray-200 mb-6 text-xs font-mono [.light_&]:border-slate-200">
 					<button
