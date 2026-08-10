@@ -48,14 +48,21 @@ This guide provides a step-by-step video outline, storyboard, and voiceover scri
 
 ---
 
-### Step 5: Read the Chart & Analyze the Results (2:30 - 3:15)
+### Step 5: Pro-Tip: Understanding the Inputs (2:30 - 3:05)
+* **Visual**: Highlight the **Switcher details** panel (Unvested Match Loss, Signing Bonus, Cost of Living, Hours, PTO) while toggling between **Salary trajectory** and **Portfolio growth** views.
+* **Voiceover**:
+  > *"Pro-tip here: some fields won't change your base salary lines on the Salary Trajectory view. For example, your signing bonus or 401(k) match losses don't alter base salary, but they massively impact the Portfolio Growth compounding curve. Meanwhile, work-life parameters like weekly hours, PTO, and local Cost of Living index are used to calculate your 'Effective Hourly Rate' in the tooltip, showing if a higher salary is actually worth a longer workweek."*
+
+---
+
+### Step 6: Read the Chart & Analyze the Results (3:05 - 3:45)
 * **Visual**: Toggle the chart from **Salary trajectory** (showing Switcher salary climb to **$167,756** vs Stayer salary of **$143,568**) to **Portfolio growth** (showing the final Year 10 compounded value of **$11,576**).
 * **Voiceover**:
   > *"Now look at the charts. On the Salary Trajectory view, the Switcher's base salary climbs to $167,756 compared to the Stayer's $143,568 (+17% premium). But look at the Portfolio Growth view. Even with that higher salary, the Switcher only walks away with an extra $11,576 in invested wealth over 10 years. Why? Because the unvested 401(k) matches and lost bonuses ate away almost all of their gains. This proves that you must negotiate a higher signing bonus to cover those forfeited assets!"*
 
 ---
 
-### Call to Action (3:15 - 3:30)
+### Call to Action (3:45 - 4:00)
 * **Visual**: Show the full dashboard, then zoom out to the URL: `giniloh.com/calculators/raise-velocity`.
 * **Voiceover**:
   > *"Stop guessing if that recruiter's offer is worth it. Go to giniloh.com, plug in your exact numbers, and calculate your true career velocity today."*
