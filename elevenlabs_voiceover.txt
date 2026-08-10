@@ -1,0 +1,15 @@
+Did you know that accepting a job offer with a ten thousand dollar raise could actually make you poorer over the next decade? It is called the Job Hopping Tax. While your base salary goes up, unvested four o one k matches, COBRA premiums, and lost bonuses can turn a raise into a net deficit. Today, we are using Giniloh's Raise Velocity Calculator to model a real scenario where a ten percent raise results in a sixty-four thousand seven hundred twelve dollar net deficit.
+
+First, let's open the Core Parameters. We will start with a baseline salary of one hundred thousand dollars. Next, enter your combined marginal tax rate—let's keep it at thirty percent. We will also assume you invest your raise differences in a brokerage account compounding at an average annual return of eight percent.
+
+Next, click on Stayer Settings. This represents staying at your current company. According to national averages, internal merit raises hover around four point one percent. We will keep our expected weekly hours at forty and paid time off at fifteen days to establish our baseline hourly rate.
+
+Now, let's look at the Switcher strategy. We will set our hop interval to three years. This means you switch jobs every three years. Instead of guessing percentages, we can enter our target salary directly. Let's enter one hundred ten thousand dollars. The calculator automatically displays that this is a ten percent raise. In non-switch years, we will assume a standard internal raise of three percent.
+
+Here's where the magic happens: the Job Hopping Tax. The calculator factors in retirement match forfeitures—if your old company has a three year cliff vesting schedule, you lose your unvested matches when you leave. We also add a twelve hundred dollar out of pocket COBRA cost to cover health insurance gaps, offset by a five thousand dollar signing bonus.
+
+Pro-tip here: some fields won't change your base salary lines on the Salary Trajectory view. For example, your signing bonus or four o one k match losses don't alter base salary, but they massively impact the Portfolio Growth compounding curve. Meanwhile, work life parameters like weekly hours, paid time off, and local Cost of Living index are used to calculate your Effective Hourly Rate in the tooltip, showing if a higher salary is actually worth a longer workweek.
+
+Now look at the charts. On the Salary Trajectory view, the Switcher's base salary climbs to one hundred fifty-eight thousand nine hundred twenty-eight dollars compared to the Stayer's one hundred forty-three thousand five hundred sixty-eight dollars. But look at the Portfolio Growth view. Because of the match forfeitures and lost bonuses every three years, the Switcher actually ends up with a negative compounding delta of minus sixty-four thousand seven hundred twelve dollars in invested wealth. Switching for just a ten percent raise was a bad move! This proves you must negotiate a higher base salary or a larger signing bonus to break even.
+
+Stop guessing if that recruiter's offer is worth it. Go to giniloh.com, plug in your exact numbers, and calculate your true career velocity today.
