@@ -801,15 +801,16 @@ export default function RaiseVelocityCalculator() {
 							onChange={setHopIntervalYears}
 							helpText="Average tenure at each employer before switching."
 						/>
-						<StepperInput
-							id={`${fieldId}-switcher-hopbump`}
-							label="Hop Salary Increase"
-							value={hopRaiseRate}
-							min={0}
-							max={150}
-							suffix="%"
-							onChange={setHopRaiseRate}
-							helpText="Average base salary increase secured when transitioning."
+						<CurrencyInput
+							id={`${fieldId}-switcher-hopbump-usd`}
+							label="New Job Base Salary"
+							value={Math.round(startingSalary * (1 + hopRaiseRate / 100))}
+							step={5000}
+							onChange={(val) => {
+								const pct = startingSalary > 0 ? ((val - startingSalary) / startingSalary) * 100 : 0;
+								setHopRaiseRate(Math.max(0, pct));
+							}}
+							helpText={`Target base salary at the next job. This represents a +${hopRaiseRate.toFixed(1)}% raise.`}
 						/>
 						<StepperInput
 							id={`${fieldId}-switcher-nonhopraise`}

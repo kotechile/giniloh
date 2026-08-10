@@ -14,7 +14,7 @@ This guide provides a step-by-step video outline, storyboard, and voiceover scri
 ## 🎬 Storyboard & Script
 
 ### Hook (0:00 - 0:25)
-* **Visual**: Show the user's cursor hovering over the **compounding chart** showing the gap widening over 10 years, then zoom in on the **+$19,285 portfolio delta** and the **+17% Switcher premium** metrics.
+* **Visual**: Show the user's cursor hovering over the **compounding chart** showing the gap widening over 10 years, then zoom in on the **$19,285 portfolio delta** and the **+17% Switcher premium** metrics.
 * **Voiceover**: 
   > *"Did you know staying loyal to your employer could be costing you a 17% pay cut? It’s called the 'Loyalty Tax.' Today, we’re using Giniloh's Raise Velocity Calculator to see exactly how much you stand to gain by switching jobs, even after accounting for 401(k) match forfeitures, COBRA health gaps, and bonus losses. Let's look at how this path unlocks an extra $19,285 in compounded wealth."*
 
@@ -35,9 +35,9 @@ This guide provides a step-by-step video outline, storyboard, and voiceover scri
 ---
 
 ### Step 3: Model the "Switcher" Strategy (1:20 - 1:55)
-* **Visual**: Click on the **🚗 Switcher details** tab. Zoom in on **Hop Interval (Years)** (set to `3`) and **Hop Salary Increase** (set to `15%`).
+* **Visual**: Click on the **🚗 Switcher details** tab. Zoom in on **Hop Interval (Years)** (set to `3`) and the new **New Job Base Salary** input (set to `$11,500`, which the calculator automatically shows represents a `+15.0%` raise relative to our baseline).
 * **Voiceover**:
-  > *"Now, let's look at the Switcher strategy. We'll set our hop interval to 3 years. This means you switch jobs every 3 years. When you hop, we'll model an average salary bump of 15%. In non-switch years, we'll assume a standard internal raise of 3%."*
+  > *"Now, let's look at the Switcher strategy. We'll set our hop interval to 3 years. This means you switch jobs every 3 years. Instead of guessing percentages, we can enter our target salary directly. Let's enter $11,500. The calculator automatically displays that this is a 15.0% raise. In non-switch years, we'll assume a standard internal raise of 3%."*
 
 ---
 
