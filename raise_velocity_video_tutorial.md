@@ -7,21 +7,21 @@ This guide provides a step-by-step video outline, storyboard, and voiceover scri
 ## 🎥 Video Details
 * **Target Length**: 3 - 4 minutes (YouTube / LinkedIn) or 60 seconds (Shorts/Reels split)
 * **Visual Style**: Clean screenshares of the calculator UI, mixed with zoom-ins on interactive charts and data highlights.
-* **Goal**: Show professionals how to calculate their true "Loyalty Tax" and find their optimal career trajectory.
+* **Goal**: Show professionals how to calculate their true "Loyalty Tax" versus "Job-Hopping Friction".
 
 ---
 
 ## 🎬 Storyboard & Script
 
 ### Hook (0:00 - 0:25)
-* **Visual**: Show the user's cursor hovering over the **compounding chart** showing the gap widening over 10 years, then zoom in on the **$19,285 portfolio delta** and the **+17% Switcher premium** metrics.
+* **Visual**: Show the user's cursor hovering over the **compounding chart** showing the gap dipping negative, then zoom in on the **-$64,712 portfolio delta** and the **+11% Switcher premium** metrics.
 * **Voiceover**: 
-  > *"Did you know staying loyal to your employer could be costing you a 17% pay cut? It’s called the 'Loyalty Tax.' Today, we’re using Giniloh's Raise Velocity Calculator to see exactly how much you stand to gain by switching jobs, even after accounting for 401(k) match forfeitures, COBRA health gaps, and bonus losses. Let's look at how this path unlocks an extra $19,285 in compounded wealth."*
+  > *"Did you know that accepting a job offer with a $10,000 raise could actually make you poorer over the next decade? It’s called the 'Job-Hopping Tax.' While your base salary goes up, unvested 401(k) matches, COBRA premiums, and lost bonuses can turn a raise into a net loss. Today, we're using Giniloh's Raise Velocity Calculator to model a real scenario where a 10% raise results in a $64,712 net deficit."*
 
 ---
 
 ### Step 1: Set the Baseline (0:25 - 0:55)
-* **Visual**: Click on the **⚙️ Core parameters** tab. Highlight the starting salary set to `10000` (which we compound over 10 years). Show the tax rate slider set to `30%`.
+* **Visual**: Click on the **⚙️ Core parameters** tab. Clear the starting salary box and type in `100000` (highlighting the newly updated alignment!). Show the tax rate slider set to `30%`.
 * **Voiceover**:
   > *"First, let's open the Core Parameters. We'll start with a baseline salary of $10,000 to keep the math clean. Next, enter your combined marginal tax rate—let's keep it at 30%. We'll also assume you invest your raise differences in a brokerage account compounding at an average annual return of 8%."*
 
@@ -35,9 +35,9 @@ This guide provides a step-by-step video outline, storyboard, and voiceover scri
 ---
 
 ### Step 3: Model the "Switcher" Strategy (1:20 - 1:55)
-* **Visual**: Click on the **🚗 Switcher details** tab. Zoom in on **Hop Interval (Years)** (set to `3`) and the new **New Job Base Salary** input (set to `$11,500`, which the calculator automatically shows represents a `+15.0%` raise relative to our baseline).
+* **Visual**: Click on the **🚗 Switcher details** tab. Zoom in on **Hop Interval (Years)** (set to `3`) and the new **New Job Base Salary** input (set to `$110,000`, which the calculator automatically shows represents a `+10.0%` raise relative to our baseline).
 * **Voiceover**:
-  > *"Now, let's look at the Switcher strategy. We'll set our hop interval to 3 years. This means you switch jobs every 3 years. Instead of guessing percentages, we can enter our target salary directly. Let's enter $11,500. The calculator automatically displays that this is a 15.0% raise. In non-switch years, we'll assume a standard internal raise of 3%."*
+  > *"Now, let's look at the Switcher strategy. We'll set our hop interval to 3 years. This means you switch jobs every 3 years. Instead of guessing percentages, we can enter our target salary directly. Let's enter $110,000. The calculator automatically displays that this is a 10.0% raise. In non-switch years, we'll assume a standard internal raise of 3%."*
 
 ---
 
@@ -56,9 +56,9 @@ This guide provides a step-by-step video outline, storyboard, and voiceover scri
 ---
 
 ### Step 6: Read the Chart & Analyze the Results (3:05 - 3:45)
-* **Visual**: Toggle the chart from **Salary trajectory** (showing Switcher salary climb to **$16,776** vs Stayer salary of **$143,568**) to **Portfolio growth** (showing the final Year 10 compounded value of **$19,285**).
+* **Visual**: Toggle the chart from **Salary trajectory** (showing Switcher salary climb to **$158,928** vs Stayer salary of **$143,568**) to **Portfolio growth** (showing the final Year 10 compounded value of **-$64,712**).
 * **Voiceover**:
-  > *"Now look at the charts. On the Salary Trajectory view, the Switcher's base salary climbs to $16,776 compared to the Stayer's $143,568 (+17% premium). And on the Portfolio Growth view, even after paying COBRA and losing some unvested matches along the way, the Switcher still walks away with an extra $19,285 in compounded wealth over 10 years! Job-hopping clearly wins in this scenario."*
+  > *"Now look at the charts. On the Salary Trajectory view, the Switcher's base salary climbs to $158,928 compared to the Stayer's $143,568 (+11% premium). But look at the Portfolio Growth view. Because of the match forfeitures and lost bonuses every 3 years, the Switcher actually ends up with a negative compounding delta of -$64,712 in invested wealth. Switching for just a 10% raise was a bad move! This proves you must negotiate a higher base salary or a larger signing bonus to break even."*
 
 ---
 
