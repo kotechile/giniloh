@@ -14,13 +14,14 @@ export default function ExpatEvaluatorCalculator() {
 	const [homeBaseSalary, setHomeBaseSalary] = useState(160000);
 	const [homeBonus, setHomeBonus] = useState(25000);
 	const [homeEquityAnnual, setHomeEquityAnnual] = useState(30000);
+	const [homeSpouseIncome, setHomeSpouseIncome] = useState(65000); // Spousal income in Stay scenario
 
 	// Host Country Earnings (in Host Currency)
 	const [hostBaseSalary, setHostBaseSalary] = useState(140000);
 	const [hostBonus, setHostBonus] = useState(20000);
 	const [hostEquityAnnual, setHostEquityAnnual] = useState(25000);
 
-	// Spousal Income
+	// Spousal Income in Host Move Scenario
 	const [spouseIncomeType, setSpouseIncomeType] = useState<'none' | 'remote' | 'local'>('remote');
 	const [spouseIncomeAmount, setSpouseIncomeAmount] = useState(65000);
 
@@ -69,7 +70,6 @@ export default function ExpatEvaluatorCalculator() {
 			setFxRateHostToUsd(profile.defaultFxToUsd);
 			setHostColIndexRatio(profile.defaultColRatio);
 
-			// Scale default numerical inputs to match currency orders of magnitude
 			if (profile.currencyCode === 'CLP') {
 				setHostBaseSalary(110000000); setHostBonus(15000000); setHostEquityAnnual(20000000);
 				setHostRentMonthly(1200000); setColaMonthly(600000); setHousingAllowanceMonthly(1200000); setTuitionStipendAnnual(8000000);
@@ -103,6 +103,7 @@ export default function ExpatEvaluatorCalculator() {
 		homeBaseSalary,
 		homeBonus,
 		homeEquityAnnual,
+		homeSpouseIncome,
 		hostBaseSalary,
 		hostBonus,
 		hostEquityAnnual,
@@ -133,7 +134,7 @@ export default function ExpatEvaluatorCalculator() {
 		expectedInvestmentReturnRate
 	}), [
 		hostCountryId,
-		homeBaseSalary, homeBonus, homeEquityAnnual,
+		homeBaseSalary, homeBonus, homeEquityAnnual, homeSpouseIncome,
 		hostBaseSalary, hostBonus, hostEquityAnnual,
 		spouseIncomeType, spouseIncomeAmount,
 		colaMonthly, housingAllowanceMonthly, tuitionStipendAnnual, movingReimbursementOneTime,
@@ -354,12 +355,12 @@ export default function ExpatEvaluatorCalculator() {
 						<span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#8C8C8C]">
 							Stay Scenario (Home Baseline)
 						</span>
-						<h3 className="text-xl font-bold text-[#1A1A1A]">US Base Compensation ($ USD)</h3>
+						<h3 className="text-xl font-bold text-[#1A1A1A]">US Base &amp; Household Earnings ($ USD)</h3>
 
 						<div className="space-y-4 pt-2">
 							<div>
 								<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#8C8C8C] mb-1">
-									Base Salary ($ USD)
+									Primary Base Salary ($ USD)
 								</label>
 								<input
 									type="number"
@@ -387,6 +388,17 @@ export default function ExpatEvaluatorCalculator() {
 									type="number"
 									value={homeEquityAnnual}
 									onChange={(e) => setHomeEquityAnnual(Math.max(0, Number(e.target.value)))}
+									className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
+								/>
+							</div>
+							<div className="border-t border-[#E5E5E5] pt-4">
+								<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#8C8C8C] mb-1">
+									Spousal Annual Income in Home Country ($ USD)
+								</label>
+								<input
+									type="number"
+									value={homeSpouseIncome}
+									onChange={(e) => setHomeSpouseIncome(Math.max(0, Number(e.target.value)))}
 									className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
 								/>
 							</div>
@@ -437,7 +449,7 @@ export default function ExpatEvaluatorCalculator() {
 							</div>
 
 							<div className="border-t border-[#E5E5E5] pt-4">
-								<span className="font-mono text-xs uppercase tracking-[0.2em] text-[#8C8C8C]">Spousal Income</span>
+								<span className="font-mono text-xs uppercase tracking-[0.2em] text-[#8C8C8C]">Spousal Income Post-Move</span>
 								<div className="grid grid-cols-2 gap-3 mt-2">
 									<div>
 										<label className="block text-xs text-[#5E5E5E] mb-1">Employment Type</label>
@@ -446,13 +458,13 @@ export default function ExpatEvaluatorCalculator() {
 											onChange={(e) => setSpouseIncomeType(e.target.value as any)}
 											className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm text-[#1A1A1A]"
 										>
-											<option value="none">No Income</option>
-											<option value="remote">Remote (Home Sourced)</option>
-											<option value="local">Local (Host Sourced)</option>
+											<option value="none">No Income Post-Move</option>
+											<option value="remote">Remote (Keeps Home Income)</option>
+											<option value="local">Local (Host Country Sourced)</option>
 										</select>
 									</div>
 									<div>
-										<label className="block text-xs text-[#5E5E5E] mb-1">Annual Amount</label>
+										<label className="block text-xs text-[#5E5E5E] mb-1">Annual Amount ({spouseIncomeType === 'local' ? selectedCountry.currencySymbol : '$ USD'})</label>
 										<input
 											type="number"
 											disabled={spouseIncomeType === 'none'}

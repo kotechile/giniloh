@@ -1,20 +1,21 @@
-import { COUNTRY_PROFILES, type CountryProfile } from './expat-countries';
+import { COUNTRY_PROFILES, type CountryProfile, type HostCountryId } from './expat-countries';
 
 export interface ExpatInputs {
 	// Destination Host Country
-	hostCountryId: 'spain' | 'germany' | 'uk' | 'france' | 'brazil' | 'chile' | 'argentina';
+	hostCountryId: HostCountryId;
 
 	// Home Country (Stay) Baseline
 	homeBaseSalary: number;
 	homeBonus: number;
 	homeEquityAnnual: number;
+	homeSpouseIncome: number; // Spousal income in Home (Stay) scenario
 	
 	// Host Country (Move) Compensation (in Host Currency)
 	hostBaseSalary: number;
 	hostBonus: number;
 	hostEquityAnnual: number;
 
-	// Spousal Income
+	// Spousal Income in Host Move Scenario
 	spouseIncomeType: 'none' | 'remote' | 'local';
 	spouseIncomeAmount: number;
 
@@ -163,8 +164,7 @@ export function calculateExpatFinancials(inputs: ExpatInputs): ExpatBreakdown {
 	const fx = Math.max(0.00001, inputs.fxRateHostToUsd);
 
 	// --- 1. STAY SCENARIO (Home Baseline in USD) ---
-	const staySpousalIncome = inputs.spouseIncomeType !== 'none' ? inputs.spouseIncomeAmount : 0;
-	const stayGrossIncome = inputs.homeBaseSalary + inputs.homeBonus + inputs.homeEquityAnnual + staySpousalIncome;
+	const stayGrossIncome = inputs.homeBaseSalary + inputs.homeBonus + inputs.homeEquityAnnual + inputs.homeSpouseIncome;
 	
 	const stayFedTax = calculateUSFederalTax(stayGrossIncome, inputs.usFilingStatus);
 	const stayStateTax = stayGrossIncome * 0.05; // 5% average state tax
