@@ -20,6 +20,7 @@ export type HostCountryId =
 export interface CountryProfile {
 	id: HostCountryId;
 	name: string;
+	flagEmoji: string;
 	region: 'Europe' | 'Americas' | 'North America' | 'Central America' | 'Middle East' | 'Asia' | 'Oceania';
 	currencyCode: 'EUR' | 'GBP' | 'BRL' | 'CLP' | 'ARS' | 'MXN' | 'CAD' | 'CHF' | 'AED' | 'JPY' | 'AUD' | 'CRC';
 	currencySymbol: string;
@@ -190,12 +191,11 @@ function calculateItalyIrpef(income: number): number {
 	return (28000 * 0.23) + (22000 * 0.35) + (income - 50000) * 0.43;
 }
 
-// --- Master Country Profiles Register ---
-
 export const COUNTRY_PROFILES: Record<HostCountryId, CountryProfile> = {
 	spain: {
 		id: 'spain',
 		name: 'Spain',
+		flagEmoji: '🇪🇸',
 		region: 'Europe',
 		currencyCode: 'EUR',
 		currencySymbol: '€',
@@ -252,6 +252,7 @@ export const COUNTRY_PROFILES: Record<HostCountryId, CountryProfile> = {
 	germany: {
 		id: 'germany',
 		name: 'Germany',
+		flagEmoji: '🇩🇪',
 		region: 'Europe',
 		currencyCode: 'EUR',
 		currencySymbol: '€',
@@ -294,6 +295,7 @@ export const COUNTRY_PROFILES: Record<HostCountryId, CountryProfile> = {
 	uk: {
 		id: 'uk',
 		name: 'United Kingdom',
+		flagEmoji: '🇬🇧',
 		region: 'Europe',
 		currencyCode: 'GBP',
 		currencySymbol: '£',
@@ -339,6 +341,7 @@ export const COUNTRY_PROFILES: Record<HostCountryId, CountryProfile> = {
 	france: {
 		id: 'france',
 		name: 'France',
+		flagEmoji: '🇫🇷',
 		region: 'Europe',
 		currencyCode: 'EUR',
 		currencySymbol: '€',
@@ -387,6 +390,7 @@ export const COUNTRY_PROFILES: Record<HostCountryId, CountryProfile> = {
 	brazil: {
 		id: 'brazil',
 		name: 'Brazil',
+		flagEmoji: '🇧🇷',
 		region: 'Americas',
 		currencyCode: 'BRL',
 		currencySymbol: 'R$',
@@ -434,6 +438,7 @@ export const COUNTRY_PROFILES: Record<HostCountryId, CountryProfile> = {
 	chile: {
 		id: 'chile',
 		name: 'Chile',
+		flagEmoji: '🇨🇱',
 		region: 'Americas',
 		currencyCode: 'CLP',
 		currencySymbol: '$',
@@ -481,6 +486,7 @@ export const COUNTRY_PROFILES: Record<HostCountryId, CountryProfile> = {
 	argentina: {
 		id: 'argentina',
 		name: 'Argentina',
+		flagEmoji: '🇦🇷',
 		region: 'Americas',
 		currencyCode: 'ARS',
 		currencySymbol: '$',
@@ -529,6 +535,7 @@ export const COUNTRY_PROFILES: Record<HostCountryId, CountryProfile> = {
 	portugal: {
 		id: 'portugal',
 		name: 'Portugal',
+		flagEmoji: '🇵🇹',
 		region: 'Europe',
 		currencyCode: 'EUR',
 		currencySymbol: '€',
@@ -556,6 +563,7 @@ export const COUNTRY_PROFILES: Record<HostCountryId, CountryProfile> = {
 	mexico: {
 		id: 'mexico',
 		name: 'Mexico',
+		flagEmoji: '🇲🇽',
 		region: 'North America',
 		currencyCode: 'MXN',
 		currencySymbol: '$',
@@ -585,6 +593,7 @@ export const COUNTRY_PROFILES: Record<HostCountryId, CountryProfile> = {
 	canada: {
 		id: 'canada',
 		name: 'Canada',
+		flagEmoji: '🇨🇦',
 		region: 'North America',
 		currencyCode: 'CAD',
 		currencySymbol: 'C$',
@@ -613,6 +622,7 @@ export const COUNTRY_PROFILES: Record<HostCountryId, CountryProfile> = {
 	switzerland: {
 		id: 'switzerland',
 		name: 'Switzerland',
+		flagEmoji: '🇨🇭',
 		region: 'Europe',
 		currencyCode: 'CHF',
 		currencySymbol: 'CHF',
@@ -642,6 +652,7 @@ export const COUNTRY_PROFILES: Record<HostCountryId, CountryProfile> = {
 	netherlands: {
 		id: 'netherlands',
 		name: 'Netherlands',
+		flagEmoji: '🇳🇱',
 		region: 'Europe',
 		currencyCode: 'EUR',
 		currencySymbol: '€',
@@ -671,6 +682,7 @@ export const COUNTRY_PROFILES: Record<HostCountryId, CountryProfile> = {
 	uae: {
 		id: 'uae',
 		name: 'United Arab Emirates',
+		flagEmoji: '🇦🇪',
 		region: 'Middle East',
 		currencyCode: 'AED',
 		currencySymbol: 'د.إ',
@@ -690,6 +702,7 @@ export const COUNTRY_PROFILES: Record<HostCountryId, CountryProfile> = {
 	japan: {
 		id: 'japan',
 		name: 'Japan',
+		flagEmoji: '🇯🇵',
 		region: 'Asia',
 		currencyCode: 'JPY',
 		currencySymbol: '¥',
@@ -718,6 +731,7 @@ export const COUNTRY_PROFILES: Record<HostCountryId, CountryProfile> = {
 	australia: {
 		id: 'australia',
 		name: 'Australia',
+		flagEmoji: '🇦🇺',
 		region: 'Oceania',
 		currencyCode: 'AUD',
 		currencySymbol: 'A$',
@@ -742,6 +756,7 @@ export const COUNTRY_PROFILES: Record<HostCountryId, CountryProfile> = {
 	costa_rica: {
 		id: 'costa_rica',
 		name: 'Costa Rica',
+		flagEmoji: '🇨🇷',
 		region: 'Central America',
 		currencyCode: 'CRC',
 		currencySymbol: '₡',

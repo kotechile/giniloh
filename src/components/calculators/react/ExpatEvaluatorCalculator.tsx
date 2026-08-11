@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { calculateExpatFinancials, generate5YearProjections, type ExpatInputs } from '../../../lib/calculators/expat';
-import { COUNTRY_PROFILES, type HostCountryId, type CountryProfile } from '../../../lib/calculators/expat-countries';
+import { COUNTRY_PROFILES, type HostCountryId } from '../../../lib/calculators/expat-countries';
 import { formatCurrency } from '../../../lib/calculators/format';
 
 export default function ExpatEvaluatorCalculator() {
@@ -15,7 +15,7 @@ export default function ExpatEvaluatorCalculator() {
 	const [homeBonus, setHomeBonus] = useState(25000);
 	const [homeEquityAnnual, setHomeEquityAnnual] = useState(30000);
 	const [homeSpouseIncome, setHomeSpouseIncome] = useState(65000);
-	const [homeStateTaxRate, setHomeStateTaxRate] = useState(0.05); // 5% average default
+	const [homeStateTaxRate, setHomeStateTaxRate] = useState(0.05);
 
 	// Host Country Earnings (in Host Currency)
 	const [hostBaseSalary, setHostBaseSalary] = useState(140000);
@@ -65,7 +65,7 @@ export default function ExpatEvaluatorCalculator() {
 	// FX & Liabilities
 	const [fxRateHostToUsd, setFxRateHostToUsd] = useState(1.10);
 	const [homeLiabilitiesUsdMonthly, setHomeLiabilitiesUsdMonthly] = useState(1500);
-	const [hostLiabilitiesMonthly, setHostLiabilitiesMonthly] = useState(0); // Host currency liabilities
+	const [hostLiabilitiesMonthly, setHostLiabilitiesMonthly] = useState(0);
 	const [expectedInvestmentReturnRate, setExpectedInvestmentReturnRate] = useState(0.07);
 
 	// Country Selection Handler
@@ -167,22 +167,33 @@ export default function ExpatEvaluatorCalculator() {
 	const projections = useMemo(() => generate5YearProjections(inputs, breakdown), [inputs, breakdown]);
 
 	return (
-		<div className="space-y-10 bg-white text-[#1A1A1A]">
-			{/* Title & Country Selector Header */}
-			<div className="space-y-4">
-				<span className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#8C8C8C]">
-					Comparative Financial &amp; Tax Model
-				</span>
-				<h1 className="text-4xl sm:text-5xl font-black text-[#1A1A1A] tracking-tight">
-					Expat Financial &amp; Tax Evaluator
-				</h1>
-				<p className="text-base sm:text-lg text-[#5E5E5E] max-w-3xl leading-relaxed">
-					Model net cash flow and 5-year wealth impact for relocation from the United States to 17 global expat destinations across Europe, the Americas, Asia, Oceania, and the Middle East.
+		<div className="space-y-8 p-4 sm:p-6 md:p-8 bg-[#F8FAFC] rounded-3xl min-h-screen text-slate-900 border border-slate-200/70 shadow-sm">
+			{/* Header & Country Selector */}
+			<div className="space-y-6 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+				<div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+					<div>
+						<span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold uppercase tracking-wider bg-slate-100 text-slate-600 border border-slate-200">
+							<span className="w-2 h-2 rounded-full bg-indigo-600 animate-pulse"></span>
+							Expat Financial &amp; Tax Evaluator
+						</span>
+						<h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mt-3">
+							Comparative International Relocation Model
+						</h1>
+					</div>
+					<div className="flex items-center gap-2 bg-slate-50 px-4 py-2 rounded-xl border border-slate-200">
+						<span className="text-xl">{selectedCountry.flagEmoji}</span>
+						<span className="font-semibold text-sm text-slate-900">{selectedCountry.name}</span>
+						<span className="text-xs font-mono text-slate-500">({selectedCountry.currencyCode})</span>
+					</div>
+				</div>
+
+				<p className="text-sm sm:text-base text-slate-600 max-w-3xl leading-relaxed">
+					Evaluate net cash flow, tax relief (FEIE vs. FTC), special expat regimes, and 5-year wealth trajectory comparing your Stay (US Baseline) scenario against relocation to 17 destination countries.
 				</p>
 
-				{/* Modular Destination Country Switcher */}
-				<div className="pt-2 border-t border-[#E5E5E5]">
-					<span className="block font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#8C8C8C] mb-2">
+				{/* Destination Country Switcher with Flag Icons */}
+				<div className="pt-4 border-t border-slate-100 space-y-3">
+					<span className="block font-mono text-xs font-bold uppercase tracking-wider text-slate-500">
 						Select Host Country Destination
 					</span>
 					<div className="flex flex-wrap gap-2">
@@ -190,64 +201,98 @@ export default function ExpatEvaluatorCalculator() {
 							<button
 								key={c.id}
 								onClick={() => handleCountryChange(c.id)}
-								className={`px-3 py-1.5 text-xs font-bold font-mono transition cursor-pointer border ${
+								className={`inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold rounded-xl border transition-all cursor-pointer ${
 									hostCountryId === c.id
-										? 'bg-[#1A1A1A] text-white border-[#1A1A1A]'
-										: 'bg-white text-[#1A1A1A] border-[#E5E5E5] hover:border-[#1A1A1A]'
+										? 'bg-slate-900 text-white border-slate-900 shadow-md shadow-slate-900/10'
+										: 'bg-white text-slate-700 border-slate-200 hover:border-slate-400 hover:bg-slate-50'
 								}`}
 							>
-								{c.name} ({c.currencySymbol} {c.currencyCode})
+								<span className="text-base leading-none">{c.flagEmoji}</span>
+								<span>{c.name}</span>
+								<span className={`text-[10px] font-mono ${hostCountryId === c.id ? 'text-slate-300' : 'text-slate-400'}`}>
+									{c.currencyCode}
+								</span>
 							</button>
 						))}
 					</div>
 				</div>
 			</div>
 
-			{/* Naked Summary Metrics Header */}
-			<div className="flex flex-col md:flex-row gap-8 py-8 border-y border-[#E5E5E5]">
-				<div className="flex flex-col">
-					<span className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#8C8C8C] mb-2">
-						Annual Free Cash Flow Delta
-					</span>
-					<span className={`text-5xl sm:text-6xl font-black tracking-tight leading-none ${breakdown.annualCashFlowDelta >= 0 ? 'text-[#1A1A1A]' : 'text-[#B85C5C]'}`}>
+			{/* Semantic Summary Metric Outcome Cards */}
+			<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+				{/* Annual Free Cash Flow Delta Card */}
+				<div className={`p-6 rounded-2xl border transition-all shadow-sm ${
+					breakdown.annualCashFlowDelta >= 0
+						? 'bg-gradient-to-br from-emerald-50/80 via-white to-emerald-50/30 border-emerald-200/80'
+						: 'bg-gradient-to-br from-rose-50/80 via-white to-rose-50/30 border-rose-200/80'
+				}`}>
+					<div className="flex items-center justify-between">
+						<span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500">
+							Annual Cash Flow Delta
+						</span>
+						<span className={`px-2 py-0.5 rounded-full text-[11px] font-bold font-mono ${
+							breakdown.annualCashFlowDelta >= 0 ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'
+						}`}>
+							{breakdown.annualCashFlowDelta >= 0 ? '▲ Net Surplus' : '▼ Net Deficit'}
+						</span>
+					</div>
+					<div className={`text-4xl sm:text-5xl font-black tracking-tight mt-3 ${
+						breakdown.annualCashFlowDelta >= 0 ? 'text-emerald-600' : 'text-rose-600'
+					}`}>
 						{breakdown.annualCashFlowDelta >= 0 ? '+' : ''}{formatCurrency(breakdown.annualCashFlowDelta)}
-					</span>
-					<span className="mt-2 text-xs font-mono text-[#5E5E5E]">
-						{breakdown.annualCashFlowDelta >= 0 ? `Move to ${selectedCountry.name} generates higher cash flow` : 'Stay in US produces higher cash flow'}
-					</span>
+					</div>
+					<p className="mt-2 text-xs font-medium text-slate-600">
+						{breakdown.annualCashFlowDelta >= 0
+							? `Relocating to ${selectedCountry.name} yields higher net free cash flow`
+							: 'Staying in the US produces higher net free cash flow'}
+					</p>
 				</div>
 
-				<div className="hidden md:block w-px bg-[#E5E5E5]" />
-
-				<div className="flex flex-col">
-					<span className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#8C8C8C] mb-2">
-						5-Year Wealth Impact
-					</span>
-					<span className={`text-5xl sm:text-6xl font-black tracking-tight leading-none ${breakdown.fiveYearWealthDelta >= 0 ? 'text-[#5A7A8F]' : 'text-[#B85C5C]'}`}>
-						{breakdown.fiveYearWealthDelta >= 0 ? '+' : ''}{formatCurrency(breakdown.fiveYearWealthDelta)}
-					</span>
-					<span className="mt-2 text-xs font-mono text-[#5E5E5E]">
-						Cumulative difference at {(expectedInvestmentReturnRate * 100).toFixed(0)}% return
-					</span>
+				{/* 5-Year Wealth Impact Card with Micro-Chart Sparkline */}
+				<div className="p-6 bg-gradient-to-br from-indigo-50/60 via-white to-slate-50 border border-slate-200/80 rounded-2xl shadow-sm flex flex-col justify-between">
+					<div>
+						<div className="flex items-center justify-between">
+							<span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500">
+								5-Year Wealth Impact
+							</span>
+							{/* Micro Sparkline Visualizer */}
+							<svg className="w-16 h-7" viewBox="0 0 60 25">
+								<path d="M 0 20 Q 30 18 60 15" fill="none" stroke="#CBD5E1" strokeWidth="2" strokeDasharray="3 3" />
+								<path d="M 0 20 Q 30 10 60 4" fill="none" stroke={breakdown.fiveYearWealthDelta >= 0 ? '#059669' : '#DC2626'} strokeWidth="2.5" />
+							</svg>
+						</div>
+						<div className={`text-4xl sm:text-5xl font-black tracking-tight mt-3 ${
+							breakdown.fiveYearWealthDelta >= 0 ? 'text-emerald-600' : 'text-rose-600'
+						}`}>
+							{breakdown.fiveYearWealthDelta >= 0 ? '+' : ''}{formatCurrency(breakdown.fiveYearWealthDelta)}
+						</div>
+					</div>
+					<p className="mt-2 text-xs font-medium text-slate-600">
+						Cumulative difference over 5 years at {(expectedInvestmentReturnRate * 100).toFixed(0)}% return
+					</p>
 				</div>
 
-				<div className="hidden md:block w-px bg-[#E5E5E5]" />
-
-				<div className="flex flex-col">
-					<span className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#8C8C8C] mb-2">
-						Optimal US Tax Relief
-					</span>
-					<span className="text-5xl sm:text-6xl font-black text-[#1A1A1A] tracking-tight leading-none">
-						{breakdown.optimalTaxRelief}
-					</span>
-					<span className="mt-2 text-xs font-mono text-[#5E5E5E]">
-						{breakdown.optimalTaxRelief === 'FEIE' ? `FEIE Used: ${formatCurrency(breakdown.feieUsedAmount)}` : breakdown.optimalTaxRelief === 'FTC' ? `FTC Credit: ${formatCurrency(breakdown.ftcUsedAmount)}` : 'No US Tax Obligations'}
-					</span>
+				{/* Optimal US Tax Relief Card */}
+				<div className="p-6 bg-white border border-slate-200/80 rounded-2xl shadow-sm flex flex-col justify-between">
+					<div>
+						<span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500 block">
+							Optimal US Tax Relief
+						</span>
+						<div className="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight mt-3">
+							{breakdown.optimalTaxRelief}
+						</div>
+					</div>
+					<div className="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
+						<span className="text-slate-500 font-mono">Tax Savings Route</span>
+						<span className="font-bold text-slate-800">
+							{breakdown.optimalTaxRelief === 'FEIE' ? `FEIE: ${formatCurrency(breakdown.feieUsedAmount)}` : breakdown.optimalTaxRelief === 'FTC' ? `FTC: ${formatCurrency(breakdown.ftcUsedAmount)}` : 'N/A'}
+						</span>
+					</div>
 				</div>
 			</div>
 
-			{/* Navigation Tabs */}
-			<div className="flex border-b border-[#E5E5E5] gap-6 overflow-x-auto">
+			{/* Navigation Tabs with Active Pill Highlights */}
+			<div className="bg-white p-2 rounded-2xl border border-slate-200/80 shadow-sm flex gap-2 overflow-x-auto">
 				{[
 					{ id: 'dashboard', label: '1. Executive Summary' },
 					{ id: 'income', label: '2. Income & Allowances' },
@@ -259,10 +304,10 @@ export default function ExpatEvaluatorCalculator() {
 					<button
 						key={tab.id}
 						onClick={() => setActiveTab(tab.id as any)}
-						className={`pb-3 text-sm font-bold transition whitespace-nowrap cursor-pointer ${
+						className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
 							activeTab === tab.id
-								? 'border-b-2 border-[#1A1A1A] text-[#1A1A1A]'
-								: 'border-transparent text-[#8C8C8C] hover:text-[#1A1A1A]'
+								? 'bg-slate-900 text-white shadow-sm'
+								: 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
 						}`}
 					>
 						{tab.label}
@@ -272,14 +317,17 @@ export default function ExpatEvaluatorCalculator() {
 
 			{/* --- TAB 1: EXECUTIVE SUMMARY --- */}
 			{activeTab === 'dashboard' && (
-				<div className="space-y-8">
-					{/* Warnings Banner */}
+				<div className="space-y-6">
+					{/* Regulatory & Tax Notices */}
 					{breakdown.warnings.length > 0 && (
-						<div className="border border-[#C88D4E] bg-white p-5 rounded-none space-y-2">
-							<span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#C88D4E]">
+						<div className="bg-amber-50/60 border border-amber-200/80 p-5 rounded-2xl space-y-2">
+							<span className="font-mono text-xs font-bold uppercase tracking-wider text-amber-800 flex items-center gap-2">
+								<svg className="w-4 h-4 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+								</svg>
 								Regulatory &amp; Tax Notices
 							</span>
-							<ul className="text-xs text-[#5E5E5E] space-y-1 list-disc pl-4">
+							<ul className="text-xs text-amber-900 space-y-1 list-disc pl-5 font-medium">
 								{breakdown.warnings.map((w, idx) => (
 									<li key={idx}>{w}</li>
 								))}
@@ -287,82 +335,91 @@ export default function ExpatEvaluatorCalculator() {
 						</div>
 					)}
 
-					{/* Side-by-side Table Comparison */}
-					<div className="border border-[#E5E5E5] p-6 space-y-6">
-						<h2 className="text-xl font-black text-[#1A1A1A] tracking-tight">
-							Stay (US Baseline) vs. Move ({selectedCountry.name} Assignment) Cash Flow Walkdown
-						</h2>
+					{/* Executive Cash Flow Walkdown Table */}
+					<div className="bg-white rounded-2xl border border-slate-200/80 shadow-sm p-6 space-y-6">
+						<div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-4">
+							<h2 className="text-xl font-bold text-slate-900 tracking-tight">
+								Stay (US Baseline) vs. Move ({selectedCountry.name}) Walkdown
+							</h2>
+							<span className="text-xs font-mono text-slate-500">All figures in USD ($)</span>
+						</div>
 
 						<div className="overflow-x-auto">
 							<table className="w-full text-left text-sm border-collapse">
 								<thead>
-									<tr className="border-b border-[#E5E5E5] text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#8C8C8C]">
-										<th className="py-3">Financial Metric</th>
-										<th className="py-3 text-right">Stay (US Baseline)</th>
-										<th className="py-3 text-right">Move ({selectedCountry.name})</th>
-										<th className="py-3 text-right">Net Delta</th>
+									<tr className="border-b border-slate-200 text-xs font-mono font-bold uppercase tracking-wider text-slate-500">
+										<th className="py-3.5 px-3">Financial Metric</th>
+										<th className="py-3.5 px-3 text-right">Stay (US Baseline)</th>
+										<th className="py-3.5 px-3 text-right bg-blue-50/50 rounded-t-xl">Move ({selectedCountry.name})</th>
+										<th className="py-3.5 px-3 text-right">Net Delta</th>
 									</tr>
 								</thead>
-								<tbody className="divide-y divide-[#E5E5E5] text-[#1A1A1A]">
+								<tbody className="divide-y divide-slate-100 text-slate-800 font-medium">
 									<tr>
-										<td className="py-3 font-semibold">Gross Earned Compensation</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.stayEarnedIncome)}</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveBaseGross)}</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveBaseGross - breakdown.stayEarnedIncome)}</td>
-									</tr>
-									<tr>
-										<td className="py-3 font-semibold">Global Investment Income (Passive)</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.stayInvestmentIncome)}</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveInvestmentIncome)}</td>
-										<td className="py-3 text-right font-mono text-[#8C8C8C]">$0</td>
+										<td className="py-3.5 px-3 font-semibold text-slate-900">Gross Earned Compensation</td>
+										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.stayEarnedIncome)}</td>
+										<td className="py-3.5 px-3 text-right font-mono bg-blue-50/30">{formatCurrency(breakdown.moveBaseGross)}</td>
+										<td className={`py-3.5 px-3 text-right font-mono font-bold ${
+											breakdown.moveBaseGross - breakdown.stayEarnedIncome >= 0 ? 'text-emerald-600' : 'text-rose-600'
+										}`}>
+											{formatCurrency(breakdown.moveBaseGross - breakdown.stayEarnedIncome)}
+										</td>
 									</tr>
 									<tr>
-										<td className="py-3 font-semibold">Corporate Subsidies &amp; COLA</td>
-										<td className="py-3 text-right font-mono text-[#8C8C8C]">$0</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveAllowancesTotal)}</td>
-										<td className="py-3 text-right font-mono text-[#5A7A8F]">+{formatCurrency(breakdown.moveAllowancesTotal)}</td>
-									</tr>
-									<tr className="font-bold border-t border-[#E5E5E5]">
-										<td className="py-3">Total Household Gross Income</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.stayGrossIncome)}</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveTotalGross)}</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveTotalGross - breakdown.stayGrossIncome)}</td>
+										<td className="py-3.5 px-3 font-semibold text-slate-900">Global Investment Income (Passive)</td>
+										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.stayInvestmentIncome)}</td>
+										<td className="py-3.5 px-3 text-right font-mono bg-blue-50/30">{formatCurrency(breakdown.moveInvestmentIncome)}</td>
+										<td className="py-3.5 px-3 text-right font-mono text-slate-400">$0</td>
 									</tr>
 									<tr>
-										<td className="py-3 text-semibold text-[#5E5E5E]">Actual Total Taxes (Host + Home + SS)</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.stayTaxes)}</td>
-										<td className="py-3 text-right font-mono text-[#B85C5C]">{formatCurrency(breakdown.actualTotalTaxesPaid)}</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.actualTotalTaxesPaid - breakdown.stayTaxes)}</td>
+										<td className="py-3.5 px-3 font-semibold text-slate-900">Corporate Subsidies &amp; COLA</td>
+										<td className="py-3.5 px-3 text-right font-mono text-slate-400">$0</td>
+										<td className="py-3.5 px-3 text-right font-mono bg-blue-50/30 text-emerald-600">+{formatCurrency(breakdown.moveAllowancesTotal)}</td>
+										<td className="py-3.5 px-3 text-right font-mono text-emerald-600">+{formatCurrency(breakdown.moveAllowancesTotal)}</td>
+									</tr>
+									<tr className="font-bold border-t border-slate-200 bg-slate-50/50">
+										<td className="py-3.5 px-3 text-slate-900">Total Household Gross Income</td>
+										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.stayGrossIncome)}</td>
+										<td className="py-3.5 px-3 text-right font-mono bg-blue-50/50">{formatCurrency(breakdown.moveTotalGross)}</td>
+										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.moveTotalGross - breakdown.stayGrossIncome)}</td>
 									</tr>
 									<tr>
-										<td className="py-3 text-semibold text-[#5E5E5E]">Employer Tax Policy Reimbursement</td>
-										<td className="py-3 text-right font-mono text-[#8C8C8C]">$0</td>
-										<td className="py-3 text-right font-mono text-[#5A7A8F]">+{formatCurrency(breakdown.employerTaxReimbursement)}</td>
-										<td className="py-3 text-right font-mono">+{formatCurrency(breakdown.employerTaxReimbursement)}</td>
-									</tr>
-									<tr className="font-bold border-t border-[#E5E5E5]">
-										<td className="py-3">Net Take-Home Pay</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.stayNetIncome)}</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveNetIncome)}</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveNetIncome - breakdown.stayNetIncome)}</td>
+										<td className="py-3.5 px-3 text-slate-600">Actual Total Taxes (Host + Home + SS)</td>
+										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.stayTaxes)}</td>
+										<td className="py-3.5 px-3 text-right font-mono bg-blue-50/30 text-rose-600">{formatCurrency(breakdown.actualTotalTaxesPaid)}</td>
+										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.actualTotalTaxesPaid - breakdown.stayTaxes)}</td>
 									</tr>
 									<tr>
-										<td className="py-3 text-semibold text-[#5E5E5E]">Local Living Expenses &amp; Fixed Costs</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.stayLivingExpenses)}</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveLivingExpenses)}</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveLivingExpenses - breakdown.stayLivingExpenses)}</td>
+										<td className="py-3.5 px-3 text-slate-600">Employer Tax Policy Reimbursement</td>
+										<td className="py-3.5 px-3 text-right font-mono text-slate-400">$0</td>
+										<td className="py-3.5 px-3 text-right font-mono bg-blue-50/30 text-emerald-600">+{formatCurrency(breakdown.employerTaxReimbursement)}</td>
+										<td className="py-3.5 px-3 text-right font-mono text-emerald-600">+{formatCurrency(breakdown.employerTaxReimbursement)}</td>
+									</tr>
+									<tr className="font-bold border-t border-slate-200 bg-slate-50/50">
+										<td className="py-3.5 px-3 text-slate-900">Net Take-Home Pay</td>
+										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.stayNetIncome)}</td>
+										<td className="py-3.5 px-3 text-right font-mono bg-blue-50/50">{formatCurrency(breakdown.moveNetIncome)}</td>
+										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.moveNetIncome - breakdown.stayNetIncome)}</td>
 									</tr>
 									<tr>
-										<td className="py-3 text-semibold text-[#5E5E5E]">Total Debt Servicing &amp; Liabilities (USD + Host)</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.stayHomeLiabilities)}</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveTotalLiabilitiesUsd)}</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveTotalLiabilitiesUsd - breakdown.stayHomeLiabilities)}</td>
+										<td className="py-3.5 px-3 text-slate-600">Local Living Expenses &amp; Fixed Costs</td>
+										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.stayLivingExpenses)}</td>
+										<td className="py-3.5 px-3 text-right font-mono bg-blue-50/30">{formatCurrency(breakdown.moveLivingExpenses)}</td>
+										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.moveLivingExpenses - breakdown.stayLivingExpenses)}</td>
 									</tr>
-									<tr className="font-black text-base border-t-2 border-[#1A1A1A]">
-										<td className="py-4">Annual Free Cash Flow</td>
-										<td className="py-4 text-right font-mono">{formatCurrency(breakdown.stayAnnualFreeCashFlow)}</td>
-										<td className="py-4 text-right font-mono">{formatCurrency(breakdown.moveAnnualFreeCashFlow)}</td>
-										<td className={`py-4 text-right font-mono ${breakdown.annualCashFlowDelta >= 0 ? 'text-[#5A7A8F]' : 'text-[#B85C5C]'}`}>
+									<tr>
+										<td className="py-3.5 px-3 text-slate-600">Total Liabilities &amp; Debt (USD + Host)</td>
+										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.stayHomeLiabilities)}</td>
+										<td className="py-3.5 px-3 text-right font-mono bg-blue-50/30">{formatCurrency(breakdown.moveTotalLiabilitiesUsd)}</td>
+										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.moveTotalLiabilitiesUsd - breakdown.stayHomeLiabilities)}</td>
+									</tr>
+									<tr className="font-black text-base border-t-2 border-slate-900 bg-slate-900 text-white rounded-b-xl">
+										<td className="py-4 px-3">Annual Free Cash Flow</td>
+										<td className="py-4 px-3 text-right font-mono">{formatCurrency(breakdown.stayAnnualFreeCashFlow)}</td>
+										<td className="py-4 px-3 text-right font-mono">{formatCurrency(breakdown.moveAnnualFreeCashFlow)}</td>
+										<td className={`py-4 px-3 text-right font-mono ${
+											breakdown.annualCashFlowDelta >= 0 ? 'text-emerald-400' : 'text-rose-400'
+										}`}>
 											{breakdown.annualCashFlowDelta >= 0 ? '+' : ''}{formatCurrency(breakdown.annualCashFlowDelta)}
 										</td>
 									</tr>
@@ -376,112 +433,142 @@ export default function ExpatEvaluatorCalculator() {
 			{/* --- TAB 2: INCOME & ALLOWANCES --- */}
 			{activeTab === 'income' && (
 				<div className="grid gap-8 md:grid-cols-2">
-					<div className="border border-[#E5E5E5] p-6 space-y-4">
-						<span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#8C8C8C]">
-							Stay Scenario (Home Baseline)
-						</span>
-						<h3 className="text-xl font-bold text-[#1A1A1A]">US Base &amp; Household Earnings ($ USD)</h3>
+					{/* Left Panel: Stay Scenario (Home Baseline) */}
+					<div className="bg-white rounded-2xl border border-slate-200/80 shadow-sm p-6 space-y-5">
+						<div className="flex items-center justify-between border-b border-slate-100 pb-3">
+							<span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500">
+								Stay Scenario (Home Baseline)
+							</span>
+							<span className="text-xs font-bold text-slate-700 bg-slate-100 px-2.5 py-1 rounded-lg">
+								🇺🇸 United States ($ USD)
+							</span>
+						</div>
 
-						<div className="space-y-4 pt-2">
+						<h3 className="text-lg font-bold text-slate-900">US Base &amp; Household Earnings</h3>
+
+						<div className="space-y-4">
 							<div>
-								<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#8C8C8C] mb-1">
-									Primary Base Salary ($ USD)
+								<label className="block text-xs font-semibold text-slate-700 mb-1.5">
+									Primary Base Salary ($ USD / Year)
 								</label>
-								<input
-									type="number"
-									value={homeBaseSalary}
-									onChange={(e) => setHomeBaseSalary(Math.max(0, Number(e.target.value)))}
-									className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
-								/>
+								<div className="relative">
+									<span className="absolute left-3 top.1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
+									<input
+										type="number"
+										value={homeBaseSalary}
+										onChange={(e) => setHomeBaseSalary(Math.max(0, Number(e.target.value)))}
+										className="w-full pl-8 pr-3 py-2.5 bg-slate-50/80 border border-slate-200 rounded-xl text-sm font-mono text-slate-900 focus:bg-white focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10 transition-all outline-none"
+									/>
+								</div>
 							</div>
+
 							<div>
-								<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#8C8C8C] mb-1">
+								<label className="block text-xs font-semibold text-slate-700 mb-1.5">
 									Annual Bonus ($ USD)
 								</label>
-								<input
-									type="number"
-									value={homeBonus}
-									onChange={(e) => setHomeBonus(Math.max(0, Number(e.target.value)))}
-									className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
-								/>
+								<div className="relative">
+									<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
+									<input
+										type="number"
+										value={homeBonus}
+										onChange={(e) => setHomeBonus(Math.max(0, Number(e.target.value)))}
+										className="w-full pl-8 pr-3 py-2.5 bg-slate-50/80 border border-slate-200 rounded-xl text-sm font-mono text-slate-900 focus:bg-white focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10 transition-all outline-none"
+									/>
+								</div>
 							</div>
+
 							<div>
-								<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#8C8C8C] mb-1">
+								<label className="block text-xs font-semibold text-slate-700 mb-1.5">
 									Annual Equity Vesting ($ USD)
 								</label>
-								<input
-									type="number"
-									value={homeEquityAnnual}
-									onChange={(e) => setHomeEquityAnnual(Math.max(0, Number(e.target.value)))}
-									className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
-								/>
+								<div className="relative">
+									<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
+									<input
+										type="number"
+										value={homeEquityAnnual}
+										onChange={(e) => setHomeEquityAnnual(Math.max(0, Number(e.target.value)))}
+										className="w-full pl-8 pr-3 py-2.5 bg-slate-50/80 border border-slate-200 rounded-xl text-sm font-mono text-slate-900 focus:bg-white focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10 transition-all outline-none"
+									/>
+								</div>
 							</div>
-							<div className="border-t border-[#E5E5E5] pt-4">
-								<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#8C8C8C] mb-1">
+
+							<div className="border-t border-slate-100 pt-4">
+								<label className="block text-xs font-semibold text-slate-700 mb-1.5">
 									Spousal Annual Income in Home Country ($ USD)
 								</label>
-								<input
-									type="number"
-									value={homeSpouseIncome}
-									onChange={(e) => setHomeSpouseIncome(Math.max(0, Number(e.target.value)))}
-									className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
-								/>
+								<div className="relative">
+									<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
+									<input
+										type="number"
+										value={homeSpouseIncome}
+										onChange={(e) => setHomeSpouseIncome(Math.max(0, Number(e.target.value)))}
+										className="w-full pl-8 pr-3 py-2.5 bg-slate-50/80 border border-slate-200 rounded-xl text-sm font-mono text-slate-900 focus:bg-white focus:border-slate-900 focus:ring-2 focus:ring-slate-900/10 transition-all outline-none"
+									/>
+								</div>
 							</div>
 						</div>
 					</div>
 
-					<div className="border border-[#E5E5E5] p-6 space-y-4">
-						<span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#5A7A8F]">
-							Move Scenario ({selectedCountry.name})
-						</span>
-						<h3 className="text-xl font-bold text-[#1A1A1A]">Host Compensation ({selectedCountry.currencySymbol} {selectedCountry.currencyCode})</h3>
+					{/* Right Panel: Move Scenario (Cool-tinted Host Destination) */}
+					<div className="bg-gradient-to-br from-blue-50/40 via-white to-sky-50/30 rounded-2xl border border-blue-100 shadow-sm p-6 space-y-5">
+						<div className="flex items-center justify-between border-b border-blue-100 pb-3">
+							<span className="font-mono text-xs font-bold uppercase tracking-wider text-indigo-900">
+								Move Scenario ({selectedCountry.name})
+							</span>
+							<span className="text-xs font-bold text-indigo-900 bg-blue-100/70 px-2.5 py-1 rounded-lg flex items-center gap-1.5">
+								<span>{selectedCountry.flagEmoji}</span>
+								<span>{selectedCountry.currencyCode} ({selectedCountry.currencySymbol})</span>
+							</span>
+						</div>
 
-						<div className="space-y-4 pt-2">
+						<h3 className="text-lg font-bold text-slate-900">Host Compensation ({selectedCountry.currencySymbol})</h3>
+
+						<div className="space-y-4">
 							<div className="grid grid-cols-3 gap-3">
 								<div>
-									<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#8C8C8C] mb-1">
+									<label className="block text-xs font-semibold text-slate-700 mb-1">
 										Base ({selectedCountry.currencySymbol})
 									</label>
 									<input
 										type="number"
 										value={hostBaseSalary}
 										onChange={(e) => setHostBaseSalary(Math.max(0, Number(e.target.value)))}
-										className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
+										className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-sm font-mono text-slate-900 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-600/10 transition-all outline-none"
 									/>
 								</div>
 								<div>
-									<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#8C8C8C] mb-1">
+									<label className="block text-xs font-semibold text-slate-700 mb-1">
 										Bonus ({selectedCountry.currencySymbol})
 									</label>
 									<input
 										type="number"
 										value={hostBonus}
 										onChange={(e) => setHostBonus(Math.max(0, Number(e.target.value)))}
-										className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
+										className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-sm font-mono text-slate-900 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-600/10 transition-all outline-none"
 									/>
 								</div>
 								<div>
-									<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#8C8C8C] mb-1">
+									<label className="block text-xs font-semibold text-slate-700 mb-1">
 										Equity ({selectedCountry.currencySymbol})
 									</label>
 									<input
 										type="number"
 										value={hostEquityAnnual}
 										onChange={(e) => setHostEquityAnnual(Math.max(0, Number(e.target.value)))}
-										className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
+										className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-sm font-mono text-slate-900 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-600/10 transition-all outline-none"
 									/>
 								</div>
 							</div>
 
-							<div className="border-t border-[#E5E5E5] pt-4">
-								<span className="font-mono text-xs uppercase tracking-[0.2em] text-[#8C8C8C]">Spousal Income Post-Move</span>
-								<div className="grid grid-cols-2 gap-3 mt-2">
+							<div className="border-t border-blue-100 pt-4">
+								<span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500 block mb-2">Spousal Income Post-Move</span>
+								<div className="grid grid-cols-2 gap-3">
 									<div>
-										<label className="block text-xs text-[#5E5E5E] mb-1">Employment Type</label>
+										<label className="block text-xs font-medium text-slate-600 mb-1">Employment Type</label>
 										<select
 											value={spouseIncomeType}
 											onChange={(e) => setSpouseIncomeType(e.target.value as any)}
-											className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm text-[#1A1A1A]"
+											className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-xs font-semibold text-slate-900 focus:border-indigo-600 outline-none"
 										>
 											<option value="none">No Income Post-Move</option>
 											<option value="remote">Remote (Keeps Home Income)</option>
@@ -489,57 +576,57 @@ export default function ExpatEvaluatorCalculator() {
 										</select>
 									</div>
 									<div>
-										<label className="block text-xs text-[#5E5E5E] mb-1">Annual Amount ({spouseIncomeType === 'local' ? selectedCountry.currencySymbol : '$ USD'})</label>
+										<label className="block text-xs font-medium text-slate-600 mb-1">Annual Amount ({spouseIncomeType === 'local' ? selectedCountry.currencySymbol : '$ USD'})</label>
 										<input
 											type="number"
 											disabled={spouseIncomeType === 'none'}
 											value={spouseIncomeAmount}
 											onChange={(e) => setSpouseIncomeAmount(Math.max(0, Number(e.target.value)))}
-											className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A] disabled:opacity-50"
+											className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-sm font-mono text-slate-900 disabled:opacity-50 outline-none"
 										/>
 									</div>
 								</div>
 							</div>
 
-							<div className="border-t border-[#E5E5E5] pt-4 space-y-3">
-								<span className="font-mono text-xs uppercase tracking-[0.2em] text-[#8C8C8C]">Expat Allowances ({selectedCountry.currencySymbol} {selectedCountry.currencyCode})</span>
+							<div className="border-t border-blue-100 pt-4 space-y-3">
+								<span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500 block">Expat Relocation Allowances ({selectedCountry.currencySymbol})</span>
 								<div className="grid grid-cols-2 gap-3">
 									<div>
-										<label className="block text-xs text-[#5E5E5E] mb-1">COLA Monthly ({selectedCountry.currencySymbol})</label>
+										<label className="block text-xs font-medium text-slate-600 mb-1">COLA Monthly ({selectedCountry.currencySymbol})</label>
 										<input
 											type="number"
 											value={colaMonthly}
 											onChange={(e) => setColaMonthly(Math.max(0, Number(e.target.value)))}
-											className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
+											className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-sm font-mono text-slate-900 outline-none"
 										/>
 									</div>
 									<div>
-										<label className="block text-xs text-[#5E5E5E] mb-1">Housing Allowance Monthly ({selectedCountry.currencySymbol})</label>
+										<label className="block text-xs font-medium text-slate-600 mb-1">Housing Allowance Monthly ({selectedCountry.currencySymbol})</label>
 										<input
 											type="number"
 											value={housingAllowanceMonthly}
 											onChange={(e) => setHousingAllowanceMonthly(Math.max(0, Number(e.target.value)))}
-											className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
+											className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-sm font-mono text-slate-900 outline-none"
 										/>
 									</div>
 								</div>
 								<div className="grid grid-cols-2 gap-3">
 									<div>
-										<label className="block text-xs text-[#5E5E5E] mb-1">Tuition Stipend Annual ({selectedCountry.currencySymbol})</label>
+										<label className="block text-xs font-medium text-slate-600 mb-1">Tuition Stipend Annual ({selectedCountry.currencySymbol})</label>
 										<input
 											type="number"
 											value={tuitionStipendAnnual}
 											onChange={(e) => setTuitionStipendAnnual(Math.max(0, Number(e.target.value)))}
-											className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
+											className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-sm font-mono text-slate-900 outline-none"
 										/>
 									</div>
 									<div>
-										<label className="block text-xs text-[#5E5E5E] mb-1">Moving Reimbursement ($ USD)</label>
+										<label className="block text-xs font-medium text-slate-600 mb-1">Moving Reimbursement ($ USD)</label>
 										<input
 											type="number"
 											value={movingReimbursementOneTime}
 											onChange={(e) => setMovingReimbursementOneTime(Math.max(0, Number(e.target.value)))}
-											className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
+											className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-sm font-mono text-slate-900 outline-none"
 										/>
 									</div>
 								</div>
@@ -551,135 +638,146 @@ export default function ExpatEvaluatorCalculator() {
 
 			{/* --- TAB 3: INTERNATIONAL TAXATION ENGINE --- */}
 			{activeTab === 'tax' && (
-				<div className="space-y-8">
-					<div className="grid gap-8 md:grid-cols-2">
-						{/* Host Tax Engine */}
-						<div className="border border-[#E5E5E5] p-6 space-y-4">
-							<span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#5A7A8F]">
-								Host Tax Logic ({selectedCountry.name})
+				<div className="grid gap-8 md:grid-cols-2">
+					{/* Host Tax Panel */}
+					<div className="bg-gradient-to-br from-blue-50/40 via-white to-sky-50/30 rounded-2xl border border-blue-100 shadow-sm p-6 space-y-5">
+						<div className="flex items-center justify-between border-b border-blue-100 pb-3">
+							<span className="font-mono text-xs font-bold uppercase tracking-wider text-indigo-900">
+								Host Tax Engine ({selectedCountry.name})
 							</span>
-							<h3 className="text-xl font-bold text-[#1A1A1A]">{selectedCountry.expatRegimeName}</h3>
-
-							<div className="space-y-4 pt-2 text-xs">
-								{selectedCountry.hasSpecialExpatRegime && (
-									<div className="flex items-center justify-between border-b border-[#E5E5E5] pb-3">
-										<div>
-											<span className="font-bold text-[#1A1A1A] block">Special Expat Tax Regime Active</span>
-											<span className="text-[#5E5E5E]">{selectedCountry.expatRegimeDescription}</span>
-										</div>
-										<input
-											type="checkbox"
-											checked={useSpecialRegime}
-											onChange={(e) => setUseSpecialRegime(e.target.checked)}
-											className="h-5 w-5 accent-[#5A7A8F]"
-										/>
-									</div>
-								)}
-
-								<div>
-									<label className="block text-[#8C8C8C] uppercase font-mono tracking-[0.2em] mb-1">
-										Global Passive &amp; Investment Income ($ USD / Year)
-									</label>
-									<p className="text-[#5E5E5E] mb-1">Dividends, interest &amp; capital gains (Included symmetrically in Stay &amp; Move gross income).</p>
-									<input
-										type="number"
-										value={foreignInvestmentIncome}
-										onChange={(e) => setForeignInvestmentIncome(Math.max(0, Number(e.target.value)))}
-										className="w-full border border-[#E5E5E5] bg-white px-3 py-2 font-mono text-[#1A1A1A]"
-									/>
-								</div>
-
-								<div className="border-t border-[#E5E5E5] pt-3">
-									<p className="font-mono text-[11px] text-[#5E5E5E]">
-										Host Tax Note: <strong>{breakdown.hostTaxDetailsNote}</strong>
-									</p>
-								</div>
-							</div>
+							<span className="text-xs font-bold text-indigo-900 bg-blue-100/70 px-2.5 py-1 rounded-lg">
+								{selectedCountry.flagEmoji} {selectedCountry.currencyCode}
+							</span>
 						</div>
 
-						{/* Home Country Tax (US Obligations) */}
-						<div className="border border-[#E5E5E5] p-6 space-y-4">
-							<span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#8C8C8C]">
-								Home Country Tax Logic (U.S.)
-							</span>
-							<h3 className="text-xl font-bold text-[#1A1A1A]">Worldwide Taxation &amp; State Baseline</h3>
+						<h3 className="text-lg font-bold text-slate-900">{selectedCountry.expatRegimeName}</h3>
 
-							<div className="space-y-4 pt-2 text-xs">
-								<div className="flex items-center justify-between border-b border-[#E5E5E5] pb-3">
+						<div className="space-y-4 pt-1 text-xs">
+							{selectedCountry.hasSpecialExpatRegime && (
+								<div className="flex items-center justify-between bg-white p-4 rounded-xl border border-blue-100">
 									<div>
-										<span className="font-bold text-[#1A1A1A] block">U.S. Citizen / Green Card Holder</span>
-										<span className="text-[#5E5E5E]">Subject to US worldwide income tax regardless of residence</span>
+										<span className="font-bold text-slate-900 block text-sm">Special Expat Tax Regime</span>
+										<span className="text-slate-500 text-xs">{selectedCountry.expatRegimeDescription}</span>
 									</div>
 									<input
 										type="checkbox"
-										checked={isUSCitizen}
-										onChange={(e) => setIsUSCitizen(e.target.checked)}
-										className="h-5 w-5 accent-[#5A7A8F]"
+										checked={useSpecialRegime}
+										onChange={(e) => setUseSpecialRegime(e.target.checked)}
+										className="h-5 w-5 rounded accent-indigo-600 cursor-pointer"
 									/>
 								</div>
+							)}
 
+							<div>
+								<label className="block text-xs font-semibold text-slate-700 mb-1">
+									Global Passive &amp; Investment Income ($ USD / Year)
+								</label>
+								<p className="text-slate-500 text-[11px] mb-1.5">Dividends, interest &amp; capital gains (Evaluated under host regime rules).</p>
+								<input
+									type="number"
+									value={foreignInvestmentIncome}
+									onChange={(e) => setForeignInvestmentIncome(Math.max(0, Number(e.target.value)))}
+									className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-sm font-mono text-slate-900 outline-none"
+								/>
+							</div>
+
+							<div className="bg-white p-4 rounded-xl border border-blue-100">
+								<span className="text-xs font-mono uppercase text-slate-400 block mb-1">Tax Engine Note</span>
+								<p className="font-mono text-xs text-slate-800 font-semibold">
+									{breakdown.hostTaxDetailsNote}
+								</p>
+							</div>
+						</div>
+					</div>
+
+					{/* Home US Tax Panel */}
+					<div className="bg-white rounded-2xl border border-slate-200/80 shadow-sm p-6 space-y-5">
+						<div className="flex items-center justify-between border-b border-slate-100 pb-3">
+							<span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500">
+								Home Tax Logic (U.S.)
+							</span>
+							<span className="text-xs font-bold text-slate-700 bg-slate-100 px-2.5 py-1 rounded-lg">
+								🇺🇸 Worldwide Obligations
+							</span>
+						</div>
+
+						<h3 className="text-lg font-bold text-slate-900">Treaties &amp; Tax Coverage Policy</h3>
+
+						<div className="space-y-4 pt-1 text-xs">
+							<div className="flex items-center justify-between bg-slate-50 p-4 rounded-xl border border-slate-200">
 								<div>
-									<label className="block text-[#8C8C8C] uppercase font-mono tracking-[0.2em] mb-1">
-										US State Tax Rate Jurisdiction (Stay Scenario)
-									</label>
-									<select
-										value={homeStateTaxRate}
-										onChange={(e) => setHomeStateTaxRate(Number(e.target.value))}
-										className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm text-[#1A1A1A]"
-									>
-										<option value={0.0}>0.0% — No State Income Tax (TX, FL, WA, NV, WY, SD, TN, AK)</option>
-										<option value={0.0307}>3.07% — Low State Tax (e.g. PA)</option>
-										<option value={0.05}>5.0% — National US Average State Tax</option>
-										<option value={0.0685}>6.85% — Mid-High State Tax (e.g. NY)</option>
-										<option value={0.093}>9.30% — High State Tax (e.g. CA)</option>
-									</select>
+									<span className="font-bold text-slate-900 block text-sm">U.S. Citizen / Green Card Holder</span>
+									<span className="text-slate-500 text-xs">Subject to US worldwide income tax regardless of residence</span>
 								</div>
+								<input
+									type="checkbox"
+									checked={isUSCitizen}
+									onChange={(e) => setIsUSCitizen(e.target.checked)}
+									className="h-5 w-5 rounded accent-slate-900 cursor-pointer"
+								/>
+							</div>
 
+							<div>
+								<label className="block text-xs font-semibold text-slate-700 mb-1">
+									US State Tax Rate Jurisdiction (Stay Scenario)
+								</label>
+								<select
+									value={homeStateTaxRate}
+									onChange={(e) => setHomeStateTaxRate(Number(e.target.value))}
+									className="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-900 outline-none"
+								>
+									<option value={0.0}>0.0% — No State Income Tax (TX, FL, WA, NV, WY, SD, TN, AK)</option>
+									<option value={0.0307}>3.07% — Low State Tax (e.g. PA)</option>
+									<option value={0.05}>5.00% — National US Average State Tax</option>
+									<option value={0.0685}>6.85% — Mid-High State Tax (e.g. NY)</option>
+									<option value={0.093}>9.30% — High State Tax (e.g. CA)</option>
+								</select>
+							</div>
+
+							<div>
+								<label className="block text-xs font-semibold text-slate-700 mb-1">
+									US Federal Tax Relief Method
+								</label>
+								<select
+									value={taxReliefMethod}
+									onChange={(e) => setTaxReliefMethod(e.target.value as any)}
+									className="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-900 outline-none"
+								>
+									<option value="auto">Auto-Select Optimal (FEIE vs FTC)</option>
+									<option value="feie">Foreign Earned Income Exclusion (FEIE - Max $126,500)</option>
+									<option value="ftc">Foreign Tax Credit (FTC - Dollar-for-dollar offset)</option>
+								</select>
+							</div>
+
+							<div>
+								<label className="block text-xs font-semibold text-slate-700 mb-1">Corporate Tax Policy Coverage</label>
+								<select
+									value={taxPolicy}
+									onChange={(e) => setTaxPolicy(e.target.value as any)}
+									className="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-xs font-semibold text-slate-900 outline-none"
+								>
+									<option value="tax-equalization">Tax Equalization (Employee burden stays identical to Stay scenario)</option>
+									<option value="tax-protection">Tax Protection (Employer pays excess if host taxes &gt; home taxes)</option>
+									<option value="laissez-faire">Laissez-Faire (Employee pays all host &amp; home taxes independently)</option>
+								</select>
+							</div>
+
+							<div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
+								<span className="font-mono text-xs uppercase text-slate-500 block">Totalization Agreement (Social Security)</span>
 								<div>
-									<label className="block text-[#8C8C8C] uppercase font-mono tracking-[0.2em] mb-1">
-										US Federal Tax Relief Method
-									</label>
-									<select
-										value={taxReliefMethod}
-										onChange={(e) => setTaxReliefMethod(e.target.value as any)}
-										className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm text-[#1A1A1A]"
-									>
-										<option value="auto">Auto-Select Optimal (FEIE vs FTC)</option>
-										<option value="feie">Foreign Earned Income Exclusion (FEIE - Max $126,500)</option>
-										<option value="ftc">Foreign Tax Credit (FTC - Dollar-for-dollar offset)</option>
-									</select>
+									<label className="block text-slate-600 mb-1 font-medium">Assignment Duration (Years)</label>
+									<input
+										type="number"
+										min={1}
+										max={10}
+										value={assignmentDurationYears}
+										onChange={(e) => setAssignmentDurationYears(Math.max(1, Number(e.target.value)))}
+										className="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg font-mono text-slate-900"
+									/>
 								</div>
-
-								<div className="border-t border-[#E5E5E5] pt-4 space-y-3">
-									<span className="font-mono text-xs uppercase tracking-[0.2em] text-[#8C8C8C]">Corporate Tax Policy Coverage</span>
-									<select
-										value={taxPolicy}
-										onChange={(e) => setTaxPolicy(e.target.value as any)}
-										className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm text-[#1A1A1A]"
-									>
-										<option value="tax-equalization">Tax Equalization (Employee burden stays identical to Stay scenario)</option>
-										<option value="tax-protection">Tax Protection (Employer pays excess if host taxes &gt; home taxes)</option>
-										<option value="laissez-faire">Laissez-Faire (Employee pays all host &amp; home taxes independently)</option>
-									</select>
-								</div>
-
-								<div className="border-t border-[#E5E5E5] pt-4 space-y-2">
-									<span className="font-mono text-xs uppercase tracking-[0.2em] text-[#8C8C8C]">Totalization Agreement (Social Security)</span>
-									<div>
-										<label className="block text-[#5E5E5E] mb-1">Assignment Duration (Years)</label>
-										<input
-											type="number"
-											min={1}
-											max={10}
-											value={assignmentDurationYears}
-											onChange={(e) => setAssignmentDurationYears(Math.max(1, Number(e.target.value)))}
-											className="w-full border border-[#E5E5E5] bg-white px-3 py-2 font-mono text-[#1A1A1A]"
-										/>
-									</div>
-									<p className="text-[11px] text-[#5E5E5E]">
-										Status: <strong>{breakdown.totalizationSocialSecurityModel}</strong>
-									</p>
-								</div>
+								<p className="text-[11px] text-slate-600">
+									Status: <strong>{breakdown.totalizationSocialSecurityModel}</strong>
+								</p>
 							</div>
 						</div>
 					</div>
@@ -689,98 +787,128 @@ export default function ExpatEvaluatorCalculator() {
 			{/* --- TAB 4: EXPENSES & COST OF LIVING --- */}
 			{activeTab === 'expenses' && (
 				<div className="grid gap-8 md:grid-cols-2">
-					<div className="border border-[#E5E5E5] p-6 space-y-4">
-						<span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#8C8C8C]">
-							Home Living Expenses ($ USD)
-						</span>
-						<h3 className="text-xl font-bold text-[#1A1A1A]">Stay Scenario Outlays</h3>
+					{/* Left Panel: Stay Expenses */}
+					<div className="bg-white rounded-2xl border border-slate-200/80 shadow-sm p-6 space-y-5">
+						<div className="flex items-center justify-between border-b border-slate-100 pb-3">
+							<span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500">
+								Home Living Expenses ($ USD)
+							</span>
+							<span className="text-xs font-bold text-slate-700 bg-slate-100 px-2.5 py-1 rounded-lg">
+								🇺🇸 Stay Outlays
+							</span>
+						</div>
 
-						<div className="space-y-4 pt-2">
+						<h3 className="text-lg font-bold text-slate-900">Home Country Baseline Costs</h3>
+
+						<div className="space-y-4">
 							<div>
-								<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#8C8C8C] mb-1">
+								<label className="block text-xs font-semibold text-slate-700 mb-1.5">
 									Home Rent or Mortgage ($ USD / Month)
 								</label>
-								<input
-									type="number"
-									value={homeRentOrMortgageMonthly}
-									onChange={(e) => setHomeRentOrMortgageMonthly(Math.max(0, Number(e.target.value)))}
-									className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
-								/>
+								<div className="relative">
+									<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
+									<input
+										type="number"
+										value={homeRentOrMortgageMonthly}
+										onChange={(e) => setHomeRentOrMortgageMonthly(Math.max(0, Number(e.target.value)))}
+										className="w-full pl-8 pr-3 py-2.5 bg-slate-50/80 border border-slate-200 rounded-xl text-sm font-mono text-slate-900 outline-none"
+									/>
+								</div>
 							</div>
+
 							<div className="grid grid-cols-2 gap-3">
 								<div>
-									<label className="block text-xs text-[#5E5E5E] mb-1">Private School Tuition ($ USD/Mo)</label>
-									<input
-										type="number"
-										value={homeTuitionMonthly}
-										onChange={(e) => setHomeTuitionMonthly(Math.max(0, Number(e.target.value)))}
-										className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
-									/>
+									<label className="block text-xs font-semibold text-slate-700 mb-1">Private School Tuition ($/Mo)</label>
+									<div className="relative">
+										<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
+										<input
+											type="number"
+											value={homeTuitionMonthly}
+											onChange={(e) => setHomeTuitionMonthly(Math.max(0, Number(e.target.value)))}
+											className="w-full pl-8 pr-3 py-2.5 bg-slate-50/80 border border-slate-200 rounded-xl text-sm font-mono text-slate-900 outline-none"
+										/>
+									</div>
 								</div>
 								<div>
-									<label className="block text-xs text-[#5E5E5E] mb-1">Private Health Insurance ($ USD/Mo)</label>
-									<input
-										type="number"
-										value={homeHealthInsuranceMonthly}
-										onChange={(e) => setHomeHealthInsuranceMonthly(Math.max(0, Number(e.target.value)))}
-										className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
-									/>
+									<label className="block text-xs font-semibold text-slate-700 mb-1">Private Health Insurance ($/Mo)</label>
+									<div className="relative">
+										<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
+										<input
+											type="number"
+											value={homeHealthInsuranceMonthly}
+											onChange={(e) => setHomeHealthInsuranceMonthly(Math.max(0, Number(e.target.value)))}
+											className="w-full pl-8 pr-3 py-2.5 bg-slate-50/80 border border-slate-200 rounded-xl text-sm font-mono text-slate-900 outline-none"
+										/>
+									</div>
 								</div>
 							</div>
+
 							<div>
-								<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#8C8C8C] mb-1">
+								<label className="block text-xs font-semibold text-slate-700 mb-1.5">
 									Discretionary Spending Baseline ($ USD / Month)
 								</label>
-								<input
-									type="number"
-									value={discretionarySpendMonthly}
-									onChange={(e) => setDiscretionarySpendMonthly(Math.max(0, Number(e.target.value)))}
-									className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
-								/>
+								<div className="relative">
+									<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
+									<input
+										type="number"
+										value={discretionarySpendMonthly}
+										onChange={(e) => setDiscretionarySpendMonthly(Math.max(0, Number(e.target.value)))}
+										className="w-full pl-8 pr-3 py-2.5 bg-slate-50/80 border border-slate-200 rounded-xl text-sm font-mono text-slate-900 outline-none"
+									/>
+								</div>
 							</div>
 						</div>
 					</div>
 
-					<div className="border border-[#E5E5E5] p-6 space-y-4">
-						<span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#5A7A8F]">
-							Host Expenses ({selectedCountry.currencySymbol} {selectedCountry.currencyCode})
-						</span>
-						<h3 className="text-xl font-bold text-[#1A1A1A]">Move Scenario Outlays</h3>
+					{/* Right Panel: Host Expenses */}
+					<div className="bg-gradient-to-br from-blue-50/40 via-white to-sky-50/30 rounded-2xl border border-blue-100 shadow-sm p-6 space-y-5">
+						<div className="flex items-center justify-between border-b border-blue-100 pb-3">
+							<span className="font-mono text-xs font-bold uppercase tracking-wider text-indigo-900">
+								Host Expenses ({selectedCountry.name})
+							</span>
+							<span className="text-xs font-bold text-indigo-900 bg-blue-100/70 px-2.5 py-1 rounded-lg">
+								{selectedCountry.flagEmoji} {selectedCountry.currencyCode} ({selectedCountry.currencySymbol})
+							</span>
+						</div>
 
-						<div className="space-y-4 pt-2">
+						<h3 className="text-lg font-bold text-slate-900">Host Destination Costs ({selectedCountry.currencySymbol})</h3>
+
+						<div className="space-y-4">
 							<div>
-								<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#8C8C8C] mb-1">
+								<label className="block text-xs font-semibold text-slate-700 mb-1.5">
 									Host Rent ({selectedCountry.currencySymbol} / Month)
 								</label>
 								<input
 									type="number"
 									value={hostRentMonthly}
 									onChange={(e) => setHostRentMonthly(Math.max(0, Number(e.target.value)))}
-									className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
+									className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-sm font-mono text-slate-900 outline-none"
 								/>
 							</div>
+
 							<div className="grid grid-cols-2 gap-3">
 								<div>
-									<label className="block text-xs text-[#5E5E5E] mb-1">Private School Tuition ({selectedCountry.currencySymbol}/Mo)</label>
+									<label className="block text-xs font-semibold text-slate-700 mb-1">Private School Tuition ({selectedCountry.currencySymbol}/Mo)</label>
 									<input
 										type="number"
 										value={privateTuitionMonthly}
 										onChange={(e) => setPrivateTuitionMonthly(Math.max(0, Number(e.target.value)))}
-										className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
+										className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-sm font-mono text-slate-900 outline-none"
 									/>
 								</div>
 								<div>
-									<label className="block text-xs text-[#5E5E5E] mb-1">Private Health Insurance ({selectedCountry.currencySymbol}/Mo)</label>
+									<label className="block text-xs font-semibold text-slate-700 mb-1">Private Health Insurance ({selectedCountry.currencySymbol}/Mo)</label>
 									<input
 										type="number"
 										value={privateHealthInsuranceMonthly}
 										onChange={(e) => setPrivateHealthInsuranceMonthly(Math.max(0, Number(e.target.value)))}
-										className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
+										className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-sm font-mono text-slate-900 outline-none"
 									/>
 								</div>
 							</div>
+
 							<div>
-								<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#8C8C8C] mb-1">
+								<label className="block text-xs font-semibold text-slate-700 mb-1.5">
 									Host Cost of Living Multiplier ({(hostColIndexRatio * 100).toFixed(0)}%)
 								</label>
 								<input
@@ -790,10 +918,12 @@ export default function ExpatEvaluatorCalculator() {
 									step={0.01}
 									value={hostColIndexRatio}
 									onChange={(e) => setHostColIndexRatio(Number(e.target.value))}
-									className="w-full h-2 rounded-lg bg-[#E5E5E5] accent-[#5A7A8F]"
+									className="w-full h-2 rounded-lg bg-slate-200 accent-indigo-600 cursor-pointer"
 								/>
-								<span className="text-xs text-[#5E5E5E]">
-									{hostColIndexRatio < 1 ? `Host city in ${selectedCountry.name} is ${( (1 - hostColIndexRatio) * 100 ).toFixed(0)}% cheaper than home` : `Host city in ${selectedCountry.name} is ${( (hostColIndexRatio - 1) * 100 ).toFixed(0)}% pricier than home`}
+								<span className="text-xs text-slate-600 font-medium">
+									{hostColIndexRatio < 1
+										? `Host city in ${selectedCountry.name} is ${((1 - hostColIndexRatio) * 100).toFixed(0)}% cheaper than home`
+										: `Host city in ${selectedCountry.name} is ${((hostColIndexRatio - 1) * 100).toFixed(0)}% pricier than home`}
 								</span>
 							</div>
 						</div>
@@ -803,12 +933,12 @@ export default function ExpatEvaluatorCalculator() {
 
 			{/* --- TAB 5: FX & LIABILITIES --- */}
 			{activeTab === 'fx' && (
-				<div className="border border-[#E5E5E5] p-6 space-y-6">
-					<h3 className="text-xl font-bold text-[#1A1A1A]">Foreign Exchange &amp; Cross-Border Debt Servicing</h3>
+				<div className="bg-white rounded-2xl border border-slate-200/80 shadow-sm p-6 space-y-6">
+					<h3 className="text-xl font-bold text-slate-900 tracking-tight">Foreign Exchange &amp; Cross-Border Debt Servicing</h3>
 
 					<div className="grid gap-6 md:grid-cols-2">
 						<div>
-							<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#8C8C8C] mb-1">
+							<label className="block text-xs font-semibold text-slate-700 mb-1.5">
 								Exchange Rate ({selectedCountry.currencyCode} to USD)
 							</label>
 							<input
@@ -816,57 +946,63 @@ export default function ExpatEvaluatorCalculator() {
 								step={0.0001}
 								value={fxRateHostToUsd}
 								onChange={(e) => setFxRateHostToUsd(Math.max(0.00001, Number(e.target.value)))}
-								className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
+								className="w-full px-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono text-slate-900 outline-none"
 							/>
-							<span className="text-xs text-[#5E5E5E]">1 {selectedCountry.currencyCode} = ${fxRateHostToUsd} USD</span>
+							<span className="text-xs text-slate-500 font-mono mt-1 block">1 {selectedCountry.currencyCode} = ${fxRateHostToUsd} USD</span>
 						</div>
 
 						<div>
-							<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#8C8C8C] mb-1">
+							<label className="block text-xs font-semibold text-slate-700 mb-1.5">
 								Home-Currency Monthly Liabilities ($ USD)
 							</label>
-							<input
-								type="number"
-								value={homeLiabilitiesUsdMonthly}
-								onChange={(e) => setHomeLiabilitiesUsdMonthly(Math.max(0, Number(e.target.value)))}
-								className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
-							/>
-							<span className="text-xs text-[#5E5E5E]">US mortgage, student loans, 401(k) / IRA contributions</span>
+							<div className="relative">
+								<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
+								<input
+									type="number"
+									value={homeLiabilitiesUsdMonthly}
+									onChange={(e) => setHomeLiabilitiesUsdMonthly(Math.max(0, Number(e.target.value)))}
+									className="w-full pl-8 pr-3 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-mono text-slate-900 outline-none"
+								/>
+							</div>
+							<span className="text-xs text-slate-500 mt-1 block">US mortgage, student loans, 401(k) / IRA contributions</span>
 						</div>
 					</div>
 
-					<div className="grid gap-6 md:grid-cols-2 border-t border-[#E5E5E5] pt-6">
+					<div className="grid gap-6 md:grid-cols-2 border-t border-slate-100 pt-6">
 						<div>
-							<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#5A7A8F] mb-1">
+							<label className="block text-xs font-semibold text-indigo-900 mb-1.5">
 								Host-Currency Monthly Liabilities ({selectedCountry.currencySymbol} {selectedCountry.currencyCode})
 							</label>
 							<input
 								type="number"
 								value={hostLiabilitiesMonthly}
 								onChange={(e) => setHostLiabilitiesMonthly(Math.max(0, Number(e.target.value)))}
-								className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
+								className="w-full px-3 py-2.5 bg-blue-50/50 border border-blue-200 rounded-xl text-sm font-mono text-slate-900 outline-none"
 							/>
-							<span className="text-xs text-[#5E5E5E]">Host local car lease, local debt, or host pension contributions</span>
+							<span className="text-xs text-slate-500 mt-1 block">Host local car lease, local debt, or host pension contributions</span>
 						</div>
 
-						<div className="space-y-1">
-							<span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#8C8C8C]">
+						<div className="bg-slate-50 p-4 rounded-xl border border-slate-200 flex flex-col justify-between">
+							<span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500">
 								Combined Debt Servicing Summary
 							</span>
-							<p className="text-sm font-mono text-[#1A1A1A] font-bold">
+							<p className="text-lg font-mono text-slate-900 font-bold mt-1">
 								Total Move Debt: {formatCurrency(breakdown.moveTotalLiabilitiesUsd)} / year
 							</p>
-							<p className="text-xs text-[#5E5E5E]">
+							<p className="text-xs text-slate-500 font-mono">
 								Home USD Debt: {formatCurrency(breakdown.moveHomeLiabilities)} + Host Debt: {formatCurrency(breakdown.moveHostLiabilitiesUsd)}
 							</p>
 						</div>
 					</div>
 
-					<div className="border-t border-[#E5E5E5] pt-4 space-y-2">
-						<span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#B85C5C]">
+					<div className="border-t border-slate-100 pt-4 space-y-2">
+						<span className="font-mono text-xs font-bold uppercase tracking-wider text-rose-600 flex items-center gap-1.5">
+							<svg className="w-4 h-4 text-rose-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+							</svg>
 							Translation Risk Exposure (Host Currency Weakening)
 						</span>
-						<p className="text-sm text-[#5E5E5E]">
+						<p className="text-sm text-slate-600">
 							If host currency ({selectedCountry.currencyCode}) depreciates by 10% against USD (from ${fxRateHostToUsd} to ${(fxRateHostToUsd * 0.9).toFixed(5)}), servicing your annual ${formatCurrency(breakdown.moveTotalLiabilitiesUsd)} USD liabilities requires an extra <strong>{formatCurrency(breakdown.fxDepreciationImpactUsd)}</strong> in host earnings per year.
 						</p>
 					</div>
@@ -875,14 +1011,14 @@ export default function ExpatEvaluatorCalculator() {
 
 			{/* --- TAB 6: 5-YEAR WEALTH TRAJECTORY --- */}
 			{activeTab === 'wealth' && (
-				<div className="border border-[#E5E5E5] p-6 space-y-6">
-					<div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-b border-[#E5E5E5] pb-4">
+				<div className="bg-white rounded-2xl border border-slate-200/80 shadow-sm p-6 space-y-6">
+					<div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-100 pb-4">
 						<div>
-							<h3 className="text-xl font-bold text-[#1A1A1A]">5-Year Cumulative Wealth Trajectory</h3>
-							<p className="text-xs text-[#5E5E5E]">Compares cumulative wealth accumulation in the US vs. {selectedCountry.name}.</p>
+							<h3 className="text-xl font-bold text-slate-900 tracking-tight">5-Year Cumulative Wealth Trajectory</h3>
+							<p className="text-xs text-slate-500">Compares cumulative wealth accumulation in the US vs. {selectedCountry.name}.</p>
 						</div>
-						<div className="flex items-center gap-3">
-							<span className="text-xs font-mono uppercase text-[#8C8C8C]">Assumed Growth Rate</span>
+						<div className="flex items-center gap-3 bg-slate-50 px-3 py-1.5 rounded-xl border border-slate-200">
+							<span className="text-xs font-mono uppercase text-slate-500">Assumed Growth Rate</span>
 							<input
 								type="number"
 								step={0.01}
@@ -890,43 +1026,45 @@ export default function ExpatEvaluatorCalculator() {
 								max={0.2}
 								value={expectedInvestmentReturnRate}
 								onChange={(e) => setExpectedInvestmentReturnRate(Math.max(0, Number(e.target.value)))}
-								className="w-20 border border-[#E5E5E5] bg-white px-2 py-1 text-sm font-mono text-[#1A1A1A]"
+								className="w-16 px-2 py-1 bg-white border border-slate-200 rounded-lg text-xs font-mono font-bold text-slate-900 outline-none"
 							/>
 						</div>
 					</div>
 
-					{/* Visual Bar Comparison */}
-					<div className="space-y-4">
+					{/* Visual Bar Comparison Charts */}
+					<div className="space-y-5">
 						{projections.map((p) => {
 							const maxVal = Math.max(...projections.map((x) => Math.max(x.stayCumulativeWealth, x.moveCumulativeWealth)), 1);
 							const stayPct = Math.min(100, Math.max(5, (p.stayCumulativeWealth / maxVal) * 100));
 							const movePct = Math.min(100, Math.max(5, (p.moveCumulativeWealth / maxVal) * 100));
 
 							return (
-								<div key={p.year} className="space-y-1.5 text-xs font-mono">
-									<div className="flex justify-between text-[#1A1A1A] font-bold">
-										<span>Year {p.year}</span>
-										<span className={p.wealthDelta >= 0 ? 'text-[#5A7A8F]' : 'text-[#B85C5C]'}>
-											Delta: {p.wealthDelta >= 0 ? '+' : ''}{formatCurrency(p.wealthDelta)}
+								<div key={p.year} className="space-y-2 font-mono text-xs bg-slate-50/60 p-4 rounded-xl border border-slate-100">
+									<div className="flex justify-between items-center text-slate-900 font-bold">
+										<span>Year {p.year} Accumulation</span>
+										<span className={`px-2 py-0.5 rounded-md font-bold ${
+											p.wealthDelta >= 0 ? 'bg-emerald-100 text-emerald-800' : 'bg-rose-100 text-rose-800'
+										}`}>
+											Net Delta: {p.wealthDelta >= 0 ? '+' : ''}{formatCurrency(p.wealthDelta)}
 										</span>
 									</div>
-									<div className="grid grid-cols-2 gap-4">
+									<div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
 										<div>
-											<div className="flex justify-between text-[11px] text-[#8C8C8C] mb-0.5">
-												<span>Stay (US)</span>
-												<span>{formatCurrency(p.stayCumulativeWealth)}</span>
+											<div className="flex justify-between text-[11px] text-slate-500 mb-1">
+												<span>Stay (US Baseline)</span>
+												<span className="font-bold text-slate-700">{formatCurrency(p.stayCumulativeWealth)}</span>
 											</div>
-											<div className="h-3 bg-[#E5E5E5] overflow-hidden">
-												<div className="h-full bg-[#8C8C8C]" style={{ width: `${stayPct}%` }} />
+											<div className="h-3.5 bg-slate-200 rounded-full overflow-hidden">
+												<div className="h-full bg-slate-500 rounded-full transition-all" style={{ width: `${stayPct}%` }} />
 											</div>
 										</div>
 										<div>
-											<div className="flex justify-between text-[11px] text-[#5A7A8F] mb-0.5">
+											<div className="flex justify-between text-[11px] text-indigo-900 mb-1">
 												<span>Move ({selectedCountry.name})</span>
-												<span>{formatCurrency(p.moveCumulativeWealth)}</span>
+												<span className="font-bold text-emerald-600">{formatCurrency(p.moveCumulativeWealth)}</span>
 											</div>
-											<div className="h-3 bg-[#E5E5E5] overflow-hidden">
-												<div className="h-full bg-[#5A7A8F]" style={{ width: `${movePct}%` }} />
+											<div className="h-3.5 bg-slate-200 rounded-full overflow-hidden">
+												<div className="h-full bg-emerald-500 rounded-full transition-all" style={{ width: `${movePct}%` }} />
 											</div>
 										</div>
 									</div>
@@ -935,9 +1073,9 @@ export default function ExpatEvaluatorCalculator() {
 						})}
 					</div>
 
-					<div className="border-t border-[#E5E5E5] pt-4">
-						<p className="text-xs text-[#5E5E5E]">
-							Note: Projections assume reinvestment of annual household free cash flows compounded annually at {(expectedInvestmentReturnRate * 100).toFixed(1)}%.
+					<div className="border-t border-slate-100 pt-4 text-xs text-slate-500">
+						<p>
+							Note: Projections assume annual household free cash flow is reinvested and compounded annually at {(expectedInvestmentReturnRate * 100).toFixed(1)}%.
 						</p>
 					</div>
 				</div>
