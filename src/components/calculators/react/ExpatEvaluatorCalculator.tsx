@@ -14,7 +14,7 @@ export default function ExpatEvaluatorCalculator() {
 	const [homeBaseSalary, setHomeBaseSalary] = useState(160000);
 	const [homeBonus, setHomeBonus] = useState(25000);
 	const [homeEquityAnnual, setHomeEquityAnnual] = useState(30000);
-	const [homeSpouseIncome, setHomeSpouseIncome] = useState(65000); // Spousal income in Stay scenario
+	const [homeSpouseIncome, setHomeSpouseIncome] = useState(65000);
 
 	// Host Country Earnings (in Host Currency)
 	const [hostBaseSalary, setHostBaseSalary] = useState(140000);
@@ -49,12 +49,16 @@ export default function ExpatEvaluatorCalculator() {
 	// Social Security & Totalization
 	const [assignmentDurationYears, setAssignmentDurationYears] = useState(3);
 
-	// Cost of Living & Expenses
+	// Cost of Living & Expenses - Home Baseline (USD)
 	const [homeRentOrMortgageMonthly, setHomeRentOrMortgageMonthly] = useState(3200);
+	const [homeTuitionMonthly, setHomeTuitionMonthly] = useState(1200);
+	const [homeHealthInsuranceMonthly, setHomeHealthInsuranceMonthly] = useState(500);
+	const [discretionarySpendMonthly, setDiscretionarySpendMonthly] = useState(3500);
+
+	// Cost of Living & Expenses - Host Destination (Host Currency)
 	const [hostRentMonthly, setHostRentMonthly] = useState(2200);
 	const [privateTuitionMonthly, setPrivateTuitionMonthly] = useState(1000);
 	const [privateHealthInsuranceMonthly, setPrivateHealthInsuranceMonthly] = useState(450);
-	const [discretionarySpendMonthly, setDiscretionarySpendMonthly] = useState(3500);
 	const [hostColIndexRatio, setHostColIndexRatio] = useState(0.82);
 
 	// FX & Liabilities
@@ -73,27 +77,35 @@ export default function ExpatEvaluatorCalculator() {
 			if (profile.currencyCode === 'CLP') {
 				setHostBaseSalary(110000000); setHostBonus(15000000); setHostEquityAnnual(20000000);
 				setHostRentMonthly(1200000); setColaMonthly(600000); setHousingAllowanceMonthly(1200000); setTuitionStipendAnnual(8000000);
+				setPrivateTuitionMonthly(650000); setPrivateHealthInsuranceMonthly(300000);
 			} else if (profile.currencyCode === 'ARS') {
 				setHostBaseSalary(120000000); setHostBonus(18000000); setHostEquityAnnual(22000000);
 				setHostRentMonthly(1500000); setColaMonthly(800000); setHousingAllowanceMonthly(1500000); setTuitionStipendAnnual(9000000);
+				setPrivateTuitionMonthly(800000); setPrivateHealthInsuranceMonthly(400000);
 			} else if (profile.currencyCode === 'BRL') {
 				setHostBaseSalary(750000); setHostBonus(100000); setHostEquityAnnual(120000);
 				setHostRentMonthly(12000); setColaMonthly(4000); setHousingAllowanceMonthly(8000); setTuitionStipendAnnual(60000);
+				setPrivateTuitionMonthly(5000); setPrivateHealthInsuranceMonthly(2500);
 			} else if (profile.currencyCode === 'MXN') {
 				setHostBaseSalary(2200000); setHostBonus(300000); setHostEquityAnnual(400000);
 				setHostRentMonthly(35000); setColaMonthly(12000); setHousingAllowanceMonthly(25000); setTuitionStipendAnnual(180000);
+				setPrivateTuitionMonthly(18000); setPrivateHealthInsuranceMonthly(8000);
 			} else if (profile.currencyCode === 'JPY') {
 				setHostBaseSalary(18000000); setHostBonus(2500000); setHostEquityAnnual(3000000);
 				setHostRentMonthly(280000); setColaMonthly(100000); setHousingAllowanceMonthly(200000); setTuitionStipendAnnual(1500000);
+				setPrivateTuitionMonthly(150000); setPrivateHealthInsuranceMonthly(60000);
 			} else if (profile.currencyCode === 'CRC') {
 				setHostBaseSalary(75000000); setHostBonus(10000000); setHostEquityAnnual(12000000);
 				setHostRentMonthly(1100000); setColaMonthly(400000); setHousingAllowanceMonthly(800000); setTuitionStipendAnnual(6000000);
+				setPrivateTuitionMonthly(550000); setPrivateHealthInsuranceMonthly(250000);
 			} else if (profile.currencyCode === 'AED') {
 				setHostBaseSalary(520000); setHostBonus(80000); setHostEquityAnnual(100000);
 				setHostRentMonthly(1100); setColaMonthly(3000); setHousingAllowanceMonthly(7000); setTuitionStipendAnnual(45000);
+				setPrivateTuitionMonthly(4000); setPrivateHealthInsuranceMonthly(1800);
 			} else {
 				setHostBaseSalary(140000); setHostBonus(20000); setHostEquityAnnual(25000);
 				setHostRentMonthly(2200); setColaMonthly(800); setHousingAllowanceMonthly(1800); setTuitionStipendAnnual(12000);
+				setPrivateTuitionMonthly(1000); setPrivateHealthInsuranceMonthly(450);
 			}
 		}
 	};
@@ -124,6 +136,8 @@ export default function ExpatEvaluatorCalculator() {
 		usFilingStatus,
 		assignmentDurationYears,
 		homeRentOrMortgageMonthly,
+		homeTuitionMonthly,
+		homeHealthInsuranceMonthly,
 		hostRentMonthly,
 		privateTuitionMonthly,
 		privateHealthInsuranceMonthly,
@@ -140,7 +154,8 @@ export default function ExpatEvaluatorCalculator() {
 		colaMonthly, housingAllowanceMonthly, tuitionStipendAnnual, movingReimbursementOneTime,
 		taxPolicy, useSpecialRegime, extendRegimeToDependents, foreignInvestmentIncome, purchasedHomeInHost, cadastralValue,
 		isUSCitizen, taxReliefMethod, usFilingStatus, assignmentDurationYears,
-		homeRentOrMortgageMonthly, hostRentMonthly, privateTuitionMonthly, privateHealthInsuranceMonthly,
+		homeRentOrMortgageMonthly, homeTuitionMonthly, homeHealthInsuranceMonthly,
+		hostRentMonthly, privateTuitionMonthly, privateHealthInsuranceMonthly,
 		discretionarySpendMonthly, hostColIndexRatio, fxRateHostToUsd, homeLiabilitiesUsdMonthly, expectedInvestmentReturnRate
 	]);
 
@@ -322,7 +337,7 @@ export default function ExpatEvaluatorCalculator() {
 										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveNetIncome - breakdown.stayNetIncome)}</td>
 									</tr>
 									<tr>
-										<td className="py-3 text-semibold text-[#5E5E5E]">Local Living Expenses &amp; Expat Fixed</td>
+										<td className="py-3 text-semibold text-[#5E5E5E]">Local Living Expenses &amp; Fixed Costs</td>
 										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.stayLivingExpenses)}</td>
 										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveLivingExpenses)}</td>
 										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveLivingExpenses - breakdown.stayLivingExpenses)}</td>
@@ -664,6 +679,26 @@ export default function ExpatEvaluatorCalculator() {
 									onChange={(e) => setHomeRentOrMortgageMonthly(Math.max(0, Number(e.target.value)))}
 									className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
 								/>
+							</div>
+							<div className="grid grid-cols-2 gap-3">
+								<div>
+									<label className="block text-xs text-[#5E5E5E] mb-1">Private School Tuition ($ USD/Mo)</label>
+									<input
+										type="number"
+										value={homeTuitionMonthly}
+										onChange={(e) => setHomeTuitionMonthly(Math.max(0, Number(e.target.value)))}
+										className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
+									/>
+								</div>
+								<div>
+									<label className="block text-xs text-[#5E5E5E] mb-1">Private Health Insurance ($ USD/Mo)</label>
+									<input
+										type="number"
+										value={homeHealthInsuranceMonthly}
+										onChange={(e) => setHomeHealthInsuranceMonthly(Math.max(0, Number(e.target.value)))}
+										className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
+									/>
+								</div>
 							</div>
 							<div>
 								<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#8C8C8C] mb-1">

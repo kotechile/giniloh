@@ -43,12 +43,16 @@ export interface ExpatInputs {
 	// Social Security & Totalization
 	assignmentDurationYears: number;
 
-	// Cost of Living & Local Expenses
+	// Cost of Living & Local Expenses - Home Baseline (USD)
 	homeRentOrMortgageMonthly: number; // USD
+	homeTuitionMonthly: number; // USD
+	homeHealthInsuranceMonthly: number; // USD
+	discretionarySpendMonthly: number; // USD baseline
+
+	// Cost of Living & Local Expenses - Host Destination (Host Currency)
 	hostRentMonthly: number; // Host Currency
 	privateTuitionMonthly: number; // Host Currency
 	privateHealthInsuranceMonthly: number; // Host Currency
-	discretionarySpendMonthly: number; // USD baseline
 	hostColIndexRatio: number; // e.g. 0.85 means host is 15% cheaper
 
 	// Foreign Exchange & Liabilities
@@ -74,6 +78,7 @@ export interface ExpatBreakdown {
 	stayGrossIncome: number;
 	stayTaxes: number;
 	stayNetIncome: number;
+	stayFixedExpenses: number;
 	stayLivingExpenses: number;
 	stayHomeLiabilities: number;
 	stayAnnualFreeCashFlow: number;
@@ -172,7 +177,9 @@ export function calculateExpatFinancials(inputs: ExpatInputs): ExpatBreakdown {
 	const stayTaxes = stayFedTax + stayStateTax + stayFicaTax;
 	
 	const stayNetIncome = stayGrossIncome - stayTaxes;
-	const stayLivingExpenses = (inputs.homeRentOrMortgageMonthly + inputs.discretionarySpendMonthly) * 12;
+
+	const stayFixedExpenses = (inputs.homeTuitionMonthly + inputs.homeHealthInsuranceMonthly) * 12;
+	const stayLivingExpenses = (inputs.homeRentOrMortgageMonthly + inputs.discretionarySpendMonthly) * 12 + stayFixedExpenses;
 	const stayHomeLiabilities = inputs.homeLiabilitiesUsdMonthly * 12;
 	const stayAnnualFreeCashFlow = stayNetIncome - stayLivingExpenses - stayHomeLiabilities;
 
@@ -342,6 +349,7 @@ export function calculateExpatFinancials(inputs: ExpatInputs): ExpatBreakdown {
 		stayGrossIncome,
 		stayTaxes,
 		stayNetIncome,
+		stayFixedExpenses,
 		stayLivingExpenses,
 		stayHomeLiabilities,
 		stayAnnualFreeCashFlow,
