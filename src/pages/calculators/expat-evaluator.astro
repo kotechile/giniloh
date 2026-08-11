@@ -12,24 +12,24 @@ const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.
 
 const faqItems = [
 	{
-		question: 'What is Spain’s Beckham Law special tax regime?',
+		question: 'How do I choose between FEIE (Foreign Earned Income Exclusion) and FTC (Foreign Tax Credit)?',
 		answer:
-			'The Beckham Law allows eligible expats moving to Spain to pay a flat 24% tax rate on Spanish employment income up to €600,000 for 6 years, while foreign-sourced capital gains and dividends remain 100% exempt.'
+			'Choose FEIE if you live in a low/no-tax country, earn under the exclusion limit ($126,500 for 2026), and want to lower your overall Adjusted Gross Income (AGI).\n\nChoose FTC if you live in a high-tax country, have significant passive income, want to make U.S. IRA contributions, or claim child tax credits.\n\nYou can also combine both by claiming the FEIE on earned income up to the limit and using the FTC for passive income or earnings above the limit.'
 	},
 	{
-		question: 'How does US worldwide taxation work with FEIE vs. FTC?',
+		question: 'What are special expat tax regimes (Beckham Law, 30% Ruling, IFICI)?',
 		answer:
-			'US citizens are taxed on global income regardless of residency. The Foreign Earned Income Exclusion (FEIE) excludes up to $126,500 (2026 cap) of foreign salary, whereas the Foreign Tax Credit (FTC) gives dollar-for-dollar tax credits for Spanish taxes paid.'
+			'Special expat tax regimes allow qualifying foreign workers to pay reduced flat tax rates (e.g., 20%–24% in Spain or Portugal) or receive tax-free salary exemptions (e.g. 30% Ruling in the Netherlands) for up to 5–10 years. Under most of these regimes, foreign passive investment income remains 100% exempt from host taxes.'
 	},
 	{
-		question: 'What is Tax Equalization vs. Tax Protection?',
+		question: 'What is the difference between Tax Equalization and Tax Protection?',
 		answer:
-			'Tax Equalization ensures the expat pays the exact same net tax burden as if they stayed home. Tax Protection ensures the expat pays actual taxes but is reimbursed by the employer if host taxes exceed home taxes.'
+			'Tax Equalization ensures the expat pays the exact same net tax burden as if they stayed home (hypothetical tax deducted by employer, employer pays all host taxes). Tax Protection ensures the expat pays actual taxes but is reimbursed by the employer if host taxes exceed home taxes.'
 	},
 	{
-		question: 'How does the US-Spain Totalization Agreement work?',
+		question: 'How do Social Security Totalization Agreements work?',
 		answer:
-			'For assignments of 5 years or less (detached worker rule), expats remain covered by US FICA Social Security and are exempt from Spanish social security contributions.'
+			'Under international Totalization Agreements, expats on temporary assignment (up to 5 years under the detached worker rule) remain covered by US FICA Social Security and are exempt from host country social security payroll contributions.'
 	}
 ];
 
@@ -57,7 +57,7 @@ const post = await fetchPostBySlug('calculate-your-career-relocation-payback');
 			<h2 class="mt-3 text-2xl font-semibold tracking-tight text-[#1A1A1A]">How to model international relocation</h2>
 			<ol class="mt-5 grid gap-4 text-sm leading-7 text-[#5E5E5E]">
 				<li>1. Input your Home (Stay) and Host (Move) earnings, equity, and corporate allowances.</li>
-				<li>2. Toggle the Beckham Law for Spain (flat 24%) and foreign investment income exemptions.</li>
+				<li>2. Toggle special expat tax regimes (Beckham Law, 30% Ruling, IFICI) and foreign investment income exemptions.</li>
 				<li>3. Evaluate US Worldwide Tax options (FEIE exclusion vs FTC dollar credit) and employer tax policy.</li>
 				<li>4. Adjust FX rates, home liabilities, and host Cost of Living multipliers to inspect 5-year wealth trajectory.</li>
 			</ol>
@@ -68,8 +68,8 @@ const post = await fetchPostBySlug('calculate-your-career-relocation-payback');
 			<div class="mt-4 rounded-[1.3rem] border border-gray-200 bg-gray-50 p-5 font-mono text-xs leading-6 text-[#5E5E5E]">
 				<p class="font-semibold text-[#5A7A8F]">Annual Free Cash Flow Delta:</p>
 				<p>CF_delta = CF_move - CF_stay</p>
-				<p class="mt-3 font-semibold text-[#5A7A8F]">Beckham Tax Base:</p>
-				<p>T_host = Income_host * 24% (if &lt;= €600k)</p>
+				<p class="mt-3 font-semibold text-[#5A7A8F]">Special Expat Tax Base:</p>
+				<p>T_host = Income_host * Rate_flat (if eligible)</p>
 				<p class="mt-3 font-semibold text-[#5A7A8F]">US Tax Relief (FTC):</p>
 				<p>Tax_US_Net = Max(0, Tax_US_Gross - Credit_Host)</p>
 			</div>
@@ -81,7 +81,7 @@ const post = await fetchPostBySlug('calculate-your-career-relocation-payback');
 				{faqItems.map((item) => (
 					<div class="rounded-xl border border-gray-100 bg-gray-50 p-4">
 						<h2 class="text-sm font-semibold text-[#1A1A1A]">{item.question}</h2>
-						<p class="mt-2 text-xs leading-6 text-[#5E5E5E]">{item.answer}</p>
+						<p class="mt-2 text-xs leading-6 text-[#5E5E5E] whitespace-pre-line">{item.answer}</p>
 					</div>
 				))}
 			</div>

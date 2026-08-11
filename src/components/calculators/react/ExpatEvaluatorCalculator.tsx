@@ -3,6 +3,26 @@ import { calculateExpatFinancials, generate5YearProjections, type ExpatInputs } 
 import { COUNTRY_PROFILES, type HostCountryId } from '../../../lib/calculators/expat-countries';
 import { formatCurrency } from '../../../lib/calculators/format';
 
+/**
+ * Reusable Field Label with Interactive Hover Tooltip
+ */
+function FieldLabel({ label, tooltip }: { label: string; tooltip: string }) {
+	return (
+		<div className="flex items-center gap-1.5 mb-1.5 group relative">
+			<label className="block text-xs font-semibold text-slate-700 cursor-pointer">{label}</label>
+			<div className="relative flex items-center">
+				<svg className="w-3.5 h-3.5 text-slate-400 group-hover:text-slate-700 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+				</svg>
+				<div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 hidden group-hover:block w-64 p-3 bg-slate-900 text-white text-[11px] font-medium leading-relaxed rounded-xl shadow-xl z-50 pointer-events-none">
+					{tooltip}
+					<div className="absolute top-full left-1/2 -translate-x-1/2 -mt-1 border-4 border-transparent border-t-slate-900"></div>
+				</div>
+			</div>
+		</div>
+	);
+}
+
 export default function ExpatEvaluatorCalculator() {
 	const [activeTab, setActiveTab] = useState<'dashboard' | 'income' | 'tax' | 'expenses' | 'fx' | 'wealth'>('dashboard');
 
@@ -255,7 +275,6 @@ export default function ExpatEvaluatorCalculator() {
 							<span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500">
 								5-Year Wealth Impact
 							</span>
-							{/* Micro Sparkline Visualizer */}
 							<svg className="w-16 h-7" viewBox="0 0 60 25">
 								<path d="M 0 20 Q 30 18 60 15" fill="none" stroke="#CBD5E1" strokeWidth="2" strokeDasharray="3 3" />
 								<path d="M 0 20 Q 30 10 60 4" fill="none" stroke={breakdown.fiveYearWealthDelta >= 0 ? '#059669' : '#DC2626'} strokeWidth="2.5" />
@@ -291,7 +310,7 @@ export default function ExpatEvaluatorCalculator() {
 				</div>
 			</div>
 
-			{/* Navigation Tabs with Active Pill Highlights */}
+			{/* Navigation Tabs */}
 			<div className="bg-white p-2 rounded-2xl border border-slate-200/80 shadow-sm flex gap-2 overflow-x-auto">
 				{[
 					{ id: 'dashboard', label: '1. Executive Summary' },
@@ -480,11 +499,12 @@ export default function ExpatEvaluatorCalculator() {
 
 						<div className="space-y-4">
 							<div>
-								<label className="block text-xs font-semibold text-slate-700 mb-1.5">
-									Primary Base Salary ($ USD / Year)
-								</label>
+								<FieldLabel
+									label="Primary Base Salary ($ USD / Year)"
+									tooltip="Annual fixed base salary in the US before federal, state, and payroll taxes."
+								/>
 								<div className="relative">
-									<span className="absolute left-3 top.1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
+									<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
 									<input
 										type="number"
 										value={homeBaseSalary}
@@ -495,9 +515,10 @@ export default function ExpatEvaluatorCalculator() {
 							</div>
 
 							<div>
-								<label className="block text-xs font-semibold text-slate-700 mb-1.5">
-									Annual Bonus ($ USD)
-								</label>
+								<FieldLabel
+									label="Annual Bonus ($ USD)"
+									tooltip="Expected annual performance bonus or cash incentive in the US."
+								/>
 								<div className="relative">
 									<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
 									<input
@@ -510,9 +531,10 @@ export default function ExpatEvaluatorCalculator() {
 							</div>
 
 							<div>
-								<label className="block text-xs font-semibold text-slate-700 mb-1.5">
-									Annual Equity Vesting ($ USD)
-								</label>
+								<FieldLabel
+									label="Annual Equity Vesting ($ USD)"
+									tooltip="Annual market value of RSUs, stock options, or equity vesting in the US."
+								/>
 								<div className="relative">
 									<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
 									<input
@@ -525,9 +547,10 @@ export default function ExpatEvaluatorCalculator() {
 							</div>
 
 							<div className="border-t border-slate-100 pt-4">
-								<label className="block text-xs font-semibold text-slate-700 mb-1.5">
-									Spousal Annual Income in Home Country ($ USD)
-								</label>
+								<FieldLabel
+									label="Spousal Annual Income in Home Country ($ USD)"
+									tooltip="Spouse's annual gross earnings in the US before relocation."
+								/>
 								<div className="relative">
 									<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
 									<input
@@ -541,7 +564,7 @@ export default function ExpatEvaluatorCalculator() {
 						</div>
 					</div>
 
-					{/* Right Panel: Move Scenario (Cool-tinted Host Destination) */}
+					{/* Right Panel: Move Scenario */}
 					<div className="bg-gradient-to-br from-blue-50/40 via-white to-sky-50/30 rounded-2xl border border-blue-100 shadow-sm p-6 space-y-5">
 						<div className="flex items-center justify-between border-b border-blue-100 pb-3">
 							<span className="font-mono text-xs font-bold uppercase tracking-wider text-indigo-900">
@@ -558,36 +581,39 @@ export default function ExpatEvaluatorCalculator() {
 						<div className="space-y-4">
 							<div className="grid grid-cols-3 gap-3">
 								<div>
-									<label className="block text-xs font-semibold text-slate-700 mb-1">
-										Base ({selectedCountry.currencySymbol})
-									</label>
+									<FieldLabel
+										label={`Base (${selectedCountry.currencySymbol})`}
+										tooltip={`Annual base salary offered in ${selectedCountry.name} in local ${selectedCountry.currencyCode}.`}
+									/>
 									<input
 										type="number"
 										value={hostBaseSalary}
 										onChange={(e) => setHostBaseSalary(Math.max(0, Number(e.target.value)))}
-										className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-sm font-mono text-slate-900 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-600/10 transition-all outline-none"
+										className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-sm font-mono text-slate-900 outline-none"
 									/>
 								</div>
 								<div>
-									<label className="block text-xs font-semibold text-slate-700 mb-1">
-										Bonus ({selectedCountry.currencySymbol})
-									</label>
+									<FieldLabel
+										label={`Bonus (${selectedCountry.currencySymbol})`}
+										tooltip={`Annual performance bonus in ${selectedCountry.currencyCode}.`}
+									/>
 									<input
 										type="number"
 										value={hostBonus}
 										onChange={(e) => setHostBonus(Math.max(0, Number(e.target.value)))}
-										className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-sm font-mono text-slate-900 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-600/10 transition-all outline-none"
+										className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-sm font-mono text-slate-900 outline-none"
 									/>
 								</div>
 								<div>
-									<label className="block text-xs font-semibold text-slate-700 mb-1">
-										Equity ({selectedCountry.currencySymbol})
-									</label>
+									<FieldLabel
+										label={`Equity (${selectedCountry.currencySymbol})`}
+										tooltip={`Annual equity or stock vesting value in ${selectedCountry.currencyCode}.`}
+									/>
 									<input
 										type="number"
 										value={hostEquityAnnual}
 										onChange={(e) => setHostEquityAnnual(Math.max(0, Number(e.target.value)))}
-										className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-sm font-mono text-slate-900 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-600/10 transition-all outline-none"
+										className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-sm font-mono text-slate-900 outline-none"
 									/>
 								</div>
 							</div>
@@ -596,11 +622,14 @@ export default function ExpatEvaluatorCalculator() {
 								<span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500 block mb-2">Spousal Income Post-Move</span>
 								<div className="grid grid-cols-2 gap-3">
 									<div>
-										<label className="block text-xs font-medium text-slate-600 mb-1">Employment Type</label>
+										<FieldLabel
+											label="Employment Type"
+											tooltip="Remote keeps home US income; Local means local employment in host country."
+										/>
 										<select
 											value={spouseIncomeType}
 											onChange={(e) => setSpouseIncomeType(e.target.value as any)}
-											className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-xs font-semibold text-slate-900 focus:border-indigo-600 outline-none"
+											className="w-full px-3 py-2.5 bg-white border border-blue-200 rounded-xl text-xs font-semibold text-slate-900 outline-none"
 										>
 											<option value="none">No Income Post-Move</option>
 											<option value="remote">Remote (Keeps Home Income)</option>
@@ -608,7 +637,10 @@ export default function ExpatEvaluatorCalculator() {
 										</select>
 									</div>
 									<div>
-										<label className="block text-xs font-medium text-slate-600 mb-1">Annual Amount ({spouseIncomeType === 'local' ? selectedCountry.currencySymbol : '$ USD'})</label>
+										<FieldLabel
+											label={`Annual Amount (${spouseIncomeType === 'local' ? selectedCountry.currencySymbol : '$ USD'})`}
+											tooltip="Gross annual spousal earnings post-relocation."
+										/>
 										<input
 											type="number"
 											disabled={spouseIncomeType === 'none'}
@@ -624,7 +656,10 @@ export default function ExpatEvaluatorCalculator() {
 								<span className="font-mono text-xs font-bold uppercase tracking-wider text-slate-500 block">Expat Relocation Allowances ({selectedCountry.currencySymbol})</span>
 								<div className="grid grid-cols-2 gap-3">
 									<div>
-										<label className="block text-xs font-medium text-slate-600 mb-1">COLA Monthly ({selectedCountry.currencySymbol})</label>
+										<FieldLabel
+											label={`COLA Monthly (${selectedCountry.currencySymbol})`}
+											tooltip="Monthly Cost of Living Adjustment stipend provided by employer."
+										/>
 										<input
 											type="number"
 											value={colaMonthly}
@@ -633,7 +668,10 @@ export default function ExpatEvaluatorCalculator() {
 										/>
 									</div>
 									<div>
-										<label className="block text-xs font-medium text-slate-600 mb-1">Housing Allowance Monthly ({selectedCountry.currencySymbol})</label>
+										<FieldLabel
+											label={`Housing Allowance Monthly (${selectedCountry.currencySymbol})`}
+											tooltip="Monthly corporate housing or rental subsidy paid by employer."
+										/>
 										<input
 											type="number"
 											value={housingAllowanceMonthly}
@@ -644,7 +682,10 @@ export default function ExpatEvaluatorCalculator() {
 								</div>
 								<div className="grid grid-cols-2 gap-3">
 									<div>
-										<label className="block text-xs font-medium text-slate-600 mb-1">Tuition Stipend Annual ({selectedCountry.currencySymbol})</label>
+										<FieldLabel
+											label={`Tuition Stipend Annual (${selectedCountry.currencySymbol})`}
+											tooltip="Annual corporate education subsidy for children's schooling."
+										/>
 										<input
 											type="number"
 											value={tuitionStipendAnnual}
@@ -653,7 +694,10 @@ export default function ExpatEvaluatorCalculator() {
 										/>
 									</div>
 									<div>
-										<label className="block text-xs font-medium text-slate-600 mb-1">Moving Reimbursement ($ USD)</label>
+										<FieldLabel
+											label="Moving Reimbursement ($ USD)"
+											tooltip="One-time corporate relocation allowance or lump-sum moving payment."
+										/>
 										<input
 											type="number"
 											value={movingReimbursementOneTime}
@@ -701,10 +745,10 @@ export default function ExpatEvaluatorCalculator() {
 							)}
 
 							<div>
-								<label className="block text-xs font-semibold text-slate-700 mb-1">
-									Global Passive &amp; Investment Income ($ USD / Year)
-								</label>
-								<p className="text-slate-500 text-[11px] mb-1.5">Dividends, interest &amp; capital gains (Evaluated under host regime rules).</p>
+								<FieldLabel
+									label="Global Passive & Investment Income ($ USD / Year)"
+									tooltip="Annual dividends, interest, and capital gains. Evaluated under host special expat regime exemptions and US taxes."
+								/>
 								<input
 									type="number"
 									value={foreignInvestmentIncome}
@@ -750,9 +794,10 @@ export default function ExpatEvaluatorCalculator() {
 							</div>
 
 							<div>
-								<label className="block text-xs font-semibold text-slate-700 mb-1">
-									US State Tax Rate Jurisdiction (Stay Scenario)
-								</label>
+								<FieldLabel
+									label="US State Tax Rate Jurisdiction (Stay Scenario)"
+									tooltip="State income tax rate in your home baseline state before relocation (0% TX/FL, 5% Avg, 9.3% CA)."
+								/>
 								<select
 									value={homeStateTaxRate}
 									onChange={(e) => setHomeStateTaxRate(Number(e.target.value))}
@@ -767,9 +812,10 @@ export default function ExpatEvaluatorCalculator() {
 							</div>
 
 							<div>
-								<label className="block text-xs font-semibold text-slate-700 mb-1">
-									US Federal Tax Relief Method
-								</label>
+								<FieldLabel
+									label="US Federal Tax Relief Method"
+									tooltip="FEIE excludes up to $126.5k foreign salary (best for low-tax countries). FTC provides dollar-for-dollar tax credits (best for high-tax countries)."
+								/>
 								<select
 									value={taxReliefMethod}
 									onChange={(e) => setTaxReliefMethod(e.target.value as any)}
@@ -782,7 +828,10 @@ export default function ExpatEvaluatorCalculator() {
 							</div>
 
 							<div>
-								<label className="block text-xs font-semibold text-slate-700 mb-1">Corporate Tax Policy Coverage</label>
+								<FieldLabel
+									label="Corporate Tax Policy Coverage"
+									tooltip="Tax Equalization keeps your net tax burden identical to Stay. Tax Protection reimburses if host taxes exceed home taxes."
+								/>
 								<select
 									value={taxPolicy}
 									onChange={(e) => setTaxPolicy(e.target.value as any)}
@@ -795,18 +844,18 @@ export default function ExpatEvaluatorCalculator() {
 							</div>
 
 							<div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
-								<span className="font-mono text-xs uppercase text-slate-500 block">Totalization Agreement (Social Security)</span>
-								<div>
-									<label className="block text-slate-600 mb-1 font-medium">Assignment Duration (Years)</label>
-									<input
-										type="number"
-										min={1}
-										max={10}
-										value={assignmentDurationYears}
-										onChange={(e) => setAssignmentDurationYears(Math.max(1, Number(e.target.value)))}
-										className="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg font-mono text-slate-900"
-									/>
-								</div>
+								<FieldLabel
+									label="Assignment Duration (Years)"
+									tooltip="Assignments ≤5 years qualify for Totalization detached worker exemption from host social security."
+								/>
+								<input
+									type="number"
+									min={1}
+									max={10}
+									value={assignmentDurationYears}
+									onChange={(e) => setAssignmentDurationYears(Math.max(1, Number(e.target.value)))}
+									className="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg font-mono text-slate-900"
+								/>
 								<p className="text-[11px] text-slate-600">
 									Status: <strong>{breakdown.totalizationSocialSecurityModel}</strong>
 								</p>
@@ -834,9 +883,10 @@ export default function ExpatEvaluatorCalculator() {
 
 						<div className="space-y-4">
 							<div>
-								<label className="block text-xs font-semibold text-slate-700 mb-1.5">
-									Home Rent or Mortgage ($ USD / Month)
-								</label>
+								<FieldLabel
+									label="Home Rent or Mortgage ($ USD / Month)"
+									tooltip="Monthly housing costs in the US (rent payment or primary mortgage payment)."
+								/>
 								<div className="relative">
 									<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
 									<input
@@ -850,7 +900,10 @@ export default function ExpatEvaluatorCalculator() {
 
 							<div className="grid grid-cols-2 gap-3">
 								<div>
-									<label className="block text-xs font-semibold text-slate-700 mb-1">Private School Tuition ($/Mo)</label>
+									<FieldLabel
+										label="Private School Tuition ($/Mo)"
+										tooltip="Monthly private school tuition for children in the US."
+									/>
 									<div className="relative">
 										<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
 										<input
@@ -862,7 +915,10 @@ export default function ExpatEvaluatorCalculator() {
 									</div>
 								</div>
 								<div>
-									<label className="block text-xs font-semibold text-slate-700 mb-1">Private Health Insurance ($/Mo)</label>
+									<FieldLabel
+										label="Private Health Insurance ($/Mo)"
+										tooltip="Monthly private health insurance premiums in the US."
+									/>
 									<div className="relative">
 										<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
 										<input
@@ -876,9 +932,10 @@ export default function ExpatEvaluatorCalculator() {
 							</div>
 
 							<div>
-								<label className="block text-xs font-semibold text-slate-700 mb-1.5">
-									Discretionary Spending Baseline ($ USD / Month)
-								</label>
+								<FieldLabel
+									label="Discretionary Spending Baseline ($ USD / Month)"
+									tooltip="Monthly lifestyle outlays in the US (groceries, dining, transportation, utilities)."
+								/>
 								<div className="relative">
 									<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
 									<input
@@ -907,9 +964,10 @@ export default function ExpatEvaluatorCalculator() {
 
 						<div className="space-y-4">
 							<div>
-								<label className="block text-xs font-semibold text-slate-700 mb-1.5">
-									Host Rent ({selectedCountry.currencySymbol} / Month)
-								</label>
+								<FieldLabel
+									label={`Host Rent (${selectedCountry.currencySymbol} / Month)`}
+									tooltip={`Monthly rental cost in ${selectedCountry.name} in local ${selectedCountry.currencyCode}.`}
+								/>
 								<input
 									type="number"
 									value={hostRentMonthly}
@@ -920,7 +978,10 @@ export default function ExpatEvaluatorCalculator() {
 
 							<div className="grid grid-cols-2 gap-3">
 								<div>
-									<label className="block text-xs font-semibold text-slate-700 mb-1">Private School Tuition ({selectedCountry.currencySymbol}/Mo)</label>
+									<FieldLabel
+										label={`Private School Tuition (${selectedCountry.currencySymbol}/Mo)`}
+										tooltip={`Monthly international school tuition in ${selectedCountry.currencyCode}.`}
+									/>
 									<input
 										type="number"
 										value={privateTuitionMonthly}
@@ -929,7 +990,10 @@ export default function ExpatEvaluatorCalculator() {
 									/>
 								</div>
 								<div>
-									<label className="block text-xs font-semibold text-slate-700 mb-1">Private Health Insurance ({selectedCountry.currencySymbol}/Mo)</label>
+									<FieldLabel
+										label={`Private Health Insurance (${selectedCountry.currencySymbol}/Mo)`}
+										tooltip={`Monthly private expat health insurance premium in ${selectedCountry.currencyCode}.`}
+									/>
 									<input
 										type="number"
 										value={privateHealthInsuranceMonthly}
@@ -940,9 +1004,10 @@ export default function ExpatEvaluatorCalculator() {
 							</div>
 
 							<div>
-								<label className="block text-xs font-semibold text-slate-700 mb-1.5">
-									Host Cost of Living Multiplier ({(hostColIndexRatio * 100).toFixed(0)}%)
-								</label>
+								<FieldLabel
+									label={`Host Cost of Living Multiplier (${(hostColIndexRatio * 100).toFixed(0)}%)`}
+									tooltip="Adjusts discretionary spending based on local purchasing power index vs US baseline."
+								/>
 								<input
 									type="range"
 									min={0.3}
@@ -970,9 +1035,10 @@ export default function ExpatEvaluatorCalculator() {
 
 					<div className="grid gap-6 md:grid-cols-2">
 						<div>
-							<label className="block text-xs font-semibold text-slate-700 mb-1.5">
-								Exchange Rate ({selectedCountry.currencyCode} to USD)
-							</label>
+							<FieldLabel
+								label={`Exchange Rate (${selectedCountry.currencyCode} to USD)`}
+								tooltip={`Current exchange rate: 1 ${selectedCountry.currencyCode} in USD.`}
+							/>
 							<input
 								type="number"
 								step={0.0001}
@@ -984,9 +1050,10 @@ export default function ExpatEvaluatorCalculator() {
 						</div>
 
 						<div>
-							<label className="block text-xs font-semibold text-slate-700 mb-1.5">
-								Home-Currency Monthly Liabilities ($ USD)
-							</label>
+							<FieldLabel
+								label="Home-Currency Monthly Liabilities ($ USD)"
+								tooltip="Ongoing USD debt obligations (US mortgage, student loans, 401k/IRA contributions)."
+							/>
 							<div className="relative">
 								<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
 								<input
@@ -1002,9 +1069,10 @@ export default function ExpatEvaluatorCalculator() {
 
 					<div className="grid gap-6 md:grid-cols-2 border-t border-slate-100 pt-6">
 						<div>
-							<label className="block text-xs font-semibold text-indigo-900 mb-1.5">
-								Host-Currency Monthly Liabilities ({selectedCountry.currencySymbol} {selectedCountry.currencyCode})
-							</label>
+							<FieldLabel
+								label={`Host-Currency Monthly Liabilities (${selectedCountry.currencySymbol} ${selectedCountry.currencyCode})`}
+								tooltip={`Local debt servicing in host country (local car lease, host mortgage, local loan).`}
+							/>
 							<input
 								type="number"
 								value={hostLiabilitiesMonthly}
