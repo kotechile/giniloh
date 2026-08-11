@@ -79,9 +79,9 @@ export interface ExpatBreakdown {
 	stayAnnualFreeCashFlow: number;
 
 	// Move Scenario
-	moveBaseGross: number;
-	moveAllowancesTotal: number;
-	moveTotalGross: number;
+	moveBaseGross: number; // Total Earned Compensation (Primary + Spousal)
+	moveAllowancesTotal: number; // Subsidies & Allowances
+	moveTotalGross: number; // Total Household Gross Income
 	hostTaxBase: number;
 	hostTaxPaid: number;
 	hostTaxDetailsNote: string;
@@ -186,12 +186,16 @@ export function calculateExpatFinancials(inputs: ExpatInputs): ExpatBreakdown {
 	const tuitionStipendUsd = inputs.tuitionStipendAnnual * fx;
 
 	const moveAllowancesTotalUsd = colaUsd + housingAllowanceUsd + tuitionStipendUsd;
-	const moveBaseGrossUsd = hostBaseSalaryUsd + hostBonusUsd + hostEquityAnnualUsd;
 	
 	const spousalLocalIncomeUsd = inputs.spouseIncomeType === 'local' ? inputs.spouseIncomeAmount * fx : 0;
 	const spousalRemoteIncomeUsd = inputs.spouseIncomeType === 'remote' ? inputs.spouseIncomeAmount : 0;
+	const totalSpouseIncomeMoveUsd = spousalLocalIncomeUsd + spousalRemoteIncomeUsd;
 
-	const moveTotalGrossUsd = moveBaseGrossUsd + moveAllowancesTotalUsd + spousalLocalIncomeUsd + spousalRemoteIncomeUsd;
+	// Move Gross Earned Compensation (Primary Base + Bonus + Equity + Spousal Income)
+	const moveBaseGrossUsd = hostBaseSalaryUsd + hostBonusUsd + hostEquityAnnualUsd + totalSpouseIncomeMoveUsd;
+
+	// Total Household Gross Income = Gross Earned Compensation + Subsidies & Allowances
+	const moveTotalGrossUsd = moveBaseGrossUsd + moveAllowancesTotalUsd;
 
 	// --- Host Taxes (Modular calculation via Country Profile) ---
 	const hostEarnedIncomeHostCurr = inputs.hostBaseSalary + inputs.hostBonus + (inputs.colaMonthly + inputs.housingAllowanceMonthly) * 12 + inputs.tuitionStipendAnnual + (inputs.spouseIncomeType === 'local' ? inputs.spouseIncomeAmount : 0);
@@ -217,7 +221,7 @@ export function calculateExpatFinancials(inputs: ExpatInputs): ExpatBreakdown {
 
 	if (inputs.isUSCitizen) {
 		const feieCap2026 = 126500;
-		const eligibleEarnedIncomeUsd = moveBaseGrossUsd + moveAllowancesTotalUsd;
+		const eligibleEarnedIncomeUsd = (inputs.hostBaseSalary + inputs.hostBonus) * fx + moveAllowancesTotalUsd;
 
 		// Route A: FEIE
 		const feieExclusion = Math.min(eligibleEarnedIncomeUsd, feieCap2026);
