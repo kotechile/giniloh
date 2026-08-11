@@ -130,6 +130,25 @@ export const calculatorTools = [
 		utility: 'Analyze career AI risk & upskill',
 		category: 'FinanceApplication',
 		keywords: ['career ai risk', 'occupation vulnerability', 'ai automation calculator', 'future proof career']
+	},
+	{
+		title: 'Expat Financial & International Tax Evaluator',
+		slug: 'expat-evaluator',
+		href: '/calculators/expat-evaluator/',
+		status: 'Live',
+		accent: 'indigo',
+		description:
+			'Compare cash flow and 5-year wealth impact of an international relocation (e.g. US to Spain). Model Beckham Law tax regime, US FEIE/FTC, tax equalization, and FX liability risks.',
+		utility: 'Evaluate international relocation tax & wealth impact',
+		category: 'FinanceApplication',
+		keywords: [
+			'expat financial evaluator',
+			'beckham law calculator',
+			'us spain expat tax calculator',
+			'feie vs ftc calculator',
+			'tax equalization calculator',
+			'international relocation cash flow'
+		]
 	}
 ] as const;
 

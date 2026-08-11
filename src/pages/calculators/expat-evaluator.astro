@@ -1,0 +1,92 @@
+---
+import CalculatorShell from '../../components/calculators/CalculatorShell.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import ExpatEvaluatorCalculator from '../../components/calculators/react/ExpatEvaluatorCalculator';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+import { fetchPostBySlug } from '../../lib/wordpress';
+import RelatedArticleCard from '../../components/calculators/RelatedArticleCard.astro';
+
+const calculator = getCalculatorBySlug('expat-evaluator');
+const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+
+const faqItems = [
+	{
+		question: 'What is Spain’s Beckham Law special tax regime?',
+		answer:
+			'The Beckham Law allows eligible expats moving to Spain to pay a flat 24% tax rate on Spanish employment income up to €600,000 for 6 years, while foreign-sourced capital gains and dividends remain 100% exempt.'
+	},
+	{
+		question: 'How does US worldwide taxation work with FEIE vs. FTC?',
+		answer:
+			'US citizens are taxed on global income regardless of residency. The Foreign Earned Income Exclusion (FEIE) excludes up to $126,500 (2026 cap) of foreign salary, whereas the Foreign Tax Credit (FTC) gives dollar-for-dollar tax credits for Spanish taxes paid.'
+	},
+	{
+		question: 'What is Tax Equalization vs. Tax Protection?',
+		answer:
+			'Tax Equalization ensures the expat pays the exact same net tax burden as if they stayed home. Tax Protection ensures the expat pays actual taxes but is reimbursed by the employer if host taxes exceed home taxes.'
+	},
+	{
+		question: 'How does the US-Spain Totalization Agreement work?',
+		answer:
+			'For assignments of 5 years or less (detached worker rule), expats remain covered by US FICA Social Security and are exempt from Spanish social security contributions.'
+	}
+];
+
+const post = await fetchPostBySlug('calculate-your-career-relocation-payback');
+---
+
+<BaseLayout
+	title="Expat Financial & International Tax Evaluator | Gini Loh"
+	description="Model net cash flow, Beckham Law tax savings, US FEIE/FTC options, corporate tax equalization, and 5-year wealth impact for international relocations."
+>
+	<link slot="head" rel="canonical" href={new URL('/calculators/expat-evaluator/', Astro.site).toString()} />
+	{schema ? <JsonLd slot="head" data={schema} /> : null}
+
+	<CalculatorShell
+		eyebrow="International Expat Modeler"
+		title="Expat Financial &amp; International Tax Evaluator"
+		description="Calculate net cash flow, dual-country tax obligations (Spain Beckham Law &amp; US Worldwide Taxation), tax equalization policies, and 5-year wealth growth."
+	>
+		<div slot="calculator">
+			<ExpatEvaluatorCalculator client:load />
+		</div>
+
+		<article slot="aside" class="rounded-2xl border border-gray-200 bg-white p-6">
+			<p class="font-mono text-xs uppercase tracking-[0.28em] text-[#8C8C8C]">Operator notes</p>
+			<h2 class="mt-3 text-2xl font-semibold tracking-tight text-[#1A1A1A]">How to model international relocation</h2>
+			<ol class="mt-5 grid gap-4 text-sm leading-7 text-[#5E5E5E]">
+				<li>1. Input your Home (Stay) and Host (Move) earnings, equity, and corporate allowances.</li>
+				<li>2. Toggle the Beckham Law for Spain (flat 24%) and foreign investment income exemptions.</li>
+				<li>3. Evaluate US Worldwide Tax options (FEIE exclusion vs FTC dollar credit) and employer tax policy.</li>
+				<li>4. Adjust FX rates, home liabilities, and host Cost of Living multipliers to inspect 5-year wealth trajectory.</li>
+			</ol>
+		</article>
+
+		<article slot="aside" class="rounded-2xl border border-gray-200 bg-white p-6">
+			<p class="font-mono text-xs uppercase tracking-[0.28em] text-[#5A7A8F]">Formulas</p>
+			<div class="mt-4 rounded-[1.3rem] border border-gray-200 bg-gray-50 p-5 font-mono text-xs leading-6 text-[#5E5E5E]">
+				<p class="font-semibold text-[#5A7A8F]">Annual Free Cash Flow Delta:</p>
+				<p>CF_delta = CF_move - CF_stay</p>
+				<p class="mt-3 font-semibold text-[#5A7A8F]">Beckham Tax Base:</p>
+				<p>T_host = Income_host * 24% (if &lt;= €600k)</p>
+				<p class="mt-3 font-semibold text-[#5A7A8F]">US Tax Relief (FTC):</p>
+				<p>Tax_US_Net = Max(0, Tax_US_Gross - Credit_Host)</p>
+			</div>
+		</article>
+
+		<article slot="aside" class="rounded-2xl border border-gray-200 bg-white p-6">
+			<p class="font-mono text-xs uppercase tracking-[0.28em] text-[#8C8C8C]">FAQ</p>
+			<div class="mt-5 grid gap-4">
+				{faqItems.map((item) => (
+					<div class="rounded-xl border border-gray-100 bg-gray-50 p-4">
+						<h2 class="text-sm font-semibold text-[#1A1A1A]">{item.question}</h2>
+						<p class="mt-2 text-xs leading-6 text-[#5E5E5E]">{item.answer}</p>
+					</div>
+				))}
+			</div>
+		</article>
+
+		{post && <RelatedArticleCard slot="aside" post={post} />}
+	</CalculatorShell>
+</BaseLayout>
