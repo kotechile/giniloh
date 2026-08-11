@@ -386,32 +386,64 @@ export default function ExpatEvaluatorCalculator() {
 									<tr>
 										<td className="py-3.5 px-3 text-slate-600">Actual Total Taxes (Host + Home + SS)</td>
 										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.stayTaxes)}</td>
-										<td className="py-3.5 px-3 text-right font-mono bg-blue-50/30 text-rose-600">{formatCurrency(breakdown.actualTotalTaxesPaid)}</td>
-										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.actualTotalTaxesPaid - breakdown.stayTaxes)}</td>
+										<td className="py-3.5 px-3 text-right font-mono bg-blue-50/30 text-slate-900">{formatCurrency(breakdown.actualTotalTaxesPaid)}</td>
+										<td className={`py-3.5 px-3 text-right font-mono font-bold ${
+											breakdown.actualTotalTaxesPaid - breakdown.stayTaxes <= 0 ? 'text-emerald-600' : 'text-rose-600'
+										}`}>
+											{breakdown.actualTotalTaxesPaid - breakdown.stayTaxes > 0 ? '+' : ''}{formatCurrency(breakdown.actualTotalTaxesPaid - breakdown.stayTaxes)}
+										</td>
 									</tr>
 									<tr>
 										<td className="py-3.5 px-3 text-slate-600">Employer Tax Policy Reimbursement</td>
 										<td className="py-3.5 px-3 text-right font-mono text-slate-400">$0</td>
-										<td className="py-3.5 px-3 text-right font-mono bg-blue-50/30 text-emerald-600">+{formatCurrency(breakdown.employerTaxReimbursement)}</td>
-										<td className="py-3.5 px-3 text-right font-mono text-emerald-600">+{formatCurrency(breakdown.employerTaxReimbursement)}</td>
+										<td className="py-3.5 px-3 text-right font-mono bg-blue-50/30">
+											{breakdown.employerTaxReimbursement > 0 ? (
+												<span className="text-emerald-600 font-bold">+{formatCurrency(breakdown.employerTaxReimbursement)}</span>
+											) : (
+												<span className="text-slate-400">$0</span>
+											)}
+										</td>
+										<td className="py-3.5 px-3 text-right font-mono">
+											{breakdown.employerTaxReimbursement > 0 ? (
+												<span className="text-emerald-600 font-bold">+{formatCurrency(breakdown.employerTaxReimbursement)}</span>
+											) : (
+												<span className="text-slate-400">$0</span>
+											)}
+										</td>
 									</tr>
 									<tr className="font-bold border-t border-slate-200 bg-slate-50/50">
 										<td className="py-3.5 px-3 text-slate-900">Net Take-Home Pay</td>
 										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.stayNetIncome)}</td>
 										<td className="py-3.5 px-3 text-right font-mono bg-blue-50/50">{formatCurrency(breakdown.moveNetIncome)}</td>
-										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.moveNetIncome - breakdown.stayNetIncome)}</td>
+										<td className={`py-3.5 px-3 text-right font-mono font-bold ${
+											breakdown.moveNetIncome - breakdown.stayNetIncome >= 0 ? 'text-emerald-600' : 'text-rose-600'
+										}`}>
+											{breakdown.moveNetIncome - breakdown.stayNetIncome >= 0 ? '+' : ''}{formatCurrency(breakdown.moveNetIncome - breakdown.stayNetIncome)}
+										</td>
 									</tr>
 									<tr>
 										<td className="py-3.5 px-3 text-slate-600">Local Living Expenses &amp; Fixed Costs</td>
 										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.stayLivingExpenses)}</td>
 										<td className="py-3.5 px-3 text-right font-mono bg-blue-50/30">{formatCurrency(breakdown.moveLivingExpenses)}</td>
-										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.moveLivingExpenses - breakdown.stayLivingExpenses)}</td>
+										<td className={`py-3.5 px-3 text-right font-mono font-bold ${
+											breakdown.moveLivingExpenses - breakdown.stayLivingExpenses <= 0 ? 'text-emerald-600' : 'text-rose-600'
+										}`}>
+											{breakdown.moveLivingExpenses - breakdown.stayLivingExpenses > 0 ? '+' : ''}{formatCurrency(breakdown.moveLivingExpenses - breakdown.stayLivingExpenses)}
+										</td>
 									</tr>
 									<tr>
 										<td className="py-3.5 px-3 text-slate-600">Total Liabilities &amp; Debt (USD + Host)</td>
 										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.stayHomeLiabilities)}</td>
 										<td className="py-3.5 px-3 text-right font-mono bg-blue-50/30">{formatCurrency(breakdown.moveTotalLiabilitiesUsd)}</td>
-										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.moveTotalLiabilitiesUsd - breakdown.stayHomeLiabilities)}</td>
+										<td className={`py-3.5 px-3 text-right font-mono ${
+											breakdown.moveTotalLiabilitiesUsd === breakdown.stayHomeLiabilities
+												? 'text-slate-400'
+												: breakdown.moveTotalLiabilitiesUsd < breakdown.stayHomeLiabilities
+												? 'text-emerald-600 font-bold'
+												: 'text-rose-600 font-bold'
+										}`}>
+											{breakdown.moveTotalLiabilitiesUsd > breakdown.stayHomeLiabilities ? '+' : ''}{formatCurrency(breakdown.moveTotalLiabilitiesUsd - breakdown.stayHomeLiabilities)}
+										</td>
 									</tr>
 									<tr className="font-black text-base border-t-2 border-slate-900 bg-slate-900 text-white rounded-b-xl">
 										<td className="py-4 px-3">Annual Free Cash Flow</td>
