@@ -9,6 +9,7 @@ export interface ExpatInputs {
 	homeBonus: number;
 	homeEquityAnnual: number;
 	homeSpouseIncome: number; // Spousal income in Home (Stay) scenario
+	homeStateTaxRate: number; // e.g. 0.05 (5%) or 0.0 (TX/FL) or 0.093 (CA)
 	
 	// Host Country (Move) Compensation (in Host Currency)
 	hostBaseSalary: number;
@@ -28,10 +29,10 @@ export interface ExpatInputs {
 	// Tax Policy & Coverage Model
 	taxPolicy: 'laissez-faire' | 'tax-equalization' | 'tax-protection';
 
-	// Host Tax Logic
+	// Host Tax Logic & Investments
 	useSpecialRegime: boolean;
 	extendRegimeToDependents: boolean;
-	foreignInvestmentIncome: number; // in USD
+	foreignInvestmentIncome: number; // Global investment income (dividends, interest, cap gains) in USD
 	purchasedHomeInHost: boolean;
 	cadastralValue: number; // Host currency
 
@@ -57,7 +58,8 @@ export interface ExpatInputs {
 
 	// Foreign Exchange & Liabilities
 	fxRateHostToUsd: number; // USD per 1 Host Currency (e.g. 1.10 for EUR, 0.00105 for CLP)
-	homeLiabilitiesUsdMonthly: number; // USD obligations like US mortgage, student loan, 401k
+	homeLiabilitiesUsdMonthly: number; // USD obligations (US mortgage, student loan, 401k)
+	hostLiabilitiesMonthly: number; // Host Currency obligations (Local car lease, local loan/mortgage)
 	expectedInvestmentReturnRate: number; // e.g. 0.07 (7%)
 }
 
@@ -75,6 +77,8 @@ export interface ExpatBreakdown {
 	currencyCode: string;
 
 	// Stay Scenario
+	stayEarnedIncome: number;
+	stayInvestmentIncome: number;
 	stayGrossIncome: number;
 	stayTaxes: number;
 	stayNetIncome: number;
@@ -86,6 +90,7 @@ export interface ExpatBreakdown {
 	// Move Scenario
 	moveBaseGross: number; // Total Earned Compensation (Primary + Spousal)
 	moveAllowancesTotal: number; // Subsidies & Allowances
+	moveInvestmentIncome: number; // Global Investment Income
 	moveTotalGross: number; // Total Household Gross Income
 	hostTaxBase: number;
 	hostTaxPaid: number;
@@ -101,6 +106,8 @@ export interface ExpatBreakdown {
 	moveLivingExpenses: number;
 	moveExpatFixedExpenses: number;
 	moveHomeLiabilities: number;
+	moveHostLiabilitiesUsd: number;
+	moveTotalLiabilitiesUsd: number;
 	fxDepreciationImpactUsd: number;
 	moveAnnualFreeCashFlow: number;
 
@@ -169,12 +176,15 @@ export function calculateExpatFinancials(inputs: ExpatInputs): ExpatBreakdown {
 	const fx = Math.max(0.00001, inputs.fxRateHostToUsd);
 
 	// --- 1. STAY SCENARIO (Home Baseline in USD) ---
-	const stayGrossIncome = inputs.homeBaseSalary + inputs.homeBonus + inputs.homeEquityAnnual + inputs.homeSpouseIncome;
+	const stayEarnedIncome = inputs.homeBaseSalary + inputs.homeBonus + inputs.homeEquityAnnual + inputs.homeSpouseIncome;
+	const stayInvestmentIncome = inputs.foreignInvestmentIncome;
+	const stayGrossIncome = stayEarnedIncome + stayInvestmentIncome;
 	
-	const stayFedTax = calculateUSFederalTax(stayGrossIncome, inputs.usFilingStatus);
-	const stayStateTax = stayGrossIncome * 0.05; // 5% average state tax
-	const stayFicaTax = Math.min(stayGrossIncome, 168600) * 0.062 + stayGrossIncome * 0.0145; // 7.65% FICA
-	const stayTaxes = stayFedTax + stayStateTax + stayFicaTax;
+	const stayFedTaxEarned = calculateUSFederalTax(stayEarnedIncome, inputs.usFilingStatus);
+	const stayFedTaxInv = stayInvestmentIncome * 0.15; // 15% standard US capital gains / qualified dividend tax
+	const stayStateTax = stayEarnedIncome * inputs.homeStateTaxRate;
+	const stayFicaTax = Math.min(stayEarnedIncome, 168600) * 0.062 + stayEarnedIncome * 0.0145; // 7.65% FICA
+	const stayTaxes = stayFedTaxEarned + stayFedTaxInv + stayStateTax + stayFicaTax;
 	
 	const stayNetIncome = stayGrossIncome - stayTaxes;
 
@@ -200,9 +210,10 @@ export function calculateExpatFinancials(inputs: ExpatInputs): ExpatBreakdown {
 
 	// Move Gross Earned Compensation (Primary Base + Bonus + Equity + Spousal Income)
 	const moveBaseGrossUsd = hostBaseSalaryUsd + hostBonusUsd + hostEquityAnnualUsd + totalSpouseIncomeMoveUsd;
+	const moveInvestmentIncomeUsd = inputs.foreignInvestmentIncome;
 
-	// Total Household Gross Income = Gross Earned Compensation + Subsidies & Allowances
-	const moveTotalGrossUsd = moveBaseGrossUsd + moveAllowancesTotalUsd;
+	// Total Household Gross Income = Gross Earned Compensation + Subsidies & Allowances + Investment Income
+	const moveTotalGrossUsd = moveBaseGrossUsd + moveAllowancesTotalUsd + moveInvestmentIncomeUsd;
 
 	// --- Host Taxes (Modular calculation via Country Profile) ---
 	const hostEarnedIncomeHostCurr = inputs.hostBaseSalary + inputs.hostBonus + (inputs.colaMonthly + inputs.housingAllowanceMonthly) * 12 + inputs.tuitionStipendAnnual + (inputs.spouseIncomeType === 'local' ? inputs.spouseIncomeAmount : 0);
@@ -316,10 +327,14 @@ export function calculateExpatFinancials(inputs: ExpatInputs): ExpatBreakdown {
 	const moveAdjustedDiscretionaryUsd = inputs.discretionarySpendMonthly * 12 * inputs.hostColIndexRatio;
 	const moveLivingExpensesUsd = hostRentUsd + moveExpatFixedExpensesUsd + moveAdjustedDiscretionaryUsd;
 
+	// Liabilities (Home USD debt + Host local debt converted to USD)
 	const moveHomeLiabilitiesUsd = inputs.homeLiabilitiesUsdMonthly * 12;
-	const fxDepreciationImpactUsd = moveHomeLiabilitiesUsd * 0.10;
+	const moveHostLiabilitiesUsd = inputs.hostLiabilitiesMonthly * 12 * fx;
+	const moveTotalLiabilitiesUsd = moveHomeLiabilitiesUsd + moveHostLiabilitiesUsd;
 
-	const moveAnnualFreeCashFlowUsd = moveNetIncomeUsd - moveLivingExpensesUsd - moveHomeLiabilitiesUsd;
+	const fxDepreciationImpactUsd = moveTotalLiabilitiesUsd * 0.10;
+
+	const moveAnnualFreeCashFlowUsd = moveNetIncomeUsd - moveLivingExpensesUsd - moveTotalLiabilitiesUsd;
 
 	// --- Comparison & Wealth Projections ---
 	const annualCashFlowDelta = moveAnnualFreeCashFlowUsd - stayAnnualFreeCashFlow;
@@ -346,6 +361,8 @@ export function calculateExpatFinancials(inputs: ExpatInputs): ExpatBreakdown {
 		currencySymbol: country.currencySymbol,
 		currencyCode: country.currencyCode,
 
+		stayEarnedIncome,
+		stayInvestmentIncome,
 		stayGrossIncome,
 		stayTaxes,
 		stayNetIncome,
@@ -356,6 +373,7 @@ export function calculateExpatFinancials(inputs: ExpatInputs): ExpatBreakdown {
 
 		moveBaseGross: moveBaseGrossUsd,
 		moveAllowancesTotal: moveAllowancesTotalUsd,
+		moveInvestmentIncome: moveInvestmentIncomeUsd,
 		moveTotalGross: moveTotalGrossUsd,
 		hostTaxBase: hostEarnedIncomeHostCurr * fx,
 		hostTaxPaid: hostTaxPaidUsd,
@@ -370,6 +388,8 @@ export function calculateExpatFinancials(inputs: ExpatInputs): ExpatBreakdown {
 		moveLivingExpenses: moveLivingExpensesUsd,
 		moveExpatFixedExpenses: moveExpatFixedExpensesUsd,
 		moveHomeLiabilities: moveHomeLiabilitiesUsd,
+		moveHostLiabilitiesUsd,
+		moveTotalLiabilitiesUsd,
 		fxDepreciationImpactUsd,
 		moveAnnualFreeCashFlow: moveAnnualFreeCashFlowUsd,
 

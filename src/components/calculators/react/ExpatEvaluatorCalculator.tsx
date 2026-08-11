@@ -15,6 +15,7 @@ export default function ExpatEvaluatorCalculator() {
 	const [homeBonus, setHomeBonus] = useState(25000);
 	const [homeEquityAnnual, setHomeEquityAnnual] = useState(30000);
 	const [homeSpouseIncome, setHomeSpouseIncome] = useState(65000);
+	const [homeStateTaxRate, setHomeStateTaxRate] = useState(0.05); // 5% average default
 
 	// Host Country Earnings (in Host Currency)
 	const [hostBaseSalary, setHostBaseSalary] = useState(140000);
@@ -34,7 +35,7 @@ export default function ExpatEvaluatorCalculator() {
 	// Tax Policy & Coverage Model
 	const [taxPolicy, setTaxPolicy] = useState<'laissez-faire' | 'tax-equalization' | 'tax-protection'>('tax-equalization');
 
-	// Host Tax Logic
+	// Host Tax Logic & Investments
 	const [useSpecialRegime, setUseSpecialRegime] = useState(true);
 	const [extendRegimeToDependents, setExtendRegimeToDependents] = useState(true);
 	const [foreignInvestmentIncome, setForeignInvestmentIncome] = useState(15000);
@@ -64,6 +65,7 @@ export default function ExpatEvaluatorCalculator() {
 	// FX & Liabilities
 	const [fxRateHostToUsd, setFxRateHostToUsd] = useState(1.10);
 	const [homeLiabilitiesUsdMonthly, setHomeLiabilitiesUsdMonthly] = useState(1500);
+	const [hostLiabilitiesMonthly, setHostLiabilitiesMonthly] = useState(0); // Host currency liabilities
 	const [expectedInvestmentReturnRate, setExpectedInvestmentReturnRate] = useState(0.07);
 
 	// Country Selection Handler
@@ -116,6 +118,7 @@ export default function ExpatEvaluatorCalculator() {
 		homeBonus,
 		homeEquityAnnual,
 		homeSpouseIncome,
+		homeStateTaxRate,
 		hostBaseSalary,
 		hostBonus,
 		hostEquityAnnual,
@@ -145,10 +148,11 @@ export default function ExpatEvaluatorCalculator() {
 		hostColIndexRatio,
 		fxRateHostToUsd,
 		homeLiabilitiesUsdMonthly,
+		hostLiabilitiesMonthly,
 		expectedInvestmentReturnRate
 	}), [
 		hostCountryId,
-		homeBaseSalary, homeBonus, homeEquityAnnual, homeSpouseIncome,
+		homeBaseSalary, homeBonus, homeEquityAnnual, homeSpouseIncome, homeStateTaxRate,
 		hostBaseSalary, hostBonus, hostEquityAnnual,
 		spouseIncomeType, spouseIncomeAmount,
 		colaMonthly, housingAllowanceMonthly, tuitionStipendAnnual, movingReimbursementOneTime,
@@ -156,7 +160,7 @@ export default function ExpatEvaluatorCalculator() {
 		isUSCitizen, taxReliefMethod, usFilingStatus, assignmentDurationYears,
 		homeRentOrMortgageMonthly, homeTuitionMonthly, homeHealthInsuranceMonthly,
 		hostRentMonthly, privateTuitionMonthly, privateHealthInsuranceMonthly,
-		discretionarySpendMonthly, hostColIndexRatio, fxRateHostToUsd, homeLiabilitiesUsdMonthly, expectedInvestmentReturnRate
+		discretionarySpendMonthly, hostColIndexRatio, fxRateHostToUsd, homeLiabilitiesUsdMonthly, hostLiabilitiesMonthly, expectedInvestmentReturnRate
 	]);
 
 	const breakdown = useMemo(() => calculateExpatFinancials(inputs), [inputs]);
@@ -302,9 +306,15 @@ export default function ExpatEvaluatorCalculator() {
 								<tbody className="divide-y divide-[#E5E5E5] text-[#1A1A1A]">
 									<tr>
 										<td className="py-3 font-semibold">Gross Earned Compensation</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.stayGrossIncome)}</td>
+										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.stayEarnedIncome)}</td>
 										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveBaseGross)}</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveBaseGross - breakdown.stayGrossIncome)}</td>
+										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveBaseGross - breakdown.stayEarnedIncome)}</td>
+									</tr>
+									<tr>
+										<td className="py-3 font-semibold">Global Investment Income (Passive)</td>
+										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.stayInvestmentIncome)}</td>
+										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveInvestmentIncome)}</td>
+										<td className="py-3 text-right font-mono text-[#8C8C8C]">$0</td>
 									</tr>
 									<tr>
 										<td className="py-3 font-semibold">Corporate Subsidies &amp; COLA</td>
@@ -343,10 +353,10 @@ export default function ExpatEvaluatorCalculator() {
 										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveLivingExpenses - breakdown.stayLivingExpenses)}</td>
 									</tr>
 									<tr>
-										<td className="py-3 text-semibold text-[#5E5E5E]">Home Country Liabilities (USD Debt)</td>
+										<td className="py-3 text-semibold text-[#5E5E5E]">Total Debt Servicing &amp; Liabilities (USD + Host)</td>
 										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.stayHomeLiabilities)}</td>
-										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveHomeLiabilities)}</td>
-										<td className="py-3 text-right font-mono">$0</td>
+										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveTotalLiabilitiesUsd)}</td>
+										<td className="py-3 text-right font-mono">{formatCurrency(breakdown.moveTotalLiabilitiesUsd - breakdown.stayHomeLiabilities)}</td>
 									</tr>
 									<tr className="font-black text-base border-t-2 border-[#1A1A1A]">
 										<td className="py-4">Annual Free Cash Flow</td>
@@ -568,9 +578,9 @@ export default function ExpatEvaluatorCalculator() {
 
 								<div>
 									<label className="block text-[#8C8C8C] uppercase font-mono tracking-[0.2em] mb-1">
-										Foreign Investment Income ($ USD)
+										Global Passive &amp; Investment Income ($ USD / Year)
 									</label>
-									<p className="text-[#5E5E5E] mb-1">Foreign dividends, interest &amp; capital gains.</p>
+									<p className="text-[#5E5E5E] mb-1">Dividends, interest &amp; capital gains (Included symmetrically in Stay &amp; Move gross income).</p>
 									<input
 										type="number"
 										value={foreignInvestmentIncome}
@@ -592,7 +602,7 @@ export default function ExpatEvaluatorCalculator() {
 							<span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#8C8C8C]">
 								Home Country Tax Logic (U.S.)
 							</span>
-							<h3 className="text-xl font-bold text-[#1A1A1A]">Worldwide Taxation &amp; Treaties</h3>
+							<h3 className="text-xl font-bold text-[#1A1A1A]">Worldwide Taxation &amp; State Baseline</h3>
 
 							<div className="space-y-4 pt-2 text-xs">
 								<div className="flex items-center justify-between border-b border-[#E5E5E5] pb-3">
@@ -610,7 +620,24 @@ export default function ExpatEvaluatorCalculator() {
 
 								<div>
 									<label className="block text-[#8C8C8C] uppercase font-mono tracking-[0.2em] mb-1">
-										US Tax Relief Method
+										US State Tax Rate Jurisdiction (Stay Scenario)
+									</label>
+									<select
+										value={homeStateTaxRate}
+										onChange={(e) => setHomeStateTaxRate(Number(e.target.value))}
+										className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm text-[#1A1A1A]"
+									>
+										<option value={0.0}>0.0% — No State Income Tax (TX, FL, WA, NV, WY, SD, TN, AK)</option>
+										<option value={0.0307}>3.07% — Low State Tax (e.g. PA)</option>
+										<option value={0.05}>5.0% — National US Average State Tax</option>
+										<option value={0.0685}>6.85% — Mid-High State Tax (e.g. NY)</option>
+										<option value={0.093}>9.30% — High State Tax (e.g. CA)</option>
+									</select>
+								</div>
+
+								<div>
+									<label className="block text-[#8C8C8C] uppercase font-mono tracking-[0.2em] mb-1">
+										US Federal Tax Relief Method
 									</label>
 									<select
 										value={taxReliefMethod}
@@ -808,12 +835,39 @@ export default function ExpatEvaluatorCalculator() {
 						</div>
 					</div>
 
+					<div className="grid gap-6 md:grid-cols-2 border-t border-[#E5E5E5] pt-6">
+						<div>
+							<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#5A7A8F] mb-1">
+								Host-Currency Monthly Liabilities ({selectedCountry.currencySymbol} {selectedCountry.currencyCode})
+							</label>
+							<input
+								type="number"
+								value={hostLiabilitiesMonthly}
+								onChange={(e) => setHostLiabilitiesMonthly(Math.max(0, Number(e.target.value)))}
+								className="w-full border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A]"
+							/>
+							<span className="text-xs text-[#5E5E5E]">Host local car lease, local debt, or host pension contributions</span>
+						</div>
+
+						<div className="space-y-1">
+							<span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#8C8C8C]">
+								Combined Debt Servicing Summary
+							</span>
+							<p className="text-sm font-mono text-[#1A1A1A] font-bold">
+								Total Move Debt: {formatCurrency(breakdown.moveTotalLiabilitiesUsd)} / year
+							</p>
+							<p className="text-xs text-[#5E5E5E]">
+								Home USD Debt: {formatCurrency(breakdown.moveHomeLiabilities)} + Host Debt: {formatCurrency(breakdown.moveHostLiabilitiesUsd)}
+							</p>
+						</div>
+					</div>
+
 					<div className="border-t border-[#E5E5E5] pt-4 space-y-2">
 						<span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#B85C5C]">
 							Translation Risk Exposure (Host Currency Weakening)
 						</span>
 						<p className="text-sm text-[#5E5E5E]">
-							If host currency ({selectedCountry.currencyCode}) depreciates by 10% against USD (from ${fxRateHostToUsd} to ${(fxRateHostToUsd * 0.9).toFixed(5)}), servicing your annual ${formatCurrency(breakdown.moveHomeLiabilities)} USD liabilities requires an extra <strong>{formatCurrency(breakdown.fxDepreciationImpactUsd)}</strong> in host earnings per year.
+							If host currency ({selectedCountry.currencyCode}) depreciates by 10% against USD (from ${fxRateHostToUsd} to ${(fxRateHostToUsd * 0.9).toFixed(5)}), servicing your annual ${formatCurrency(breakdown.moveTotalLiabilitiesUsd)} USD liabilities requires an extra <strong>{formatCurrency(breakdown.fxDepreciationImpactUsd)}</strong> in host earnings per year.
 						</p>
 					</div>
 				</div>
