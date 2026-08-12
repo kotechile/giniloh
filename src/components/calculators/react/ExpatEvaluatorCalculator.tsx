@@ -583,15 +583,23 @@ export default function ExpatEvaluatorCalculator() {
 							<button
 								key={c.id}
 								onClick={() => handleCountryChange(c.id)}
+								style={
+									hostCountryId === c.id
+										? { backgroundColor: '#C25E40', color: '#FFFFFF', borderColor: '#C25E40' }
+										: undefined
+								}
 								className={`inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold rounded-xl border transition-all cursor-pointer ${
 									hostCountryId === c.id
-										? 'bg-[#C25E40] text-white border-[#C25E40] shadow-md shadow-[#C25E40]/20'
+										? 'shadow-md font-bold'
 										: 'bg-white text-stone-700 border-stone-200 hover:border-stone-400 hover:bg-stone-50'
 								}`}
 							>
 								<span className="text-base leading-none">{c.flagEmoji}</span>
 								<span>{c.name}</span>
-								<span className={`text-[10px] font-mono ${hostCountryId === c.id ? 'text-amber-100' : 'text-stone-400'}`}>
+								<span
+									style={hostCountryId === c.id ? { color: 'rgba(255, 255, 255, 0.85)' } : undefined}
+									className={`text-[10px] font-mono ${hostCountryId !== c.id ? 'text-stone-400' : ''}`}
+								>
 									{c.currencyCode}
 								</span>
 							</button>
@@ -685,9 +693,14 @@ export default function ExpatEvaluatorCalculator() {
 					<button
 						key={tab.id}
 						onClick={() => setActiveTab(tab.id as any)}
+						style={
+							activeTab === tab.id
+								? { backgroundColor: '#C25E40', color: '#FFFFFF' }
+								: undefined
+						}
 						className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
 							activeTab === tab.id
-								? 'bg-[#C25E40] text-white shadow-sm'
+								? 'shadow-sm font-black'
 								: 'text-stone-600 hover:text-stone-900 hover:bg-stone-100'
 						}`}
 					>
