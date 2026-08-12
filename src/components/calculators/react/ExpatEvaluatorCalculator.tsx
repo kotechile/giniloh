@@ -24,12 +24,11 @@ function FieldLabel({ label, tooltip }: { label: string; tooltip: string }) {
 }
 
 /**
- * 1. Refined 5-Year Wealth Trajectory SVG Area Chart (Earthy Terracotta Theme & Crisp High-Res Scale)
+ * 1. 5-Year Wealth Trajectory SVG Area Chart (Earthy Sage & Terracotta Scale)
  */
 function WealthAreaChart({ projections, countryName }: { projections: YearProjection[]; countryName: string }) {
 	const maxVal = Math.max(...projections.map((p) => Math.max(p.stayCumulativeWealth, p.moveCumulativeWealth)), 10000);
 	
-	// High-resolution canvas dimensions so lines & text render thin and elegant, NOT zoomed-in
 	const width = 900;
 	const height = 240;
 	const padL = 75;
@@ -42,7 +41,6 @@ function WealthAreaChart({ projections, countryName }: { projections: YearProjec
 	const getX = (idx: number) => padL + (idx / 4) * plotW;
 	const getY = (val: number) => padT + plotH - (Math.max(0, val) / maxVal) * plotH;
 
-	// Build SVG path strings
 	const stayPoints = projections.map((p, i) => `${getX(i)},${getY(p.stayCumulativeWealth)}`).join(' L ');
 	const movePoints = projections.map((p, i) => `${getX(i)},${getY(p.moveCumulativeWealth)}`).join(' L ');
 
@@ -56,8 +54,8 @@ function WealthAreaChart({ projections, countryName }: { projections: YearProjec
 					<span className="flex items-center gap-2 font-medium text-stone-600">
 						<span className="w-3 h-3 rounded-full bg-stone-400 opacity-70 inline-block"></span> Stay (US Baseline)
 					</span>
-					<span className="flex items-center gap-2 font-bold text-[#C25E40]">
-						<span className="w-3 h-3 rounded-full bg-[#C25E40] inline-block"></span> Move ({countryName})
+					<span className="flex items-center gap-2 font-bold text-[#2E6F40]">
+						<span className="w-3 h-3 rounded-full bg-[#2E6F40] inline-block"></span> Move ({countryName})
 					</span>
 				</div>
 				<span className="text-stone-400 font-mono text-[11px]">All figures in USD ($)</span>
@@ -65,7 +63,6 @@ function WealthAreaChart({ projections, countryName }: { projections: YearProjec
 
 			<div className="relative w-full overflow-hidden">
 				<svg viewBox={`0 0 ${width} ${height}`} className="w-full h-auto overflow-visible font-mono text-[11px]">
-					{/* Horizontal Grid Lines & Y-Axis Labels */}
 					{[0, 0.25, 0.5, 0.75, 1].map((pct, idx) => {
 						const y = padT + plotH * (1 - pct);
 						const val = Math.round((maxVal * pct) / 1000);
@@ -79,15 +76,12 @@ function WealthAreaChart({ projections, countryName }: { projections: YearProjec
 						);
 					})}
 
-					{/* Semi-transparent Earthy Terracotta Area Fills */}
 					<path d={stayArea} fill="rgba(120, 113, 108, 0.12)" />
-					<path d={moveArea} fill="rgba(194, 94, 64, 0.15)" />
+					<path d={moveArea} fill="rgba(46, 111, 64, 0.15)" />
 
-					{/* Crisp Lines */}
 					<path d={`M ${stayPoints}`} fill="none" stroke="#78716C" strokeWidth="1.75" strokeDasharray="5 5" />
-					<path d={`M ${movePoints}`} fill="none" stroke="#C25E40" strokeWidth="2.25" />
+					<path d={`M ${movePoints}`} fill="none" stroke="#2E6F40" strokeWidth="2.25" />
 
-					{/* Year Markers & Interactive Data Points */}
 					{projections.map((p, i) => {
 						const x = getX(i);
 						const yStay = getY(p.stayCumulativeWealth);
@@ -95,14 +89,8 @@ function WealthAreaChart({ projections, countryName }: { projections: YearProjec
 						return (
 							<g key={i}>
 								<line x1={x} y1={padT} x2={x} y2={height - padB} stroke="#E7E5E4" strokeDasharray="3 3" strokeWidth="1" />
-								
-								{/* Stay Dot */}
 								<circle cx={x} cy={yStay} r="3.5" fill="#78716C" />
-								
-								{/* Move Terracotta Dot */}
-								<circle cx={x} cy={yMove} r="4.5" fill="#C25E40" stroke="#FFFFFF" strokeWidth="1.5" />
-								
-								{/* Year X-Axis Label */}
+								<circle cx={x} cy={yMove} r="4.5" fill="#2E6F40" stroke="#FFFFFF" strokeWidth="1.5" />
 								<text x={x} y={height - 12} textAnchor="middle" fill="#57534E" fontWeight="bold">
 									Year {p.year}
 								</text>
@@ -116,7 +104,7 @@ function WealthAreaChart({ projections, countryName }: { projections: YearProjec
 }
 
 /**
- * 2. Cash Flow Waterfall / Bridge Component Chart (Terracotta Earthy Palette)
+ * 2. Cash Flow Waterfall / Bridge Component Chart (Earthy Terracotta Red for Negatives & Earthy Green for Positives)
  */
 function CashFlowWaterfallChart({ breakdown }: { breakdown: ExpatBreakdown }) {
 	const staySteps = [
@@ -153,24 +141,21 @@ function CashFlowWaterfallChart({ breakdown }: { breakdown: ExpatBreakdown }) {
 					</span>
 					{staySteps.map((s, idx) => {
 						const widthPct = Math.min(100, Math.max(4, (Math.abs(s.val) / maxIncome) * 100));
+						const isPositive = s.val >= 0;
+						const barColor = isPositive ? '#2E6F40' : '#C25E40';
+
 						return (
 							<div key={idx} className="space-y-1 text-xs font-mono">
 								<div className="flex justify-between items-center text-stone-700 font-medium">
 									<span>{s.label}</span>
-									<span className={s.type === 'plus' ? 'text-stone-900 font-bold' : s.type === 'total' ? 'text-stone-900 font-black' : 'text-rose-700'}>
+									<span style={{ color: barColor }} className="font-bold">
 										{s.val >= 0 ? '+' : ''}{formatCurrency(s.val)}
 									</span>
 								</div>
 								<div className="h-2 bg-stone-200 rounded-full overflow-hidden">
 									<div
-										className={`h-full rounded-full transition-all ${
-											s.type === 'plus'
-												? 'bg-stone-700'
-												: s.type === 'total'
-												? 'bg-stone-900'
-												: 'bg-rose-600'
-										}`}
-										style={{ width: `${widthPct}%` }}
+										className="h-full rounded-full transition-all"
+										style={{ width: `${widthPct}%`, backgroundColor: barColor }}
 									/>
 								</div>
 							</div>
@@ -179,30 +164,27 @@ function CashFlowWaterfallChart({ breakdown }: { breakdown: ExpatBreakdown }) {
 				</div>
 
 				{/* Move Scenario Bridge */}
-				<div className="space-y-2.5 bg-[#FDF8F5] p-4 rounded-xl border border-[#F5E6E0]">
-					<span className="text-xs font-bold font-mono uppercase text-[#C25E40] block mb-2">
+				<div className="space-y-2.5 bg-[#FAF8F5] p-4 rounded-xl border border-stone-200/70">
+					<span className="text-xs font-bold font-mono uppercase text-stone-700 block mb-2">
 						{breakdown.currencySymbol} Move ({breakdown.countryName}) Waterfall
 					</span>
 					{moveSteps.map((s, idx) => {
 						const widthPct = Math.min(100, Math.max(4, (Math.abs(s.val) / maxIncome) * 100));
+						const isPositive = s.val >= 0;
+						const barColor = isPositive ? '#2E6F40' : '#C25E40';
+
 						return (
 							<div key={idx} className="space-y-1 text-xs font-mono">
 								<div className="flex justify-between items-center text-stone-700 font-medium">
 									<span>{s.label}</span>
-									<span className={s.type === 'plus' ? 'text-[#9C4127] font-bold' : s.type === 'total' ? 'text-[#C25E40] font-black' : 'text-rose-700'}>
+									<span style={{ color: barColor }} className="font-bold">
 										{s.val >= 0 ? '+' : ''}{formatCurrency(s.val)}
 									</span>
 								</div>
 								<div className="h-2 bg-stone-200 rounded-full overflow-hidden">
 									<div
-										className={`h-full rounded-full transition-all ${
-											s.type === 'plus'
-												? 'bg-[#C25E40]'
-												: s.type === 'total'
-												? 'bg-[#9C4127]'
-												: 'bg-rose-600'
-										}`}
-										style={{ width: `${widthPct}%` }}
+										className="h-full rounded-full transition-all"
+										style={{ width: `${widthPct}%`, backgroundColor: barColor }}
 									/>
 								</div>
 							</div>
@@ -215,19 +197,17 @@ function CashFlowWaterfallChart({ breakdown }: { breakdown: ExpatBreakdown }) {
 }
 
 /**
- * 3. Total Compensation Stacked Bar Chart (Terracotta Earthy Palette)
+ * 3. Total Compensation Stacked Bar Chart (Earthy Green Comp Components)
  */
 function TotalCompStackedChart({ inputs, breakdown }: { inputs: ExpatInputs; breakdown: ExpatBreakdown }) {
 	const fx = inputs.fxRateHostToUsd;
 
-	// Stay Components (USD)
 	const stayBase = inputs.homeBaseSalary;
 	const stayBonus = inputs.homeBonus;
 	const stayEquity = inputs.homeEquityAnnual;
 	const staySpouse = inputs.homeSpouseIncome;
 	const stayTotal = stayBase + stayBonus + stayEquity + staySpouse;
 
-	// Move Components (Normalized USD)
 	const moveBase = inputs.hostBaseSalary * fx;
 	const moveBonus = inputs.hostBonus * fx;
 	const moveEquity = inputs.hostEquityAnnual * fx;
@@ -245,7 +225,6 @@ function TotalCompStackedChart({ inputs, breakdown }: { inputs: ExpatInputs; bre
 			</div>
 
 			<div className="space-y-4 font-mono text-xs">
-				{/* Stay Bar */}
 				<div className="space-y-1.5">
 					<div className="flex justify-between font-bold text-stone-800">
 						<span>🇺🇸 Stay (US Baseline Total: {formatCurrency(stayTotal)})</span>
@@ -272,22 +251,21 @@ function TotalCompStackedChart({ inputs, breakdown }: { inputs: ExpatInputs; bre
 					</div>
 				</div>
 
-				{/* Move Bar */}
 				<div className="space-y-1.5">
-					<div className="flex justify-between font-bold text-[#C25E40]">
+					<div className="flex justify-between font-bold text-[#2E6F40]">
 						<span>{breakdown.currencySymbol} Move ({breakdown.countryName} Total: {formatCurrency(moveTotal)})</span>
 					</div>
-					<div className="h-5 bg-[#FDF8F5] rounded-xl overflow-hidden flex border border-[#F5E6E0]">
-						<div style={{ width: `${(moveBase / maxVal) * 100}%` }} className="bg-[#9C4127] text-white flex items-center justify-center text-[10px] font-bold" title={`Host Base: ${formatCurrency(moveBase)}`}>
+					<div className="h-5 bg-stone-50 rounded-xl overflow-hidden flex border border-stone-200">
+						<div style={{ width: `${(moveBase / maxVal) * 100}%` }} className="bg-[#1E4B2B] text-white flex items-center justify-center text-[10px] font-bold" title={`Host Base: ${formatCurrency(moveBase)}`}>
 							Base
 						</div>
 						{moveBonus > 0 && (
-							<div style={{ width: `${(moveBonus / maxVal) * 100}%` }} className="bg-[#C25E40] text-white flex items-center justify-center text-[10px]" title={`Host Bonus: ${formatCurrency(moveBonus)}`}>
+							<div style={{ width: `${(moveBonus / maxVal) * 100}%` }} className="bg-[#2E6F40] text-white flex items-center justify-center text-[10px]" title={`Host Bonus: ${formatCurrency(moveBonus)}`}>
 								Bonus
 							</div>
 						)}
 						{moveEquity > 0 && (
-							<div style={{ width: `${(moveEquity / maxVal) * 100}%` }} className="bg-[#E8927C] text-stone-900 flex items-center justify-center text-[10px]" title={`Host Equity: ${formatCurrency(moveEquity)}`}>
+							<div style={{ width: `${(moveEquity / maxVal) * 100}%` }} className="bg-[#3B7A4A] text-white flex items-center justify-center text-[10px]" title={`Host Equity: ${formatCurrency(moveEquity)}`}>
 								Equity
 							</div>
 						)}
@@ -297,7 +275,7 @@ function TotalCompStackedChart({ inputs, breakdown }: { inputs: ExpatInputs; bre
 							</div>
 						)}
 						{moveAllowances > 0 && (
-							<div style={{ width: `${(moveAllowances / maxVal) * 100}%` }} className="bg-amber-400 text-stone-900 flex items-center justify-center text-[10px] font-bold" title={`Allowances: ${formatCurrency(moveAllowances)}`}>
+							<div style={{ width: `${(moveAllowances / maxVal) * 100}%` }} className="bg-amber-500 text-stone-900 flex items-center justify-center text-[10px] font-bold" title={`Allowances: ${formatCurrency(moveAllowances)}`}>
 								Allowances
 							</div>
 						)}
@@ -309,7 +287,7 @@ function TotalCompStackedChart({ inputs, breakdown }: { inputs: ExpatInputs; bre
 }
 
 /**
- * 4. Grouped Horizontal Expense Comparison Chart (Terracotta Earthy Palette)
+ * 4. Grouped Horizontal Expense Comparison Chart (Earthy Terracotta Red for Costs)
  */
 function ExpenseGroupedBarChart({ inputs, breakdown }: { inputs: ExpatInputs; breakdown: ExpatBreakdown }) {
 	const fx = inputs.fxRateHostToUsd;
@@ -350,17 +328,17 @@ function ExpenseGroupedBarChart({ inputs, breakdown }: { inputs: ExpatInputs; br
 				{categories.map((cat, idx) => {
 					const stayPct = (cat.stayUsd / maxExpense) * 100;
 					const movePct = (cat.moveUsd / maxExpense) * 100;
+					const isCheaper = cat.moveUsd <= cat.stayUsd;
 
 					return (
 						<div key={idx} className="space-y-1.5 text-xs font-mono bg-stone-50/60 p-3.5 rounded-xl border border-stone-200/60">
 							<div className="flex justify-between font-semibold text-stone-800">
 								<span>{cat.name}</span>
-								<span className={cat.moveUsd <= cat.stayUsd ? 'text-[#C25E40] font-bold' : 'text-rose-700 font-bold'}>
+								<span style={{ color: isCheaper ? '#2E6F40' : '#C25E40' }} className="font-bold">
 									Delta: {cat.moveUsd - cat.stayUsd <= 0 ? '' : '+'}{formatCurrency(cat.moveUsd - cat.stayUsd)}
 								</span>
 							</div>
 
-							{/* Stay Bar */}
 							<div className="flex items-center gap-2">
 								<span className="w-16 text-[10px] text-stone-500 font-bold">Stay (US)</span>
 								<div className="flex-1 h-2.5 bg-stone-200 rounded-full overflow-hidden">
@@ -369,11 +347,10 @@ function ExpenseGroupedBarChart({ inputs, breakdown }: { inputs: ExpatInputs; br
 								<span className="w-16 text-right text-stone-700 font-semibold">{formatCurrency(cat.stayUsd)}</span>
 							</div>
 
-							{/* Move Bar */}
 							<div className="flex items-center gap-2">
-								<span className="w-16 text-[10px] text-[#C25E40] font-bold">Move</span>
+								<span style={{ color: isCheaper ? '#2E6F40' : '#C25E40' }} className="w-16 text-[10px] font-bold">Move</span>
 								<div className="flex-1 h-2.5 bg-stone-200 rounded-full overflow-hidden">
-									<div className={`h-full rounded-full ${cat.moveUsd <= cat.stayUsd ? 'bg-[#C25E40]' : 'bg-rose-600'}`} style={{ width: `${movePct}%` }} />
+									<div className="h-full rounded-full" style={{ width: `${movePct}%`, backgroundColor: isCheaper ? '#2E6F40' : '#C25E40' }} />
 								</div>
 								<span className="w-16 text-right font-semibold text-stone-900">{formatCurrency(cat.moveUsd)}</span>
 							</div>
@@ -388,69 +365,56 @@ function ExpenseGroupedBarChart({ inputs, breakdown }: { inputs: ExpatInputs; br
 export default function ExpatEvaluatorCalculator() {
 	const [activeTab, setActiveTab] = useState<'dashboard' | 'income' | 'tax' | 'expenses' | 'fx' | 'wealth'>('dashboard');
 
-	// --- Country Profile State ---
 	const [hostCountryId, setHostCountryId] = useState<HostCountryId>('spain');
 	const selectedCountry = COUNTRY_PROFILES[hostCountryId] || COUNTRY_PROFILES.spain;
 
-	// --- Form Inputs State ---
 	const [homeBaseSalary, setHomeBaseSalary] = useState(160000);
 	const [homeBonus, setHomeBonus] = useState(25000);
 	const [homeEquityAnnual, setHomeEquityAnnual] = useState(30000);
 	const [homeSpouseIncome, setHomeSpouseIncome] = useState(65000);
 	const [homeStateTaxRate, setHomeStateTaxRate] = useState(0.05);
 
-	// Host Country Earnings (in Host Currency)
 	const [hostBaseSalary, setHostBaseSalary] = useState(140000);
 	const [hostBonus, setHostBonus] = useState(20000);
 	const [hostEquityAnnual, setHostEquityAnnual] = useState(25000);
 
-	// Spousal Income in Host Move Scenario
 	const [spouseIncomeType, setSpouseIncomeType] = useState<'none' | 'remote' | 'local'>('remote');
 	const [spouseIncomeAmount, setSpouseIncomeAmount] = useState(65000);
 
-	// Corporate Relocation Subsidies & Allowances (in Host Currency)
 	const [colaMonthly, setColaMonthly] = useState(800);
 	const [housingAllowanceMonthly, setHousingAllowanceMonthly] = useState(1800);
 	const [tuitionStipendAnnual, setTuitionStipendAnnual] = useState(12000);
 	const [movingReimbursementOneTime, setMovingReimbursementOneTime] = useState(8000);
 
-	// Tax Policy & Coverage Model
 	const [taxPolicy, setTaxPolicy] = useState<'laissez-faire' | 'tax-equalization' | 'tax-protection'>('tax-equalization');
 
-	// Host Tax Logic & Investments
 	const [useSpecialRegime, setUseSpecialRegime] = useState(true);
 	const [extendRegimeToDependents, setExtendRegimeToDependents] = useState(true);
 	const [foreignInvestmentIncome, setForeignInvestmentIncome] = useState(15000);
 	const [purchasedHomeInHost, setPurchasedHomeInHost] = useState(false);
 	const [cadastralValue, setCadastralValue] = useState(250000);
 
-	// Home Tax Logic (US Obligations)
 	const [isUSCitizen, setIsUSCitizen] = useState(true);
 	const [taxReliefMethod, setTaxReliefMethod] = useState<'auto' | 'feie' | 'ftc'>('auto');
 	const [usFilingStatus, setUsFilingStatus] = useState<'single' | 'married'>('married');
 
-	// Social Security & Totalization
 	const [assignmentDurationYears, setAssignmentDurationYears] = useState(3);
 
-	// Cost of Living & Expenses - Home Baseline (USD)
 	const [homeRentOrMortgageMonthly, setHomeRentOrMortgageMonthly] = useState(3200);
 	const [homeTuitionMonthly, setHomeTuitionMonthly] = useState(1200);
 	const [homeHealthInsuranceMonthly, setHomeHealthInsuranceMonthly] = useState(500);
 	const [discretionarySpendMonthly, setDiscretionarySpendMonthly] = useState(3500);
 
-	// Cost of Living & Expenses - Host Destination (Host Currency)
 	const [hostRentMonthly, setHostRentMonthly] = useState(2200);
 	const [privateTuitionMonthly, setPrivateTuitionMonthly] = useState(1000);
 	const [privateHealthInsuranceMonthly, setPrivateHealthInsuranceMonthly] = useState(450);
 	const [hostColIndexRatio, setHostColIndexRatio] = useState(0.82);
 
-	// FX & Liabilities
 	const [fxRateHostToUsd, setFxRateHostToUsd] = useState(1.10);
 	const [homeLiabilitiesUsdMonthly, setHomeLiabilitiesUsdMonthly] = useState(1500);
 	const [hostLiabilitiesMonthly, setHostLiabilitiesMonthly] = useState(0);
 	const [expectedInvestmentReturnRate, setExpectedInvestmentReturnRate] = useState(0.07);
 
-	// Country Selection Handler
 	const handleCountryChange = (countryId: HostCountryId) => {
 		setHostCountryId(countryId);
 		const profile = COUNTRY_PROFILES[countryId];
@@ -554,8 +518,8 @@ export default function ExpatEvaluatorCalculator() {
 			<div className="space-y-6 bg-white p-6 sm:p-8 rounded-2xl border border-stone-200/80 shadow-sm">
 				<div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
 					<div>
-						<span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold uppercase tracking-wider bg-amber-100/60 text-[#9C4127] border border-amber-200">
-							<span className="w-2 h-2 rounded-full bg-[#C25E40] animate-pulse"></span>
+						<span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold uppercase tracking-wider bg-emerald-100/60 text-[#2E6F40] border border-emerald-200">
+							<span className="w-2 h-2 rounded-full bg-[#2E6F40] animate-pulse"></span>
 							Expat Financial &amp; Tax Evaluator
 						</span>
 						<h1 className="text-3xl sm:text-4xl font-extrabold text-stone-900 tracking-tight mt-3">
@@ -585,7 +549,7 @@ export default function ExpatEvaluatorCalculator() {
 								onClick={() => handleCountryChange(c.id)}
 								style={
 									hostCountryId === c.id
-										? { backgroundColor: '#C25E40', color: '#FFFFFF', borderColor: '#C25E40' }
+										? { backgroundColor: '#2E6F40', color: '#FFFFFF', borderColor: '#2E6F40' }
 										: undefined
 								}
 								className={`inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold rounded-xl border transition-all cursor-pointer ${
@@ -613,21 +577,21 @@ export default function ExpatEvaluatorCalculator() {
 				{/* Annual Free Cash Flow Delta Card */}
 				<div className={`p-6 rounded-2xl border transition-all shadow-sm ${
 					breakdown.annualCashFlowDelta >= 0
-						? 'bg-gradient-to-br from-amber-50/80 via-white to-amber-50/30 border-amber-200/80'
-						: 'bg-gradient-to-br from-rose-50/80 via-white to-rose-50/30 border-rose-200/80'
+						? 'bg-gradient-to-br from-emerald-50/80 via-white to-emerald-50/30 border-emerald-200/80'
+						: 'bg-gradient-to-br from-amber-50/80 via-white to-amber-50/30 border-amber-200/80'
 				}`}>
 					<div className="flex items-center justify-between">
 						<span className="font-mono text-xs font-bold uppercase tracking-wider text-stone-500">
 							Annual Cash Flow Delta
 						</span>
 						<span className={`px-2 py-0.5 rounded-full text-[11px] font-bold font-mono ${
-							breakdown.annualCashFlowDelta >= 0 ? 'bg-amber-100 text-[#9C4127]' : 'bg-rose-100 text-rose-800'
+							breakdown.annualCashFlowDelta >= 0 ? 'bg-emerald-100 text-[#2E6F40]' : 'bg-amber-100 text-[#C25E40]'
 						}`}>
 							{breakdown.annualCashFlowDelta >= 0 ? '▲ Net Surplus' : '▼ Net Deficit'}
 						</span>
 					</div>
 					<div className={`text-4xl sm:text-5xl font-black tracking-tight mt-3 ${
-						breakdown.annualCashFlowDelta >= 0 ? 'text-[#C25E40]' : 'text-rose-700'
+						breakdown.annualCashFlowDelta >= 0 ? 'text-[#2E6F40]' : 'text-[#C25E40]'
 					}`}>
 						{breakdown.annualCashFlowDelta >= 0 ? '+' : ''}{formatCurrency(breakdown.annualCashFlowDelta)}
 					</div>
@@ -639,7 +603,7 @@ export default function ExpatEvaluatorCalculator() {
 				</div>
 
 				{/* 5-Year Wealth Impact Card with Micro-Chart Sparkline */}
-				<div className="p-6 bg-gradient-to-br from-[#FAF8F5] via-white to-amber-50/30 border border-stone-200/80 rounded-2xl shadow-sm flex flex-col justify-between">
+				<div className="p-6 bg-gradient-to-br from-[#FAF8F5] via-white to-emerald-50/30 border border-stone-200/80 rounded-2xl shadow-sm flex flex-col justify-between">
 					<div>
 						<div className="flex items-center justify-between">
 							<span className="font-mono text-xs font-bold uppercase tracking-wider text-stone-500">
@@ -647,11 +611,11 @@ export default function ExpatEvaluatorCalculator() {
 							</span>
 							<svg className="w-16 h-7" viewBox="0 0 60 25">
 								<path d="M 0 20 Q 30 18 60 15" fill="none" stroke="#A8A29E" strokeWidth="1.5" strokeDasharray="3 3" />
-								<path d="M 0 20 Q 30 10 60 4" fill="none" stroke={breakdown.fiveYearWealthDelta >= 0 ? '#C25E40' : '#B91C1C'} strokeWidth="2" />
+								<path d="M 0 20 Q 30 10 60 4" fill="none" stroke={breakdown.fiveYearWealthDelta >= 0 ? '#2E6F40' : '#C25E40'} strokeWidth="2" />
 							</svg>
 						</div>
 						<div className={`text-4xl sm:text-5xl font-black tracking-tight mt-3 ${
-							breakdown.fiveYearWealthDelta >= 0 ? 'text-[#C25E40]' : 'text-rose-700'
+							breakdown.fiveYearWealthDelta >= 0 ? 'text-[#2E6F40]' : 'text-[#C25E40]'
 						}`}>
 							{breakdown.fiveYearWealthDelta >= 0 ? '+' : ''}{formatCurrency(breakdown.fiveYearWealthDelta)}
 						</div>
@@ -695,7 +659,7 @@ export default function ExpatEvaluatorCalculator() {
 						onClick={() => setActiveTab(tab.id as any)}
 						style={
 							activeTab === tab.id
-								? { backgroundColor: '#C25E40', color: '#FFFFFF' }
+								? { backgroundColor: '#2E6F40', color: '#FFFFFF' }
 								: undefined
 						}
 						className={`px-4 py-2.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap cursor-pointer ${
@@ -733,7 +697,7 @@ export default function ExpatEvaluatorCalculator() {
 					<div className="bg-white rounded-2xl border border-stone-200/80 shadow-sm p-6 space-y-4">
 						<div className="flex items-center justify-between border-b border-stone-100 pb-3">
 							<h3 className="text-base font-bold text-stone-900">5-Year Cumulative Wealth Growth Trajectory</h3>
-							<span className="text-xs font-mono text-[#C25E40] font-bold">
+							<span className="text-xs font-mono text-[#2E6F40] font-bold">
 								{breakdown.fiveYearWealthDelta >= 0 ? '+' : ''}{formatCurrency(breakdown.fiveYearWealthDelta)} Net Gap
 							</span>
 						</div>
@@ -758,7 +722,7 @@ export default function ExpatEvaluatorCalculator() {
 									<tr className="border-b border-stone-200 text-xs font-mono font-bold uppercase tracking-wider text-stone-500">
 										<th className="py-3.5 px-3">Financial Metric</th>
 										<th className="py-3.5 px-3 text-right">Stay (US Baseline)</th>
-										<th className="py-3.5 px-3 text-right bg-amber-50/50 rounded-t-xl">Move ({selectedCountry.name})</th>
+										<th className="py-3.5 px-3 text-right bg-emerald-50/40 rounded-t-xl">Move ({selectedCountry.name})</th>
 										<th className="py-3.5 px-3 text-right">Net Delta</th>
 									</tr>
 								</thead>
@@ -766,9 +730,9 @@ export default function ExpatEvaluatorCalculator() {
 									<tr>
 										<td className="py-3.5 px-3 font-semibold text-stone-900">Gross Earned Compensation</td>
 										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.stayEarnedIncome)}</td>
-										<td className="py-3.5 px-3 text-right font-mono bg-amber-50/30">{formatCurrency(breakdown.moveBaseGross)}</td>
+										<td className="py-3.5 px-3 text-right font-mono bg-emerald-50/20">{formatCurrency(breakdown.moveBaseGross)}</td>
 										<td className={`py-3.5 px-3 text-right font-mono font-bold ${
-											breakdown.moveBaseGross - breakdown.stayEarnedIncome >= 0 ? 'text-[#C25E40]' : 'text-rose-700'
+											breakdown.moveBaseGross - breakdown.stayEarnedIncome >= 0 ? 'text-[#2E6F40]' : 'text-[#C25E40]'
 										}`}>
 											{formatCurrency(breakdown.moveBaseGross - breakdown.stayEarnedIncome)}
 										</td>
@@ -776,27 +740,27 @@ export default function ExpatEvaluatorCalculator() {
 									<tr>
 										<td className="py-3.5 px-3 font-semibold text-stone-900">Global Investment Income (Passive)</td>
 										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.stayInvestmentIncome)}</td>
-										<td className="py-3.5 px-3 text-right font-mono bg-amber-50/30">{formatCurrency(breakdown.moveInvestmentIncome)}</td>
+										<td className="py-3.5 px-3 text-right font-mono bg-emerald-50/20">{formatCurrency(breakdown.moveInvestmentIncome)}</td>
 										<td className="py-3.5 px-3 text-right font-mono text-stone-400">$0</td>
 									</tr>
 									<tr>
 										<td className="py-3.5 px-3 font-semibold text-stone-900">Corporate Subsidies &amp; COLA</td>
 										<td className="py-3.5 px-3 text-right font-mono text-stone-400">$0</td>
-										<td className="py-3.5 px-3 text-right font-mono bg-amber-50/30 text-[#C25E40]">+{formatCurrency(breakdown.moveAllowancesTotal)}</td>
-										<td className="py-3.5 px-3 text-right font-mono text-[#C25E40]">+{formatCurrency(breakdown.moveAllowancesTotal)}</td>
+										<td className="py-3.5 px-3 text-right font-mono bg-emerald-50/20 text-[#2E6F40]">+{formatCurrency(breakdown.moveAllowancesTotal)}</td>
+										<td className="py-3.5 px-3 text-right font-mono text-[#2E6F40]">+{formatCurrency(breakdown.moveAllowancesTotal)}</td>
 									</tr>
 									<tr className="font-bold border-t border-stone-200 bg-stone-50/50">
 										<td className="py-3.5 px-3 text-stone-900">Total Household Gross Income</td>
 										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.stayGrossIncome)}</td>
-										<td className="py-3.5 px-3 text-right font-mono bg-amber-50/50">{formatCurrency(breakdown.moveTotalGross)}</td>
+										<td className="py-3.5 px-3 text-right font-mono bg-emerald-50/40">{formatCurrency(breakdown.moveTotalGross)}</td>
 										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.moveTotalGross - breakdown.stayGrossIncome)}</td>
 									</tr>
 									<tr>
 										<td className="py-3.5 px-3 text-stone-600">Actual Total Taxes (Host + Home + SS)</td>
 										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.stayTaxes)}</td>
-										<td className="py-3.5 px-3 text-right font-mono bg-amber-50/30 text-stone-900">{formatCurrency(breakdown.actualTotalTaxesPaid)}</td>
+										<td className="py-3.5 px-3 text-right font-mono bg-emerald-50/20 text-stone-900">{formatCurrency(breakdown.actualTotalTaxesPaid)}</td>
 										<td className={`py-3.5 px-3 text-right font-mono font-bold ${
-											breakdown.actualTotalTaxesPaid - breakdown.stayTaxes <= 0 ? 'text-[#C25E40]' : 'text-rose-700'
+											breakdown.actualTotalTaxesPaid - breakdown.stayTaxes <= 0 ? 'text-[#2E6F40]' : 'text-[#C25E40]'
 										}`}>
 											{breakdown.actualTotalTaxesPaid - breakdown.stayTaxes > 0 ? '+' : ''}{formatCurrency(breakdown.actualTotalTaxesPaid - breakdown.stayTaxes)}
 										</td>
@@ -804,16 +768,16 @@ export default function ExpatEvaluatorCalculator() {
 									<tr>
 										<td className="py-3.5 px-3 text-stone-600">Employer Tax Policy Reimbursement</td>
 										<td className="py-3.5 px-3 text-right font-mono text-stone-400">$0</td>
-										<td className="py-3.5 px-3 text-right font-mono bg-amber-50/30">
+										<td className="py-3.5 px-3 text-right font-mono bg-emerald-50/20">
 											{breakdown.employerTaxReimbursement > 0 ? (
-												<span className="text-[#C25E40] font-bold">+{formatCurrency(breakdown.employerTaxReimbursement)}</span>
+												<span className="text-[#2E6F40] font-bold">+{formatCurrency(breakdown.employerTaxReimbursement)}</span>
 											) : (
 												<span className="text-stone-400">$0</span>
 											)}
 										</td>
 										<td className="py-3.5 px-3 text-right font-mono">
 											{breakdown.employerTaxReimbursement > 0 ? (
-												<span className="text-[#C25E40] font-bold">+{formatCurrency(breakdown.employerTaxReimbursement)}</span>
+												<span className="text-[#2E6F40] font-bold">+{formatCurrency(breakdown.employerTaxReimbursement)}</span>
 											) : (
 												<span className="text-stone-400">$0</span>
 											)}
@@ -822,9 +786,9 @@ export default function ExpatEvaluatorCalculator() {
 									<tr className="font-bold border-t border-stone-200 bg-stone-50/50">
 										<td className="py-3.5 px-3 text-stone-900">Net Take-Home Pay</td>
 										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.stayNetIncome)}</td>
-										<td className="py-3.5 px-3 text-right font-mono bg-amber-50/50">{formatCurrency(breakdown.moveNetIncome)}</td>
+										<td className="py-3.5 px-3 text-right font-mono bg-emerald-50/40">{formatCurrency(breakdown.moveNetIncome)}</td>
 										<td className={`py-3.5 px-3 text-right font-mono font-bold ${
-											breakdown.moveNetIncome - breakdown.stayNetIncome >= 0 ? 'text-[#C25E40]' : 'text-rose-700'
+											breakdown.moveNetIncome - breakdown.stayNetIncome >= 0 ? 'text-[#2E6F40]' : 'text-[#C25E40]'
 										}`}>
 											{breakdown.moveNetIncome - breakdown.stayNetIncome >= 0 ? '+' : ''}{formatCurrency(breakdown.moveNetIncome - breakdown.stayNetIncome)}
 										</td>
@@ -832,9 +796,9 @@ export default function ExpatEvaluatorCalculator() {
 									<tr>
 										<td className="py-3.5 px-3 text-stone-600">Local Living Expenses &amp; Fixed Costs</td>
 										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.stayLivingExpenses)}</td>
-										<td className="py-3.5 px-3 text-right font-mono bg-amber-50/30">{formatCurrency(breakdown.moveLivingExpenses)}</td>
+										<td className="py-3.5 px-3 text-right font-mono bg-emerald-50/20">{formatCurrency(breakdown.moveLivingExpenses)}</td>
 										<td className={`py-3.5 px-3 text-right font-mono font-bold ${
-											breakdown.moveLivingExpenses - breakdown.stayLivingExpenses <= 0 ? 'text-[#C25E40]' : 'text-rose-700'
+											breakdown.moveLivingExpenses - breakdown.stayLivingExpenses <= 0 ? 'text-[#2E6F40]' : 'text-[#C25E40]'
 										}`}>
 											{breakdown.moveLivingExpenses - breakdown.stayLivingExpenses > 0 ? '+' : ''}{formatCurrency(breakdown.moveLivingExpenses - breakdown.stayLivingExpenses)}
 										</td>
@@ -842,13 +806,13 @@ export default function ExpatEvaluatorCalculator() {
 									<tr>
 										<td className="py-3.5 px-3 text-stone-600">Total Liabilities &amp; Debt (USD + Host)</td>
 										<td className="py-3.5 px-3 text-right font-mono">{formatCurrency(breakdown.stayHomeLiabilities)}</td>
-										<td className="py-3.5 px-3 text-right font-mono bg-amber-50/30">{formatCurrency(breakdown.moveTotalLiabilitiesUsd)}</td>
+										<td className="py-3.5 px-3 text-right font-mono bg-emerald-50/20">{formatCurrency(breakdown.moveTotalLiabilitiesUsd)}</td>
 										<td className={`py-3.5 px-3 text-right font-mono ${
 											breakdown.moveTotalLiabilitiesUsd === breakdown.stayHomeLiabilities
 												? 'text-stone-400'
 												: breakdown.moveTotalLiabilitiesUsd < breakdown.stayHomeLiabilities
-												? 'text-[#C25E40] font-bold'
-												: 'text-rose-700 font-bold'
+												? 'text-[#2E6F40] font-bold'
+												: 'text-[#C25E40] font-bold'
 										}`}>
 											{breakdown.moveTotalLiabilitiesUsd > breakdown.stayHomeLiabilities ? '+' : ''}{formatCurrency(breakdown.moveTotalLiabilitiesUsd - breakdown.stayHomeLiabilities)}
 										</td>
@@ -858,7 +822,7 @@ export default function ExpatEvaluatorCalculator() {
 										<td className="py-4 px-3 text-right font-mono">{formatCurrency(breakdown.stayAnnualFreeCashFlow)}</td>
 										<td className="py-4 px-3 text-right font-mono">{formatCurrency(breakdown.moveAnnualFreeCashFlow)}</td>
 										<td className={`py-4 px-3 text-right font-mono ${
-											breakdown.annualCashFlowDelta >= 0 ? 'text-amber-300' : 'text-rose-400'
+											breakdown.annualCashFlowDelta >= 0 ? 'text-emerald-400' : 'text-amber-400'
 										}`}>
 											{breakdown.annualCashFlowDelta >= 0 ? '+' : ''}{formatCurrency(breakdown.annualCashFlowDelta)}
 										</td>
@@ -929,7 +893,7 @@ export default function ExpatEvaluatorCalculator() {
 										tooltip="Annual market value of RSUs, stock options, or equity vesting in the US."
 									/>
 									<div className="relative">
-										<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-slate-400 font-semibold">$</span>
+										<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-stone-400 font-semibold">$</span>
 										<input
 											type="number"
 											value={homeEquityAnnual}
@@ -958,12 +922,12 @@ export default function ExpatEvaluatorCalculator() {
 						</div>
 
 						{/* Right Panel: Move Scenario */}
-						<div className="bg-gradient-to-br from-[#FDF8F5] via-white to-amber-50/30 rounded-2xl border border-[#F5E6E0] shadow-sm p-6 space-y-5">
-							<div className="flex items-center justify-between border-b border-[#F5E6E0] pb-3">
-								<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#9C4127]">
+						<div className="bg-gradient-to-br from-emerald-50/30 via-white to-stone-50/50 rounded-2xl border border-emerald-100 shadow-sm p-6 space-y-5">
+							<div className="flex items-center justify-between border-b border-emerald-100 pb-3">
+								<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#2E6F40]">
 									Move Scenario ({selectedCountry.name})
 								</span>
-								<span className="text-xs font-bold text-[#9C4127] bg-amber-100/70 px-2.5 py-1 rounded-lg flex items-center gap-1.5">
+								<span className="text-xs font-bold text-[#2E6F40] bg-emerald-100/70 px-2.5 py-1 rounded-lg flex items-center gap-1.5">
 									<span>{selectedCountry.flagEmoji}</span>
 									<span>{selectedCountry.currencyCode} ({selectedCountry.currencySymbol})</span>
 								</span>
@@ -982,7 +946,7 @@ export default function ExpatEvaluatorCalculator() {
 											type="number"
 											value={hostBaseSalary}
 											onChange={(e) => setHostBaseSalary(Math.max(0, Number(e.target.value)))}
-											className="w-full px-3 py-2.5 bg-white border border-amber-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
+											className="w-full px-3 py-2.5 bg-white border border-emerald-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
 										/>
 									</div>
 									<div>
@@ -994,7 +958,7 @@ export default function ExpatEvaluatorCalculator() {
 											type="number"
 											value={hostBonus}
 											onChange={(e) => setHostBonus(Math.max(0, Number(e.target.value)))}
-											className="w-full px-3 py-2.5 bg-white border border-amber-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
+											className="w-full px-3 py-2.5 bg-white border border-emerald-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
 										/>
 									</div>
 									<div>
@@ -1006,12 +970,12 @@ export default function ExpatEvaluatorCalculator() {
 											type="number"
 											value={hostEquityAnnual}
 											onChange={(e) => setHostEquityAnnual(Math.max(0, Number(e.target.value)))}
-											className="w-full px-3 py-2.5 bg-white border border-amber-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
+											className="w-full px-3 py-2.5 bg-white border border-emerald-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
 										/>
 									</div>
 								</div>
 
-								<div className="border-t border-[#F5E6E0] pt-4">
+								<div className="border-t border-emerald-100 pt-4">
 									<span className="font-mono text-xs font-bold uppercase tracking-wider text-stone-500 block mb-2">Spousal Income Post-Move</span>
 									<div className="grid grid-cols-2 gap-3">
 										<div>
@@ -1022,7 +986,7 @@ export default function ExpatEvaluatorCalculator() {
 											<select
 												value={spouseIncomeType}
 												onChange={(e) => setSpouseIncomeType(e.target.value as any)}
-												className="w-full px-3 py-2.5 bg-white border border-amber-200 rounded-xl text-xs font-semibold text-stone-900 outline-none"
+												className="w-full px-3 py-2.5 bg-white border border-emerald-200 rounded-xl text-xs font-semibold text-stone-900 outline-none"
 											>
 												<option value="none">No Income Post-Move</option>
 												<option value="remote">Remote (Keeps Home Income)</option>
@@ -1039,13 +1003,13 @@ export default function ExpatEvaluatorCalculator() {
 												disabled={spouseIncomeType === 'none'}
 												value={spouseIncomeAmount}
 												onChange={(e) => setSpouseIncomeAmount(Math.max(0, Number(e.target.value)))}
-												className="w-full px-3 py-2.5 bg-white border border-amber-200 rounded-xl text-sm font-mono text-stone-900 disabled:opacity-50 outline-none"
+												className="w-full px-3 py-2.5 bg-white border border-emerald-200 rounded-xl text-sm font-mono text-stone-900 disabled:opacity-50 outline-none"
 											/>
 										</div>
 									</div>
 								</div>
 
-								<div className="border-t border-[#F5E6E0] pt-4 space-y-3">
+								<div className="border-t border-emerald-100 pt-4 space-y-3">
 									<span className="font-mono text-xs font-bold uppercase tracking-wider text-stone-500 block">Expat Relocation Allowances ({selectedCountry.currencySymbol})</span>
 									<div className="grid grid-cols-2 gap-3">
 										<div>
@@ -1057,7 +1021,7 @@ export default function ExpatEvaluatorCalculator() {
 												type="number"
 												value={colaMonthly}
 												onChange={(e) => setColaMonthly(Math.max(0, Number(e.target.value)))}
-												className="w-full px-3 py-2.5 bg-white border border-amber-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
+												className="w-full px-3 py-2.5 bg-white border border-emerald-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
 											/>
 										</div>
 										<div>
@@ -1069,7 +1033,7 @@ export default function ExpatEvaluatorCalculator() {
 												type="number"
 												value={housingAllowanceMonthly}
 												onChange={(e) => setHousingAllowanceMonthly(Math.max(0, Number(e.target.value)))}
-												className="w-full px-3 py-2.5 bg-white border border-amber-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
+												className="w-full px-3 py-2.5 bg-white border border-emerald-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
 											/>
 										</div>
 									</div>
@@ -1083,7 +1047,7 @@ export default function ExpatEvaluatorCalculator() {
 												type="number"
 												value={tuitionStipendAnnual}
 												onChange={(e) => setTuitionStipendAnnual(Math.max(0, Number(e.target.value)))}
-												className="w-full px-3 py-2.5 bg-white border border-amber-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
+												className="w-full px-3 py-2.5 bg-white border border-emerald-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
 											/>
 										</div>
 										<div>
@@ -1095,7 +1059,7 @@ export default function ExpatEvaluatorCalculator() {
 												type="number"
 												value={movingReimbursementOneTime}
 												onChange={(e) => setMovingReimbursementOneTime(Math.max(0, Number(e.target.value)))}
-												className="w-full px-3 py-2.5 bg-white border border-amber-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
+												className="w-full px-3 py-2.5 bg-white border border-emerald-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
 											/>
 										</div>
 									</div>
@@ -1127,8 +1091,8 @@ export default function ExpatEvaluatorCalculator() {
 								</div>
 							</div>
 
-							<div className="space-y-1 bg-[#FDF8F5] p-3.5 rounded-xl border border-[#F5E6E0]">
-								<div className="flex justify-between font-bold text-[#9C4127]">
+							<div className="space-y-1 bg-amber-50/40 p-3.5 rounded-xl border border-amber-200/60">
+								<div className="flex justify-between font-bold text-[#C25E40]">
 									<span>{selectedCountry.flagEmoji} Move Actual Tax: {formatCurrency(breakdown.actualTotalTaxesPaid)}</span>
 								</div>
 								<div className="h-4 bg-amber-100 rounded-lg overflow-hidden flex">
@@ -1142,12 +1106,12 @@ export default function ExpatEvaluatorCalculator() {
 
 					<div className="grid gap-8 md:grid-cols-2">
 						{/* Host Tax Panel */}
-						<div className="bg-gradient-to-br from-[#FDF8F5] via-white to-amber-50/30 rounded-2xl border border-[#F5E6E0] shadow-sm p-6 space-y-5">
-							<div className="flex items-center justify-between border-b border-[#F5E6E0] pb-3">
-								<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#9C4127]">
+						<div className="bg-gradient-to-br from-amber-50/30 via-white to-stone-50/50 rounded-2xl border border-amber-200/60 shadow-sm p-6 space-y-5">
+							<div className="flex items-center justify-between border-b border-amber-200/60 pb-3">
+								<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#C25E40]">
 									Host Tax Engine ({selectedCountry.name})
 								</span>
-								<span className="text-xs font-bold text-[#9C4127] bg-amber-100/70 px-2.5 py-1 rounded-lg">
+								<span className="text-xs font-bold text-[#C25E40] bg-amber-100/70 px-2.5 py-1 rounded-lg">
 									{selectedCountry.flagEmoji} {selectedCountry.currencyCode}
 								</span>
 							</div>
@@ -1381,12 +1345,12 @@ export default function ExpatEvaluatorCalculator() {
 						</div>
 
 						{/* Right Panel: Host Expenses */}
-						<div className="bg-gradient-to-br from-[#FDF8F5] via-white to-amber-50/30 rounded-2xl border border-[#F5E6E0] shadow-sm p-6 space-y-5">
-							<div className="flex items-center justify-between border-b border-[#F5E6E0] pb-3">
-								<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#9C4127]">
+						<div className="bg-gradient-to-br from-[#FAF8F5] via-white to-stone-50/50 rounded-2xl border border-stone-200/80 shadow-sm p-6 space-y-5">
+							<div className="flex items-center justify-between border-b border-stone-100 pb-3">
+								<span className="font-mono text-xs font-bold uppercase tracking-wider text-stone-700">
 									Host Expenses ({selectedCountry.name})
 								</span>
-								<span className="text-xs font-bold text-[#9C4127] bg-amber-100/70 px-2.5 py-1 rounded-lg">
+								<span className="text-xs font-bold text-stone-700 bg-stone-100 px-2.5 py-1 rounded-lg">
 									{selectedCountry.flagEmoji} {selectedCountry.currencyCode} ({selectedCountry.currencySymbol})
 								</span>
 							</div>
@@ -1403,7 +1367,7 @@ export default function ExpatEvaluatorCalculator() {
 										type="number"
 										value={hostRentMonthly}
 										onChange={(e) => setHostRentMonthly(Math.max(0, Number(e.target.value)))}
-										className="w-full px-3 py-2.5 bg-white border border-amber-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
+										className="w-full px-3 py-2.5 bg-white border border-stone-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
 									/>
 								</div>
 
@@ -1417,7 +1381,7 @@ export default function ExpatEvaluatorCalculator() {
 											type="number"
 											value={privateTuitionMonthly}
 											onChange={(e) => setPrivateTuitionMonthly(Math.max(0, Number(e.target.value)))}
-											className="w-full px-3 py-2.5 bg-white border border-amber-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
+											className="w-full px-3 py-2.5 bg-white border border-stone-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
 										/>
 									</div>
 									<div>
@@ -1429,7 +1393,7 @@ export default function ExpatEvaluatorCalculator() {
 											type="number"
 											value={privateHealthInsuranceMonthly}
 											onChange={(e) => setPrivateHealthInsuranceMonthly(Math.max(0, Number(e.target.value)))}
-											className="w-full px-3 py-2.5 bg-white border border-amber-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
+											className="w-full px-3 py-2.5 bg-white border border-stone-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
 										/>
 									</div>
 								</div>
@@ -1446,7 +1410,7 @@ export default function ExpatEvaluatorCalculator() {
 										step={0.01}
 										value={hostColIndexRatio}
 										onChange={(e) => setHostColIndexRatio(Number(e.target.value))}
-										className="w-full h-2 rounded-lg bg-stone-200 accent-[#C25E40] cursor-pointer"
+										className="w-full h-2 rounded-lg bg-stone-200 accent-[#2E6F40] cursor-pointer"
 									/>
 									<span className="text-xs text-stone-600 font-medium">
 										{hostColIndexRatio < 1
@@ -1528,8 +1492,8 @@ export default function ExpatEvaluatorCalculator() {
 					</div>
 
 					<div className="border-t border-stone-100 pt-4 space-y-2">
-						<span className="font-mono text-xs font-bold uppercase tracking-wider text-rose-700 flex items-center gap-1.5">
-							<svg className="w-4 h-4 text-rose-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#C25E40] flex items-center gap-1.5">
+							<svg className="w-4 h-4 text-[#C25E40]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 							</svg>
 							Translation Risk Exposure (Host Currency Weakening)
@@ -1563,7 +1527,7 @@ export default function ExpatEvaluatorCalculator() {
 						</div>
 					</div>
 
-					{/* CHART 1 REPEATED: Large High-Res Earthy Terracotta 5-Year Area Chart */}
+					{/* CHART 1 REPEATED: Large High-Res Earthy Terracotta & Green 5-Year Area Chart */}
 					<WealthAreaChart projections={projections} countryName={selectedCountry.name} />
 
 					{/* Visual Bar Comparison Charts */}
@@ -1572,14 +1536,13 @@ export default function ExpatEvaluatorCalculator() {
 							const maxVal = Math.max(...projections.map((x) => Math.max(x.stayCumulativeWealth, x.moveCumulativeWealth)), 1);
 							const stayPct = Math.min(100, Math.max(5, (p.stayCumulativeWealth / maxVal) * 100));
 							const movePct = Math.min(100, Math.max(5, (p.moveCumulativeWealth / maxVal) * 100));
+							const isPositive = p.wealthDelta >= 0;
 
 							return (
 								<div key={p.year} className="space-y-2 font-mono text-xs bg-stone-50/60 p-4 rounded-xl border border-stone-200/60">
 									<div className="flex justify-between items-center text-stone-900 font-bold">
 										<span>Year {p.year} Accumulation</span>
-										<span className={`px-2.5 py-0.5 rounded-md font-bold ${
-											p.wealthDelta >= 0 ? 'bg-amber-100 text-[#9C4127]' : 'bg-rose-100 text-rose-800'
-										}`}>
+										<span style={{ color: isPositive ? '#2E6F40' : '#C25E40' }} className="px-2.5 py-0.5 rounded-md font-bold bg-stone-100">
 											Net Delta: {p.wealthDelta >= 0 ? '+' : ''}{formatCurrency(p.wealthDelta)}
 										</span>
 									</div>
@@ -1594,12 +1557,12 @@ export default function ExpatEvaluatorCalculator() {
 											</div>
 										</div>
 										<div>
-											<div className="flex justify-between text-[11px] text-[#9C4127] mb-1">
+											<div className="flex justify-between text-[11px] text-stone-700 mb-1">
 												<span>Move ({selectedCountry.name})</span>
-												<span className="font-bold text-[#C25E40]">{formatCurrency(p.moveCumulativeWealth)}</span>
+												<span style={{ color: isPositive ? '#2E6F40' : '#C25E40' }} className="font-bold">{formatCurrency(p.moveCumulativeWealth)}</span>
 											</div>
 											<div className="h-3 bg-stone-200 rounded-full overflow-hidden">
-												<div className="h-full bg-[#C25E40] rounded-full transition-all" style={{ width: `${movePct}%` }} />
+												<div className="h-full rounded-full transition-all" style={{ width: `${movePct}%`, backgroundColor: isPositive ? '#2E6F40' : '#C25E40' }} />
 											</div>
 										</div>
 									</div>
