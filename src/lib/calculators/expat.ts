@@ -125,6 +125,33 @@ export interface ExpatBreakdown {
 	isDetachedWorkerActive: boolean;
 	totalizationSocialSecurityModel: string;
 	warnings: string[];
+
+	// Detailed Sub-components for Walkdown Table
+	stayFedTaxEarned: number;
+	stayFedTaxInv: number;
+	stayStateTax: number;
+	stayFicaTax: number;
+
+	moveBaseSalaryUsd: number;
+	moveBonusUsd: number;
+	moveEquityAnnualUsd: number;
+	moveSpouseIncomeUsd: number;
+
+	moveColaUsd: number;
+	moveHousingUsd: number;
+	moveTuitionUsd: number;
+
+	stayRentUsd: number;
+	stayTuitionUsd: number;
+	stayHealthInsuranceUsd: number;
+	stayDiscretionaryUsd: number;
+
+	moveRentUsd: number;
+	moveTuitionUsd: number;
+	moveHealthInsuranceUsd: number;
+	moveDiscretionaryUsd: number;
+
+	moveSocialSecurityTaxUsd: number;
 }
 
 /**
@@ -404,7 +431,34 @@ export function calculateExpatFinancials(inputs: ExpatInputs): ExpatBreakdown {
 		optimalTaxRelief,
 		isDetachedWorkerActive,
 		totalizationSocialSecurityModel,
-		warnings
+		warnings,
+
+		// Detailed components mapping
+		stayFedTaxEarned,
+		stayFedTaxInv,
+		stayStateTax,
+		stayFicaTax,
+
+		moveBaseSalaryUsd: hostBaseSalaryUsd,
+		moveBonusUsd: hostBonusUsd,
+		moveEquityAnnualUsd: hostEquityAnnualUsd,
+		moveSpouseIncomeUsd: totalSpouseIncomeMoveUsd,
+
+		moveColaUsd: colaUsd,
+		moveHousingUsd: housingAllowanceUsd,
+		moveTuitionUsd: tuitionStipendUsd,
+
+		stayRentUsd: inputs.homeRentOrMortgageMonthly * 12,
+		stayTuitionUsd: inputs.homeTuitionMonthly * 12,
+		stayHealthInsuranceUsd: inputs.homeHealthInsuranceMonthly * 12,
+		stayDiscretionaryUsd: inputs.discretionarySpendMonthly * 12,
+
+		moveRentUsd: hostRentUsd,
+		moveTuitionUsd: privateTuitionUsd,
+		moveHealthInsuranceUsd: privateHealthInsuranceUsd,
+		moveDiscretionaryUsd: moveAdjustedDiscretionaryUsd,
+
+		moveSocialSecurityTaxUsd: socialSecurityTaxUsd
 	};
 }
 
