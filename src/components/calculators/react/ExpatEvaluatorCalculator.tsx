@@ -412,6 +412,7 @@ export default function ExpatEvaluatorCalculator() {
 
 	const [fxRateHostToUsd, setFxRateHostToUsd] = useState(1.10);
 	const [homeLiabilitiesUsdMonthly, setHomeLiabilitiesUsdMonthly] = useState(1500);
+	const [stayOnlyLiabilitiesUsdMonthly, setStayOnlyLiabilitiesUsdMonthly] = useState(600);
 	const [hostLiabilitiesMonthly, setHostLiabilitiesMonthly] = useState(0);
 	const [expectedInvestmentReturnRate, setExpectedInvestmentReturnRate] = useState(0.07);
 
@@ -494,6 +495,7 @@ export default function ExpatEvaluatorCalculator() {
 		hostColIndexRatio,
 		fxRateHostToUsd,
 		homeLiabilitiesUsdMonthly,
+		stayOnlyLiabilitiesUsdMonthly,
 		hostLiabilitiesMonthly,
 		expectedInvestmentReturnRate
 	}), [
@@ -506,7 +508,7 @@ export default function ExpatEvaluatorCalculator() {
 		isUSCitizen, taxReliefMethod, usFilingStatus, assignmentDurationYears,
 		homeRentOrMortgageMonthly, homeTuitionMonthly, homeHealthInsuranceMonthly,
 		hostRentMonthly, privateTuitionMonthly, privateHealthInsuranceMonthly,
-		discretionarySpendMonthly, hostColIndexRatio, fxRateHostToUsd, homeLiabilitiesUsdMonthly, hostLiabilitiesMonthly, expectedInvestmentReturnRate
+		discretionarySpendMonthly, hostColIndexRatio, fxRateHostToUsd, homeLiabilitiesUsdMonthly, stayOnlyLiabilitiesUsdMonthly, hostLiabilitiesMonthly, expectedInvestmentReturnRate
 	]);
 
 	const breakdown = useMemo(() => calculateExpatFinancials(inputs), [inputs]);
@@ -1026,10 +1028,16 @@ export default function ExpatEvaluatorCalculator() {
 										</td>
 									</tr>
 									<tr className="text-xs text-stone-500 font-normal">
-										<td className="py-2 px-3 pl-8">└─ Home-Currency Liabilities (U.S.)</td>
-										<td className="py-2 px-3 text-right font-mono">{formatCurrency(breakdown.stayHomeLiabilities)}</td>
+										<td className="py-2 px-3 pl-8">└─ Ongoing U.S. Liabilities</td>
+										<td className="py-2 px-3 text-right font-mono">{formatCurrency(breakdown.moveHomeLiabilities)}</td>
 										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">{formatCurrency(breakdown.moveHomeLiabilities)}</td>
 										<td className="py-2 px-3 text-right font-mono text-stone-400">$0</td>
+									</tr>
+									<tr className="text-xs text-stone-500 font-normal">
+										<td className="py-2 px-3 pl-8">└─ Stay-Only U.S. Liabilities</td>
+										<td className="py-2 px-3 text-right font-mono">{formatCurrency(breakdown.stayOnlyLiabilitiesUsd)}</td>
+										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">$0</td>
+										<td className="py-2 px-3 text-right font-mono text-[#2E6F40]">{formatCurrency(-breakdown.stayOnlyLiabilitiesUsd)}</td>
 									</tr>
 									<tr className="text-xs text-stone-500 font-normal">
 										<td className="py-2 px-3 pl-8">└─ Host-Currency Liabilities (Local)</td>
@@ -1682,21 +1690,40 @@ export default function ExpatEvaluatorCalculator() {
 							<span className="text-xs text-stone-500 font-mono mt-1 block">1 {selectedCountry.currencyCode} = ${fxRateHostToUsd} USD</span>
 						</div>
 
-						<div>
-							<FieldLabel
-								label="Home-Currency Monthly Liabilities ($ USD)"
-								tooltip="Ongoing USD debt obligations (US mortgage, student loans, 401k/IRA contributions)."
-							/>
-							<div className="relative">
-								<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-stone-400 font-semibold">$</span>
-								<input
-									type="number"
-									value={homeLiabilitiesUsdMonthly}
-									onChange={(e) => setHomeLiabilitiesUsdMonthly(Math.max(0, Number(e.target.value)))}
-									className="w-full pl-8 pr-3 py-2.5 bg-stone-50 border border-stone-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
+						<div className="space-y-4">
+							<div>
+								<FieldLabel
+									label="Ongoing U.S. Liabilities ($ USD / Month) — Carried to Move"
+									tooltip="USD obligations that will remain active in BOTH scenarios (e.g. U.S. student loans, IRA contributions, or a U.S. property mortgage you will keep)."
 								/>
+								<div className="relative">
+									<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-stone-400 font-semibold">$</span>
+									<input
+										type="number"
+										value={homeLiabilitiesUsdMonthly}
+										onChange={(e) => setHomeLiabilitiesUsdMonthly(Math.max(0, Number(e.target.value)))}
+										className="w-full pl-8 pr-3 py-2.5 bg-stone-50 border border-stone-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
+									/>
+								</div>
+								<span className="text-xs text-stone-400 mt-1 block">U.S. student loans, IRA contributions, or U.S. mortgage for kept property</span>
 							</div>
-							<span className="text-xs text-stone-500 mt-1 block">US mortgage, student loans, 401(k) / IRA contributions</span>
+
+							<div>
+								<FieldLabel
+									label="Stay-Only U.S. Liabilities ($ USD / Month) — Terminated on Move"
+									tooltip="USD obligations paid ONLY if you stay in the U.S. (e.g. U.S. car lease you will turn in, local gym membership)."
+								/>
+								<div className="relative">
+									<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[#2E6F40] font-semibold">$</span>
+									<input
+										type="number"
+										value={stayOnlyLiabilitiesUsdMonthly}
+										onChange={(e) => setStayOnlyLiabilitiesUsdMonthly(Math.max(0, Number(e.target.value)))}
+										className="w-full pl-8 pr-3 py-2.5 bg-stone-50 border border-stone-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
+									/>
+								</div>
+								<span className="text-xs text-stone-400 mt-1 block">U.S. car lease to be returned, U.S. local clubs, etc.</span>
+							</div>
 						</div>
 					</div>
 

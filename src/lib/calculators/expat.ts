@@ -59,6 +59,7 @@ export interface ExpatInputs {
 	// Foreign Exchange & Liabilities
 	fxRateHostToUsd: number; // USD per 1 Host Currency (e.g. 1.10 for EUR, 0.00105 for CLP)
 	homeLiabilitiesUsdMonthly: number; // USD obligations (US mortgage, student loan, 401k)
+	stayOnlyLiabilitiesUsdMonthly: number; // USD obligations paid only in Stay (e.g. U.S. car lease to be terminated)
 	hostLiabilitiesMonthly: number; // Host Currency obligations (Local car lease, local loan/mortgage)
 	expectedInvestmentReturnRate: number; // e.g. 0.07 (7%)
 }
@@ -152,6 +153,7 @@ export interface ExpatBreakdown {
 	moveDiscretionaryUsd: number;
 
 	moveSocialSecurityTaxUsd: number;
+	stayOnlyLiabilitiesUsd: number;
 }
 
 /**
@@ -217,7 +219,8 @@ export function calculateExpatFinancials(inputs: ExpatInputs): ExpatBreakdown {
 
 	const stayFixedExpenses = (inputs.homeTuitionMonthly + inputs.homeHealthInsuranceMonthly) * 12;
 	const stayLivingExpenses = (inputs.homeRentOrMortgageMonthly + inputs.discretionarySpendMonthly) * 12 + stayFixedExpenses;
-	const stayHomeLiabilities = inputs.homeLiabilitiesUsdMonthly * 12;
+	const stayOnlyLiabilitiesUsd = inputs.stayOnlyLiabilitiesUsdMonthly * 12;
+	const stayHomeLiabilities = (inputs.homeLiabilitiesUsdMonthly + inputs.stayOnlyLiabilitiesUsdMonthly) * 12;
 	const stayAnnualFreeCashFlow = stayNetIncome - stayLivingExpenses - stayHomeLiabilities;
 
 	// --- 2. MOVE SCENARIO (Host Assignment - Inputs in Host Currency converted to USD for comparison) ---
@@ -458,7 +461,8 @@ export function calculateExpatFinancials(inputs: ExpatInputs): ExpatBreakdown {
 		moveHealthInsuranceUsd: privateHealthInsuranceUsd,
 		moveDiscretionaryUsd: moveAdjustedDiscretionaryUsd,
 
-		moveSocialSecurityTaxUsd: socialSecurityTaxUsd
+		moveSocialSecurityTaxUsd: socialSecurityTaxUsd,
+		stayOnlyLiabilitiesUsd
 	};
 }
 
