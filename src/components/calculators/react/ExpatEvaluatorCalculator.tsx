@@ -413,6 +413,7 @@ export default function ExpatEvaluatorCalculator() {
 	const [fxRateHostToUsd, setFxRateHostToUsd] = useState(1.10);
 	const [homeLiabilitiesUsdMonthly, setHomeLiabilitiesUsdMonthly] = useState(1500);
 	const [stayOnlyLiabilitiesUsdMonthly, setStayOnlyLiabilitiesUsdMonthly] = useState(600);
+	const [relocationType, setRelocationType] = useState<'assignment' | 'definitive'>('assignment');
 	const [hostLiabilitiesMonthly, setHostLiabilitiesMonthly] = useState(0);
 	const [expectedInvestmentReturnRate, setExpectedInvestmentReturnRate] = useState(0.07);
 
@@ -461,6 +462,7 @@ export default function ExpatEvaluatorCalculator() {
 
 	const inputs = useMemo<ExpatInputs>(() => ({
 		hostCountryId,
+		relocationType,
 		homeBaseSalary,
 		homeBonus,
 		homeEquityAnnual,
@@ -500,6 +502,7 @@ export default function ExpatEvaluatorCalculator() {
 		expectedInvestmentReturnRate
 	}), [
 		hostCountryId,
+		relocationType,
 		homeBaseSalary, homeBonus, homeEquityAnnual, homeSpouseIncome, homeStateTaxRate,
 		hostBaseSalary, hostBonus, hostEquityAnnual,
 		spouseIncomeType, spouseIncomeAmount,
@@ -608,6 +611,60 @@ export default function ExpatEvaluatorCalculator() {
 								</span>
 							</button>
 						))}
+					</div>
+				</div>
+
+				{/* Relocation Scenario Type Selector */}
+				<div className="pt-4 border-t border-stone-100 space-y-3 no-print">
+					<span className="block font-mono text-xs font-bold uppercase tracking-wider text-stone-500">
+						Select Relocation Model
+					</span>
+					<div className="flex flex-col sm:flex-row gap-3">
+						<label
+							style={relocationType === 'assignment' ? { borderColor: '#2E6F40', backgroundColor: '#F0FDF4' } : undefined}
+							className="flex-1 flex items-start gap-3 p-3.5 rounded-xl border border-stone-200 bg-[#FAF8F5] hover:bg-stone-50 transition-all cursor-pointer"
+						>
+							<input
+								type="radio"
+								name="relocationType"
+								value="assignment"
+								checked={relocationType === 'assignment'}
+								onChange={() => {
+									setRelocationType('assignment');
+									setTaxPolicy('tax-equalization');
+								}}
+								className="accent-[#2E6F40] h-4.5 w-4.5 mt-0.5"
+							/>
+							<div>
+								<span className="block text-xs font-bold text-stone-900">Corporate Expat Assignment</span>
+								<span className="block text-[10px] text-stone-500 font-medium mt-1 leading-normal">
+									Temporary contract (usually ≤5 years). Exempt from host country social security taxes via detached worker Totalization treaties. Corporate tax-equalization policies often apply.
+								</span>
+							</div>
+						</label>
+
+						<label
+							style={relocationType === 'definitive' ? { borderColor: '#2E6F40', backgroundColor: '#F0FDF4' } : undefined}
+							className="flex-1 flex items-start gap-3 p-3.5 rounded-xl border border-stone-200 bg-[#FAF8F5] hover:bg-stone-50 transition-all cursor-pointer"
+						>
+							<input
+								type="radio"
+								name="relocationType"
+								value="definitive"
+								checked={relocationType === 'definitive'}
+								onChange={() => {
+									setRelocationType('definitive');
+									setTaxPolicy('laissez-faire');
+								}}
+								className="accent-[#2E6F40] h-4.5 w-4.5 mt-0.5"
+							/>
+							<div>
+								<span className="block text-xs font-bold text-stone-900">Definitive / Permanent Relocation</span>
+								<span className="block text-[10px] text-stone-500 font-medium mt-1 leading-normal">
+									Permanent local contract. Transitions to local host social security taxes from Day 1. Usually operates under a Laissez-Faire tax policy (no corporate tax coverage).
+								</span>
+							</div>
+						</label>
 					</div>
 				</div>
 			</div>

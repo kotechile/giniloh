@@ -3,6 +3,7 @@ import { COUNTRY_PROFILES, type CountryProfile, type HostCountryId } from './exp
 export interface ExpatInputs {
 	// Destination Host Country
 	hostCountryId: HostCountryId;
+	relocationType: 'assignment' | 'definitive';
 
 	// Home Country (Stay) Baseline
 	homeBaseSalary: number;
@@ -308,7 +309,7 @@ export function calculateExpatFinancials(inputs: ExpatInputs): ExpatBreakdown {
 	}
 
 	// --- Social Security & Totalization ---
-	const isDetachedWorkerActive = inputs.assignmentDurationYears <= 5;
+	const isDetachedWorkerActive = inputs.relocationType === 'assignment' && inputs.assignmentDurationYears <= 5;
 	const ssResult = country.calculateHostSocialSecurity(hostEarnedIncomeHostCurr, isDetachedWorkerActive, inputs.useSpecialRegime, fx);
 	
 	let socialSecurityTaxUsd = 0;
@@ -319,7 +320,10 @@ export function calculateExpatFinancials(inputs: ExpatInputs): ExpatBreakdown {
 		totalizationSocialSecurityModel = `U.S. FICA Active (${country.name} SS Exempt via Totalization ≤5 Yrs)`;
 	} else {
 		socialSecurityTaxUsd = ssResult.ssAmountHostCurr * fx;
-		if (inputs.assignmentDurationYears > 5) {
+		if (inputs.relocationType === 'definitive') {
+			totalizationSocialSecurityModel = `${country.name} Social Security Active (Definitive Relocation - Exempt from U.S. FICA)`;
+		} else if (inputs.assignmentDurationYears > 5) {
+			totalizationSocialSecurityModel = `${country.name} Social Security Active (Assignment >5 Years - U.S. Detached Worker Status Expired)`;
 			warnings.push(`Assignment duration exceeds 5 years. Totalization detached worker status expires; ${country.name} Social Security applies.`);
 		}
 	}
