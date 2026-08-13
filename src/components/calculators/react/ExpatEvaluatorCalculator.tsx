@@ -514,6 +514,44 @@ export default function ExpatEvaluatorCalculator() {
 
 	return (
 		<div className="space-y-8 p-4 sm:p-6 md:p-8 bg-[#F5F2ED] rounded-3xl min-h-screen text-stone-900 border border-stone-200/70 shadow-sm">
+			<style>{`
+				@media print {
+					nav, footer, .no-print, button, select, input, [role="tablist"], svg.w-3\\.5.h-3\\.5 {
+						display: none !important;
+					}
+					@page {
+						size: letter portrait;
+						margin: 12mm 15mm;
+					}
+					body, html, main {
+						background: #FFFFFF !important;
+						color: #000000 !important;
+						margin: 0 !important;
+						padding: 0 !important;
+					}
+					.bg-\\[\\#F5F2ED\\], .min-h-screen {
+						background: #FFFFFF !important;
+						padding: 0 !important;
+						border: none !important;
+					}
+					.rounded-3xl, .rounded-2xl, .rounded-xl {
+						border-radius: 0.25rem !important;
+						border-color: #E2E8F0 !important;
+						box-shadow: none !important;
+					}
+					.bg-white, .bg-gradient-to-br, table, tr {
+						page-break-inside: avoid !important;
+						break-inside: avoid !important;
+						background: transparent !important;
+					}
+					.text-stone-500, .text-stone-600, .text-stone-700 {
+						color: #334155 !important;
+					}
+					.font-mono {
+						color: #000000 !important;
+					}
+				}
+			`}</style>
 			{/* Header & Country Selector */}
 			<div className="space-y-6 bg-white p-6 sm:p-8 rounded-2xl border border-stone-200/80 shadow-sm">
 				<div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
@@ -538,7 +576,7 @@ export default function ExpatEvaluatorCalculator() {
 				</p>
 
 				{/* Destination Country Switcher with Flag Icons */}
-				<div className="pt-4 border-t border-stone-100 space-y-3">
+				<div className="pt-4 border-t border-stone-100 space-y-3 no-print">
 					<span className="block font-mono text-xs font-bold uppercase tracking-wider text-stone-500">
 						Select Host Country Destination
 					</span>
@@ -645,7 +683,7 @@ export default function ExpatEvaluatorCalculator() {
 			</div>
 
 			{/* Navigation Tabs */}
-			<div className="bg-white p-2 rounded-2xl border border-stone-200/80 shadow-sm flex gap-2 overflow-x-auto">
+			<div className="bg-white p-2 rounded-2xl border border-stone-200/80 shadow-sm flex gap-2 overflow-x-auto no-print">
 				{[
 					{ id: 'dashboard', label: '1. Executive Summary' },
 					{ id: 'income', label: '2. Income & Allowances' },
@@ -713,7 +751,18 @@ export default function ExpatEvaluatorCalculator() {
 							<h2 className="text-xl font-bold text-stone-900 tracking-tight">
 								Stay (US Baseline) vs. Move ({selectedCountry.name}) Walkdown
 							</h2>
-							<span className="text-xs font-mono text-stone-500">All figures in USD ($)</span>
+							<div className="flex items-center gap-3 no-print">
+								<button
+									onClick={() => window.print()}
+									className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-stone-900 text-white hover:bg-stone-850 hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer shadow-sm"
+								>
+									<svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+									</svg>
+									<span>Print PDF Summary</span>
+								</button>
+								<span className="text-xs font-mono text-stone-500">All figures in USD ($)</span>
+							</div>
 						</div>
 
 						<div className="overflow-x-auto">
