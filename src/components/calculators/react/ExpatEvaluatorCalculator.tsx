@@ -1647,6 +1647,14 @@ export default function ExpatEvaluatorCalculator() {
 											? `Host city in ${selectedCountry.name} is ${((1 - hostColIndexRatio) * 100).toFixed(0)}% cheaper than home`
 											: `Host city in ${selectedCountry.name} is ${((hostColIndexRatio - 1) * 100).toFixed(0)}% pricier than home`}
 									</span>
+									<div className="mt-2 p-2.5 bg-[#FAF8F5] rounded-xl border border-stone-200/60 text-xs font-mono text-[#2E6F40] font-bold">
+										Resulting Spend: {formatCurrency(discretionarySpendMonthly * hostColIndexRatio)} USD / Month
+										{selectedCountry.currencyCode !== 'USD' && (
+											<span className="text-stone-500 font-normal">
+												{' '} (or {selectedCountry.currencySymbol}{Math.round((discretionarySpendMonthly * hostColIndexRatio) / fxRateHostToUsd).toLocaleString()} {selectedCountry.currencyCode})
+											</span>
+										)}
+									</div>
 								</div>
 							</div>
 						</div>
