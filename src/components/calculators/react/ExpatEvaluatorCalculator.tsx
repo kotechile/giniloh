@@ -1429,6 +1429,21 @@ export default function ExpatEvaluatorCalculator() {
 				<div className="bg-white rounded-2xl border border-stone-200/80 shadow-sm p-6 space-y-6">
 					<h3 className="text-xl font-bold text-stone-900 tracking-tight">Foreign Exchange &amp; Cross-Border Debt Servicing</h3>
 
+					<div className="bg-[#FAF8F5] p-5 rounded-2xl border border-stone-200/90 shadow-sm space-y-2.5 text-xs text-stone-600">
+						<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#9C4127] block">
+							How to Input Liabilities:
+						</span>
+						<p className="leading-relaxed">
+							<strong>Home-Currency Liabilities (U.S. obligations):</strong> Enter USD obligations that you currently pay and will continue paying even after moving (e.g., U.S. student loans or a retained U.S. mortgage). The model automatically applies these to **both** the <strong>Stay</strong> and <strong>Move</strong> scenarios.
+						</p>
+						<p className="leading-relaxed">
+							<strong>Host-Currency Liabilities (Local obligations):</strong> Enter local debts or commitments that you will only incur if you move (e.g., a Spanish car lease or a Spanish local mortgage). These are only applied to the <strong>Move</strong> scenario.
+						</p>
+						<p className="leading-relaxed font-semibold text-stone-700">
+							Note: Primary home rent/housing outlays should be entered in Tab 4 (Expenses &amp; CoL), not here.
+						</p>
+					</div>
+
 					<div className="grid gap-6 md:grid-cols-2">
 						<div>
 							<FieldLabel
