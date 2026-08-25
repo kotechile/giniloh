@@ -91,7 +91,7 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 		);
 	}
 
-	const margin = { top: 20, right: 30, bottom: 40, left: 75 };
+	const margin = { top: 25, right: 135, bottom: 45, left: 85 };
 	const plotWidth = dimensions.width - margin.left - margin.right;
 	const plotHeight = dimensions.height - margin.top - margin.bottom;
 
@@ -99,21 +99,21 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 
 	// Personal Series definitions
 	const personalSeriesDef = [
-		{ key: 'netWorth', label: 'Net Worth', stroke: '#10b981', fill: 'rgba(16, 185, 129, 0.04)' },
-		{ key: 'checking', label: 'Checking Balance', stroke: '#06b6d4', fill: 'none' },
-		{ key: 'hysa', label: 'HYSA Savings', stroke: '#3b82f6', fill: 'none' },
-		{ key: 'investments', label: 'Investments', stroke: '#8b5cf6', fill: 'none' },
-		{ key: 'debt', label: 'High-Interest Debt', stroke: '#f43f5e', fill: 'none' },
-		{ key: 'mortgage', label: 'Mortgage Loan', stroke: '#6366f1', fill: 'none' }
+		{ key: 'netWorth', label: 'Net Worth', stroke: '#059669', fill: 'rgba(16, 185, 129, 0.06)' },
+		{ key: 'checking', label: 'Checking Balance', stroke: '#0284c7', fill: 'none' },
+		{ key: 'hysa', label: 'HYSA Savings', stroke: '#2563eb', fill: 'none' },
+		{ key: 'investments', label: 'Investments', stroke: '#7c3aed', fill: 'none' },
+		{ key: 'debt', label: 'High-Interest Debt', stroke: '#e11d48', fill: 'none' },
+		{ key: 'mortgage', label: 'Mortgage Loan', stroke: '#4f46e5', fill: 'none' }
 	];
 
 	// Enterprise Series definitions
 	const enterpriseSeriesDef = [
-		{ key: 'netWorth', label: 'Net Position', stroke: '#10b981', fill: 'rgba(16, 185, 129, 0.04)' },
-		{ key: 'operatingCash', label: 'Net Cash Flow', stroke: '#3b82f6', fill: 'none' },
-		{ key: 'mfs', label: 'MMF reserves', stroke: '#06b6d4', fill: 'none' },
-		{ key: 'receivables', label: 'Receivables', stroke: '#f59e0b', fill: 'none' },
-		{ key: 'payables', label: 'Payables', stroke: '#f43f5e', fill: 'none' }
+		{ key: 'netWorth', label: 'Net Position', stroke: '#059669', fill: 'rgba(16, 185, 129, 0.06)' },
+		{ key: 'operatingCash', label: 'Net Cash Flow', stroke: '#2563eb', fill: 'none' },
+		{ key: 'mfs', label: 'MMF reserves', stroke: '#0284c7', fill: 'none' },
+		{ key: 'receivables', label: 'Receivables', stroke: '#d97706', fill: 'none' },
+		{ key: 'payables', label: 'Payables', stroke: '#e11d48', fill: 'none' }
 	];
 
 	const activeSeriesDef = isEnterprise ? enterpriseSeriesDef : personalSeriesDef;
@@ -236,19 +236,19 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 	const hoverPoint = hoverIndex !== null ? history[hoverIndex] : null;
 
 	return (
-		<div className="rounded-[1.8rem] border border-gray-200 bg-white/70 p-6 shadow-xl backdrop-blur-md flex flex-col gap-4 animate-[fadeIn_0.3s_ease-out] [.light_&]:border-slate-200 [.light_&]:bg-white/90">
-			<div className="flex flex-wrap items-center justify-between gap-4 border-b border-gray-200 pb-4 [.light_&]:border-slate-100">
+		<div className="rounded-[1.8rem] border border-slate-300 bg-slate-50/80 p-6 shadow-xl backdrop-blur-md flex flex-col gap-4 animate-[fadeIn_0.3s_ease-out]">
+			<div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-4">
 				<div>
-					<h3 className="text-base font-bold text-[#1A1A1A] tracking-tight [.light_&]:text-slate-900">
+					<h3 className="text-base font-bold text-slate-900 tracking-tight">
 						{isEnterprise ? 'Treasury Evolution History' : 'Historical Trend Evolution'}
 					</h3>
-					<p className="text-[11px] text-[#8C8C8C] font-mono mt-0.5 uppercase tracking-wider">
+					<p className="text-xs text-slate-700 font-mono font-semibold mt-0.5 uppercase tracking-wider">
 						Visualizing daily variable logs over {maxDay} days
 					</p>
 				</div>
 
 				{/* Checkbox pills */}
-				<div className="flex flex-wrap gap-2 text-[10px] font-mono">
+				<div className="flex flex-wrap gap-2 text-xs font-mono">
 					{activeSeriesDef.map((def) => {
 						const isVisible = visibleSeries[def.key];
 						return (
@@ -256,18 +256,18 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 								key={def.key}
 								onClick={() => toggleSeries(def.key)}
 								style={{
-									borderColor: isVisible ? `${def.stroke}40` : 'transparent',
-									backgroundColor: isVisible ? `${def.stroke}12` : 'rgba(30, 41, 59, 0.4)'
+									borderColor: isVisible ? `${def.stroke}80` : '#cbd5e1',
+									backgroundColor: isVisible ? `${def.stroke}18` : '#f8fafc'
 								}}
 								className={[
-									'px-2.5 py-1 rounded-full border transition hover:scale-105 cursor-pointer font-bold',
+									'px-3 py-1 rounded-full border transition hover:scale-105 cursor-pointer font-bold',
 									isVisible 
-										? 'text-[#1A1A1A]' 
-										: 'text-[#8C8C8C] [.light_&]:bg-slate-100 [.light_&]:text-[#5E5E5E]'
+										? 'text-slate-900' 
+										: 'text-slate-500 bg-slate-100'
 								].join(' ')}
 							>
 								<span 
-									className="inline-block w-1.5 h-1.5 rounded-full mr-1.5"
+									className="inline-block w-2.5 h-2.5 rounded-full mr-1.5 align-middle"
 									style={{ backgroundColor: def.stroke }}
 								/>
 								{def.label}
@@ -285,27 +285,40 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 					height={dimensions.height}
 					onMouseMove={handleMouseMove}
 					onMouseLeave={handleMouseLeave}
-					className="overflow-visible select-none cursor-crosshair font-mono text-[9px] text-[#8C8C8C]"
+					className="overflow-visible select-none cursor-crosshair font-mono"
 				>
+					{/* Light Chart Background Area */}
+					<rect
+						x={margin.left}
+						y={margin.top}
+						width={plotWidth}
+						height={plotHeight}
+						fill="#F8FAFC"
+						stroke="#CBD5E1"
+						strokeWidth="1"
+						rx="6"
+					/>
+
 					{/* Grid lines */}
 					{yGridLines.map((line, idx) => (
 						<g key={`y-grid-${idx}`}>
 							<line
 								x1={margin.left}
 								y1={line.y}
-								x2={dimensions.width - margin.right}
+								x2={margin.left + plotWidth}
 								y2={line.y}
-								stroke="#1e293b"
-								strokeWidth="1"
-								strokeDasharray="2, 4"
-								className="opacity-40 [.light_&]:opacity-80 [.light_&]:stroke-slate-200"
+								stroke="#CBD5E1"
+								strokeWidth="1.5"
+								strokeDasharray="3, 3"
 							/>
 							<text
-								x={margin.left - 8}
-								y={line.y + 3}
+								x={margin.left - 10}
+								y={line.y + 4}
 								textAnchor="end"
-								fill="#cbd5e1"
-								className="[.light_&]:fill-slate-500 font-medium"
+								fill="#0F172A"
+								fontSize="11"
+								fontWeight="700"
+								className="font-mono"
 							>
 								{formatCurrency(line.val)}
 							</text>
@@ -318,18 +331,19 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 								x1={line.x}
 								y1={margin.top}
 								x2={line.x}
-								y2={dimensions.height - margin.bottom}
-								stroke="#1e293b"
-								strokeWidth="1"
-								strokeDasharray="2, 4"
-								className="opacity-40 [.light_&]:opacity-80 [.light_&]:stroke-slate-200"
+								y2={margin.top + plotHeight}
+								stroke="#CBD5E1"
+								strokeWidth="1.5"
+								strokeDasharray="3, 3"
 							/>
 							<text
 								x={line.x}
-								y={dimensions.height - margin.bottom + 14}
+								y={margin.top + plotHeight + 18}
 								textAnchor="middle"
-								fill="#cbd5e1"
-								className="[.light_&]:fill-slate-500 font-medium"
+								fill="#0F172A"
+								fontSize="11"
+								fontWeight="700"
+								className="font-mono"
 							>
 								Day {line.day}
 							</text>
@@ -341,12 +355,11 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 						<line
 							x1={margin.left}
 							y1={zeroY}
-							x2={dimensions.width - margin.right}
+							x2={margin.left + plotWidth}
 							y2={zeroY}
-							stroke="#64748b"
-							strokeWidth="1"
-							strokeDasharray="3, 3"
-							className="opacity-70"
+							stroke="#475569"
+							strokeWidth="2"
+							strokeDasharray="4, 4"
 						/>
 					)}
 
@@ -369,12 +382,52 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 							d={path.linePath}
 							fill="none"
 							stroke={path.stroke}
-							strokeWidth="2"
+							strokeWidth="2.5"
 							strokeLinecap="round"
 							strokeLinejoin="round"
 							className="pointer-events-none transition-all duration-200"
 						/>
 					))}
+
+					{/* End-of-line Labels to identify each colored line */}
+					{paths.map((path) => {
+						const lastPoint = history[history.length - 1];
+						if (!lastPoint) return null;
+						const val = (lastPoint as any)[path.key] ?? 0;
+						const lastX = getX(lastPoint.day);
+						const lastY = getY(val);
+
+						return (
+							<g key={`end-label-${path.key}`}>
+								<circle
+									cx={lastX}
+									cy={lastY}
+									r="4"
+									fill={path.stroke}
+									stroke="#FFFFFF"
+									strokeWidth="1.5"
+								/>
+								<rect
+									x={lastX + 6}
+									y={lastY - 10}
+									width={path.label.length * 6.5 + 10}
+									height={20}
+									rx={4}
+									fill={path.stroke}
+								/>
+								<text
+									x={lastX + 11}
+									y={lastY + 4}
+									fill="#FFFFFF"
+									fontSize="10"
+									fontWeight="800"
+									className="font-mono"
+								>
+									{path.label}
+								</text>
+							</g>
+						);
+					})}
 
 					{/* Hover interaction markers */}
 					{hoverPoint && (
@@ -384,9 +437,9 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 								x1={getX(hoverPoint.day)}
 								y1={margin.top}
 								x2={getX(hoverPoint.day)}
-								y2={dimensions.height - margin.bottom}
-								stroke="#38bdf8"
-								strokeWidth="1"
+								y2={margin.top + plotHeight}
+								stroke="#0284c7"
+								strokeWidth="2"
 								strokeDasharray="4, 4"
 							/>
 
@@ -398,11 +451,11 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 										key={`hover-dot-${def.key}`}
 										cx={getX(hoverPoint.day)}
 										cy={getY(val)}
-										r="4"
+										r="5"
 										fill={def.stroke}
-										stroke="#0f172a"
-										strokeWidth="1.5"
-										className="[.light_&]:stroke-white shadow"
+										stroke="#FFFFFF"
+										strokeWidth="2"
+										className="shadow"
 									/>
 								);
 							})}
@@ -411,22 +464,22 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 				</svg>
 			</div>
 
-			{/* Hover tooltip values overlay */}
+			{/* Hover tooltip values overlay / Bottom metrics bar */}
 			{hoverPoint ? (
-				<div className="bg-slate-900/40 border border-gray-200/80 rounded-2xl p-4 flex flex-wrap gap-x-6 gap-y-2 text-xs font-mono select-none [.light_&]:bg-slate-50 [.light_&]:border-slate-200">
-					<div className="flex-shrink-0 text-[#1A1A1A] font-bold [.light_&]:text-slate-900 border-r border-gray-200 pr-4 mr-2 [.light_&]:border-slate-200 flex items-center">
-						📅 Day {hoverPoint.day}
+				<div className="bg-white border border-slate-300 rounded-2xl p-4 flex flex-wrap gap-x-6 gap-y-2 text-xs font-mono select-none shadow-sm">
+					<div className="flex-shrink-0 text-slate-900 font-extrabold text-sm border-r border-slate-300 pr-4 mr-2 flex items-center">
+						📅 DAY {hoverPoint.day}
 					</div>
 					{visibleSeriesDef.map((def) => {
 						const val = (hoverPoint as any)[def.key] ?? 0;
 						return (
 							<div key={def.key} className="flex items-center gap-1.5">
 								<span 
-									className="w-2.5 h-2.5 rounded-full" 
+									className="w-3 h-3 rounded-full inline-block" 
 									style={{ backgroundColor: def.stroke }} 
 								/>
-								<span className="text-[#5E5E5E] font-semibold">{def.label}:</span>
-								<span className="text-[#1A1A1A] font-bold [.light_&]:text-slate-900">
+								<span className="text-slate-900 font-bold uppercase">{def.label}:</span>
+								<span className="text-slate-950 font-black text-xs">
 									{formatCurrency(val)}
 								</span>
 							</div>
@@ -434,8 +487,10 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 					})}
 				</div>
 			) : (
-				<div className="text-[#8C8C8C] text-center font-mono text-[10px] italic py-2">
-					Hover mouse pointer over the chart to read daily balances.
+				<div className="bg-slate-100/90 border border-slate-300 rounded-xl py-3 px-4 text-center">
+					<span className="text-slate-800 font-bold font-mono text-xs">
+						💡 Hover your mouse over the chart to inspect exact daily account balances.
+					</span>
 				</div>
 			)}
 		</div>
