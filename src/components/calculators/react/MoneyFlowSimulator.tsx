@@ -262,10 +262,6 @@ export default function MoneyFlowSimulator() {
 			}
 		};
 	}, [isRunning, speedMs, dailyIncome, rules, state.isPaused, state.mode]);
-				clearInterval(timerRef.current);
-			}
-		};
-	}, [isRunning, speedMs, dailyIncome, rules, state.isPaused, state.mode]);
 
 	// Synchronize Day 0 history point when node balances change at Day 0
 	useEffect(() => {
