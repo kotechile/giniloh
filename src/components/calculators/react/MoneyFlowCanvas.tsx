@@ -494,7 +494,7 @@ export default function MoneyFlowCanvas({
 								{!isEnterprise ? (
 									<>
 										{/* Checking Ceiling/Floor active routes */}
-										{state.nodes.map(node => {
+										{nodes.map(node => {
 											if (node.id === 'checking' || node.id === 'income' || node.id === 'taxes_paid') return null;
 											return (
 												<path
@@ -586,10 +586,10 @@ export default function MoneyFlowCanvas({
 								onClick={() => setSelectedNodeId(node.id)}
 								style={{ left: `${coords.x}px`, top: `${coords.y}px` }}
 								className={[
-									'absolute w-[240px] h-[96px] text-left p-4 rounded-lg border bg-white transition flex flex-col justify-between hover:scale-[1.02] cursor-pointer z-10 hover:z-30 focus-within:z-30 group shadow-none',
+									'absolute w-[240px] h-[96px] text-left p-4 rounded-lg border bg-white transition flex flex-col justify-between hover:scale-[1.02] cursor-pointer z-10 hover:z-30 focus-within:z-30 group shadow-sm',
 									isSelected
-										? 'border-2 border-[#1A1A1A] z-20'
-										: 'border-[#E5E5E5] hover:border-[#1A1A1A]'
+										? 'border-2 border-[#1A1A1A] ring-2 ring-[#1A1A1A]/10 z-20'
+										: 'border-slate-300 hover:border-[#1A1A1A] hover:shadow-md'
 								].join(' ')}
 							>
 								{/* Semantic indicator bar at the top edge */}
