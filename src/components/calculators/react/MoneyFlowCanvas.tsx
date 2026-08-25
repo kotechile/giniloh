@@ -586,10 +586,10 @@ export default function MoneyFlowCanvas({
 								onClick={() => setSelectedNodeId(node.id)}
 								style={{ left: `${coords.x}px`, top: `${coords.y}px` }}
 								className={[
-									'absolute w-[240px] h-[96px] text-left p-4 rounded-lg border bg-white transition flex flex-col justify-between hover:scale-[1.02] cursor-pointer z-10 hover:z-30 focus-within:z-30 group shadow-sm',
+									'absolute w-[240px] h-[96px] text-left p-4 rounded-lg border bg-[#F0F7FF] hover:bg-[#E2F0FE] transition flex flex-col justify-between hover:scale-[1.02] cursor-pointer z-10 hover:z-30 focus-within:z-30 group shadow-sm',
 									isSelected
-										? 'border-2 border-[#1A1A1A] ring-2 ring-[#1A1A1A]/10 z-20'
-										: 'border-slate-300 hover:border-[#1A1A1A] hover:shadow-md'
+										? 'border-2 border-[#1A1A1A] ring-2 ring-[#1A1A1A]/10 z-20 bg-[#E0F2FE]'
+										: 'border-sky-200 hover:border-[#1A1A1A] hover:shadow-md'
 								].join(' ')}
 							>
 								{/* Semantic indicator bar at the top edge */}

@@ -749,8 +749,8 @@ export default function MoneyFlowSimulator() {
 							className={[
 								'py-2.5 px-5 rounded-lg text-xs font-mono uppercase tracking-wider transition font-bold select-none border cursor-pointer disabled:opacity-30',
 								isRunning
-									? 'bg-[#B85C5C] border-[#B85C5C] text-white hover:bg-[#a64e4e]'
-									: 'bg-[#1A1A1A] border-[#1A1A1A] text-white hover:bg-black'
+									? 'bg-[#B85C5C] border-[#B85C5C] !text-white hover:bg-[#a64e4e]'
+									: 'bg-[#1A1A1A] border-[#1A1A1A] !text-white hover:bg-black'
 							].join(' ')}
 						>
 							{isRunning ? 'Pause clock' : 'Start clock'}
