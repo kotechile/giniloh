@@ -86,6 +86,18 @@ const INITIAL_ENTERPRISE_STATE: SimulationState = {
 	}]
 };
 
+const WATERFALL_ACCOUNT_LABELS: Record<string, { name: string; subtext: string }> = {
+	hysa: { name: 'HYSA', subtext: 'Emergency Fund' },
+	match401k: { name: '401(k)', subtext: 'Base & Match' },
+	debt: { name: 'High-Interest Debt', subtext: 'Credit Cards' },
+	hsa: { name: 'Pre-tax HSA', subtext: 'Health Savings' },
+	ira: { name: 'Roth IRA', subtext: 'Tax-Free Growth' },
+	max401k: { name: '401(k)', subtext: 'Voluntary Max' },
+	brokerage: { name: 'Taxable Brokerage', subtext: 'Index Funds' },
+	mortgage: { name: 'Mortgage Loan', subtext: 'Primary Home' },
+	checking: { name: 'Primary Checking', subtext: 'Clearing Hub' }
+};
+
 const EMOTIONAL_QUESTIONS = [
 	"Do you feel the impulse to sell your assets right now to avoid further losses?",
 	"Are you aware that market contractions are historically followed by recovery periods?",
@@ -928,20 +940,19 @@ export default function MoneyFlowSimulator() {
 				</div>
 			)}
 
-			{/* AI Chat & Scripting bottom panel */}
-			<div className={["grid gap-6", isEnterprise ? "md:grid-cols-3" : "md:grid-cols-4"].join(' ')}>
-				{/* AI Conversational Assistant */}
-				<div className="flex flex-col h-[350px] rounded-2xl border border-gray-200 bg-white/90 font-mono text-xs shadow-2xl overflow-hidden md:col-span-2 [.light_&]:border-slate-200 [.light_&]:bg-slate-50 [.light_&]:shadow-lg">
-					<div className="h-9 border-b border-gray-200 bg-slate-900/60 flex items-center px-4 justify-between [.light_&]:border-slate-200 [.light_&]:bg-slate-100">
-						<div className="flex items-center gap-1.5">
-							<span className="inline-flex h-1.5 w-1.5 rounded-full bg-cyan-400 animate-ping"></span>
-							<span className="font-semibold text-[#5E5E5E] text-[10px] tracking-wider uppercase [.light_&]:text-[#8C8C8C]">AI_Orchestration_Chat</span>
-						</div>
-						<span className="text-[9px] text-[#8C8C8C] [.light_&]:text-[#5E5E5E]">LOW-COST LLM WRAPPER</span>
+			{/* AI Chat, Market Rules, & Savings Waterfall Bottom Panel */}
+			<div className={["grid gap-6", isEnterprise ? "md:grid-cols-2" : "md:grid-cols-3"].join(' ')}>
+				{/* A. AI Assistant Card */}
+				<div className="flex flex-col h-[380px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm font-sans">
+					<div className="flex items-center justify-between pb-3 border-b border-slate-100">
+						<h3 className="text-sm font-semibold text-slate-900 tracking-tight">AI Assistant</h3>
+						<span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-cyan-50 text-cyan-700 border border-cyan-200">
+							LLM Powered
+						</span>
 					</div>
 					
 					{/* Message Logs */}
-					<div className="flex-1 p-4 overflow-y-auto space-y-3 scrollbar-thin scrollbar-thumb-slate-800 [.light_&]:scrollbar-thumb-slate-300">
+					<div className="flex-1 py-3 overflow-y-auto space-y-3 font-sans pr-1 scrollbar-thin scrollbar-thumb-slate-200">
 						{chatHistory.map((chat, idx) => {
 							const isUser = chat.sender === 'user';
 							const isSystem = chat.sender === 'system';
@@ -949,12 +960,12 @@ export default function MoneyFlowSimulator() {
 								<div 
 									key={idx} 
 									className={[
-										'p-3 rounded-xl max-w-[85%] leading-relaxed whitespace-pre-wrap',
+										'p-3 rounded-2xl max-w-[85%] text-sm font-normal leading-relaxed shadow-xs',
 										isUser 
-											? 'ml-auto bg-cyan-950/40 border border-cyan-800/40 text-[#5A7A8F] [.light_&]:bg-cyan-50 [.light_&]:border-cyan-200 [.light_&]:text-cyan-800' 
+											? 'ml-auto bg-cyan-600 text-white' 
 											: isSystem 
-												? 'bg-red-950/40 border border-red-900/40 text-red-300 [.light_&]:bg-red-50 [.light_&]:border-red-200 [.light_&]:text-red-800' 
-												: 'bg-slate-900/60 border border-gray-200 text-[#5E5E5E] [.light_&]:bg-white [.light_&]:border-slate-200 [.light_&]:text-slate-700'
+												? 'bg-rose-50 border border-rose-200 text-rose-900' 
+												: 'bg-slate-100 border border-slate-200 text-slate-900'
 									].join(' ')}
 								>
 									{chat.text}
@@ -962,84 +973,89 @@ export default function MoneyFlowSimulator() {
 							);
 						})}
 						{isPendingAI && (
-							<div className="text-[#8C8C8C] italic animate-pulse">Assistant is translating prompt...</div>
+							<div className="text-xs text-slate-500 italic animate-pulse py-1">Assistant is processing prompt...</div>
 						)}
 					</div>
 
-					<form onSubmit={handleChatSubmit} className="border-t border-gray-200 bg-slate-900/80 p-4 flex gap-3 [.light_&]:border-slate-200 [.light_&]:bg-slate-100/80">
-						<div className="flex-1 relative flex items-center">
-							<div className="absolute left-3 text-cyan-500/70 [.light_&]:text-cyan-600">
-								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-							</div>
-							<input
-								type="text"
-								value={chatInput}
-								onChange={(e) => setChatInput(e.target.value)}
-								placeholder={isEnterprise ? "Command the AI (e.g. 'Set receivables DSO to 45')..." : "Command the AI (e.g. 'Route $600 from checking to Roth IRA')..."}
-								className="w-full bg-white border border-slate-700 rounded-xl outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 py-3 pl-10 pr-4 text-xs text-[#5E5E5E] placeholder:text-[#8C8C8C] [.light_&]:bg-white [.light_&]:border-slate-300 [.light_&]:text-slate-800 [.light_&]:placeholder:text-[#5E5E5E] font-mono transition-all shadow-inner"
-							/>
-						</div>
+					<form onSubmit={handleChatSubmit} className="pt-3 border-t border-slate-100 flex gap-2 font-sans">
+						<input
+							type="text"
+							value={chatInput}
+							onChange={(e) => setChatInput(e.target.value)}
+							placeholder={isEnterprise ? "Ask AI or enter command (e.g., Set receivables DSO to 45)..." : "Ask AI or enter command (e.g., Route $600 from Checking to Roth)..."}
+							className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/40 focus:border-cyan-500 font-sans tracking-normal shadow-inner"
+						/>
 						<button 
 							type="submit" 
 							disabled={!chatInput.trim() || isPendingAI}
-							className="px-6 py-2 bg-cyan-600 hover:bg-cyan-500 disabled:opacity-50 text-[#1A1A1A] font-bold rounded-xl text-xs uppercase tracking-wider transition cursor-pointer shadow-[0_0_15px_rgba(8,145,178,0.3)] hover:shadow-[0_0_20px_rgba(8,145,178,0.5)]"
+							className="px-4 py-2.5 bg-cyan-600 hover:bg-cyan-700 disabled:opacity-40 text-white font-semibold rounded-xl text-xs transition cursor-pointer shadow-sm flex-shrink-0"
 						>
 							Send
 						</button>
 					</form>
 				</div>
 
-				{/* Scripting Rules & Audit Logs */}
-				<div className="flex flex-col h-[350px] rounded-2xl border border-gray-200 bg-white/90 font-mono text-xs shadow-2xl overflow-hidden [.light_&]:border-slate-200 [.light_&]:bg-slate-50 [.light_&]:shadow-lg">
-					<div className="h-9 border-b border-gray-200 bg-slate-900/60 flex items-center px-4 justify-between [.light_&]:border-slate-200 [.light_&]:bg-slate-100">
-						<span className="font-semibold text-[#5E5E5E] text-[10px] tracking-wider uppercase [.light_&]:text-[#8C8C8C]">Market_Scripting_Rules</span>
-						<span className="text-[9px] text-[#8C8C8C] [.light_&]:text-[#5E5E5E]">CONDITIONAL RUNNER</span>
+				{/* B. Market & Scripting Rules Card */}
+				<div className="flex flex-col h-[380px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm font-sans">
+					<div className="flex items-center justify-between pb-3 border-b border-slate-100">
+						<h3 className="text-sm font-semibold text-slate-900 tracking-tight">Market & Scripting Rules</h3>
+						<span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-700 border border-slate-200">
+							Conditional Runner
+						</span>
 					</div>
 					
-					<div className="flex-1 p-4 overflow-y-auto space-y-4 scrollbar-thin scrollbar-thumb-slate-800 [.light_&]:scrollbar-thumb-slate-300">
-						<div className="space-y-3">
-							{rules.map((rule) => (
-								<div key={rule.id} className="p-3 bg-slate-900/40 border border-gray-200 rounded-xl flex items-start justify-between gap-2 [.light_&]:bg-white [.light_&]:border-slate-200">
-									<div className="flex-1">
-										<p className="font-bold text-[#5E5E5E] text-xs">{rule.name}</p>
-										<p className="text-[10px] text-[#5E5E5E] mt-1 leading-normal">{rule.description}</p>
-										<div className="mt-2 flex gap-2 text-[9px] font-mono">
-											<span className="bg-white px-1.5 py-0.5 rounded text-[#5A7A8F]">IF: {rule.conditionStr}</span>
-											<span className="bg-white px-1.5 py-0.5 rounded #1A1A1A">THEN: {rule.actionStr}</span>
-										</div>
-									</div>
+					<div className="flex-1 py-3 overflow-y-auto space-y-3 font-sans pr-1 scrollbar-thin scrollbar-thumb-slate-200">
+						{rules.map((rule) => (
+							<div key={rule.id} className="p-3 bg-slate-50/80 border border-slate-200 rounded-xl flex flex-col gap-2 hover:border-slate-300 transition">
+								<div className="flex items-start justify-between gap-2">
+									<h4 className="font-semibold text-slate-900 text-xs">{rule.name}</h4>
 									<button 
 										onClick={() => setRules(prev => prev.map(r => r.id === rule.id ? { ...r, isActive: !r.isActive } : r))}
 										className={[
-											'px-2 py-1 rounded text-[9px] font-mono cursor-pointer uppercase transition font-bold',
+											'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium transition cursor-pointer flex-shrink-0',
 											rule.isActive 
-												? 'bg-emerald-500/20 #1A1A1A border border-emerald-500/30' 
-												: 'bg-gray-200 text-[#8C8C8C] border border-slate-700'
+												? 'bg-emerald-50 text-emerald-700 border border-emerald-200' 
+												: 'bg-slate-100 text-slate-500 border border-slate-200'
 										].join(' ')}
 									>
-										{rule.isActive ? 'Active' : 'Disabled'}
+										<span className={['w-1.5 h-1.5 rounded-full', rule.isActive ? 'bg-emerald-500' : 'bg-slate-400'].join(' ')}></span>
+										{rule.isActive ? 'Active' : 'Inactive'}
 									</button>
 								</div>
-							))}
-						</div>
 
+								<p className="text-xs text-slate-600 leading-relaxed font-sans">{rule.description}</p>
+
+								<div className="flex flex-wrap gap-1.5 text-xs font-sans mt-1">
+									<span className="inline-flex items-center px-2 py-0.5 rounded-md bg-blue-50 text-blue-700 border border-blue-200 font-medium">
+										Trigger: {rule.conditionStr}
+									</span>
+									<span className="inline-flex items-center px-2 py-0.5 rounded-md bg-slate-100 text-slate-800 border border-slate-200 font-medium">
+										Action: {rule.actionStr}
+									</span>
+								</div>
+							</div>
+						))}
 					</div>
 				</div>
 
-				{/* Waterfall Priorities (Only in Personal Mode) */}
+				{/* C. Savings Waterfall Priority Card (Personal Mode) */}
 				{!isEnterprise && (
-					<div className="flex flex-col h-[350px] rounded-2xl border border-gray-200 bg-white/90 font-mono text-xs shadow-2xl overflow-hidden [.light_&]:border-slate-200 [.light_&]:bg-slate-50 [.light_&]:shadow-lg">
-						<div className="h-9 border-b border-gray-200 bg-slate-900/60 flex items-center px-4 justify-between [.light_&]:border-slate-200 [.light_&]:bg-slate-100">
-							<span className="font-semibold text-[#5E5E5E] text-[10px] tracking-wider uppercase [.light_&]:text-[#8C8C8C]">Savings_Waterfall_Order</span>
-							<span className="text-[9px] text-[#8C8C8C] [.light_&]:text-[#5E5E5E]">PRIORITY CONFIG</span>
+					<div className="flex flex-col h-[380px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm font-sans">
+						<div className="flex items-center justify-between pb-3 border-b border-slate-100">
+							<h3 className="text-sm font-semibold text-slate-900 tracking-tight">Savings Waterfall Order</h3>
+							<span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-700 border border-slate-200">
+								Priority Config
+							</span>
 						</div>
 						
-						<div className="flex-1 p-4 overflow-y-auto space-y-2.5 scrollbar-thin scrollbar-thumb-slate-800 [.light_&]:scrollbar-thumb-slate-300">
-							<p className="text-[10px] text-[#8C8C8C] font-bold uppercase tracking-wider mb-2 leading-tight">Sweep Priority Order</p>
+						<p className="text-xs font-semibold text-slate-500 tracking-normal my-2.5 font-sans">Sweep Priority Order</p>
+						
+						<div className="flex-1 overflow-y-auto space-y-2 font-sans pr-1 scrollbar-thin scrollbar-thumb-slate-200">
 							{state.waterfallOrder.map((type, idx) => {
 								const node = state.nodes.find(n => n.type === type);
-								const displayName = node ? node.name : type;
-								
+								const fallbackName = node ? node.name : type;
+								const details = WATERFALL_ACCOUNT_LABELS[type] || { name: fallbackName, subtext: '' };
+
 								const handleMoveUp = () => {
 									if (idx === 0) return;
 									const newOrder = [...state.waterfallOrder];
@@ -1049,7 +1065,7 @@ export default function MoneyFlowSimulator() {
 									setState(prev => ({
 										...prev,
 										waterfallOrder: newOrder,
-										log: [...prev.log, `Reordered waterfall: Moved ${displayName} up.`].slice(-100)
+										log: [...prev.log, `Reordered waterfall: Moved ${details.name} up.`].slice(-100)
 									}));
 								};
 
@@ -1062,22 +1078,26 @@ export default function MoneyFlowSimulator() {
 									setState(prev => ({
 										...prev,
 										waterfallOrder: newOrder,
-										log: [...prev.log, `Reordered waterfall: Moved ${displayName} down.`].slice(-100)
+										log: [...prev.log, `Reordered waterfall: Moved ${details.name} down.`].slice(-100)
 									}));
 								};
 
 								return (
-									<div key={type} className="flex items-center justify-between p-2.5 bg-slate-900/40 border border-gray-200 rounded-xl [.light_&]:bg-white [.light_&]:border-slate-200 hover:border-slate-700/60 transition">
-										<div className="flex items-center gap-2 overflow-hidden mr-2">
-											<span className="text-[#8C8C8C] font-bold text-[10px]">{idx + 1}.</span>
-											<span className="text-[#5E5E5E] font-bold truncate text-[10px] [.light_&]:text-slate-800">{displayName}</span>
+									<div key={type} className="flex items-center justify-between p-2.5 bg-slate-50 border border-slate-200 rounded-xl hover:border-slate-300 transition">
+										<div className="flex items-center gap-2.5 overflow-hidden mr-2">
+											<span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-200/80 text-slate-800 text-xs font-bold font-mono flex-shrink-0">
+												#{idx + 1}
+											</span>
+											<span className="text-xs font-semibold text-slate-900 truncate">
+												{details.name} {details.subtext && <span className="text-slate-500 font-normal ml-1">({details.subtext})</span>}
+											</span>
 										</div>
-										<div className="flex items-center gap-1.5 flex-shrink-0">
+										<div className="flex items-center gap-1 flex-shrink-0">
 											<button
 												onClick={handleMoveUp}
 												disabled={idx === 0}
 												title="Move Up"
-												className="p-1 rounded bg-gray-200 hover:bg-slate-700 border border-slate-700 disabled:opacity-20 transition text-[#5E5E5E] font-bold text-[9px] cursor-pointer [.light_&]:bg-slate-100 [.light_&]:border-slate-200 [.light_&]:text-slate-700"
+												className="w-6 h-6 flex items-center justify-center rounded bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 font-bold text-xs disabled:opacity-20 transition cursor-pointer"
 											>
 												▲
 											</button>
@@ -1085,7 +1105,7 @@ export default function MoneyFlowSimulator() {
 												onClick={handleMoveDown}
 												disabled={idx === state.waterfallOrder.length - 1}
 												title="Move Down"
-												className="p-1 rounded bg-gray-200 hover:bg-slate-700 border border-slate-700 disabled:opacity-20 transition text-[#5E5E5E] font-bold text-[9px] cursor-pointer [.light_&]:bg-slate-100 [.light_&]:border-slate-200 [.light_&]:text-slate-700"
+												className="w-6 h-6 flex items-center justify-center rounded bg-white hover:bg-slate-100 border border-slate-200 text-slate-700 font-bold text-xs disabled:opacity-20 transition cursor-pointer"
 											>
 												▼
 											</button>
@@ -1098,40 +1118,35 @@ export default function MoneyFlowSimulator() {
 				)}
 			</div>
 
-			{/* Dedicated System Audit Ledger & Console */}
-			<div className="rounded-[1.8rem] border border-gray-200 bg-white/80 p-6 shadow-2xl backdrop-blur-md flex flex-col gap-4 font-mono text-xs animate-[fadeIn_0.3s_ease-out] [.light_&]:border-slate-200 [.light_&]:bg-white/95">
-				<div className="flex items-center justify-between border-b border-gray-200 pb-3 [.light_&]:border-slate-100">
-					<div className="flex items-center gap-2">
-						<span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
-						<span className="font-bold text-[#5E5E5E] uppercase tracking-widest text-[10px] [.light_&]:text-[#8C8C8C]">
-							System Audit Ledger & Console
-						</span>
-					</div>
-					<span className="text-[9px] text-[#8C8C8C]">REAL-TIME SIMULATION ENGINE AUDIT TRAIL</span>
+			{/* D. System Audit Ledger & Console */}
+			<div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm flex flex-col gap-3 font-sans animate-[fadeIn_0.3s_ease-out]">
+				<div className="flex items-center justify-between border-b border-slate-100 pb-3">
+					<h3 className="text-sm font-semibold text-slate-900 tracking-tight font-sans">System Audit Ledger & Console</h3>
+					<span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
+						<span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+						Live Simulation Engine
+					</span>
 				</div>
 				<div 
 					ref={logsContainerRef}
-					className="max-h-[185px] min-h-[130px] overflow-y-auto space-y-1.5 text-[11px] leading-relaxed font-mono scrollbar-thin scrollbar-thumb-slate-800 pr-2"
+					className="max-h-[190px] min-h-[130px] overflow-y-auto space-y-1.5 p-3.5 bg-slate-900 rounded-xl text-slate-100 font-mono text-xs leading-5 shadow-inner pr-2"
 				>
 					{state.log.length > 0 ? (
 						state.log.map((line, idx) => {
 							const isWarning = line.includes('WARNING') || line.includes('ALERT') || line.includes('ERROR');
-							const isPayday = line.includes('PAYDAY');
+							const isPayday = line.includes('PAYDAY') || line.includes('Paycheck');
 							const isSweep = line.includes('sweep') || line.includes('swept') || line.includes('Routed');
 							const isDraw = line.includes('DRAW') || line.includes('pulling') || line.includes('Restored');
-							const isInterest = line.includes('interest') || line.includes('yield') || line.includes('earned') || line.includes('charged');
 							
 							const colorClass = isWarning 
-								? 'text-[#B85C5C] font-bold' 
+								? 'text-rose-400 font-semibold' 
 								: isPayday 
-									? 'text-[#5A7A8F] font-bold' 
+									? 'text-emerald-400 font-semibold' 
 									: isSweep 
-										? '#1A1A1A' 
+										? 'text-cyan-300 font-medium' 
 										: isDraw
-											? 'text-[#C88D4E] font-bold'
-											: isInterest
-												? 'text-purple-400'
-												: 'text-[#5E5E5E] [.light_&]:text-slate-700';
+											? 'text-amber-300 font-medium'
+											: 'text-slate-200';
 							return (
 								<div key={idx} className={colorClass}>
 									&gt; {line}
@@ -1139,7 +1154,7 @@ export default function MoneyFlowSimulator() {
 							);
 						})
 					) : (
-						<div className="text-[#8C8C8C] italic">No transactions or events logged yet. Advance the clock to run.</div>
+						<div className="text-slate-400 italic font-sans">No transactions or events logged yet. Advance the clock to run.</div>
 					)}
 				</div>
 			</div>
