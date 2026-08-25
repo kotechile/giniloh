@@ -192,13 +192,32 @@ export default function MoneyFlowSimulator() {
 		handleReset(newMode);
 	};
 
+	// Clock toggle handler
+	const handleToggleClock = () => {
+		if (isRunning) {
+			setIsRunning(false);
+			if (timerRef.current) {
+				clearInterval(timerRef.current);
+				timerRef.current = null;
+			}
+		} else {
+			if (state.isPaused) {
+				setState((prev) => ({ ...prev, isPaused: false }));
+			}
+			setIsRunning(true);
+		}
+	};
+
 	// Synchronized simulation clock step
 	useEffect(() => {
 		if (isRunning && !state.isPaused) {
 			timerRef.current = setInterval(() => {
 				// Step Active Main State
 				setState((current) => {
-					if (current.isPaused) return current;
+					if (current.isPaused) {
+						setIsRunning(false);
+						return current;
+					}
 					let next = stepSimulation(current, dailyIncome);
 
 					// Evaluate dynamic script rules
@@ -211,6 +230,10 @@ export default function MoneyFlowSimulator() {
 							}
 						}
 					});
+
+					if (next.isPaused) {
+						setIsRunning(false);
+					}
 
 					return next;
 				});
@@ -228,11 +251,17 @@ export default function MoneyFlowSimulator() {
 		} else {
 			if (timerRef.current) {
 				clearInterval(timerRef.current);
+				timerRef.current = null;
 			}
 		}
 
 		return () => {
 			if (timerRef.current) {
+				clearInterval(timerRef.current);
+				timerRef.current = null;
+			}
+		};
+	}, [isRunning, speedMs, dailyIncome, rules, state.isPaused, state.mode]);
 				clearInterval(timerRef.current);
 			}
 		};
@@ -756,10 +785,9 @@ export default function MoneyFlowSimulator() {
 				<div className="flex flex-wrap items-center justify-between gap-6 py-5">
 					<div className="flex items-center gap-3">
 						<button
-							onClick={() => setIsRunning(!isRunning)}
-							disabled={state.isPaused}
+							onClick={handleToggleClock}
 							className={[
-								'py-2.5 px-5 rounded-lg text-xs font-mono uppercase tracking-wider transition font-bold select-none border cursor-pointer disabled:opacity-30',
+								'py-2.5 px-5 rounded-lg text-xs font-mono uppercase tracking-wider transition font-bold select-none border cursor-pointer',
 								isRunning
 									? 'bg-[#B85C5C] border-[#B85C5C] !text-white hover:bg-[#a64e4e]'
 									: 'bg-[#1A1A1A] border-[#1A1A1A] !text-white hover:bg-black'

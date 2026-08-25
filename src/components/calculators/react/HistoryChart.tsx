@@ -7,6 +7,39 @@ interface HistoryChartProps {
 	mode: 'personal' | 'enterprise';
 }
 
+// Clean helper to format Y-axis tick values cleanly ($0, $5k, $10k, $15k, $20k)
+function formatYAxisTick(val: number): string {
+	const abs = Math.abs(val);
+	const sign = val < 0 ? '-' : '';
+	if (abs >= 1000000) return `${sign}$${(abs / 1000000).toFixed(1)}M`;
+	if (abs >= 10000) return `${sign}$${Math.round(abs / 1000)}k`;
+	if (abs >= 1000) return `${sign}${(abs / 1000).toFixed(1)}k`.replace('.0k', 'k');
+	return `${sign}$${Math.round(abs)}`;
+}
+
+// Smooth bezier spline path generator (natural interpolation)
+function buildSmoothPath(points: Array<{ x: number; y: number }>): string {
+	if (points.length === 0) return '';
+	if (points.length === 1) return `M ${points[0].x.toFixed(1)} ${points[0].y.toFixed(1)}`;
+	if (points.length === 2) return `M ${points[0].x.toFixed(1)} ${points[0].y.toFixed(1)} L ${points[1].x.toFixed(1)} ${points[1].y.toFixed(1)}`;
+
+	let d = `M ${points[0].x.toFixed(1)} ${points[0].y.toFixed(1)}`;
+	for (let i = 0; i < points.length - 1; i++) {
+		const p0 = points[Math.max(0, i - 1)];
+		const p1 = points[i];
+		const p2 = points[i + 1];
+		const p3 = points[Math.min(points.length - 1, i + 2)];
+
+		const cp1x = p1.x + (p2.x - p0.x) / 6;
+		const cp1y = p1.y + (p2.y - p0.y) / 6;
+		const cp2x = p2.x - (p3.x - p1.x) / 6;
+		const cp2y = p2.y - (p3.y - p1.y) / 6;
+
+		d += ` C ${cp1x.toFixed(1)} ${cp1y.toFixed(1)}, ${cp2x.toFixed(1)} ${cp2y.toFixed(1)}, ${p2.x.toFixed(1)} ${p2.y.toFixed(1)}`;
+	}
+	return d;
+}
+
 export default function HistoryChart({ history, mode }: HistoryChartProps) {
 	const isEnterprise = mode === 'enterprise';
 
@@ -68,7 +101,7 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 	const svgRef = useRef<SVGSVGElement>(null);
 	const [dimensions, setDimensions] = useState({ width: 800, height: 260 });
 
-	// Auto-resize listener
+	// Auto-resize observer
 	useEffect(() => {
 		if (svgRef.current) {
 			const resizeObserver = new ResizeObserver((entries) => {
@@ -85,35 +118,35 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 	// Default empty fallback
 	if (!history || history.length === 0) {
 		return (
-			<div className="rounded-2xl border border-gray-200 bg-white p-6 flex items-center justify-center h-[260px] text-xs font-mono text-[#8C8C8C] [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
+			<div className="rounded-2xl border border-gray-200 bg-white p-6 flex items-center justify-center h-[260px] text-xs font-sans text-gray-500">
 				No simulation history data collected yet.
 			</div>
 		);
 	}
 
-	const margin = { top: 25, right: 135, bottom: 45, left: 85 };
+	const margin = { top: 25, right: 35, bottom: 40, left: 65 };
 	const plotWidth = dimensions.width - margin.left - margin.right;
 	const plotHeight = dimensions.height - margin.top - margin.bottom;
 
 	const maxDay = Math.max(30, history[history.length - 1].day);
 
-	// Personal Series definitions
+	// Personal Series definitions with exact color palette
 	const personalSeriesDef = [
-		{ key: 'netWorth', label: 'Net Worth', stroke: '#059669', fill: 'rgba(16, 185, 129, 0.06)' },
-		{ key: 'checking', label: 'Checking Balance', stroke: '#0284c7', fill: 'none' },
-		{ key: 'hysa', label: 'HYSA Savings', stroke: '#2563eb', fill: 'none' },
-		{ key: 'investments', label: 'Investments', stroke: '#7c3aed', fill: 'none' },
-		{ key: 'debt', label: 'High-Interest Debt', stroke: '#e11d48', fill: 'none' },
-		{ key: 'mortgage', label: 'Mortgage Loan', stroke: '#4f46e5', fill: 'none' }
+		{ key: 'netWorth', label: 'Net Worth', stroke: '#059669', fill: 'rgba(16, 185, 129, 0.04)' },
+		{ key: 'investments', label: 'Investments', stroke: '#10B981', fill: 'none' },
+		{ key: 'hysa', label: 'HYSA Savings', stroke: '#3B82F6', fill: 'none' },
+		{ key: 'checking', label: 'Checking Balance', stroke: '#6366F1', fill: 'none' },
+		{ key: 'debt', label: 'High-Interest Debt', stroke: '#F43F5E', fill: 'none' },
+		{ key: 'mortgage', label: 'Mortgage Loan', stroke: '#8B5CF6', fill: 'none' }
 	];
 
 	// Enterprise Series definitions
 	const enterpriseSeriesDef = [
-		{ key: 'netWorth', label: 'Net Position', stroke: '#059669', fill: 'rgba(16, 185, 129, 0.06)' },
-		{ key: 'operatingCash', label: 'Net Cash Flow', stroke: '#2563eb', fill: 'none' },
-		{ key: 'mfs', label: 'MMF reserves', stroke: '#0284c7', fill: 'none' },
-		{ key: 'receivables', label: 'Receivables', stroke: '#d97706', fill: 'none' },
-		{ key: 'payables', label: 'Payables', stroke: '#e11d48', fill: 'none' }
+		{ key: 'netWorth', label: 'Net Position', stroke: '#059669', fill: 'rgba(16, 185, 129, 0.04)' },
+		{ key: 'operatingCash', label: 'Net Cash Flow', stroke: '#6366F1', fill: 'none' },
+		{ key: 'mfs', label: 'MMF reserves', stroke: '#3B82F6', fill: 'none' },
+		{ key: 'receivables', label: 'Receivables', stroke: '#F59E0B', fill: 'none' },
+		{ key: 'payables', label: 'Payables', stroke: '#F43F5E', fill: 'none' }
 	];
 
 	const activeSeriesDef = isEnterprise ? enterpriseSeriesDef : personalSeriesDef;
@@ -133,16 +166,16 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 
 	// Bounds padding
 	if (minY === Infinity || maxY === -Infinity) {
-		minY = -10000;
-		maxY = 50000;
+		minY = 0;
+		maxY = 25000;
 	} else {
 		const diff = maxY - minY;
 		if (diff === 0) {
-			minY -= 5000;
+			minY = Math.max(0, minY - 5000);
 			maxY += 5000;
 		} else {
-			minY -= diff * 0.1;
-			maxY += diff * 0.1;
+			minY = Math.min(0, minY);
+			maxY += diff * 0.12;
 		}
 	}
 
@@ -156,14 +189,14 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 		return margin.top + plotHeight - ((val - minY) / (maxY - minY)) * plotHeight;
 	};
 
-	// Generate lines path data
+	// Generate lines path data with smooth curves
 	const paths = visibleSeriesDef.map((def) => {
-		let pathPoints = history.map((point) => {
+		const points = history.map((point) => {
 			const val = (point as any)[def.key] ?? 0;
-			return `${getX(point.day)},${getY(val)}`;
+			return { x: getX(point.day), y: getY(val) };
 		});
 
-		const linePath = `M ${pathPoints.join(' L ')}`;
+		const linePath = buildSmoothPath(points);
 		
 		// Fill path (only for Net Worth/Net Position)
 		let fillPath = '';
@@ -181,15 +214,16 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 		};
 	});
 
-	// Grid calculations
-	const yTicks = 4;
-	const yGridLines = Array.from({ length: yTicks + 1 }).map((_, i) => {
-		const val = minY + (i / yTicks) * (maxY - minY);
+	// Grid & Y-Axis Ticks
+	const yTicksCount = 4;
+	const yGridLines = Array.from({ length: yTicksCount + 1 }).map((_, i) => {
+		const val = minY + (i / yTicksCount) * (maxY - minY);
 		const y = getY(val);
 		return { val, y };
 	});
 
-	const xTicksCount = Math.min(6, Math.max(2, Math.floor(maxDay / 15)));
+	// X-Axis Regular Ticks (Day 0, Day 7, Day 14, Day 21, Day 30)
+	const xTicksCount = 5;
 	const xGridLines = Array.from({ length: xTicksCount }).map((_, i) => {
 		const day = Math.round((i / (xTicksCount - 1)) * maxDay);
 		const x = getX(day);
@@ -236,38 +270,35 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 	const hoverPoint = hoverIndex !== null ? history[hoverIndex] : null;
 
 	return (
-		<div className="rounded-[1.8rem] border border-slate-300 bg-slate-50/80 p-6 shadow-xl backdrop-blur-md flex flex-col gap-4 animate-[fadeIn_0.3s_ease-out]">
-			<div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 pb-4">
+		<div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm flex flex-col gap-4 font-sans animate-[fadeIn_0.3s_ease-out]">
+			{/* Header & Interactive Top Legend */}
+			<div className="flex flex-wrap items-center justify-between gap-4 border-b border-gray-100 pb-4">
 				<div>
-					<h3 className="text-base font-bold text-slate-900 tracking-tight">
+					<h3 className="text-base font-semibold text-gray-900 tracking-tight">
 						{isEnterprise ? 'Treasury Evolution History' : 'Historical Trend Evolution'}
 					</h3>
-					<p className="text-xs text-slate-700 font-mono font-semibold mt-0.5 uppercase tracking-wider">
-						Visualizing daily variable logs over {maxDay} days
+					<p className="text-xs text-gray-500 font-normal mt-0.5">
+						Daily variable logs over {maxDay} days
 					</p>
 				</div>
 
-				{/* Checkbox pills */}
-				<div className="flex flex-wrap gap-2 text-xs font-mono">
+				{/* Top Legend Filter Pills */}
+				<div className="flex flex-wrap gap-2 text-xs font-sans">
 					{activeSeriesDef.map((def) => {
 						const isVisible = visibleSeries[def.key];
 						return (
 							<button
 								key={def.key}
 								onClick={() => toggleSeries(def.key)}
-								style={{
-									borderColor: isVisible ? `${def.stroke}80` : '#cbd5e1',
-									backgroundColor: isVisible ? `${def.stroke}18` : '#f8fafc'
-								}}
 								className={[
-									'px-3 py-1 rounded-full border transition hover:scale-105 cursor-pointer font-bold',
+									'inline-flex items-center gap-1.5 px-3 py-1 rounded-full border transition cursor-pointer text-xs font-medium',
 									isVisible 
-										? 'text-slate-900' 
-										: 'text-slate-500 bg-slate-100'
+										? 'bg-gray-100 border-gray-300 text-gray-900 opacity-100 shadow-2xs' 
+										: 'bg-gray-50 border-gray-200 text-gray-400 opacity-40 hover:opacity-70'
 								].join(' ')}
 							>
 								<span 
-									className="inline-block w-2.5 h-2.5 rounded-full mr-1.5 align-middle"
+									className="w-2 h-2 rounded-full inline-block"
 									style={{ backgroundColor: def.stroke }}
 								/>
 								{def.label}
@@ -285,7 +316,7 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 					height={dimensions.height}
 					onMouseMove={handleMouseMove}
 					onMouseLeave={handleMouseLeave}
-					className="overflow-visible select-none cursor-crosshair font-mono"
+					className="overflow-visible select-none cursor-crosshair font-sans"
 				>
 					{/* Light Chart Background Area */}
 					<rect
@@ -293,13 +324,13 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 						y={margin.top}
 						width={plotWidth}
 						height={plotHeight}
-						fill="#F8FAFC"
-						stroke="#CBD5E1"
+						fill="#FAFAFA"
+						stroke="#F3F4F6"
 						strokeWidth="1"
 						rx="6"
 					/>
 
-					{/* Grid lines */}
+					{/* Y-Axis Grid Lines & Tick Labels */}
 					{yGridLines.map((line, idx) => (
 						<g key={`y-grid-${idx}`}>
 							<line
@@ -307,24 +338,25 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 								y1={line.y}
 								x2={margin.left + plotWidth}
 								y2={line.y}
-								stroke="#CBD5E1"
-								strokeWidth="1.5"
-								strokeDasharray="3, 3"
+								stroke="#E5E7EB"
+								strokeWidth="1"
+								strokeDasharray="3 3"
 							/>
 							<text
 								x={margin.left - 10}
 								y={line.y + 4}
 								textAnchor="end"
-								fill="#0F172A"
+								fill="#9CA3AF"
 								fontSize="11"
-								fontWeight="700"
-								className="font-mono"
+								fontWeight="400"
+								className="font-sans"
 							>
-								{formatCurrency(line.val)}
+								{formatYAxisTick(line.val)}
 							</text>
 						</g>
 					))}
 
+					{/* X-Axis Regular Ticks & Labels */}
 					{xGridLines.map((line, idx) => (
 						<g key={`x-grid-${idx}`}>
 							<line
@@ -332,18 +364,18 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 								y1={margin.top}
 								x2={line.x}
 								y2={margin.top + plotHeight}
-								stroke="#CBD5E1"
-								strokeWidth="1.5"
-								strokeDasharray="3, 3"
+								stroke="#E5E7EB"
+								strokeWidth="1"
+								strokeDasharray="3 3"
 							/>
 							<text
 								x={line.x}
 								y={margin.top + plotHeight + 18}
 								textAnchor="middle"
-								fill="#0F172A"
+								fill="#9CA3AF"
 								fontSize="11"
-								fontWeight="700"
-								className="font-mono"
+								fontWeight="400"
+								className="font-sans"
 							>
 								Day {line.day}
 							</text>
@@ -357,9 +389,9 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 							y1={zeroY}
 							x2={margin.left + plotWidth}
 							y2={zeroY}
-							stroke="#475569"
-							strokeWidth="2"
-							strokeDasharray="4, 4"
+							stroke="#9CA3AF"
+							strokeWidth="1"
+							strokeDasharray="3 3"
 						/>
 					)}
 
@@ -375,7 +407,7 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 						)
 					))}
 
-					{/* Line paths */}
+					{/* Smooth Line paths */}
 					{paths.map((path) => (
 						<path
 							key={`line-${path.key}`}
@@ -389,61 +421,20 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 						/>
 					))}
 
-					{/* End-of-line Labels to identify each colored line */}
-					{paths.map((path) => {
-						const lastPoint = history[history.length - 1];
-						if (!lastPoint) return null;
-						const val = (lastPoint as any)[path.key] ?? 0;
-						const lastX = getX(lastPoint.day);
-						const lastY = getY(val);
-
-						return (
-							<g key={`end-label-${path.key}`}>
-								<circle
-									cx={lastX}
-									cy={lastY}
-									r="4"
-									fill={path.stroke}
-									stroke="#FFFFFF"
-									strokeWidth="1.5"
-								/>
-								<rect
-									x={lastX + 6}
-									y={lastY - 10}
-									width={path.label.length * 6.5 + 10}
-									height={20}
-									rx={4}
-									fill={path.stroke}
-								/>
-								<text
-									x={lastX + 11}
-									y={lastY + 4}
-									fill="#FFFFFF"
-									fontSize="10"
-									fontWeight="800"
-									className="font-mono"
-								>
-									{path.label}
-								</text>
-							</g>
-						);
-					})}
-
-					{/* Hover interaction markers */}
+					{/* Hover interaction crosshair */}
 					{hoverPoint && (
 						<>
-							{/* Vertical tracking line */}
 							<line
 								x1={getX(hoverPoint.day)}
 								y1={margin.top}
 								x2={getX(hoverPoint.day)}
 								y2={margin.top + plotHeight}
-								stroke="#0284c7"
-								strokeWidth="2"
-								strokeDasharray="4, 4"
+								stroke="#D1D5DB"
+								strokeWidth="1"
+								strokeDasharray="3 3"
 							/>
 
-							{/* Dynamic dots for each active series */}
+							{/* Dynamic markers for each active series */}
 							{visibleSeriesDef.map((def) => {
 								const val = (hoverPoint as any)[def.key] ?? 0;
 								return (
@@ -451,11 +442,11 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 										key={`hover-dot-${def.key}`}
 										cx={getX(hoverPoint.day)}
 										cy={getY(val)}
-										r="5"
+										r="4"
 										fill={def.stroke}
 										stroke="#FFFFFF"
 										strokeWidth="2"
-										className="shadow"
+										className="shadow-sm"
 									/>
 								);
 							})}
@@ -464,22 +455,22 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 				</svg>
 			</div>
 
-			{/* Hover tooltip values overlay / Bottom metrics bar */}
+			{/* Hover Itemized Breakdown Card / Bottom Tooltip */}
 			{hoverPoint ? (
-				<div className="bg-white border border-slate-300 rounded-2xl p-4 flex flex-wrap gap-x-6 gap-y-2 text-xs font-mono select-none shadow-sm">
-					<div className="flex-shrink-0 text-slate-900 font-extrabold text-sm border-r border-slate-300 pr-4 mr-2 flex items-center">
-						📅 DAY {hoverPoint.day}
+				<div className="bg-gray-50 border border-gray-200 rounded-xl p-3.5 flex flex-wrap gap-x-6 gap-y-2 text-xs font-sans shadow-xs">
+					<div className="flex-shrink-0 text-gray-900 font-semibold text-xs border-r border-gray-200 pr-4 mr-1 flex items-center">
+						Day {hoverPoint.day}
 					</div>
 					{visibleSeriesDef.map((def) => {
 						const val = (hoverPoint as any)[def.key] ?? 0;
 						return (
-							<div key={def.key} className="flex items-center gap-1.5">
+							<div key={def.key} className="flex items-center gap-1.5 font-sans">
 								<span 
-									className="w-3 h-3 rounded-full inline-block" 
+									className="w-2 h-2 rounded-full inline-block flex-shrink-0" 
 									style={{ backgroundColor: def.stroke }} 
 								/>
-								<span className="text-slate-900 font-bold uppercase">{def.label}:</span>
-								<span className="text-slate-950 font-black text-xs">
+								<span className="text-gray-600 font-medium">{def.label}:</span>
+								<span className="text-gray-900 font-semibold font-mono text-xs">
 									{formatCurrency(val)}
 								</span>
 							</div>
@@ -487,9 +478,9 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 					})}
 				</div>
 			) : (
-				<div className="bg-slate-100/90 border border-slate-300 rounded-xl py-3 px-4 text-center">
-					<span className="text-slate-800 font-bold font-mono text-xs">
-						💡 Hover your mouse over the chart to inspect exact daily account balances.
+				<div className="bg-gray-50 border border-gray-200 rounded-xl py-2.5 px-4 text-center">
+					<span className="text-gray-500 font-normal font-sans text-xs">
+						Hover mouse over the chart to inspect daily balances
 					</span>
 				</div>
 			)}
