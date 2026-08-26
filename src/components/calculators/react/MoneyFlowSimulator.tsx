@@ -354,6 +354,15 @@ export default function MoneyFlowSimulator() {
 			nodes: current.nodes.map((n) => (n.id === updatedNode.id ? updatedNode : n))
 		}));
 		
+		// Synchronize dailyIncome when Gross Income node settings change
+		if (updatedNode.id === 'income' || updatedNode.type === 'income') {
+			const gross = updatedNode.grossIncome || 3500;
+			const freq = updatedNode.frequency || 'bi-weekly';
+			const days = freq === 'daily' ? 1 : freq === 'bi-weekly' ? 14 : 30;
+			const calculatedDaily = Math.round(gross / days);
+			setDailyIncome(calculatedDaily);
+		}
+
 		// Sync sliders configurations to all comparison tracks in enterprise mode
 		if (state.mode === 'enterprise') {
 			setEnterpriseScenarios((prev) => {
@@ -367,6 +376,21 @@ export default function MoneyFlowSimulator() {
 					supply_delay: sync(prev.supply_delay)
 				};
 			});
+		}
+	};
+
+	// Top control input handler for daily income
+	const handleDailyIncomeChange = (newDaily: number) => {
+		setDailyIncome(newDaily);
+		const incomeNode = state.nodes.find((n) => n.id === 'income');
+		if (incomeNode) {
+			const freq = incomeNode.frequency || 'bi-weekly';
+			const days = freq === 'daily' ? 1 : freq === 'bi-weekly' ? 14 : 30;
+			const newGross = Math.round(newDaily * days);
+			setState((current) => ({
+				...current,
+				nodes: current.nodes.map((n) => (n.id === 'income' ? { ...n, grossIncome: newGross } : n))
+			}));
 		}
 	};
 
@@ -806,52 +830,69 @@ export default function MoneyFlowSimulator() {
 						</button>
 					</div>
 
-					<div className="flex flex-wrap items-center gap-6">
-						{/* Backtest Scenarios */}
-						<div className="flex items-center gap-2">
-							<span className="text-xs font-mono text-[#8C8C8C] uppercase tracking-[0.2em] font-bold">Macro Shock:</span>
-							<select
-								value={state.macroScenario}
-								onChange={(e) => handleScenarioChange(e.target.value as any)}
-								className="bg-white border border-[#E5E5E5] text-[#1A1A1A] rounded-lg px-3 py-1.5 text-xs outline-none cursor-pointer font-medium appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2010L12%2015L17%2010%22%20stroke%3D%22%231A1A1A%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E')] bg-[length:20px_20px] bg-no-repeat bg-[position:right_4px_center] pr-8 focus:border-[#1A1A1A]"
-							>
-								<option value="baseline">Baseline Growth</option>
-								<option value="inflation">Stagflation Shock</option>
-								{isEnterprise ? (
-									<option value="supply_delay">Supply Chain Interruption</option>
-								) : (
-									<option value="crash">Market Contraction (Crash)</option>
-								)}
-							</select>
+					<div className="flex flex-wrap items-center gap-4">
+						{/* Macro Scenario Dropdown */}
+						<div className="flex items-center gap-2 font-sans">
+							<label className="text-xs font-semibold text-slate-700 font-sans whitespace-nowrap">Macro Scenario:</label>
+							<div className="relative">
+								<select
+									value={state.macroScenario}
+									onChange={(e) => handleScenarioChange(e.target.value as any)}
+									className="bg-white border border-slate-300 text-slate-900 rounded-xl px-3 py-1.5 pr-8 text-xs font-medium font-sans shadow-2xs hover:border-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/30 focus:border-cyan-500 cursor-pointer appearance-none transition"
+								>
+									<option value="baseline">Baseline Growth</option>
+									<option value="inflation">Stagflation Shock</option>
+									{isEnterprise ? (
+										<option value="supply_delay">Supply Chain Interruption</option>
+									) : (
+										<option value="crash">Market Contraction (Crash)</option>
+									)}
+								</select>
+								<div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
+									<svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+										<path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+									</svg>
+								</div>
+							</div>
 						</div>
 
-						{/* Daily speed settings */}
-						<div className="flex items-center gap-2">
-							<span className="text-xs font-mono text-[#8C8C8C] uppercase tracking-[0.2em] font-bold">Speed:</span>
-							<select
-								value={speedMs}
-								onChange={(e) => setSpeedMs(parseInt(e.target.value))}
-								className="bg-white border border-[#E5E5E5] text-[#1A1A1A] rounded-lg px-3 py-1.5 text-xs outline-none cursor-pointer font-medium appearance-none bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2010L12%2015L17%2010%22%20stroke%3D%22%231A1A1A%22%20stroke-width%3D%221.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%3C%2Fsvg%3E')] bg-[length:20px_20px] bg-no-repeat bg-[position:right_4px_center] pr-8 focus:border-[#1A1A1A]"
-							>
-								<option value="800">1x (Slow)</option>
-								<option value="400">2x (Normal)</option>
-								<option value="150">5x (Fast)</option>
-							</select>
+						{/* Simulation Speed Dropdown */}
+						<div className="flex items-center gap-2 font-sans">
+							<label className="text-xs font-semibold text-slate-700 font-sans whitespace-nowrap">Speed:</label>
+							<div className="relative">
+								<select
+									value={speedMs}
+									onChange={(e) => setSpeedMs(parseInt(e.target.value))}
+									className="bg-white border border-slate-300 text-slate-900 rounded-xl px-3 py-1.5 pr-8 text-xs font-medium font-sans shadow-2xs hover:border-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/30 focus:border-cyan-500 cursor-pointer appearance-none transition"
+								>
+									<option value="800">1x (Slow)</option>
+									<option value="400">2x (Normal)</option>
+									<option value="150">5x (Fast)</option>
+								</select>
+								<div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
+									<svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
+										<path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+									</svg>
+								</div>
+							</div>
 						</div>
 
-						{/* Daily savings factor */}
-						<div className="flex items-center gap-2">
-							<span className="text-xs font-mono text-[#8C8C8C] uppercase tracking-[0.2em] font-bold">
-								{isEnterprise ? 'Daily Base Revenue:' : 'Income/day:'}
-							</span>
-							<input
-								type="number"
-								min="0"
-								step="10"
-								value={dailyIncome}
-								onChange={(e) => setDailyIncome(parseFloat(e.target.value) || 0)}
-								className="w-20 bg-white border border-[#E5E5E5] text-[#1A1A1A] rounded-lg px-3 py-1.5 text-xs outline-none font-mono focus:border-[#1A1A1A]"
-							/>
+						{/* Daily Income Input (Synced with Gross Income Node) */}
+						<div className="flex items-center gap-2 font-sans">
+							<label className="text-xs font-semibold text-slate-700 font-sans whitespace-nowrap">
+								{isEnterprise ? 'Daily Base Revenue:' : 'Income / Day:'}
+							</label>
+							<div className="relative flex items-center">
+								<span className="absolute left-2.5 text-xs font-mono text-slate-500 font-bold">$</span>
+								<input
+									type="number"
+									min="0"
+									step="10"
+									value={dailyIncome}
+									onChange={(e) => handleDailyIncomeChange(parseFloat(e.target.value) || 0)}
+									className="w-24 bg-white border border-slate-300 text-slate-900 rounded-xl pl-6 pr-2.5 py-1.5 text-xs font-mono font-bold shadow-2xs hover:border-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/30 focus:border-cyan-500 transition"
+								/>
+							</div>
 						</div>
 					</div>
 				</div>
