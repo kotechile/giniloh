@@ -391,7 +391,7 @@ export default function MoneyFlowCanvas({
 
 			{/* Visual canvas window */}
 			<div 
-				className="relative overflow-x-auto w-full scrollbar-thin scrollbar-thumb-slate-300 dark:scrollbar-thumb-slate-800 transition-all duration-200 ease-out"
+				className="relative overflow-x-auto w-full [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden transition-all duration-200 ease-out"
 				style={{ height: `${canvasHeight * zoom}px`, minHeight: '350px' }}
 			>
 				<div 
@@ -578,7 +578,7 @@ export default function MoneyFlowCanvas({
 
 						const isSelected = selectedNodeId === node.id;
 						const tooltip = activeTooltips[node.id];
-						const isTopRow = node.id === 'hysa' || node.id === 'hsa' || node.id === 'revenues' || node.id === 'capex';
+						const isTopRow = coords ? coords.y <= 200 : false;
 
 						return (
 							<button
