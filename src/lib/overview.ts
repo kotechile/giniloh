@@ -19,9 +19,9 @@ export interface OverviewContent {
 
 const FALLBACK_OVERVIEW: OverviewContent = {
 	eyebrow: 'Decision Intelligence for Tech Workers',
-	headline: 'Decision Engine for Expensive Choices',
+	headline: 'Stop guessing the math on high-stakes tech and career choices.',
 	subheadline:
-		'Total Cost of Ownership (TCO) calculators for smart buying decisions. Quantify your hardware, compensation, and lifestyle trade-offs with mathematical clarity.',
+		'Rigorous TCO calculators and models designed to evaluate cloud vs. local infrastructure, compensation packages, and major financial transitions before you commit.',
 	mission:
 		'Our mission is to give tech workers the tools to model, quantify, and decide on high-stakes choices—from GPU workstation builds to equity packages and rental lease exits.',
 	originStory:
@@ -63,7 +63,6 @@ async function loadOverview() {
 	const rawContent = await readFile(overviewPath, 'utf8');
 	const cleanedContent = rawContent.replace(/\r/g, '');
 
-	const headlineMatch = cleanedContent.match(/Decision Engine for Expensive Choices/i);
 	const originMatch = cleanedContent.match(
 		/Evaluating high-stakes professional[\s\S]*?zero hand-waving\./i
 	);
@@ -88,9 +87,9 @@ async function loadOverview() {
 
 	return {
 		eyebrow: 'Decision Intelligence for Tech Workers',
-		headline: headlineMatch?.[0] ?? FALLBACK_OVERVIEW.headline,
+		headline: 'Stop guessing the math on high-stakes tech and career choices.',
 		subheadline:
-			'Total Cost of Ownership (TCO) calculators for smart buying decisions. Quantify your hardware, compensation, and lifestyle trade-offs.',
+			'Rigorous TCO calculators and models designed to evaluate cloud vs. local infrastructure, compensation packages, and major financial transitions before you commit.',
 		mission: cleanTextBlock(missionMatch?.[0] ?? FALLBACK_OVERVIEW.mission),
 		originStory: cleanTextBlock(originMatch?.[0] ?? FALLBACK_OVERVIEW.originStory),
 		audience,
