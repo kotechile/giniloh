@@ -263,22 +263,25 @@ a {
   border-color: #E5E5E5 !important;
 }
 
-.prose table {
+.prose table,
+.article-body table {
   margin-top: 3rem !important;
   margin-bottom: 3rem !important;
   width: 100% !important;
   border-collapse: collapse !important;
-  border-top: 1px solid #5A7A8F !important; /* Steel blue top line */
+  border-top: 2px solid #1A1A1A !important;
 }
 
-.prose th {
-  padding: 1.5rem 1rem !important;
-  font-family: ui-monospace, monospace !important;
-  font-size: 12px !important;
-  font-weight: 600 !important;
+.prose th,
+.article-body th {
+  padding: 1.25rem 1rem !important;
+  font-family: var(--font-mono), ui-monospace, monospace !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.2em !important;
-  color: #5A7A8F !important; /* Steel blue Headers */
+  letter-spacing: 0.1em !important;
+  color: #1A1A1A !important;
   text-align: left !important;
   border-bottom: 2px solid #E5E5E5 !important;
 }
@@ -784,21 +787,28 @@ button.bg-black {
 }
 
 /* 8. Table Alignment and Formatting */
-.prose table {
-  border-top: 1px solid #E5E5E5 !important;
+.prose table,
+.article-body table {
+  border-top: 2px solid #1A1A1A !important;
   width: 100% !important;
 }
-.prose th {
+.prose th,
+.article-body th {
   text-align: left !important;
-  color: #8C8C8C !important;
+  color: #1A1A1A !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
   border-bottom: 2px solid #E5E5E5 !important;
 }
-.prose td {
+.prose td,
+.article-body td {
   text-align: left !important;
   color: #1A1A1A !important;
   border-bottom: 1px solid #E5E5E5 !important;
 }
-.prose tr:hover td {
+.prose tr:hover td,
+.article-body tr:hover td {
   background-color: transparent !important; /* No hover grey highlight */
 }
 
