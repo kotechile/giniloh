@@ -179,13 +179,6 @@ const breadcrumbSchema = {
         <!-- Readability Shield: Solid backing for long-form text -->
         <div class="relative">
           <div class="prose lg:prose-xl max-w-none">
-            <!-- Summary Box -->
-            <div class="font-mono text-sm md:text-base mb-12 p-8 rounded-2xl bg-[#F8FAFC] border border-[#E5E5E5] text-[#262626] leading-relaxed relative overflow-hidden">
-               <div class="absolute top-0 left-0 w-1 h-full bg-[#5A7A8F]"></div>
-               <span class="text-[#5A7A8F] font-bold block mb-3 uppercase tracking-widest text-xs">Executive_Summary //</span>
-               {post.excerpt}
-            </div>
-
             <!-- Main Content -->
             <div class="article-body space-y-8 max-w-4xl mx-auto" set:html={post.content} />
             
