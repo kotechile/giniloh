@@ -153,7 +153,7 @@ function normalizePost(post: WordPressPostResponse): WordPressPost {
 		modified: post.modified ?? post.date ?? null,
 		featuredImage,
 		featuredImageAlt: featuredMedia?.alt_text || '',
-		categoryLabel: category?.name ?? null,
+		categoryLabel: category?.name ? stripHtml(category.name).replace(/:\s*$/, '').trim() : null,
 		categorySlug: category?.slug ?? null
 	};
 }

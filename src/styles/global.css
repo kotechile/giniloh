@@ -12,12 +12,13 @@
 	--font-sans: "Inter", "Avenir Next", "Segoe UI", sans-serif;
 	--font-mono: "JetBrains Mono", "Fira Code", monospace;
 	--brand-blue: #5A7A8F;
-	--brand-navy: #1A1A1A;
-	--brand-ink: #1A1A1A;
+	--brand-charcoal: #262626;
+	--brand-navy: #262626;
+	--brand-ink: #262626;
 	--brand-slate-text: #5E5E5E;
 	--brand-muted-text: #8C8C8C;
 	--brand-cyan: #5A7A8F;
-	--brand-emerald: #1A1A1A;
+	--brand-emerald: #262626;
 	--brand-slate: #f8fafc;
 	--brand-deep-slate: #FFFFFF;
 	--site-bg: #FFFFFF;
@@ -27,6 +28,7 @@
 	--font-sans: var(--font-sans);
 	--font-mono: var(--font-mono);
 	--color-brand-blue: var(--brand-blue);
+	--color-brand-charcoal: var(--brand-charcoal);
 	--color-brand-navy: var(--brand-navy);
 	--color-brand-ink: var(--brand-ink);
 	--color-brand-cyan: var(--brand-cyan);
@@ -51,6 +53,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
 	font-family: var(--font-sans);
 	font-weight: 600;
+	color: #262626;
 }
 
 .font-mono {
@@ -188,17 +191,17 @@ a {
 /* --- Technical Typography (Prose Overrides) --- */
 .prose {
   --tw-prose-body: #5E5E5E;
-  --tw-prose-headings: #1A1A1A;
+  --tw-prose-headings: #262626;
   max-width: none !important;
 }
 
-/* Force Headers to be High-Energy and Visible */
+/* Force Headers to Charcoal Color and Clean Sizing */
 .prose h1 { 
   font-size: 2.25rem !important;
   line-height: 2.5rem !important;
   font-weight: 800 !important;
   margin-bottom: 2rem !important;
-  color: #1A1A1A !important;
+  color: #262626 !important; /* Charcoal dark gray */
   letter-spacing: -0.025em !important;
 }
 @media (min-width: 768px) {
@@ -211,7 +214,7 @@ a {
   font-weight: 700 !important;
   margin-top: 4rem !important;
   margin-bottom: 1.5rem !important;
-  color: #1A1A1A !important;
+  color: #262626 !important; /* Charcoal dark gray */
   border-left: 4px solid #5A7A8F !important;
   padding-left: 1.5rem !important;
 }
@@ -221,7 +224,13 @@ a {
   font-weight: 700 !important;
   margin-top: 3rem !important;
   margin-bottom: 1rem !important;
-  color: #1A1A1A !important;
+  color: #262626 !important; /* Charcoal dark gray */
+}
+
+.prose h4 { 
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  color: #262626 !important; /* Charcoal dark gray */
 }
 
 .prose a,
@@ -239,8 +248,8 @@ a {
 
 .prose a:hover,
 .article-body a:hover {
-  color: #1A1A1A !important;
-  text-decoration-color: #1A1A1A !important;
+  color: #262626 !important;
+  text-decoration-color: #262626 !important;
   text-shadow: none;
 }
 
@@ -269,7 +278,7 @@ a {
   margin-bottom: 3rem !important;
   width: 100% !important;
   border-collapse: collapse !important;
-  border-top: 2px solid #1A1A1A !important;
+  border-top: 2px solid #262626 !important;
 }
 
 .prose th,
@@ -281,14 +290,14 @@ a {
   line-height: 1.4 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.1em !important;
-  color: #1A1A1A !important;
+  color: #262626 !important;
   text-align: left !important;
   border-bottom: 2px solid #E5E5E5 !important;
 }
 
 .prose td {
   padding: 1.25rem 1rem !important;
-  color: #1A1A1A !important; /* Near-black Text */
+  color: #262626 !important; /* Charcoal Text */
   font-size: 0.95rem !important;
   line-height: 1.6 !important;
   border-bottom: 1px solid #E5E5E5 !important;
@@ -304,7 +313,6 @@ a {
 }
 
 /* Key Takeaway / Light Blocks (Refined) */
-/* We target blocks that have a white/light background from WordPress */
 .prose .wp-block-group,
 .prose .wp-block-columns,
 .prose .wp-block-group.has-background,
@@ -313,11 +321,11 @@ a {
 .prose div[style*="background-color"] {
   height: auto !important;
   min-height: 0 !important;
-  padding: 1.5rem 0 !important; /* blend without extra box padding */
+  padding: 1.5rem 0 !important;
   margin: 2rem 0 !important;
 }
 
-/* Force dark/transparent styling for standard groups and columns to blend with the page */
+/* Force clean styling for standard groups and columns to blend with the page */
 .prose div[style*="background-color: #ffffff"],
 .prose div[style*="background-color:#ffffff"],
 .prose .has-white-background-color,
@@ -326,7 +334,7 @@ a {
 .prose .wp-block-group.has-background,
 .prose .wp-block-columns.has-background {
   background: transparent !important;
-  color: #cbd5e1 !important;
+  color: #5E5E5E !important;
   border: none !important;
   box-shadow: none !important;
 }
@@ -343,30 +351,30 @@ a {
 .prose div[style*="background-color"] h1,
 .prose div[style*="background-color"] h2,
 .prose div[style*="background-color"] h3,
-.prose div[style*="background-color"] p,
 .prose div[style*="background-color"] strong,
-.prose .has-white-background-color li,
 .prose .has-white-background-color strong,
-.prose .has-white-background-color a,
-.prose .has-light-gray-background-color li,
 .prose .has-light-gray-background-color strong,
-.prose .has-light-gray-background-color a,
-.prose .has-very-light-gray-background-color li,
 .prose .has-very-light-gray-background-color strong,
-.prose .has-very-light-gray-background-color a,
 .prose .wp-block-group.has-background h1,
 .prose .wp-block-group.has-background h2,
 .prose .wp-block-group.has-background h3,
-.prose .wp-block-group.has-background p,
-.prose .wp-block-group.has-background li,
 .prose .wp-block-group.has-background strong,
 .prose .wp-block-columns.has-background h1,
 .prose .wp-block-columns.has-background h2,
 .prose .wp-block-columns.has-background h3,
-.prose .wp-block-columns.has-background p,
-.prose .wp-block-columns.has-background li,
 .prose .wp-block-columns.has-background strong {
-  color: #cbd5e1 !important;
+  color: #262626 !important;
+}
+
+.prose div[style*="background-color"] p,
+.prose .has-white-background-color li,
+.prose .has-light-gray-background-color li,
+.prose .has-very-light-gray-background-color li,
+.prose .wp-block-group.has-background p,
+.prose .wp-block-group.has-background li,
+.prose .wp-block-columns.has-background p,
+.prose .wp-block-columns.has-background li {
+  color: #5E5E5E !important;
 }
 
 .prose .has-white-background-color h2,
@@ -378,11 +386,11 @@ a {
   margin-top: 0 !important;
   margin-bottom: 1.5rem !important;
   padding-left: 1rem !important;
-  border-left: 4px solid #06b6d4 !important;
+  border-left: 4px solid #5A7A8F !important;
   font-size: 1.875rem !important;
   line-height: 2.25rem !important;
   font-weight: 700 !important;
-  color: #ffffff !important;
+  color: #262626 !important;
 }
 
 .prose .has-white-background-color ul,
@@ -391,7 +399,7 @@ a {
 .prose .wp-block-group.has-background ul,
 .prose .wp-block-columns.has-background ul,
 .prose div[style*="background-color"] ul {
-  color: #cbd5e1 !important;
+  color: #5E5E5E !important;
   padding-left: 1.5rem !important;
 }
 
@@ -419,8 +427,8 @@ a {
 .prose div[style*="background-color"] a,
 .prose .geo-key-takeaways a,
 .prose [data-geo-injected="key-takeaways"] a {
-  color: #60a5fa !important;
-  text-decoration-color: rgba(96, 165, 250, 0.7) !important;
+  color: #5A7A8F !important;
+  text-decoration-color: rgba(90, 122, 143, 0.7) !important;
 }
 
 .prose .has-white-background-color a:hover,
@@ -431,8 +439,8 @@ a {
 .prose div[style*="background-color"] a:hover,
 .prose .geo-key-takeaways a:hover,
 .prose [data-geo-injected="key-takeaways"] a:hover {
-  color: #93c5fd !important;
-  text-decoration-color: rgba(147, 197, 253, 0.95) !important;
+  color: #262626 !important;
+  text-decoration-color: #262626 !important;
 }
 
 .prose .has-white-background-color li + li,
@@ -465,14 +473,14 @@ a {
 /* WordPress injected takeaway summary block */
 .prose .geo-key-takeaways,
 .prose [data-geo-injected="key-takeaways"] {
-  background: #F4F6F8 !important; /* Cool pale gray background */
-  color: #333333 !important;      /* Crisp charcoal body text */
+  background: #F8FAFC !important; /* Cool pale gray background */
+  color: #262626 !important;      /* Crisp charcoal body text */
   border: 1px solid #E5E5E5 !important;
   border-left: 4px solid #5A7A8F !important; /* Steel blue left accent border */
-  border-radius: 18px !important;
-  padding: 2rem 2.25rem !important;
+  border-radius: 12px !important;
+  padding: 1.75rem 2rem !important;
   margin: 0 0 24px 0 !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important; /* Soft floating shadow */
+  box-shadow: none !important;
   backdrop-filter: none !important;
 }
 
@@ -481,7 +489,7 @@ a {
   margin: 0 0 1.25rem 0 !important;
   padding-left: 0 !important;
   border-left: 0 !important;
-  color: #2C3E50 !important; /* Crisp dark slate heading */
+  color: #262626 !important; /* Charcoal heading */
   font-size: 1.875rem !important;
   line-height: 2.25rem !important;
   font-weight: 700 !important;
@@ -492,7 +500,7 @@ a {
 .prose [data-geo-injected="key-takeaways"] ul {
   margin: 0 !important;
   padding-left: 1.5rem !important;
-  color: #333333 !important; /* Crisp charcoal text */
+  color: #262626 !important; /* Charcoal text */
   list-style: disc !important;
   list-style-position: outside !important;
 }
@@ -501,7 +509,7 @@ a {
 .prose [data-geo-injected="key-takeaways"] li,
 .prose .geo-key-takeaways p,
 .prose [data-geo-injected="key-takeaways"] p {
-  color: #333333 !important; /* Crisp charcoal text */
+  color: #262626 !important; /* Charcoal text */
   font-size: 1.05rem !important;
   line-height: 1.8 !important;
 }
@@ -519,18 +527,32 @@ a {
 }
 
 .prose img {
-  margin-top: 4rem !important;
-  margin-bottom: 4rem !important;
-  border-radius: 1.5rem !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+  border-radius: 1rem !important;
+  border: 1px solid #E5E5E5 !important;
 }
 
-.prose blockquote {
-  border-left: 4px solid #06b6d4 !important;
-  background-color: rgba(15, 23, 42, 0.5) !important;
+/* Light, high-contrast blockquote highlight */
+.prose blockquote,
+.article-body blockquote {
+  border: 1px solid #E5E5E5 !important;
+  border-left: 4px solid #5A7A8F !important;
+  background-color: #F8FAFC !important; /* Light pale background */
   padding: 1.5rem 2rem !important;
-  border-radius: 0 1rem 1rem 0 !important;
-  color: #f1f5f9 !important;
+  border-radius: 0 0.75rem 0.75rem 0 !important;
+  color: #262626 !important;
+  margin: 2.5rem 0 !important;
+  box-shadow: none !important;
+}
+
+.prose blockquote p,
+.article-body blockquote p {
+  color: #262626 !important; /* Charcoal dark font for strong contrast */
+  font-size: 1.1rem !important;
+  line-height: 1.75 !important;
+  font-style: italic !important;
+  margin: 0 !important;
 }
 
 /* Hide the redundant context/summary box before the article content */
@@ -538,64 +560,41 @@ a {
   display: none !important;
 }
 
-/* WordPress & generic code/pre block styling */
+/* Clean, light code block styling */
 .prose pre,
-.prose code,
-.article-body pre,
-.article-body code {
+.article-body pre {
+  background-color: #F8FAFC !important;
+  border: 1px solid #E5E5E5 !important;
+  border-radius: 0.75rem !important;
+  padding: 1.25rem 1.5rem !important;
+  color: #262626 !important;
+  font-family: var(--font-mono) !important;
+  overflow-x: auto !important;
   white-space: pre-wrap !important;
   word-wrap: break-word !important;
   word-break: break-word !important;
 }
 
-.prose pre,
-.article-body pre {
-  background-color: rgba(15, 23, 42, 0.6) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  border-radius: 1rem !important;
-  padding: 1.25rem 1.5rem !important;
-  color: #cbd5e1 !important;
-  font-family: var(--font-mono) !important;
-  overflow-x: auto !important;
-}
-
 .prose code,
 .article-body code {
-  color: #22d3ee !important;
-  background-color: rgba(34, 211, 238, 0.1) !important;
+  color: #5A7A8F !important;
+  background-color: rgba(90, 122, 143, 0.08) !important;
   padding: 0.2rem 0.4rem !important;
   border-radius: 0.375rem !important;
   font-family: var(--font-mono) !important;
   font-size: 0.9em !important;
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
 }
 
 .prose pre code,
 .article-body pre code {
-  color: #cbd5e1 !important;
+  color: #262626 !important;
   background-color: transparent !important;
   padding: 0 !important;
   border-radius: 0 !important;
   font-size: 0.95em !important;
-}
-
-/* Light mode overrides for pre & code */
-html.light .prose pre,
-html.light .article-body pre {
-  background-color: #f1f5f9 !important;
-  border: 1px solid rgba(15, 23, 42, 0.1) !important;
-  color: #0f172a !important;
-}
-
-html.light .prose code,
-html.light .article-body code {
-  color: #0f766e !important;
-  background-color: rgba(13, 148, 136, 0.1) !important;
-}
-
-html.light .prose pre code,
-html.light .article-body pre code {
-  color: #0f172a !important;
-  background-color: transparent !important;
 }
 
 
@@ -658,17 +657,17 @@ html.light .article-body pre code {
 
 /* 5. Typography and High-Contrast Hierarchy */
 h1, .text-5xl, .text-6xl {
-  color: #1A1A1A !important;
+  color: #262626 !important; /* Charcoal dark gray */
   font-weight: 800 !important; /* font-extrabold */
   font-family: var(--font-sans) !important;
 }
 h2, h3, .text-3xl, .text-4xl {
-  color: #1A1A1A !important;
+  color: #262626 !important; /* Charcoal dark gray */
   font-weight: 900 !important; /* font-black */
   font-family: var(--font-sans) !important;
 }
 h4, .text-xl, .text-lg {
-  color: #1A1A1A !important;
+  color: #262626 !important; /* Charcoal dark gray */
   font-weight: 700 !important; /* font-bold */
   font-family: var(--font-sans) !important;
 }
