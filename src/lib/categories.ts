@@ -79,7 +79,7 @@ function parseCsv(csvText: string): Record<string, string>[] {
 
 let categoryCache: Promise<CategoryRecord[]> | undefined;
 
-async function loadCategories() {
+async function loadCategories(): Promise<CategoryRecord[]> {
 	const liveCategories = await fetchAllCategories(100);
 	if (!liveCategories.length) {
 		try {
@@ -102,7 +102,15 @@ async function loadCategories() {
 						children: []
 					};
 				});
-				return csvRecords.filter((category) => category.name && category.slug && category.slug !== 'uncategorized');
+				const validCsv = csvRecords.filter((category) => category.name && category.slug && category.slug !== 'uncategorized');
+				const csvMap = new Map<string, CategoryRecord>(validCsv.map((c) => [c.id, c]));
+				for (const record of csvMap.values()) {
+					if (record.parentCategoryId && csvMap.has(record.parentCategoryId)) {
+						const parent = csvMap.get(record.parentCategoryId)!;
+						parent.children.push(record);
+					}
+				}
+				return Array.from(csvMap.values());
 			}
 		} catch (error) {
 			console.error('Failed to load categories from CSV:', error);
@@ -110,23 +118,40 @@ async function loadCategories() {
 		return FALLBACK_CATEGORIES;
 	}
 
-	const records: CategoryRecord[] = liveCategories
-		.filter((category) => !category.parent)
-		.map((category) => ({
-			id: String(category.id),
-			name: category.name,
-			slug: category.slug,
-			description: category.description,
-			level: 1,
-			parentCategoryId: null,
-			wordpressCategoryId: category.id,
-			wordpressSiteDomain: null,
-			postCount: category.count,
-			children: []
-		}))
-		.filter((category) => category.name && category.slug && category.slug !== 'uncategorized');
+	const validLive = liveCategories.filter((category) => category.name && category.slug && category.slug !== 'uncategorized');
+	const recordMap = new Map<string, CategoryRecord>();
 
-	return records;
+	for (const cat of validLive) {
+		recordMap.set(String(cat.id), {
+			id: String(cat.id),
+			name: cat.name,
+			slug: cat.slug,
+			description: cat.description,
+			level: cat.parent ? 2 : 1,
+			parentCategoryId: cat.parent ? String(cat.parent) : null,
+			wordpressCategoryId: cat.id,
+			wordpressSiteDomain: null,
+			postCount: cat.count,
+			children: []
+		});
+	}
+
+	for (const record of recordMap.values()) {
+		if (record.parentCategoryId && recordMap.has(record.parentCategoryId)) {
+			const parent = recordMap.get(record.parentCategoryId)!;
+			parent.children.push(record);
+		}
+	}
+
+	// Calculate aggregate post counts for parent categories if direct count is 0
+	for (const record of recordMap.values()) {
+		if (record.children.length > 0) {
+			const childrenCount = record.children.reduce((acc, child) => acc + (child.postCount ?? 0), 0);
+			record.postCount = (record.postCount ?? 0) + childrenCount;
+		}
+	}
+
+	return Array.from(recordMap.values());
 }
 
 export async function getAllCategories() {

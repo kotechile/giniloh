@@ -41,6 +41,42 @@ const breadcrumbSchema = {
 		}
 	]
 };
+
+function getCategoryIcon(slug: string) {
+	if (slug.includes('artificial') || slug.includes('ai-') || slug.includes('tech') || slug.includes('agent')) {
+		return {
+			color: 'text-[#5A7A8F]',
+			bg: 'bg-[#5A7A8F]/10',
+			svg: '<path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />'
+		};
+	}
+	if (slug.includes('purchase') || slug.includes('asset') || slug.includes('buy')) {
+		return {
+			color: 'text-[#B85C5C]',
+			bg: 'bg-[#B85C5C]/10',
+			svg: '<path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />'
+		};
+	}
+	if (slug.includes('mental') || slug.includes('strategy') || slug.includes('framework')) {
+		return {
+			color: 'text-[#C88D4E]',
+			bg: 'bg-[#C88D4E]/10',
+			svg: '<path stroke-linecap="round" stroke-linejoin="round" d="M12 10V4m0 0L9 7m3-3l3 3M12 14v6m0 0l-3-3m3 3l3-3M4 12h16M4 12a2 2 0 100-4 2 2 0 000 4zm16 0a2 2 0 100-4 2 2 0 000 4z" />'
+		};
+	}
+	if (slug.includes('money') || slug.includes('wealth') || slug.includes('finance')) {
+		return {
+			color: 'text-[#4D8B6F]',
+			bg: 'bg-[#4D8B6F]/10',
+			svg: '<path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />'
+		};
+	}
+	return {
+		color: 'text-[#5A7A8F]',
+		bg: 'bg-gray-100',
+		svg: '<path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2" />'
+	};
+}
 ---
 
 <BaseLayout
@@ -58,60 +94,69 @@ const breadcrumbSchema = {
 				Explore Our Frameworks
 			</h1>
 			<p class="mt-4 text-lg text-[#5E5E5E]">
-				Deep-dive articles and practical guides organized by financial and career decision areas.
+				Deep-dive articles and practical guides organized by financial, tech, and career decision areas.
 			</p>
 		</div>
 
-		<div class="mx-auto mt-16 max-w-5xl grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+		<div class="mx-auto mt-16 max-w-5xl grid gap-8 sm:grid-cols-2">
 			{categories.map((category) => {
-				const isBuying = category.slug === 'buying-decisions';
-				const isFrameworks = category.slug === 'decision-frameworks';
-				const isMoney = category.slug === 'money-decisions';
+				const icon = getCategoryIcon(category.slug);
+				const hasChildren = category.children && category.children.length > 0;
 				
 				return (
-					<a
-						href={`/categories/${category.slug}/`}
-						class="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-[#E5E5E5] bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#1A1A1A] hover:shadow-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A1A1A]"
+					<div
+						class="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-[#E5E5E5] bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#1A1A1A]"
 					>
 						<div>
-							<div class="mb-6">
-								{isBuying && (
-									<svg class="w-10 h-10 text-[#5A7A8F] transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-										<path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
-									</svg>
-								)}
-								{isFrameworks && (
-									<svg class="w-10 h-10 text-[#5A7A8F] transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-										<path stroke-linecap="round" stroke-linejoin="round" d="M12 10V4m0 0L9 7m3-3l3 3M12 14v6m0 0l-3-3m3 3l3-3M4 12h16M4 12a2 2 0 100-4 2 2 0 000 4zm16 0a2 2 0 100-4 2 2 0 000 4z" />
-									</svg>
-								)}
-								{isMoney && (
-									<svg class="w-10 h-10 text-[#5A7A8F] transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-										<path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-									</svg>
-								)}
-								{!isBuying && !isFrameworks && !isMoney && (
-									<svg class="w-10 h-10 text-[#5A7A8F] transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-										<path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2" />
-									</svg>
-								)}
+							<div class="flex items-center justify-between">
+								<div class={`p-3 rounded-xl ${icon.bg} ${icon.color}`}>
+									<svg class="w-7 h-7 transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" set:html={icon.svg} />
+								</div>
+								<span class="text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#8C8C8C]">
+									{category.postCount !== null ? `${category.postCount} Article${category.postCount === 1 ? '' : 's'}` : 'Guides'}
+								</span>
 							</div>
+
 							<h2 class="mt-6 text-2xl font-black text-[#1A1A1A] tracking-tight group-hover:text-[#5A7A8F] transition">
-								{category.name}
+								<a href={`/categories/${category.slug}/`} class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#1A1A1A]">
+									{category.name}
+								</a>
 							</h2>
 							<p class="mt-4 text-sm leading-relaxed text-[#5E5E5E]">
 								{category.description || 'Guides, templates, and analytics to support decision-making in this area.'}
 							</p>
+
+							{hasChildren && (
+								<div class="mt-6 pt-4 border-t border-[#F0F0F0]">
+									<p class="text-[0.7rem] font-mono font-bold uppercase tracking-widest text-[#8C8C8C] mb-2">
+										Subcategories
+									</p>
+									<div class="flex flex-wrap gap-2">
+										{category.children.map((child) => (
+											<a
+												href={`/categories/${child.slug}/`}
+												class="inline-flex items-center gap-1.5 rounded-lg border border-[#E5E5E5] bg-gray-50/80 px-2.5 py-1 text-xs font-medium text-[#1A1A1A] transition hover:border-[#5A7A8F] hover:bg-[#5A7A8F]/10 hover:text-[#5A7A8F]"
+											>
+												<span>{child.name}</span>
+												{child.postCount ? (
+													<span class="text-[0.65rem] font-mono text-[#8C8C8C]">({child.postCount})</span>
+												) : null}
+											</a>
+										))}
+									</div>
+								</div>
+							)}
 						</div>
-						<div class="mt-8 flex items-center justify-between">
-							<span class="text-xs font-mono font-bold uppercase tracking-[0.25em] text-[#8C8C8C] transition">
-								{category.postCount !== null ? `${category.postCount} Articles` : 'Guides'}
-							</span>
-							<span class="text-sm font-bold text-[#1A1A1A] group-hover:text-[#5A7A8F] flex items-center gap-1">
-								Open Pillar <span aria-hidden="true" class="transition group-hover:translate-x-1 inline-block">→</span>
-							</span>
+
+						<div class="mt-8 flex items-center justify-between pt-4 border-t border-gray-100">
+							<a
+								href={`/categories/${category.slug}/`}
+								class="text-sm font-bold text-[#1A1A1A] group-hover:text-[#5A7A8F] flex items-center gap-1 transition"
+							>
+								Explore Pillar <span aria-hidden="true" class="transition group-hover:translate-x-1 inline-block">→</span>
+							</a>
 						</div>
-					</a>
+					</div>
 				);
 			})}
 		</div>

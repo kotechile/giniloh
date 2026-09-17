@@ -12,14 +12,26 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
+const allCategories = await getAllCategories();
 const category = slug ? await getCategoryBySlug(slug) : null;
 
 if (!category) {
 	return Astro.redirect('/404');
 }
 
-const posts = category.wordpressCategoryId
-	? await fetchPostsByCategory(category.wordpressCategoryId, 20)
+// Find parent category if this is a subcategory
+const parentCategory = category.parentCategoryId
+	? allCategories.find((c) => c.id === category.parentCategoryId || String(c.wordpressCategoryId) === category.parentCategoryId)
+	: null;
+
+// Determine category IDs to fetch: if parent category, include its children IDs so all posts appear
+const categoryIdsToFetch: number[] = [
+	category.wordpressCategoryId,
+	...category.children.map((c) => c.wordpressCategoryId)
+].filter((id): id is number => typeof id === 'number');
+
+const posts = categoryIdsToFetch.length > 0
+	? await fetchPostsByCategory(categoryIdsToFetch, 30)
 	: [];
 
 const siteUrl = Astro.site?.toString() || 'https://giniloh.com/';
@@ -41,29 +53,47 @@ const categorySchema = {
 	}))
 };
 
+const breadcrumbListItems = [
+	{
+		"@type": "ListItem",
+		"position": 1,
+		"name": "Home",
+		"item": siteUrl
+	},
+	{
+		"@type": "ListItem",
+		"position": 2,
+		"name": "Categories",
+		"item": categoriesUrl
+	}
+];
+
+if (parentCategory) {
+	breadcrumbListItems.push({
+		"@type": "ListItem",
+		"position": 3,
+		"name": parentCategory.name,
+		"item": new URL(`/categories/${parentCategory.slug}/`, siteUrl).toString()
+	});
+	breadcrumbListItems.push({
+		"@type": "ListItem",
+		"position": 4,
+		"name": category.name,
+		"item": categoryUrl
+	});
+} else {
+	breadcrumbListItems.push({
+		"@type": "ListItem",
+		"position": 3,
+		"name": category.name,
+		"item": categoryUrl
+	});
+}
+
 const breadcrumbSchema = {
 	"@context": "https://schema.org",
 	"@type": "BreadcrumbList",
-	"itemListElement": [
-		{
-			"@type": "ListItem",
-			"position": 1,
-			"name": "Home",
-			"item": siteUrl
-		},
-		{
-			"@type": "ListItem",
-			"position": 2,
-			"name": "Categories",
-			"item": categoriesUrl
-		},
-		{
-			"@type": "ListItem",
-			"position": 3,
-			"name": category.name,
-			"item": categoryUrl
-		}
-	]
+	"itemListElement": breadcrumbListItems
 };
 ---
 
@@ -77,17 +107,41 @@ const breadcrumbSchema = {
 
 	<div class="relative py-12">
 		<div class="mx-auto max-w-3xl">
-			<a href="/categories/" class="btn-inline text-sm mb-6">
-				<span aria-hidden="true">&lt;-</span> Back to categories
-			</a>
+			{parentCategory ? (
+				<a href={`/categories/${parentCategory.slug}/`} class="btn-inline text-sm mb-6 inline-flex items-center gap-1">
+					<span aria-hidden="true">&larr;</span> Back to {parentCategory.name}
+				</a>
+			) : (
+				<a href="/categories/" class="btn-inline text-sm mb-6 inline-flex items-center gap-1">
+					<span aria-hidden="true">&larr;</span> Back to categories
+				</a>
+			)}
 			
-			<p class="section-eyebrow mt-4">Decision Pillar</p>
+			<p class="section-eyebrow mt-4">
+				{parentCategory ? `Subcategory of ${parentCategory.name}` : 'Decision Pillar'}
+			</p>
 			<h1 class="mt-4 text-4xl font-black tracking-tight text-[#1A1A1A] sm:text-5xl leading-tight">
 				{category.name}
 			</h1>
 			<p class="mt-4 text-lg text-[#5E5E5E]">
 				{category.description || 'Guides, templates, and analytics to support decision-making in this area.'}
 			</p>
+
+			{category.children && category.children.length > 0 && (
+				<div class="mt-8 flex flex-wrap items-center gap-2 border-t border-gray-100 pt-6">
+					<span class="text-xs font-mono font-bold uppercase tracking-widest text-[#8C8C8C] mr-2">
+						Subcategories:
+					</span>
+					{category.children.map((child) => (
+						<a
+							href={`/categories/${child.slug}/`}
+							class="rounded-lg border border-[#E5E5E5] bg-white px-3 py-1.5 text-xs font-medium text-[#1A1A1A] transition hover:border-[#5A7A8F] hover:bg-[#5A7A8F]/10 hover:text-[#5A7A8F]"
+						>
+							{child.name} {child.postCount ? `(${child.postCount})` : ''}
+						</a>
+					))}
+				</div>
+			)}
 		</div>
 
 		<div class="mx-auto mt-16 max-w-5xl">
@@ -117,6 +171,8 @@ const breadcrumbSchema = {
 								)}
 								<div class="p-6">
 									<div class="flex items-center gap-3 font-mono text-[0.65rem] uppercase tracking-widest text-[#8C8C8C]">
+										<span class="text-[#5A7A8F] font-bold">{post.categoryLabel ?? category.name}</span>
+										<span>•</span>
 										<span>{post.date ? new Date(post.date).toLocaleDateString() : 'Live'}</span>
 									</div>
 									<h2 class="mt-4 text-xl font-bold leading-tight text-[#1A1A1A] transition group-hover:text-[#5A7A8F]">
@@ -129,7 +185,7 @@ const breadcrumbSchema = {
 							</div>
 							<div class="p-6 pt-0 mt-4">
 								<span class="text-sm font-bold text-[#5A7A8F] group-hover:text-[#1A1A1A] flex items-center gap-1">
-									Read Article <span aria-hidden="true" class="transition group-hover:translate-x-1 inline-block">-></span>
+									Read Article <span aria-hidden="true" class="transition group-hover:translate-x-1 inline-block">&rarr;</span>
 								</span>
 							</div>
 						</a>

@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { calculatorTools } from '../lib/calculators/metadata';
-import { getTopLevelCategories } from '../lib/categories';
+import { getAllCategories } from '../lib/categories';
 import { fetchAllPosts } from '../lib/wordpress';
 
 const staticPaths = ['/', '/calculators/', '/categories/', '/about/'];
@@ -12,7 +12,7 @@ function urlEntry(site: URL, path: string, lastmod?: string) {
 
 export const GET: APIRoute = async ({ site }) => {
 	const baseUrl = site ?? new URL('https://giniloh.com');
-	const [categories, posts] = await Promise.all([getTopLevelCategories(), fetchAllPosts()]);
+	const [categories, posts] = await Promise.all([getAllCategories(), fetchAllPosts()]);
 	
 	const today = new Date().toISOString().split('T')[0];
 	const entries: string[] = [];

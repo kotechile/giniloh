@@ -196,9 +196,12 @@ async function fetchWordPress(endpoint: string, query: Record<string, string | n
 }
 
 function normalizeCategory(category: WordPressCategoryResponse): WordPressCategory {
+	const rawName = stripHtml(category.name) || 'Untitled category';
+	const cleanName = rawName.replace(/:\s*$/, '').trim();
+
 	return {
 		id: category.id,
-		name: stripHtml(category.name) || 'Untitled category',
+		name: cleanName,
 		slug: category.slug?.trim() || `category-${category.id}`,
 		description: stripHtml(category.description),
 		parent: category.parent && category.parent > 0 ? category.parent : null,
@@ -222,10 +225,11 @@ export async function fetchLatestPosts(limit = 6) {
 	return posts.map(normalizePost);
 }
 
-export async function fetchPostsByCategory(categoryId: number, limit = 12) {
+export async function fetchPostsByCategory(categoryId: number | number[] | string, limit = 12) {
+	const categoryParam = Array.isArray(categoryId) ? categoryId.join(',') : String(categoryId);
 	const posts = await fetchWordPress('posts', {
 		_embed: 1,
-		categories: categoryId,
+		categories: categoryParam,
 		per_page: limit
 	});
 	return posts.map(normalizePost);
