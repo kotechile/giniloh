@@ -285,31 +285,49 @@ a {
 .article-body th {
   padding: 1.25rem 1rem !important;
   font-family: var(--font-mono), ui-monospace, monospace !important;
-  font-size: 0.95rem !important;
+  font-size: 1.05rem !important;
   font-weight: 700 !important;
   line-height: 1.4 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.1em !important;
+  letter-spacing: 0.08em !important;
   color: #262626 !important;
   text-align: left !important;
   border-bottom: 2px solid #E5E5E5 !important;
 }
 
-.prose td {
+.prose td,
+.article-body td {
   padding: 1.25rem 1rem !important;
   color: #262626 !important; /* Charcoal Text */
-  font-size: 0.95rem !important;
-  line-height: 1.6 !important;
+  font-size: 1.15rem !important;
+  line-height: 1.7 !important;
   border-bottom: 1px solid #E5E5E5 !important;
 }
 
-.prose tr:last-child td {
+.prose td p,
+.article-body td p,
+.prose td span,
+.article-body td span,
+.prose td strong,
+.article-body td strong,
+.prose th p,
+.article-body th p,
+.prose th span,
+.article-body th span {
+  font-size: inherit !important;
+  line-height: inherit !important;
+  margin: 0 !important;
+}
+
+.prose tr:last-child td,
+.article-body tr:last-child td {
   border-bottom: none !important;
 }
 
 /* Subtle Row Highlight */
-.prose tr:hover td {
-  background-color: #f9f9f9 !important;
+.prose tr:hover td,
+.article-body tr:hover td {
+  background-color: transparent !important;
 }
 
 /* Key Takeaway / Light Blocks (Refined) */
@@ -795,15 +813,17 @@ button.bg-black {
 .article-body th {
   text-align: left !important;
   color: #1A1A1A !important;
-  font-size: 0.95rem !important;
+  font-size: 1.05rem !important;
   font-weight: 700 !important;
-  letter-spacing: 0.1em !important;
+  letter-spacing: 0.08em !important;
   border-bottom: 2px solid #E5E5E5 !important;
 }
 .prose td,
 .article-body td {
   text-align: left !important;
   color: #1A1A1A !important;
+  font-size: 1.15rem !important;
+  line-height: 1.7 !important;
   border-bottom: 1px solid #E5E5E5 !important;
 }
 .prose tr:hover td,
