@@ -820,8 +820,10 @@ button.bg-black {
 .bg-risk-low, .bg-[#5A7A8F], .bg-cyan-500, .bg-cyan-600, .bg-emerald-500, .bg-emerald-600, .bg-blue-500, .bg-blue-600 { background-color: #5A7A8F !important; }
 
 /* Inactive tracks or indicators */
-.bg-gray-200, .bg-slate-200, .border-gray-200, .border-slate-200 {
+.bg-gray-200, .bg-slate-200 {
   background-color: #E5E5E5 !important;
+}
+.border-gray-200, .border-slate-200 {
   border-color: #E5E5E5 !important;
 }
 
