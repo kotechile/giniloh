@@ -30,19 +30,29 @@ RUN echo 'server { \
     root /usr/share/nginx/html; \
     index index.html; \
 \
-    # 1. Handle Astro Subpages and Static Files \
-    location / { \
-        try_files $uri $uri/ $uri.html /index.html; \
-        add_header Cache-Control "no-cache, no-store, must-revalidate"; \
+    # 1. 301 Redirect dated WordPress URLs (e.g. /2026/06/06/slug/ -> /slug/) \
+    location ~* ^/\d{4}/\d{2}/\d{2}/([^/]+)/?$ { \
+        return 301 /$1/; \
     } \
 \
-    # 2. Cache hashed static assets \
+    # 2. 301 Redirect legacy WordPress pages \
+    location ~* ^/home/about-us/?$ { \
+        return 301 /about/; \
+    } \
+    location ~* ^/home/career/?$ { \
+        return 301 /calculators/career-ai-resilience/; \
+    } \
+    location ~* ^/tutorials/(coffee-beans|espresso-dial-in)/?$ { \
+        return 301 /calculators/coffee-arbitrage/; \
+    } \
+\
+    # 3. Cache hashed static assets \
     location /_astro/ { \
         expires 1y; \
         add_header Cache-Control "public, max-age=31536000, immutable"; \
     } \
 \
-    # 3. Proxy ALL WordPress Backend paths \
+    # 4. Proxy ALL WordPress Backend paths \
     location ~* ^/(wp-content|wp-includes|wp-json|wp-admin|wp-login\.php|wp-cron\.php) { \
         proxy_pass https://cms.giniloh.com; \
         proxy_set_header Host cms.giniloh.com; \
@@ -55,8 +65,22 @@ RUN echo 'server { \
         proxy_busy_buffers_size 256k; \
     } \
 \
-    # Fix for Astro 404s to prevent loop \
-    error_page 404 /index.html; \
+    # 5. Direct 404 route handling \
+    location ~* ^/404/?$ { \
+        return 404; \
+    } \
+\
+    # 6. Handle Astro Subpages and Static Files \
+    location / { \
+        try_files $uri $uri/ $uri.html =404; \
+        add_header Cache-Control "no-cache, no-store, must-revalidate"; \
+    } \
+\
+    # 7. Proper 404 status handling \
+    error_page 404 /404.html; \
+    location = /404.html { \
+        internal; \
+    } \
 }' > /etc/nginx/conf.d/default.conf
 
 COPY --from=build /app/dist /usr/share/nginx/html

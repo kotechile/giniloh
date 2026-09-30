@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+	title="404 - Page Not Found | Gini Loh"
+	description="The page you are looking for does not exist or has been moved."
+>
+	<meta slot="head" name="robots" content="noindex, follow" />
+
+	<section class="pt-28 pb-20 max-w-4xl mx-auto text-center">
+		<div class="inline-flex items-center gap-2 px-3 py-1 bg-red-50 border border-red-200 text-red-600 rounded-full font-mono text-xs uppercase tracking-widest mb-6">
+			<span>HTTP_STATUS: 404</span>
+		</div>
+		
+		<h1 class="text-5xl md:text-7xl font-black tracking-tight text-[#1A1A1A] leading-tight">
+			Signal Lost.
+		</h1>
+		
+		<p class="mt-6 text-lg text-[#5E5E5E] font-mono max-w-xl mx-auto leading-relaxed">
+			> The requested resource could not be located. It may have been archived, relocated, or decommissioned.
+		</p>
+
+		<div class="mt-10 flex flex-wrap justify-center gap-4">
+			<a
+				href="/"
+				class="rounded-xl bg-[#1A1A1A] px-6 py-3.5 text-sm font-bold text-white shadow-sm transition hover:bg-[#333333] active:scale-95 font-mono"
+			>
+				&larr; Return to Dashboard
+			</a>
+			<a
+				href="/calculators/"
+				class="rounded-xl border border-gray-200 bg-white px-6 py-3.5 text-sm font-bold text-[#1A1A1A] transition hover:bg-gray-50 active:scale-95 font-mono"
+			>
+				Explore Calculators
+			</a>
+		</div>
+
+		<div class="mt-16 p-6 rounded-2xl border border-gray-200 bg-gray-50/50 text-left max-w-lg mx-auto">
+			<h2 class="text-xs font-mono uppercase tracking-widest text-[#8C8C8C] mb-3">Popular Navigation</h2>
+			<ul class="space-y-2 text-sm font-mono">
+				<li><a href="/calculators/career-ai-resilience/" class="text-[#5A7A8F] hover:underline">&rarr; Career AI Resilience Calculator</a></li>
+				<li><a href="/calculators/total-comp/" class="text-[#5A7A8F] hover:underline">&rarr; Total Compensation Calculator</a></li>
+				<li><a href="/categories/" class="text-[#5A7A8F] hover:underline">&rarr; Strategy Brief Categories</a></li>
+				<li><a href="/about/" class="text-[#5A7A8F] hover:underline">&rarr; About Gini Loh</a></li>
+			</ul>
+		</div>
+	</section>
+</BaseLayout>

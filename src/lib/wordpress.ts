@@ -142,13 +142,31 @@ function normalizePost(post: WordPressPostResponse): WordPressPost {
 		return `${open}${cleanContent}${close}`;
 	});
 
+	// Rewrite internal WordPress links to frontend relative links (preserving uploads / assets)
+	if (apiBase) {
+		const escapedApiBase = apiBase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+		// Category links: https://cms.giniloh.com/category/xyz/ -> /categories/xyz/
+		htmlContent = htmlContent.replace(
+			new RegExp(`href=["']${escapedApiBase}/category/([^"'/]+)/?["']`, 'gi'),
+			'href="/categories/$1/"'
+		);
+		// Post links: https://cms.giniloh.com/post-slug/ -> /post-slug/ (excluding wp-content, wp-includes, wp-admin, wp-json)
+		htmlContent = htmlContent.replace(
+			new RegExp(`href=["']${escapedApiBase}/(?!wp-content|wp-includes|wp-admin|wp-json)([^"']+)["']`, 'gi'),
+			(_match, path) => {
+				const cleanPath = path.replace(/^\/+/, '').replace(/\/+$/, '');
+				return `href="/${cleanPath}/"`;
+			}
+		);
+	}
+
 	return {
 		id: post.id,
 		title: stripHtml(post.title?.rendered) || 'Untitled post',
 		excerpt: stripHtml(post.excerpt?.rendered),
 		content: htmlContent,
 		slug: post.slug || '',
-		link: post.link ?? '#',
+		link: post.slug ? `/${post.slug}/` : (post.link ?? '#'),
 		date: post.date ?? null,
 		modified: post.modified ?? post.date ?? null,
 		featuredImage,

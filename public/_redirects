@@ -1,0 +1,7 @@
+# 301 Redirects for legacy WordPress paths
+/home/about-us        /about/                             301
+/home/about-us/       /about/                             301
+/home/career          /calculators/career-ai-resilience/  301
+/home/career/         /calculators/career-ai-resilience/  301
+/tutorials/coffee-beans/       /calculators/coffee-arbitrage/ 301
+/tutorials/espresso-dial-in/   /calculators/coffee-arbitrage/ 301
