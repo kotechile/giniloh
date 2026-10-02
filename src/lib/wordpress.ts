@@ -142,6 +142,18 @@ function normalizePost(post: WordPressPostResponse): WordPressPost {
 		return `${open}${cleanContent}${close}`;
 	});
 
+	// Clean up wpautop formatting inside and around SVG blocks.
+	// WordPress wpautop injects <p>, </p>, and <br> tags inside raw SVGs on newlines,
+	// which breaks the SVG DOM tree in browsers and forces the <svg> to close prematurely.
+	htmlContent = htmlContent.replace(/<svg([\s\S]*?)<\/svg>/gi, (_match, inner) => {
+		const cleanInner = inner
+			.replace(/<\/?p[^>]*>/gi, '')
+			.replace(/<br\s*\/?>/gi, '');
+		return `<svg${cleanInner}</svg>`;
+	});
+	htmlContent = htmlContent.replace(/<p>\s*(<svg[\s\S]*?<\/svg>)\s*<\/p>/gi, '$1');
+	htmlContent = htmlContent.replace(/<p>\s*<\/p>/gi, '');
+
 	// Rewrite internal WordPress links to frontend relative links (preserving uploads / assets)
 	if (apiBase) {
 		const escapedApiBase = apiBase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

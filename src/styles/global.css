@@ -962,11 +962,14 @@ input[type="checkbox"] {
   padding: 1rem !important; /* 16px */
 }
 
-
-
-
-
-
+/* Responsive SVG support for embedded WordPress graphics */
+.article-body svg {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 
