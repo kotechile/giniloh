@@ -156,6 +156,12 @@ const breadcrumbSchema = {
       <h1 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-[#262626] leading-[1.1]">
         {post.title}
       </h1>
+
+      {post.excerpt && (
+        <p class="text-lg md:text-xl lg:text-2xl text-[#5E5E5E] font-normal leading-relaxed">
+          {post.excerpt}
+        </p>
+      )}
     </div>
 
     <!-- Main Grid: Fluid and Responsive -->
