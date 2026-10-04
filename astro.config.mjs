@@ -15,7 +15,13 @@ export default defineConfig({
     '/tutorials/espresso-dial-in': '/calculators/coffee-arbitrage',
     '/tutorials/espresso-dial-in/': '/calculators/coffee-arbitrage',
     '/tutorials/coffee-beans': '/calculators/coffee-arbitrage',
-    '/tutorials/coffee-beans/': '/calculators/coffee-arbitrage'
+    '/tutorials/coffee-beans/': '/calculators/coffee-arbitrage',
+    '/apps': 'https://apps.giniloh.com/showcase',
+    '/apps/': 'https://apps.giniloh.com/showcase',
+    '/showcase': 'https://apps.giniloh.com/showcase',
+    '/showcase/': 'https://apps.giniloh.com/showcase',
+    '/pro-apps': 'https://apps.giniloh.com/showcase',
+    '/pro-apps/': 'https://apps.giniloh.com/showcase'
   },
   integrations: [react()],
   vite: {
