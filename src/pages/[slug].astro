@@ -156,12 +156,6 @@ const breadcrumbSchema = {
       <h1 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight text-[#262626] leading-[1.1]">
         {post.title}
       </h1>
-
-      {post.excerpt && (
-        <p class="text-lg md:text-xl lg:text-2xl text-[#5E5E5E] font-normal leading-relaxed">
-          {post.excerpt}
-        </p>
-      )}
     </div>
 
     <!-- Main Grid: Fluid and Responsive -->
@@ -171,7 +165,7 @@ const breadcrumbSchema = {
       <main class="flex-1 min-w-0">
         <!-- Featured Image -->
         {post.featuredImage && (
-          <div class="relative group mb-16">
+          <div class="relative group mb-10">
             <div class="relative aspect-video lg:aspect-[21/9] rounded-3xl overflow-hidden border border-gray-200 shadow-sm">
               <img 
                 src={post.featuredImage} 
@@ -179,6 +173,15 @@ const breadcrumbSchema = {
                 class="w-full h-full object-cover scale-[1.01]"
               />
             </div>
+          </div>
+        )}
+
+        <!-- Executive Excerpt / Lead-in Block -->
+        {post.excerpt && (
+          <div class="mb-12 rounded-2xl border border-[#E5E5E5] bg-[#F8FAFC] p-6 sm:p-8">
+            <p class="text-[18px] sm:text-[19px] md:text-[20px] text-[#4B5563] font-normal leading-relaxed md:leading-[1.75]">
+              {post.excerpt}
+            </p>
           </div>
         )}
 
