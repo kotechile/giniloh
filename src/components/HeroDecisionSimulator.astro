@@ -1,0 +1,393 @@
+---
+// Interactive UI-Centric Hero Visual: Live Payback & TCO Decision Engine Preview
+---
+
+<div class="relative w-full max-w-xl mx-auto">
+	<!-- Subtle ambient glow backing -->
+	<div class="absolute -inset-1 rounded-3xl bg-gradient-to-r from-slate-100 to-gray-100 opacity-60 blur-xl"></div>
+
+	<div class="relative rounded-2xl border border-[#E5E5E5] bg-white shadow-[0_20px_50px_-12px_rgba(0,0,0,0.08)] overflow-hidden">
+		<!-- Window Header / Chrome -->
+		<div class="flex items-center justify-between border-b border-[#E5E5E5] bg-gray-50/70 px-4 py-3">
+			<div class="flex items-center gap-2">
+				<div class="flex gap-1.5">
+					<span class="h-2.5 w-2.5 rounded-full bg-gray-300"></span>
+					<span class="h-2.5 w-2.5 rounded-full bg-gray-300"></span>
+					<span class="h-2.5 w-2.5 rounded-full bg-gray-300"></span>
+				</div>
+				<span class="ml-2 font-mono text-[11px] font-bold tracking-wider text-[#475569] uppercase">
+					SIMULATOR // TCO_WATERFALL
+				</span>
+			</div>
+			<div class="flex items-center gap-2">
+				<span class="inline-flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-0.5 font-mono text-[10px] font-bold tracking-wider text-emerald-700">
+					<span class="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+					LIVE MODEL
+				</span>
+			</div>
+		</div>
+
+		<!-- Model Tabs -->
+		<div class="flex border-b border-[#E5E5E5] bg-white px-4 pt-2 gap-4 text-xs font-mono">
+			<button 
+				type="button" 
+				id="tab-reloc"
+				class="hero-model-tab border-b-2 border-[#1A1A1A] pb-2 font-bold text-[#1A1A1A] transition"
+				data-model="relocation"
+			>
+				Career Relocation
+			</button>
+			<button 
+				type="button" 
+				id="tab-gpu"
+				class="hero-model-tab border-b-2 border-transparent pb-2 text-[#8C8C8C] hover:text-[#1A1A1A] transition"
+				data-model="gpu"
+			>
+				GPU Buy vs Cloud
+			</button>
+			<button 
+				type="button" 
+				id="tab-lease"
+				class="hero-model-tab border-b-2 border-transparent pb-2 text-[#8C8C8C] hover:text-[#1A1A1A] transition"
+				data-model="lease"
+			>
+				Lease Exit
+			</button>
+		</div>
+
+		<!-- Simulator Content -->
+		<div class="p-5 sm:p-6 space-y-6">
+			<!-- Slider Inputs -->
+			<div class="space-y-4 rounded-xl border border-[#E5E5E5] bg-[#F8FAFC] p-4">
+				<!-- Slider 1 -->
+				<div>
+					<div class="flex items-center justify-between text-xs font-mono mb-1.5">
+						<span id="label-param-one" class="font-bold text-[#334155] uppercase tracking-wider">
+							Monthly Value Gain:
+						</span>
+						<span id="readout-param-one" class="font-bold text-[#1A1A1A] text-sm font-mono">
+							+$2,400/mo
+						</span>
+					</div>
+					<input 
+						type="range" 
+						id="hero-slider-one" 
+						min="800" 
+						max="6000" 
+						step="100" 
+						value="2400"
+						class="w-full h-2 rounded-lg bg-[#E5E5E5] accent-[#5A7A8F] cursor-pointer"
+					/>
+				</div>
+
+				<!-- Slider 2 -->
+				<div>
+					<div class="flex items-center justify-between text-xs font-mono mb-1.5">
+						<span id="label-param-two" class="font-bold text-[#334155] uppercase tracking-wider">
+							Upfront Transition Outlay:
+						</span>
+						<span id="readout-param-two" class="font-bold text-[#1A1A1A] text-sm font-mono">
+							$12,000
+						</span>
+					</div>
+					<input 
+						type="range" 
+						id="hero-slider-two" 
+						min="2000" 
+						max="30000" 
+						step="500" 
+						value="12000"
+						class="w-full h-2 rounded-lg bg-[#E5E5E5] accent-[#5A7A8F] cursor-pointer"
+					/>
+				</div>
+			</div>
+
+			<!-- Dynamic KPI Metrics -->
+			<div class="grid grid-cols-2 gap-4 border-y border-[#E5E5E5] py-4">
+				<div>
+					<p class="font-mono text-[10px] uppercase tracking-widest text-[#475569] font-bold">
+						Payback Horizon
+					</p>
+					<p class="mt-1 flex items-baseline gap-1.5">
+						<span id="hero-metric-payback" class="text-3xl sm:text-4xl font-black tracking-tight text-[#1A1A1A]">
+							5.0
+						</span>
+						<span class="font-mono text-xs font-bold text-[#475569]">Months</span>
+					</p>
+				</div>
+				<div class="border-l border-[#E5E5E5] pl-4">
+					<p class="font-mono text-[10px] uppercase tracking-widest text-[#475569] font-bold">
+						3-Year Net Advantage
+					</p>
+					<p class="mt-1 flex items-baseline gap-1.5">
+						<span id="hero-metric-advantage" class="text-3xl sm:text-4xl font-black tracking-tight text-emerald-700">
+							+$74.4k
+						</span>
+					</p>
+				</div>
+			</div>
+
+			<!-- Visualized Payback Waterfall Chart -->
+			<div>
+				<div class="flex items-center justify-between text-xs font-mono mb-2">
+					<span class="font-bold text-[#334155] uppercase tracking-wider">
+						Payback Progression Waterfall
+					</span>
+					<span id="hero-waterfall-badge" class="text-[10px] uppercase font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+						Profitable at Month 5
+					</span>
+				</div>
+
+				<div class="space-y-2 pt-1 font-mono text-[11px]">
+					<!-- Month 0 -->
+					<div class="flex items-center gap-3">
+						<span class="w-16 text-[#64748B] shrink-0 font-bold">M0 (Outlay)</span>
+						<div class="flex-1 h-3 rounded bg-gray-100 overflow-hidden relative">
+							<div class="h-full bg-[#B85C5C] w-[60%] rounded"></div>
+						</div>
+						<span id="wf-m0" class="w-16 text-right font-bold text-[#B85C5C]">-$12.0k</span>
+					</div>
+
+					<!-- Month 3 -->
+					<div class="flex items-center gap-3">
+						<span class="w-16 text-[#64748B] shrink-0">Month 3</span>
+						<div class="flex-1 h-3 rounded bg-gray-100 overflow-hidden relative">
+							<div class="h-full bg-[#C88D4E] w-[40%] rounded"></div>
+						</div>
+						<span id="wf-m3" class="w-16 text-right font-bold text-[#C88D4E]">-$4.8k</span>
+					</div>
+
+					<!-- Breakeven Line -->
+					<div class="flex items-center gap-3">
+						<span class="w-16 text-[#1A1A1A] font-bold shrink-0">Breakeven</span>
+						<div class="flex-1 border-t-2 border-dashed border-[#5A7A8F] relative">
+							<span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#5A7A8F] text-white text-[9px] px-1.5 py-0.2 rounded font-bold">
+								$0 OFFSET
+							</span>
+						</div>
+						<span class="w-16 text-right font-bold text-[#5A7A8F]">Month 5</span>
+					</div>
+
+					<!-- Month 12 -->
+					<div class="flex items-center gap-3">
+						<span class="w-16 text-[#64748B] shrink-0">Year 1</span>
+						<div class="flex-1 h-3 rounded bg-gray-100 overflow-hidden relative">
+							<div id="wf-bar-m12" class="h-full bg-emerald-500 rounded transition-all duration-300" style="width: 45%;"></div>
+						</div>
+						<span id="wf-m12" class="w-16 text-right font-bold text-emerald-700">+$16.8k</span>
+					</div>
+
+					<!-- Year 3 -->
+					<div class="flex items-center gap-3">
+						<span class="w-16 text-[#64748B] shrink-0">Year 3</span>
+						<div class="flex-1 h-3 rounded bg-gray-100 overflow-hidden relative">
+							<div id="wf-bar-m36" class="h-full bg-emerald-600 rounded transition-all duration-300" style="width: 88%;"></div>
+						</div>
+						<span id="wf-m36" class="w-16 text-right font-bold text-emerald-700">+$74.4k</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Footer CTA -->
+			<div class="pt-3 border-t border-[#E5E5E5] flex items-center justify-between text-xs font-mono">
+				<a 
+					id="hero-simulator-link"
+					href="/calculators/relocation-cost/" 
+					class="font-bold text-[#5A7A8F] hover:text-[#1A1A1A] transition inline-flex items-center gap-1"
+				>
+					<span>Open Full Calculator</span>
+					<span aria-hidden="true">&rarr;</span>
+				</a>
+				<span class="text-[10px] text-[#64748B] font-mono">
+					Real-time mathematical model
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+	// Interactive client logic for Hero Decision Simulator
+	const sliderOne = document.getElementById('hero-slider-one') as HTMLInputElement | null;
+	const sliderTwo = document.getElementById('hero-slider-two') as HTMLInputElement | null;
+	const readoutOne = document.getElementById('readout-param-one');
+	const readoutTwo = document.getElementById('readout-param-two');
+	const metricPayback = document.getElementById('hero-metric-payback');
+	const metricAdvantage = document.getElementById('hero-metric-advantage');
+	const wfBadge = document.getElementById('hero-waterfall-badge');
+	const wfM0 = document.getElementById('wf-m0');
+	const wfM3 = document.getElementById('wf-m3');
+	const wfM12 = document.getElementById('wf-m12');
+	const wfM36 = document.getElementById('wf-m36');
+	const wfBarM12 = document.getElementById('wf-bar-m12');
+	const wfBarM36 = document.getElementById('wf-bar-m36');
+	const labelOne = document.getElementById('label-param-one');
+	const labelTwo = document.getElementById('label-param-two');
+	const simulatorLink = document.getElementById('hero-simulator-link') as HTMLAnchorElement | null;
+
+	const tabs = document.querySelectorAll('.hero-model-tab');
+
+	let currentModel = 'relocation';
+
+	const modelConfigs: Record<string, {
+		labelOne: string;
+		labelTwo: string;
+		minOne: number;
+		maxOne: number;
+		valOne: number;
+		stepOne: number;
+		minTwo: number;
+		maxTwo: number;
+		valTwo: number;
+		stepTwo: number;
+		link: string;
+		linkText: string;
+	}> = {
+		relocation: {
+			labelOne: 'Monthly Value Gain:',
+			labelTwo: 'Upfront Transition Outlay:',
+			minOne: 800,
+			maxOne: 6000,
+			valOne: 2400,
+			stepOne: 100,
+			minTwo: 2000,
+			maxTwo: 30000,
+			valTwo: 12000,
+			stepTwo: 500,
+			link: '/calculators/relocation-cost/',
+			linkText: 'Open Relocation Calculator'
+		},
+		gpu: {
+			labelOne: 'Cloud GPU Monthly Bill:',
+			labelTwo: 'Local Workstation Hardware Cost:',
+			minOne: 400,
+			maxOne: 4000,
+			valOne: 1600,
+			stepOne: 100,
+			minTwo: 2500,
+			maxTwo: 18000,
+			valTwo: 7500,
+			stepTwo: 500,
+			link: '/calculators/gpu-compute/',
+			linkText: 'Open GPU Compute Calculator'
+		},
+		lease: {
+			labelOne: 'Monthly Rent Saved / Sublease Offset:',
+			labelTwo: 'Landlord Penalty & Deposit at Risk:',
+			minOne: 1000,
+			maxOne: 5000,
+			valOne: 2200,
+			stepOne: 100,
+			minTwo: 1500,
+			maxTwo: 15000,
+			valTwo: 6600,
+			stepTwo: 300,
+			link: '/calculators/lease-break/',
+			linkText: 'Open Lease Break Calculator'
+		}
+	};
+
+	function updateCalculations() {
+		if (!sliderOne || !sliderTwo) return;
+
+		const monthlyGain = parseFloat(sliderOne.value);
+		const upfrontCost = parseFloat(sliderTwo.value);
+
+		// Format readouts
+		if (readoutOne) readoutOne.textContent = `+$${monthlyGain.toLocaleString()}/mo`;
+		if (readoutTwo) readoutTwo.textContent = `$${upfrontCost.toLocaleString()}`;
+
+		// Compute metrics
+		const paybackMonths = monthlyGain > 0 ? (upfrontCost / monthlyGain).toFixed(1) : '—';
+		const net36Mo = (monthlyGain * 36) - upfrontCost;
+
+		if (metricPayback) metricPayback.textContent = paybackMonths;
+		if (metricAdvantage) {
+			const sign = net36Mo >= 0 ? '+' : '';
+			const formattedVal = Math.abs(net36Mo) >= 1000 
+				? `${(net36Mo / 1000).toFixed(1)}k` 
+				: `${net36Mo.toLocaleString()}`;
+			metricAdvantage.textContent = `${sign}$${formattedVal}`;
+			metricAdvantage.className = net36Mo >= 0 
+				? 'text-3xl sm:text-4xl font-black tracking-tight text-emerald-700' 
+				: 'text-3xl sm:text-4xl font-black tracking-tight text-[#B85C5C]';
+		}
+
+		if (wfBadge) {
+			wfBadge.textContent = `Profitable at Month ${Math.ceil(parseFloat(paybackMonths))}`;
+		}
+
+		// Update waterfall values
+		if (wfM0) wfM0.textContent = `-$${(upfrontCost / 1000).toFixed(1)}k`;
+		
+		const m3Net = (monthlyGain * 3) - upfrontCost;
+		if (wfM3) {
+			wfM3.textContent = `${m3Net >= 0 ? '+' : '-'}$${(Math.abs(m3Net) / 1000).toFixed(1)}k`;
+			wfM3.className = m3Net >= 0 ? 'w-16 text-right font-bold text-emerald-700' : 'w-16 text-right font-bold text-[#C88D4E]';
+		}
+
+		const m12Net = (monthlyGain * 12) - upfrontCost;
+		if (wfM12) {
+			wfM12.textContent = `${m12Net >= 0 ? '+' : '-'}$${(Math.abs(m12Net) / 1000).toFixed(1)}k`;
+		}
+		if (wfBarM12) {
+			const widthPct = Math.min(100, Math.max(10, (m12Net / Math.max(1, net36Mo)) * 80));
+			wfBarM12.style.width = `${widthPct}%`;
+		}
+
+		if (wfM36) {
+			wfM36.textContent = `${net36Mo >= 0 ? '+' : '-'}$${(Math.abs(net36Mo) / 1000).toFixed(1)}k`;
+		}
+		if (wfBarM36) {
+			wfBarM36.style.width = `90%`;
+		}
+	}
+
+	sliderOne?.addEventListener('input', updateCalculations);
+	sliderTwo?.addEventListener('input', updateCalculations);
+
+	tabs.forEach((tab) => {
+		tab.addEventListener('click', () => {
+			const modelKey = tab.getAttribute('data-model') || 'relocation';
+			currentModel = modelKey;
+			const config = modelConfigs[modelKey];
+			if (!config) return;
+
+			// Update tabs UI
+			tabs.forEach((t) => {
+				t.classList.remove('border-[#1A1A1A]', 'text-[#1A1A1A]', 'font-bold');
+				t.classList.add('border-transparent', 'text-[#8C8C8C]');
+			});
+			tab.classList.remove('border-transparent', 'text-[#8C8C8C]');
+			tab.classList.add('border-[#1A1A1A]', 'text-[#1A1A1A]', 'font-bold');
+
+			// Update labels & ranges
+			if (labelOne) labelOne.textContent = config.labelOne;
+			if (labelTwo) labelTwo.textContent = config.labelTwo;
+
+			if (sliderOne) {
+				sliderOne.min = String(config.minOne);
+				sliderOne.max = String(config.maxOne);
+				sliderOne.step = String(config.stepOne);
+				sliderOne.value = String(config.valOne);
+			}
+
+			if (sliderTwo) {
+				sliderTwo.min = String(config.minTwo);
+				sliderTwo.max = String(config.maxTwo);
+				sliderTwo.step = String(config.stepTwo);
+				sliderTwo.value = String(config.valTwo);
+			}
+
+			if (simulatorLink) {
+				simulatorLink.href = config.link;
+				simulatorLink.innerHTML = `<span>${config.linkText}</span> <span aria-hidden="true">&rarr;</span>`;
+			}
+
+			updateCalculations();
+		});
+	});
+
+	// Initial compute
+	updateCalculations();
+</script>

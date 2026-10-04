@@ -1,5 +1,6 @@
 ---
 import { calculatorTools } from '../lib/calculators/metadata';
+import HeroDecisionSimulator from './HeroDecisionSimulator.astro';
 
 interface Props {
 	overview: {
@@ -14,7 +15,7 @@ const { overview } = Astro.props;
 ---
 
 <section class="relative pt-32 pb-12">
-	<div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1fr_1fr]">
+	<div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
 		<div class="flex flex-col z-10">
 			<p class="font-mono text-xs font-bold uppercase tracking-[0.25em] !text-[#5A7A8F] text-[#5A7A8F]" style="color: #5A7A8F;">
 				{overview?.eyebrow || 'Decision Intelligence for Tech Workers'}
@@ -22,15 +23,29 @@ const { overview } = Astro.props;
 			<h1 class="mt-2 text-5xl font-extrabold tracking-tight text-[#1A1A1A] sm:text-6xl leading-tight">
 				{overview?.headline || 'Stop guessing the math on high-stakes tech and career choices.'}
 			</h1>
-			<p class="mt-3 text-lg leading-relaxed text-[#5E5E5E]">
+			<p class="mt-4 text-lg sm:text-xl font-normal leading-relaxed text-[#5E5E5E] max-w-xl">
 				{overview?.subheadline || 'Rigorous TCO calculators and models designed to evaluate cloud vs. local infrastructure, compensation packages, and major financial transitions before you commit.'}
 			</p>
-			<div class="mt-6 flex flex-col gap-4 sm:flex-row">
-				<a href="/calculators/" class="btn-primary">Explore Calculators</a>
-				<a href="/categories/" class="btn-secondary">Explore Categories</a>
+			<div class="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-6">
+				<a 
+					href="/calculators/" 
+					class="btn-primary inline-flex items-center gap-2 px-6 py-3.5 text-sm font-semibold rounded-xl bg-[#1A1A1A] text-white hover:bg-[#333333] transition-all active:scale-95 shadow-none"
+				>
+					<span>Run a Model</span>
+					<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+					</svg>
+				</a>
+				<a 
+					href="/categories/" 
+					class="inline-flex items-center gap-1.5 text-sm font-semibold text-[#5A7A8F] hover:text-[#1A1A1A] transition group"
+				>
+					<span>Explore categories</span>
+					<span aria-hidden="true" class="transition-transform duration-200 group-hover:translate-x-1">&rarr;</span>
+				</a>
 			</div>
 			
-			<div class="mt-10 flex flex-col md:flex-row gap-10 border-t border-[#E5E5E5] pt-8">
+			<div class="mt-12 flex flex-col md:flex-row gap-10 border-t border-[#E5E5E5] pt-8">
 				<div class="flex flex-col">
 					<p class="text-6xl font-black text-[#1A1A1A] tracking-tight leading-none">{calculatorTools.length}</p>
 					<p class="mt-2 text-xs uppercase tracking-[0.25em] text-[#8C8C8C] font-mono font-bold">Interactive Tools</p>
@@ -48,12 +63,8 @@ const { overview } = Astro.props;
 			</div>
 		</div>
 
-		<div class="relative w-full aspect-square max-w-lg mx-auto flex items-center justify-center">
-			<img 
-				src="/images/hero-clay-design.jpg" 
-				alt="Premium 3D abstract desaturated geometry" 
-				class="w-full h-auto object-contain rounded-2xl border border-[#E5E5E5] shadow-none"
-			/>
+		<div class="relative w-full flex items-center justify-center">
+			<HeroDecisionSimulator />
 		</div>
 	</div>
 </section>

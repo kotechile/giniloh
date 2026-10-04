@@ -5,6 +5,8 @@ export const calculatorTools = [
 		href: '/calculators/lease-break/',
 		status: 'Live',
 		accent: 'emerald',
+		outputType: 'Penalty Offset Matrix',
+		iconType: 'table',
 		description:
 			'Evaluate your early lease termination exposure. Calculate contract penalty structures, exit fees, and security deposit offsets.',
 		utility: 'Calculate renter exit costs',
@@ -17,6 +19,8 @@ export const calculatorTools = [
 		href: '/calculators/raise-velocity/',
 		status: 'Live',
 		accent: 'cyan',
+		outputType: 'Cumulative Compounding Curve',
+		iconType: 'chart-line',
 		description:
 			'Compare traditional 3% annual raises vs. strategic job-hops yielding 15-20% bumps, projecting 10-year cumulative earnings.',
 		utility: 'Evaluate career compensation options',
@@ -29,6 +33,8 @@ export const calculatorTools = [
 		href: '/calculators/total-comp/',
 		status: 'Live',
 		accent: 'indigo',
+		outputType: 'Vesting & Equity Schedule',
+		iconType: 'chart-bar',
 		description:
 			'Model base salary, cash bonuses, and vesting RSUs or options with stock growth assumptions to evaluate tech offers.',
 		utility: 'Evaluate RSUs and stock options values',
@@ -41,6 +47,8 @@ export const calculatorTools = [
 		href: '/calculators/money-flow/',
 		status: 'Proposed',
 		accent: 'violet',
+		outputType: 'Automated Routing Waterfall',
+		iconType: 'flow',
 		description:
 			'Visualize automated account routing: from checking, through retirement matches, HSAs, and index fund allocation.',
 		utility: 'Simulate automated investing systems',
@@ -53,6 +61,8 @@ export const calculatorTools = [
 		href: '/calculators/relocation-cost/',
 		status: 'Live',
 		accent: 'blue',
+		outputType: 'Payback Horizon Timeline',
+		iconType: 'timeline',
 		description:
 			'Find out how many months of a new salary bump it takes to break even on moving costs, lease breaks, and new deposits.',
 		utility: 'Calculate relocation payback period',
@@ -65,6 +75,8 @@ export const calculatorTools = [
 		href: '/calculators/decision-intelligence/',
 		status: 'Live',
 		accent: 'indigo',
+		outputType: 'Build vs. Buy TCO Score',
+		iconType: 'matrix',
 		description:
 			'Evaluate complex business and lifestyle trade-offs—from enterprise software build-vs-buy TCO to personal asset repairs, espresso machine cost-per-use, and time tinkering taxes.',
 		utility: 'Analyze build vs. buy & personal asset TCO',
@@ -77,6 +89,8 @@ export const calculatorTools = [
 		href: '/calculators/coffee-arbitrage/',
 		status: 'Live',
 		accent: 'emerald',
+		outputType: 'Per-Cup Amortization Model',
+		iconType: 'chart-line',
 		description:
 			'Determine if investing in a premium home espresso setup beats your daily café runs. Real-time cost-per-use calculator.',
 		utility: 'Evaluate espresso machine cost-per-use',
@@ -89,6 +103,8 @@ export const calculatorTools = [
 		href: '/calculators/tech-debt-repair/',
 		status: 'Live',
 		accent: 'indigo',
+		outputType: 'Repair vs. Replace Index',
+		iconType: 'gauge',
 		description:
 			'Calculate if repairing a 3-to-5-year-old laptop or phone is a smart fix or a financial liability. Uses the adapted consumer 1,500 index rule.',
 		utility: 'Calculate repair vs replace index score',
@@ -101,6 +117,8 @@ export const calculatorTools = [
 		href: '/calculators/no-code-terminator/',
 		status: 'Live',
 		accent: 'cyan',
+		outputType: 'Time-Tax vs. SaaS Audit',
+		iconType: 'clock',
 		description:
 			'Calculate the hidden tinkering tax of manual workarounds and sheets vs. upgrading to a centralized SaaS platform.',
 		utility: 'Calculate time tax vs premium software cost',
@@ -113,6 +131,8 @@ export const calculatorTools = [
 		href: '/calculators/gpu-compute/',
 		status: 'Live',
 		accent: 'violet',
+		outputType: 'Hardware vs. Cloud Comparison',
+		iconType: 'server',
 		description:
 			'Compare the TCO of building a local deep learning GPU workstation against renting cloud GPU compute instances.',
 		utility: 'Evaluate local GPU vs cloud GPU TCO',
@@ -125,6 +145,8 @@ export const calculatorTools = [
 		href: '/calculators/career-ai-resilience/',
 		status: 'Live',
 		accent: 'cyan',
+		outputType: 'Task Automation Radar',
+		iconType: 'radar',
 		description:
 			'Analyze the automation vulnerability of 1,000+ occupations at the task level. Drag sliders to simulate upskilling and see how task-shifting future-proofs your career.',
 		utility: 'Analyze career AI risk & upskill',
@@ -137,6 +159,8 @@ export const calculatorTools = [
 		href: '/calculators/expat-evaluator/',
 		status: 'Live',
 		accent: 'indigo',
+		outputType: '5-Year Wealth & Tax Model',
+		iconType: 'globe',
 		description:
 			'Compare cash flow and 5-year wealth impact of an international relocation (e.g. US to Spain). Model Beckham Law tax regime, US FEIE/FTC, tax equalization, and FX liability risks.',
 		utility: 'Evaluate international relocation tax & wealth impact',

@@ -37,6 +37,34 @@ const websiteSchema = {
 		"query-input": "required name=search_term_string"
 	}
 };
+const getOutputIcon = (type?: string) => {
+	switch (type) {
+		case 'chart-bar':
+			return `<svg class="w-3.5 h-3.5 text-[#5A7A8F]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>`;
+		case 'table':
+			return `<svg class="w-3.5 h-3.5 text-[#5A7A8F]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M3 14h18m-9-4v8m-7 4h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>`;
+		case 'chart-line':
+			return `<svg class="w-3.5 h-3.5 text-[#5A7A8F]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>`;
+		case 'flow':
+			return `<svg class="w-3.5 h-3.5 text-[#5A7A8F]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>`;
+		case 'timeline':
+			return `<svg class="w-3.5 h-3.5 text-[#5A7A8F]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>`;
+		case 'matrix':
+			return `<svg class="w-3.5 h-3.5 text-[#5A7A8F]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" /></svg>`;
+		case 'gauge':
+			return `<svg class="w-3.5 h-3.5 text-[#5A7A8F]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`;
+		case 'clock':
+			return `<svg class="w-3.5 h-3.5 text-[#5A7A8F]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`;
+		case 'server':
+			return `<svg class="w-3.5 h-3.5 text-[#5A7A8F]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" /></svg>`;
+		case 'radar':
+			return `<svg class="w-3.5 h-3.5 text-[#5A7A8F]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>`;
+		case 'globe':
+			return `<svg class="w-3.5 h-3.5 text-[#5A7A8F]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`;
+		default:
+			return `<svg class="w-3.5 h-3.5 text-[#5A7A8F]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>`;
+	}
+};
 ---
 
 <BaseLayout
@@ -47,36 +75,58 @@ const websiteSchema = {
 	<JsonLd slot="head" data={websiteSchema} />
 	<HeroGlass overview={overview} topCategories={topCategories} />
 
-	<section class="mt-20" aria-labelledby="homepage-calculators">
+	<section class="mt-24" aria-labelledby="homepage-calculators">
 		<div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
 			<div>
-				<p class="section-eyebrow">Start here</p>
+				<p class="section-eyebrow">Interactive Models</p>
 				<h2 id="homepage-calculators" class="mt-3 text-3xl font-black tracking-tight text-[#1A1A1A] sm:text-4xl">
 					Quantify your next high-stakes choice
 				</h2>
 			</div>
-			<a href="/calculators/" class="btn-inline text-sm">Browse all calculators <span aria-hidden="true">-></span></a>
+			<a href="/calculators/" class="btn-inline text-sm font-semibold flex items-center gap-1">Browse all calculators <span aria-hidden="true">&rarr;</span></a>
 		</div>
 
-		<div class="mt-8 grid gap-5 md:grid-cols-3">
+		<div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 			{calculatorTools.map((tool) => (
 				<a
 					href={tool.href}
-					class="group flex min-h-64 flex-col rounded-2xl border border-[#E5E5E5] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#5A7A8F] hover:shadow-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A1A1A]"
+					class="group flex min-h-64 flex-col rounded-2xl border border-[#E5E5E5] bg-white p-6 transition-all duration-300 ease-out hover:-translate-y-2 hover:border-[#1A1A1A] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.08)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A1A1A]"
 				>
 					<div class="flex items-center justify-between">
-						<div class="rounded-lg bg-white border border-[#E5E5E5] p-2 text-[#5A7A8F] group-hover:border-[#5A7A8F] transition-colors">
-							<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7h16M7 4v6m10-6v6M6 14h4v4H6v-4Zm8 0h4v4h-4v-4Z" />
-							</svg>
+						<div class="rounded-xl bg-[#F8FAFC] border border-[#E5E5E5] p-2.5 text-[#5A7A8F] group-hover:border-[#1A1A1A] transition-colors">
+							<Fragment set:html={getOutputIcon(tool.iconType)} />
 						</div>
-						<span class="font-mono text-xs text-[#8C8C8C] transition group-hover:text-[#5A7A8F]">PUBLIC</span>
+						<div class="flex items-center gap-2">
+							<span class="inline-flex items-center gap-1 rounded-md bg-slate-100 px-2.5 py-0.5 font-mono text-[10px] font-bold text-[#334155] border border-slate-200 uppercase tracking-wider">
+								CLIENT-SIDE
+							</span>
+						</div>
 					</div>
-					<h3 class="mt-4 text-xl font-bold text-[#1A1A1A]">{tool.title}</h3>
-					<p class="mt-2 font-mono text-xs uppercase tracking-[0.22em] text-[#5A7A8F]">{tool.utility}</p>
-					<p class="mt-3 flex-1 text-sm leading-relaxed text-[#5E5E5E]">{tool.description}</p>
-					<span class="mt-5 text-sm font-semibold text-[#5A7A8F] transition group-hover:text-[#1A1A1A] flex items-center gap-1">
-						Open {tool.title} <span class="inline-block transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">→</span>
+
+					<div class="mt-4">
+						<h3 class="text-xl font-bold tracking-tight text-[#1A1A1A] group-hover:text-[#5A7A8F] transition-colors">
+							{tool.title}
+						</h3>
+						
+						<!-- Output Indicator Badge -->
+						<div class="mt-2.5 inline-flex items-center gap-1.5 rounded-lg bg-slate-50 border border-slate-200/90 px-2.5 py-1 text-[11px] font-mono text-[#334155]">
+							<Fragment set:html={getOutputIcon(tool.iconType)} />
+							<span class="font-semibold">{tool.outputType}</span>
+						</div>
+					</div>
+
+					<!-- High Contrast WCAG AAA Micro-Copy -->
+					<p class="mt-4 font-mono text-xs uppercase tracking-[0.2em] text-[#1E293B] font-bold">
+						{tool.utility}
+					</p>
+
+					<p class="mt-2 flex-1 text-sm leading-relaxed text-[#5E5E5E]">
+						{tool.description}
+					</p>
+
+					<span class="mt-6 text-sm font-bold text-[#1A1A1A] group-hover:text-[#5A7A8F] transition flex items-center justify-between pt-4 border-t border-gray-100">
+						<span>Launch model</span>
+						<span class="inline-block transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">&rarr;</span>
 					</span>
 				</a>
 			))}
