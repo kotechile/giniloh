@@ -5,6 +5,7 @@ export const calculatorTools = [
 		href: '/calculators/lease-break/',
 		status: 'Live',
 		accent: 'emerald',
+		domainCategory: 'Real Estate',
 		outputType: 'Penalty Offset Matrix',
 		iconType: 'table',
 		description:
@@ -19,6 +20,7 @@ export const calculatorTools = [
 		href: '/calculators/raise-velocity/',
 		status: 'Live',
 		accent: 'cyan',
+		domainCategory: 'Career',
 		outputType: 'Cumulative Compounding Curve',
 		iconType: 'chart-line',
 		description:
@@ -33,6 +35,7 @@ export const calculatorTools = [
 		href: '/calculators/total-comp/',
 		status: 'Live',
 		accent: 'indigo',
+		domainCategory: 'Compensation',
 		outputType: 'Vesting & Equity Schedule',
 		iconType: 'chart-bar',
 		description:
@@ -47,6 +50,7 @@ export const calculatorTools = [
 		href: '/calculators/money-flow/',
 		status: 'Proposed',
 		accent: 'violet',
+		domainCategory: 'Personal Finance',
 		outputType: 'Automated Routing Waterfall',
 		iconType: 'flow',
 		description:
@@ -61,6 +65,7 @@ export const calculatorTools = [
 		href: '/calculators/relocation-cost/',
 		status: 'Live',
 		accent: 'blue',
+		domainCategory: 'Career',
 		outputType: 'Payback Horizon Timeline',
 		iconType: 'timeline',
 		description:
@@ -75,6 +80,7 @@ export const calculatorTools = [
 		href: '/calculators/decision-intelligence/',
 		status: 'Live',
 		accent: 'indigo',
+		domainCategory: 'Strategy & TCO',
 		outputType: 'Build vs. Buy TCO Score',
 		iconType: 'matrix',
 		description:
@@ -89,6 +95,7 @@ export const calculatorTools = [
 		href: '/calculators/coffee-arbitrage/',
 		status: 'Live',
 		accent: 'emerald',
+		domainCategory: 'Lifestyle',
 		outputType: 'Per-Cup Amortization Model',
 		iconType: 'chart-line',
 		description:
@@ -103,6 +110,7 @@ export const calculatorTools = [
 		href: '/calculators/tech-debt-repair/',
 		status: 'Live',
 		accent: 'indigo',
+		domainCategory: 'Hardware',
 		outputType: 'Repair vs. Replace Index',
 		iconType: 'gauge',
 		description:
@@ -117,6 +125,7 @@ export const calculatorTools = [
 		href: '/calculators/no-code-terminator/',
 		status: 'Live',
 		accent: 'cyan',
+		domainCategory: 'Software & Ops',
 		outputType: 'Time-Tax vs. SaaS Audit',
 		iconType: 'clock',
 		description:
@@ -131,6 +140,7 @@ export const calculatorTools = [
 		href: '/calculators/gpu-compute/',
 		status: 'Live',
 		accent: 'violet',
+		domainCategory: 'Hardware',
 		outputType: 'Hardware vs. Cloud Comparison',
 		iconType: 'server',
 		description:
@@ -145,6 +155,7 @@ export const calculatorTools = [
 		href: '/calculators/career-ai-resilience/',
 		status: 'Live',
 		accent: 'cyan',
+		domainCategory: 'Career',
 		outputType: 'Task Automation Radar',
 		iconType: 'radar',
 		description:
@@ -159,6 +170,7 @@ export const calculatorTools = [
 		href: '/calculators/expat-evaluator/',
 		status: 'Live',
 		accent: 'indigo',
+		domainCategory: 'Global Mobility',
 		outputType: '5-Year Wealth & Tax Model',
 		iconType: 'globe',
 		description:
