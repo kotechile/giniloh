@@ -8,12 +8,23 @@ interface Props {
 	title: string;
 	description?: string;
 	image?: string;
+	disableAnalytics?: boolean;
 }
 
-const { title, description = 'Decision Engine for Expensive Choices. Total Cost of Ownership (TCO) calculators and decision intelligence for tech workers.', image } = Astro.props;
+const {
+	title,
+	description = 'Decision Engine for Expensive Choices. Total Cost of Ownership (TCO) calculators and decision intelligence for tech workers.',
+	image,
+	disableAnalytics = false
+} = Astro.props;
 
-const analyticsSrc = import.meta.env.PUBLIC_ANALYTICS_SRC;
-const analyticsWebsiteId = import.meta.env.PUBLIC_ANALYTICS_WEBSITE_ID;
+const analyticsSrc = import.meta.env.PUBLIC_ANALYTICS_SRC || 'https://cloud.umami.is/script.js';
+const analyticsWebsiteId = import.meta.env.PUBLIC_ANALYTICS_WEBSITE_ID || '9ac06c91-4dc2-4120-b74a-6d87b9519bd1';
+const analyticsDomains = import.meta.env.PUBLIC_ANALYTICS_DOMAINS || 'giniloh.com,www.giniloh.com';
+
+const is404 = disableAnalytics || Astro.url.pathname === '/404' || Astro.url.pathname === '/404/' || Astro.url.pathname.endsWith('/404.html');
+const shouldTrack = !is404 && Boolean(analyticsSrc && analyticsWebsiteId);
+
 const googleVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 const bingVerification = import.meta.env.PUBLIC_BING_SITE_VERIFICATION;
 const defaultImage = new URL('/default-share-image.png', Astro.site || 'https://giniloh.com').toString();
@@ -54,36 +65,13 @@ const shareImage = image || defaultImage;
 				<meta http-equiv="Expires" content="0" />
 			</>
 		)}
-		{analyticsSrc && analyticsWebsiteId && (
-			<>
-				<script 
-					async 
-					defer 
-					data-website-id={analyticsWebsiteId} 
-					src={analyticsSrc}
-					data-auto-track="false"
-				></script>
-				<script is:inline>
-					(function() {
-						window.__lastTrackedUrl = null;
-						function trackUmami() {
-							const currentUrl = window.location.pathname;
-							if (window.umami && window.__lastTrackedUrl !== currentUrl) {
-								window.__lastTrackedUrl = currentUrl;
-								window.umami.track(function(props) {
-									return Object.assign({}, props, { url: currentUrl });
-								});
-							}
-						}
-						if (document.readyState === 'complete') {
-							trackUmami();
-						} else {
-							window.addEventListener('load', trackUmami, { once: true });
-						}
-						document.addEventListener('astro:page-load', trackUmami);
-					})();
-				</script>
-			</>
+		{shouldTrack && (
+			<script 
+				defer 
+				src={analyticsSrc}
+				data-website-id={analyticsWebsiteId} 
+				data-domains={analyticsDomains}
+			></script>
 		)}
 		<title>{title}</title>
 		<slot name="head" />
