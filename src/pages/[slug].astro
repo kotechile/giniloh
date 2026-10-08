@@ -166,11 +166,12 @@ const breadcrumbSchema = {
         <!-- Featured Image -->
         {post.featuredImage && (
           <div class="relative group mb-10">
-            <div class="relative aspect-video lg:aspect-[21/9] rounded-3xl overflow-hidden border border-gray-200 shadow-sm">
+            <div class="overflow-hidden rounded-2xl sm:rounded-3xl border border-gray-200 bg-[#F8FAFC]">
               <img 
                 src={post.featuredImage} 
                 alt={post.featuredImageAlt}
-                class="w-full h-full object-cover scale-[1.01]"
+                loading="eager"
+                class="w-full h-auto block object-contain"
               />
             </div>
           </div>
