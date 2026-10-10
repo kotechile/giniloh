@@ -27,14 +27,15 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap({
+      // Lowercase product paths only: the capitalised ones this list used to carry answered 404
+      // (Next routes are case-sensitive), and the bare origin 307s to giniloh.com.
       customPages: [
-        'https://apps.giniloh.com',
         'https://apps.giniloh.com/showcase',
-        'https://apps.giniloh.com/LedgerLink',
-        'https://apps.giniloh.com/FacturGate',
-        'https://apps.giniloh.com/ParcelProof',
-        'https://apps.giniloh.com/CaseProof',
-        'https://apps.giniloh.com/SpendProof'
+        'https://apps.giniloh.com/ledgerlink',
+        'https://apps.giniloh.com/facturgate',
+        'https://apps.giniloh.com/parcelproof',
+        'https://apps.giniloh.com/caseproof',
+        'https://apps.giniloh.com/spendproof'
       ]
     })
   ],

@@ -35,14 +35,18 @@ export const GET: APIRoute = async ({ site }) => {
 	}
 
 	// 2. Apps & Showcase (apps.giniloh.com)
+	// Product-host URLs. Paths are LOWERCASE and match the product routes exactly: Next routes are
+	// case-sensitive, so the capitalised variants this list used to carry (`/LedgerLink`,
+	// `/ParcelProof`, …) answered 404 — five dead URLs advertised to Google from every page's sitemap.
+	// The bare origin is omitted too: it 307s to giniloh.com, and a sitemap should list the
+	// destination, not a redirect.
 	const appUrls = [
-		'https://apps.giniloh.com',
 		'https://apps.giniloh.com/showcase',
-		'https://apps.giniloh.com/LedgerLink',
-		'https://apps.giniloh.com/FacturGate',
-		'https://apps.giniloh.com/ParcelProof',
-		'https://apps.giniloh.com/CaseProof',
-		'https://apps.giniloh.com/SpendProof'
+		'https://apps.giniloh.com/ledgerlink',
+		'https://apps.giniloh.com/facturgate',
+		'https://apps.giniloh.com/parcelproof',
+		'https://apps.giniloh.com/caseproof',
+		'https://apps.giniloh.com/spendproof'
 	];
 	for (const appUrl of appUrls) {
 		entries.push(urlEntry(baseUrl, appUrl, today));

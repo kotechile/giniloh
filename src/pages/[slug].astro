@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import JsonLd from '../components/JsonLd.astro';
+import { productCtaFor } from '../lib/product-cta';
 import { fetchAllPosts } from '../lib/wordpress';
 
 export async function getStaticPaths() {
@@ -54,6 +55,10 @@ if (categorySlug === 'buying-decisions') {
   strategicValue = 'Max';
   strategicWidth = '90%';
 }
+
+// The paid tool that answers this page, if one honestly does (src/lib/product-cta.ts). Null on the
+// pages this factory has no product for — nothing is rendered rather than a generic banner.
+const productCta = productCtaFor({ slug: post.slug, categorySlug: post.categorySlug });
 
 const siteUrl = Astro.site?.toString() || 'https://giniloh.com/';
 const postUrl = new URL(`/${post.slug}/`, siteUrl).toString();
@@ -122,6 +127,7 @@ const breadcrumbSchema = {
   title={`${post.title} | Giniloh`}
   description={post.excerpt}
   image={post.featuredImage || undefined}
+  productCta={productCta}
 >
   <!-- SEO & Social Meta Tags -->
   <link slot="head" rel="canonical" href={postUrl} />

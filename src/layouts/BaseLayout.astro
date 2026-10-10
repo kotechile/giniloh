@@ -2,6 +2,8 @@
 import Footer from '../components/Footer.astro';
 import SearchOverlay from '../components/SearchOverlay.astro';
 import SiteNav from '../components/SiteNav.astro';
+import ProductCTA from '../components/ProductCTA.astro';
+import type { ProductCta } from '../lib/product-cta';
 import '../styles/global.css';
 
 interface Props {
@@ -9,13 +11,16 @@ interface Props {
 	description?: string;
 	image?: string;
 	disableAnalytics?: boolean;
+	// Resolved by the page through `productCtaFor()`; null/absent renders nothing at all.
+	productCta?: ProductCta | null;
 }
 
 const {
 	title,
 	description = 'Decision Engine for Expensive Choices. Total Cost of Ownership (TCO) calculators and decision intelligence for tech workers.',
 	image,
-	disableAnalytics = false
+	disableAnalytics = false,
+	productCta = null
 } = Astro.props;
 
 const analyticsSrc = import.meta.env.PUBLIC_ANALYTICS_SRC || 'https://cloud.umami.is/script.js';
@@ -83,6 +88,7 @@ const shareImage = image || defaultImage;
 			<div class="mx-auto max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1600px] px-4 pb-10 pt-6 sm:px-6 lg:px-8">
 				<slot />
 			</div>
+			{productCta && <ProductCTA match={productCta} />}
 		</main>
 		<Footer />
 	</body>
