@@ -29,7 +29,12 @@ export default defineConfig({
     sitemap({
       customPages: [
         'https://apps.giniloh.com',
-        'https://apps.giniloh.com/showcase'
+        'https://apps.giniloh.com/showcase',
+        'https://apps.giniloh.com/LedgerLink',
+        'https://apps.giniloh.com/FacturGate',
+        'https://apps.giniloh.com/ParcelProof',
+        'https://apps.giniloh.com/CaseProof',
+        'https://apps.giniloh.com/SpendProof'
       ]
     })
   ],
