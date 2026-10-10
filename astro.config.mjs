@@ -24,7 +24,15 @@ export default defineConfig({
     '/pro-apps': 'https://apps.giniloh.com/showcase',
     '/pro-apps/': 'https://apps.giniloh.com/showcase'
   },
-  integrations: [react(), sitemap()],
+  integrations: [
+    react(),
+    sitemap({
+      customPages: [
+        'https://apps.giniloh.com',
+        'https://apps.giniloh.com/showcase'
+      ]
+    })
+  ],
   vite: {
     plugins: [tailwindcss()],
     optimizeDeps: {

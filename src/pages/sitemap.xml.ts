@@ -16,7 +16,9 @@ function slugify(text: string) {
 }
 
 function urlEntry(site: URL, path: string, lastmod?: string) {
-	const loc = new URL(path, site).toString();
+	const loc = path.startsWith('http://') || path.startsWith('https://')
+		? path
+		: new URL(path, site).toString();
 	return `\t<url>\n\t\t<loc>${loc}</loc>\n\t\t<lastmod>${lastmod}</lastmod>\n\t</url>`;
 }
 
@@ -32,7 +34,16 @@ export const GET: APIRoute = async ({ site }) => {
 		entries.push(urlEntry(baseUrl, path, today));
 	}
 
-	// 2. Main Calculators
+	// 2. Apps & Showcase (apps.giniloh.com)
+	const appUrls = [
+		'https://apps.giniloh.com',
+		'https://apps.giniloh.com/showcase'
+	];
+	for (const appUrl of appUrls) {
+		entries.push(urlEntry(baseUrl, appUrl, today));
+	}
+
+	// 3. Main Calculators
 	for (const tool of calculatorTools) {
 		entries.push(urlEntry(baseUrl, tool.href, today));
 	}
