@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
+import sitemap from '@astrojs/sitemap';
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -23,7 +24,7 @@ export default defineConfig({
     '/pro-apps': 'https://apps.giniloh.com/showcase',
     '/pro-apps/': 'https://apps.giniloh.com/showcase'
   },
-  integrations: [react()],
+  integrations: [react(), sitemap()],
   vite: {
     plugins: [tailwindcss()],
     optimizeDeps: {
