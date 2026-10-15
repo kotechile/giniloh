@@ -22,3 +22,14 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# ─────────────────────────────────────────────────────────────────────────────
+# AICHIEVE/ is a SEPARATE repository (kotechile/achieve → aichieve.net).
+# It lives here only as a working directory during the 2026 split. Its own git
+# history, node_modules and build output must never be committed into giniloh.com.
+# ─────────────────────────────────────────────────────────────────────────────
+AICHIEVE/
+
+# Generated at image build time from src/data/ownership.mjs by
+# scripts/generate-nginx-redirects.mjs. Never hand-edit; regenerate with `npm run redirects`.
+nginx-redirects.conf

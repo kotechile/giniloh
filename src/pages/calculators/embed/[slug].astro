@@ -8,8 +8,6 @@ import RaiseVelocityCalculator from '../../../components/calculators/react/Raise
 import TotalCompCalculator from '../../../components/calculators/react/TotalCompCalculator';
 import MoneyFlowSimulator from '../../../components/calculators/react/MoneyFlowSimulator';
 import RelocationCalculator from '../../../components/calculators/react/RelocationCalculator';
-import DecisionIntelligenceCalculator from '../../../components/calculators/react/DecisionIntelligenceCalculator';
-import LocalVsCloudGpuCalculator from '../../../components/calculators/react/LocalVsCloudGpuCalculator';
 import CareerAiResilienceCalculator from '../../../components/calculators/react/CareerAiResilienceCalculator';
 
 // Template components
@@ -158,8 +156,6 @@ const noCodeConfig = {
 				{slug === 'total-comp' && <TotalCompCalculator client:load />}
 				{slug === 'money-flow' && <MoneyFlowSimulator client:load />}
 				{slug === 'relocation-cost' && <RelocationCalculator client:load />}
-				{slug === 'decision-intelligence' && <DecisionIntelligenceCalculator client:load />}
-				{slug === 'gpu-compute' && <LocalVsCloudGpuCalculator client:load />}
 				{slug === 'career-ai-resilience' && <CareerAiResilienceCalculator client:load />}
 				{slug === 'coffee-arbitrage' && <AmortizerTemplate client:load config={coffeeConfig} />}
 				{slug === 'tech-debt-repair' && <RxRTemplate client:load config={techDebtConfig} />}

@@ -39,11 +39,11 @@
 			</button>
 			<button 
 				type="button" 
-				id="tab-gpu"
+				id="tab-coffee"
 				class="hero-model-tab border-b-2 border-transparent pb-2 text-[#8C8C8C] hover:text-[#1A1A1A] transition"
-				data-model="gpu"
+				data-model="coffee"
 			>
-				GPU Buy vs Cloud
+				Espresso Cost/Use
 			</button>
 			<button 
 				type="button" 
@@ -257,19 +257,19 @@
 			link: '/calculators/relocation-cost/',
 			linkText: 'Open Relocation Calculator'
 		},
-		gpu: {
-			labelOne: 'Cloud GPU Monthly Bill:',
-			labelTwo: 'Local Workstation Hardware Cost:',
-			minOne: 400,
-			maxOne: 4000,
-			valOne: 1600,
-			stepOne: 100,
-			minTwo: 2500,
-			maxTwo: 18000,
-			valTwo: 7500,
-			stepTwo: 500,
-			link: '/calculators/gpu-compute/',
-			linkText: 'Open GPU Compute Calculator'
+		coffee: {
+			labelOne: 'Café Spend Avoided per Week:',
+			labelTwo: 'Home Setup Outlay:',
+			minOne: 10,
+			maxOne: 120,
+			valOne: 42,
+			stepOne: 2,
+			minTwo: 300,
+			maxTwo: 5000,
+			valTwo: 1400,
+			stepTwo: 100,
+			link: '/calculators/coffee-arbitrage/',
+			linkText: 'Open Espresso Calculator'
 		},
 		lease: {
 			labelOne: 'Monthly Rent Saved / Sublease Offset:',
@@ -346,48 +346,89 @@
 	sliderOne?.addEventListener('input', updateCalculations);
 	sliderTwo?.addEventListener('input', updateCalculations);
 
+	const MODEL_ORDER = Object.keys(modelConfigs);
+
+	function applyModel(modelKey: string) {
+		currentModel = modelKey;
+		const config = modelConfigs[modelKey];
+		if (!config) return;
+
+		// Tabs are a state indicator, not the primary control — the panel rotates on its own.
+		tabs.forEach((t) => {
+			const isActive = t.getAttribute('data-model') === modelKey;
+			t.classList.toggle('border-[#1A1A1A]', isActive);
+			t.classList.toggle('text-[#1A1A1A]', isActive);
+			t.classList.toggle('font-bold', isActive);
+			t.classList.toggle('border-transparent', !isActive);
+			t.classList.toggle('text-[#8C8C8C]', !isActive);
+			t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+		});
+
+		if (labelOne) labelOne.textContent = config.labelOne;
+		if (labelTwo) labelTwo.textContent = config.labelTwo;
+
+		if (sliderOne) {
+			sliderOne.min = String(config.minOne);
+			sliderOne.max = String(config.maxOne);
+			sliderOne.step = String(config.stepOne);
+			sliderOne.value = String(config.valOne);
+		}
+
+		if (sliderTwo) {
+			sliderTwo.min = String(config.minTwo);
+			sliderTwo.max = String(config.maxTwo);
+			sliderTwo.step = String(config.stepTwo);
+			sliderTwo.value = String(config.valTwo);
+		}
+
+		if (simulatorLink) {
+			simulatorLink.href = config.link;
+			simulatorLink.innerHTML = `<span>${config.linkText}</span> <span aria-hidden="true">&rarr;</span>`;
+		}
+
+		updateCalculations();
+	}
+
 	tabs.forEach((tab) => {
 		tab.addEventListener('click', () => {
-			const modelKey = tab.getAttribute('data-model') || 'relocation';
-			currentModel = modelKey;
-			const config = modelConfigs[modelKey];
-			if (!config) return;
-
-			// Update tabs UI
-			tabs.forEach((t) => {
-				t.classList.remove('border-[#1A1A1A]', 'text-[#1A1A1A]', 'font-bold');
-				t.classList.add('border-transparent', 'text-[#8C8C8C]');
-			});
-			tab.classList.remove('border-transparent', 'text-[#8C8C8C]');
-			tab.classList.add('border-[#1A1A1A]', 'text-[#1A1A1A]', 'font-bold');
-
-			// Update labels & ranges
-			if (labelOne) labelOne.textContent = config.labelOne;
-			if (labelTwo) labelTwo.textContent = config.labelTwo;
-
-			if (sliderOne) {
-				sliderOne.min = String(config.minOne);
-				sliderOne.max = String(config.maxOne);
-				sliderOne.step = String(config.stepOne);
-				sliderOne.value = String(config.valOne);
-			}
-
-			if (sliderTwo) {
-				sliderTwo.min = String(config.minTwo);
-				sliderTwo.max = String(config.maxTwo);
-				sliderTwo.step = String(config.stepTwo);
-				sliderTwo.value = String(config.valTwo);
-			}
-
-			if (simulatorLink) {
-				simulatorLink.href = config.link;
-				simulatorLink.innerHTML = `<span>${config.linkText}</span> <span aria-hidden="true">&rarr;</span>`;
-			}
-
-			updateCalculations();
+			stopRotation();
+			applyModel(tab.getAttribute('data-model') || MODEL_ORDER[0]);
 		});
 	});
 
+	// Auto-rotation. The hero shows ONE model at a time and advances by itself — that is the whole
+	// point of simplifying it: a visitor sees the range of decisions available without having to
+	// discover tabs first. It yields to the reader the moment they interact, and never runs at all
+	// for anyone who has asked for reduced motion.
+	const ROTATE_MS = 7000;
+	let rotateTimer: number | null = null;
+	const prefersReduced =
+		typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+	function startRotation() {
+		if (prefersReduced || rotateTimer !== null) return;
+		rotateTimer = window.setInterval(() => {
+			const next = MODEL_ORDER[(MODEL_ORDER.indexOf(currentModel) + 1) % MODEL_ORDER.length];
+			applyModel(next);
+		}, ROTATE_MS);
+	}
+
+	function stopRotation() {
+		if (rotateTimer !== null) {
+			window.clearInterval(rotateTimer);
+			rotateTimer = null;
+		}
+	}
+
+	const rotationPanel = sliderOne?.closest('.relative') ?? null;
+	rotationPanel?.addEventListener('mouseenter', stopRotation);
+	rotationPanel?.addEventListener('mouseleave', startRotation);
+	rotationPanel?.addEventListener('focusin', stopRotation);
+	rotationPanel?.addEventListener('focusout', startRotation);
+	sliderOne?.addEventListener('input', stopRotation);
+	sliderTwo?.addEventListener('input', stopRotation);
+
 	// Initial compute
-	updateCalculations();
+	applyModel('relocation');
+	startRotation();
 </script>

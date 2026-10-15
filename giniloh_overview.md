@@ -18,20 +18,20 @@ Decision Engine for Expensive Choices
 From Gut Feelings to Hard Data
 Decision Intelligence for Tech Workers
 
-Evaluating high-stakes professional and purchasing trade-offs shouldn't be about guessing. Gini Loh builds interactive, data-driven calculators to quantify the real total cost of ownership (TCO) of tech hardware, compensation offers, lease breaks, and operational investments.
+Evaluating high-stakes personal and professional trade-offs shouldn't be about guessing. Gini Loh builds interactive, data-driven calculators that put the real total cost of ownership on career moves, housing, mobility and major purchases — before you commit.
 
 Gini Loh was founded on a simple premise: empowerment through decision intelligence.
 
-We started as a group of ambitious engineers, builders, and analysts frustrated by the lack of tools to evaluate high-value decisions. We spent countless hours modeling cloud vs. local GPU setups, comparing complex startup vs. big tech equity splits, and parsing lease break liabilities. We realized that what tech professionals need isn't generic personal finance advice—it's specialized, interactive calculators to make expensive choices with mathematical clarity.
+We started as a group of ambitious engineers, builders, and analysts frustrated by the lack of tools to evaluate high-value decisions. We spent countless hours comparing startup versus big-tech equity offers, pricing lease-break liabilities, and working out what a move across a border really costs. We realized that what tech professionals need isn't generic personal finance advice—it's specialized, interactive calculators to make expensive choices with mathematical clarity.
 
-We built Gini Loh to be the definitive decision-engine playground. A place where you can stress-test career moves, compute hardware TCO, and make buying decisions with zero hand-waving.
+We built Gini Loh to be the definitive decision-engine playground. A place where you can stress-test career moves, price a lease exit, and sign off on expensive purchases with zero hand-waving.
 
 image representing data and analytics that bring clarity to make decisions
 The 
 Gini Loh Mission
 Interactive calculators and total cost of ownership (TCO) tools for smart buying and career decisions.
 
-Our mission is to give tech workers the tools to model, quantify, and decide on high-stakes choices—from GPU workstation builds to equity packages and rental lease exits.
+Our mission is to give professionals the tools to quantify the decisions they pay for themselves — job offers, equity, lease exits, relocations, cross-border tax, and the purchases that quietly compound.
 
 What “Gini Loh” Means:
 Our Name
@@ -51,7 +51,7 @@ Our Audience
 
 
 The Tech Worker
-Evaluating RSU compensation packages, cloud GPU rentals vs. workstation buys, or remote relocations.
+Negotiating an offer, weighing equity against base, or pricing a move to a new city or country.
 
 Read More
 

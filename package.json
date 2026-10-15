@@ -10,6 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
+    "redirects": "node scripts/generate-nginx-redirects.mjs",
     "astro": "astro"
   },
   "dependencies": {

@@ -18,32 +18,32 @@ export interface OverviewContent {
 }
 
 const FALLBACK_OVERVIEW: OverviewContent = {
-	eyebrow: 'Decision Intelligence for Tech Workers',
-	headline: 'Stop guessing the math on high-stakes tech and career choices.',
+	eyebrow: 'Decision tools for your own money',
+	headline: 'Run the numbers before you commit.',
 	subheadline:
-		'Rigorous TCO calculators and models designed to evaluate cloud vs. local infrastructure, compensation packages, and major financial transitions before you commit.',
+		'Job offers, equity, leases, relocations, expat tax, laptop repairs — even the espresso machine. Every model runs in your browser: no signup, nothing uploaded.',
 	mission:
-		'Our mission is to give tech workers the tools to model, quantify, and decide on high-stakes choices—from GPU workstation builds to equity packages and rental lease exits.',
+		'Our mission is to give professionals the tools to quantify the decisions they pay for themselves — job offers, equity, lease exits, relocations, cross-border tax, and the purchases that quietly compound.',
 	originStory:
-		'Evaluating high-stakes professional and purchasing trade-offs shouldn\'t be about guessing. Gini Loh builds interactive, data-driven calculators to quantify the real total cost of ownership (TCO) of tech hardware, compensation offers, lease breaks, and operational investments.',
+		'Evaluating high-stakes personal and professional trade-offs shouldn\'t be about guessing. Gini Loh builds interactive, data-driven calculators that put the real total cost of ownership on career moves, housing, mobility and major purchases — before you commit.',
 	audience: [
 		{
 			title: 'The Tech Worker',
-			description: 'Evaluating RSU compensation packages, cloud GPU rentals vs. workstation buys, or remote relocations.'
+			description: 'Negotiating an offer, weighing equity against base, or pricing a move to a new city or country.'
 		},
 		{
 			title: 'The Smart Purchaser',
-			description: 'Amortizing home espresso machines or breaking rental leases by calculating the exact exit cost.'
+			description: 'Amortising a home espresso machine, or pricing the exact exit cost of a lease before signing it.'
 		},
 		{
 			title: 'The Decision Engineer',
-			description: 'Quantifying workflow tinkering taxes, tech repair-vs-replace metrics, and software build-vs-buy TCO.'
+			description: 'Quantifying the tinkering tax, repair-versus-replace, and what a subscription really costs per year.'
 		}
 	],
 	aboutSections: [
 		{
 			title: 'What Gini Loh Covers',
-			body: 'Hardware & Compute Decisions, Compensation Modeling, Software TCO, and lifestyle cost-per-use arbitrage.'
+			body: 'Compensation and career moves, housing and lease exits, relocation and cross-border tax, and cost-per-use arbitrage on the things you buy.'
 		}
 	]
 };
@@ -73,23 +73,23 @@ async function loadOverview() {
 	const audience: AudienceSegment[] = [
 		{
 			title: 'The Tech Worker',
-			description: 'Evaluating RSU compensation packages, cloud GPU rentals vs. workstation buys, or remote relocations.'
+			description: 'Negotiating an offer, weighing equity against base, or pricing a move to a new city or country.'
 		},
 		{
 			title: 'The Smart Purchaser',
-			description: 'Amortizing home espresso machines or breaking rental leases by calculating the exact exit cost.'
+			description: 'Amortising a home espresso machine, or pricing the exact exit cost of a lease before signing it.'
 		},
 		{
 			title: 'The Decision Engineer',
-			description: 'Quantifying workflow tinkering taxes, tech repair-vs-replace metrics, and software build-vs-buy TCO.'
+			description: 'Quantifying the tinkering tax, repair-versus-replace, and what a subscription really costs per year.'
 		}
 	];
 
 	return {
-		eyebrow: 'Decision Intelligence for Tech Workers',
-		headline: 'Stop guessing the math on high-stakes tech and career choices.',
+		eyebrow: 'Decision tools for your own money',
+		headline: 'Run the numbers before you commit.',
 		subheadline:
-			'Rigorous TCO calculators and models designed to evaluate cloud vs. local infrastructure, compensation packages, and major financial transitions before you commit.',
+			'Job offers, equity, leases, relocations, expat tax, laptop repairs — even the espresso machine. Every model runs in your browser: no signup, nothing uploaded.',
 		mission: cleanTextBlock(missionMatch?.[0] ?? FALLBACK_OVERVIEW.mission),
 		originStory: cleanTextBlock(originMatch?.[0] ?? FALLBACK_OVERVIEW.originStory),
 		audience,

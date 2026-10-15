@@ -75,21 +75,6 @@ export const calculatorTools = [
 		keywords: ['relocation cost benefit calculator', 'relocation payback calculator', 'moving cost payback', 'relocation calculator']
 	},
 	{
-		title: 'Master Asset & Software TCO Calculator',
-		slug: 'decision-intelligence',
-		href: '/calculators/decision-intelligence/',
-		status: 'Live',
-		accent: 'indigo',
-		domainCategory: 'Strategy & TCO',
-		outputType: 'Build vs. Buy TCO Score',
-		iconType: 'matrix',
-		description:
-			'Evaluate complex business and lifestyle trade-offs—from enterprise software build-vs-buy TCO to personal asset repairs, espresso machine cost-per-use, and time tinkering taxes.',
-		utility: 'Analyze build vs. buy & personal asset TCO',
-		category: 'FinanceApplication',
-		keywords: ['decision intelligence', 'build vs buy calculator', 'tinkering tax calculator', 'repair vs replace calculator', 'espresso cost per use calculator']
-	},
-	{
 		title: 'Home Espresso Cost-per-Use Calculator',
 		slug: 'coffee-arbitrage',
 		href: '/calculators/coffee-arbitrage/',
@@ -133,21 +118,6 @@ export const calculatorTools = [
 		utility: 'Calculate time tax vs premium software cost',
 		category: 'FinanceApplication',
 		keywords: ['no-code total cost calculator', 'tinkering tax calculator', 'SaaS burn rate vs build', 'no-code workaround']
-	},
-	{
-		title: 'GPU TCO Analyzer',
-		slug: 'gpu-compute',
-		href: '/calculators/gpu-compute/',
-		status: 'Live',
-		accent: 'violet',
-		domainCategory: 'Hardware',
-		outputType: 'Hardware vs. Cloud Comparison',
-		iconType: 'server',
-		description:
-			'Compare the TCO of building a local deep learning GPU workstation against renting cloud GPU compute instances.',
-		utility: 'Evaluate local GPU vs cloud GPU TCO',
-		category: 'FinanceApplication',
-		keywords: ['gpu tco calculator', 'gpu cost per hour vs cloud', 'rtx 6000 rental vs buy', 'should I buy vs rent gpu', 'gpu compute calculator']
 	},
 	{
 		title: 'AI Career Radar',

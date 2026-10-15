@@ -1,3 +1,6 @@
+import { filterOwnedPosts, belongsToSite, SIBLING_SITE } from './site-content';
+import { resolveInternalLink, INTERNAL_HOSTS } from './link-map';
+
 interface WordPressRenderedField {
 	rendered?: string;
 }
@@ -140,7 +143,7 @@ function normalizePost(post: WordPressPostResponse): WordPressPost {
 
 	// Clean up wpautop formatting inside LaTeX blocks so KaTeX doesn't choke on <br> tags
 	// Matches $$...$$ or \[...\]
-	htmlContent = htmlContent.replace(/(\$\$|\\\[)([\s\S]*?)(\$\$|\\\])/g, (match, open, content, close) => {
+	htmlContent = htmlContent.replace(/(\$\$|\\\[)([\s\S]*?)(\$\$|\\\])/g, (_match, open, content, close) => {
 		// Strip all HTML tags inside the math block and decode HTML entities that might break LaTeX
 		let cleanContent = content
 			.replace(/<[^>]+>/g, '') 
@@ -163,22 +166,27 @@ function normalizePost(post: WordPressPostResponse): WordPressPost {
 	htmlContent = htmlContent.replace(/<p>\s*(<svg[\s\S]*?<\/svg>)\s*<\/p>/gi, '$1');
 	htmlContent = htmlContent.replace(/<p>\s*<\/p>/gi, '');
 
-	// Rewrite internal WordPress links to frontend relative links (preserving uploads / assets)
-	if (apiBase) {
-		const escapedApiBase = apiBase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-		// Category links: https://cms.giniloh.com/category/xyz/ -> /categories/xyz/
-		htmlContent = htmlContent.replace(
-			new RegExp(`href=["']${escapedApiBase}/category/([^"'/]+)/?["']`, 'gi'),
-			'href="/categories/$1/"'
+	// Rewrite internal links so each one points at the property that actually OWNS its target.
+	//
+	// This used to rewrite every internal link to a site-relative path, which was correct while
+	// there was one site. After the 2026 split it silently produced broken links: a giniloh
+	// article linking to an aichieve article became `/that-slug/`, which does not exist here.
+	// Measured at split time: 5 broken links here, 30 on aichieve.net, across 18 articles.
+	// The ownership rules live in lib/link-map.ts.
+	{
+		const hostPattern = INTERNAL_HOSTS.map((host) => host.replace(/\./g, '\\.')).join('|');
+		const internalHref = new RegExp(
+			`href="(?:https?:\\/\\/(?:${hostPattern}))?(\\/(?!\\/)[^"]*)"`,
+			'gi'
 		);
-		// Post links: https://cms.giniloh.com/post-slug/ -> /post-slug/ (excluding wp-content, wp-includes, wp-admin, wp-json)
-		htmlContent = htmlContent.replace(
-			new RegExp(`href=["']${escapedApiBase}/(?!wp-content|wp-includes|wp-admin|wp-json)([^"']+)["']`, 'gi'),
-			(_match, path) => {
-				const cleanPath = path.replace(/^\/+/, '').replace(/\/+$/, '');
-				return `href="/${cleanPath}/"`;
+		htmlContent = htmlContent.replace(internalHref, (match, rawPath) => {
+			// Uploads and other CMS-owned assets must stay absolute so they keep loading straight
+			// from the CMS. They are files, not pages, and must not be rewritten to a front-end path.
+			if (/^\/(?:wp-content|wp-includes|wp-admin|wp-json)/i.test(rawPath)) {
+				return match;
 			}
-		);
+			return `href="${resolveInternalLink(rawPath)}"`;
+		});
 	}
 
 	return {
@@ -256,22 +264,51 @@ export function getConfiguredWordPressApiBase() {
 	return getWordPressApiBase();
 }
 
+/** True when the slug is published but owned by the sibling property (used for the 301 map). */
+export function isForeignPostSlug(slug: string) {
+	return !belongsToSite({ slug });
+}
+
+/** Where a post that moved to the sibling property now lives. */
+export function siblingUrlFor(post: { slug?: string | null }) {
+	const slug = post?.slug?.trim();
+	return slug ? `${SIBLING_SITE.origin}/${slug}/` : SIBLING_SITE.origin;
+}
+
+/**
+ * Read posts until `limit` posts that belong to THIS site have been collected.
+ * Filtering after a single `per_page=limit` fetch would quietly shrink every grid,
+ * because the shared install returns both properties' posts.
+ */
+async function fetchOwnedPosts(
+	query: Record<string, string | number | undefined>,
+	limit: number
+): Promise<WordPressPost[]> {
+	const owned: WordPressPost[] = [];
+	const perPage = 100;
+	const maxPages = 4;
+
+	for (let page = 1; page <= maxPages && owned.length < limit; page++) {
+		const batch = await fetchWordPress('posts', { _embed: 1, per_page: perPage, page, ...query });
+		if (!batch.length) {
+			break;
+		}
+		owned.push(...filterOwnedPosts(batch.map(normalizePost)));
+		if (batch.length < perPage) {
+			break;
+		}
+	}
+
+	return owned.slice(0, limit);
+}
+
 export async function fetchLatestPosts(limit = 6) {
-	const posts = await fetchWordPress('posts', {
-		_embed: 1,
-		per_page: limit
-	});
-	return posts.map(normalizePost);
+	return fetchOwnedPosts({}, limit);
 }
 
 export async function fetchPostsByCategory(categoryId: number | number[] | string, limit = 12) {
 	const categoryParam = Array.isArray(categoryId) ? categoryId.join(',') : String(categoryId);
-	const posts = await fetchWordPress('posts', {
-		_embed: 1,
-		categories: categoryParam,
-		per_page: limit
-	});
-	return posts.map(normalizePost);
+	return fetchOwnedPosts({ categories: categoryParam }, limit);
 }
 
 export async function searchPosts(query: string, limit = 8) {
@@ -279,33 +316,29 @@ export async function searchPosts(query: string, limit = 8) {
 	if (!trimmedQuery) {
 		return [];
 	}
-
-	const posts = await fetchWordPress('posts', {
-		_embed: 1,
-		search: trimmedQuery,
-		per_page: limit
-	});
-	return posts.map(normalizePost);
+	return fetchOwnedPosts({ search: trimmedQuery }, limit);
 }
+
 export async function fetchPostBySlug(slug: string) {
 	const posts = await fetchWordPress('posts', {
 		_embed: 1,
-		slug: slug
+		slug
 	});
-	
+
 	if (posts.length === 0) {
 		return null;
 	}
-	
-	return normalizePost(posts[0]);
+
+	const post = normalizePost(posts[0]);
+
+	// A slug that exists on the shared install but belongs to the sibling property is not ours
+	// to render. Callers use `siblingUrlFor` to 301 instead.
+	return belongsToSite(post) ? post : null;
 }
 
-export async function fetchAllPosts(limit = 100) {
-	const posts = await fetchWordPress('posts', {
-		_embed: 1,
-		per_page: limit
-	});
-	return posts.map(normalizePost);
+/** Every post this site owns. Pages through the shared install rather than capping at 100. */
+export async function fetchAllPosts(limit = 1000) {
+	return fetchOwnedPosts({}, limit);
 }
 
 export async function fetchAllCategories(limit = 100) {

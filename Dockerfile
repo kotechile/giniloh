@@ -10,6 +10,10 @@ RUN npm ci
 
 COPY . .
 
+# Generate the nginx 301 map for URLs that moved to aichieve.net during the split. Must run
+# after COPY . . (it reads src/data/ownership.mjs) and before the nginx stage copies it out.
+RUN node scripts/generate-nginx-redirects.mjs
+
 ARG PUBLIC_WORDPRESS_API_BASE
 ENV PUBLIC_WORDPRESS_API_BASE=$PUBLIC_WORDPRESS_API_BASE
 # This helps if the server has trouble with its own SSL certificate during build
@@ -29,6 +33,11 @@ RUN apk add --no-cache curl
 
 # Copy Nginx server configuration
 COPY default.conf /etc/nginx/conf.d/default.conf
+
+# The generated 301 map for moved URLs. Deliberately NOT under conf.d/ — nginx auto-includes
+# conf.d/*.conf at the http level, where a bare `location` is a syntax error. default.conf
+# includes it explicitly from inside its server block.
+COPY --from=build /app/nginx-redirects.conf /etc/nginx/redirects.conf
 
 COPY --from=build /app/dist /usr/share/nginx/html
 

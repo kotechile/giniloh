@@ -67,8 +67,8 @@ const getOutputIcon = (type?: string) => {
 ---
 
 <BaseLayout
-	title="Gini Loh | Decision Engine for Expensive Choices"
-	description="Total Cost of Ownership (TCO) calculators for smart buying decisions. Quantify your hardware, compensation, and lifestyle trade-offs."
+	title="Gini Loh | Run the numbers before you commit"
+	description="Free calculators for the decisions you pay for yourself — job offers and equity, lease exits, relocations, expat tax, laptop repairs, and everyday cost-per-use. Everything runs in your browser; nothing is uploaded."
 >
 	<link slot="head" rel="canonical" href={new URL('/', Astro.site).toString()} />
 	<JsonLd slot="head" data={websiteSchema} />
@@ -77,12 +77,12 @@ const getOutputIcon = (type?: string) => {
 	<section class="mt-24" aria-labelledby="homepage-calculators">
 		<div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
 			<div>
-				<p class="section-eyebrow">Interactive Models</p>
+				<p class="section-eyebrow">Deterministic Decision Engines</p>
 				<h2 id="homepage-calculators" class="mt-3 text-3xl font-black tracking-tight text-slate-800 sm:text-4xl">
-					Quantify your next high-stakes choice
+					Quantify compute, supply chain, and agentic workflows
 				</h2>
 			</div>
-			<a href="/calculators/" class="btn-inline text-sm font-semibold flex items-center gap-1">Browse all calculators <span aria-hidden="true">&rarr;</span></a>
+			<a href="/calculators/" class="btn-inline text-sm font-semibold flex items-center gap-1">Browse all models <span aria-hidden="true">&rarr;</span></a>
 		</div>
 
 		<div class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -136,23 +136,53 @@ const getOutputIcon = (type?: string) => {
 
 	<section class="mt-32 border-y border-[#E5E5E5] bg-white">
 		<div class="grid divide-y divide-[#E5E5E5] lg:grid-cols-3 lg:divide-y-0 lg:divide-x lg:divide-[#E5E5E5]">
+			<a href="/calculators/total-comp/" class="group bg-white p-8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A1A1A]">
+				<p class="font-mono text-xs uppercase tracking-widest text-[#8C8C8C] font-bold">Compensation // Career</p>
+				<h2 class="mt-4 text-2xl font-bold text-[#1A1A1A]">Offers, Equity & Job-Hop Velocity</h2>
+				<p class="mt-3 text-sm leading-relaxed text-[#5E5E5E]">Model base, bonus and vesting equity side by side, then compare a strategic job-hop against staying put on a 3% raise.</p>
+				<span class="mt-6 inline-flex text-sm font-semibold text-[#5A7A8F] transition group-hover:text-[#1A1A1A]">Run compensation models -></span>
+			</a>
 			<a href="/calculators/lease-break/" class="group bg-white p-8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A1A1A]">
-				<p class="font-mono text-xs uppercase tracking-widest text-[#8C8C8C] font-bold">Renters</p>
-				<h2 class="mt-4 text-2xl font-bold text-[#1A1A1A]">Leaving a lease early?</h2>
-				<p class="mt-3 text-sm leading-relaxed text-[#5E5E5E]">Estimate the penalty before you email your landlord or sign a new lease.</p>
-				<span class="mt-6 inline-flex text-sm font-semibold text-[#5A7A8F] transition group-hover:text-[#1A1A1A]">Run lease break calculator -></span>
+				<p class="font-mono text-xs uppercase tracking-widest text-[#8C8C8C] font-bold">Housing // Rental Exit</p>
+				<h2 class="mt-4 text-2xl font-bold text-[#1A1A1A]">Lease Breaks & Deposit Offsets</h2>
+				<p class="mt-3 text-sm leading-relaxed text-[#5E5E5E]">Quantify early termination exposure — penalty structures, exit fees and what your deposit actually covers — before you sign or walk.</p>
+				<span class="mt-6 inline-flex text-sm font-semibold text-[#5A7A8F] transition group-hover:text-[#1A1A1A]">Run lease exit models -></span>
 			</a>
-			<a href="/categories/" class="group bg-white p-8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A1A1A]">
-				<p class="font-mono text-xs uppercase tracking-widest text-[#8C8C8C] font-bold">Research</p>
-				<h2 class="mt-4 text-2xl font-bold text-[#1A1A1A]">Need more context first?</h2>
-				<p class="mt-3 text-sm leading-relaxed text-[#5E5E5E]">Browse category hubs to get the background before you act on a high-stakes decision.</p>
-				<span class="mt-6 inline-flex text-sm font-semibold text-[#5A7A8F] transition group-hover:text-[#1A1A1A]">Browse categories -></span>
+			<a href="/calculators/tech-debt-repair/" class="group bg-white p-8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A1A1A]">
+				<p class="font-mono text-xs uppercase tracking-widest text-[#8C8C8C] font-bold">Household // Assets</p>
+				<h2 class="mt-4 text-2xl font-bold text-[#1A1A1A]">Repair, Replace or Buy Once</h2>
+				<p class="mt-3 text-sm leading-relaxed text-[#5E5E5E]">Run repair-versus-replace and cost-per-use math on laptops, phones and premium home equipment — with the real cost of the tinkering in between.</p>
+				<span class="mt-6 inline-flex text-sm font-semibold text-[#5A7A8F] transition group-hover:text-[#1A1A1A]">Run asset TCO models -></span>
 			</a>
-			<a href="/about/" class="group bg-white p-8 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A1A1A]">
-				<p class="font-mono text-xs uppercase tracking-widest text-[#8C8C8C] font-bold">About</p>
-				<h2 class="mt-4 text-2xl font-bold text-[#1A1A1A]">Understand the site’s angle</h2>
-				<p class="mt-3 text-sm leading-relaxed text-[#5E5E5E]">See how Gini Loh approaches expensive choices, uncertainty, and practical decision support.</p>
-				<span class="mt-6 inline-flex text-sm font-semibold text-[#5A7A8F] transition group-hover:text-[#1A1A1A]">Read about Gini Loh -></span>
+		</div>
+	</section>
+
+	<!--
+		Cross-property hand-off. The enterprise half of this site moved to aichieve.net in 2026:
+		GPU/compute TCO, AI stack economics, agentic workflow operations, supply-chain cost control
+		and the paid PRO apps. Named explicitly rather than silently dropped, so a returning reader
+		who came here for the enterprise tools knows where they went.
+	-->
+	<section class="mt-16 border border-[#E5E5E5] p-8">
+		<div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+			<div class="max-w-2xl">
+				<p class="font-mono text-xs uppercase tracking-widest text-[#8C8C8C] font-bold">Looking for the enterprise tools?</p>
+				<h2 class="mt-3 text-2xl font-bold text-[#1A1A1A]">Compute, AI stack and supply-chain analysis is now on AIChieve</h2>
+				<p class="mt-3 text-sm leading-relaxed text-[#5E5E5E]">
+					The GPU TCO Analyzer, the build-vs-buy asset and software calculator, and the paid PRO apps
+					moved to <strong class="text-[#1A1A1A]">aichieve.net</strong> when the two sites split. This site
+					stays focused on decisions you make with your own money.
+				</p>
+			</div>
+			<a
+				href="https://aichieve.net/tools/"
+				rel="noopener"
+				class="btn-primary inline-flex shrink-0 items-center gap-2 px-6 py-3.5 text-sm font-semibold rounded-xl bg-[#1A1A1A] text-white hover:bg-[#333333] transition-all active:scale-95 shadow-none"
+			>
+				<span>Enterprise tool register</span>
+				<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M17 7H9M17 7V15" />
+				</svg>
 			</a>
 		</div>
 	</section>
