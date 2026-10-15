@@ -33,3 +33,11 @@ AICHIEVE/
 # Generated at image build time from src/data/ownership.mjs by
 # scripts/generate-nginx-redirects.mjs. Never hand-edit; regenerate with `npm run redirects`.
 nginx-redirects.conf
+
+# ─────────────────────────────────────────────────────────────────────────────
+# `brag` skill output. Rendered media (brag.mp4, brag.jpg) plus its composition
+# and copy drafts — ~12.6MB per run, and a new timestamped directory each time.
+# Generated artifacts, not source. Media in git is permanent: once committed it
+# is in every clone forever, so these stay out of history entirely.
+# ─────────────────────────────────────────────────────────────────────────────
+brag-output*/
