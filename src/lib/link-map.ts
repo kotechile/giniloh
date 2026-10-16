@@ -70,13 +70,13 @@ export function resolveInternalLink(rawPath: string): string {
 	// The local calculator hub itself.
 	if (path === '/calculators/') return path;
 
-	// Categories. The taxonomy is fully partitioned between the two properties, so anything not
+	// Articles. The taxonomy is fully partitioned between the two properties, so anything not
 	// owned here belongs to the sibling.
 	const category = path.match(/^\/(?:categories|category)\/([^/]+)\/$/);
 	if (category) {
 		const slug = category[1];
 		return OWNED_CATEGORIES.has(slug)
-			? `/categories/${slug}/`
+			? `/articles/${slug}/`
 			: `${SIBLING_SITE.origin}/categories/${slug}/`;
 	}
 

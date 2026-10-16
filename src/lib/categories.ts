@@ -1,6 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { resolveCategoryCsvPath } from './source-files';
-import { fetchAllCategories } from './wordpress';
+import { fetchAllCategories, fetchPostsByCategory } from './wordpress';
+import { OFF_SCOPE_CATEGORY_SLUGS } from '../data/ownership.mjs';
 
 export interface CategoryRecord {
 	id: string;
@@ -18,7 +19,7 @@ export interface CategoryRecord {
 const FALLBACK_CATEGORIES: CategoryRecord[] = [
 	{
 		id: 'wordpress-categories-unavailable',
-		name: 'WordPress Categories Unavailable',
+		name: 'Articles Unavailable',
 		slug: 'wordpress-categories-unavailable',
 		description:
 			'TODO: configure PUBLIC_WORDPRESS_API_BASE and ensure the WordPress REST API is reachable so the category menu and pages can load live taxonomy data.',
@@ -169,4 +170,68 @@ export async function getTopLevelCategories() {
 export async function getCategoryBySlug(slug: string) {
 	const categories = await getAllCategories();
 	return categories.find((category) => category.slug === slug) ?? null;
+}
+
+/**
+ * Categories that actually hold content on THIS property.
+ *
+ * WordPress's own `count` field counts the SHARED install — both properties'
+ * posts — so it cannot be trusted for anything a reader sees. It is why the hub
+ * advertised "48 / 14 / 14 / 11 / 34 Articles" across five pillars for a
+ * property that owns 26 posts in total, and why `/articles/supply-chain-operations/`
+ * could promise 34 articles and then render the literal text "No articles".
+ *
+ * Every reader-facing category list and count must come from here. `postCount`
+ * is recomputed from the owned posts that the pages themselves will show, so a
+ * card can no longer promise more than its page delivers — and a category with
+ * nothing to show is simply absent, which is also what stops the empty
+ * dead-end pillar pages from being built at all.
+ */
+async function computeContentCategories(): Promise<CategoryRecord[]> {
+	const categories = await getTopLevelCategories();
+	const withContent: CategoryRecord[] = [];
+	const offScope = new Set<string>(OFF_SCOPE_CATEGORY_SLUGS);
+
+	for (const category of categories) {
+		// Editorial curation first: an out-of-scope topic never appears on this
+		// property, whatever its post count happens to be today.
+		if (offScope.has(category.slug)) continue;
+
+		const ownIds = [category.wordpressCategoryId, ...category.children.map((c) => c.wordpressCategoryId)].filter(
+			(id): id is number => typeof id === 'number'
+		);
+		const ownPosts = ownIds.length ? await fetchPostsByCategory(ownIds, 100) : [];
+
+		const children: CategoryRecord[] = [];
+		for (const child of category.children) {
+			if (offScope.has(child.slug)) continue;
+			const childIds = child.wordpressCategoryId != null ? [child.wordpressCategoryId] : [];
+			const childPosts = childIds.length ? await fetchPostsByCategory(childIds, 100) : [];
+			if (childPosts.length) children.push({ ...child, postCount: childPosts.length });
+		}
+
+		if (ownPosts.length) withContent.push({ ...category, postCount: ownPosts.length, children });
+	}
+
+	return withContent;
+}
+
+let contentCategoryCache: Promise<CategoryRecord[]> | undefined;
+
+/** Memoised across the hub, footer, homepage and sitemap for a single build. */
+export async function getContentCategories(): Promise<CategoryRecord[]> {
+	contentCategoryCache ??= computeContentCategories();
+	return contentCategoryCache;
+}
+
+/** Flattened view: every category that will actually be built as a page. */
+export async function getContentCategorySlugs(): Promise<CategoryRecord[]> {
+	const categories = await getContentCategories();
+	return categories.flatMap((category) => [category, ...category.children]);
+}
+
+/** Null when the slug holds no content here — so the page refuses to build. */
+export async function getContentCategoryBySlug(slug: string) {
+	const all = await getContentCategorySlugs();
+	return all.find((category) => category.slug === slug) ?? null;
 }

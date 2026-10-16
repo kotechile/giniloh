@@ -165,3 +165,38 @@ export const AICHIEVE_TOOL_PATHS = [
 	{ slug: 'gpu-compute', title: 'GPU TCO Analyzer', path: '/tools/gpu-compute/' },
 	{ slug: 'master-asset-tco', title: 'Master Asset & Software TCO Calculator', path: '/tools/master-asset-tco/' },
 ];
+
+
+/**
+ * Every category in the shared WordPress taxonomy, with its disposition on THIS property.
+ *
+ * The taxonomy was authored for the shared install, so it carries the enterprise half's topics.
+ * They are excluded by SLUG here rather than inferred from a post count: a category can be empty
+ * the day you check it and populated next month, whereas "supply-chain operations is not a decision
+ * a tech worker makes with their own money" stays true. The owned-post-count rule in
+ * `getContentCategories()` still runs underneath as a safety net, so an in-scope category that
+ * happens to hold nothing is hidden too.
+ *
+ * ONE list on purpose: the same rows generate the on-site rename redirect
+ * (`/categories/<slug>/` -> `/articles/<slug>/`) AND the outbound redirects, so the two cannot
+ * drift out of sync.
+ *
+ * `to` targets were each verified live with curl before being written down: aichieve serves
+ * `/categories/supply-chain-operations/` (200) but 404s the other three, which is why those send a
+ * reader to its hub rather than to a 404 of our own making.
+ */
+export const CATEGORY_DISPOSITIONS = [
+	{ slug: 'artificial-intelligence-future-of-work', keep: true },
+	{ slug: 'career-ai-resilience', keep: true },
+	{ slug: 'major-purchases-assets', keep: true },
+	{ slug: 'mental-models-strategy', keep: true },
+	{ slug: 'money-wealth', keep: true },
+	// Out of scope for giniloh: the enterprise half of the split.
+	{ slug: 'supply-chain-operations', keep: false, to: `${AICHIEVE_ORIGIN}/categories/supply-chain-operations/` },
+	{ slug: 'ai-stack-tool-tco', keep: false, to: `${AICHIEVE_ORIGIN}/categories/` },
+	{ slug: 'autonomous-agentic-workflows', keep: false, to: `${AICHIEVE_ORIGIN}/categories/` },
+	{ slug: 'business-automation-operations', keep: false, to: `${AICHIEVE_ORIGIN}/categories/` },
+];
+
+/** Out-of-scope slugs. Imported by the category loader so no caller re-derives the rule. */
+export const OFF_SCOPE_CATEGORY_SLUGS = CATEGORY_DISPOSITIONS.filter((c) => !c.keep).map((c) => c.slug);

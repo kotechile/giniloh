@@ -62,7 +62,7 @@ const productCta = productCtaFor({ slug: post.slug, categorySlug: post.categoryS
 
 const siteUrl = Astro.site?.toString() || 'https://giniloh.com/';
 const postUrl = new URL(`/${post.slug}/`, siteUrl).toString();
-const categoryUrl = post.categorySlug ? new URL(`/categories/${post.categorySlug}/`, siteUrl).toString() : null;
+const categoryUrl = post.categorySlug ? new URL(`/articles/${post.categorySlug}/`, siteUrl).toString() : null;
 
 const articleSchema = {
 	"@context": "https://schema.org",

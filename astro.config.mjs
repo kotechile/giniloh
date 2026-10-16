@@ -13,7 +13,7 @@ import tailwindcss from '@tailwindcss/vite';
 // Plain ESM precisely so this file can read them: astro.config is evaluated by Node before
 // TypeScript is available, and hardcoding a second copy of the slug lists here is how the redirect
 // map silently drifts out of sync with the content split.
-import { MOVED_TOOL_PATHS, AICHIEVE_ORIGIN } from './src/data/ownership.mjs';
+import { MOVED_TOOL_PATHS, AICHIEVE_ORIGIN, CATEGORY_DISPOSITIONS } from './src/data/ownership.mjs';
 import { FOREIGN_TARGETS } from './src/data/ownership.generated.mjs';
 
 /**
@@ -39,6 +39,24 @@ const movedToolRedirects = Object.fromEntries(
 	MOVED_TOOL_PATHS.map(({ from, to }) => [from, to])
 );
 
+/**
+ * Category paths, derived from ONE list (CATEGORY_DISPOSITIONS in data/ownership.mjs):
+ *
+ *   the hub itself   /categories/  -> /articles/     (the IA rename)
+ *   in-scope topics  /categories/<slug>/ -> /articles/<slug>/
+ *   out of scope     /categories/<slug>/ -> the sibling property
+ *
+ * The third line is the one that matters for trust: those URLs are indexed and used to answer 200
+ * with a page reading "No articles". A 301 sends the reader and Google to where that content
+ * actually lives instead of into a dead end.
+ */
+const categoryRedirects = Object.fromEntries([
+	['/categories/', '/articles/'],
+	...CATEGORY_DISPOSITIONS.map(({ slug, keep, to }) =>
+		keep ? [`/categories/${slug}/`, `/articles/${slug}/`] : [`/categories/${slug}/`, to]
+	)
+]);
+
 // https://astro.build/config
 export default defineConfig({
   site: process.env.PUBLIC_SITE_URL ?? 'https://giniloh.com',
@@ -60,6 +78,9 @@ export default defineConfig({
     '/showcase/': `${AICHIEVE_ORIGIN}/apps/`,
     '/pro-apps': `${AICHIEVE_ORIGIN}/apps/`,
     '/pro-apps/': `${AICHIEVE_ORIGIN}/apps/`,
+
+    // The editorial hub was renamed: /categories/ -> /articles/ (see docs/navigation-ia-plan.md).
+    ...categoryRedirects,
 
     // Moved out of here during the split — derived from data/ownership.mjs.
     ...movedToolRedirects,

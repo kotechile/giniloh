@@ -1,19 +1,23 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import JsonLd from '../../components/JsonLd.astro';
-import { getAllCategories, getCategoryBySlug } from '../../lib/categories';
+import { getContentCategorySlugs, getContentCategoryBySlug } from '../../lib/categories';
 import { fetchPostsByCategory } from '../../lib/wordpress';
 
 export async function getStaticPaths() {
-	const categories = await getAllCategories();
+	// Only categories that hold posts OWNED by this property become pages. An out-of-scope topic, or
+	// an in-scope one with nothing to show, is not built at all and its URL 301s instead (see
+	// CATEGORY_DISPOSITIONS in data/ownership.mjs). All nine taxonomy categories used to be built,
+	// four of which rendered the literal text "No articles" — 44% of the hub's cards.
+	const categories = await getContentCategorySlugs();
 	return categories.map((category) => ({
 		params: { slug: category.slug }
 	}));
 }
 
 const { slug } = Astro.params;
-const allCategories = await getAllCategories();
-const category = slug ? await getCategoryBySlug(slug) : null;
+const allCategories = await getContentCategorySlugs();
+const category = slug ? await getContentCategoryBySlug(slug) : null;
 
 if (!category) {
 	return Astro.redirect('/404');
@@ -35,8 +39,8 @@ const posts = categoryIdsToFetch.length > 0
 	: [];
 
 const siteUrl = Astro.site?.toString() || 'https://giniloh.com/';
-const categoriesUrl = new URL('/categories/', siteUrl).toString();
-const categoryUrl = new URL(`/categories/${category.slug}/`, siteUrl).toString();
+const categoriesUrl = new URL('/articles/', siteUrl).toString();
+const categoryUrl = new URL(`/articles/${category.slug}/`, siteUrl).toString();
 
 const categorySchema = {
 	"@context": "https://schema.org",
@@ -63,7 +67,7 @@ const breadcrumbListItems = [
 	{
 		"@type": "ListItem",
 		"position": 2,
-		"name": "Categories",
+		"name": "Articles",
 		"item": categoriesUrl
 	}
 ];
@@ -73,7 +77,7 @@ if (parentCategory) {
 		"@type": "ListItem",
 		"position": 3,
 		"name": parentCategory.name,
-		"item": new URL(`/categories/${parentCategory.slug}/`, siteUrl).toString()
+		"item": new URL(`/articles/${parentCategory.slug}/`, siteUrl).toString()
 	});
 	breadcrumbListItems.push({
 		"@type": "ListItem",
@@ -101,18 +105,18 @@ const breadcrumbSchema = {
 	title={`${category.name} | Gini Loh`}
 	description={category.description || `Browse articles, guides, and tools related to ${category.name}.`}
 >
-	<link slot="head" rel="canonical" href={new URL(`/categories/${category.slug}/`, Astro.site).toString()} />
+	<link slot="head" rel="canonical" href={new URL(`/articles/${category.slug}/`, Astro.site).toString()} />
 	<JsonLd slot="head" data={categorySchema} />
 	<JsonLd slot="head" data={breadcrumbSchema} />
 
 	<div class="relative py-12">
 		<div class="mx-auto max-w-3xl">
 			{parentCategory ? (
-				<a href={`/categories/${parentCategory.slug}/`} class="btn-inline text-sm mb-6 inline-flex items-center gap-1">
+				<a href={`/articles/${parentCategory.slug}/`} class="btn-inline text-sm mb-6 inline-flex items-center gap-1">
 					<span aria-hidden="true">&larr;</span> Back to {parentCategory.name}
 				</a>
 			) : (
-				<a href="/categories/" class="btn-inline text-sm mb-6 inline-flex items-center gap-1">
+				<a href="/articles/" class="btn-inline text-sm mb-6 inline-flex items-center gap-1">
 					<span aria-hidden="true">&larr;</span> Back to categories
 				</a>
 			)}
@@ -134,7 +138,7 @@ const breadcrumbSchema = {
 					</span>
 					{category.children.map((child) => (
 						<a
-							href={`/categories/${child.slug}/`}
+							href={`/articles/${child.slug}/`}
 							class="rounded-lg border border-[#E5E5E5] bg-white px-3 py-1.5 text-xs font-medium text-[#1A1A1A] transition hover:border-[#5A7A8F] hover:bg-[#5A7A8F]/10 hover:text-[#4B6478]"
 						>
 							{child.name} {child.postCount ? `(${child.postCount})` : ''}

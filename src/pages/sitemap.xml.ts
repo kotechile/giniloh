@@ -2,10 +2,10 @@ import type { APIRoute } from 'astro';
 import fs from 'node:fs';
 import path from 'node:path';
 import { calculatorTools } from '../lib/calculators/metadata';
-import { getAllCategories } from '../lib/categories';
+import { getContentCategorySlugs } from '../lib/categories';
 import { fetchAllPosts } from '../lib/wordpress';
 
-const staticPaths = ['/', '/calculators/', '/categories/', '/about/', '/author/gini-loh/'];
+const staticPaths = ['/', '/calculators/', '/articles/', '/about/', '/author/gini-loh/'];
 
 function slugify(text: string) {
 	return text
@@ -24,7 +24,7 @@ function urlEntry(site: URL, path: string, lastmod?: string) {
 
 export const GET: APIRoute = async ({ site }) => {
 	const baseUrl = site ?? new URL('https://giniloh.com');
-	const [categories, posts] = await Promise.all([getAllCategories(), fetchAllPosts()]);
+	const [categories, posts] = await Promise.all([getContentCategorySlugs(), fetchAllPosts()]);
 	
 	const today = new Date().toISOString().split('T')[0];
 	const entries: string[] = [];
@@ -76,9 +76,9 @@ export const GET: APIRoute = async ({ site }) => {
 		console.warn('Could not load career occupations for sitemap:', e);
 	}
 
-	// 4. Categories
+	// 4. Articles
 	for (const category of categories) {
-		entries.push(urlEntry(baseUrl, `/categories/${category.slug}/`, today));
+		entries.push(urlEntry(baseUrl, `/articles/${category.slug}/`, today));
 	}
 
 	// 5. WordPress Article Posts

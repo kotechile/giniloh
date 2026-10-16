@@ -1,7 +1,7 @@
 ---
-import { getTopLevelCategories } from '../lib/categories';
+import { getContentCategories } from '../lib/categories';
 
-const topCategories = await getTopLevelCategories();
+const topCategories = await getContentCategories();
 ---
 
 <footer class="w-full mt-24 border-t border-[#E5E5E5] bg-white py-16">
@@ -15,7 +15,7 @@ const topCategories = await getTopLevelCategories();
 						Technology with a purpose: smarter portfolios, fuller lives.
 					</h2>
 					<p class="mt-3 text-sm leading-relaxed text-[#5E5E5E] max-w-md">
-						Free calculators and plain-English guides for lease breaks, career moves, portfolio automation, and money decisions.
+						Free calculators and plain-English articles for lease breaks, career moves, portfolio automation, and money decisions.
 					</p>
 					
 					<!-- Social Profiles -->
@@ -77,7 +77,6 @@ const topCategories = await getTopLevelCategories();
 				<p class="font-mono text-xs uppercase tracking-widest text-[#6B6B6B] font-bold">System Map</p>
 				<div class="mt-4 grid gap-3 text-sm font-mono text-[#5E5E5E]">
 					<a href="/" class="transition hover:text-[#4B6478]">Home / Dashboard</a>
-					<a href="/#guides" class="transition hover:text-[#4B6478]">Guides</a>
 					<a href="/calculators/" class="transition hover:text-[#4B6478]">Calculators</a>
 					<a href="https://apps.aichieve.net/showcase" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 transition hover:text-[#4B6478]">
 						<span>Apps</span>
@@ -92,7 +91,7 @@ const topCategories = await getTopLevelCategories();
 							/>
 						</svg>
 					</a>
-					<a href="/categories/" class="transition hover:text-[#4B6478]">Categories</a>
+					<a href="/articles/" class="transition hover:text-[#4B6478]">Articles</a>
 					<a href="/about/" class="transition hover:text-[#4B6478]">About</a>
 				</div>
 			</div>
@@ -102,7 +101,7 @@ const topCategories = await getTopLevelCategories();
 				<p class="font-mono text-xs uppercase tracking-widest text-[#6B6B6B] font-bold">Active Modules</p>
 				<div class="mt-4 grid gap-3 text-sm font-mono text-[#5E5E5E]">
 					{topCategories.slice(0, 4).map((category) => (
-						<a href={`/categories/${category.slug}/`} class="transition hover:text-[#4B6478] truncate" title={category.name}>
+						<a href={`/articles/${category.slug}/`} class="transition hover:text-[#4B6478] truncate" title={category.name}>
 							{category.name}
 						</a>
 					))}
