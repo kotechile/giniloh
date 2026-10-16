@@ -7,13 +7,14 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/routing.mjs && astro build",
     "preview": "astro preview",
     "check": "astro check",
     "redirects": "node scripts/generate-nginx-redirects.mjs",
     "astro": "astro",
-    "routing:sync": "node scripts/routing-sync.mjs",
-    "routing:check": "node scripts/routing-sync.mjs --check"
+    "routing:sync": "node scripts/routing.mjs --sync",
+    "routing:check": "node scripts/routing.mjs --check",
+    "routing:derive": "node scripts/routing.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.1",

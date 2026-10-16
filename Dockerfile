@@ -12,6 +12,10 @@ COPY . .
 
 # Generate the nginx 301 map for URLs that moved to aichieve.net during the split. Must run
 # after COPY . . (it reads src/data/ownership.mjs) and before the nginx stage copies it out.
+# Derive ownership from the LIVE CMS before anything reads it. This is what makes a publish
+# actually appear: the redeploy re-derives the post list instead of trusting a committed one.
+# Must precede the redirect generation, which reads the derived file.
+RUN node scripts/routing.mjs
 RUN node scripts/generate-nginx-redirects.mjs
 
 ARG PUBLIC_WORDPRESS_API_BASE
