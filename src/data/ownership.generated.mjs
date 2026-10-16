@@ -34,6 +34,7 @@ export const OWNED_POST_SLUGS_GENERATED = [
 	"the-giniloh-money-flow-simulator-explained",
 	"three-forms-cost-more-than-tax",
 	"why-70-of-startup-options-go-unexercised",
+	"your-ipo-payday-tax-bill",
 	"zapier-notion-integration-calculate-your-tinkering-tax"
 ];
 export const FOREIGN_POST_SLUGS_GENERATED = [
@@ -90,6 +91,7 @@ export const FOREIGN_POST_SLUGS_GENERATED = [
 	"multi-agent-orchestration-building-the-one-person-enterprise",
 	"nearshoring-doesnt-move-the-trade-case",
 	"nvidia-says-its-gpus-arent-sold-out-its-cfos-279-billion-memory-bet",
+	"nyc-buys-night-deliveries-8-diesel-bills-you",
 	"one-approval-two-payments",
 	"one-skill-too-many-green-test",
 	"openai-just-made-the-agent-loop-a-commodity",
@@ -131,6 +133,7 @@ export const FOREIGN_POST_SLUGS_GENERATED = [
 	"zet-scale-ev-truck-residual-value-risk"
 ];
 export const FOREIGN_TARGETS = {
+	"nyc-buys-night-deliveries-8-diesel-bills-you": "https://aichieve.net",
 	"forecast-value-added-lose-to-last-period": "https://aichieve.net",
 	"freight-claim-dies-at-9-months": "https://aichieve.net",
 	"cheaper-model-pricier-task": "https://aichieve.net",
@@ -225,4 +228,4 @@ export const FOREIGN_TARGETS = {
 	"self-hosted-ai-when-to-buy-vs-rent-gpus": "https://aichieve.net"
 };
 export const GENERATED_FOR = "giniloh.com";
-export const GENERATED_AT = "2026-10-16T02:01:48.469Z";
+export const GENERATED_AT = "2026-10-16T11:48:07.212Z";
