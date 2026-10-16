@@ -61,11 +61,14 @@ add_action( 'init', function () {
 } );
 
 /**
- * Optional guard: block verticals being created by anyone but an admin, so the routing vocabulary
- * cannot drift. Remove if it gets in the way.
+ * Optional guard: stop a logged-in non-admin from extending the routing vocabulary, so it cannot
+ * drift. Deliberately scoped to `is_user_logged_in()` — in a CLI run (wp eval-file / plain php)
+ * there is NO current user, and an unscoped current_user_can() check returns false there, which
+ * would make this filter reject the backfill's own wp_insert_term() calls and silently create no
+ * terms at all. Remove the whole block if it ever gets in the way.
  */
 add_filter( 'pre_insert_term', function ( $term, $taxonomy ) {
-	if ( 'vertical' === $taxonomy && ! current_user_can( 'manage_options' ) ) {
+	if ( 'vertical' === $taxonomy && is_user_logged_in() && ! current_user_can( 'manage_options' ) ) {
 		return new WP_Error(
 			'vertical_locked',
 			'Verticals define which site owns a post. Ask an administrator to add one.'

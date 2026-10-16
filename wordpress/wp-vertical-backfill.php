@@ -2,18 +2,34 @@
 /**
  * Assign the routing `vertical` term to every post.
  *
+ * WORKS TWO WAYS — pick whichever you have:
+ *   wp eval-file wp-vertical-backfill.php [--dry-run]     (needs wp-cli)
+ *   php wp-vertical-backfill.php [--dry-run]              (needs only php, run from the WP root)
+ *
  * WHY: the front ends read WordPress. Routing by vertical only works once the vertical is ON the
  * post — everything in Supabase (vertical_sites, articles.slug/wp_post_id) is upstream metadata.
  *
- * RUN (from the WordPress root, with WP-CLI):
- *     wp eval-file wp-vertical-backfill.php --dry-run     # preview, writes nothing
- *     wp eval-file wp-vertical-backfill.php               # apply
- *
- * Idempotent: re-running re-assigns the same term (`false` = append into the taxonomy, and
- * wp_set_object_terms is a no-op when the term is already present).
+ * Idempotent: re-running re-assigns the same term. Safe to run twice.
  */
 
-$dry = in_array( '--dry-run', (array) ( $args ?? array() ), true );
+// -- standalone bootstrap ------------------------------------------------
+// Under `wp eval-file` WordPress is already loaded (ABSPATH defined). Under plain `php` it is not,
+// so find wp-load.php by walking up from wherever this file was copied to.
+if ( ! defined( 'ABSPATH' ) ) {
+	$root = __DIR__;
+	for ( $i = 0; $i < 4 && ! file_exists( $root . '/wp-load.php' ); $i++ ) {
+		$root = dirname( $root );
+	}
+	if ( ! file_exists( $root . '/wp-load.php' ) ) {
+		fwrite( STDERR, "ERROR: cannot find wp-load.php above " . __DIR__ . "\n" );
+		fwrite( STDERR, "Copy this file into the WordPress root, or use: wp eval-file\n" );
+		exit( 1 );
+	}
+	require_once $root . '/wp-load.php';
+}
+
+$args_in = defined( 'WP_CLI' ) ? (array) ( $args ?? array() ) : (array) ( $argv ?? array() );
+$dry     = in_array( '--dry-run', $args_in, true );
 
 $MAP = array(
 	"100-case-eval-925-coverage" => "ai_observability_qa",
@@ -137,17 +153,27 @@ $MAP = array(
 );
 
 $created = $assigned = $missing = 0;
-$miss = array();
+$miss    = array();
+$seen    = array(); // distinct terms handled this run — without this, dry-run counts one per POST
 
 foreach ( $MAP as $slug => $vertical ) {
-	if ( ! term_exists( $vertical, 'vertical' ) ) {
+
+	// Count DISTINCT terms, and don't re-query a term we already handled this run. In --dry-run
+	// nothing is actually inserted, so a bare term_exists() check would re-report every post's
+	// term as "to create" (118 instead of 27) and wildly overstate the change.
+	if ( ! isset( $seen[ $vertical ] ) && ! term_exists( $vertical, 'vertical' ) ) {
 		if ( ! $dry ) {
-			wp_insert_term( $vertical, 'vertical', array( 'slug' => $vertical ) );
+			$r = wp_insert_term( $vertical, 'vertical', array( 'slug' => $vertical ) );
+			if ( is_wp_error( $r ) ) {
+				fwrite( STDERR, "term error ({$vertical}): " . $r->get_error_message() . "\n" );
+				continue;
+			}
 		}
+		$seen[ $vertical ] = true;
 		$created++;
 	}
 
-	$ids = get_posts( array(
+	$found = get_posts( array(
 		'name'        => $slug,
 		'post_type'   => 'post',
 		'post_status' => 'any',
@@ -155,24 +181,41 @@ foreach ( $MAP as $slug => $vertical ) {
 		'fields'      => 'ids',
 	) );
 
-	if ( empty( $ids ) ) {
+	if ( empty( $found ) ) {
 		$miss[] = $slug;
 		$missing++;
 		continue;
 	}
 
 	if ( ! $dry ) {
-		wp_set_object_terms( $ids[0], $vertical, 'vertical', false );
+		// false = replace this taxonomy's terms for the post, so a post can never end up
+		// belonging to two properties.
+		wp_set_object_terms( $found[0], $vertical, 'vertical', false );
 	}
 	$assigned++;
 }
 
+if ( ! $dry ) {
+	// The taxonomy registers under REST only after rewrite rules are rebuilt.
+	flush_rewrite_rules( false );
+}
+
 printf(
-	"%s  terms_created=%d  assigned=%d  posts_missing=%d\n",
-	$dry ? 'DRY RUN' : 'DONE',
-	$created, $assigned, $missing
+	"%s  terms_created=%d  assigned=%d  posts_not_found=%d\n",
+	$dry ? 'DRY RUN (nothing written)' : 'DONE',
+	$created,
+	$assigned,
+	$missing
 );
+
 if ( $miss ) {
-	echo "posts not found:\n";
-	foreach ( $miss as $s ) { echo "  $s\n"; }
+	echo "\nposts not found by slug (check the slug or the post status):\n";
+	foreach ( $miss as $s ) {
+		echo "  {$s}\n";
+	}
+}
+
+if ( ! $dry ) {
+	echo "\nNext: confirm the taxonomy is exposed.\n";
+	echo "  curl -s https://cms.giniloh.com/wp-json/wp/v2/vertical | head -c 300\n";
 }

@@ -340,3 +340,63 @@ Both survivors are the two flagged for a human decision, not inference errors:
 
 Resolve these two by editing the POST (its vertical tag or its manifest entry), not the verticals
 table — the verticals are now correct for everything else.
+
+---
+
+## Part D — RUNBOOK: deploying the vertical taxonomy
+
+Environment discovered on the host (do not assume otherwise):
+
+    cms.giniloh.com  -> 72.61.72.70
+    container        -> wordpress-pwgow8ow48g88go880o480cs   (Traefik: Host(`cms.giniloh.com`))
+    the OTHER one    -> wordpress-o8gg8osos44sckk800owcc44   (cms.wellroost.com)  <- DO NOT TOUCH
+    wp-cli           -> NOT INSTALLED on host or in either container
+    php              -> 8.3.33 (cli) inside the container
+    mu-plugins/      -> exists and is writable
+
+Because wp-cli is absent, the backfill runs under plain `php`, not `wp eval-file`. The script
+handles both: with no ABSPATH it walks up looking for wp-load.php.
+
+### 0. Decide the two posts first
+Running as-is MOVES both (this is a real change, not a preview):
+
+    moss-landing-burns-again-homeowners-become-the-grid   giniloh.com -> wellroost.com
+    one-approval-two-payments                             giniloh.com -> aichieve.net
+
+### 1. Deploy the taxonomy
+    scp wordpress/mu-plugins/vertical-taxonomy.php root@72.61.72.70:/tmp/
+    ssh root@72.61.72.70
+    docker cp /tmp/vertical-taxonomy.php \
+      wordpress-pwgow8ow48g88go880o480cs:/var/www/html/wp-content/mu-plugins/
+
+mu-plugins load automatically — no activation, and it survives theme changes.
+
+### 2. Dry run (writes nothing)
+    docker exec wordpress-pwgow8ow48g88go880o480cs \
+      php /var/www/html/wp-vertical-backfill.php --dry-run
+
+Expected exactly:
+    DRY RUN (nothing written)  terms_created=27  assigned=118  posts_not_found=0
+
+### 3. Apply
+    docker exec wordpress-pwgow8ow48g88go880o480cs \
+      php /var/www/html/wp-vertical-backfill.php
+
+Expected:  DONE  terms_created=27  assigned=118  posts_not_found=0
+Its last step calls flush_rewrite_rules(false) — required for the REST route to appear.
+
+### 4. Verify
+    curl -s https://cms.giniloh.com/wp-json/wp/v2/vertical | head -c 300
+    curl -s "https://cms.giniloh.com/wp-json/wp/v2/posts?per_page=2&_fields=slug,vertical"
+
+Then in wp-admin: Posts list should show a "Vertical" column.
+
+### Verified in advance
+    php -l on both files inside the container : No syntax errors
+    --dry-run against the live DB             : assigned=118  posts_not_found=0
+
+### Two bugs caught by that dry run before deploy
+1. terms_created reported 118 (per-POST) instead of 27 (per distinct term) — fixed with a $seen set.
+2. The mu-plugin's pre_insert_term guard called current_user_can() unguarded. In a CLI run there is
+   no current user, so it returns false and wp_insert_term() would have been REJECTED — creating zero
+   terms. Scoped to is_user_logged_in() so CLI passes and logged-in non-admins are still blocked.
