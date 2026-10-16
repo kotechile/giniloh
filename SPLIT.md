@@ -47,7 +47,7 @@ graph TB
     G -.->|"301 moved compute/agentic/supply-chain pages"| A
     A -.->|"cross-link: personal decisions live there"| G
 
-    subgraph APPS["apps.giniloh.com"]
+    subgraph APPS["apps.aichieve.net"]
         P["5 paid PRO apps<br/>LedgerLink · FacturGate · ParcelProof<br/>CaseProof · SpendProof"]
     end
     A -->|"PUBLIC_APPS_BASE"| P
@@ -152,5 +152,6 @@ failure was a deploy-level one, and hand-checking with curl loops each time does
   giniloh.com still does not.
 - **`www.aichieve.net` has no route.** DNS resolves, but Coolify has no domain entry for it, so it
   fails at TLS. Add `www.aichieve.net` as a domain on the app, or redirect it at DNS.
-- **`apps.giniloh.com` is still the PRO app host** while aichieve.net serves the directory that
-  links to it. `PUBLIC_APPS_BASE` is the single switch when `apps.aichieve.net` is provisioned.
+- **The PRO app host moved to `apps.aichieve.net`.** aichieve.net serves the directory that links
+  to it, and `PUBLIC_APPS_BASE` is the single switch every property reads. The old
+  `apps.giniloh.com` host answers 503 for every path, so no property may reference it.

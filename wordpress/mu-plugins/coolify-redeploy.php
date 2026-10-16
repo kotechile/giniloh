@@ -69,8 +69,8 @@ function giniloh_coolify_token() {
  * Contents are a deploy-time fact, NOT content data. Add a row here when you deploy a new front
  * end. Deliberately excluded:
  *
- *   apps.giniloh.com -- the PRO apps, not a content property. Content publishes must never
- *                       rebuild it.
+ *   apps.aichieve.net -- the PRO apps, not a content property. Content publishes must never
+ *                        rebuild it.
  *
  * Note for future properties: a NEW site should get its own WordPress (separate CMS), in which
  * case it does not belong in this list at all -- its own CMS triggers its own rebuild.

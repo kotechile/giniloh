@@ -30,27 +30,27 @@ const PRODUCTS = {
   ledgerlink: {
     name: 'LedgerLink',
     tagline: 'Stripe payout → GL reconciliation engine',
-    url: 'https://apps.giniloh.com/ledgerlink',
+    url: 'https://apps.aichieve.net/ledgerlink',
   },
   facturgate: {
     name: 'FacturGate',
     tagline: 'EU e-invoice pre-send gate and Factur-X / UBL converter',
-    url: 'https://apps.giniloh.com/facturgate',
+    url: 'https://apps.aichieve.net/facturgate',
   },
   parcelproof: {
     name: 'ParcelProof',
     tagline: 'Carrier invoice DIM-weight and surcharge audit',
-    url: 'https://apps.giniloh.com/parcelproof',
+    url: 'https://apps.aichieve.net/parcelproof',
   },
   caseproof: {
     name: 'CaseProof',
     tagline: 'Buyer-side audit of a warehouse-automation business case',
-    url: 'https://apps.giniloh.com/caseproof',
+    url: 'https://apps.aichieve.net/caseproof',
   },
   spendproof: {
     name: 'SpendProof',
     tagline: 'AI provider invoice ↔ tagged-usage reconciliation',
-    url: 'https://apps.giniloh.com/spendproof',
+    url: 'https://apps.aichieve.net/spendproof',
   },
 } as const;
 
@@ -131,7 +131,7 @@ function assertCatalog(): void {
     }
   }
   for (const [slug, product] of Object.entries(PRODUCTS)) {
-    if (!product.url.startsWith('https://apps.giniloh.com/')) {
+    if (!product.url.startsWith('https://apps.aichieve.net/')) {
       throw new Error(`product-cta: ${slug} must link to the product host (${product.url})`);
     }
     if (product.url !== product.url.toLowerCase()) {
