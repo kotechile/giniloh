@@ -710,7 +710,7 @@ export default function MoneyFlowSimulator() {
 
 						{state.checklistProgress < EMOTIONAL_QUESTIONS.length ? (
 							<div className="bg-white p-6 rounded-2xl border border-gray-200 flex flex-col gap-4">
-								<div className="flex justify-between text-xs font-mono text-[#8C8C8C]">
+								<div className="flex justify-between text-xs font-mono text-[#6B6B6B]">
 									<span>EXERCISE {state.checklistProgress + 1} OF {EMOTIONAL_QUESTIONS.length}</span>
 									<span>{Math.round(((state.checklistProgress) / EMOTIONAL_QUESTIONS.length) * 100)}%</span>
 								</div>
@@ -718,7 +718,7 @@ export default function MoneyFlowSimulator() {
 								<div className="flex gap-3 mt-2">
 									<button 
 										onClick={handleChecklistNext}
-										className="flex-1 py-2 bg-cyan-600 hover:bg-cyan-500 text-[#1A1A1A] font-mono text-xs rounded-xl transition cursor-pointer"
+										className="flex-1 py-2 bg-[#1A1A1A] hover:bg-[#333333] text-white font-mono text-xs rounded-xl transition cursor-pointer"
 									>
 										Acknowledge & Proceed
 									</button>
@@ -731,16 +731,27 @@ export default function MoneyFlowSimulator() {
 				</div>
 			)}
 
-			{/* Mode Toggles Header Section */}
-			<div className="flex items-center justify-between bg-slate-900/50 p-3 rounded-2xl border border-gray-200/80 backdrop-blur-sm">
-				<div className="flex gap-2">
+			{/* Mode Toggles Header Section.
+			    Partially addressed, NOT fixed — see docs/contrast-audit.md.
+			    This row measures ~1104px inside a grid track only ~886px wide: as a
+			    GRID ITEM its automatic minimum size (min-width: auto) is its
+			    min-content, so it cannot shrink to the track. `flex-wrap` + `min-w-0`
+			    on the inner group let its two long mode labels reflow on narrow
+			    screens. Adding `min-w-0` to the row itself was tried and REVERTED:
+			    it widened the hydrated document from 1230px to 1368px at a 1000px
+			    viewport, because MoneyFlowCanvas derives its fit zoom from a
+			    container whose own width the scaled canvas influences — the layout
+			    has more than one equilibrium, so the fix belongs in that fit math,
+			    not here. */}
+			<div className="flex flex-wrap items-center justify-between gap-3 bg-white p-3 rounded-2xl border border-[#E5E5E5]">
+				<div className="flex flex-wrap gap-2 min-w-0">
 					<button
 						onClick={() => handleModeSwitch('personal')}
 						className={[
-							'px-4 py-1.5 rounded-lg text-xs font-semibold tracking-tight transition duration-200 cursor-pointer',
+							'px-4 py-1.5 rounded-lg text-xs font-semibold tracking-tight transition duration-200 cursor-pointer whitespace-nowrap',
 							state.mode === 'personal'
-								? 'bg-gray-200 text-[#1A1A1A] dark:bg-slate-700'
-								: 'bg-transparent text-[#8C8C8C] hover:text-slate-800 dark:text-[#5E5E5E] dark:hover:text-[#5E5E5E]'
+								? 'bg-gray-200 text-[#1A1A1A]'
+								: 'bg-transparent text-[#6B6B6B] hover:text-slate-800'
 						].join(' ')}
 					>
 						👤 Personal Wealth Orchestrator
@@ -748,16 +759,16 @@ export default function MoneyFlowSimulator() {
 					<button
 						onClick={() => handleModeSwitch('enterprise')}
 						className={[
-							'px-4 py-1.5 rounded-lg text-xs font-semibold tracking-tight transition duration-200 cursor-pointer',
+							'px-4 py-1.5 rounded-lg text-xs font-semibold tracking-tight transition duration-200 cursor-pointer whitespace-nowrap',
 							state.mode === 'enterprise'
-								? 'bg-gray-200 text-[#1A1A1A] dark:bg-slate-700'
-								: 'bg-transparent text-[#8C8C8C] hover:text-slate-800 dark:text-[#5E5E5E] dark:hover:text-[#5E5E5E]'
+								? 'bg-gray-200 text-[#1A1A1A]'
+								: 'bg-transparent text-[#6B6B6B] hover:text-slate-800'
 						].join(' ')}
 					>
 						🏢 Enterprise CFO Simulation Room
 					</button>
 				</div>
-				<span className="text-[10px] font-mono text-[#8C8C8C] uppercase tracking-widest px-3">
+				<span className="text-[10px] font-mono text-[#6B6B6B] uppercase tracking-widest px-3">
 					Active Engine Core: T+1 Event loops
 				</span>
 			</div>
@@ -766,7 +777,7 @@ export default function MoneyFlowSimulator() {
 			<div className="w-full bg-white py-6">
 				<div className="flex flex-wrap items-center justify-between gap-6 pb-6 border-b border-[#E5E5E5]">
 					<div>
-						<p className="font-mono text-xs uppercase tracking-[0.28em] text-[#5A7A8F]">
+						<p className="font-mono text-xs uppercase tracking-[0.28em] text-[#4B6478]">
 							{isEnterprise ? 'SPV Waterfall Cash Simulator' : 'High-Fidelity Backtesting & AI Engine'}
 						</p>
 						<h2 className="mt-2 text-2xl font-black tracking-tight text-[#1A1A1A]">
@@ -777,25 +788,25 @@ export default function MoneyFlowSimulator() {
 					{/* Status Stats - Naked Data */}
 					<div className="flex flex-wrap items-center gap-6 text-left">
 						<div className="flex flex-col">
-							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#8C8C8C]">Macro Feed</span>
+							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#6B6B6B]">Macro Feed</span>
 							<span className="text-2xl font-black text-[#1A1A1A] mt-1">Index {currentSAndP.toFixed(0)}</span>
 						</div>
 						<div className="h-8 w-px bg-[#E5E5E5]"></div>
 						<div className="flex flex-col">
-							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#8C8C8C]">Inflation</span>
-							<span className="text-2xl font-black text-[#B85C5C] mt-1">{currentInflation.toFixed(1)}%</span>
+							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#6B6B6B]">Inflation</span>
+							<span className="text-2xl font-black text-[#A55252] mt-1">{currentInflation.toFixed(1)}%</span>
 						</div>
 						<div className="h-8 w-px bg-[#E5E5E5]"></div>
 						<div className="flex flex-col">
-							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#8C8C8C]">Day Count</span>
+							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#6B6B6B]">Day Count</span>
 							<span className="text-2xl font-black text-[#1A1A1A] mt-1">{state.day} days</span>
 						</div>
 						<div className="h-8 w-px bg-[#E5E5E5]"></div>
 						<div className="flex flex-col">
-							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#8C8C8C]">
+							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#6B6B6B]">
 								{isEnterprise ? 'Treasury net' : 'Wealth Projection'}
 							</span>
-							<span className="text-2xl font-black text-[#5A7A8F] mt-1">
+							<span className="text-2xl font-black text-[#4B6478] mt-1">
 								{formatCurrency(state.totalWealthAccumulated)}
 							</span>
 						</div>
@@ -809,7 +820,7 @@ export default function MoneyFlowSimulator() {
 							className={[
 								'py-2.5 px-5 rounded-lg text-xs font-mono uppercase tracking-wider transition font-bold select-none border cursor-pointer',
 								isRunning
-									? 'bg-[#B85C5C] border-[#B85C5C] !text-white hover:bg-[#a64e4e]'
+									? 'bg-[#A55252] border-[#A55252] !text-white hover:bg-[#a64e4e]'
 									: 'bg-[#1A1A1A] border-[#1A1A1A] !text-white hover:bg-black'
 							].join(' ')}
 						>
@@ -848,7 +859,7 @@ export default function MoneyFlowSimulator() {
 										<option value="crash">Market Contraction (Crash)</option>
 									)}
 								</select>
-								<div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
+								<div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-[#475569]">
 									<svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
 										<path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
 									</svg>
@@ -869,7 +880,7 @@ export default function MoneyFlowSimulator() {
 									<option value="400">2x (Normal)</option>
 									<option value="150">5x (Fast)</option>
 								</select>
-								<div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-slate-500">
+								<div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-[#475569]">
 									<svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20">
 										<path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
 									</svg>
@@ -883,7 +894,7 @@ export default function MoneyFlowSimulator() {
 								{isEnterprise ? 'Daily Base Revenue:' : 'Income / Day:'}
 							</label>
 							<div className="relative flex items-center">
-								<span className="absolute left-2.5 text-xs font-mono text-slate-500 font-bold">$</span>
+								<span className="absolute left-2.5 text-xs font-mono text-[#475569] font-bold">$</span>
 								<input
 									type="number"
 									min="0"
@@ -916,18 +927,18 @@ export default function MoneyFlowSimulator() {
 			{isEnterprise && liquidityRows.length > 0 && (
 				<div className="rounded-[1.8rem] border border-gray-200 bg-white/75 p-6 shadow-xl backdrop-blur-sm animate-[fadeIn_0.3s_ease-out] [.light_&]:bg-slate-50 [.light_&]:border-slate-200 [.light_&]:shadow-lg">
 					<h3 className="text-lg font-bold text-[#1A1A1A] mb-2 [.light_&]:text-slate-900">Liquidity Projections Data Grid</h3>
-					<p className="text-xs text-[#5E5E5E] mb-4 leading-normal [.light_&]:text-[#8C8C8C]">
+					<p className="text-xs text-[#5E5E5E] mb-4 leading-normal [.light_&]:text-[#6B6B6B]">
 						Effortless top-down projection calculated bottom-up by running simulated clock steps forwards in real time.
 					</p>
 					
 					<div className="overflow-x-auto">
 						<table className="w-full text-left font-mono text-xs border-collapse">
 							<thead>
-								<tr className="border-b border-gray-200 text-[#8C8C8C] [.light_&]:border-slate-200 [.light_&]:text-[#8C8C8C]">
+								<tr className="border-b border-gray-200 text-[#6B6B6B] [.light_&]:border-slate-200 [.light_&]:text-[#6B6B6B]">
 									<th className="py-2.5 px-3">Treasury Account Node</th>
 									<th className="py-2.5 px-3">Category</th>
 									<th className="py-2.5 px-3 text-right">Current Ledger</th>
-									<th className="py-2.5 px-3 text-right text-[#5A7A8F] [.light_&]:text-cyan-700">Month-End Forecast (30d)</th>
+									<th className="py-2.5 px-3 text-right text-[#4B6478] [.light_&]:text-[#4B6478]">Month-End Forecast (30d)</th>
 									<th className="py-2.5 px-3 text-right #1A1A1A [.light_&]:text-emerald-700">Year-End Forecast (365d)</th>
 								</tr>
 							</thead>
@@ -939,15 +950,15 @@ export default function MoneyFlowSimulator() {
 											key={idx} 
 											className={[
 												isTotal ? 'bg-slate-900/35 font-bold text-[#1A1A1A] [.light_&]:bg-slate-100 [.light_&]:text-slate-900' : 'hover:bg-slate-900/10 [.light_&]:hover:bg-slate-50',
-												row.type === 'liability' ? 'text-[#B85C5C] [.light_&]:text-rose-600' : ''
+												row.type === 'liability' ? 'text-[#A55252] [.light_&]:text-rose-600' : ''
 											].join(' ')}
 										>
 											<td className="py-2.5 px-3">{row.name}</td>
-											<td className="py-2.5 px-3 uppercase text-[10px] tracking-wider text-[#8C8C8C]">
+											<td className="py-2.5 px-3 uppercase text-[10px] tracking-wider text-[#6B6B6B]">
 												{row.type}
 											</td>
 											<td className="py-2.5 px-3 text-right">{formatCurrency(row.cur)}</td>
-											<td className="py-2.5 px-3 text-right text-[#5A7A8F]">{formatCurrency(row.month)}</td>
+											<td className="py-2.5 px-3 text-right text-[#4B6478]">{formatCurrency(row.month)}</td>
 											<td className="py-2.5 px-3 text-right #1A1A1A">{formatCurrency(row.year)}</td>
 										</tr>
 									);
@@ -970,14 +981,14 @@ export default function MoneyFlowSimulator() {
 							<div key={scKey} className={["p-5 rounded-2xl border flex flex-col justify-between gap-4 [.light_&]:border-slate-200 [.light_&]:bg-slate-50", colorClass].join(' ')}>
 								<div>
 									<div className="flex items-center justify-between">
-										<span className="text-xs font-mono uppercase font-bold text-[#5E5E5E] [.light_&]:text-[#8C8C8C]">{scKey}</span>
-										<span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-[#5E5E5E] [.light_&]:bg-slate-200 [.light_&]:text-[#8C8C8C]">
+										<span className="text-xs font-mono uppercase font-bold text-[#5E5E5E] [.light_&]:text-[#6B6B6B]">{scKey}</span>
+										<span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-[#5E5E5E] [.light_&]:bg-slate-200 [.light_&]:text-[#6B6B6B]">
 											{scState.day}d Simulated
 										</span>
 									</div>
 									<h4 className="text-sm font-bold text-[#1A1A1A] mt-2 leading-tight [.light_&]:text-slate-900">{label}</h4>
 									
-									<div className="mt-4 space-y-2 font-mono text-[11px] text-[#5E5E5E] [.light_&]:text-[#8C8C8C]">
+									<div className="mt-4 space-y-2 font-mono text-[11px] text-[#5E5E5E] [.light_&]:text-[#6B6B6B]">
 										<div className="flex justify-between">
 											<span>Total Net Assets:</span>
 											<span className="font-bold text-[#1A1A1A] [.light_&]:text-slate-900">{formatCurrency(scState.totalWealthAccumulated)}</span>
@@ -1011,7 +1022,7 @@ export default function MoneyFlowSimulator() {
 				<div className="flex flex-col h-[380px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm font-sans">
 					<div className="flex items-center justify-between pb-3 border-b border-slate-100">
 						<h3 className="text-sm font-semibold text-slate-900 tracking-tight">AI Assistant</h3>
-						<span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-cyan-50 text-cyan-700 border border-cyan-200">
+						<span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-cyan-50 text-[#4B6478] border border-cyan-200">
 							LLM Powered
 						</span>
 					</div>
@@ -1027,7 +1038,7 @@ export default function MoneyFlowSimulator() {
 									className={[
 										'p-3 rounded-2xl max-w-[85%] text-sm font-normal leading-relaxed shadow-xs',
 										isUser 
-											? 'ml-auto bg-cyan-600 text-white' 
+											? 'ml-auto bg-[#1A1A1A] text-white' 
 											: isSystem 
 												? 'bg-rose-50 border border-rose-200 text-rose-900' 
 												: 'bg-slate-100 border border-slate-200 text-slate-900'
@@ -1038,7 +1049,7 @@ export default function MoneyFlowSimulator() {
 							);
 						})}
 						{isPendingAI && (
-							<div className="text-xs text-slate-500 italic animate-pulse py-1">Assistant is processing prompt...</div>
+							<div className="text-xs text-[#475569] italic animate-pulse py-1">Assistant is processing prompt...</div>
 						)}
 					</div>
 
@@ -1048,12 +1059,12 @@ export default function MoneyFlowSimulator() {
 							value={chatInput}
 							onChange={(e) => setChatInput(e.target.value)}
 							placeholder={isEnterprise ? "Ask AI or enter command (e.g., Set receivables DSO to 45)..." : "Ask AI or enter command (e.g., Route $600 from Checking to Roth)..."}
-							className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500/40 focus:border-cyan-500 font-sans tracking-normal shadow-inner"
+							className="w-full bg-white border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs text-slate-900 placeholder:text-[#64748B] focus:outline-none focus:ring-2 focus:ring-cyan-500/40 focus:border-cyan-500 font-sans tracking-normal shadow-inner"
 						/>
 						<button 
 							type="submit" 
 							disabled={!chatInput.trim() || isPendingAI}
-							className="px-4 py-2.5 bg-cyan-600 hover:bg-cyan-700 disabled:opacity-40 text-white font-semibold rounded-xl text-xs transition cursor-pointer shadow-sm flex-shrink-0"
+							className="px-4 py-2.5 bg-[#1A1A1A] hover:bg-[#333333] disabled:opacity-40 text-white font-semibold rounded-xl text-xs transition cursor-pointer flex-shrink-0"
 						>
 							Send
 						</button>
@@ -1080,7 +1091,7 @@ export default function MoneyFlowSimulator() {
 											'inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium transition cursor-pointer flex-shrink-0',
 											rule.isActive 
 												? 'bg-emerald-50 text-emerald-700 border border-emerald-200' 
-												: 'bg-slate-100 text-slate-500 border border-slate-200'
+												: 'bg-slate-100 text-[#475569] border border-slate-200'
 										].join(' ')}
 									>
 										<span className={['w-1.5 h-1.5 rounded-full', rule.isActive ? 'bg-emerald-500' : 'bg-slate-400'].join(' ')}></span>
@@ -1113,7 +1124,7 @@ export default function MoneyFlowSimulator() {
 							</span>
 						</div>
 						
-						<p className="text-xs font-semibold text-slate-500 tracking-normal my-2.5 font-sans">Sweep Priority Order</p>
+						<p className="text-xs font-semibold text-[#475569] tracking-normal my-2.5 font-sans">Sweep Priority Order</p>
 						
 						<div className="flex-1 overflow-y-auto space-y-2 font-sans pr-1 scrollbar-thin scrollbar-thumb-slate-200">
 							{state.waterfallOrder.map((type, idx) => {
@@ -1154,7 +1165,7 @@ export default function MoneyFlowSimulator() {
 												#{idx + 1}
 											</span>
 											<span className="text-xs font-semibold text-slate-900 truncate">
-												{details.name} {details.subtext && <span className="text-slate-500 font-normal ml-1">({details.subtext})</span>}
+												{details.name} {details.subtext && <span className="text-[#475569] font-normal ml-1">({details.subtext})</span>}
 											</span>
 										</div>
 										<div className="flex items-center gap-1 flex-shrink-0">
@@ -1194,7 +1205,7 @@ export default function MoneyFlowSimulator() {
 				</div>
 				<div 
 					ref={logsContainerRef}
-					className="max-h-[190px] min-h-[130px] overflow-y-auto space-y-1.5 p-3.5 bg-slate-900 rounded-xl text-slate-100 font-mono text-xs leading-5 shadow-inner pr-2"
+					className="max-h-[190px] min-h-[130px] overflow-y-auto space-y-1.5 p-3.5 bg-white border border-[#E5E5E5] rounded-xl text-[#5E5E5E] font-mono text-xs leading-5 pr-2"
 				>
 					{state.log.length > 0 ? (
 						state.log.map((line, idx) => {
@@ -1211,7 +1222,7 @@ export default function MoneyFlowSimulator() {
 										? 'text-cyan-300 font-medium' 
 										: isDraw
 											? 'text-amber-300 font-medium'
-											: 'text-slate-200';
+											: 'text-[#475569]';
 							return (
 								<div key={idx} className={colorClass}>
 									&gt; {line}
@@ -1219,7 +1230,7 @@ export default function MoneyFlowSimulator() {
 							);
 						})
 					) : (
-						<div className="text-slate-400 italic font-sans">No transactions or events logged yet. Advance the clock to run.</div>
+						<div className="text-[#64748B] italic font-sans">No transactions or events logged yet. Advance the clock to run.</div>
 					)}
 				</div>
 			</div>

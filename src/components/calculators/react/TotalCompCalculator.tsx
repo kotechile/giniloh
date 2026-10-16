@@ -193,7 +193,7 @@ export default function TotalCompCalculator() {
 		<div className="grid gap-8">
 			{/* Sticky Global Controls Panel */}
 			<div className="panel-soft rounded-[1.8rem] border border-cyan-500/15 bg-white/70 p-5 shadow-xl backdrop-blur-md">
-				<p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#5A7A8F]">Global Trajectory Parameters</p>
+				<p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#4B6478]">Global Trajectory Parameters</p>
 				<div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 					
 					{/* Tax Model Selection */}
@@ -288,16 +288,16 @@ export default function TotalCompCalculator() {
 				<div className="flex items-center justify-between border-b border-gray-200 pb-4 mb-4">
 					<div>
 						<h3 className="text-base font-bold text-[#1A1A1A] tracking-tight">Spendable Cash & Tax Drag Projections</h3>
-						<p className="text-[10px] text-[#8C8C8C] font-mono mt-0.5 uppercase tracking-wider">
+						<p className="text-[10px] text-[#6B6B6B] font-mono mt-0.5 uppercase tracking-wider">
 							Year-by-year side-by-side analysis (Offer A Left, Offer B Right)
 						</p>
 					</div>
 					<div className="flex items-center gap-4 text-[10px] font-mono">
-						<div className="flex items-center gap-1.5 text-[#5A7A8F] font-semibold">
+						<div className="flex items-center gap-1.5 text-[#4B6478] font-semibold">
 							<span className="w-2.5 h-1.5 bg-cyan-400 rounded-full" />
 							Offer A Cash Line
 						</div>
-						<div className="flex items-center gap-1.5 text-purple-400 font-semibold">
+						<div className="flex items-center gap-1.5 text-purple-700 font-semibold">
 							<span className="w-2.5 h-1.5 bg-purple-400 rounded-full" />
 							Offer B Cash Line
 						</div>
@@ -311,7 +311,7 @@ export default function TotalCompCalculator() {
 						height={dimensions.height}
 						onMouseMove={handleMouseMove}
 						onMouseLeave={handleMouseLeave}
-						className="overflow-visible cursor-crosshair font-mono text-[9px] text-[#8C8C8C]"
+						className="overflow-visible cursor-crosshair font-mono text-[9px] text-[#6B6B6B]"
 					>
 						{/* Grid Lines */}
 						{[0, 0.25, 0.5, 0.75, 1].map((p, idx) => {
@@ -329,7 +329,7 @@ export default function TotalCompCalculator() {
 										strokeDasharray="2, 4"
 										className="opacity-40"
 									/>
-									<text x={margin.left - 8} y={y + 3} textAnchor="end" fill="#94a3b8" className="font-medium">
+									<text x={margin.left - 8} y={y + 3} textAnchor="end" fill="#64748B" className="font-medium">
 										{formatCurrency(val)}
 									</text>
 								</g>
@@ -352,7 +352,7 @@ export default function TotalCompCalculator() {
 							const x = getGroupX(year);
 							return (
 								<g key={`grid-x-${year}`}>
-									<text x={x} y={dimensions.height - 12} textAnchor="middle" fill="#94a3b8" className="text-[10px] font-bold">
+									<text x={x} y={dimensions.height - 12} textAnchor="middle" fill="#64748B" className="text-[10px] font-bold">
 										Year {year}
 									</text>
 								</g>
@@ -475,7 +475,7 @@ export default function TotalCompCalculator() {
 						<path
 							d={pathB}
 							fill="none"
-							stroke="#c084fc" // purple-400
+							stroke="#8200DB" // purple-400
 							strokeWidth="3.5"
 							strokeLinecap="round"
 							strokeLinejoin="round"
@@ -501,7 +501,7 @@ export default function TotalCompCalculator() {
 								cx={p.x}
 								cy={p.y}
 								r="5.5"
-								fill="#c084fc"
+								fill="#8200DB"
 								stroke="#020617"
 								strokeWidth="2.5"
 								className="pointer-events-none"
@@ -533,7 +533,7 @@ export default function TotalCompCalculator() {
 						<div className="flex-1 grid gap-4 sm:grid-cols-2">
 							{/* Offer A Tooltip */}
 							<div className="flex flex-col gap-1 border-b sm:border-b-0 sm:border-r border-gray-200/60 pb-3 sm:pb-0 pr-3 [.light_&]:border-slate-200">
-								<p className="font-semibold text-[#5A7A8F] text-[11px] truncate uppercase">{offerA.name}</p>
+								<p className="font-semibold text-[#4B6478] text-[11px] truncate uppercase">{offerA.name}</p>
 								<div className="flex justify-between mt-1 text-[11px] text-[#5E5E5E]">
 									<span>Base + Bonus Cash:</span>
 									<span className="text-[#1A1A1A] font-semibold">{formatCurrency(hoveredData.offerA.baseCash + hoveredData.offerA.bonusCash)}</span>
@@ -545,7 +545,7 @@ export default function TotalCompCalculator() {
 									</div>
 								)}
 								{hoveredData.offerA.paperLtip > 0 && (
-									<div className="flex justify-between text-[11px] text-[#8C8C8C]">
+									<div className="flex justify-between text-[11px] text-[#6B6B6B]">
 										<span>Paper LTIP Wealth (Illiquid):</span>
 										<span className="text-[#5E5E5E] font-semibold">{formatCurrency(hoveredData.offerA.paperLtip)}</span>
 									</div>
@@ -554,7 +554,7 @@ export default function TotalCompCalculator() {
 									<span>Perks (401k/ESPP):</span>
 									<span className="text-indigo-300 font-semibold [.light_&]:text-indigo-600!">{formatCurrency(hoveredData.offerA.perksValue)}</span>
 								</div>
-								<div className="flex justify-between text-[11px] text-[#B85C5C]/80 [.light_&]:text-rose-600!">
+								<div className="flex justify-between text-[11px] text-[#A55252]/80 [.light_&]:text-rose-600!">
 									<span>Tax Drag:</span>
 									<span>-{formatCurrency(hoveredData.offerA.taxDrag)}</span>
 								</div>
@@ -566,15 +566,15 @@ export default function TotalCompCalculator() {
 								)}
 								<div className="flex justify-between border-t border-gray-200/80 mt-1 pt-1 text-[#1A1A1A] font-bold [.light_&]:border-slate-200">
 									<span>Spendable Cash Flow:</span>
-									<span className="#5A7A8F [.light_&]:text-cyan-700!">{formatCurrency(hoveredData.offerA.netSpendableCash)}</span>
+									<span className="#5A7A8F [.light_&]:text-[#4B6478]!">{formatCurrency(hoveredData.offerA.netSpendableCash)}</span>
 								</div>
 								{hoveredData.offerA.isClawbackRisk && (
-									<div className="mt-2 text-[10px] text-[#C88D4E] bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
+									<div className="mt-2 text-[10px] text-[#96693A] bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
 										⚠️ Clawback risk: {formatCurrency(hoveredData.offerA.clawbackAmount)} clawed back if departing before Month {offerA.cash.clawbackMonths}.
 									</div>
 								)}
 								{hoveredData.offerA.rsuTaxShortfall > 0 && (
-									<div className="mt-2 text-[10px] text-[#C88D4E] bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
+									<div className="mt-2 text-[10px] text-[#96693A] bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
 										⚠️ RSU Underwithholding: Est. federal tax shortfall of {formatCurrency(hoveredData.offerA.rsuTaxShortfall)} due to flat 22% sell-to-cover rate vs your estimated {Math.round(hoveredData.offerA.mtrFed * 100)}% marginal rate.
 									</div>
 								)}
@@ -582,7 +582,7 @@ export default function TotalCompCalculator() {
 							
 							{/* Offer B Tooltip */}
 							<div className="flex flex-col gap-1">
-								<p className="font-semibold text-purple-400 text-[11px] truncate uppercase [.light_&]:text-purple-700!">{offerB.name}</p>
+								<p className="font-semibold text-purple-700 text-[11px] truncate uppercase [.light_&]:text-purple-700!">{offerB.name}</p>
 								<div className="flex justify-between mt-1 text-[11px] text-[#5E5E5E]">
 									<span>Base + Bonus Cash:</span>
 									<span className="text-[#1A1A1A] font-semibold">{formatCurrency(hoveredData.offerB.baseCash + hoveredData.offerB.bonusCash)}</span>
@@ -594,7 +594,7 @@ export default function TotalCompCalculator() {
 									</div>
 								)}
 								{hoveredData.offerB.paperLtip > 0 && (
-									<div className="flex justify-between text-[11px] text-[#8C8C8C]">
+									<div className="flex justify-between text-[11px] text-[#6B6B6B]">
 										<span>Paper LTIP Wealth (Illiquid):</span>
 										<span className="text-[#5E5E5E] font-semibold">{formatCurrency(hoveredData.offerB.paperLtip)}</span>
 									</div>
@@ -603,7 +603,7 @@ export default function TotalCompCalculator() {
 									<span>Perks (401k/ESPP):</span>
 									<span className="text-indigo-300 font-semibold [.light_&]:text-indigo-600!">{formatCurrency(hoveredData.offerB.perksValue)}</span>
 								</div>
-								<div className="flex justify-between text-[11px] text-[#B85C5C]/80 [.light_&]:text-rose-600!">
+								<div className="flex justify-between text-[11px] text-[#A55252]/80 [.light_&]:text-rose-600!">
 									<span>Tax Drag:</span>
 									<span>-{formatCurrency(hoveredData.offerB.taxDrag)}</span>
 								</div>
@@ -615,15 +615,15 @@ export default function TotalCompCalculator() {
 								)}
 								<div className="flex justify-between border-t border-gray-200/80 mt-1 pt-1 text-[#1A1A1A] font-bold [.light_&]:border-slate-200">
 									<span>Spendable Cash Flow:</span>
-									<span className="text-purple-300 [.light_&]:text-purple-700!">{formatCurrency(hoveredData.offerB.netSpendableCash)}</span>
+									<span className="text-purple-700 [.light_&]:text-purple-700!">{formatCurrency(hoveredData.offerB.netSpendableCash)}</span>
 								</div>
 								{hoveredData.offerB.isClawbackRisk && (
-									<div className="mt-2 text-[10px] text-[#C88D4E] bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
+									<div className="mt-2 text-[10px] text-[#96693A] bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
 										⚠️ Clawback risk: {formatCurrency(hoveredData.offerB.clawbackAmount)} clawed back if departing before Month {offerB.cash.clawbackMonths}.
 									</div>
 								)}
 								{hoveredData.offerB.rsuTaxShortfall > 0 && (
-									<div className="mt-2 text-[10px] text-[#C88D4E] bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
+									<div className="mt-2 text-[10px] text-[#96693A] bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
 										⚠️ RSU Underwithholding: Est. federal tax shortfall of {formatCurrency(hoveredData.offerB.rsuTaxShortfall)} due to flat 22% sell-to-cover rate vs your estimated {Math.round(hoveredData.offerB.mtrFed * 100)}% marginal rate.
 									</div>
 								)}
@@ -631,7 +631,7 @@ export default function TotalCompCalculator() {
 						</div>
 					</div>
 				) : (
-					<div className="text-[#8C8C8C] text-center font-mono text-[10px] italic mt-4 py-2 bg-white/20 border border-gray-200/40 rounded-xl [.light_&]:bg-slate-100/60 [.light_&]:text-slate-700! [.light_&]:border-slate-200/80">
+					<div className="text-[#6B6B6B] text-center font-mono text-[10px] italic mt-4 py-2 bg-white/20 border border-gray-200/40 rounded-xl [.light_&]:bg-slate-100/60 [.light_&]:text-slate-700! [.light_&]:border-slate-200/80">
 						Hover mouse cursor over the chart columns to read exact yearly breakdowns.
 					</div>
 				)}
@@ -657,19 +657,19 @@ export default function TotalCompCalculator() {
 					<div className="flex border-b border-gray-200 mb-4 text-xs font-mono">
 						<button
 							onClick={() => setActiveASection('cash')}
-							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeASection === 'cash' ? 'border-cyan-400 text-[#1A1A1A]' : 'border-transparent text-[#8C8C8C] hover:text-[#5E5E5E]'}`}
+							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeASection === 'cash' ? 'border-cyan-400 text-[#1A1A1A]' : 'border-transparent text-[#6B6B6B] hover:text-[#5E5E5E]'}`}
 						>
 							💵 Cash
 						</button>
 						<button
 							onClick={() => setActiveASection('equity')}
-							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeASection === 'equity' ? 'border-cyan-400 text-[#1A1A1A]' : 'border-transparent text-[#8C8C8C] hover:text-[#5E5E5E]'}`}
+							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeASection === 'equity' ? 'border-cyan-400 text-[#1A1A1A]' : 'border-transparent text-[#6B6B6B] hover:text-[#5E5E5E]'}`}
 						>
 							📈 LTIP
 						</button>
 						<button
 							onClick={() => setActiveASection('perks')}
-							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeASection === 'perks' ? 'border-cyan-400 text-[#1A1A1A]' : 'border-transparent text-[#8C8C8C] hover:text-[#5E5E5E]'}`}
+							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeASection === 'perks' ? 'border-cyan-400 text-[#1A1A1A]' : 'border-transparent text-[#6B6B6B] hover:text-[#5E5E5E]'}`}
 						>
 							🎁 Perks
 						</button>
@@ -891,19 +891,19 @@ export default function TotalCompCalculator() {
 					<div className="flex border-b border-gray-200 mb-4 text-xs font-mono">
 						<button
 							onClick={() => setActiveBSection('cash')}
-							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeBSection === 'cash' ? 'border-purple-400 text-[#1A1A1A]' : 'border-transparent text-[#8C8C8C] hover:text-[#5E5E5E]'}`}
+							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeBSection === 'cash' ? 'border-purple-400 text-[#1A1A1A]' : 'border-transparent text-[#6B6B6B] hover:text-[#5E5E5E]'}`}
 						>
 							💵 Cash
 						</button>
 						<button
 							onClick={() => setActiveBSection('equity')}
-							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeBSection === 'equity' ? 'border-purple-400 text-[#1A1A1A]' : 'border-transparent text-[#8C8C8C] hover:text-[#5E5E5E]'}`}
+							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeBSection === 'equity' ? 'border-purple-400 text-[#1A1A1A]' : 'border-transparent text-[#6B6B6B] hover:text-[#5E5E5E]'}`}
 						>
 							📈 LTIP
 						</button>
 						<button
 							onClick={() => setActiveBSection('perks')}
-							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeBSection === 'perks' ? 'border-purple-400 text-[#1A1A1A]' : 'border-transparent text-[#8C8C8C] hover:text-[#5E5E5E]'}`}
+							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeBSection === 'perks' ? 'border-purple-400 text-[#1A1A1A]' : 'border-transparent text-[#6B6B6B] hover:text-[#5E5E5E]'}`}
 						>
 							🎁 Perks
 						</button>
@@ -1125,24 +1125,24 @@ export default function TotalCompCalculator() {
 					</div>
 					<div className="grid gap-4 grid-cols-2 lg:grid-cols-4">
 						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-cyan-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C]">4-Yr Spendable Cash</p>
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B]">4-Yr Spendable Cash</p>
 							<p className="mt-2 text-lg font-bold text-[#1A1A1A]">{formatCurrency(summaryA.total4YearLiquidity)}</p>
 							<p className="text-[10px] text-[#5E5E5E] mt-1">Liquid, post-tax cash</p>
 						</div>
 						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-cyan-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C]">Total Paper Wealth</p>
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B]">Total Paper Wealth</p>
 							<p className="mt-2 text-lg font-bold text-[#5E5E5E]">{formatCurrency(summaryA.totalPaperValue)}</p>
-							<p className="text-[10px] text-[#8C8C8C] mt-1">Illiquid LTIP value</p>
+							<p className="text-[10px] text-[#6B6B6B] mt-1">Illiquid LTIP value</p>
 						</div>
 						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-rose-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C]">Out-of-Pocket Drag</p>
-							<p className="mt-2 text-lg font-bold text-[#B85C5C]">-{formatCurrency(summaryA.totalOutofPocketDrag)}</p>
-							<p className="text-[10px] text-[#8C8C8C] mt-1">Purchase cost + health</p>
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B]">Out-of-Pocket Drag</p>
+							<p className="mt-2 text-lg font-bold text-[#A55252]">-{formatCurrency(summaryA.totalOutofPocketDrag)}</p>
+							<p className="text-[10px] text-[#6B6B6B] mt-1">Purchase cost + health</p>
 						</div>
 						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-amber-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C]">Exit Readiness No.</p>
-							<p className="mt-2 text-lg font-bold text-[#C88D4E]">{formatCurrency(summaryA.exitReadinessNumber)}</p>
-							<div className="text-[10px] text-[#8C8C8C] mt-1">
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B]">Exit Readiness No.</p>
+							<p className="mt-2 text-lg font-bold text-[#96693A]">{formatCurrency(summaryA.exitReadinessNumber)}</p>
+							<div className="text-[10px] text-[#6B6B6B] mt-1">
 								Option purchase cost
 								<p className="text-[9px] text-amber-500/90 mt-0.5" title="Alternative Minimum Tax (AMT) liabilities are not included in this figure">⚠️ Excludes AMT</p>
 							</div>
@@ -1155,31 +1155,31 @@ export default function TotalCompCalculator() {
 					<div className="flex justify-between items-center border-b border-gray-200 pb-3">
 						<h4 className="text-base font-bold text-[#1A1A1A] tracking-wide truncate">{offerB.name} Outcomes</h4>
 						{summaryB.total4YearLiquidity >= summaryA.total4YearLiquidity && (
-							<span className="rounded-full bg-purple-500/10 border border-purple-500/20 px-2.5 py-1 text-[9px] font-mono font-bold uppercase tracking-wider text-purple-300">
+							<span className="rounded-full bg-purple-500/10 border border-purple-500/20 px-2.5 py-1 text-[9px] font-mono font-bold uppercase tracking-wider text-purple-700">
 								Highest Cash Yield
 							</span>
 						)}
 					</div>
 					<div className="grid gap-4 grid-cols-2 lg:grid-cols-4">
 						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-purple-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C]">4-Yr Spendable Cash</p>
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B]">4-Yr Spendable Cash</p>
 							<p className="mt-2 text-lg font-bold text-[#1A1A1A]">{formatCurrency(summaryB.total4YearLiquidity)}</p>
 							<p className="text-[10px] text-[#5E5E5E] mt-1">Liquid, post-tax cash</p>
 						</div>
 						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-purple-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C]">Total Paper Wealth</p>
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B]">Total Paper Wealth</p>
 							<p className="mt-2 text-lg font-bold text-[#5E5E5E]">{formatCurrency(summaryB.totalPaperValue)}</p>
-							<p className="text-[10px] text-[#8C8C8C] mt-1">Illiquid LTIP value</p>
+							<p className="text-[10px] text-[#6B6B6B] mt-1">Illiquid LTIP value</p>
 						</div>
 						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-rose-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C]">Out-of-Pocket Drag</p>
-							<p className="mt-2 text-lg font-bold text-[#B85C5C]">-{formatCurrency(summaryB.totalOutofPocketDrag)}</p>
-							<p className="text-[10px] text-[#8C8C8C] mt-1">Purchase cost + health</p>
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B]">Out-of-Pocket Drag</p>
+							<p className="mt-2 text-lg font-bold text-[#A55252]">-{formatCurrency(summaryB.totalOutofPocketDrag)}</p>
+							<p className="text-[10px] text-[#6B6B6B] mt-1">Purchase cost + health</p>
 						</div>
 						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-purple-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-[#8C8C8C]">Exit Readiness No.</p>
-							<p className="mt-2 text-lg font-bold text-[#C88D4E]">{formatCurrency(summaryB.exitReadinessNumber)}</p>
-							<div className="text-[10px] text-[#8C8C8C] mt-1">
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B]">Exit Readiness No.</p>
+							<p className="mt-2 text-lg font-bold text-[#96693A]">{formatCurrency(summaryB.exitReadinessNumber)}</p>
+							<div className="text-[10px] text-[#6B6B6B] mt-1">
 								Option purchase cost
 								<p className="text-[9px] text-amber-500/90 mt-0.5" title="Alternative Minimum Tax (AMT) liabilities are not included in this figure">⚠️ Excludes AMT</p>
 							</div>

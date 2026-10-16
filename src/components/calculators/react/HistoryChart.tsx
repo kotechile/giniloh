@@ -118,7 +118,7 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 	// Default empty fallback
 	if (!history || history.length === 0) {
 		return (
-			<div className="rounded-2xl border border-gray-200 bg-white p-6 flex items-center justify-center h-[260px] text-xs font-sans text-gray-500">
+			<div className="rounded-2xl border border-gray-200 bg-white p-6 flex items-center justify-center h-[260px] text-xs font-sans text-[#475569]">
 				No simulation history data collected yet.
 			</div>
 		);
@@ -277,7 +277,7 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 					<h3 className="text-base font-semibold text-gray-900 tracking-tight">
 						{isEnterprise ? 'Treasury Evolution History' : 'Historical Trend Evolution'}
 					</h3>
-					<p className="text-xs text-gray-500 font-normal mt-0.5">
+					<p className="text-xs text-[#475569] font-normal mt-0.5">
 						Daily variable logs over {maxDay} days
 					</p>
 				</div>
@@ -294,7 +294,7 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 									'inline-flex items-center gap-1.5 px-3 py-1 rounded-full border transition cursor-pointer text-xs font-medium',
 									isVisible 
 										? 'bg-gray-100 border-gray-300 text-gray-900 opacity-100 shadow-2xs' 
-										: 'bg-gray-50 border-gray-200 text-gray-400 opacity-40 hover:opacity-70'
+										: 'bg-gray-50 border-gray-200 text-[#64748B] opacity-40 hover:opacity-70'
 								].join(' ')}
 							>
 								<span 
@@ -346,7 +346,7 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 								x={margin.left - 10}
 								y={line.y + 4}
 								textAnchor="end"
-								fill="#9CA3AF"
+								fill="#64748B"
 								fontSize="11"
 								fontWeight="400"
 								className="font-sans"
@@ -372,7 +372,7 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 								x={line.x}
 								y={margin.top + plotHeight + 18}
 								textAnchor="middle"
-								fill="#9CA3AF"
+								fill="#64748B"
 								fontSize="11"
 								fontWeight="400"
 								className="font-sans"
@@ -389,7 +389,7 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 							y1={zeroY}
 							x2={margin.left + plotWidth}
 							y2={zeroY}
-							stroke="#9CA3AF"
+							stroke="#64748B"
 							strokeWidth="1"
 							strokeDasharray="3 3"
 						/>
@@ -479,7 +479,7 @@ export default function HistoryChart({ history, mode }: HistoryChartProps) {
 				</div>
 			) : (
 				<div className="bg-gray-50 border border-gray-200 rounded-xl py-2.5 px-4 text-center">
-					<span className="text-gray-500 font-normal font-sans text-xs">
+					<span className="text-[#475569] font-normal font-sans text-xs">
 						Hover mouse over the chart to inspect daily balances
 					</span>
 				</div>

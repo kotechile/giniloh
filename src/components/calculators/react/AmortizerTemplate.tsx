@@ -186,7 +186,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 			{/* Left Column: Input Panel */}
 			<div className="panel-soft rounded-[2rem] p-6 lg:p-8 space-y-8">
 				<div>
-					<p className="font-mono text-xs uppercase tracking-[0.3em] text-[#5A7A8F]/80">
+					<p className="font-mono text-xs uppercase tracking-[0.3em] text-[#4B6478]">
 						{config.eyebrow || 'Cost-Per-Use Arbitrage'}
 					</p>
 					<h2 className="mt-2 text-2xl font-bold tracking-tight text-[#1A1A1A] sm:text-3xl">
@@ -231,7 +231,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 								+
 							</button>
 						</div>
-						<span className="text-xs text-[#8C8C8C] mt-1">{config.frequencyHelp}</span>
+						<span className="text-xs text-[#6B6B6B] mt-1">{config.frequencyHelp}</span>
 					</div>
 
 					{/* Lifespan Stepper */}
@@ -261,7 +261,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 								+
 							</button>
 						</div>
-						<span className="text-xs text-[#8C8C8C] mt-1">{config.lifespanHelp}</span>
+						<span className="text-xs text-[#6B6B6B] mt-1">{config.lifespanHelp}</span>
 					</div>
 
 					{/* Predefined Local Product Dropdown (if provided) */}
@@ -288,7 +288,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 							<div className="flex flex-col gap-2 rounded-2xl border border-gray-200/85 [.light_&]:border-slate-200 bg-white [.light_&]:bg-slate-50 p-5">
 								<span className="text-sm font-semibold text-[#5E5E5E]">{config.stickerLabel}</span>
 								<div className="relative mt-1">
-									<span className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-[#8C8C8C]">
+									<span className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-[#6B6B6B]">
 										{currencySymbol}
 									</span>
 									<input
@@ -299,13 +299,13 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 										className="w-full rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-white [.light_&]:bg-white px-10 py-3 text-base font-semibold text-[#1A1A1A] [.light_&]:text-slate-800 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 									/>
 								</div>
-								<span className="text-xs text-[#8C8C8C] mt-1">{config.stickerHelp}</span>
+								<span className="text-xs text-[#6B6B6B] mt-1">{config.stickerHelp}</span>
 							</div>
 
 							<div className="flex flex-col gap-2 rounded-2xl border border-gray-200/85 [.light_&]:border-slate-200 bg-white [.light_&]:bg-slate-50 p-5">
 								<span className="text-sm font-semibold text-[#5E5E5E]">{config.secondaryLabel}</span>
 								<div className="relative mt-1">
-									<span className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-[#8C8C8C]">
+									<span className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-[#6B6B6B]">
 										{currencySymbol}
 									</span>
 									<input
@@ -317,7 +317,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 										className="w-full rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-white [.light_&]:bg-white px-10 py-3 text-base font-semibold text-[#1A1A1A] [.light_&]:text-slate-800 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 									/>
 								</div>
-								<span className="text-xs text-[#8C8C8C] mt-1">{config.secondaryHelp}</span>
+								<span className="text-xs text-[#6B6B6B] mt-1">{config.secondaryHelp}</span>
 							</div>
 						</div>
 					)}
@@ -336,13 +336,13 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 											onClick={() => setSelectedOutsourceId(p.id)}
 											className={`flex flex-col items-start gap-1 p-4 rounded-xl border text-left transition duration-150 cursor-pointer ${
 												isSelected
-													? 'border-cyan-500 bg-cyan-950/30 [.light_&]:border-cyan-400 [.light_&]:bg-cyan-50/40 shadow-[0_0_15px_rgba(34,211,238,0.15)]'
-													: 'border-gray-200 bg-white/60 [.light_&]:border-slate-200 [.light_&]:bg-white hover:border-slate-700 [.light_&]:hover:border-slate-300'
+													? 'border-[#1A1A1A] bg-[#F0F9FB] [.light_&]:border-[#1A1A1A] [.light_&]:bg-[#F0F9FB]'
+													: 'border-gray-200 bg-white/60 [.light_&]:border-slate-200 [.light_&]:bg-white hover:border-[#1A1A1A] [.light_&]:hover:border-[#1A1A1A]'
 											}`}
 										>
 											<div className="flex items-center justify-between w-full">
 												<span className="font-semibold text-[#1A1A1A] text-sm">{p.name}</span>
-												<span className="font-mono text-xs font-bold text-[#5A7A8F]">
+												<span className="font-mono text-xs font-bold text-[#4B6478]">
 													{currencySymbol}
 													{p.rate.toFixed(2)}/hr
 												</span>
@@ -360,7 +360,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 						<div className="flex flex-col gap-2 rounded-2xl border border-gray-200/85 [.light_&]:border-slate-200 bg-white [.light_&]:bg-slate-50 p-5">
 							<span className="text-sm font-semibold text-[#5E5E5E]">{config.outsourceLabel}</span>
 							<div className="relative mt-1">
-								<span className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-[#8C8C8C]">
+								<span className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-[#6B6B6B]">
 									{currencySymbol}
 								</span>
 								<input
@@ -372,7 +372,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 									className="w-full rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-white [.light_&]:bg-white px-10 py-3 text-base font-semibold text-[#1A1A1A] [.light_&]:text-slate-800 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 								/>
 							</div>
-							<span className="text-xs text-[#8C8C8C] mt-1">{config.outsourceHelp}</span>
+							<span className="text-xs text-[#6B6B6B] mt-1">{config.outsourceHelp}</span>
 						</div>
 					)}
 				</div>
@@ -393,7 +393,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 							className={`inline-flex rounded-full px-3 py-1 font-mono text-xs uppercase tracking-[0.24em] font-bold ${
 								calculations.isBuy
 									? 'bg-emerald-500/10 #1A1A1A border border-emerald-500/20'
-									: 'bg-cyan-500/10 text-[#5A7A8F] border border-cyan-500/20'
+									: 'bg-cyan-500/10 text-[#4B6478] border border-cyan-500/20'
 							}`}
 						>
 							Verdict: {calculations.isBuy ? 'OWN / BUY' : 'OUTSOURCE'}
@@ -409,12 +409,12 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 
 						{calculations.netSavings !== 0 && (
 							<div className="mt-8 border-t border-gray-200/80 [.light_&]:border-slate-200 pt-6">
-								<p className="font-mono text-xs uppercase tracking-[0.24em] text-[#8C8C8C]">
+								<p className="font-mono text-xs uppercase tracking-[0.24em] text-[#6B6B6B]">
 									Net Financial Impact
 								</p>
 								<p
 									className={`mt-2 text-4xl font-black tracking-tight ${
-										calculations.isBuy ? '#1A1A1A' : 'text-[#5A7A8F]'
+										calculations.isBuy ? '#1A1A1A' : 'text-[#4B6478]'
 									}`}
 								>
 									{calculations.isBuy ? '+' : ''}
@@ -456,7 +456,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 				{/* Quick Metrics (Break-even and monthly difference) */}
 				<div className="grid grid-cols-2 gap-4">
 					<div className="panel-soft rounded-[1.5rem] p-5">
-						<p className="text-xs text-[#8C8C8C] font-medium">Break-Even Point</p>
+						<p className="text-xs text-[#6B6B6B] font-medium">Break-Even Point</p>
 						<p className="text-2xl font-black text-[#1A1A1A] mt-1.5 font-mono">
 							{Number.isFinite(calculations.breakEvenMonths)
 								? `${calculations.breakEvenMonths} mo`
@@ -464,7 +464,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 						</p>
 					</div>
 					<div className="panel-soft rounded-[1.5rem] p-5">
-						<p className="text-xs text-[#8C8C8C] font-medium">Monthly Diff</p>
+						<p className="text-xs text-[#6B6B6B] font-medium">Monthly Diff</p>
 						<p className="text-2xl font-black text-[#1A1A1A] mt-1.5 font-mono">
 							{formatCurrency(calculations.absSavings / (lifespanYears * 12))}
 						</p>
@@ -479,35 +479,35 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 
 					<div className="grid grid-cols-2 gap-4 border-b border-gray-200/80 [.light_&]:border-slate-200 pb-4">
 						<div>
-							<p className="text-xs text-[#8C8C8C]">Ownership Cost/Unit</p>
+							<p className="text-xs text-[#6B6B6B]">Ownership Cost/Unit</p>
 							<p className="text-lg font-bold text-[#1A1A1A] mt-0.5 font-mono">{formatCurrency(calculations.homePerUse)}</p>
 						</div>
 						<div>
-							<p className="text-xs text-[#8C8C8C]">Outsourced Cost/Unit</p>
+							<p className="text-xs text-[#6B6B6B]">Outsourced Cost/Unit</p>
 							<p className="text-lg font-bold text-[#1A1A1A] mt-0.5 font-mono">{formatCurrency(calculations.outsourcePerUse)}</p>
 						</div>
 					</div>
 
 					<div className="grid grid-cols-2 gap-4 border-b border-gray-200/80 [.light_&]:border-slate-200 pb-4">
 						<div>
-							<p className="text-xs text-[#8C8C8C]">Local TCO (Sticker + Upkeep)</p>
+							<p className="text-xs text-[#6B6B6B]">Local TCO (Sticker + Upkeep)</p>
 							<p className="text-sm font-semibold text-[#5E5E5E] font-mono">{formatCurrency(calculations.homeTco)}</p>
 						</div>
 						<div>
-							<p className="text-xs text-[#8C8C8C]">Outsource TCO {calculations.setupFee > 0 ? '(+Setup)' : ''}</p>
+							<p className="text-xs text-[#6B6B6B]">Outsource TCO {calculations.setupFee > 0 ? '(+Setup)' : ''}</p>
 							<p className="text-sm font-semibold text-[#5E5E5E] font-mono">{formatCurrency(calculations.outsourceTco)}</p>
 						</div>
 					</div>
 
 					<div className="grid grid-cols-2 gap-4 pt-1">
 						<div>
-							<p className="text-xs text-[#8C8C8C]">Total Expected Runs</p>
+							<p className="text-xs text-[#6B6B6B]">Total Expected Runs</p>
 							<p className="text-sm font-semibold text-[#5E5E5E] font-mono">
 								{calculations.totalUses.toLocaleString()} runs
 							</p>
 						</div>
 						<div>
-							<p className="text-xs text-[#8C8C8C]">Total Setup/Maintenance</p>
+							<p className="text-xs text-[#6B6B6B]">Total Setup/Maintenance</p>
 							<p className="text-sm font-semibold text-[#5E5E5E] font-mono">
 								{calculations.isBuy
 									? formatCurrency(calculations.maintenance)
@@ -524,7 +524,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 							<span className="text-lg">⚠️</span>
 							<div>
 								<p className="text-xs font-mono uppercase tracking-wider font-semibold">Frequency Advisory</p>
-								<p className="mt-1 text-xs leading-5 text-[#C88D4E]/90">{config.aspirationalWarning}</p>
+								<p className="mt-1 text-xs leading-5 text-[#96693A]/90">{config.aspirationalWarning}</p>
 							</div>
 						</div>
 					</div>
@@ -533,7 +533,7 @@ export default function AmortizerTemplate({ config }: AmortizerTemplateProps) {
 				{/* Tutorial Affiliate Links */}
 				{config.tutorials && config.tutorials.length > 0 && (
 					<div className="panel-soft rounded-[2rem] p-6 space-y-4">
-						<p className="font-mono text-xs uppercase tracking-[0.24em] text-[#8C8C8C] font-bold">
+						<p className="font-mono text-xs uppercase tracking-[0.24em] text-[#6B6B6B] font-bold">
 							Ready to Start?
 						</p>
 						<div className="flex flex-wrap gap-3">

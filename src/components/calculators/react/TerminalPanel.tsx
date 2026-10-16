@@ -61,15 +61,15 @@ export default function TerminalPanel({ onCommand }: TerminalPanelProps) {
 					<div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
 					<span className="ml-2 text-[#5E5E5E] text-[10px] tracking-wider uppercase font-semibold">Orchestrator_CLI</span>
 				</div>
-				<span className="text-[9px] text-[#8C8C8C] font-mono">STATUS: ACTIVE</span>
+				<span className="text-[9px] text-[#6B6B6B] font-mono">STATUS: ACTIVE</span>
 			</div>
 
 			{/* Terminal body */}
 			<div className="flex-1 p-4 overflow-y-auto space-y-2 scrollbar-thin scrollbar-thumb-slate-800">
 				{history.map((line, idx) => {
 					let textColor = 'text-[#5E5E5E]';
-					if (line.type === 'input') textColor = 'text-[#5A7A8F]';
-					if (line.type === 'error') textColor = 'text-[#B85C5C]';
+					if (line.type === 'input') textColor = 'text-[#4B6478]';
+					if (line.type === 'error') textColor = 'text-[#A55252]';
 					if (line.type === 'system') textColor = '#1A1A1A/90';
 					if (line.type === 'output') textColor = 'text-[#5E5E5E]';
 
@@ -84,13 +84,13 @@ export default function TerminalPanel({ onCommand }: TerminalPanelProps) {
 
 			{/* Form input */}
 			<form onSubmit={handleSubmit} className="border-t border-gray-200 bg-slate-900/40 p-3 flex gap-2">
-				<span className="text-[#5A7A8F] font-bold select-none">$</span>
+				<span className="text-[#4B6478] font-bold select-none">$</span>
 				<input
 					type="text"
 					value={input}
 					onChange={(e) => setInput(e.target.value)}
 					placeholder="Enter money command (e.g. Checking [2500] HYSA)..."
-					className="flex-1 bg-transparent text-[#5E5E5E] border-none outline-none focus:ring-0 p-0 text-xs placeholder:text-[#8C8C8C]"
+					className="flex-1 bg-transparent text-[#5E5E5E] border-none outline-none focus:ring-0 p-0 text-xs placeholder:text-[#6B6B6B]"
 				/>
 				<button type="submit" className="px-3 py-1 bg-gray-200 hover:bg-slate-700 text-[#5E5E5E] font-semibold rounded text-[10px] uppercase tracking-wider transition">
 					Execute

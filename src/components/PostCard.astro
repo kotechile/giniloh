@@ -37,12 +37,12 @@ const metric = pseudoMetric(post.title);
 		}
 		
 		<div class="flex flex-1 flex-col p-6">
-			<div class="flex items-center justify-between gap-4 font-mono text-[0.65rem] uppercase tracking-widest text-[#8C8C8C] mb-4 border-b border-gray-200 pb-3">
-				<span class="text-[#5A7A8F] font-bold">{post.categoryLabel ?? 'Brief'}</span>
+			<div class="flex items-center justify-between gap-4 font-mono text-[0.65rem] uppercase tracking-widest text-[#6B6B6B] mb-4 border-b border-gray-200 pb-3">
+				<span class="text-[#4B6478] font-bold">{post.categoryLabel ?? 'Brief'}</span>
 				<span>{post.date ? new Date(post.date).toLocaleDateString() : 'REAL-TIME'}</span>
 			</div>
 			
-			<h3 class="text-xl font-bold tracking-tight text-[#1A1A1A] group-hover:text-[#5A7A8F] transition-colors leading-tight">
+			<h3 class="text-xl font-bold tracking-tight text-[#1A1A1A] group-hover:text-[#4B6478] transition-colors leading-tight">
 				{post.title}
 			</h3>
 			
@@ -52,12 +52,12 @@ const metric = pseudoMetric(post.title);
 			
 			<div class="mt-6 pt-3 border-t border-[#E5E5E5] flex justify-between items-center font-mono text-[0.7rem]">
 				<div>
-					<span class="text-[#8C8C8C] uppercase tracking-tighter">Exp. ROI:</span> 
-					<span class="text-[#5A7A8F] ml-1 font-bold">{metric.roi}</span>
+					<span class="text-[#6B6B6B] uppercase tracking-tighter">Exp. ROI:</span> 
+					<span class="text-[#4B6478] ml-1 font-bold">{metric.roi}</span>
 				</div>
 				<div class="h-4 w-px bg-[#E5E5E5]"></div>
 				<div>
-					<span class="text-[#8C8C8C] uppercase tracking-tighter">Effort:</span> 
+					<span class="text-[#6B6B6B] uppercase tracking-tighter">Effort:</span> 
 					<span class="text-[#1A1A1A] ml-1 font-bold">{metric.effort}</span>
 				</div>
 			</div>

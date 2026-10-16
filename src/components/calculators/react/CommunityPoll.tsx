@@ -92,7 +92,7 @@ export default function CommunityPoll({ occupationCode }: Props) {
 						</div>
 					</div>
 
-					<p className="text-[0.7rem] italic text-[#8C8C8C] text-center">
+					<p className="text-[0.7rem] italic text-[#6B6B6B] text-center">
 						You voted: {userChoice === 'agree' ? 'Accurate' : 'Off Target'}. Thanks for participating!
 					</p>
 				</div>

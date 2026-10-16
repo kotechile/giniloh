@@ -40,7 +40,7 @@
 			<button 
 				type="button" 
 				id="tab-coffee"
-				class="hero-model-tab border-b-2 border-transparent pb-2 text-[#8C8C8C] hover:text-[#1A1A1A] transition"
+				class="hero-model-tab border-b-2 border-transparent pb-2 text-[#6B6B6B] hover:text-[#1A1A1A] transition"
 				data-model="coffee"
 			>
 				Espresso Cost/Use
@@ -48,7 +48,7 @@
 			<button 
 				type="button" 
 				id="tab-lease"
-				class="hero-model-tab border-b-2 border-transparent pb-2 text-[#8C8C8C] hover:text-[#1A1A1A] transition"
+				class="hero-model-tab border-b-2 border-transparent pb-2 text-[#6B6B6B] hover:text-[#1A1A1A] transition"
 				data-model="lease"
 			>
 				Lease Exit
@@ -143,18 +143,18 @@
 					<div class="flex items-center gap-3">
 						<span class="w-16 text-[#64748B] shrink-0 font-bold">M0 (Outlay)</span>
 						<div class="flex-1 h-3 rounded bg-gray-100 overflow-hidden relative">
-							<div class="h-full bg-[#B85C5C] w-[60%] rounded"></div>
+							<div class="h-full bg-[#A55252] w-[60%] rounded"></div>
 						</div>
-						<span id="wf-m0" class="w-16 text-right font-bold text-[#B85C5C]">-$12.0k</span>
+						<span id="wf-m0" class="w-16 text-right font-bold text-[#A55252]">-$12.0k</span>
 					</div>
 
 					<!-- Month 3 -->
 					<div class="flex items-center gap-3">
 						<span class="w-16 text-[#64748B] shrink-0">Month 3</span>
 						<div class="flex-1 h-3 rounded bg-gray-100 overflow-hidden relative">
-							<div class="h-full bg-[#C88D4E] w-[40%] rounded"></div>
+							<div class="h-full bg-[#96693A] w-[40%] rounded"></div>
 						</div>
-						<span id="wf-m3" class="w-16 text-right font-bold text-[#C88D4E]">-$4.8k</span>
+						<span id="wf-m3" class="w-16 text-right font-bold text-[#96693A]">-$4.8k</span>
 					</div>
 
 					<!-- Breakeven Line -->
@@ -165,7 +165,7 @@
 								$0 OFFSET
 							</span>
 						</div>
-						<span class="w-16 text-right font-bold text-[#5A7A8F]">Month 5</span>
+						<span class="w-16 text-right font-bold text-[#4B6478]">Month 5</span>
 					</div>
 
 					<!-- Month 12 -->
@@ -193,7 +193,7 @@
 				<a 
 					id="hero-simulator-link"
 					href="/calculators/relocation-cost/" 
-					class="font-bold text-[#5A7A8F] hover:text-[#1A1A1A] transition inline-flex items-center gap-1"
+					class="font-bold text-[#4B6478] hover:text-[#1A1A1A] transition inline-flex items-center gap-1"
 				>
 					<span>Open Full Calculator</span>
 					<span aria-hidden="true">&rarr;</span>
@@ -310,7 +310,7 @@
 			metricAdvantage.textContent = `${sign}$${formattedVal}`;
 			metricAdvantage.className = net36Mo >= 0 
 				? 'text-3xl sm:text-4xl font-black tracking-tight text-emerald-700' 
-				: 'text-3xl sm:text-4xl font-black tracking-tight text-[#B85C5C]';
+				: 'text-3xl sm:text-4xl font-black tracking-tight text-[#A55252]';
 		}
 
 		if (wfBadge) {
@@ -323,7 +323,7 @@
 		const m3Net = (monthlyGain * 3) - upfrontCost;
 		if (wfM3) {
 			wfM3.textContent = `${m3Net >= 0 ? '+' : '-'}$${(Math.abs(m3Net) / 1000).toFixed(1)}k`;
-			wfM3.className = m3Net >= 0 ? 'w-16 text-right font-bold text-emerald-700' : 'w-16 text-right font-bold text-[#C88D4E]';
+			wfM3.className = m3Net >= 0 ? 'w-16 text-right font-bold text-emerald-700' : 'w-16 text-right font-bold text-[#96693A]';
 		}
 
 		const m12Net = (monthlyGain * 12) - upfrontCost;
@@ -360,7 +360,7 @@
 			t.classList.toggle('text-[#1A1A1A]', isActive);
 			t.classList.toggle('font-bold', isActive);
 			t.classList.toggle('border-transparent', !isActive);
-			t.classList.toggle('text-[#8C8C8C]', !isActive);
+			t.classList.toggle('text-[#6B6B6B]', !isActive);
 			t.setAttribute('aria-selected', isActive ? 'true' : 'false');
 		});
 

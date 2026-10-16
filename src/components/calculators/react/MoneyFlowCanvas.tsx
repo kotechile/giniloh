@@ -47,32 +47,32 @@ const ENTERPRISE_NODE_COORDINATES: Record<string, { x: number; y: number }> = {
 // Styles mapping for Personal Mode
 const PERSONAL_ACCENT_COLORS: Record<string, { text: string; bg: string }> = {
 	income: { text: 'text-lime-400 [.light_&]:text-lime-700', bg: 'bg-lime-900/40 [.light_&]:bg-lime-100' },
-	checking: { text: 'text-[#5A7A8F] [.light_&]:text-cyan-700', bg: 'bg-cyan-900/40 [.light_&]:bg-cyan-100' },
+	checking: { text: 'text-[#4B6478] [.light_&]:text-[#4B6478]', bg: 'bg-cyan-900/40 [.light_&]:bg-cyan-100' },
 	hysa: { text: '#1A1A1A [.light_&]:text-emerald-700', bg: 'bg-emerald-900/40 [.light_&]:bg-emerald-100' },
 	match401k: { text: 'text-blue-400 [.light_&]:text-blue-700', bg: 'bg-blue-900/40 [.light_&]:bg-blue-100' },
-	debt: { text: 'text-[#B85C5C] [.light_&]:text-red-700', bg: 'bg-red-900/40 [.light_&]:bg-red-100' },
+	debt: { text: 'text-[#A55252] [.light_&]:text-red-700', bg: 'bg-red-900/40 [.light_&]:bg-red-100' },
 	hsa: { text: 'text-teal-400 [.light_&]:text-teal-700', bg: 'bg-teal-900/40 [.light_&]:bg-teal-100' },
 	ira: { text: 'text-indigo-400 [.light_&]:text-indigo-700', bg: 'bg-indigo-900/40 [.light_&]:bg-indigo-100' },
-	max401k: { text: 'text-purple-400 [.light_&]:text-purple-700', bg: 'bg-purple-900/40 [.light_&]:bg-purple-100' },
+	max401k: { text: 'text-purple-700 [.light_&]:text-purple-700', bg: 'bg-purple-900/40 [.light_&]:bg-purple-100' },
 	brokerage: { text: 'text-violet-400 [.light_&]:text-violet-700', bg: 'bg-violet-900/40 [.light_&]:bg-violet-100' },
-	taxes_paid: { text: 'text-[#C88D4E] [.light_&]:text-amber-700', bg: 'bg-amber-900/40 [.light_&]:bg-amber-100' },
+	taxes_paid: { text: 'text-[#96693A] [.light_&]:text-amber-700', bg: 'bg-amber-900/40 [.light_&]:bg-amber-100' },
 	mortgage: { text: 'text-indigo-400 [.light_&]:text-indigo-700', bg: 'bg-indigo-900/40 [.light_&]:bg-indigo-100' },
-	expenses: { text: 'text-[#B85C5C] [.light_&]:text-rose-700', bg: 'bg-rose-900/40 [.light_&]:bg-rose-100' }
+	expenses: { text: 'text-[#A55252] [.light_&]:text-rose-700', bg: 'bg-rose-900/40 [.light_&]:bg-rose-100' }
 };
 
 // Styles mapping for Enterprise Mode
 const ENTERPRISE_ACCENT_COLORS: Record<string, { text: string; bg: string }> = {
 	revenues: { text: '#1A1A1A [.light_&]:text-emerald-700', bg: 'bg-emerald-900/40 [.light_&]:bg-emerald-100' },
-	receivables: { text: 'text-[#C88D4E] [.light_&]:text-amber-700', bg: 'bg-amber-900/40 [.light_&]:bg-amber-100' },
-	payables: { text: 'text-[#B85C5C] [.light_&]:text-rose-700', bg: 'bg-rose-900/40 [.light_&]:bg-rose-100' },
-	operating_cash_flow: { text: 'text-[#5A7A8F] [.light_&]:text-cyan-700', bg: 'bg-cyan-900/40 [.light_&]:bg-cyan-100' },
+	receivables: { text: 'text-[#96693A] [.light_&]:text-amber-700', bg: 'bg-amber-900/40 [.light_&]:bg-amber-100' },
+	payables: { text: 'text-[#A55252] [.light_&]:text-rose-700', bg: 'bg-rose-900/40 [.light_&]:bg-rose-100' },
+	operating_cash_flow: { text: 'text-[#4B6478] [.light_&]:text-[#4B6478]', bg: 'bg-cyan-900/40 [.light_&]:bg-cyan-100' },
 	cogs: { text: 'text-orange-400 [.light_&]:text-orange-700', bg: 'bg-orange-900/40 [.light_&]:bg-orange-100' },
-	hr_costs: { text: 'text-[#B85C5C] [.light_&]:text-red-700', bg: 'bg-red-900/40 [.light_&]:bg-red-100' },
+	hr_costs: { text: 'text-[#A55252] [.light_&]:text-red-700', bg: 'bg-red-900/40 [.light_&]:bg-red-100' },
 	capex: { text: 'text-fuchsia-400 [.light_&]:text-fuchsia-700', bg: 'bg-fuchsia-900/40 [.light_&]:bg-fuchsia-100' },
 	financing: { text: 'text-violet-400 [.light_&]:text-violet-700', bg: 'bg-violet-900/40 [.light_&]:bg-violet-100' },
 	net_cash_flow: { text: 'text-blue-400 [.light_&]:text-blue-700', bg: 'bg-blue-900/40 [.light_&]:bg-blue-100' },
 	mfs: { text: 'text-teal-400 [.light_&]:text-teal-700', bg: 'bg-teal-900/40 [.light_&]:bg-teal-100' },
-	corp_taxes: { text: 'text-[#C88D4E] [.light_&]:text-amber-700', bg: 'bg-amber-900/40 [.light_&]:bg-amber-100' }
+	corp_taxes: { text: 'text-[#96693A] [.light_&]:text-amber-700', bg: 'bg-amber-900/40 [.light_&]:bg-amber-100' }
 };
 
 const PERSONAL_NODE_TOOLTIPS: Record<string, { title: string; desc: string; numbers: string }> = {
@@ -346,7 +346,7 @@ export default function MoneyFlowCanvas({
 			nodeId === 'taxes_paid' || 
 			nodeId === 'corp_taxes'
 		) {
-			return '#B85C5C'; // Muted Brick
+			return '#A55252'; // Muted Brick
 		}
 		return '#5A7A8F'; // Steel Blue
 	};
@@ -357,17 +357,17 @@ export default function MoneyFlowCanvas({
 			<div className="absolute top-4 right-4 z-40 flex items-center gap-1 bg-white border border-[#E5E5E5] rounded-lg p-1 text-xs font-mono select-none">
 				<button 
 					onClick={() => setZoom(z => Math.max(0.4, parseFloat((z - 0.1).toFixed(1))))}
-					className="px-2 py-1 hover:bg-gray-200 rounded cursor-pointer text-[#5E5E5E] hover:text-[#1A1A1A] [.light_&]:text-[#8C8C8C] [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-black font-bold"
+					className="px-2 py-1 hover:bg-gray-200 rounded cursor-pointer text-[#5E5E5E] hover:text-[#1A1A1A] [.light_&]:text-[#6B6B6B] [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-black font-bold"
 					title="Zoom Out"
 				>
 					-
 				</button>
-				<span className="px-1 text-[#5E5E5E] min-w-[36px] text-center [.light_&]:text-[#8C8C8C]">
+				<span className="px-1 text-[#5E5E5E] min-w-[36px] text-center [.light_&]:text-[#6B6B6B]">
 					{Math.round(zoom * 100)}%
 				</span>
 				<button 
 					onClick={() => setZoom(z => Math.min(1.5, parseFloat((z + 0.1).toFixed(1))))}
-					className="px-2 py-1 hover:bg-gray-200 rounded cursor-pointer text-[#5E5E5E] hover:text-[#1A1A1A] [.light_&]:text-[#8C8C8C] [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-black font-bold"
+					className="px-2 py-1 hover:bg-gray-200 rounded cursor-pointer text-[#5E5E5E] hover:text-[#1A1A1A] [.light_&]:text-[#6B6B6B] [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-black font-bold"
 					title="Zoom In"
 				>
 					+
@@ -375,14 +375,14 @@ export default function MoneyFlowCanvas({
 				<div className="w-[1px] h-4 bg-gray-200 mx-1 [.light_&]:bg-slate-200"></div>
 				<button 
 					onClick={() => setZoom(1.0)}
-					className="px-1.5 py-1 hover:bg-gray-200 rounded cursor-pointer text-[#5E5E5E] hover:text-[#1A1A1A] [.light_&]:text-[#8C8C8C] [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-black"
+					className="px-1.5 py-1 hover:bg-gray-200 rounded cursor-pointer text-[#5E5E5E] hover:text-[#1A1A1A] [.light_&]:text-[#6B6B6B] [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-black"
 					title="Reset Zoom to 100%"
 				>
 					100%
 				</button>
 				<button 
 					onClick={handleZoomFit}
-					className="px-1.5 py-1 hover:bg-gray-200 rounded cursor-pointer text-[#5A7A8F] hover:text-[#5A7A8F] [.light_&]:text-blue-600 [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-blue-700 font-medium"
+					className="px-1.5 py-1 hover:bg-gray-200 rounded cursor-pointer text-[#4B6478] hover:text-[#4B6478] [.light_&]:text-blue-600 [.light_&]:hover:bg-slate-100 [.light_&]:hover:text-blue-700 font-medium"
 					title="Fit entire flow to screen width"
 				>
 					Fit
@@ -415,7 +415,7 @@ export default function MoneyFlowCanvas({
 								<feDropShadow dx="0" dy="0" stdDeviation="6" floodColor="#3b82f6" floodOpacity="0.5" />
 							</filter>
 							<marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
-								<path d="M 0 0 L 10 5 L 0 10 z" fill="#8C8C8C" />
+								<path d="M 0 0 L 10 5 L 0 10 z" fill="#6B6B6B" />
 							</marker>
 							<marker id="activeArrow" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="18" markerHeight="18" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
 								<path d="M 0 0 L 10 5 L 0 10 z" fill="#5A7A8F" />
@@ -459,31 +459,31 @@ export default function MoneyFlowCanvas({
 						) : (
 							<>
 								{/* Revenues -> Receivables & Operating Cash Flow link */}
-								<path d={calculateBezierPath('revenues', 'operating_cash_flow')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
-								<path d={calculateBezierPath('revenues', 'receivables')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('revenues', 'operating_cash_flow')} fill="none" stroke="#6B6B6B" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('revenues', 'receivables')} fill="none" stroke="#6B6B6B" strokeWidth="3" markerEnd="url(#arrow)" />
 								
 								{/* Receivables -> Operating Cash Flow */}
-								<path d={calculateBezierPath('receivables', 'operating_cash_flow')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('receivables', 'operating_cash_flow')} fill="none" stroke="#6B6B6B" strokeWidth="3" markerEnd="url(#arrow)" />
 								
 								{/* Operating Cash Flow -> Capex, COGS, HR Costs */}
-								<path d={calculateBezierPath('operating_cash_flow', 'capex')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
-								<path d={calculateBezierPath('operating_cash_flow', 'cogs')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
-								<path d={calculateBezierPath('operating_cash_flow', 'hr_costs')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('operating_cash_flow', 'capex')} fill="none" stroke="#6B6B6B" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('operating_cash_flow', 'cogs')} fill="none" stroke="#6B6B6B" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('operating_cash_flow', 'hr_costs')} fill="none" stroke="#6B6B6B" strokeWidth="3" markerEnd="url(#arrow)" />
 								
 								{/* COGS & HR Costs -> Payables */}
-								<path d={calculateBezierPath('cogs', 'payables')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
-								<path d={calculateBezierPath('hr_costs', 'payables')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('cogs', 'payables')} fill="none" stroke="#6B6B6B" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('hr_costs', 'payables')} fill="none" stroke="#6B6B6B" strokeWidth="3" markerEnd="url(#arrow)" />
 								
 								{/* Operating Cash Flow & Financing & Payables -> Net Cash Flow */}
-								<path d={calculateBezierPath('payables', 'net_cash_flow')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
-								<path d={calculateBezierPath('financing', 'net_cash_flow')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('payables', 'net_cash_flow')} fill="none" stroke="#6B6B6B" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('financing', 'net_cash_flow')} fill="none" stroke="#6B6B6B" strokeWidth="3" markerEnd="url(#arrow)" />
 								
 								{/* Corporate Taxes */}
-								<path d={calculateBezierPath('operating_cash_flow', 'corp_taxes')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
-								<path d={calculateBezierPath('corp_taxes', 'net_cash_flow')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('operating_cash_flow', 'corp_taxes')} fill="none" stroke="#6B6B6B" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('corp_taxes', 'net_cash_flow')} fill="none" stroke="#6B6B6B" strokeWidth="3" markerEnd="url(#arrow)" />
 								
 								{/* Net Cash Flow -> MFS (Minimum Funding sweep) */}
-								<path d={calculateBezierPath('net_cash_flow', 'mfs')} fill="none" stroke="#8C8C8C" strokeWidth="3" markerEnd="url(#arrow)" />
+								<path d={calculateBezierPath('net_cash_flow', 'mfs')} fill="none" stroke="#6B6B6B" strokeWidth="3" markerEnd="url(#arrow)" />
 							</>
 						)}
 
@@ -601,7 +601,7 @@ export default function MoneyFlowCanvas({
 								{/* Tooltip Hover Overlay */}
 								{tooltip && (
 									<div className={[
-										'absolute w-72 p-4 rounded-xl border border-gray-200 bg-white/95 shadow-xl backdrop-blur-lg opacity-0 pointer-events-none group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-200 z-50 normal-case whitespace-normal leading-relaxed text-[11px] text-[#5E5E5E] font-normal [.light_&]:border-slate-200 [.light_&]:bg-white [.light_&]:text-[#8C8C8C]',
+										'absolute w-72 p-4 rounded-xl border border-gray-200 bg-white/95 shadow-xl backdrop-blur-lg opacity-0 pointer-events-none group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity duration-200 z-50 normal-case whitespace-normal leading-relaxed text-[11px] text-[#5E5E5E] font-normal [.light_&]:border-slate-200 [.light_&]:bg-white [.light_&]:text-[#6B6B6B]',
 										isTopRow ? 'top-full mt-3 left-1/2 -translate-x-1/2' : 'bottom-full mb-3 left-1/2 -translate-x-1/2'
 									].join(' ')}>
 										<div className="flex items-center gap-1.5 pb-2 mb-2 border-b border-gray-200 [.light_&]:border-slate-100">
@@ -624,21 +624,21 @@ export default function MoneyFlowCanvas({
 									</span>
 									{!isEnterprise ? (
 										node.type === 'checking' ? (
-											<span className="text-[10px] text-[#8C8C8C] font-mono">
+											<span className="text-[10px] text-[#6B6B6B] font-mono">
 												C:{Math.round(node.ceiling)} / F:{Math.round(node.floor)}
 											</span>
 										) : node.type === 'mortgage' ? (
-											<span className="text-[10px] text-[#8C8C8C] font-mono">
+											<span className="text-[10px] text-[#6B6B6B] font-mono">
 												Min: {Math.round(node.mortgagePayment || 1800)}/mo
 											</span>
 										) : node.type === 'expense' ? (
-											<span className="text-[10px] text-[#8C8C8C] font-mono">
+											<span className="text-[10px] text-[#6B6B6B] font-mono">
 												Budget: {Math.round(node.monthlyExpenses || 2000)}/mo
 											</span>
 										) : null
 									) : (
 										node.type === 'net_cash_flow' && (
-											<span className="text-[10px] text-[#8C8C8C] font-mono">
+											<span className="text-[10px] text-[#6B6B6B] font-mono">
 												C:{Math.round(node.ceiling)} / F:{Math.round(node.floor)}
 											</span>
 										)
@@ -649,7 +649,7 @@ export default function MoneyFlowCanvas({
 										</span>
 									)}
 									{isEnterprise && node.id === 'receivables' && (
-										<span className="text-[10px] text-[#C88D4E] font-mono">
+										<span className="text-[10px] text-[#96693A] font-mono">
 											DSO: {node.dso}d
 										</span>
 									)}
@@ -672,7 +672,7 @@ export default function MoneyFlowCanvas({
 					<div className="flex items-center justify-between">
 						<div>
 							<h3 className="font-semibold text-slate-900 text-sm font-sans">Node Settings: {selectedNode.name}</h3>
-							<p className="text-xs text-slate-500 font-sans mt-0.5">Configure threshold variables and metrics manually.</p>
+							<p className="text-xs text-[#475569] font-sans mt-0.5">Configure threshold variables and metrics manually.</p>
 						</div>
 						<button
 							onClick={() => setSelectedNodeId(null)}
@@ -705,7 +705,7 @@ export default function MoneyFlowCanvas({
 								<div className="flex flex-col gap-2">
 									<div className="flex justify-between text-xs font-sans text-slate-700 font-semibold">
 										<span>Ceiling Sweep Threshold (T_over)</span>
-										<span className="text-cyan-700 font-bold font-mono">{formatCurrency(selectedNode.ceiling)}</span>
+										<span className="text-[#4B6478] font-bold font-mono">{formatCurrency(selectedNode.ceiling)}</span>
 									</div>
 									<input
 										type="range"
@@ -741,7 +741,7 @@ export default function MoneyFlowCanvas({
 								<div className="flex flex-col gap-2">
 									<div className="flex justify-between text-xs font-sans text-slate-700 font-semibold">
 										<span>Gross Paycheck Amount</span>
-										<span className="text-cyan-700 font-bold font-mono">{formatCurrency(selectedNode.grossIncome || 3500)}</span>
+										<span className="text-[#4B6478] font-bold font-mono">{formatCurrency(selectedNode.grossIncome || 3500)}</span>
 									</div>
 									<input
 										type="range"
@@ -790,7 +790,7 @@ export default function MoneyFlowCanvas({
 								<div className="flex flex-col gap-2">
 									<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 										<span>Mortgage Interest Rate (%)</span>
-										<span className="text-[#5A7A8F] font-bold">{selectedNode.interestRate || 6.5}% APY</span>
+										<span className="text-[#4B6478] font-bold">{selectedNode.interestRate || 6.5}% APY</span>
 									</div>
 									<input
 										type="range"
@@ -826,7 +826,7 @@ export default function MoneyFlowCanvas({
 							<div className="flex flex-col gap-2">
 								<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 									<span>Monthly Living Expenses Budget</span>
-									<span className="text-[#5A7A8F] font-bold">{formatCurrency(selectedNode.monthlyExpenses || 2000)}</span>
+									<span className="text-[#4B6478] font-bold">{formatCurrency(selectedNode.monthlyExpenses || 2000)}</span>
 								</div>
 								<input
 									type="range"
@@ -864,7 +864,7 @@ export default function MoneyFlowCanvas({
 										<div className="flex flex-col gap-2">
 											<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 												<span>Factoring Fee Rate (%)</span>
-												<span className="text-[#5A7A8F] font-bold">{selectedNode.factoringRate || 2.5}%</span>
+												<span className="text-[#4B6478] font-bold">{selectedNode.factoringRate || 2.5}%</span>
 											</div>
 											<input
 												type="range"
@@ -885,7 +885,7 @@ export default function MoneyFlowCanvas({
 										<div className="flex flex-col gap-2">
 											<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 												<span>Days Sales Outstanding (DSO)</span>
-												<span className="text-[#C88D4E] font-bold">{selectedNode.dso || 35} days</span>
+												<span className="text-[#96693A] font-bold">{selectedNode.dso || 35} days</span>
 											</div>
 											<input
 												type="range"
@@ -900,7 +900,7 @@ export default function MoneyFlowCanvas({
 										<div className="flex flex-col gap-2">
 											<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 												<span>Insolvency Default Risk (%)</span>
-												<span className="text-[#B85C5C] font-bold">{selectedNode.insolvencyRisk || 3.5}%</span>
+												<span className="text-[#A55252] font-bold">{selectedNode.insolvencyRisk || 3.5}%</span>
 											</div>
 											<input
 												type="range"
@@ -988,7 +988,7 @@ export default function MoneyFlowCanvas({
 										<div className="flex flex-col gap-2">
 											<div className="flex justify-between text-xs font-mono text-[#5E5E5E]">
 												<span>MMF Sweep Trigger (Ceiling)</span>
-												<span className="text-[#5A7A8F] font-bold">{formatCurrency(selectedNode.ceiling)}</span>
+												<span className="text-[#4B6478] font-bold">{formatCurrency(selectedNode.ceiling)}</span>
 											</div>
 											<input
 												type="range"

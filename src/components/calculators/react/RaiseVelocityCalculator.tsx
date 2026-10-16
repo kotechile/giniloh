@@ -348,7 +348,7 @@ export default function RaiseVelocityCalculator() {
 			{/* KPI Summary Section */}
 			<div className="grid gap-4 sm:grid-cols-3">
 				<div className="rounded-2xl border border-cyan-500/25 bg-white p-5 backdrop-blur-md shadow-lg">
-					<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#5A7A8F]">
+					<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#4B6478]">
 						Year 10 Raise Delta Portfolio
 					</p>
 					<h3 className="mt-2 text-3xl font-bold tracking-tight text-[#1A1A1A] font-sans">
@@ -360,7 +360,7 @@ export default function RaiseVelocityCalculator() {
 				</div>
 
 				<div className="rounded-2xl border border-gray-200/80 bg-white p-5 backdrop-blur-md shadow-lg">
-					<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#8C8C8C]">
+					<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#6B6B6B]">
 						Year 10 Salary Comparison
 					</p>
 					<h3 className="mt-2 text-2xl font-bold tracking-tight text-[#1A1A1A]">
@@ -376,7 +376,7 @@ export default function RaiseVelocityCalculator() {
 				</div>
 
 				<div className="rounded-2xl border border-gray-200/80 bg-white p-5 backdrop-blur-md shadow-lg">
-					<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#8C8C8C]">
+					<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#6B6B6B]">
 						Year 10 Net Take-home
 					</p>
 					<h3 className="mt-2 text-2xl font-bold tracking-tight text-[#1A1A1A]">
@@ -464,7 +464,7 @@ export default function RaiseVelocityCalculator() {
 								y1={zeroLineY}
 								x2={dimensions.width - margin.right}
 								y2={zeroLineY}
-								stroke="#94a3b8"
+								stroke="#64748B"
 								strokeWidth="1.5"
 								strokeDasharray="2, 2"
 								opacity="0.3"
@@ -560,7 +560,7 @@ export default function RaiseVelocityCalculator() {
 											cx={getX(idx)}
 											cy={getY(p.stayerSalary)}
 											r={isHovered ? 5.5 : 4}
-											fill={isHovered ? '#94a3b8' : '#475569'}
+											fill={isHovered ? '#64748B' : '#475569'}
 											stroke="#020617"
 											strokeWidth={1.5}
 										/>
@@ -615,7 +615,7 @@ export default function RaiseVelocityCalculator() {
 
 							{/* Switcher Details */}
 							<div className="flex flex-col gap-1.5">
-								<p className="font-semibold text-[#5A7A8F] text-[11px] uppercase tracking-wide">
+								<p className="font-semibold text-[#4B6478] text-[11px] uppercase tracking-wide">
 									Switcher (Job-hopping strategy)
 								</p>
 								<div className="flex justify-between mt-1 text-[11px] text-[#5E5E5E]">
@@ -626,12 +626,12 @@ export default function RaiseVelocityCalculator() {
 									<span>Effective Hourly Rate:</span>
 									<span className="text-[#5E5E5E] font-semibold">{formatCurrency(hoveredData.switcherEffectiveHourlyRate)}/hr</span>
 								</div>
-								<div className="flex justify-between text-[11px] text-[#5E5E5E] border-t border-gray-200 pt-1 mt-1 font-semibold #5A7A8F [.light_&]:border-slate-200 [.light_&]:text-cyan-700!">
+								<div className="flex justify-between text-[11px] text-[#5E5E5E] border-t border-gray-200 pt-1 mt-1 font-semibold #5A7A8F [.light_&]:border-slate-200 [.light_&]:text-[#4B6478]!">
 									<span>Take-home Cash Flow:</span>
 									<span>{formatCurrency(hoveredData.switcherNetAnnualCashFlow)}</span>
 								</div>
 								{hoveredData.year > 1 && hoveredData.year % switcherConfig.hopIntervalYears === 0 && (
-									<div className="mt-1.5 text-[10px] text-[#C88D4E] bg-amber-500/10 border border-amber-500/25 rounded p-1.5 leading-4 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
+									<div className="mt-1.5 text-[10px] text-[#96693A] bg-amber-500/10 border border-amber-500/25 rounded p-1.5 leading-4 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
 										⚠️ Transition Friction applied: COBRA health cost, matching forfeitures, bonus timing cuts, offset by new hire signing bonus.
 									</div>
 								)}
@@ -639,7 +639,7 @@ export default function RaiseVelocityCalculator() {
 						</div>
 					</div>
 				) : (
-					<div className="text-[#8C8C8C] text-center font-mono text-[10px] italic mt-5 py-2.5 bg-white/20 border border-gray-200/40 rounded-xl [.light_&]:bg-slate-100/60 [.light_&]:text-[#8C8C8C]! [.light_&]:border-slate-200/80">
+					<div className="text-[#6B6B6B] text-center font-mono text-[10px] italic mt-5 py-2.5 bg-white/20 border border-gray-200/40 rounded-xl [.light_&]:bg-slate-100/60 [.light_&]:text-[#6B6B6B]! [.light_&]:border-slate-200/80">
 						Hover mouse cursor over the chart nodes to view detailed yearly projections.
 					</div>
 				)}
@@ -660,19 +660,19 @@ export default function RaiseVelocityCalculator() {
 				<div className="flex border-b border-gray-200 mb-6 text-xs font-mono [.light_&]:border-slate-200">
 					<button
 						onClick={() => setActiveConfigTab('core')}
-						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'core' ? 'border-cyan-400 text-[#1A1A1A] [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-[#8C8C8C] hover:text-[#5E5E5E] [.light_&]:text-[#5E5E5E] [.light_&]:hover:text-slate-700'}`}
+						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'core' ? 'border-cyan-400 text-[#1A1A1A] [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-[#6B6B6B] hover:text-[#5E5E5E] [.light_&]:text-[#5E5E5E] [.light_&]:hover:text-slate-700'}`}
 					>
 						⚙️ Core parameters
 					</button>
 					<button
 						onClick={() => setActiveConfigTab('stayer')}
-						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'stayer' ? 'border-cyan-400 text-[#1A1A1A] [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-[#8C8C8C] hover:text-[#5E5E5E] [.light_&]:text-[#5E5E5E] [.light_&]:hover:text-slate-700'}`}
+						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'stayer' ? 'border-cyan-400 text-[#1A1A1A] [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-[#6B6B6B] hover:text-[#5E5E5E] [.light_&]:text-[#5E5E5E] [.light_&]:hover:text-slate-700'}`}
 					>
 						🏠 Stayer settings
 					</button>
 					<button
 						onClick={() => setActiveConfigTab('switcher')}
-						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'switcher' ? 'border-cyan-400 text-[#1A1A1A] [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-[#8C8C8C] hover:text-[#5E5E5E] [.light_&]:text-[#5E5E5E] [.light_&]:hover:text-slate-700'}`}
+						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'switcher' ? 'border-cyan-400 text-[#1A1A1A] [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-[#6B6B6B] hover:text-[#5E5E5E] [.light_&]:text-[#5E5E5E] [.light_&]:hover:text-slate-700'}`}
 					>
 						🚗 Switcher details
 					</button>

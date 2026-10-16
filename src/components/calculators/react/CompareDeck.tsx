@@ -48,7 +48,7 @@ export default function CompareDeck({ items, onRemove, onClear }: Props) {
 								<span className="truncate max-w-[120px] font-medium">{item.title}</span>
 								<button
 									onClick={() => onRemove(item.code)}
-									className="text-[#5E5E5E] hover:text-[#B85C5C] font-bold ml-1 cursor-pointer"
+									className="text-[#5E5E5E] hover:text-[#A55252] font-bold ml-1 cursor-pointer"
 								>
 									×
 								</button>
@@ -97,19 +97,19 @@ export default function CompareDeck({ items, onRemove, onClear }: Props) {
 								>
 									<button
 										onClick={() => onRemove(item.code)}
-										className="absolute top-4 right-4 text-[#8C8C8C] hover:text-[#B85C5C] text-lg cursor-pointer"
+										className="absolute top-4 right-4 text-[#6B6B6B] hover:text-[#A55252] text-lg cursor-pointer"
 									>
 										×
 									</button>
 
 									<div>
 										<h4 className="text-lg font-bold text-[#1A1A1A] line-clamp-1 pr-6">{item.title}</h4>
-										<p className="mt-1 text-xs font-mono text-[#8C8C8C]">{item.code}</p>
+										<p className="mt-1 text-xs font-mono text-[#6B6B6B]">{item.code}</p>
 
 										<div className="mt-6 space-y-4">
 											<div>
 												<p className="text-[10px] font-mono uppercase tracking-wider text-[#5E5E5E]">AI Vulnerability</p>
-												<p className={`text-2xl font-bold mt-1 ${item.risk_score > 60 ? 'text-[#B85C5C]' : item.risk_score > 35 ? 'text-yellow-400' : '#1A1A1A'}`}>
+												<p className={`text-2xl font-bold mt-1 ${item.risk_score > 60 ? 'text-[#A55252]' : item.risk_score > 35 ? 'text-yellow-400' : '#1A1A1A'}`}>
 													{item.risk_score}%
 												</p>
 											</div>
@@ -123,7 +123,7 @@ export default function CompareDeck({ items, onRemove, onClear }: Props) {
 
 											<div>
 												<p className="text-[10px] font-mono uppercase tracking-wider text-[#5E5E5E]">Growth Projection</p>
-												<span className={`inline-block text-xs font-bold rounded-full mt-1.5 px-2.5 py-0.5 ${item.demand === 'High' ? 'bg-cyan-500/10 text-[#5A7A8F]' : 'bg-gray-200 text-[#5E5E5E]'}`}>
+												<span className={`inline-block text-xs font-bold rounded-full mt-1.5 px-2.5 py-0.5 ${item.demand === 'High' ? 'bg-cyan-500/10 text-[#4B6478]' : 'bg-gray-200 text-[#5E5E5E]'}`}>
 													{item.demand} Demand
 												</span>
 											</div>

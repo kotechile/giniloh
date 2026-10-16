@@ -67,7 +67,7 @@ export default function TimeDrainTemplate({ config }: TimeDrainTemplateProps) {
 			{/* Left Column: Inputs */}
 			<div className="panel-soft rounded-[1.8rem] p-6 lg:p-8 space-y-6">
 				<div>
-					<p className="font-mono text-xs uppercase tracking-[0.3em] text-[#5A7A8F]/80">
+					<p className="font-mono text-xs uppercase tracking-[0.3em] text-[#4B6478]">
 						{config.eyebrow || 'Time Tinkering Tax Audit'}
 					</p>
 					<h2 className="mt-2 text-2xl font-bold tracking-tight text-[#1A1A1A] sm:text-3xl">
@@ -103,14 +103,14 @@ export default function TimeDrainTemplate({ config }: TimeDrainTemplateProps) {
 								+
 							</button>
 						</div>
-						<span className="text-xs text-[#8C8C8C] mt-1">{config.hoursHelp}</span>
+						<span className="text-xs text-[#6B6B6B] mt-1">{config.hoursHelp}</span>
 					</div>
 
 					{/* Time Value */}
 					<div className="flex flex-col gap-2 rounded-2xl border border-gray-200/80 [.light_&]:border-slate-200 bg-white [.light_&]:bg-slate-50 p-4">
 						<span className="text-sm font-semibold text-[#5E5E5E]">{config.timeValueLabel}</span>
 						<div className="relative mt-1">
-							<span className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-[#8C8C8C]">{currencySymbol}</span>
+							<span className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-[#6B6B6B]">{currencySymbol}</span>
 							<input
 								type="number"
 								min="0"
@@ -119,14 +119,14 @@ export default function TimeDrainTemplate({ config }: TimeDrainTemplateProps) {
 								className="w-full rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-white [.light_&]:bg-white px-10 py-3 text-base font-semibold text-[#1A1A1A] [.light_&]:text-slate-800 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 							/>
 						</div>
-						<span className="text-xs text-[#8C8C8C] mt-1">{config.timeValueHelp}</span>
+						<span className="text-xs text-[#6B6B6B] mt-1">{config.timeValueHelp}</span>
 					</div>
 
 					{/* Premium Software Cost */}
 					<div className="flex flex-col gap-2 rounded-2xl border border-gray-200/80 [.light_&]:border-slate-200 bg-white [.light_&]:bg-slate-50 p-4 sm:col-span-2">
 						<span className="text-sm font-semibold text-[#5E5E5E]">{config.premiumLabel}</span>
 						<div className="relative mt-1">
-							<span className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-[#8C8C8C]">{currencySymbol}</span>
+							<span className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-sm text-[#6B6B6B]">{currencySymbol}</span>
 							<input
 								type="number"
 								min="0"
@@ -135,7 +135,7 @@ export default function TimeDrainTemplate({ config }: TimeDrainTemplateProps) {
 								className="w-full rounded-xl border border-slate-700/80 [.light_&]:border-slate-200 bg-white [.light_&]:bg-white px-10 py-3 text-base font-semibold text-[#1A1A1A] [.light_&]:text-slate-800 outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
 							/>
 						</div>
-						<span className="text-xs text-[#8C8C8C] mt-1">{config.premiumHelp}</span>
+						<span className="text-xs text-[#6B6B6B] mt-1">{config.premiumHelp}</span>
 					</div>
 				</div>
 			</div>
@@ -154,7 +154,7 @@ export default function TimeDrainTemplate({ config }: TimeDrainTemplateProps) {
 						<span className={`inline-flex rounded-full px-3 py-1 font-mono text-[0.68rem] uppercase tracking-[0.24em] font-semibold ${
 							calculations.isUpgrade 
 								? 'bg-emerald-500/10 #1A1A1A border border-emerald-500/20 font-bold' 
-								: 'bg-cyan-500/10 text-[#5A7A8F] border border-cyan-500/20 font-bold'
+								: 'bg-cyan-500/10 text-[#4B6478] border border-cyan-500/20 font-bold'
 						}`}>
 							Verdict: {calculations.isUpgrade ? 'UPGRADE / BUY' : 'SKIP / WAIT'}
 						</span>
@@ -169,10 +169,10 @@ export default function TimeDrainTemplate({ config }: TimeDrainTemplateProps) {
 
 						{calculations.netSavings !== 0 && (
 							<div className="mt-6 border-t border-gray-200/80 [.light_&]:border-slate-200 pt-6">
-								<p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-[#8C8C8C]">
+								<p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-[#6B6B6B]">
 									3-Year Net Opportunity Reclaimed
 								</p>
-								<p className={`mt-1 text-3xl font-extrabold tracking-tight ${calculations.isUpgrade ? '#1A1A1A' : 'text-[#5A7A8F]'}`}>
+								<p className={`mt-1 text-3xl font-extrabold tracking-tight ${calculations.isUpgrade ? '#1A1A1A' : 'text-[#4B6478]'}`}>
 									{calculations.isUpgrade ? '+' : ''}
 									{formatCurrency(calculations.netSavings)}
 								</p>
@@ -192,22 +192,22 @@ export default function TimeDrainTemplate({ config }: TimeDrainTemplateProps) {
 
 					<div className="grid grid-cols-2 gap-4 border-b border-gray-200/80 [.light_&]:border-slate-200 pb-4">
 						<div>
-							<p className="text-xs text-[#8C8C8C] font-medium">Monthly Time Cost</p>
+							<p className="text-xs text-[#6B6B6B] font-medium">Monthly Time Cost</p>
 							<p className="text-lg font-bold text-[#1A1A1A] mt-0.5 font-mono">{formatCurrency(calculations.monthlyTimeCost)}</p>
 						</div>
 						<div>
-							<p className="text-xs text-[#8C8C8C] font-medium">Monthly Premium Cost</p>
+							<p className="text-xs text-[#6B6B6B] font-medium">Monthly Premium Cost</p>
 							<p className="text-lg font-bold text-[#1A1A1A] mt-0.5 font-mono">{formatCurrency(premiumCost)}</p>
 						</div>
 					</div>
 
 					<div className="grid grid-cols-2 gap-4 pt-1">
 						<div>
-							<p className="text-xs text-[#8C8C8C] font-medium">3-Year Time Leak</p>
+							<p className="text-xs text-[#6B6B6B] font-medium">3-Year Time Leak</p>
 							<p className="text-sm font-semibold text-[#5E5E5E] font-mono">{formatCurrency(calculations.timeCost3Yr)}</p>
 						</div>
 						<div>
-							<p className="text-xs text-[#8C8C8C] font-medium">3-Year Solution Cost</p>
+							<p className="text-xs text-[#6B6B6B] font-medium">3-Year Solution Cost</p>
 							<p className="text-sm font-semibold text-[#5E5E5E] font-mono">{formatCurrency(calculations.premiumCost3Yr)}</p>
 						</div>
 					</div>

@@ -41,7 +41,7 @@ function formatDate(dateStr: string | null) {
 					{sortedPosts.length} Recent Articles
 				</span>
 			) : !hasApiBase ? (
-				<p class="max-w-md text-sm leading-relaxed text-[#C88D4E] font-mono">
+				<p class="max-w-md text-sm leading-relaxed text-[#96693A] font-mono">
 					&gt; WARNING: PUBLIC_WORDPRESS_API_BASE offline. Displaying static payload.
 				</p>
 			) : null}
@@ -52,13 +52,13 @@ function formatDate(dateStr: string | null) {
 		sortedPosts.length ? (
 			<div class="mt-8 rounded-2xl border border-[#E5E5E5] bg-white overflow-hidden shadow-none">
 				<!-- Feed Sub-header / Status Bar -->
-				<div class="flex items-center justify-between border-b border-[#E5E5E5] bg-slate-50/50 px-5 sm:px-6 py-3 font-mono text-xs uppercase tracking-wider text-[#8C8C8C]">
+				<div class="flex items-center justify-between border-b border-[#E5E5E5] bg-slate-50/50 px-5 sm:px-6 py-3 font-mono text-xs uppercase tracking-wider text-[#6B6B6B]">
 					<span class="flex items-center gap-2">
 						<span>Descending Date</span>
 						<span>•</span>
 						<span>All Categories</span>
 					</span>
-					<span class="hidden sm:flex items-center gap-1.5 text-[#5A7A8F] font-bold">
+					<span class="hidden sm:flex items-center gap-1.5 text-[#4B6478] font-bold">
 						<svg class="w-3.5 h-3.5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
 						</svg>
@@ -89,8 +89,8 @@ function formatDate(dateStr: string | null) {
 											class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
 										/>
 									) : (
-										<div class="flex h-full w-full items-center justify-center text-[#8C8C8C] bg-slate-50">
-											<svg class="h-8 w-8 text-[#5A7A8F]/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+										<div class="flex h-full w-full items-center justify-center text-[#6B6B6B] bg-slate-50">
+											<svg class="h-8 w-8 text-[#4B6478]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
 												<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
 											</svg>
 										</div>
@@ -100,9 +100,9 @@ function formatDate(dateStr: string | null) {
 								<!-- Article Info -->
 								<div class="flex flex-1 min-w-0 flex-col justify-center">
 									<!-- Metadata: Category & Date -->
-									<div class="flex items-center flex-wrap gap-2.5 font-mono text-xs uppercase tracking-wider text-[#8C8C8C]">
+									<div class="flex items-center flex-wrap gap-2.5 font-mono text-xs uppercase tracking-wider text-[#6B6B6B]">
 										{post.categoryLabel && (
-											<span class="font-bold text-[#5A7A8F]">
+											<span class="font-bold text-[#4B6478]">
 												{post.categoryLabel}
 											</span>
 										)}
@@ -113,7 +113,7 @@ function formatDate(dateStr: string | null) {
 									</div>
 
 									<!-- Title -->
-									<h3 class="mt-2 text-lg sm:text-xl font-bold tracking-tight text-[#1A1A1A] group-hover:text-[#5A7A8F] transition-colors leading-snug">
+									<h3 class="mt-2 text-lg sm:text-xl font-bold tracking-tight text-[#1A1A1A] group-hover:text-[#4B6478] transition-colors leading-snug">
 										{post.title}
 									</h3>
 
@@ -126,10 +126,10 @@ function formatDate(dateStr: string | null) {
 								</div>
 
 								<!-- Action Hint (Desktop) -->
-								<div class="hidden lg:flex items-center shrink-0 pr-2 text-[#8C8C8C] group-hover:text-[#1A1A1A] transition-colors">
+								<div class="hidden lg:flex items-center shrink-0 pr-2 text-[#6B6B6B] group-hover:text-[#1A1A1A] transition-colors">
 									<span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider group-hover:translate-x-1 transition-transform">
 										Read
-										<svg class="w-4 h-4 text-[#5A7A8F] group-hover:text-[#1A1A1A]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+										<svg class="w-4 h-4 text-[#4B6478] group-hover:text-[#1A1A1A]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 											<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
 										</svg>
 									</span>
@@ -141,7 +141,7 @@ function formatDate(dateStr: string | null) {
 			</div>
 		) : (
 			<div class="mt-8 rounded-2xl border border-[#E5E5E5] bg-white p-8">
-				<div class="flex items-center gap-3 text-[#5A7A8F] mb-4">
+				<div class="flex items-center gap-3 text-[#4B6478] mb-4">
 					<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 						<path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
 					</svg>

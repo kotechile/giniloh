@@ -24,18 +24,43 @@ Under NO circumstances should you use the following Tailwind classes or CSS prop
 
 ## 2. Color Palette & Tokens
 
+Every value below is held to **WCAG AA (4.5:1) on the lightest surface it can land on** — including the
+`#F9FAFB` hover fill and tinted chips, not just the white page. The ratios are measured, not estimated:
+run `npm run audit:contrast` and see `docs/contrast-audit.md`.
+
 ### Typography & Structure
 - **Page Background:** `#FFFFFF` (Solid pure white surface; ditch background grid lines)
-- **Primary Text / Headings / Values:** `#1A1A1A` (Rich near-black for high contrast without eye strain)
-- **Body Paragraphs / Explanatory:** `#5E5E5E` (Mid-tone gray for readable, comfortable measurement)
-- **Subtle Accents / Metadata:** `#8C8C8C` (Light-mid gray for eyebrows, IDs, and secondary labels)
+- **Primary Text / Headings / Values:** `#1A1A1A` (Rich near-black; 17.4:1 on white)
+- **Body Paragraphs / Explanatory:** `#5E5E5E` (6.5:1 on white, 6.2:1 on the gray-50 fill)
+- **Subtle Accents / Metadata / Eyebrows:** `#6B6B6B` (5.33:1 on white, 5.10:1 on the gray-50 fill — holds at 9px)
+- **Decorative Only — never for text:** `#8C8C8C`. It measures **3.36:1 on white** and 1.56:1 on an active
+  blue tab, so it is for hairlines, dots and separators. It used to be the metadata ink; that one token
+  produced 98 of 129 distinct AA failures across the site.
 - **Structural Borders / Dividers:** `#E5E5E5` / `gray-200` (Soft gray lines for subtle division)
 - **Inactive Slider Track:** `#E5E5E5` (Faint background track for range sliders)
 
+These live as custom properties in `src/styles/global.css` (`--ink`, `--ink-heading`, `--ink-body`,
+`--ink-muted`, `--ink-faint`, `--accent`, `--accent-line`, `--risk-*`, `--chart-label`). Components may
+still write the hex directly; keep the value in step with this table.
+
 ### Semantic Risk Palette (Data & Controls)
-- **High Risk (Routine Tasks):** `#B85C5C` (Muted Brick)
-- **Medium Risk (Analytical Tasks):** `#C88D4E` (Soft Ochre)
-- **Low Risk (Resilient Tasks / Active UI):** `#5A7A8F` (Steel Blue)
+- **High Risk (Routine Tasks):** `#A55252` (Muted Brick — 5.35:1; was `#B85C5C` at 4.45:1, which failed)
+- **Medium Risk (Analytical Tasks):** `#96693A` (Soft Ochre — 4.80:1; was `#C88D4E` at 2.85:1, which failed)
+- **Low Risk (Resilient Tasks):** `#2E6F40` (6.06:1)
+
+### Interactive
+- **Interactive text / links / active UI:** `#4B6478` (6.19:1 on white, 5.92:1 on the gray-50 hover fill,
+  4.91:1 on `#E5E5E5`). This is the deeper step of the steel-blue family.
+- **Steel blue lines & accents:** `#5A7A8F` — 4px section rules, list bullets, slider thumbs, borders.
+  It passes on white (4.55:1) but **not** on the surfaces interactive text actually lands on (4.35:1 on the
+  gray-50 fill, 2.47:1 on the slate chips), which is why text uses `#4B6478` instead.
+
+### Data Visualisation
+- **Axis & annotation labels:** `#64748B` (4.76:1; was `#94A3B8` at 2.56:1).
+- **Smallest labels (9px):** `#475569` (7.58:1).
+
+> SVG text paints with `fill`, not `color`. A `fill-slate-400` utility does **not** pick up any
+> `text-*` rule — that mismatch left chart axis labels at 2.63:1 through an otherwise complete pass.
 
 ---
 

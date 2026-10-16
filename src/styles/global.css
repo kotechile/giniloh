@@ -1,14 +1,32 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 
-@import "@fontsource/inter/300.css";
-@import "@fontsource/inter/400.css";
-@import "@fontsource/inter/400-italic.css";
-@import "@fontsource/inter/500.css";
-@import "@fontsource/inter/600.css";
-@import "@fontsource/inter/700.css";
-@import "@fontsource/jetbrains-mono/400.css";
-@import "@fontsource/jetbrains-mono/500.css";
+/* The light-mode policy in design-language.md §6 has no exceptions, but Tailwind
+   v4's `dark:` variant defaults to `prefers-color-scheme: dark` — so the 18
+   `dark:` classes written into the calculators (`.dark:bg-slate-700`,
+   `.dark:bg-white/10`, …) compiled into 11 rules inside a real
+   `@media (prefers-color-scheme: dark)` block. A reader with a dark OS
+   preference got a half-dark widget on a white page.
+   Re-pointing the variant at a `.dark` ancestor — which nothing in this site
+   ever sets — makes all of them inert, from one place, without editing 18 call
+   sites. It also means a real dark theme stays possible later: set `.dark` and
+   the variants come back. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Latin subsets only. The bare `@fontsource/<family>/<weight>.css` entry points
+   pull in every subset the family ships — latin, latin-ext, cyrillic,
+   cyrillic-ext, greek, vietnamese — which compiled 54 @font-face blocks and
+   deployed 50 woff2 files (736KB) for an audience that reads Latin. Naming the
+   subset keeps the 7 weights this design actually uses and drops the rest.
+   Add a subset back here if the site ever needs it — not in a component. */
+@import "@fontsource/inter/latin-300.css";
+@import "@fontsource/inter/latin-400.css";
+@import "@fontsource/inter/latin-400-italic.css";
+@import "@fontsource/inter/latin-500.css";
+@import "@fontsource/inter/latin-600.css";
+@import "@fontsource/inter/latin-700.css";
+@import "@fontsource/jetbrains-mono/latin-400.css";
+@import "@fontsource/jetbrains-mono/latin-500.css";
 
 :root {
 	--font-sans: "Inter", "Avenir Next", "Segoe UI", sans-serif;
@@ -18,12 +36,58 @@
 	--brand-navy: #262626;
 	--brand-ink: #262626;
 	--brand-slate-text: #5E5E5E;
-	--brand-muted-text: #8C8C8C;
+	--brand-muted-text: var(--ink-muted);
 	--brand-cyan: #5A7A8F;
 	--brand-emerald: #262626;
 	--brand-slate: #f8fafc;
 	--brand-deep-slate: #FFFFFF;
 	--site-bg: #FFFFFF;
+
+	/* ----------------------------------------------------------------
+	   INK SCALE. Every step clears WCAG AA (4.5:1) on the LIGHTEST surface
+	   it can land on — measured, not eyeballed, with scripts/contrast-audit.mjs:
+
+	     --ink        on #FFFFFF .... 17.4:1
+	     --ink-heading on #F9FAFB ... 14.5:1
+	     --ink-body   on #F9FAFB ....  6.2:1
+	     --ink-muted  on #F9FAFB ....  5.1:1   (holds at 9px labels)
+	     --ink-faint  DECORATIVE ONLY — rules, dots, hairlines. 3.36:1 on
+	                  white, so never put text on it.
+
+	   Why this block exists: the metadata step used to be #8C8C8C, which is
+	   3.36:1 on white, 3.27:1 on the author card and 1.56:1 on an active blue
+	   tab. It accounted for 98 of 129 distinct AA failures across the site —
+	   one token, not one careless component.
+	   ---------------------------------------------------------------- */
+	--ink: #1A1A1A;
+	--ink-heading: #262626;
+	--ink-body: #5E5E5E;
+	--ink-muted: #6B6B6B;
+	--ink-faint: #8C8C8C;
+
+	/* INTERACTIVE + SEMANTIC.
+	   #5A7A8F is the brand steel blue and passes on white (4.55:1), but text
+	   does not only land on white: it fails on the gray-50 hover fill (4.35:1),
+	   on #E5E5E5 (3.61:1) and on the slate chips (2.47:1). So interactive TEXT
+	   uses the deeper step and #5A7A8F stays as the line/accent colour.
+	   Hue family is unchanged — the steel blue just gets one step deeper. */
+	--accent: #4B6478;        /* 6.19:1 white · 5.92:1 on #F9FAFB · 4.91:1 on #E5E5E5 */
+	--accent-line: #5A7A8F;   /* borders, 4px section accents, list bullets */
+
+	/* RISK PALETTE — darkened to AA on white, hue family preserved. */
+	--risk-high: #A55252;     /* 5.35:1  (was #B85C5C — 4.45:1, failed) */
+	--risk-medium: #96693A;   /* 4.80:1  (was #C88D4E — 2.85:1, failed) */
+	--risk-low: #4B6478;      /* 5.92:1  (was #5A7A8F — 4.35:1 on fill) */
+
+	/* DATA-VIZ INK — 9-10px SVG axis/annotation labels. */
+	--chart-label: #64748B;   /* 4.76:1 (was #94A3B8 — 2.56:1, failed) */
+	--chart-label-strong: #475569; /* 7.58:1 for the smallest labels */
+
+	/* Neutral chart ink that used to be a stone/gray Tailwind step. */
+	--chart-muted: #5E5E5E;
+
+	--surface-hover: #F9FAFB;
+	--surface-panel: #F8FAFC;
 }
 
 @theme {
@@ -39,31 +103,74 @@
 	--color-brand-deep-slate: var(--brand-deep-slate);
 }
 
-html,
-body {
-	margin: 0;
-	min-height: 100%;
-	font-family: var(--font-sans);
-	color: #1A1A1A;
-	background: #FFFFFF;
-}
+/* ----------------------------------------------------------------
+   BASE LAYER — defaults that utilities must still be able to override.
 
-body {
-	position: relative;
-}
+   Why the layer matters: an UNLAYERED rule beats every layered one no
+   matter how low its specificity, so a bare `p { color: … }` silently
+   outranks `text-[#1A1A1A]` written on the element itself. Tailwind
+   declares theme → base → components → utilities, so anything in here
+   is a default that the element can still speak over.
+   ---------------------------------------------------------------- */
+@layer base {
+	html,
+	body {
+		margin: 0;
+		min-height: 100%;
+		font-family: var(--font-sans);
+		background: var(--site-bg);
+	}
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: var(--font-sans);
-	font-weight: 600;
-	color: #262626;
-}
+	body {
+		position: relative;
+		color: var(--ink);
+	}
 
-.font-mono {
-	font-family: var(--font-mono);
-}
+	h1, h2, h3, h4, h5, h6 {
+		font-family: var(--font-sans);
+		font-weight: 600;
+		color: var(--ink-heading);
+	}
 
-a {
-	text-decoration: none;
+	/* Body copy. Also the old unlayered `p, .text-base, .text-sm` rule,
+	   de-fanged: same rendered result, but no longer able to beat a
+	   component's own colour. */
+	p, li, dd, dt, figcaption {
+		color: var(--ink-body);
+	}
+
+	/* .text-sm / .text-base were in this rule and that was a mistake: they are
+	   FONT-SIZE utilities, not body-copy markers, so the rule reached into any
+	   element that merely set a size and repainted ink it did not own — a flag
+	   emoji inside a green selected-country button measured 1.5:1 purely
+	   because it carried .text-base. Elements with those classes now inherit,
+	   which is what their surrounding context intends. */
+
+	a {
+		text-decoration: none;
+	}
+
+	/* Form controls: flat, white, hairline border.
+	   Padding / radius / font are deliberately NOT forced — the previous
+	   version used !important on all three, so every input ignored the
+	   padding its own component asked for. */
+	input[type="text"],
+	input[type="number"],
+	input[type="email"],
+	input[type="search"],
+	select,
+	textarea {
+		background-color: #FFFFFF;
+		border: 1px solid #E5E5E5;
+		color: var(--ink);
+		font-family: var(--font-mono);
+	}
+
+	input:focus,
+	select:focus,
+	textarea:focus {
+		border-color: var(--accent);
+	}
 }
 
 .bg-site {
@@ -126,7 +233,7 @@ a {
 	font-weight: 750;
 	letter-spacing: 0.28em;
 	text-transform: uppercase;
-	color: #8C8C8C;
+	color: var(--ink-muted);
 }
 
 .data-point {
@@ -166,7 +273,7 @@ a {
 
 .btn-inline {
 	gap: 0.4rem;
-	color: #5A7A8F;
+	color: var(--accent);
 }
 
 .btn-primary:hover,
@@ -237,9 +344,9 @@ a {
 
 .prose a,
 .article-body a {
-  color: #5A7A8F !important;
+  color: var(--accent) !important;
   text-decoration: underline !important;
-  text-decoration-color: rgba(90, 122, 143, 0.7) !important;
+  text-decoration-color: rgba(75, 100, 120, 0.7) !important;
   text-decoration-thickness: 0.08em !important;
   text-underline-offset: 0.18em !important;
   transition:
@@ -447,8 +554,8 @@ a {
 .prose div[style*="background-color"] a,
 .prose .geo-key-takeaways a,
 .prose [data-geo-injected="key-takeaways"] a {
-  color: #5A7A8F !important;
-  text-decoration-color: rgba(90, 122, 143, 0.7) !important;
+  color: var(--accent) !important;
+  text-decoration-color: rgba(75, 100, 120, 0.7) !important;
 }
 
 .prose .has-white-background-color a:hover,
@@ -597,8 +704,8 @@ a {
 
 .prose code,
 .article-body code {
-  color: #5A7A8F !important;
-  background-color: rgba(90, 122, 143, 0.08) !important;
+  color: var(--accent) !important;
+  background-color: rgba(75, 100, 120, 0.08) !important;
   padding: 0.2rem 0.4rem !important;
   border-radius: 0.375rem !important;
   font-family: var(--font-mono) !important;
@@ -640,12 +747,18 @@ a {
   display: none !important;
 }
 
-/* 3. Ditch All Gradients Sitewide */
+/* 3. Ditch All Gradients Sitewide
+   Only the gradient *utilities* are targeted. The previous version listed
+   `[class*="from-"]`, `[class*="to-"]` and `[class*="via-"]` as bare substrings
+   of the class attribute, which also matches anything else containing that
+   text (a `grid-auto-rows-*` container, for instance) and would have blanked
+   its background for no reason. */
 [class*="bg-gradient-"],
-[class*="from-"],
-[class*="to-"],
-[class*="via-"],
-[class*="[.light_&]:bg-[linear-gradient("] {
+[class*="bg-linear-"],
+[class*="bg-radial-"],
+[class*="bg-conic-"],
+[class*="bg-[linear-gradient("],
+[class*="bg-[radial-gradient("] {
   background-image: none !important;
   background: transparent !important;
 }
@@ -675,64 +788,62 @@ a {
   border-color: #E5E5E5 !important;
 }
 
-/* 5. Typography and High-Contrast Hierarchy */
+/* 5. Typography and High-Contrast Hierarchy
+   NOTE: heading colour/weight is still forced here. It is the design system's
+   hierarchy rule, and every value in it clears AA — but it is still an
+   override, so it stays on the list of things to fold back into the
+   components. `p` / `.text-sm` / `.text-base` no longer appear: that rule
+   moved to @layer base, where utilities can outrank it. */
 h1, .text-5xl, .text-6xl {
-  color: #262626 !important; /* Charcoal dark gray */
+  color: var(--ink-heading) !important; /* Charcoal dark gray */
   font-weight: 800 !important; /* font-extrabold */
   font-family: var(--font-sans) !important;
 }
 h2, h3, .text-3xl, .text-4xl {
-  color: #262626 !important; /* Charcoal dark gray */
+  color: var(--ink-heading) !important; /* Charcoal dark gray */
   font-weight: 900 !important; /* font-black */
   font-family: var(--font-sans) !important;
 }
 h4, .text-xl, .text-lg {
-  color: #262626 !important; /* Charcoal dark gray */
+  color: var(--ink-heading) !important; /* Charcoal dark gray */
   font-weight: 700 !important; /* font-bold */
   font-family: var(--font-sans) !important;
 }
-p, .text-base, .text-sm {
-  color: #5E5E5E !important;
-  font-weight: 400 !important; /* font-normal */
-}
-.section-eyebrow,
-.font-mono.text-xs,
-.font-mono.text-\[0\.65rem\],
-.font-mono.text-\[0\.68rem\],
-.font-mono.text-\[0\.72rem\],
-.font-mono.text-\[10px\] {
-  color: #8C8C8C !important;
+
+/* Metadata / eyebrow. Colour is the muted ink tier — 3.36:1 became 5.33:1 on
+   white and 5.10:1 on the gray-50 hover fill, which is what this rule covers. */
+.section-eyebrow {
+  color: var(--ink-muted) !important;
   font-weight: 700 !important; /* font-bold */
   text-transform: uppercase !important;
   letter-spacing: 0.25em !important;
 }
 
-/* Ensure text-white is always pure white and never overridden by general body text rules */
-.text-white,
-[class*="text-white"],
-[class*="text-slate-100"],
-[class*="text-gray-100"] {
+/* White ink is only white where it sits on a near-black surface: the primary
+   button, the `.btn-primary` fill, the badge pills and the terminal panel.
+   Exact class names only.
+   The previous `[class*="text-white"]` was an attribute-substring match, so it
+   also caught `group-hover:text-white` / `hover:text-white` and pinned those
+   icons to pure white at rest — invisible on their light chip.
+   `.text-slate-100` / `.text-gray-100` are NOT carried here: their two call
+   sites sit on surfaces the repaint shim turns white, so forcing them white
+   made the text disappear (the terminal log line measured 1.23:1). They are
+   fixed at source with the ink tokens instead. */
+.text-white {
   color: #FFFFFF !important;
 }
 
-/* 6. Form Inputs & Interactive Controls */
-input[type="text"],
-input[type="number"],
-input[type="email"],
-input[type="search"],
-select,
-textarea {
-  background-color: #FFFFFF !important;
-  border: 1px solid #E5E5E5 !important;
-  color: #1A1A1A !important;
-  border-radius: 8px !important;
-  padding: 0.75rem 1rem; /* Breathable controls */
-  font-family: var(--font-mono) !important;
-  outline: none !important;
-}
-input:focus, select:focus, textarea:focus {
-  border-color: #5A7A8F !important;
-}
+/* The translucent variants of white ink (`text-white/60`, `/70`) do not exist in
+   this codebase — verified with `grep -ro 'text-white/[0-9]\+' src` — so there is
+   no translucent leg to carry. If one is ever added for a surface that the
+   repaint shim below turns white, it belongs in the ink scale, not back in a
+   substring selector. */
+
+/* 6. Form Inputs & Interactive Controls
+   The forced field styling that used to live here is now in @layer base —
+   see the note there. It carried !important on padding, radius and
+   font-family, which meant every input in the site ignored the padding its own
+   component asked for and every `font-sans` field rendered mono. */
 
 /* Range Slider Styling */
 input[type="range"] {
@@ -833,13 +944,25 @@ button.bg-black {
   background-color: transparent !important; /* No hover grey highlight */
 }
 
-/* 9. Risk & Active UI Semantic Override Colors */
-.text-risk-high, .text-[#B85C5C], .text-red-500, .text-red-400 { color: #B85C5C !important; }
-.bg-risk-high, .bg-[#B85C5C], .bg-red-500, .bg-red-600 { background-color: #B85C5C !important; }
-.text-risk-medium, .text-[#C88D4E], .text-amber-500, .text-amber-400 { color: #C88D4E !important; }
-.bg-risk-medium, .bg-[#C88D4E], .bg-amber-500, .bg-amber-600 { background-color: #C88D4E !important; }
-.text-risk-low, .text-[#5A7A8F], .text-cyan-500, .text-cyan-400, .text-emerald-500, .text-emerald-400, .text-blue-500, .text-blue-400 { color: #5A7A8F !important; }
-.bg-risk-low, .bg-[#5A7A8F], .bg-cyan-500, .bg-cyan-600, .bg-emerald-500, .bg-emerald-600, .bg-blue-500, .bg-blue-600 { background-color: #5A7A8F !important; }
+/* 9. Risk & Active UI Semantic Colors
+   REWRITTEN — the previous version never applied. It listed `.text-[#B85C5C]`
+   as a selector, and an unescaped `#` inside a class selector is invalid CSS;
+   one invalid selector in a comma-separated list makes the parser drop the
+   ENTIRE rule, silently, taking `.text-risk-high`, `.text-red-500` and
+   `.text-red-400` with it. Verified: `grep -c text-risk-high` on the built
+   stylesheet returned 0. Text and background are separate rules now, so one bad
+   selector cannot take its siblings down, and every value is a measured AA step.
+
+   The palette-class legs (`text-red-*`, `bg-cyan-*`, …) are deliberately NOT
+   carried forward: they were dead, they overreached into surfaces that were
+   passing, and mapping `text-emerald-*`/`text-red-*` to brand colours destroys
+   the one thing those classes are for — saying positive or negative. */
+.text-risk-high   { color: var(--risk-high) !important; }
+.bg-risk-high     { background-color: var(--risk-high) !important; }
+.text-risk-medium { color: var(--risk-medium) !important; }
+.bg-risk-medium   { background-color: var(--risk-medium) !important; }
+.text-risk-low    { color: var(--risk-low) !important; }
+.bg-risk-low      { background-color: var(--risk-low) !important; }
 
 /* Inactive tracks or indicators */
 .bg-gray-200, .bg-slate-200 {
@@ -895,9 +1018,18 @@ button.bg-black {
 [class*="text-cyan-300"],
 [class*="text-cyan-200"],
 [class*="text-violet-200"],
-[class*="text-pink-400"] {
-  color: #5A7A8F !important;
+[class*="text-pink-400"],
+[class*="text-blue-200"],
+[class*="text-blue-400"],
+[class*="text-emerald-200"],
+[class*="text-emerald-300"] {
+  color: var(--accent) !important;
 }
+
+/* SVG labels paint with `fill`, not `color`, so a fill-* utility never picked
+   up the text remap: axis labels in fill-slate-400 measured 2.63:1. */
+.fill-slate-400 { fill: var(--chart-label) !important; }
+.fill-slate-500 { fill: var(--chart-label) !important; }
 
 /* Make sure all metric cards inside KPI cards are flat and unboxed */
 div[class*="bg-slate-900/40"],
@@ -919,10 +1051,10 @@ div[class*="bg-slate-50"] p,
 div[class*="bg-blue-500/5"] p {
   color: #1A1A1A !important;
 }
-div[class*="bg-slate-900/40"] p[class*="text-[#8C8C8C]"],
+div[class*="bg-slate-900/40"] p[class*="text-[#6B6B6B]"],
 div[class*="bg-slate-900/40"] p[class*="text-blue-300"],
 div[class*="bg-blue-500/5"] p[class*="text-blue-300"] {
-  color: #8C8C8C !important;
+  color: var(--ink-muted) !important;
 }
 
 /* Print PDF or secondary buttons in headers */
@@ -942,7 +1074,7 @@ div[class*="bg-blue-500/5"] p[class*="text-blue-300"] {
 .rounded-\[1\.8rem\] span.rounded-full {
   background-color: #FFFFFF !important;
   border: 1px solid #E5E5E5 !important;
-  color: #8C8C8C !important;
+  color: var(--ink-muted) !important;
 }
 
 /* Checkbox inputs flat styling */
