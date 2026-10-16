@@ -25,7 +25,7 @@ localhost, drive headless Chrome with `--dump-dom`, and read base64 JSON back ou
 | Text elements below AA (20 pages sampled) | **544 of 2382** | **0 of 2778** (gate exits 0) |
 | Distinct failure signatures | 129 | 0 |
 | Of those, caused by one token (`#8C8C8C`) | 98 | 0 |
-| Pages with page-level horizontal overflow | 1 (money-flow) | **still 1 — OPEN, see below** |
+| Pages with page-level horizontal overflow | 1 (money-flow, 1266px @500px) | **0** at 500 / 1000 / 1440px |
 | CSS shipped to every page | 203KB raw / 40KB gzip | 167KB raw / 25KB gzip |
 | Font files / payload / `@font-face` blocks | 50 / 736KB / 54 | **8 / 184KB / 8** |
 | `@media (prefers-color-scheme: dark)` blocks | 1 (carrying 11 rules) | 0 |
@@ -97,58 +97,52 @@ that would come straight back on the next component anyone writes.
 9. **SVG text paints with `fill`, not `color`.** A `fill-slate-400` utility therefore picked up none of
    the text remap and the axis labels stayed at 2.63:1 through an otherwise complete pass.
 
-## Layout — one page still overflows, and it is not the canvas
+## Layout — money-flow's horizontal overflow, fixed
 
-`/calculators/money-flow/` is the only page in the build with page-level horizontal overflow. **This is
-not fixed.** Every other page measured (including the 1000-page occupation template) is clean at 500px.
+`/calculators/money-flow/` was the only page in the build with page-level horizontal overflow. The cause
+was not the 1725px design canvas, which had already been fitted correctly. It was **the simulator's root
+grid being auto-sized**:
 
-The suspected culprit — the 1725px fixed design canvas in `MoneyFlowCanvas.tsx` — turned out to be a red
-herring: the canvas *is* fitted, its scroll container does clip, and it is not what widens the document.
-The document is widened by the **mode-toggle row** above it, which measures ~1104px inside a grid track
-only ~886px wide. As a grid item its automatic minimum size (`min-width: auto`) is its min-content, so it
-cannot shrink to the track.
-
-What was tried, with the measured effect (post-hydration, via the sampling harness):
-
-| State | Hydrated document width @1000px viewport |
-|---|---|
-| original (`flex`, no wrap) | **1230px** |
-| + `flex-wrap` and `min-w-0` on the inner button group — **shipped** | **1196px** |
-| + `min-w-0` on the row itself — **tried and reverted** | 1368px *(worse)* |
-
-At the narrowest honest viewport (500px, see the harness caveat below) the shipped state measures
-**1042px** — 542px of overflow. And the *server-rendered frame* is 1766–1782px wide at every viewport
-below ~1725px, so a visitor on a slow connection sees a horizontal jump before hydration lands. Both
-numbers are open work.
-
-`min-w-0` on the row was **reverted**: it made a measured number worse, and the reason is the real
-finding. `MoneyFlowCanvas` derives its fit zoom from `containerRef.current.clientWidth` — a container
-whose own width the scaled canvas influences — so the layout has more than one equilibrium and a
-one-line constraint change moves it between them. On top of that, `transform: scale()` does not shrink
-the layout box, so the outer canvas element occupies `1725 × zoom` regardless of what it looks like.
-
-The fix belongs in that fit math (measure a stable ancestor, or make the scaled canvas absolutely
-positioned inside a `w-full` box so only the scaled size contributes layout), not in the row's classes.
-The shipped `flex-wrap` + inner `min-w-0` is kept because it is the best of the three measured states
-and it improves narrow-screen behaviour.
-
-**How to finish it:**
-
-```bash
-npm run audit:layout -- 500 /calculators/money-flow/     # target: OVERFLOW=0px
-# and confirm post-hydration, not the SSR frame:
-W=500 npm run audit:timeline -- calculators/money-flow
-W=1000 npm run audit:probe -- calculators/money-flow      # ancestor chain of the widest element
+```html
+<div className="grid gap-6 relative">          <!-- single implicit column = auto → content-sized -->
 ```
+
+A single implicit column takes the largest item's min-content, and one item — the mode-toggle row — had a
+min-content of ~1242px. Every `w-full` descendant then inherited that 1242px, including the canvas stage
+that `MoneyFlowCanvas` measures to compute its fit zoom. The zoom was therefore derived from a width the
+canvas itself helped set: the layout settled at whatever the row's min-content happened to be, which is
+why a one-line change elsewhere moved the document width in the *wrong* direction and why this took more
+than one pass to see.
+
+```html
+<div className="grid grid-cols-[minmax(0,1fr)] gap-6 relative">   <!-- definite track: 1fr, minimum 0 -->
+```
+
+`minmax(0,1fr)` makes the track definite, so no child can widen it, the stage measures the real available
+width, and the zoom stops depending on the canvas. This is the canonical fix for a grid item that
+overflows its track — not a workaround.
+
+| Viewport | Before (hydrated) | Before (SSR frame) | After |
+|---|---|---|---|
+| 500px | 1042px | 1766px | **500px — 0 overflow** |
+| 1000px | 1196px | 1782px | **1000px — 0 overflow** |
+| 1440px | fits | 1790px | **1440px — 0 overflow** |
+
+The SSR-frame column is the second win: a visitor on a slow connection used to see a ~1000px horizontal
+jump before hydration landed. The pre-hydration frame is now correct at every width, so there is no shift.
+
+Two changes were tried and **reverted** along the way, both because they made a measured number worse:
+`min-w-0` on the mode-toggle row (1230px → 1368px) and `whitespace-nowrap` on its two labels. Only the
+`minmax(0,1fr)` track change and `flex-wrap` on the row are kept.
 
 ### Harness caveat for exactly this page
 
-`scripts/layout-audit.mjs` waits for `astro-island[ssr]` to clear, but it does so under a 9s virtual-time
-budget and falls through to measuring if that expires — and on a fit-to-width island the SSR frame is
-~1000px wider than the hydrated layout, so a fall-through reports a confident, wrong overflow. The
-sampling harness used for the numbers above (which records width over time from t=0 to 12s) is the
-reliable instrument for this class of page. Treat any single-shot overflow number for money-flow as
-suspect until it agrees with the timeline.
+`scripts/layout-audit.mjs` waits for `astro-island[ssr]` to clear, but does so under a 9s virtual-time
+budget and falls through to measuring if that expires — and on a fit-to-width island the SSR frame was
+~1000px wider than the hydrated layout, so a fall-through reported a confident, wrong overflow (it said
+1782px while the hydrated page measured 1196px). `audit:timeline` records width over time from t=0 to 12s
+and is the reliable instrument for this class of page; a single-shot number for money-flow is suspect
+until it agrees with the timeline. Both are in `scripts/`.
 
 ## Payload
 
@@ -162,25 +156,33 @@ suspect until it agrees with the timeline.
   inconsistency. The directives were always fine.)
 - **Dependencies:** `framer-motion` and `lucide-react` had zero imports in `src/`.
 
-## Remaining work (not done here)
+## Remaining work
 
-- **18 `astro check` errors, all pre-existing.** Every one is `ts(2339)` — `Property 'x' does not
-  exist on type 'never'` — from `item.*` in `src/pages/calculators/career-ai-resilience/[slug].astro`.
-  Ten are on lines this work never touched, including the frontmatter (lines 41, 52); the three that
-  overlap edited lines reference the same `item.*` expressions, which are present in the committed
-  version (`git show HEAD:… | grep -c 'item\.(salary|demand|tasks_count|code|title)'` → 11). The root
-  cause is that the template's data access is untyped: `getStaticPaths` yields `never`. Worth fixing
-  by typing the item, which would also make the page's data contract explicit.
-- **109 dead `.light …` selectors ship in the CSS.** The React components authored a complete light
-  theme via `[.light_&]` variants (335 call sites) and nothing ever sets a `.light` ancestor, so none
-  of it activates — the `!important` layer does that job by force instead. Activating the variant
+- **`astro check` is clean again.** It reported 18 errors, all pre-existing `ts(2339)` on `item.*` in
+  `src/pages/calculators/career-ai-resilience/[slug].astro` — `getStaticPaths` read an untyped JSON file,
+  so the props Astro inferred collapsed to `never` and the template's entire data access was unchecked.
+  A `CareerItem` interface plus one cast fixed all 13; the remaining 5 were in the expat library. Two real
+  bugs fell out of doing it:
+  - **Italy had no `flagEmoji`**, so its selector button rendered a blank flag (`ts(2741)` was the only
+    thing pointing at it). Added.
+  - **`expat.ts` assigned `moveTuitionUsd` twice** — from `tuitionStipendUsd` and then, four lines later,
+    from `privateTuitionUsd`. The later assignment won, so the tuition-stipend term never reached the
+    result. The dead assignment is removed, which leaves today's numbers byte-identical — but whether the
+    model *should* include the stipend term is a domain question, not a typing one, so it is left open
+    deliberately rather than guessed at.
+- **109 dead `.light …` selectors ship in the CSS.** The React components authored a complete light theme
+  via `[.light_&]` variants (335 call sites) and nothing ever sets a `.light` ancestor, so none of it
+  activates — the `!important` layer does that job by force instead. Activating the variant
   (`<html class="light">`) is the change that would let the override layer shrink much further, but it
   shifts colours the layer currently leaves alone, so it deserves its own verified pass.
 - **The repaint shim is still a shim.** 289 `!important` declarations and 57 `[class*=…]` selectors
-  remain. They are the compatibility layer for components authored dark; the durable fix is porting
-  those components onto the light tokens, which is a component-by-component job.
-- **Heading colour/weight is still forced** by `h1,h2,h3 { color: … !important }`. Every value passes
-  AA, so it is cosmetic debt rather than a contrast bug.
+  remain. They are the compatibility layer for components authored dark; the durable fix is porting those
+  components onto the light tokens, component by component.
+- **Heading colour/weight is still forced** by `h1,h2,h3 { color: … !important }`. Every value passes AA,
+  so it is cosmetic debt rather than a contrast bug.
+- The contrast gate covers 20 sampled pages (the full calculator set plus one page from each content
+  template). `npm run audit:contrast -- --all` sweeps all 1080; that should become the CI gate before
+  this is called done.
 
 ## Reverting the one visible design change
 

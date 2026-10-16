@@ -784,6 +784,7 @@ export const COUNTRY_PROFILES: Record<HostCountryId, CountryProfile> = {
 	italy: {
 		id: 'italy',
 		name: 'Italy',
+		flagEmoji: '🇮🇹',
 		region: 'Europe',
 		currencyCode: 'EUR',
 		currencySymbol: '€',

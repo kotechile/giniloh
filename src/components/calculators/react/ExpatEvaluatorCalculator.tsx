@@ -1706,7 +1706,7 @@ export default function ExpatEvaluatorCalculator() {
 									</span>
 									<div className="mt-2 p-2.5 bg-[#FAF8F5] rounded-xl border border-stone-200/60 text-xs font-mono text-[#2E6F40] font-bold">
 										Resulting Spend: {formatCurrency(discretionarySpendMonthly * hostColIndexRatio)} USD / Month
-										{selectedCountry.currencyCode !== 'USD' && (
+										{(selectedCountry.currencyCode as string) !== 'USD' && (
 											<span className="text-[#6B6B6B] font-normal">
 												{' '} (or {selectedCountry.currencySymbol}{Math.round((discretionarySpendMonthly * hostColIndexRatio) / fxRateHostToUsd).toLocaleString()} {selectedCountry.currencyCode})
 											</span>

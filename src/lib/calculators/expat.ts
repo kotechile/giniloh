@@ -141,7 +141,6 @@ export interface ExpatBreakdown {
 
 	moveColaUsd: number;
 	moveHousingUsd: number;
-	moveTuitionUsd: number;
 
 	stayRentUsd: number;
 	stayTuitionUsd: number;
@@ -453,7 +452,6 @@ export function calculateExpatFinancials(inputs: ExpatInputs): ExpatBreakdown {
 
 		moveColaUsd: colaUsd,
 		moveHousingUsd: housingAllowanceUsd,
-		moveTuitionUsd: tuitionStipendUsd,
 
 		stayRentUsd: inputs.homeRentOrMortgageMonthly * 12,
 		stayTuitionUsd: inputs.homeTuitionMonthly * 12,

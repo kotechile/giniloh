@@ -695,7 +695,7 @@ export default function MoneyFlowSimulator() {
 	const liquidityRows = getProjectionGrid();
 
 	return (
-		<div className="grid gap-6 relative">
+		<div className="grid grid-cols-[minmax(0,1fr)] gap-6 relative">
 			{/* Ardal Loh-Gronager Safeguard Overlay */}
 			{state.isPaused && !state.checklistCompleted && state.macroScenario === 'crash' && (
 				<div className="absolute inset-0 bg-white/90 z-50 rounded-[2rem] flex flex-col items-center justify-center p-8 backdrop-blur-lg animate-[fadeIn_0.3s_ease-out]">
@@ -748,7 +748,7 @@ export default function MoneyFlowSimulator() {
 					<button
 						onClick={() => handleModeSwitch('personal')}
 						className={[
-							'px-4 py-1.5 rounded-lg text-xs font-semibold tracking-tight transition duration-200 cursor-pointer whitespace-nowrap',
+							'px-4 py-1.5 rounded-lg text-xs font-semibold tracking-tight transition duration-200 cursor-pointer',
 							state.mode === 'personal'
 								? 'bg-gray-200 text-[#1A1A1A]'
 								: 'bg-transparent text-[#6B6B6B] hover:text-slate-800'
@@ -759,7 +759,7 @@ export default function MoneyFlowSimulator() {
 					<button
 						onClick={() => handleModeSwitch('enterprise')}
 						className={[
-							'px-4 py-1.5 rounded-lg text-xs font-semibold tracking-tight transition duration-200 cursor-pointer whitespace-nowrap',
+							'px-4 py-1.5 rounded-lg text-xs font-semibold tracking-tight transition duration-200 cursor-pointer',
 							state.mode === 'enterprise'
 								? 'bg-gray-200 text-[#1A1A1A]'
 								: 'bg-transparent text-[#6B6B6B] hover:text-slate-800'

@@ -7,10 +7,29 @@ import RelatedArticleCard from '../../../components/calculators/RelatedArticleCa
 import CommunityPoll from '../../../components/calculators/react/CommunityPoll';
 import { fetchPostBySlug } from '../../../lib/wordpress';
 
+/**
+ * The shape of one row in public/data/careers/index.json.
+ *
+ * Without this, `indexData` is `any`, the props Astro infers from
+ * `getStaticPaths` collapse to `never`, and every `item.*` in the template
+ * reported `ts(2339): Property 'x' does not exist on type 'never'` — 13 errors
+ * that made `astro check` noisy enough to hide real ones. The trailing index
+ * signature keeps the generous access this template already does safe.
+ */
+interface CareerItem {
+	code: string;
+	title: string;
+	salary: number;
+	demand: string;
+	tasks_count: number;
+	risk_score: number;
+	[key: string]: unknown;
+}
+
 export async function getStaticPaths() {
 	const indexFilePath = path.resolve('./public/data/careers/index.json');
-	const indexData = JSON.parse(fs.readFileSync(indexFilePath, 'utf-8'));
-	
+	const indexData = JSON.parse(fs.readFileSync(indexFilePath, 'utf-8')) as CareerItem[];
+
 	function slugify(text: string) {
 		return text
 			.toLowerCase()
@@ -20,8 +39,8 @@ export async function getStaticPaths() {
 	}
 
 	const slugsSeen = new Set();
-	
-	return indexData.map((item: any) => {
+
+	return indexData.map((item: CareerItem) => {
 		let slug = slugify(item.title);
 		if (slugsSeen.has(slug)) {
 			slug = `${slug}-${item.code.replace('.', '-')}`;
@@ -35,7 +54,7 @@ export async function getStaticPaths() {
 	});
 }
 
-const { item } = Astro.props;
+const { item } = Astro.props as { item: CareerItem };
 
 // Load the detailed JSON file
 const detailFilePath = path.resolve(`./public/data/careers/${item.code}.json`);
