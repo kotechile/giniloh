@@ -23,7 +23,8 @@ import { writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
-import { AICHIEVE_POST_SLUGS, AICHIEVE_ORIGIN, MOVED_TOOL_PATHS } from '../src/data/ownership.mjs';
+import { MOVED_TOOL_PATHS } from '../src/data/ownership.mjs';
+import { FOREIGN_TARGETS } from '../src/data/ownership.generated.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const OUT = join(HERE, '..', 'nginx-redirects.conf');
@@ -35,10 +36,10 @@ const today = new Date().toISOString().slice(0, 10);
 
 push('# GENERATED FILE — do not edit by hand.');
 push('#');
-push('# 301 map for everything that moved from giniloh.com to aichieve.net in the 2026 split.');
-push(`# Source: src/data/ownership.mjs · generated ${today}`);
+push('# 301 map for everything that moved off giniloh.com in the 2026 split.');
+push(`# Source: src/data/ownership.generated.mjs (derived from WordPress verticals) · ${today}`);
 push('#');
-push(`# ${AICHIEVE_POST_SLUGS.length} articles, ${MOVED_TOOL_PATHS.length} tool pages. These URLs are indexed and`);
+push(`# ${Object.keys(FOREIGN_TARGETS).length} articles, ${MOVED_TOOL_PATHS.length} tool pages. These URLs are indexed and`);
 push('# carry search equity, so they get a real 301 header here rather than the 200-with-meta-refresh');
 push('# that Astro\'s static redirect stubs emit. Regenerate with `npm run redirects`.');
 push('');
@@ -48,10 +49,10 @@ for (const { from, to } of MOVED_TOOL_PATHS) {
 }
 push('');
 push('# ── Moved articles (same slug, different host) ────────────────────────────────────────');
-for (const slug of AICHIEVE_POST_SLUGS) {
-	push(`location = /${slug}/ { return 301 ${AICHIEVE_ORIGIN}/${slug}/; }`);
+for (const [slug, origin] of Object.entries(FOREIGN_TARGETS)) {
+	push(`location = /${slug}/ { return 301 ${origin}/${slug}/; }`);
 }
 push('');
 
 writeFileSync(OUT, lines.join('\n'), 'utf8');
-console.log(`wrote nginx-redirects.conf — ${AICHIEVE_POST_SLUGS.length + MOVED_TOOL_PATHS.length} 301 rules`);
+console.log(`wrote nginx-redirects.conf — ${Object.keys(FOREIGN_TARGETS).length + MOVED_TOOL_PATHS.length} 301 rules`);

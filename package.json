@@ -11,7 +11,9 @@
     "preview": "astro preview",
     "check": "astro check",
     "redirects": "node scripts/generate-nginx-redirects.mjs",
-    "astro": "astro"
+    "astro": "astro",
+    "routing:sync": "node scripts/routing-sync.mjs",
+    "routing:check": "node scripts/routing-sync.mjs --check"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.1",

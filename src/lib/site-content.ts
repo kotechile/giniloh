@@ -1,29 +1,41 @@
 /**
- * Typed runtime view of the split manifest.
+ * Typed runtime view of content ownership.
  *
- * The slug lists themselves live in `src/data/ownership.mjs`, NOT here — because `astro.config.mjs`
- * also needs them (to generate the 301 map for moved URLs) and is evaluated before TypeScript is
- * available. One copy, two loaders. Do not restate the lists in this file.
+ * Ownership is DERIVED, not hand-written: each WordPress post carries a `vertical` term, and
+ * Supabase `vertical_sites` maps vertical -> site_domain. `scripts/routing-sync.mjs` resolves that
+ * and writes `src/data/ownership.generated.mjs`, which is what this module reads.
  *
- * This module is the only thing that decides whose index a post lands in, and every WordPress read
- * in `lib/wordpress.ts` funnels through it.
+ * So adding a property, or moving a post, is now a DATA change — insert a vertical_sites row and
+ * re-run the sync. No edits to any front-end repo. Previously this was a per-repo slug list, which
+ * meant adding a third property required editing the manifests in BOTH existing ones and a
+ * forgotten slug published to no site at all.
+ *
+ * WHY THE GENERATED FILE AND NOT A LIVE READ
+ * Builds must be deterministic and must never depend on a network service being up. The sync is a
+ * deliberate step; the build reads its committed output.
+ *
+ * `ownership.mjs` still holds what is genuinely configuration (origins, moved tool paths) and its
+ * hand-written slug lists remain as the assertion baseline: `npm run routing:check` fails if the
+ * derived answer would make a currently-published post silently LEAVE this site.
  */
 import {
 	GINILOH_ORIGIN,
 	AICHIEVE_ORIGIN,
-	GINILOH_POST_SLUGS,
-	AICHIEVE_POST_SLUGS,
 	MOVED_TOOL_PATHS,
 	AICHIEVE_TOOL_PATHS
 } from '../data/ownership.mjs';
+import {
+	OWNED_POST_SLUGS_GENERATED,
+	FOREIGN_POST_SLUGS_GENERATED
+} from '../data/ownership.generated.mjs';
 
 export { MOVED_TOOL_PATHS, AICHIEVE_TOOL_PATHS, GINILOH_ORIGIN, AICHIEVE_ORIGIN };
 
-/** Posts that belong to giniloh.com. */
-export const OWNED_POST_SLUGS: ReadonlySet<string> = new Set<string>(GINILOH_POST_SLUGS);
+/** Posts that belong to giniloh.com — derived from verticals. */
+export const OWNED_POST_SLUGS: ReadonlySet<string> = new Set<string>(OWNED_POST_SLUGS_GENERATED);
 
-/** Posts that belong to aichieve.net and must never render here. */
-export const FOREIGN_POST_SLUGS: ReadonlySet<string> = new Set<string>(AICHIEVE_POST_SLUGS);
+/** Posts that belong to another property and must never render here. */
+export const FOREIGN_POST_SLUGS: ReadonlySet<string> = new Set<string>(FOREIGN_POST_SLUGS_GENERATED);
 
 /** The other property. Used for cross-links and the 301 map, never rendered as content. */
 export const SIBLING_SITE = {

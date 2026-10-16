@@ -5,21 +5,34 @@ import sitemap from '@astrojs/sitemap';
 
 import tailwindcss from '@tailwindcss/vite';
 
-// The split manifest. Plain ESM precisely so this file can read it: astro.config is evaluated by
-// Node before TypeScript is available, and hardcoding a second copy of the slug lists here is how
-// the redirect map would silently drift out of sync with the content split.
-import { AICHIEVE_POST_SLUGS, AICHIEVE_ORIGIN, MOVED_TOOL_PATHS } from './src/data/ownership.mjs';
+// Two sources, deliberately:
+//   ownership.mjs           -- what is genuinely configuration (moved tool paths)
+//   ownership.generated.mjs -- content ownership, DERIVED from WordPress `vertical` terms x
+//                              Supabase `vertical_sites` by scripts/routing-sync.mjs
+//
+// Plain ESM precisely so this file can read them: astro.config is evaluated by Node before
+// TypeScript is available, and hardcoding a second copy of the slug lists here is how the redirect
+// map silently drifts out of sync with the content split.
+import { MOVED_TOOL_PATHS, AICHIEVE_ORIGIN } from './src/data/ownership.mjs';
+import { FOREIGN_TARGETS } from './src/data/ownership.generated.mjs';
 
 /**
- * 301 map for everything that moved to aichieve.net in the 2026 split.
+ * 301 map for everything that now lives on another property.
  *
  * These URLs are indexed and carry real search equity. Without this map they do not redirect —
- * they simply stop being built, so giniloh.com answers 404 for 86 articles that used to rank and
- * hands Google nothing to follow. That is the single most expensive way to get this split wrong,
- * which is why the list is derived from the manifest rather than typed out.
+ * they simply stop being built, so this site answers 404 for articles that used to rank and hands
+ * Google nothing to follow. That is the single most expensive way to get this split wrong, which is
+ * why both halves are derived rather than typed out:
+ *
+ *   the slug list    from the WordPress vertical
+ *   the destination  from vertical_sites.frontend_url
+ *
+ * Previously every foreign post was sent to AICHIEVE_ORIGIN. That was correct only while aichieve
+ * was the sole sibling; the moment a third property existed it would have 301'd wellroost's posts
+ * to aichieve.
  */
 const movedPostRedirects = Object.fromEntries(
-	AICHIEVE_POST_SLUGS.map((slug) => [`/${slug}/`, `${AICHIEVE_ORIGIN}/${slug}/`])
+	Object.entries(FOREIGN_TARGETS).map(([slug, origin]) => [`/${slug}/`, `${origin}/${slug}/`])
 );
 
 const movedToolRedirects = Object.fromEntries(
