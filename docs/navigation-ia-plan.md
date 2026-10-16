@@ -143,10 +143,10 @@ four cards gone the hub reads cleanly, and the homepage already carries an expli
 section — adding a second one to the hub is a judgement call worth making with you, not unilaterally.
 
 **Phase 3 — the hub becomes an archive with an in-page topic filter.**
-`/guides/` opens with featured/latest pieces (title, 2-line clamped summary, topic pill, date, read
+`/articles/` opens with featured/latest pieces (title, 2-line clamped summary, topic pill, date, read
 time) — *titles before taxonomy* — then a compact "Browse by topic" index below for taxonomy browsers.
 Chips filter the rendered list in place; **all cards stay in the HTML**, so no-JS visitors and crawlers
-see every article, and each chip also links to its pillar page. The homepage keeps its bento: the
+see every article, and each chip also links to its topic page. The homepage keeps its bento: the
 homepage and the archive have different jobs (themed entry vs. chronological retrieval).
 *Acceptance:* harvester harnesses green; chips keyboard-accessible (`aria-pressed`) with ≥44px targets;
 no layout shift; the five consumer pillar pages stay reachable. *Risk:* medium. *Effort:* ~4h.
