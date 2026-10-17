@@ -206,6 +206,11 @@ npm run check && npm run build
   it distinguishes which activities a task draws on.
 - DWA scores are one LLM pass. `--audit` measures self-consistency, not correctness. The rubric is
   the model; changing it invalidates the cache and the version string.
+- Measured self-consistency (rubric v2.1, 200 sampled activities re-scored cold, 2026-10-17):
+  mean absolute deviation **0.073** on the 0–1 scale, max 0.37, and **10 of 200 (5%)** moved by
+  0.25 or more. The audit report is committed at `data/onet/dwa-automation.audit.json`. Treat a
+  5-point band around any single activity's score as noise; occupation-level averages absorb most
+  of it, single-task claims do not.
 - Vintage is mixed by design: O*NET refreshes occupations on a rolling schedule, so `Date` spans
   06/2008–08/2026. `methodology.onet_task_vintage` reports the maximum, `methodology.vintages`
   reports the distribution.
