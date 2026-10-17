@@ -75,7 +75,7 @@ def num(value: str | None) -> float | None:
     if value is None:
         return None
     text = str(value).strip()
-    if text in {"", "*", "-", "—", "nan", "NaN"}:
+    if text in {"", "*", "#", "-", "—", "nan", "NaN"}:
         return None
     try:
         return float(text)
@@ -339,6 +339,42 @@ def resolve_projection(soc: str, projections: dict[str, dict]) -> dict | None:
     return None
 
 
+def load_state_wages() -> dict[str, dict[str, int]]:
+    """
+    BLS OEWS state medians: OCC_CODE -> {state: median annual wage}.
+
+    These are separate state estimates, not a geographic adjustment of the national median, so
+    the page presents them as their own figures. Occupations OEWS does not break out by state
+    are absent, and the page then omits the block rather than showing a national number under a
+    local-sounding heading.
+    """
+    import pandas as pd
+
+    path = ONET / "state_M2025_dl.xlsx"
+    if not path.exists():
+        return {}
+    frame = pd.read_excel(path)
+    frame = frame[frame["O_GROUP"] == "detailed"]
+    out: dict[str, dict[str, int]] = {}
+    for _, row in frame.iterrows():
+        code = str(row["OCC_CODE"]).strip()
+        area = str(row["AREA_TITLE"]).strip()
+        value = num(row["A_MEDIAN"])
+        if not code or not area or value is None:
+            continue
+        out.setdefault(code, {})[area] = int(round(value))
+    return out
+
+
+def resolve_state_wages(soc: str, state_wages: dict[str, dict[str, int]]) -> dict | None:
+    prefix = soc.split(".")[0]
+    for candidate, source in ((prefix, "bls-state-line"), (prefix[:-1] + "0", "bls-state-parent")):
+        states = state_wages.get(candidate)
+        if states:
+            return {"source": source, "code": candidate, "states": dict(sorted(states.items()))}
+    return None
+
+
 def load_bls() -> dict[str, dict]:
     """OEWS rows keyed by OCC_CODE. Wage fields carry the string '#' when unavailable."""
     try:
@@ -444,6 +480,7 @@ def main() -> None:
     task_ratings = load_task_ratings()
     work_context = load_work_context_signals(VALIDATION_ELEMENTS)
     projections = load_projections()
+    state_wages = load_state_wages()
     automation_ratings = work_context.get("4.C.3.b.2", {})
     emerging_by_soc = load_emerging()
     bls = load_bls()
@@ -591,6 +628,9 @@ def main() -> None:
 
         wage, employment, wage_code, salary_source = resolve_wage(soc, bls)
         projection = resolve_projection(soc, projections)
+        state_wage = resolve_state_wages(soc, state_wages)
+        if state_wage:
+            totals["occupations_with_state_wages"] += 1
 
         if weight_total == 0:
             # O*NET publishes no task inventory for residual "All Other" codes and for the
@@ -655,6 +695,7 @@ def main() -> None:
             "employment": int(employment) if employment is not None else None,
             "employment_band": employment_band(employment),
             "projection": projection,
+            "state_wages": state_wage,
             "exposure": exposure,
             "category_distribution": bucket_count,
             "weighted_distribution": weighted_distribution,
@@ -747,6 +788,7 @@ def main() -> None:
             "tasks_without_dwa_mapping": totals["tasks_without_dwa"],
             "dwas_scored": len(dwa_scores),
             "dwas_missing_score": len(missing_dwa_scores),
+            "occupations_with_state_wages": totals["occupations_with_state_wages"],
         },
         "weights": {
             "importance_floor": IMPORTANCE_FLOOR,

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T14:35:27Z",
+  "generated_at": "2026-10-17T14:42:50Z",
   "onet_release": "31.0",
   "onet_task_vintage": "08/2026",
   "vintages": {
@@ -19,7 +19,8 @@
     "tasks_with_task_ratings": 18369,
     "tasks_without_dwa_mapping": 0,
     "dwas_scored": 2085,
-    "dwas_missing_score": 0
+    "dwas_missing_score": 0,
+    "occupations_with_state_wages": 975
   },
   "weights": {
     "importance_floor": 0.35,

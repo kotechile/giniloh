@@ -35,6 +35,7 @@ All four O*NET tables now live in `data/onet/` and are joined on `Task ID`:
 | `work_context.csv` | 305,389 rows / 57 elements | human-rated job context, used **only** to validate the index |
 | `gwas_to_iwas_to_dwas.csv` | 2,087 rows | authoritative DWA → IWA → GWA parentage |
 | `bls_occupation_projections.xlsx` | 1,112 rows (831 line items) | BLS Employment Projections **2025–2035**, Table 1.2 |
+| `state_M2025_dl.xlsx` | 37,408 rows / 54 areas | OEWS **state** medians, May 2025 — pay geography only |
 
 `data/onet/occupations.txt` (descriptions) and `data/onet/national.xlsx` (BLS OEWS wages and
 employment) are carried over unchanged.
@@ -165,6 +166,25 @@ that silently implies its wage is from this year is the actual defect.
 Note on the OEWS download: its `UpdateTime` sheet reads `09MAR2021` on the May 2025 file — a template
 artefact, not the data year. The sheet name (`national_M2025_dl`), the row counts (830 detailed / 454
 broad / 94 minor / 22 major / 1 total) and the release note are what identify the vintage.
+
+## 3d. State pay, deliberately not state exposure
+
+`state_M2025_dl.xlsx` is the same May 2025 OEWS panel cut by area. It adds **pay geography, not risk
+geography**: O*NET publishes one national task inventory, so there is no state-level exposure to
+compute and the index does not move by state.
+
+Each occupation file carries `state_wages: {source, code, states}` — 975 of 1,016 occupations have
+state detail; the rest are military codes and BLS roll-ups. Values are the state panel's own median
+estimates and the page says so: they are not the national median scaled by local prices.
+
+Two rejected shapes:
+- **51,816 occupation × state URLs** (1,016 × 51). Thin near-duplicates; the block lives inside the
+  occupation page instead.
+- **Indexing state wages in `index.json`.** The calculator fetches that file on load, and adding ~50
+  numbers per occupation would inflate the initial payload for data only one page needs.
+
+Raw panel is committed (7.3 MB) because BLS blocks scripted downloads — the manual fetch cannot be
+reproduced by `fetch_onet.sh`, which only reaches onetcenter.org.
 
 ## 4. Honest data labels
 

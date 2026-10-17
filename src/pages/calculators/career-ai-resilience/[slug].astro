@@ -85,6 +85,8 @@ interface Detail {
 	employment: number | null;
 	employment_band: string;
 	/** BLS Employment Projections 2025-2035, or null when BLS has no equivalent code. */
+	/** BLS OEWS state medians for this occupation; null when OEWS has no state detail. */
+	state_wages: { source: string; code: string; states: Record<string, number> } | null;
 	projection: {
 		source: string;
 		code: string;
@@ -176,6 +178,12 @@ const description = scored
 const eyebrow = 'AI Automation Index';
 
 const post = await fetchPostBySlug('best-ai-proof-jobs-in-a-changing-market');
+
+const stateEntries = detail.state_wages
+	? Object.entries(detail.state_wages.states).sort((a, b) => b[1] - a[1])
+	: [];
+const topStates = stateEntries.slice(0, 5);
+const bottomStates = stateEntries.slice(-5).reverse();
 
 const signals = [
 	{
@@ -306,6 +314,46 @@ const emerging = detail.emerging_tasks ?? [];
 					)}
 				</div>
 			</div>
+
+			<!-- Pay by state -->
+			{stateEntries.length >= 5 && (
+				<div class="rounded-[1.8rem] border border-[#E5E5E5] bg-white p-6 md:p-8">
+					<div class="flex flex-wrap items-baseline justify-between gap-3">
+						<div>
+							<h3 class="text-2xl font-bold tracking-tight text-[#1A1A1A]">Pay by state</h3>
+							<p class="mt-2 text-sm leading-6 text-[#5E5E5E]">
+								BLS OEWS publishes {stateEntries.length} state estimates for this occupation. Each is its own survey estimate, not the national median adjusted for local prices.
+							</p>
+						</div>
+						<p class="font-mono text-xs uppercase tracking-wider text-[#6B6B6B]">
+							{formatUSD(stateEntries[stateEntries.length - 1][1])} – {formatUSD(stateEntries[0][1])}
+						</p>
+					</div>
+
+					<div class="mt-6 grid gap-8 sm:grid-cols-2">
+						{[{ label: 'Highest medians', rows: topStates }, { label: 'Lowest medians', rows: bottomStates }].map((group) => (
+							<div>
+								<p class="font-mono text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B]">{group.label}</p>
+								<div class="mt-3">
+									{group.rows.map(([state, value]) => (
+										<div class="flex items-baseline justify-between gap-3 border-b border-[#F2F2F2] py-1.5 last:border-0">
+											<span class="text-[13px] text-[#1A1A1A]">{state}</span>
+											<span class="font-mono text-xs text-[#5E5E5E]">{formatUSD(value)}</span>
+										</div>
+									))}
+								</div>
+							</div>
+						))}
+					</div>
+
+					<p class="mt-5 text-[11px] leading-5 text-[#6B6B6B]">
+						{detail.state_wages?.source === 'bls-state-line'
+							? `State figures come from the ${detail.state_wages.code} row in the May 2025 state panel.`
+							: `OEWS has no state row for this exact code, so figures come from the ${detail.state_wages?.code} roll-up.`}
+						States where the estimate was suppressed or too small to publish are absent.
+					</p>
+				</div>
+			)}
 
 			<!-- Signal decomposition -->
 			<div class="rounded-[1.8rem] border border-[#E5E5E5] bg-white p-6 md:p-8">
