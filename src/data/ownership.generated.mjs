@@ -33,6 +33,7 @@ export const OWNED_POST_SLUGS_GENERATED = [
 	"three-forms-cost-more-than-tax",
 	"why-70-of-startup-options-go-unexercised",
 	"your-ipo-payday-tax-bill",
+	"your-raise-dies-at-51-5-hours",
 	"zapier-notion-integration-calculate-your-tinkering-tax"
 ];
 export const FOREIGN_POST_SLUGS_GENERATED = [
@@ -128,6 +129,7 @@ export const FOREIGN_POST_SLUGS_GENERATED = [
 	"your-32gb-card-gone",
 	"your-chip-stopped-deciding",
 	"your-cluster-hidden-clock",
+	"your-fleets-charger-gap",
 	"zet-scale-ev-truck-residual-value-risk"
 ];
 export const FOREIGN_TARGETS = {
@@ -223,7 +225,8 @@ export const FOREIGN_TARGETS = {
 	"your-32gb-card-gone": "https://aichieve.net",
 	"your-chip-stopped-deciding": "https://aichieve.net",
 	"your-cluster-hidden-clock": "https://aichieve.net",
+	"your-fleets-charger-gap": "https://aichieve.net",
 	"zet-scale-ev-truck-residual-value-risk": "https://aichieve.net"
 };
 export const GENERATED_FOR = "giniloh.com";
-export const GENERATED_AT = "2026-10-16T16:31:20.609Z";
+export const GENERATED_AT = "2026-10-17T00:17:06.626Z";
