@@ -34,6 +34,7 @@ All four O*NET tables now live in `data/onet/` and are joined on `Task ID`:
 | `emerging_tasks.csv` | 338 rows / 245 occupations | tasks added (`New`) or rewritten (`Revision`) up to 08/2026 |
 | `work_context.csv` | 305,389 rows / 57 elements | human-rated job context, used **only** to validate the index |
 | `gwas_to_iwas_to_dwas.csv` | 2,087 rows | authoritative DWA → IWA → GWA parentage |
+| `bls_occupation_projections.xlsx` | 1,112 rows (831 line items) | BLS Employment Projections **2025–2035**, Table 1.2 |
 
 `data/onet/occupations.txt` (descriptions) and `data/onet/national.xlsx` (BLS OEWS wages and
 employment) are carried over unchanged.
@@ -125,6 +126,27 @@ It asks to fold emerging tasks into the score as an augmentation discount. This 
 
 Same reasoning applies to the physical shield: the rubric already scores hands-on DWAs low. Applying
 a second attenuation on top would double-count the same judgment.
+
+## 3b. Projections — the growth number that was missing
+
+`national.xlsx` (OEWS) gives an employment *level*; it has no forecast. The v1 page rendered that level
+as "Growth Demand". It is now filled from the BLS Employment Projections 2025–2035 occupation matrix
+(Table 1.2), which supplies employment 2025 and 2035, the percent change, and the annual-average
+openings over the decade.
+
+Join tiers, each recorded per occupation so the page can state which row the number came from:
+
+| tier | how | count |
+|---|---|---|
+| `bls-line` | BLS detailed code equals the O*NET-SOC stem (`11-1011`) | 962 |
+| `bls-parent` | BLS has no such code, so the parent stem is used (`25-9042` → `25-9040`) | 29 |
+| `null` | no BLS equivalent — 22 military branches, `Legislators`, three reorganized 53-10xx supervisor codes | 25 |
+
+The sheet reports thousands of workers; the build multiplies by 1,000 so `291.6` is stored as
+`291600`. A page should never have to remember the unit, and a reader should never see 291 people.
+
+Two wages now exist for the same occupation: OEWS (used) and this matrix's 2025 median (not used).
+Published salary stays on OEWS deliberately — one wage source, stated tier, no competing vintages.
 
 ## 4. Honest data labels
 

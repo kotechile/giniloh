@@ -68,7 +68,7 @@ def num(value: str | None) -> float | None:
     if value is None:
         return None
     text = str(value).strip()
-    if text in {"", "*", "nan", "NaN"}:
+    if text in {"", "*", "-", "—", "nan", "NaN"}:
         return None
     try:
         return float(text)
@@ -266,6 +266,72 @@ def load_emerging() -> dict[str, list[dict]]:
     return by_soc
 
 
+def load_projections() -> dict[str, dict]:
+    """
+    BLS Employment Projections, 2025-2035 occupation matrix (Table 1.2).
+
+    The sheet reports thousands of workers; values are converted to counts here so no page has
+    to remember that 291.6 means 291,600. Rows come in two kinds — "Line item" (a detailed
+    occupation) and "Summary" (a BLS roll-up) — and both are kept, because O*NET splits some
+    occupations that BLS reports only as a roll-up.
+    """
+    import pandas as pd
+
+    path = ONET / "bls_occupation_projections.xlsx"
+    if not path.exists():
+        return {}
+    frame = pd.read_excel(path, sheet_name="Table 1.2", header=1).iloc[:, :12]
+    frame.columns = [
+        "title", "code", "type", "emp_2025", "emp_2035", "dist_2025", "dist_2035",
+        "change_numeric", "change_percent", "self_employed_percent", "annual_openings", "wage",
+    ]
+
+    def thousands(value: float | None) -> int | None:
+        return int(round(value * 1000)) if value is not None else None
+
+    out: dict[str, dict] = {}
+    for _, row in frame.iterrows():
+        code = str(row["code"]).strip()
+        if not code or code.lower() == "nan":
+            continue
+        kind = str(row["type"]).strip().lower()
+        if code in out and kind != "line item":
+            continue  # a line item already claimed this code; the roll-up is a worse match
+        out[code] = {
+            "code": code,
+            "kind": "line" if kind == "line item" else "summary",
+            "title": str(row["title"]).strip(),
+            "base_year": 2025,
+            "end_year": 2035,
+            "employment_2025": thousands(num(row["emp_2025"])),
+            "employment_2035": thousands(num(row["emp_2035"])),
+            "change_numeric": thousands(num(row["change_numeric"])),
+            "change_percent": num(row["change_percent"]),
+            "annual_openings": thousands(num(row["annual_openings"])),
+            "self_employed_percent": num(row["self_employed_percent"]),
+        }
+    return out
+
+
+def resolve_projection(soc: str, projections: dict[str, dict]) -> dict | None:
+    """
+    Exact BLS code, then the BLS roll-up row, then the parent stem (11-1011 -> 11-1010).
+
+    The tier is recorded so the page can say which row the figure actually came from; an
+    occupation BLS does not project gets null, not a national average.
+    """
+    prefix = soc.split(".")[0]
+    for candidate, source in ((prefix, None), (prefix[:-1] + "0", "parent")):
+        row = projections.get(candidate)
+        if row is None:
+            continue
+        tier = source or ("bls-line" if row["kind"] == "line" else "bls-summary")
+        if source:
+            tier = "bls-parent"
+        return {**row, "source": tier}
+    return None
+
+
 def load_bls() -> dict[str, dict]:
     """OEWS rows keyed by OCC_CODE. Wage fields carry the string '#' when unavailable."""
     try:
@@ -370,6 +436,7 @@ def main() -> None:
     activity, gwa_names = load_work_activities()
     task_ratings = load_task_ratings()
     work_context = load_work_context_signals(VALIDATION_ELEMENTS)
+    projections = load_projections()
     automation_ratings = work_context.get("4.C.3.b.2", {})
     emerging_by_soc = load_emerging()
     bls = load_bls()
@@ -516,6 +583,7 @@ def main() -> None:
             )
 
         wage, employment, wage_code, salary_source = resolve_wage(soc, bls)
+        projection = resolve_projection(soc, projections)
 
         if weight_total == 0:
             # O*NET publishes no task inventory for residual "All Other" codes and for the
@@ -578,6 +646,7 @@ def main() -> None:
             "salary_reference": wage_code,
             "employment": int(employment) if employment is not None else None,
             "employment_band": employment_band(employment),
+            "projection": projection,
             "exposure": exposure,
             "category_distribution": bucket_count,
             "weighted_distribution": weighted_distribution,
@@ -614,6 +683,7 @@ def main() -> None:
                 "salary_source": salary_source,
                 "employment": int(employment) if employment is not None else None,
                 "employment_band": employment_band(employment),
+                "projection": projection,
                 "exposure": exposure,
                 "category_distribution": bucket_count,
                 "weighted_distribution": weighted_distribution,

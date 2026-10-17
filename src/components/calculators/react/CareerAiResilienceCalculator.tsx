@@ -43,6 +43,8 @@ interface OccupationIndexItem {
 	/** BLS OEWS employment size band. Was `demand` in v1, which mislabelled employment as growth. */
 	employment_band: string;
 	employment: number | null;
+	/** BLS Employment Projections 2025-2035; null when BLS has no matching code. */
+	projection?: { change_percent: number | null; annual_openings: number | null; source: string; code: string } | null;
 	salary_source?: string;
 	exposure?: Exposure;
 	category_distribution: CategoryDistribution;
@@ -1274,6 +1276,13 @@ export default function CareerAiResilienceCalculator() {
 													}`}>
 														{item.employment_band}
 													</span>
+													{item.projection && item.projection.change_percent !== null ? (
+														<span className={`mt-1 block font-mono text-[10px] font-bold ${item.projection.change_percent > 0 ? 'text-[#2E6F40]' : item.projection.change_percent < 0 ? 'text-[#A55252]' : 'text-[#6B6B6B]'}`}>
+															{item.projection.change_percent > 0 ? '+' : ''}{item.projection.change_percent.toFixed(1)}% <span className="font-normal text-[#6B6B6B]">by 2035</span>
+														</span>
+													) : (
+														<span className="mt-1 block font-mono text-[10px] text-[#A0A0A0]">not projected</span>
+													)}
 												</td>
 												<td className="pl-6 pr-0 py-6 text-right">
 													<div className="flex justify-end items-center gap-4">
