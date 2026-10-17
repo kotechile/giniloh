@@ -253,7 +253,7 @@ export default function RelocationCalculator() {
 					{/* KPI Summary Card */}
 					<div className="grid gap-3.5 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
 						<div className="flex items-center justify-between border-b border-gray-200 pb-3 [.light_&]:border-slate-100">
-							<span className="font-mono text-[0.68rem] uppercase tracking-[0.22em] text-[#6B6B6B]">Payback Status</span>
+							<span className="font-mono text-[0.68rem] uppercase tracking-[0.22em] text-[#5F5B52]">Payback Status</span>
 							<span className={`rounded-full px-3 py-1 font-mono text-[0.64rem] uppercase tracking-[0.22em] ${breakdown.paybackPeriodMonths === Infinity ? 'bg-red-500/10 border border-red-500/20 text-[#A55252]' : 'bg-emerald-500/10 border border-emerald-500/20 #1A1A1A'}`}>
 								{breakdown.paybackPeriodMonths === Infinity ? 'No Break-Even' : 'Calculated'}
 							</span>
@@ -261,11 +261,11 @@ export default function RelocationCalculator() {
 						
 						<div className="grid grid-cols-2 gap-3">
 							<div className="rounded-xl border border-white/5 bg-slate-900/40 p-3 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
-								<p className="font-mono text-[0.62rem] uppercase tracking-[0.22em] text-[#6B6B6B]">Net Upfront Cost</p>
+								<p className="font-mono text-[0.62rem] uppercase tracking-[0.22em] text-[#5F5B52]">Net Upfront Cost</p>
 								<p className="mt-1 text-lg font-bold text-[#1A1A1A] tracking-tight">{formatCurrency(breakdown.netOutOfPocketRelocationCosts)}</p>
 							</div>
 							<div className="rounded-xl border border-white/5 bg-slate-900/40 p-3 [.light_&]:border-slate-200 [.light_&]:bg-slate-50">
-								<p className="font-mono text-[0.62rem] uppercase tracking-[0.22em] text-[#6B6B6B]">Monthly Net Gain</p>
+								<p className="font-mono text-[0.62rem] uppercase tracking-[0.22em] text-[#5F5B52]">Monthly Net Gain</p>
 								<p className={`mt-1 text-lg font-bold tracking-tight ${breakdown.monthlyNetSalaryDiff > 0 ? '#1A1A1A' : 'text-[#A55252]'}`}>
 									{formatCurrency(breakdown.monthlyNetSalaryDiff)}
 								</p>
@@ -296,7 +296,7 @@ export default function RelocationCalculator() {
 
 				<div className="grid gap-5 md:grid-cols-3">
 					<div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
-						<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#6B6B6B] mb-2">Filing Status</label>
+						<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#5F5B52] mb-2">Filing Status</label>
 						<select
 							value={filingStatus}
 							onChange={(e) => setFilingStatus(e.target.value as any)}
@@ -310,8 +310,8 @@ export default function RelocationCalculator() {
 
 					<div className="rounded-xl border border-gray-200 bg-gray-50 p-4 flex items-center justify-between">
 						<div>
-							<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#6B6B6B]">Military Exemption</label>
-							<p className="text-[11px] text-[#6B6B6B] mt-1">IRC Section 132(g) Rules</p>
+							<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#5F5B52]">Military Exemption</label>
+							<p className="text-[11px] text-[#5F5B52] mt-1">IRC Section 132(g) Rules</p>
 						</div>
 						<input
 							type="checkbox"
@@ -323,8 +323,8 @@ export default function RelocationCalculator() {
 
 					<div className="rounded-xl border border-gray-200 bg-gray-50 p-4 flex items-center justify-between">
 						<div>
-							<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#6B6B6B]">State Exceptions Engine</label>
-							<p className="text-[11px] text-[#6B6B6B] mt-1">
+							<label className="block text-xs font-mono uppercase tracking-[0.2em] text-[#5F5B52]">State Exceptions Engine</label>
+							<p className="text-[11px] text-[#5F5B52] mt-1">
 								{doesStateExcludeQualifiedRelocation(destState) ? `${destState} Excludes moving costs` : 'No state exemptions'}
 							</p>
 						</div>
@@ -356,7 +356,7 @@ export default function RelocationCalculator() {
 										<button
 											type="button"
 											onClick={() => setShowOriginInfo(!showOriginInfo)}
-											className="text-[#6B6B6B] hover:text-blue-400 transition focus:outline-none cursor-pointer"
+											className="text-[#5F5B52] hover:text-blue-400 transition focus:outline-none cursor-pointer"
 											title="Learn more about local tax rate"
 										>
 											<svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -417,7 +417,7 @@ export default function RelocationCalculator() {
 										<button
 											type="button"
 											onClick={() => setShowDestInfo(!showDestInfo)}
-											className="text-[#6B6B6B] hover:text-blue-400 transition focus:outline-none cursor-pointer"
+											className="text-[#5F5B52] hover:text-blue-400 transition focus:outline-none cursor-pointer"
 											title="Learn more about local tax rate"
 										>
 											<svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -639,7 +639,7 @@ export default function RelocationCalculator() {
 										<p className={`font-bold mt-1 text-sm ${points[hoverIdx] >= 0 ? '#1A1A1A' : 'text-[#A55252]'}`}>
 											{formatCurrency(points[hoverIdx])}
 										</p>
-										<p className="text-[10px] text-[#6B6B6B] mt-1 uppercase">
+										<p className="text-[10px] text-[#5F5B52] mt-1 uppercase">
 											{points[hoverIdx] >= 0 ? 'Profit Zone' : 'Debt Valley'}
 										</p>
 									</div>
@@ -651,7 +651,7 @@ export default function RelocationCalculator() {
 						<div className="grid gap-6 md:grid-cols-2">
 							{/* Out-of-Pocket Breakdown */}
 							<div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
-								<h3 className="font-mono text-xs uppercase tracking-[0.24em] text-[#6B6B6B]">Relocation Cost Friction</h3>
+								<h3 className="font-mono text-xs uppercase tracking-[0.24em] text-[#5F5B52]">Relocation Cost Friction</h3>
 								<div className="mt-4 grid gap-3.5">
 									<div className="flex items-center justify-between text-sm">
 										<span className="text-[#5E5E5E]">Total Ledged Costs</span>
@@ -678,7 +678,7 @@ export default function RelocationCalculator() {
 
 							{/* Earnings Bump Breakdown */}
 							<div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm">
-								<h3 className="font-mono text-xs uppercase tracking-[0.24em] text-[#6B6B6B]">Compensation Delta</h3>
+								<h3 className="font-mono text-xs uppercase tracking-[0.24em] text-[#5F5B52]">Compensation Delta</h3>
 								<div className="mt-4 grid gap-3.5">
 									<div className="flex items-center justify-between text-sm">
 										<span className="text-[#5E5E5E]">Origin Base Salary</span>
@@ -728,13 +728,13 @@ export default function RelocationCalculator() {
 							<table className="w-full border-collapse text-left text-sm">
 								<thead>
 									<tr className="border-b border-gray-200/80 [.light_&]:border-slate-200">
-										<th className="pb-3.5 pr-4 font-mono text-[0.68rem] uppercase tracking-wider text-[#6B6B6B] w-[30%]">Item Description</th>
-										<th className="pb-3.5 px-4 font-mono text-[0.68rem] uppercase tracking-wider text-[#6B6B6B] w-[20%]">Category</th>
-										<th className="pb-3.5 px-4 font-mono text-[0.68rem] uppercase tracking-wider text-[#6B6B6B] w-[15%]">Amount</th>
-										<th className="pb-3.5 px-4 text-center font-mono text-[0.68rem] uppercase tracking-wider text-[#6B6B6B] w-[12%]">Reimbursed</th>
-										<th className="pb-3.5 px-4 text-center font-mono text-[0.68rem] uppercase tracking-wider text-[#6B6B6B] w-[12%]">Grossed-Up</th>
-										<th className="pb-3.5 px-4 text-center font-mono text-[0.68rem] uppercase tracking-wider text-[#6B6B6B] w-[12%]">Qualified (Exclusion)</th>
-										<th className="pb-3.5 pl-4 text-right font-mono text-[0.68rem] uppercase tracking-wider text-[#6B6B6B] w-[9%]">Actions</th>
+										<th className="pb-3.5 pr-4 font-mono text-[0.68rem] uppercase tracking-wider text-[#5F5B52] w-[30%]">Item Description</th>
+										<th className="pb-3.5 px-4 font-mono text-[0.68rem] uppercase tracking-wider text-[#5F5B52] w-[20%]">Category</th>
+										<th className="pb-3.5 px-4 font-mono text-[0.68rem] uppercase tracking-wider text-[#5F5B52] w-[15%]">Amount</th>
+										<th className="pb-3.5 px-4 text-center font-mono text-[0.68rem] uppercase tracking-wider text-[#5F5B52] w-[12%]">Reimbursed</th>
+										<th className="pb-3.5 px-4 text-center font-mono text-[0.68rem] uppercase tracking-wider text-[#5F5B52] w-[12%]">Grossed-Up</th>
+										<th className="pb-3.5 px-4 text-center font-mono text-[0.68rem] uppercase tracking-wider text-[#5F5B52] w-[12%]">Qualified (Exclusion)</th>
+										<th className="pb-3.5 pl-4 text-right font-mono text-[0.68rem] uppercase tracking-wider text-[#5F5B52] w-[9%]">Actions</th>
 									</tr>
 								</thead>
 								<tbody className="divide-y divide-slate-900/60 [.light_&]:divide-slate-100">
@@ -812,15 +812,15 @@ export default function RelocationCalculator() {
 						{/* Subtotals bento-grid */}
 						<div className="mt-6 grid gap-4 sm:grid-cols-3">
 							<div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
-								<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#6B6B6B]">Origin Services</p>
+								<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#5F5B52]">Origin Services</p>
 								<p className="mt-1 text-lg font-bold text-[#1A1A1A] font-mono">{formatCurrency(breakdown.totalOriginExpenses)}</p>
 							</div>
 							<div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
-								<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#6B6B6B]">Logistics Transit</p>
+								<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#5F5B52]">Logistics Transit</p>
 								<p className="mt-1 text-lg font-bold text-[#1A1A1A] font-mono">{formatCurrency(breakdown.totalTransitExpenses)}</p>
 							</div>
 							<div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
-								<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#6B6B6B]">Destination Setup</p>
+								<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#5F5B52]">Destination Setup</p>
 								<p className="mt-1 text-lg font-bold text-[#1A1A1A] font-mono">{formatCurrency(breakdown.totalDestinationExpenses)}</p>
 							</div>
 						</div>
@@ -919,7 +919,7 @@ export default function RelocationCalculator() {
 							{/* Calculations Result */}
 							<div className="rounded-2xl border border-gray-200 bg-gray-50 p-6 flex flex-col justify-between">
 								<div>
-									<h4 className="font-mono text-xs uppercase tracking-[0.24em] text-[#6B6B6B]">Lease break breakdown</h4>
+									<h4 className="font-mono text-xs uppercase tracking-[0.24em] text-[#5F5B52]">Lease break breakdown</h4>
 									<div className="mt-5 space-y-4">
 										<div className="flex justify-between text-sm">
 											<span className="text-[#5E5E5E]">Prorated Final Rent</span>
@@ -964,7 +964,7 @@ export default function RelocationCalculator() {
 							<div className="grid gap-6 md:grid-cols-2">
 								{/* Pre-move Taxes */}
 								<div className="space-y-4">
-									<h4 className="font-mono text-xs uppercase tracking-[0.24em] text-[#6B6B6B]">Pre-Move Summary ({originState})</h4>
+									<h4 className="font-mono text-xs uppercase tracking-[0.24em] text-[#5F5B52]">Pre-Move Summary ({originState})</h4>
 									<div className="space-y-3.5 text-sm">
 										<div className="flex justify-between">
 											<span className="text-[#5E5E5E]">Gross Income</span>
@@ -999,7 +999,7 @@ export default function RelocationCalculator() {
 
 								{/* Post-move Taxes */}
 								<div className="space-y-4">
-									<h4 className="font-mono text-xs uppercase tracking-[0.24em] text-[#6B6B6B]">Post-Move Summary ({destState})</h4>
+									<h4 className="font-mono text-xs uppercase tracking-[0.24em] text-[#5F5B52]">Post-Move Summary ({destState})</h4>
 									<div className="space-y-3.5 text-sm">
 										<div className="flex justify-between">
 											<span className="text-[#5E5E5E]">Gross Income (Incl. Reimb.)</span>
@@ -1052,10 +1052,10 @@ export default function RelocationCalculator() {
 							<table className="w-full border-collapse text-left text-sm">
 								<thead>
 									<tr className="bg-white border-b border-gray-200 [.light_&]:bg-slate-50 [.light_&]:border-slate-200">
-										<th className="p-4 font-mono text-[0.68rem] uppercase tracking-[0.2em] text-[#6B6B6B]">Methodology</th>
-										<th className="p-4 font-mono text-[0.68rem] uppercase tracking-[0.2em] text-[#6B6B6B]">Net Relocation Benefit</th>
-										<th className="p-4 font-mono text-[0.68rem] uppercase tracking-[0.2em] text-[#6B6B6B]">Required Tax Assistance</th>
-										<th className="p-4 font-mono text-[0.68rem] uppercase tracking-[0.2em] text-[#6B6B6B]">Total Employer Cost</th>
+										<th className="p-4 font-mono text-[0.68rem] uppercase tracking-[0.2em] text-[#5F5B52]">Methodology</th>
+										<th className="p-4 font-mono text-[0.68rem] uppercase tracking-[0.2em] text-[#5F5B52]">Net Relocation Benefit</th>
+										<th className="p-4 font-mono text-[0.68rem] uppercase tracking-[0.2em] text-[#5F5B52]">Required Tax Assistance</th>
+										<th className="p-4 font-mono text-[0.68rem] uppercase tracking-[0.2em] text-[#5F5B52]">Total Employer Cost</th>
 									</tr>
 								</thead>
 								<tbody className="divide-y divide-slate-900/60 [.light_&]:divide-slate-100">
@@ -1188,7 +1188,7 @@ export default function RelocationCalculator() {
 											onChange={(e) => setClawbackDurationMonths(Math.max(1, Number(e.target.value)))}
 											className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A] disabled:opacity-50"
 										/>
-										{destState === 'CA' && <p className="text-[10px] text-[#6B6B6B] mt-1">Locked at 24 months maximum for CA compliance.</p>}
+										{destState === 'CA' && <p className="text-[10px] text-[#5F5B52] mt-1">Locked at 24 months maximum for CA compliance.</p>}
 									</div>
 									<div>
 										<label className="block text-xs text-[#5E5E5E] mb-1">Repayment Schedule Model</label>
@@ -1201,7 +1201,7 @@ export default function RelocationCalculator() {
 											<option value="linear">Graduated Linear Decay</option>
 											<option value="cliff">Cliff-Repayment Model</option>
 										</select>
-										{destState === 'CA' && <p className="text-[10px] text-[#6B6B6B] mt-1">Cliff model prohibited under CA AB 692.</p>}
+										{destState === 'CA' && <p className="text-[10px] text-[#5F5B52] mt-1">Cliff model prohibited under CA AB 692.</p>}
 									</div>
 									<div>
 										<label className="block text-xs text-[#5E5E5E] mb-1">Interest Rate (%)</label>
@@ -1212,7 +1212,7 @@ export default function RelocationCalculator() {
 											onChange={(e) => setClawbackInterestRate(Math.max(0, Number(e.target.value)))}
 											className="w-full rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-mono text-[#1A1A1A] disabled:opacity-50"
 										/>
-										{destState === 'CA' && <p className="text-[10px] text-[#6B6B6B] mt-1">Interest rate locked at 0.00% for CA compliance.</p>}
+										{destState === 'CA' && <p className="text-[10px] text-[#5F5B52] mt-1">Interest rate locked at 0.00% for CA compliance.</p>}
 									</div>
 									{destState === 'CA' && (
 										<div>
@@ -1233,7 +1233,7 @@ export default function RelocationCalculator() {
 								{/* Repayment Graph & Compliance Checklist */}
 								<div className="rounded-[1.6rem] border border-gray-200/80 bg-white p-5 flex flex-col justify-between [.light_&]:bg-slate-50 [.light_&]:border-slate-200">
 									<div>
-										<h4 className="font-mono text-xs uppercase tracking-[0.24em] text-[#6B6B6B]">Repayment obligation decay</h4>
+										<h4 className="font-mono text-xs uppercase tracking-[0.24em] text-[#5F5B52]">Repayment obligation decay</h4>
 										
 										{/* Simple visual decay bars */}
 										<div className="mt-5 space-y-3">
@@ -1257,7 +1257,7 @@ export default function RelocationCalculator() {
 									</div>
 
 									<div className="mt-6 border-t border-gray-200 pt-5 [.light_&]:border-slate-200">
-										<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#6B6B6B]">AB 692 Compliance Audit</p>
+										<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#5F5B52]">AB 692 Compliance Audit</p>
 										<div className="mt-2.5 space-y-2">
 											<div className="flex items-center gap-2 text-xs">
 												<span className={breakdown.isCaliforniaAB692Compliant ? '#1A1A1A' : 'text-[#A55252]'}>●</span>

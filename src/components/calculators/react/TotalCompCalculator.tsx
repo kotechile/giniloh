@@ -193,7 +193,7 @@ export default function TotalCompCalculator() {
 		<div className="grid gap-8">
 			{/* Sticky Global Controls Panel */}
 			<div className="panel-soft rounded-[1.8rem] border border-cyan-500/15 bg-white/70 p-5 shadow-xl backdrop-blur-md">
-				<p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#4B6478]">Global Trajectory Parameters</p>
+				<p className="font-mono text-[10px] uppercase tracking-[0.28em] text-[#475F73]">Global Trajectory Parameters</p>
 				<div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
 					
 					{/* Tax Model Selection */}
@@ -288,12 +288,12 @@ export default function TotalCompCalculator() {
 				<div className="flex items-center justify-between border-b border-gray-200 pb-4 mb-4">
 					<div>
 						<h3 className="text-base font-bold text-[#1A1A1A] tracking-tight">Spendable Cash & Tax Drag Projections</h3>
-						<p className="text-[10px] text-[#6B6B6B] font-mono mt-0.5 uppercase tracking-wider">
+						<p className="text-[10px] text-[#5F5B52] font-mono mt-0.5 uppercase tracking-wider">
 							Year-by-year side-by-side analysis (Offer A Left, Offer B Right)
 						</p>
 					</div>
 					<div className="flex items-center gap-4 text-[10px] font-mono">
-						<div className="flex items-center gap-1.5 text-[#4B6478] font-semibold">
+						<div className="flex items-center gap-1.5 text-[#475F73] font-semibold">
 							<span className="w-2.5 h-1.5 bg-cyan-400 rounded-full" />
 							Offer A Cash Line
 						</div>
@@ -311,7 +311,7 @@ export default function TotalCompCalculator() {
 						height={dimensions.height}
 						onMouseMove={handleMouseMove}
 						onMouseLeave={handleMouseLeave}
-						className="overflow-visible cursor-crosshair font-mono text-[9px] text-[#6B6B6B]"
+						className="overflow-visible cursor-crosshair font-mono text-[9px] text-[#5F5B52]"
 					>
 						{/* Grid Lines */}
 						{[0, 0.25, 0.5, 0.75, 1].map((p, idx) => {
@@ -533,7 +533,7 @@ export default function TotalCompCalculator() {
 						<div className="flex-1 grid gap-4 sm:grid-cols-2">
 							{/* Offer A Tooltip */}
 							<div className="flex flex-col gap-1 border-b sm:border-b-0 sm:border-r border-gray-200/60 pb-3 sm:pb-0 pr-3 [.light_&]:border-slate-200">
-								<p className="font-semibold text-[#4B6478] text-[11px] truncate uppercase">{offerA.name}</p>
+								<p className="font-semibold text-[#475F73] text-[11px] truncate uppercase">{offerA.name}</p>
 								<div className="flex justify-between mt-1 text-[11px] text-[#5E5E5E]">
 									<span>Base + Bonus Cash:</span>
 									<span className="text-[#1A1A1A] font-semibold">{formatCurrency(hoveredData.offerA.baseCash + hoveredData.offerA.bonusCash)}</span>
@@ -545,7 +545,7 @@ export default function TotalCompCalculator() {
 									</div>
 								)}
 								{hoveredData.offerA.paperLtip > 0 && (
-									<div className="flex justify-between text-[11px] text-[#6B6B6B]">
+									<div className="flex justify-between text-[11px] text-[#5F5B52]">
 										<span>Paper LTIP Wealth (Illiquid):</span>
 										<span className="text-[#5E5E5E] font-semibold">{formatCurrency(hoveredData.offerA.paperLtip)}</span>
 									</div>
@@ -566,7 +566,7 @@ export default function TotalCompCalculator() {
 								)}
 								<div className="flex justify-between border-t border-gray-200/80 mt-1 pt-1 text-[#1A1A1A] font-bold [.light_&]:border-slate-200">
 									<span>Spendable Cash Flow:</span>
-									<span className="#5A7A8F [.light_&]:text-[#4B6478]!">{formatCurrency(hoveredData.offerA.netSpendableCash)}</span>
+									<span className="#5A7A8F [.light_&]:text-[#475F73]!">{formatCurrency(hoveredData.offerA.netSpendableCash)}</span>
 								</div>
 								{hoveredData.offerA.isClawbackRisk && (
 									<div className="mt-2 text-[10px] text-[#96693A] bg-amber-500/10 border border-amber-500/20 rounded p-1.5 [.light_&]:text-amber-800! [.light_&]:bg-amber-50/60 [.light_&]:border-amber-200/60">
@@ -594,7 +594,7 @@ export default function TotalCompCalculator() {
 									</div>
 								)}
 								{hoveredData.offerB.paperLtip > 0 && (
-									<div className="flex justify-between text-[11px] text-[#6B6B6B]">
+									<div className="flex justify-between text-[11px] text-[#5F5B52]">
 										<span>Paper LTIP Wealth (Illiquid):</span>
 										<span className="text-[#5E5E5E] font-semibold">{formatCurrency(hoveredData.offerB.paperLtip)}</span>
 									</div>
@@ -631,7 +631,7 @@ export default function TotalCompCalculator() {
 						</div>
 					</div>
 				) : (
-					<div className="text-[#6B6B6B] text-center font-mono text-[10px] italic mt-4 py-2 bg-white/20 border border-gray-200/40 rounded-xl [.light_&]:bg-slate-100/60 [.light_&]:text-slate-700! [.light_&]:border-slate-200/80">
+					<div className="text-[#5F5B52] text-center font-mono text-[10px] italic mt-4 py-2 bg-white/20 border border-gray-200/40 rounded-xl [.light_&]:bg-slate-100/60 [.light_&]:text-slate-700! [.light_&]:border-slate-200/80">
 						Hover mouse cursor over the chart columns to read exact yearly breakdowns.
 					</div>
 				)}
@@ -657,19 +657,19 @@ export default function TotalCompCalculator() {
 					<div className="flex border-b border-gray-200 mb-4 text-xs font-mono">
 						<button
 							onClick={() => setActiveASection('cash')}
-							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeASection === 'cash' ? 'border-cyan-400 text-[#1A1A1A]' : 'border-transparent text-[#6B6B6B] hover:text-[#5E5E5E]'}`}
+							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeASection === 'cash' ? 'border-cyan-400 text-[#1A1A1A]' : 'border-transparent text-[#5F5B52] hover:text-[#5E5E5E]'}`}
 						>
 							💵 Cash
 						</button>
 						<button
 							onClick={() => setActiveASection('equity')}
-							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeASection === 'equity' ? 'border-cyan-400 text-[#1A1A1A]' : 'border-transparent text-[#6B6B6B] hover:text-[#5E5E5E]'}`}
+							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeASection === 'equity' ? 'border-cyan-400 text-[#1A1A1A]' : 'border-transparent text-[#5F5B52] hover:text-[#5E5E5E]'}`}
 						>
 							📈 LTIP
 						</button>
 						<button
 							onClick={() => setActiveASection('perks')}
-							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeASection === 'perks' ? 'border-cyan-400 text-[#1A1A1A]' : 'border-transparent text-[#6B6B6B] hover:text-[#5E5E5E]'}`}
+							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeASection === 'perks' ? 'border-cyan-400 text-[#1A1A1A]' : 'border-transparent text-[#5F5B52] hover:text-[#5E5E5E]'}`}
 						>
 							🎁 Perks
 						</button>
@@ -891,19 +891,19 @@ export default function TotalCompCalculator() {
 					<div className="flex border-b border-gray-200 mb-4 text-xs font-mono">
 						<button
 							onClick={() => setActiveBSection('cash')}
-							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeBSection === 'cash' ? 'border-purple-400 text-[#1A1A1A]' : 'border-transparent text-[#6B6B6B] hover:text-[#5E5E5E]'}`}
+							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeBSection === 'cash' ? 'border-purple-400 text-[#1A1A1A]' : 'border-transparent text-[#5F5B52] hover:text-[#5E5E5E]'}`}
 						>
 							💵 Cash
 						</button>
 						<button
 							onClick={() => setActiveBSection('equity')}
-							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeBSection === 'equity' ? 'border-purple-400 text-[#1A1A1A]' : 'border-transparent text-[#6B6B6B] hover:text-[#5E5E5E]'}`}
+							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeBSection === 'equity' ? 'border-purple-400 text-[#1A1A1A]' : 'border-transparent text-[#5F5B52] hover:text-[#5E5E5E]'}`}
 						>
 							📈 LTIP
 						</button>
 						<button
 							onClick={() => setActiveBSection('perks')}
-							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeBSection === 'perks' ? 'border-purple-400 text-[#1A1A1A]' : 'border-transparent text-[#6B6B6B] hover:text-[#5E5E5E]'}`}
+							className={`flex-1 py-2 font-semibold text-center border-b-2 transition ${activeBSection === 'perks' ? 'border-purple-400 text-[#1A1A1A]' : 'border-transparent text-[#5F5B52] hover:text-[#5E5E5E]'}`}
 						>
 							🎁 Perks
 						</button>
@@ -1125,24 +1125,24 @@ export default function TotalCompCalculator() {
 					</div>
 					<div className="grid gap-4 grid-cols-2 lg:grid-cols-4">
 						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-cyan-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B]">4-Yr Spendable Cash</p>
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#5F5B52]">4-Yr Spendable Cash</p>
 							<p className="mt-2 text-lg font-bold text-[#1A1A1A]">{formatCurrency(summaryA.total4YearLiquidity)}</p>
 							<p className="text-[10px] text-[#5E5E5E] mt-1">Liquid, post-tax cash</p>
 						</div>
 						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-cyan-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B]">Total Paper Wealth</p>
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#5F5B52]">Total Paper Wealth</p>
 							<p className="mt-2 text-lg font-bold text-[#5E5E5E]">{formatCurrency(summaryA.totalPaperValue)}</p>
-							<p className="text-[10px] text-[#6B6B6B] mt-1">Illiquid LTIP value</p>
+							<p className="text-[10px] text-[#5F5B52] mt-1">Illiquid LTIP value</p>
 						</div>
 						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-rose-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B]">Out-of-Pocket Drag</p>
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#5F5B52]">Out-of-Pocket Drag</p>
 							<p className="mt-2 text-lg font-bold text-[#A55252]">-{formatCurrency(summaryA.totalOutofPocketDrag)}</p>
-							<p className="text-[10px] text-[#6B6B6B] mt-1">Purchase cost + health</p>
+							<p className="text-[10px] text-[#5F5B52] mt-1">Purchase cost + health</p>
 						</div>
 						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-amber-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B]">Exit Readiness No.</p>
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#5F5B52]">Exit Readiness No.</p>
 							<p className="mt-2 text-lg font-bold text-[#96693A]">{formatCurrency(summaryA.exitReadinessNumber)}</p>
-							<div className="text-[10px] text-[#6B6B6B] mt-1">
+							<div className="text-[10px] text-[#5F5B52] mt-1">
 								Option purchase cost
 								<p className="text-[9px] text-amber-500/90 mt-0.5" title="Alternative Minimum Tax (AMT) liabilities are not included in this figure">⚠️ Excludes AMT</p>
 							</div>
@@ -1162,24 +1162,24 @@ export default function TotalCompCalculator() {
 					</div>
 					<div className="grid gap-4 grid-cols-2 lg:grid-cols-4">
 						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-purple-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B]">4-Yr Spendable Cash</p>
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#5F5B52]">4-Yr Spendable Cash</p>
 							<p className="mt-2 text-lg font-bold text-[#1A1A1A]">{formatCurrency(summaryB.total4YearLiquidity)}</p>
 							<p className="text-[10px] text-[#5E5E5E] mt-1">Liquid, post-tax cash</p>
 						</div>
 						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-purple-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B]">Total Paper Wealth</p>
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#5F5B52]">Total Paper Wealth</p>
 							<p className="mt-2 text-lg font-bold text-[#5E5E5E]">{formatCurrency(summaryB.totalPaperValue)}</p>
-							<p className="text-[10px] text-[#6B6B6B] mt-1">Illiquid LTIP value</p>
+							<p className="text-[10px] text-[#5F5B52] mt-1">Illiquid LTIP value</p>
 						</div>
 						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-rose-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B]">Out-of-Pocket Drag</p>
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#5F5B52]">Out-of-Pocket Drag</p>
 							<p className="mt-2 text-lg font-bold text-[#A55252]">-{formatCurrency(summaryB.totalOutofPocketDrag)}</p>
-							<p className="text-[10px] text-[#6B6B6B] mt-1">Purchase cost + health</p>
+							<p className="text-[10px] text-[#5F5B52] mt-1">Purchase cost + health</p>
 						</div>
 						<div className="rounded-2xl border border-white/5 bg-white p-4 hover:border-purple-500/20 transition">
-							<p className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B]">Exit Readiness No.</p>
+							<p className="font-mono text-[9px] uppercase tracking-wider text-[#5F5B52]">Exit Readiness No.</p>
 							<p className="mt-2 text-lg font-bold text-[#96693A]">{formatCurrency(summaryB.exitReadinessNumber)}</p>
-							<div className="text-[10px] text-[#6B6B6B] mt-1">
+							<div className="text-[10px] text-[#5F5B52] mt-1">
 								Option purchase cost
 								<p className="text-[9px] text-amber-500/90 mt-0.5" title="Alternative Minimum Tax (AMT) liabilities are not included in this figure">⚠️ Excludes AMT</p>
 							</div>

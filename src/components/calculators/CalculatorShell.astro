@@ -20,7 +20,7 @@ const embedCode = `<div class="giniloh-calculator-embed" data-calculator="${slug
 	{compact ? (
 		<div class="flex flex-col md:flex-row md:items-center justify-between gap-2.5 pb-2.5 border-b border-gray-200 mb-2.5">
 			<div class="flex items-center gap-2.5 flex-wrap">
-				<span class="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#6B6B6B]">{eyebrow}</span>
+				<span class="font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">{eyebrow}</span>
 				<span class="text-gray-300">/</span>
 				<h1 class="text-lg sm:text-xl font-black tracking-tight text-[#1A1A1A]">{title}</h1>
 				<div class="flex items-center gap-1.5 rounded-full border border-[#E5E5E5] bg-white px-2 py-0.5 text-[10px] font-mono text-[#5E5E5E]">
@@ -30,23 +30,23 @@ const embedCode = `<div class="giniloh-calculator-embed" data-calculator="${slug
 			</div>
 			<div class="flex items-center gap-3 text-xs text-[#5E5E5E]">
 				<span class="hidden max-w-md truncate text-[11px] text-[#5E5E5E] 2xl:inline" title={description}>{description}</span>
-				<span class="hidden sm:inline font-mono text-[10px] text-[#6B6B6B] uppercase tracking-wider">
-					By <a href="/author/gini-loh/" class="text-[#4B6478] hover:text-[#1A1A1A] hover:underline font-bold">Gini Loh</a>
+				<span class="hidden sm:inline font-mono text-[10px] text-[#5F5B52] uppercase tracking-wider">
+					By <a href="/author/gini-loh/" class="text-[#475F73] hover:text-[#1A1A1A] hover:underline font-bold">Gini Loh</a>
 				</span>
 			</div>
 		</div>
 	) : (
 		<div class="max-w-4xl">
-			<p class="section-eyebrow font-bold text-xs uppercase tracking-[0.25em] text-[#6B6B6B]">{eyebrow}</p>
+			<p class="section-eyebrow font-bold text-xs uppercase tracking-[0.25em] text-[#5F5B52]">{eyebrow}</p>
 			<h1 class="mt-4 text-5xl sm:text-6xl font-extrabold tracking-tight text-[#1A1A1A] leading-tight">{title}</h1>
 			<p class="mt-6 text-lg sm:text-xl leading-relaxed text-[#5E5E5E] font-normal">{description}</p>
-			<div class="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-mono tracking-wider text-[#6B6B6B] uppercase">
+			<div class="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-mono tracking-wider text-[#5F5B52] uppercase">
 				<div class="flex items-center gap-2 rounded-full border border-[#E5E5E5] bg-white px-3 py-1 text-[#5E5E5E] shadow-none">
 					<span class="inline-block h-2 w-2 rounded-full bg-[#5A7A8F]"></span>
 					<span class="text-[#1A1A1A] font-bold whitespace-nowrap">{trustBadge ?? 'E-E-A-T Verified'}</span>
 				</div>
 				<span aria-hidden="true" class="hidden sm:inline">•</span>
-				<span>Developed &amp; audited by <a href="/author/gini-loh/" class="text-[#4B6478] hover:text-[#1A1A1A] transition hover:underline font-bold">Gini Loh</a></span>
+				<span>Developed &amp; audited by <a href="/author/gini-loh/" class="text-[#475F73] hover:text-[#1A1A1A] transition hover:underline font-bold">Gini Loh</a></span>
 			</div>
 		</div>
 	)}

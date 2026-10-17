@@ -38,12 +38,12 @@ function formatDate(dateStr: string | null) {
 }
 ---
 
-<article class="group relative transition-colors duration-150 hover:bg-[#FAFAFA]" data-topics={topics}>
+<article class="group relative transition-colors duration-150 hover:bg-[#F4F1E8]" data-topics={topics}>
 	<a
 		href={href}
 		class="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 p-4 sm:p-5 lg:p-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#1A1A1A]"
 	>
-		<div class="relative w-full sm:w-44 md:w-52 h-44 sm:h-28 md:h-32 shrink-0 overflow-hidden rounded-xl border border-[#E5E5E5] bg-[#FAFAFA]">
+		<div class="relative w-full sm:w-44 md:w-52 h-44 sm:h-28 md:h-32 shrink-0 overflow-hidden rounded-xl border border-[#E5E5E5] bg-[#F4F1E8]">
 			{
 				post.featuredImage ? (
 					<img
@@ -58,8 +58,8 @@ function formatDate(dateStr: string | null) {
 						class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
 					/>
 				) : (
-					<div class="flex h-full w-full items-center justify-center bg-[#FAFAFA] text-[#6B6B6B]">
-						<svg class="h-8 w-8 text-[#4B6478]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+					<div class="flex h-full w-full items-center justify-center bg-[#F4F1E8] text-[#5F5B52]">
+						<svg class="h-8 w-8 text-[#475F73]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
 						</svg>
 					</div>
@@ -68,8 +68,8 @@ function formatDate(dateStr: string | null) {
 		</div>
 
 		<div class="flex flex-1 min-w-0 flex-col justify-center">
-			<div class="flex items-center flex-wrap gap-2.5 font-mono text-xs uppercase tracking-wider text-[#6B6B6B]">
-				{post.categoryLabel && <span class="font-bold text-[#4B6478]">{post.categoryLabel}</span>}
+			<div class="flex items-center flex-wrap gap-2.5 font-mono text-xs uppercase tracking-wider text-[#5F5B52]">
+				{post.categoryLabel && <span class="font-bold text-[#475F73]">{post.categoryLabel}</span>}
 				{post.categoryLabel && <span>•</span>}
 				<time datetime={post.date || ''}>{formatDate(post.date)}</time>
 				{minutes && (
@@ -80,24 +80,24 @@ function formatDate(dateStr: string | null) {
 				)}
 			</div>
 
-			<h3 class="mt-2 text-lg sm:text-xl font-bold tracking-tight text-[#1A1A1A] group-hover:text-[#4B6478] transition-colors leading-snug">
+			<h3 class="mt-2 text-lg sm:text-xl font-bold tracking-tight text-[#1A1A1A] group-hover:text-[#475F73] transition-colors leading-snug">
 				{post.title}
 			</h3>
 
 			{post.excerpt && <p class="mt-2 text-sm leading-relaxed text-[#5E5E5E] line-clamp-2">{post.excerpt}</p>}
 
 			{stat && (
-				<p class="mt-3 inline-flex flex-wrap items-baseline gap-x-2 rounded-lg border border-[#E5E5E5] bg-[#FAFAFA] px-3 py-1.5" data-key-stat={stat.value}>
+				<p class="mt-3 inline-flex flex-wrap items-baseline gap-x-2 rounded-lg border border-[#E5E5E5] bg-[#F4F1E8] px-3 py-1.5" data-key-stat={stat.value}>
 					<span class="font-mono text-base font-bold text-[#1A1A1A]">{stat.value}</span>
-					<span class="font-mono text-[0.7rem] uppercase tracking-wider text-[#6B6B6B]">{stat.label}</span>
+					<span class="font-mono text-[0.7rem] uppercase tracking-wider text-[#5F5B52]">{stat.label}</span>
 				</p>
 			)}
 		</div>
 
-		<div class="hidden lg:flex items-center shrink-0 pr-2 text-[#6B6B6B] group-hover:text-[#1A1A1A] transition-colors">
+		<div class="hidden lg:flex items-center shrink-0 pr-2 text-[#5F5B52] group-hover:text-[#1A1A1A] transition-colors">
 			<span class="inline-flex items-center gap-1.5 text-xs font-mono font-bold uppercase tracking-wider group-hover:translate-x-1 transition-transform">
 				Read
-				<svg class="w-4 h-4 text-[#4B6478] group-hover:text-[#1A1A1A]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+				<svg class="w-4 h-4 text-[#475F73] group-hover:text-[#1A1A1A]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 					<path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
 				</svg>
 			</span>

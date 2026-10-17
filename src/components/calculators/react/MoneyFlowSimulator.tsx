@@ -710,7 +710,7 @@ export default function MoneyFlowSimulator() {
 
 						{state.checklistProgress < EMOTIONAL_QUESTIONS.length ? (
 							<div className="bg-white p-6 rounded-2xl border border-gray-200 flex flex-col gap-4">
-								<div className="flex justify-between text-xs font-mono text-[#6B6B6B]">
+								<div className="flex justify-between text-xs font-mono text-[#5F5B52]">
 									<span>EXERCISE {state.checklistProgress + 1} OF {EMOTIONAL_QUESTIONS.length}</span>
 									<span>{Math.round(((state.checklistProgress) / EMOTIONAL_QUESTIONS.length) * 100)}%</span>
 								</div>
@@ -751,7 +751,7 @@ export default function MoneyFlowSimulator() {
 							'px-4 py-1.5 rounded-lg text-xs font-semibold tracking-tight transition duration-200 cursor-pointer',
 							state.mode === 'personal'
 								? 'bg-gray-200 text-[#1A1A1A]'
-								: 'bg-transparent text-[#6B6B6B] hover:text-slate-800'
+								: 'bg-transparent text-[#5F5B52] hover:text-slate-800'
 						].join(' ')}
 					>
 						👤 Personal Wealth Orchestrator
@@ -762,13 +762,13 @@ export default function MoneyFlowSimulator() {
 							'px-4 py-1.5 rounded-lg text-xs font-semibold tracking-tight transition duration-200 cursor-pointer',
 							state.mode === 'enterprise'
 								? 'bg-gray-200 text-[#1A1A1A]'
-								: 'bg-transparent text-[#6B6B6B] hover:text-slate-800'
+								: 'bg-transparent text-[#5F5B52] hover:text-slate-800'
 						].join(' ')}
 					>
 						🏢 Enterprise CFO Simulation Room
 					</button>
 				</div>
-				<span className="text-[10px] font-mono text-[#6B6B6B] uppercase tracking-widest px-3">
+				<span className="text-[10px] font-mono text-[#5F5B52] uppercase tracking-widest px-3">
 					Active Engine Core: T+1 Event loops
 				</span>
 			</div>
@@ -777,7 +777,7 @@ export default function MoneyFlowSimulator() {
 			<div className="w-full bg-white py-6">
 				<div className="flex flex-wrap items-center justify-between gap-6 pb-6 border-b border-[#E5E5E5]">
 					<div>
-						<p className="font-mono text-xs uppercase tracking-[0.28em] text-[#4B6478]">
+						<p className="font-mono text-xs uppercase tracking-[0.28em] text-[#475F73]">
 							{isEnterprise ? 'SPV Waterfall Cash Simulator' : 'High-Fidelity Backtesting & AI Engine'}
 						</p>
 						<h2 className="mt-2 text-2xl font-black tracking-tight text-[#1A1A1A]">
@@ -788,25 +788,25 @@ export default function MoneyFlowSimulator() {
 					{/* Status Stats - Naked Data */}
 					<div className="flex flex-wrap items-center gap-6 text-left">
 						<div className="flex flex-col">
-							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#6B6B6B]">Macro Feed</span>
+							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#5F5B52]">Macro Feed</span>
 							<span className="text-2xl font-black text-[#1A1A1A] mt-1">Index {currentSAndP.toFixed(0)}</span>
 						</div>
 						<div className="h-8 w-px bg-[#E5E5E5]"></div>
 						<div className="flex flex-col">
-							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#6B6B6B]">Inflation</span>
+							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#5F5B52]">Inflation</span>
 							<span className="text-2xl font-black text-[#A55252] mt-1">{currentInflation.toFixed(1)}%</span>
 						</div>
 						<div className="h-8 w-px bg-[#E5E5E5]"></div>
 						<div className="flex flex-col">
-							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#6B6B6B]">Day Count</span>
+							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#5F5B52]">Day Count</span>
 							<span className="text-2xl font-black text-[#1A1A1A] mt-1">{state.day} days</span>
 						</div>
 						<div className="h-8 w-px bg-[#E5E5E5]"></div>
 						<div className="flex flex-col">
-							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#6B6B6B]">
+							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#5F5B52]">
 								{isEnterprise ? 'Treasury net' : 'Wealth Projection'}
 							</span>
-							<span className="text-2xl font-black text-[#4B6478] mt-1">
+							<span className="text-2xl font-black text-[#475F73] mt-1">
 								{formatCurrency(state.totalWealthAccumulated)}
 							</span>
 						</div>
@@ -927,18 +927,18 @@ export default function MoneyFlowSimulator() {
 			{isEnterprise && liquidityRows.length > 0 && (
 				<div className="rounded-[1.8rem] border border-gray-200 bg-white/75 p-6 shadow-xl backdrop-blur-sm animate-[fadeIn_0.3s_ease-out] [.light_&]:bg-slate-50 [.light_&]:border-slate-200 [.light_&]:shadow-lg">
 					<h3 className="text-lg font-bold text-[#1A1A1A] mb-2 [.light_&]:text-slate-900">Liquidity Projections Data Grid</h3>
-					<p className="text-xs text-[#5E5E5E] mb-4 leading-normal [.light_&]:text-[#6B6B6B]">
+					<p className="text-xs text-[#5E5E5E] mb-4 leading-normal [.light_&]:text-[#5F5B52]">
 						Effortless top-down projection calculated bottom-up by running simulated clock steps forwards in real time.
 					</p>
 					
 					<div className="overflow-x-auto">
 						<table className="w-full text-left font-mono text-xs border-collapse">
 							<thead>
-								<tr className="border-b border-gray-200 text-[#6B6B6B] [.light_&]:border-slate-200 [.light_&]:text-[#6B6B6B]">
+								<tr className="border-b border-gray-200 text-[#5F5B52] [.light_&]:border-slate-200 [.light_&]:text-[#5F5B52]">
 									<th className="py-2.5 px-3">Treasury Account Node</th>
 									<th className="py-2.5 px-3">Category</th>
 									<th className="py-2.5 px-3 text-right">Current Ledger</th>
-									<th className="py-2.5 px-3 text-right text-[#4B6478] [.light_&]:text-[#4B6478]">Month-End Forecast (30d)</th>
+									<th className="py-2.5 px-3 text-right text-[#475F73] [.light_&]:text-[#475F73]">Month-End Forecast (30d)</th>
 									<th className="py-2.5 px-3 text-right #1A1A1A [.light_&]:text-emerald-700">Year-End Forecast (365d)</th>
 								</tr>
 							</thead>
@@ -954,11 +954,11 @@ export default function MoneyFlowSimulator() {
 											].join(' ')}
 										>
 											<td className="py-2.5 px-3">{row.name}</td>
-											<td className="py-2.5 px-3 uppercase text-[10px] tracking-wider text-[#6B6B6B]">
+											<td className="py-2.5 px-3 uppercase text-[10px] tracking-wider text-[#5F5B52]">
 												{row.type}
 											</td>
 											<td className="py-2.5 px-3 text-right">{formatCurrency(row.cur)}</td>
-											<td className="py-2.5 px-3 text-right text-[#4B6478]">{formatCurrency(row.month)}</td>
+											<td className="py-2.5 px-3 text-right text-[#475F73]">{formatCurrency(row.month)}</td>
 											<td className="py-2.5 px-3 text-right #1A1A1A">{formatCurrency(row.year)}</td>
 										</tr>
 									);
@@ -981,14 +981,14 @@ export default function MoneyFlowSimulator() {
 							<div key={scKey} className={["p-5 rounded-2xl border flex flex-col justify-between gap-4 [.light_&]:border-slate-200 [.light_&]:bg-slate-50", colorClass].join(' ')}>
 								<div>
 									<div className="flex items-center justify-between">
-										<span className="text-xs font-mono uppercase font-bold text-[#5E5E5E] [.light_&]:text-[#6B6B6B]">{scKey}</span>
-										<span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-[#5E5E5E] [.light_&]:bg-slate-200 [.light_&]:text-[#6B6B6B]">
+										<span className="text-xs font-mono uppercase font-bold text-[#5E5E5E] [.light_&]:text-[#5F5B52]">{scKey}</span>
+										<span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-900 text-[#5E5E5E] [.light_&]:bg-slate-200 [.light_&]:text-[#5F5B52]">
 											{scState.day}d Simulated
 										</span>
 									</div>
 									<h4 className="text-sm font-bold text-[#1A1A1A] mt-2 leading-tight [.light_&]:text-slate-900">{label}</h4>
 									
-									<div className="mt-4 space-y-2 font-mono text-[11px] text-[#5E5E5E] [.light_&]:text-[#6B6B6B]">
+									<div className="mt-4 space-y-2 font-mono text-[11px] text-[#5E5E5E] [.light_&]:text-[#5F5B52]">
 										<div className="flex justify-between">
 											<span>Total Net Assets:</span>
 											<span className="font-bold text-[#1A1A1A] [.light_&]:text-slate-900">{formatCurrency(scState.totalWealthAccumulated)}</span>
@@ -1022,7 +1022,7 @@ export default function MoneyFlowSimulator() {
 				<div className="flex flex-col h-[380px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm font-sans">
 					<div className="flex items-center justify-between pb-3 border-b border-slate-100">
 						<h3 className="text-sm font-semibold text-slate-900 tracking-tight">AI Assistant</h3>
-						<span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-cyan-50 text-[#4B6478] border border-cyan-200">
+						<span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-cyan-50 text-[#475F73] border border-cyan-200">
 							LLM Powered
 						</span>
 					</div>

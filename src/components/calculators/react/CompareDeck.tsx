@@ -99,14 +99,14 @@ export default function CompareDeck({ items, onRemove, onClear }: Props) {
 								>
 									<button
 										onClick={() => onRemove(item.code)}
-										className="absolute top-4 right-4 text-[#6B6B6B] hover:text-[#A55252] text-lg cursor-pointer"
+										className="absolute top-4 right-4 text-[#5F5B52] hover:text-[#A55252] text-lg cursor-pointer"
 									>
 										×
 									</button>
 
 									<div>
 										<h4 className="text-lg font-bold text-[#1A1A1A] line-clamp-1 pr-6">{item.title}</h4>
-										<p className="mt-1 text-xs font-mono text-[#6B6B6B]">{item.code}</p>
+										<p className="mt-1 text-xs font-mono text-[#5F5B52]">{item.code}</p>
 
 										<div className="mt-6 space-y-4">
 											<div>
@@ -125,7 +125,7 @@ export default function CompareDeck({ items, onRemove, onClear }: Props) {
 
 											<div>
 												<p className="text-[10px] font-mono uppercase tracking-wider text-[#5E5E5E]">Employment Level</p>
-												<span className={`inline-block text-xs font-bold rounded-full mt-1.5 px-2.5 py-0.5 ${item.employment_band === 'High' || item.employment_band === 'Very High' ? 'bg-cyan-500/10 text-[#4B6478]' : 'bg-gray-200 text-[#5E5E5E]'}`}>
+												<span className={`inline-block text-xs font-bold rounded-full mt-1.5 px-2.5 py-0.5 ${item.employment_band === 'High' || item.employment_band === 'Very High' ? 'bg-cyan-500/10 text-[#475F73]' : 'bg-gray-200 text-[#5E5E5E]'}`}>
 													{item.employment_band}
 												</span>
 											</div>

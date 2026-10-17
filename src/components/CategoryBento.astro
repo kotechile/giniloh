@@ -11,7 +11,7 @@ const { categories, postsByCategory = {} } = Astro.props;
 const accentPresets = [
 	{
 		icon: '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />',
-		color: 'text-[#4B6478]',
+		color: 'text-[#475F73]',
 		bg: 'bg-[#5A7A8F]/10'
 	},
 	{
@@ -74,13 +74,13 @@ function truncate(value: string, maxLength = 170) {
 							<div class={`p-3 rounded-xl ${preset.bg} ${preset.color}`}>
 								<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" set:html={preset.icon} />
 							</div>
-							<p class="font-mono text-[0.65rem] uppercase tracking-widest text-[#6B6B6B]">
+							<p class="font-mono text-[0.65rem] uppercase tracking-widest text-[#5F5B52]">
 								POSTS.{postCount}
 							</p>
 						</div>
 						
 						<div class="relative z-10 mt-8">
-							<h3 class="text-xl font-bold tracking-tight text-[#1A1A1A] group-hover:text-[#4B6478] transition-colors">
+							<h3 class="text-xl font-bold tracking-tight text-[#1A1A1A] group-hover:text-[#475F73] transition-colors">
 								{category.name}
 							</h3>
 							<p class="mt-2 text-sm text-[#5E5E5E] font-mono">
@@ -88,7 +88,7 @@ function truncate(value: string, maxLength = 170) {
 							</p>
 						</div>
 						
-						<div class="relative z-10 mt-6 flex items-center gap-2 text-xs font-mono text-[#6B6B6B]">
+						<div class="relative z-10 mt-6 flex items-center gap-2 text-xs font-mono text-[#5F5B52]">
 							<span class="inline-flex h-2 w-2 rounded-full bg-[#5A7A8F]"></span>
 							{postCount} Related Posts
 						</div>
@@ -101,16 +101,16 @@ function truncate(value: string, maxLength = 170) {
 			class="group relative flex min-h-48 flex-col justify-between overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 transition duration-300 hover:-translate-y-1 hover:border-[#1A1A1A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A1A1A]"
 		>
 			<div class="relative z-10 flex items-start justify-between">
-				<div class="rounded-xl bg-gray-50 border border-gray-200 p-3 text-[#4B6478]">
+				<div class="rounded-xl bg-gray-50 border border-gray-200 p-3 text-[#475F73]">
 					<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16M7 4v6m10-6v6M6 14h4v4H6v-4Zm8 0h4v4h-4v-4Z" />
 					</svg>
 				</div>
-				<p class="font-mono text-[0.65rem] uppercase tracking-widest text-[#6B6B6B] font-bold">CALCULATORS</p>
+				<p class="font-mono text-[0.65rem] uppercase tracking-widest text-[#5F5B52] font-bold">CALCULATORS</p>
 			</div>
 
 			<div class="relative z-10 mt-8">
-				<h3 class="text-xl font-bold tracking-tight text-[#1A1A1A] transition-colors group-hover:text-[#4B6478]">
+				<h3 class="text-xl font-bold tracking-tight text-[#1A1A1A] transition-colors group-hover:text-[#475F73]">
 					Calculator Hub
 				</h3>
 				<p class="mt-2 text-sm text-[#5E5E5E] font-mono">
@@ -118,7 +118,7 @@ function truncate(value: string, maxLength = 170) {
 				</p>
 			</div>
 
-			<div class="relative z-10 mt-6 flex items-center gap-2 text-xs font-mono text-[#6B6B6B]">
+			<div class="relative z-10 mt-6 flex items-center gap-2 text-xs font-mono text-[#5F5B52]">
 				<span class="inline-flex h-2 w-2 rounded-full bg-[#5A7A8F]"></span>
 				Open calculators
 			</div>
@@ -145,7 +145,7 @@ function truncate(value: string, maxLength = 170) {
 									{category.name}
 								</h3>
 							</div>
-							<p class="font-mono text-xs uppercase tracking-widest text-[#6B6B6B]">
+							<p class="font-mono text-xs uppercase tracking-widest text-[#5F5B52]">
 								{posts.length} article{posts.length === 1 ? '' : 's'}
 							</p>
 						</div>
@@ -168,11 +168,11 @@ function truncate(value: string, maxLength = 170) {
 											</div>
 										) : null}
 										<div class="p-5">
-											<div class="flex items-center justify-between gap-3 font-mono text-[0.65rem] uppercase tracking-widest text-[#6B6B6B]">
-												<span class="text-[#4B6478] font-bold">{post.categoryLabel ?? category.name}</span>
+											<div class="flex items-center justify-between gap-3 font-mono text-[0.65rem] uppercase tracking-widest text-[#5F5B52]">
+												<span class="text-[#475F73] font-bold">{post.categoryLabel ?? category.name}</span>
 												<span>{post.date ? new Date(post.date).toLocaleDateString() : 'Live'}</span>
 											</div>
-											<h4 class="mt-3 text-lg font-bold leading-tight text-[#1A1A1A] transition group-hover:text-[#4B6478]">
+											<h4 class="mt-3 text-lg font-bold leading-tight text-[#1A1A1A] transition group-hover:text-[#475F73]">
 												{post.title}
 											</h4>
 											<p class="mt-3 text-sm leading-relaxed text-[#5E5E5E] font-mono">

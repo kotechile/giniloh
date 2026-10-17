@@ -46,7 +46,7 @@ export default function LeaseBreakCalculator() {
 				{/* Step 1: Core Lease Details */}
 				<div className="rounded-[1.5rem] border border-gray-200/80 bg-white p-6 shadow-sm">
 					<div className="flex items-center gap-2 mb-4">
-						<span className="flex h-6 w-6 items-center justify-center rounded-full bg-cyan-950 [.light_&]:bg-cyan-100 text-xs font-bold text-[#4B6478] [.light_&]:text-[#4B6478]">1</span>
+						<span className="flex h-6 w-6 items-center justify-center rounded-full bg-cyan-950 [.light_&]:bg-cyan-100 text-xs font-bold text-[#475F73] [.light_&]:text-[#475F73]">1</span>
 						<h3 className="text-lg font-bold text-[#1A1A1A]">Base Rent Details</h3>
 					</div>
 					<div className="grid gap-5 md:grid-cols-2">
@@ -72,7 +72,7 @@ export default function LeaseBreakCalculator() {
 						/>
 					</div>
 					<div className="mt-4 flex items-center justify-between rounded-[1rem] bg-white p-4 border border-gray-200/80">
-						<span className="text-sm font-medium text-[#6B6B6B]">Remaining Lease Value:</span>
+						<span className="text-sm font-medium text-[#5F5B52]">Remaining Lease Value:</span>
 						<span className="text-base font-bold text-[#1A1A1A]">{formatCurrency(remainingLeaseValue)}</span>
 					</div>
 				</div>
@@ -80,7 +80,7 @@ export default function LeaseBreakCalculator() {
 				{/* Step 2: Penalty Structure */}
 				<div className="rounded-[1.5rem] border border-gray-200/80 bg-white p-6 shadow-sm">
 					<div className="flex items-center gap-2 mb-4">
-						<span className="flex h-6 w-6 items-center justify-center rounded-full bg-cyan-950 [.light_&]:bg-cyan-100 text-xs font-bold text-[#4B6478] [.light_&]:text-[#4B6478]">2</span>
+						<span className="flex h-6 w-6 items-center justify-center rounded-full bg-cyan-950 [.light_&]:bg-cyan-100 text-xs font-bold text-[#475F73] [.light_&]:text-[#475F73]">2</span>
 						<h3 className="text-lg font-bold text-[#1A1A1A]">Lease Break Penalty</h3>
 					</div>
 					<div className="grid gap-5">
@@ -149,7 +149,7 @@ export default function LeaseBreakCalculator() {
 				{/* Step 3: Offsets & Adjustments */}
 				<div className="rounded-[1.5rem] border border-gray-200/80 bg-white p-6 shadow-sm">
 					<div className="flex items-center gap-2 mb-4">
-						<span className="flex h-6 w-6 items-center justify-center rounded-full bg-cyan-950 [.light_&]:bg-cyan-100 text-xs font-bold text-[#4B6478] [.light_&]:text-[#4B6478]">3</span>
+						<span className="flex h-6 w-6 items-center justify-center rounded-full bg-cyan-950 [.light_&]:bg-cyan-100 text-xs font-bold text-[#475F73] [.light_&]:text-[#475F73]">3</span>
 						<h3 className="text-lg font-bold text-[#1A1A1A]">Offsets & Repairs</h3>
 					</div>
 					<div className="grid gap-5 md:grid-cols-2">
@@ -178,7 +178,7 @@ export default function LeaseBreakCalculator() {
 			{/* Right Column: Real-time Exposure Summary */}
 			<div className="lg:sticky lg:top-24">
 				<div className="rounded-[1.8rem] border border-cyan-500/20 bg-[linear-gradient(180deg,rgba(14,165,233,0.12),rgba(2,6,23,0.82))] p-6 shadow-lg">
-					<p className="font-mono text-xs uppercase tracking-[0.24em] text-[#4B6478] dark:text-[#4B6478] font-semibold">
+					<p className="font-mono text-xs uppercase tracking-[0.24em] text-[#475F73] dark:text-[#475F73] font-semibold">
 						Estimated Exposure
 					</p>
 					
@@ -186,7 +186,7 @@ export default function LeaseBreakCalculator() {
 						<h3 className="text-5xl font-black tracking-tight text-[#1A1A1A]">
 							{formatCurrency(breakdown.netPenalty)}
 						</h3>
-						<p className="mt-2 text-sm text-[#6B6B6B] dark:text-[#5E5E5E]">
+						<p className="mt-2 text-sm text-[#5F5B52] dark:text-[#5E5E5E]">
 							Net amount owed after applying deposit offsets and additional costs.
 						</p>
 					</div>
@@ -196,13 +196,13 @@ export default function LeaseBreakCalculator() {
 					{/* Math Breakdown */}
 					<div className="grid gap-3.5">
 						<div className="flex justify-between items-center text-sm">
-							<span className="text-[#6B6B6B] dark:text-[#5E5E5E]">Base Penalty Fee</span>
+							<span className="text-[#5F5B52] dark:text-[#5E5E5E]">Base Penalty Fee</span>
 							<span className="font-bold text-[#1A1A1A]">
 								{formatCurrency(breakdown.basePenalty)}
 							</span>
 						</div>
 						<div className="flex justify-between items-center text-sm">
-							<span className="text-[#6B6B6B] dark:text-[#5E5E5E]">Expected Cleaning & Repairs</span>
+							<span className="text-[#5F5B52] dark:text-[#5E5E5E]">Expected Cleaning & Repairs</span>
 							<span className="font-bold text-[#1A1A1A]">
 								+{formatCurrency(breakdown.additionalCosts)}
 							</span>
@@ -216,7 +216,7 @@ export default function LeaseBreakCalculator() {
 						
 						<div className="mt-2 pt-3.5 border-t border-dashed border-slate-200 dark:border-gray-200 flex justify-between items-center">
 							<span className="text-base font-bold text-[#1A1A1A]">Net Estimated Penalty</span>
-							<span className="text-xl font-extrabold text-[#4B6478] dark:text-[#4B6478]">
+							<span className="text-xl font-extrabold text-[#475F73] dark:text-[#475F73]">
 								{formatCurrency(breakdown.netPenalty)}
 							</span>
 						</div>
@@ -225,7 +225,7 @@ export default function LeaseBreakCalculator() {
 					{/* Deposit Offset Coverage Progress */}
 					<div className="mt-6 p-4 rounded-[1.2rem] bg-white border border-gray-200/80">
 						<div className="flex items-center justify-between gap-3 mb-2">
-							<p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-[#6B6B6B]">
+							<p className="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-[#5F5B52]">
 								Deposit Coverage
 							</p>
 							<p className="text-sm font-bold text-emerald-600 dark:#1A1A1A">

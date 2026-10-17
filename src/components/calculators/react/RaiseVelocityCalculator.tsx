@@ -348,7 +348,7 @@ export default function RaiseVelocityCalculator() {
 			{/* KPI Summary Section */}
 			<div className="grid gap-4 sm:grid-cols-3">
 				<div className="rounded-2xl border border-cyan-500/25 bg-white p-5 backdrop-blur-md shadow-lg">
-					<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#4B6478]">
+					<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#475F73]">
 						Year 10 Raise Delta Portfolio
 					</p>
 					<h3 className="mt-2 text-3xl font-bold tracking-tight text-[#1A1A1A] font-sans">
@@ -360,7 +360,7 @@ export default function RaiseVelocityCalculator() {
 				</div>
 
 				<div className="rounded-2xl border border-gray-200/80 bg-white p-5 backdrop-blur-md shadow-lg">
-					<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#6B6B6B]">
+					<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#5F5B52]">
 						Year 10 Salary Comparison
 					</p>
 					<h3 className="mt-2 text-2xl font-bold tracking-tight text-[#1A1A1A]">
@@ -376,7 +376,7 @@ export default function RaiseVelocityCalculator() {
 				</div>
 
 				<div className="rounded-2xl border border-gray-200/80 bg-white p-5 backdrop-blur-md shadow-lg">
-					<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#6B6B6B]">
+					<p className="font-mono text-[0.62rem] uppercase tracking-[0.24em] text-[#5F5B52]">
 						Year 10 Net Take-home
 					</p>
 					<h3 className="mt-2 text-2xl font-bold tracking-tight text-[#1A1A1A]">
@@ -615,7 +615,7 @@ export default function RaiseVelocityCalculator() {
 
 							{/* Switcher Details */}
 							<div className="flex flex-col gap-1.5">
-								<p className="font-semibold text-[#4B6478] text-[11px] uppercase tracking-wide">
+								<p className="font-semibold text-[#475F73] text-[11px] uppercase tracking-wide">
 									Switcher (Job-hopping strategy)
 								</p>
 								<div className="flex justify-between mt-1 text-[11px] text-[#5E5E5E]">
@@ -626,7 +626,7 @@ export default function RaiseVelocityCalculator() {
 									<span>Effective Hourly Rate:</span>
 									<span className="text-[#5E5E5E] font-semibold">{formatCurrency(hoveredData.switcherEffectiveHourlyRate)}/hr</span>
 								</div>
-								<div className="flex justify-between text-[11px] text-[#5E5E5E] border-t border-gray-200 pt-1 mt-1 font-semibold #5A7A8F [.light_&]:border-slate-200 [.light_&]:text-[#4B6478]!">
+								<div className="flex justify-between text-[11px] text-[#5E5E5E] border-t border-gray-200 pt-1 mt-1 font-semibold #5A7A8F [.light_&]:border-slate-200 [.light_&]:text-[#475F73]!">
 									<span>Take-home Cash Flow:</span>
 									<span>{formatCurrency(hoveredData.switcherNetAnnualCashFlow)}</span>
 								</div>
@@ -639,7 +639,7 @@ export default function RaiseVelocityCalculator() {
 						</div>
 					</div>
 				) : (
-					<div className="text-[#6B6B6B] text-center font-mono text-[10px] italic mt-5 py-2.5 bg-white/20 border border-gray-200/40 rounded-xl [.light_&]:bg-slate-100/60 [.light_&]:text-[#6B6B6B]! [.light_&]:border-slate-200/80">
+					<div className="text-[#5F5B52] text-center font-mono text-[10px] italic mt-5 py-2.5 bg-white/20 border border-gray-200/40 rounded-xl [.light_&]:bg-slate-100/60 [.light_&]:text-[#5F5B52]! [.light_&]:border-slate-200/80">
 						Hover mouse cursor over the chart nodes to view detailed yearly projections.
 					</div>
 				)}
@@ -660,19 +660,19 @@ export default function RaiseVelocityCalculator() {
 				<div className="flex border-b border-gray-200 mb-6 text-xs font-mono [.light_&]:border-slate-200">
 					<button
 						onClick={() => setActiveConfigTab('core')}
-						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'core' ? 'border-cyan-400 text-[#1A1A1A] [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-[#6B6B6B] hover:text-[#5E5E5E] [.light_&]:text-[#5E5E5E] [.light_&]:hover:text-slate-700'}`}
+						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'core' ? 'border-cyan-400 text-[#1A1A1A] [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-[#5F5B52] hover:text-[#5E5E5E] [.light_&]:text-[#5E5E5E] [.light_&]:hover:text-slate-700'}`}
 					>
 						⚙️ Core parameters
 					</button>
 					<button
 						onClick={() => setActiveConfigTab('stayer')}
-						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'stayer' ? 'border-cyan-400 text-[#1A1A1A] [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-[#6B6B6B] hover:text-[#5E5E5E] [.light_&]:text-[#5E5E5E] [.light_&]:hover:text-slate-700'}`}
+						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'stayer' ? 'border-cyan-400 text-[#1A1A1A] [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-[#5F5B52] hover:text-[#5E5E5E] [.light_&]:text-[#5E5E5E] [.light_&]:hover:text-slate-700'}`}
 					>
 						🏠 Stayer settings
 					</button>
 					<button
 						onClick={() => setActiveConfigTab('switcher')}
-						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'switcher' ? 'border-cyan-400 text-[#1A1A1A] [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-[#6B6B6B] hover:text-[#5E5E5E] [.light_&]:text-[#5E5E5E] [.light_&]:hover:text-slate-700'}`}
+						className={`flex-1 py-3 font-semibold text-center border-b-2 transition cursor-pointer ${activeConfigTab === 'switcher' ? 'border-cyan-400 text-[#1A1A1A] [.light_&]:border-cyan-500 [.light_&]:text-slate-900!' : 'border-transparent text-[#5F5B52] hover:text-[#5E5E5E] [.light_&]:text-[#5E5E5E] [.light_&]:hover:text-slate-700'}`}
 					>
 						🚗 Switcher details
 					</button>

@@ -29,19 +29,22 @@ Every value below is held to **WCAG AA (4.5:1) on the lightest surface it can la
 run `npm run audit:contrast` and see `docs/contrast-audit.md`.
 
 ### Typography & Structure — "Precision Terminal"
-- **Canvas (page floor):** `#FAFAFA` (matte paper; `--site-bg` / `bg-canvas`). Not pure white: a page
-  that is white edge to edge leaves cards nowhere to sit, so every panel needs a box to be visible.
-- **Surface / Ghost Card:** `#FFFFFF` (`--surface` / `bg-surface`) with a `1px` hairline `#E5E5E5`.
-  A white card on the matte canvas reads as raised **without** a shadow.
-- **Primary Text / Headings / Values:** `#111318` (17.8:1 on canvas, 18.6:1 on a card)
-- **Body Paragraphs / Explanatory:** `#4B5563` (7.2:1 on canvas) — one step darker than before for long
+- **Canvas (page floor):** `#EAE7DE` (warm bone paper; `--site-bg` / `bg-canvas`). Not white, not grey:
+  a white page leaves cards nowhere to sit, and a cool grey one reads as a disabled screen. The warmth is
+  deliberate — this is a reading surface for analysis, closer to a printed report than a dashboard.
+- **Surface / Ghost Card:** `#FFFFFF` (`--surface` / `bg-surface`) with a `1px` hairline. A white card on
+  the bone canvas reads as raised **without** a shadow (1.24:1 surface separation). Inset panels *inside*
+  a card use the warm tint `#F4F1E8`, never a cool grey — blue-grey on warm paper looks like a bug.
+- **Primary Text / Headings / Values:** `#191610` (14.6:1 on canvas, 18.1:1 on a card)
+- **Body Paragraphs / Explanatory:** `#4E4A42` (7.1:1 on canvas) — one step darker than before for long
   analytical reading
-- **Subtle Accents / Metadata / Eyebrows:** `#6B7280` (4.6:1 on canvas, 4.8:1 on white — holds at 9px).
-  Never place it on the `#F4F4F5` hover fill: 4.4:1 there.
+- **Subtle Accents / Metadata / Eyebrows:** `#5F5B52` (5.5:1 on canvas, 6.8:1 on white — holds at 9px).
+  The old `#6B6B6B` measured 4.3:1 on bone and failed AA, which is why this step moved.
 - **Decorative Only — never for text:** `#8C8C8C`. It measures **3.36:1 on white** and 1.56:1 on an active
   blue tab, so it is for hairlines, dots and separators. It used to be the metadata ink; that one token
   produced 98 of 129 distinct AA failures across the site.
-- **Structural Borders / Dividers:** `#E5E5E5` (hairlines) — `#C9CCD2` is the hover-strength step.
+- **Structural Borders / Dividers:** `#D8D3C4` (hairlines, 1.21:1 on canvas / 1.50:1 on a card) —
+  `#C6C0AE` is the hover-strength step. A `#E5E5E5` hairline disappears on bone (1.09:1).
 - **Inactive Slider Track:** `#E5E5E5` (Faint background track for range sliders)
 
 These live as custom properties in `src/styles/global.css` (`--ink`, `--ink-heading`, `--ink-body`,
@@ -63,8 +66,8 @@ still write the hex directly; keep the value in step with this table.
 - **Low Risk (Resilient Tasks):** `#2E6F40` (6.06:1)
 
 ### Interactive
-- **Interactive text / links / active UI:** `#4B6478` (6.19:1 on white, 5.92:1 on the gray-50 hover fill,
-  4.91:1 on `#E5E5E5`). This is the deeper step of the steel-blue family.
+- **Interactive text / links / active UI:** `#475F73` (5.4:1 on canvas, 6.7:1 on white, 4.8:1 on a 10%
+  steel-blue chip over bone). This is the deeper step of the steel-blue family.
 - **Steel blue lines & accents:** `#5A7A8F` — 4px section rules, list bullets, slider thumbs, borders.
   It passes on white (4.55:1) but **not** on the surfaces interactive text actually lands on (4.35:1 on the
   gray-50 fill, 2.47:1 on the slate chips), which is why text uses `#4B6478` instead.

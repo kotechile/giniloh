@@ -11,7 +11,7 @@ function FieldLabel({ label, tooltip }: { label: string; tooltip: string }) {
 		<div className="flex items-center gap-1.5 mb-1.5 group relative">
 			<label className="block text-xs font-semibold text-stone-700 cursor-pointer">{label}</label>
 			<div className="relative flex items-center">
-				<svg className="w-3.5 h-3.5 text-[#6B6B6B] group-hover:text-stone-700 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<svg className="w-3.5 h-3.5 text-[#5F5B52] group-hover:text-stone-700 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 					<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 				</svg>
 				<div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 hidden group-hover:block w-64 p-3 bg-stone-900 text-white text-[11px] font-medium leading-relaxed rounded-xl shadow-xl z-50 pointer-events-none">
@@ -58,7 +58,7 @@ function WealthAreaChart({ projections, countryName }: { projections: YearProjec
 						<span className="w-3 h-3 rounded-full bg-[#2E6F40] inline-block"></span> Move ({countryName})
 					</span>
 				</div>
-				<span className="text-[#6B6B6B] font-mono text-[11px]">All figures in USD ($)</span>
+				<span className="text-[#5F5B52] font-mono text-[11px]">All figures in USD ($)</span>
 			</div>
 
 			<div className="relative w-full overflow-hidden">
@@ -130,7 +130,7 @@ function CashFlowWaterfallChart({ breakdown }: { breakdown: ExpatBreakdown }) {
 		<div className="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm space-y-4">
 			<div className="flex items-center justify-between border-b border-stone-100 pb-3">
 				<h3 className="text-base font-bold text-stone-900">Cash Flow Component Bridge (Normalized $ USD)</h3>
-				<span className="text-xs font-mono text-[#6B6B6B]">Journey from Gross Income to Net Free Cash Flow</span>
+				<span className="text-xs font-mono text-[#5F5B52]">Journey from Gross Income to Net Free Cash Flow</span>
 			</div>
 
 			<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -221,7 +221,7 @@ function TotalCompStackedChart({ inputs, breakdown }: { inputs: ExpatInputs; bre
 		<div className="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm space-y-4">
 			<div className="flex items-center justify-between border-b border-stone-100 pb-3">
 				<h3 className="text-base font-bold text-stone-900">Total Household Compensation Composition ($ USD)</h3>
-				<span className="text-xs font-mono text-[#6B6B6B]">Base + Bonus + Equity + Spouse + Allowances</span>
+				<span className="text-xs font-mono text-[#5F5B52]">Base + Bonus + Equity + Spouse + Allowances</span>
 			</div>
 
 			<div className="space-y-4 font-mono text-xs">
@@ -321,7 +321,7 @@ function ExpenseGroupedBarChart({ inputs, breakdown }: { inputs: ExpatInputs; br
 		<div className="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm space-y-4">
 			<div className="flex items-center justify-between border-b border-stone-100 pb-3">
 				<h3 className="text-base font-bold text-stone-900">Annual Living Expenses Comparison ($ USD Normalized)</h3>
-				<span className="text-xs font-mono text-[#6B6B6B]">1:1 Category Outlay Comparison</span>
+				<span className="text-xs font-mono text-[#5F5B52]">1:1 Category Outlay Comparison</span>
 			</div>
 
 			<div className="space-y-4">
@@ -340,7 +340,7 @@ function ExpenseGroupedBarChart({ inputs, breakdown }: { inputs: ExpatInputs; br
 							</div>
 
 							<div className="flex items-center gap-2">
-								<span className="w-16 text-[10px] text-[#6B6B6B] font-bold">Stay (US)</span>
+								<span className="w-16 text-[10px] text-[#5F5B52] font-bold">Stay (US)</span>
 								<div className="flex-1 h-2.5 bg-stone-200 rounded-full overflow-hidden">
 									<div className="h-full bg-stone-600 rounded-full" style={{ width: `${stayPct}%` }} />
 								</div>
@@ -549,7 +549,7 @@ export default function ExpatEvaluatorCalculator() {
 						break-inside: avoid !important;
 						background: transparent !important;
 					}
-					.text-[#6B6B6B], .text-stone-600, .text-stone-700 {
+					.text-[#5F5B52], .text-stone-600, .text-stone-700 {
 						color: #334155 !important;
 					}
 					.font-mono {
@@ -572,7 +572,7 @@ export default function ExpatEvaluatorCalculator() {
 					<div className="flex items-center gap-2 bg-[#FAF8F5] px-4 py-2 rounded-xl border border-stone-200">
 						<span className="text-xl">{selectedCountry.flagEmoji}</span>
 						<span className="font-semibold text-sm text-stone-900">{selectedCountry.name}</span>
-						<span className="text-xs font-mono text-[#6B6B6B]">({selectedCountry.currencyCode})</span>
+						<span className="text-xs font-mono text-[#5F5B52]">({selectedCountry.currencyCode})</span>
 					</div>
 				</div>
 
@@ -582,7 +582,7 @@ export default function ExpatEvaluatorCalculator() {
 
 				{/* Destination Country Switcher with Flag Icons */}
 				<div className="pt-4 border-t border-stone-100 space-y-3 no-print">
-					<span className="block font-mono text-xs font-bold uppercase tracking-wider text-[#6B6B6B]">
+					<span className="block font-mono text-xs font-bold uppercase tracking-wider text-[#5F5B52]">
 						Select Host Country Destination
 					</span>
 					<div className="flex flex-wrap gap-2">
@@ -605,7 +605,7 @@ export default function ExpatEvaluatorCalculator() {
 								<span>{c.name}</span>
 								<span
 									style={hostCountryId === c.id ? { color: 'rgba(255, 255, 255, 0.85)' } : undefined}
-									className={`text-[10px] font-mono ${hostCountryId !== c.id ? 'text-[#6B6B6B]' : ''}`}
+									className={`text-[10px] font-mono ${hostCountryId !== c.id ? 'text-[#5F5B52]' : ''}`}
 								>
 									{c.currencyCode}
 								</span>
@@ -616,7 +616,7 @@ export default function ExpatEvaluatorCalculator() {
 
 				{/* Relocation Scenario Type Selector */}
 				<div className="pt-4 border-t border-stone-100 space-y-3 no-print">
-					<span className="block font-mono text-xs font-bold uppercase tracking-wider text-[#6B6B6B]">
+					<span className="block font-mono text-xs font-bold uppercase tracking-wider text-[#5F5B52]">
 						Select Relocation Model
 					</span>
 					<div className="flex flex-col sm:flex-row gap-3">
@@ -637,7 +637,7 @@ export default function ExpatEvaluatorCalculator() {
 							/>
 							<div>
 								<span className="block text-xs font-bold text-stone-900">Corporate Expat Assignment</span>
-								<span className="block text-[10px] text-[#6B6B6B] font-medium mt-1 leading-normal">
+								<span className="block text-[10px] text-[#5F5B52] font-medium mt-1 leading-normal">
 									Temporary contract (usually ≤5 years). Exempt from host country social security taxes via detached worker Totalization treaties. Corporate tax-equalization policies often apply.
 								</span>
 							</div>
@@ -660,7 +660,7 @@ export default function ExpatEvaluatorCalculator() {
 							/>
 							<div>
 								<span className="block text-xs font-bold text-stone-900">Definitive / Permanent Relocation</span>
-								<span className="block text-[10px] text-[#6B6B6B] font-medium mt-1 leading-normal">
+								<span className="block text-[10px] text-[#5F5B52] font-medium mt-1 leading-normal">
 									Permanent local contract. Transitions to local host social security taxes from Day 1. Usually operates under a Laissez-Faire tax policy (no corporate tax coverage).
 								</span>
 							</div>
@@ -678,7 +678,7 @@ export default function ExpatEvaluatorCalculator() {
 						: 'bg-gradient-to-br from-amber-50/80 via-white to-amber-50/30 border-amber-200/80'
 				}`}>
 					<div className="flex items-center justify-between">
-						<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#6B6B6B]">
+						<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#5F5B52]">
 							Annual Cash Flow Delta
 						</span>
 						<span className={`px-2 py-0.5 rounded-full text-[11px] font-bold font-mono ${
@@ -703,7 +703,7 @@ export default function ExpatEvaluatorCalculator() {
 				<div className="p-6 bg-gradient-to-br from-[#FAF8F5] via-white to-emerald-50/30 border border-stone-200/80 rounded-2xl shadow-sm flex flex-col justify-between">
 					<div>
 						<div className="flex items-center justify-between">
-							<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#6B6B6B]">
+							<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#5F5B52]">
 								5-Year Wealth Impact
 							</span>
 							<svg className="w-16 h-7" viewBox="0 0 60 25">
@@ -725,7 +725,7 @@ export default function ExpatEvaluatorCalculator() {
 				{/* Optimal US Tax Relief Card */}
 				<div className="p-6 bg-white border border-stone-200/80 rounded-2xl shadow-sm flex flex-col justify-between">
 					<div>
-						<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#6B6B6B] block">
+						<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#5F5B52] block">
 							Optimal US Tax Relief
 						</span>
 						<div className="text-4xl sm:text-5xl font-black text-stone-900 tracking-tight mt-3">
@@ -733,7 +733,7 @@ export default function ExpatEvaluatorCalculator() {
 						</div>
 					</div>
 					<div className="mt-3 pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
-						<span className="text-[#6B6B6B] font-mono">Tax Savings Route</span>
+						<span className="text-[#5F5B52] font-mono">Tax Savings Route</span>
 						<span className="font-bold text-stone-800">
 							{breakdown.optimalTaxRelief === 'FEIE' ? `FEIE: ${formatCurrency(breakdown.feieUsedAmount)}` : breakdown.optimalTaxRelief === 'FTC' ? `FTC: ${formatCurrency(breakdown.ftcUsedAmount)}` : 'N/A'}
 						</span>
@@ -820,14 +820,14 @@ export default function ExpatEvaluatorCalculator() {
 									</svg>
 									<span>Print PDF Summary</span>
 								</button>
-								<span className="text-xs font-mono text-[#6B6B6B]">All figures in USD ($)</span>
+								<span className="text-xs font-mono text-[#5F5B52]">All figures in USD ($)</span>
 							</div>
 						</div>
 
 						<div className="overflow-x-auto">
 							<table className="w-full text-left text-sm border-collapse">
 								<thead>
-									<tr className="border-b border-stone-200 text-xs font-mono font-bold uppercase tracking-wider text-[#6B6B6B]">
+									<tr className="border-b border-stone-200 text-xs font-mono font-bold uppercase tracking-wider text-[#5F5B52]">
 										<th className="py-3.5 px-3">Financial Metric</th>
 										<th className="py-3.5 px-3 text-right">Stay (US Baseline)</th>
 										<th className="py-3.5 px-3 text-right bg-emerald-50/40 rounded-t-xl">Move ({selectedCountry.name})</th>
@@ -846,7 +846,7 @@ export default function ExpatEvaluatorCalculator() {
 											{breakdown.moveBaseGross - breakdown.stayEarnedIncome >= 0 ? '+' : ''}{formatCurrency(breakdown.moveBaseGross - breakdown.stayEarnedIncome)}
 										</td>
 									</tr>
-									<tr className="text-xs text-[#6B6B6B] font-normal">
+									<tr className="text-xs text-[#5F5B52] font-normal">
 										<td className="py-2 px-3 pl-8">└─ Primary Base Salary</td>
 										<td className="py-2 px-3 text-right font-mono">{formatCurrency(inputs.homeBaseSalary)}</td>
 										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">{formatCurrency(breakdown.moveBaseSalaryUsd)}</td>
@@ -856,7 +856,7 @@ export default function ExpatEvaluatorCalculator() {
 											{breakdown.moveBaseSalaryUsd - inputs.homeBaseSalary >= 0 ? '+' : ''}{formatCurrency(breakdown.moveBaseSalaryUsd - inputs.homeBaseSalary)}
 										</td>
 									</tr>
-									<tr className="text-xs text-[#6B6B6B] font-normal">
+									<tr className="text-xs text-[#5F5B52] font-normal">
 										<td className="py-2 px-3 pl-8">└─ Annual Bonus</td>
 										<td className="py-2 px-3 text-right font-mono">{formatCurrency(inputs.homeBonus)}</td>
 										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">{formatCurrency(breakdown.moveBonusUsd)}</td>
@@ -866,7 +866,7 @@ export default function ExpatEvaluatorCalculator() {
 											{breakdown.moveBonusUsd - inputs.homeBonus >= 0 ? '+' : ''}{formatCurrency(breakdown.moveBonusUsd - inputs.homeBonus)}
 										</td>
 									</tr>
-									<tr className="text-xs text-[#6B6B6B] font-normal">
+									<tr className="text-xs text-[#5F5B52] font-normal">
 										<td className="py-2 px-3 pl-8">└─ Annual Equity Vesting</td>
 										<td className="py-2 px-3 text-right font-mono">{formatCurrency(inputs.homeEquityAnnual)}</td>
 										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">{formatCurrency(breakdown.moveEquityAnnualUsd)}</td>
@@ -876,7 +876,7 @@ export default function ExpatEvaluatorCalculator() {
 											{breakdown.moveEquityAnnualUsd - inputs.homeEquityAnnual >= 0 ? '+' : ''}{formatCurrency(breakdown.moveEquityAnnualUsd - inputs.homeEquityAnnual)}
 										</td>
 									</tr>
-									<tr className="text-xs text-[#6B6B6B] font-normal">
+									<tr className="text-xs text-[#5F5B52] font-normal">
 										<td className="py-2 px-3 pl-8">└─ Spousal Earned Income</td>
 										<td className="py-2 px-3 text-right font-mono">{formatCurrency(inputs.homeSpouseIncome)}</td>
 										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">{formatCurrency(breakdown.moveSpouseIncomeUsd)}</td>
@@ -892,31 +892,31 @@ export default function ExpatEvaluatorCalculator() {
 										<td className="py-3 px-3 font-bold text-stone-950">Global Investment Income (Passive)</td>
 										<td className="py-3 px-3 text-right font-mono font-bold">{formatCurrency(breakdown.stayInvestmentIncome)}</td>
 										<td className="py-3 px-3 text-right font-mono font-bold bg-emerald-50/20">{formatCurrency(breakdown.moveInvestmentIncome)}</td>
-										<td className="py-3 px-3 text-right font-mono font-bold text-[#6B6B6B]">$0</td>
+										<td className="py-3 px-3 text-right font-mono font-bold text-[#5F5B52]">$0</td>
 									</tr>
 
 									{/* 3. Corporate Subsidies & COLA */}
 									<tr className="bg-stone-50/30">
 										<td className="py-3 px-3 font-bold text-stone-950">Corporate Subsidies &amp; COLA</td>
-										<td className="py-3 px-3 text-right font-mono text-[#6B6B6B]">$0</td>
+										<td className="py-3 px-3 text-right font-mono text-[#5F5B52]">$0</td>
 										<td className="py-3 px-3 text-right font-mono font-bold bg-emerald-50/20 text-[#2E6F40]">+{formatCurrency(breakdown.moveAllowancesTotal)}</td>
 										<td className="py-3 px-3 text-right font-mono font-bold text-[#2E6F40]">+{formatCurrency(breakdown.moveAllowancesTotal)}</td>
 									</tr>
-									<tr className="text-xs text-[#6B6B6B] font-normal">
+									<tr className="text-xs text-[#5F5B52] font-normal">
 										<td className="py-2 px-3 pl-8">└─ Monthly COLA Stipend</td>
-										<td className="py-2 px-3 text-right font-mono text-[#6B6B6B]">$0</td>
+										<td className="py-2 px-3 text-right font-mono text-[#5F5B52]">$0</td>
 										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">{formatCurrency(breakdown.moveColaUsd)}</td>
 										<td className="py-2 px-3 text-right font-mono text-[#2E6F40]">+{formatCurrency(breakdown.moveColaUsd)}</td>
 									</tr>
-									<tr className="text-xs text-[#6B6B6B] font-normal">
+									<tr className="text-xs text-[#5F5B52] font-normal">
 										<td className="py-2 px-3 pl-8">└─ Monthly Housing Allowance</td>
-										<td className="py-2 px-3 text-right font-mono text-[#6B6B6B]">$0</td>
+										<td className="py-2 px-3 text-right font-mono text-[#5F5B52]">$0</td>
 										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">{formatCurrency(breakdown.moveHousingUsd)}</td>
 										<td className="py-2 px-3 text-right font-mono text-[#2E6F40]">+{formatCurrency(breakdown.moveHousingUsd)}</td>
 									</tr>
-									<tr className="text-xs text-[#6B6B6B] font-normal">
+									<tr className="text-xs text-[#5F5B52] font-normal">
 										<td className="py-2 px-3 pl-8">└─ Annual Tuition Stipend</td>
-										<td className="py-2 px-3 text-right font-mono text-[#6B6B6B]">$0</td>
+										<td className="py-2 px-3 text-right font-mono text-[#5F5B52]">$0</td>
 										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">{formatCurrency(breakdown.moveTuitionUsd)}</td>
 										<td className="py-2 px-3 text-right font-mono text-[#2E6F40]">+{formatCurrency(breakdown.moveTuitionUsd)}</td>
 									</tr>
@@ -944,21 +944,21 @@ export default function ExpatEvaluatorCalculator() {
 											{breakdown.actualTotalTaxesPaid - breakdown.stayTaxes > 0 ? '+' : ''}{formatCurrency(breakdown.actualTotalTaxesPaid - breakdown.stayTaxes)}
 										</td>
 									</tr>
-									<tr className="text-xs text-[#6B6B6B] font-normal">
+									<tr className="text-xs text-[#5F5B52] font-normal">
 										<td className="py-2 px-3 pl-8">└─ Host Country Income Taxes</td>
-										<td className="py-2 px-3 text-right font-mono text-[#6B6B6B]">$0</td>
+										<td className="py-2 px-3 text-right font-mono text-[#5F5B52]">$0</td>
 										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">{formatCurrency(breakdown.hostTaxPaid)}</td>
 										<td className="py-2 px-3 text-right font-mono text-[#AE5238]">+{formatCurrency(breakdown.hostTaxPaid)}</td>
 									</tr>
 									{breakdown.imputedRentalTaxPaid > 0 && (
-										<tr className="text-xs text-[#6B6B6B] font-normal">
+										<tr className="text-xs text-[#5F5B52] font-normal">
 											<td className="py-2 px-3 pl-8">└─ Imputed Rental Income Tax</td>
-											<td className="py-2 px-3 text-right font-mono text-[#6B6B6B]">$0</td>
+											<td className="py-2 px-3 text-right font-mono text-[#5F5B52]">$0</td>
 											<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">{formatCurrency(breakdown.imputedRentalTaxPaid)}</td>
 											<td className="py-2 px-3 text-right font-mono text-[#AE5238]">+{formatCurrency(breakdown.imputedRentalTaxPaid)}</td>
 										</tr>
 									)}
-									<tr className="text-xs text-[#6B6B6B] font-normal">
+									<tr className="text-xs text-[#5F5B52] font-normal">
 										<td className="py-2 px-3 pl-8">└─ U.S. Federal Income Taxes</td>
 										<td className="py-2 px-3 text-right font-mono">{formatCurrency(breakdown.stayFedTaxEarned + breakdown.stayFedTaxInv)}</td>
 										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">{formatCurrency(breakdown.homeTaxPaid)}</td>
@@ -968,13 +968,13 @@ export default function ExpatEvaluatorCalculator() {
 											{breakdown.homeTaxPaid - (breakdown.stayFedTaxEarned + breakdown.stayFedTaxInv) > 0 ? '+' : ''}{formatCurrency(breakdown.homeTaxPaid - (breakdown.stayFedTaxEarned + breakdown.stayFedTaxInv))}
 										</td>
 									</tr>
-									<tr className="text-xs text-[#6B6B6B] font-normal">
+									<tr className="text-xs text-[#5F5B52] font-normal">
 										<td className="py-2 px-3 pl-8">└─ U.S. State Income Taxes</td>
 										<td className="py-2 px-3 text-right font-mono">{formatCurrency(breakdown.stayStateTax)}</td>
 										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">$0</td>
 										<td className="py-2 px-3 text-right font-mono text-[#2E6F40]">{formatCurrency(-breakdown.stayStateTax)}</td>
 									</tr>
-									<tr className="text-xs text-[#6B6B6B] font-normal">
+									<tr className="text-xs text-[#5F5B52] font-normal">
 										<td className="py-2 px-3 pl-8">└─ Social Security / FICA</td>
 										<td className="py-2 px-3 text-right font-mono">{formatCurrency(breakdown.stayFicaTax)}</td>
 										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">{formatCurrency(breakdown.moveSocialSecurityTaxUsd)}</td>
@@ -988,19 +988,19 @@ export default function ExpatEvaluatorCalculator() {
 									{/* Employer Tax Policy Reimbursement */}
 									<tr className="bg-stone-50/30">
 										<td className="py-3 px-3 font-bold text-stone-950">Employer Tax Policy Reimbursement</td>
-										<td className="py-3 px-3 text-right font-mono text-[#6B6B6B]">$0</td>
+										<td className="py-3 px-3 text-right font-mono text-[#5F5B52]">$0</td>
 										<td className="py-3 px-3 text-right font-mono font-bold bg-emerald-50/20">
 											{breakdown.employerTaxReimbursement > 0 ? (
 												<span className="text-[#2E6F40] font-bold">+{formatCurrency(breakdown.employerTaxReimbursement)}</span>
 											) : (
-												<span className="text-[#6B6B6B]">$0</span>
+												<span className="text-[#5F5B52]">$0</span>
 											)}
 										</td>
 										<td className="py-3 px-3 text-right font-mono font-bold">
 											{breakdown.employerTaxReimbursement > 0 ? (
 												<span className="text-[#2E6F40] font-bold">+{formatCurrency(breakdown.employerTaxReimbursement)}</span>
 											) : (
-												<span className="text-[#6B6B6B]">$0</span>
+												<span className="text-[#5F5B52]">$0</span>
 											)}
 										</td>
 									</tr>
@@ -1028,7 +1028,7 @@ export default function ExpatEvaluatorCalculator() {
 											{breakdown.moveLivingExpenses - breakdown.stayLivingExpenses > 0 ? '+' : ''}{formatCurrency(breakdown.moveLivingExpenses - breakdown.stayLivingExpenses)}
 										</td>
 									</tr>
-									<tr className="text-xs text-[#6B6B6B] font-normal">
+									<tr className="text-xs text-[#5F5B52] font-normal">
 										<td className="py-2 px-3 pl-8">└─ Housing / Rent</td>
 										<td className="py-2 px-3 text-right font-mono">{formatCurrency(inputs.homeRentOrMortgageMonthly * 12)}</td>
 										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">{formatCurrency(breakdown.moveRentUsd)}</td>
@@ -1038,7 +1038,7 @@ export default function ExpatEvaluatorCalculator() {
 											{breakdown.moveRentUsd - (inputs.homeRentOrMortgageMonthly * 12) > 0 ? '+' : ''}{formatCurrency(breakdown.moveRentUsd - (inputs.homeRentOrMortgageMonthly * 12))}
 										</td>
 									</tr>
-									<tr className="text-xs text-[#6B6B6B] font-normal">
+									<tr className="text-xs text-[#5F5B52] font-normal">
 										<td className="py-2 px-3 pl-8">└─ Private School Tuition</td>
 										<td className="py-2 px-3 text-right font-mono">{formatCurrency(inputs.homeTuitionMonthly * 12)}</td>
 										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">{formatCurrency(breakdown.moveTuitionUsd)}</td>
@@ -1048,7 +1048,7 @@ export default function ExpatEvaluatorCalculator() {
 											{breakdown.moveTuitionUsd - (inputs.homeTuitionMonthly * 12) > 0 ? '+' : ''}{formatCurrency(breakdown.moveTuitionUsd - (inputs.homeTuitionMonthly * 12))}
 										</td>
 									</tr>
-									<tr className="text-xs text-[#6B6B6B] font-normal">
+									<tr className="text-xs text-[#5F5B52] font-normal">
 										<td className="py-2 px-3 pl-8">└─ Health Insurance</td>
 										<td className="py-2 px-3 text-right font-mono">{formatCurrency(inputs.homeHealthInsuranceMonthly * 12)}</td>
 										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">{formatCurrency(breakdown.moveHealthInsuranceUsd)}</td>
@@ -1058,7 +1058,7 @@ export default function ExpatEvaluatorCalculator() {
 											{breakdown.moveHealthInsuranceUsd - (inputs.homeHealthInsuranceMonthly * 12) > 0 ? '+' : ''}{formatCurrency(breakdown.moveHealthInsuranceUsd - (inputs.homeHealthInsuranceMonthly * 12))}
 										</td>
 									</tr>
-									<tr className="text-xs text-[#6B6B6B] font-normal">
+									<tr className="text-xs text-[#5F5B52] font-normal">
 										<td className="py-2 px-3 pl-8">└─ Discretionary Spending Baseline</td>
 										<td className="py-2 px-3 text-right font-mono">{formatCurrency(inputs.discretionarySpendMonthly * 12)}</td>
 										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">{formatCurrency(breakdown.moveDiscretionaryUsd)}</td>
@@ -1076,7 +1076,7 @@ export default function ExpatEvaluatorCalculator() {
 										<td className="py-3 px-3 text-right font-mono font-bold bg-emerald-50/20">{formatCurrency(breakdown.moveTotalLiabilitiesUsd)}</td>
 										<td className={`py-3 px-3 text-right font-mono font-bold ${
 											breakdown.moveTotalLiabilitiesUsd === breakdown.stayHomeLiabilities
-												? 'text-[#6B6B6B]'
+												? 'text-[#5F5B52]'
 												: breakdown.moveTotalLiabilitiesUsd < breakdown.stayHomeLiabilities
 												? 'text-[#2E6F40]'
 												: 'text-[#AE5238]'
@@ -1084,19 +1084,19 @@ export default function ExpatEvaluatorCalculator() {
 											{breakdown.moveTotalLiabilitiesUsd > breakdown.stayHomeLiabilities ? '+' : ''}{formatCurrency(breakdown.moveTotalLiabilitiesUsd - breakdown.stayHomeLiabilities)}
 										</td>
 									</tr>
-									<tr className="text-xs text-[#6B6B6B] font-normal">
+									<tr className="text-xs text-[#5F5B52] font-normal">
 										<td className="py-2 px-3 pl-8">└─ Ongoing U.S. Liabilities</td>
 										<td className="py-2 px-3 text-right font-mono">{formatCurrency(breakdown.moveHomeLiabilities)}</td>
 										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">{formatCurrency(breakdown.moveHomeLiabilities)}</td>
-										<td className="py-2 px-3 text-right font-mono text-[#6B6B6B]">$0</td>
+										<td className="py-2 px-3 text-right font-mono text-[#5F5B52]">$0</td>
 									</tr>
-									<tr className="text-xs text-[#6B6B6B] font-normal">
+									<tr className="text-xs text-[#5F5B52] font-normal">
 										<td className="py-2 px-3 pl-8">└─ Stay-Only U.S. Liabilities</td>
 										<td className="py-2 px-3 text-right font-mono">{formatCurrency(breakdown.stayOnlyLiabilitiesUsd)}</td>
 										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">$0</td>
 										<td className="py-2 px-3 text-right font-mono text-[#2E6F40]">{formatCurrency(-breakdown.stayOnlyLiabilitiesUsd)}</td>
 									</tr>
-									<tr className="text-xs text-[#6B6B6B] font-normal">
+									<tr className="text-xs text-[#5F5B52] font-normal">
 										<td className="py-2 px-3 pl-8">└─ Host-Currency Liabilities (Local)</td>
 										<td className="py-2 px-3 text-right font-mono">$0</td>
 										<td className="py-2 px-3 text-right font-mono bg-emerald-50/10">{formatCurrency(breakdown.moveHostLiabilitiesUsd)}</td>
@@ -1131,7 +1131,7 @@ export default function ExpatEvaluatorCalculator() {
 						{/* Left Panel: Stay Scenario (Home Baseline) */}
 						<div className="bg-white rounded-2xl border border-stone-200/80 shadow-sm p-6 space-y-5">
 							<div className="flex items-center justify-between border-b border-stone-100 pb-3">
-								<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#6B6B6B]">
+								<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#5F5B52]">
 									Stay Scenario (Home Baseline)
 								</span>
 								<span className="text-xs font-bold text-stone-700 bg-stone-100 px-2.5 py-1 rounded-lg">
@@ -1148,7 +1148,7 @@ export default function ExpatEvaluatorCalculator() {
 										tooltip="Annual fixed base salary in the US before federal, state, and payroll taxes."
 									/>
 									<div className="relative">
-										<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[#6B6B6B] font-semibold">$</span>
+										<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[#5F5B52] font-semibold">$</span>
 										<input
 											type="number"
 											value={homeBaseSalary}
@@ -1164,7 +1164,7 @@ export default function ExpatEvaluatorCalculator() {
 										tooltip="Expected annual performance bonus or cash incentive in the US."
 									/>
 									<div className="relative">
-										<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[#6B6B6B] font-semibold">$</span>
+										<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[#5F5B52] font-semibold">$</span>
 										<input
 											type="number"
 											value={homeBonus}
@@ -1180,7 +1180,7 @@ export default function ExpatEvaluatorCalculator() {
 										tooltip="Annual market value of RSUs, stock options, or equity vesting in the US."
 									/>
 									<div className="relative">
-										<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[#6B6B6B] font-semibold">$</span>
+										<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[#5F5B52] font-semibold">$</span>
 										<input
 											type="number"
 											value={homeEquityAnnual}
@@ -1196,7 +1196,7 @@ export default function ExpatEvaluatorCalculator() {
 										tooltip="Spouse's annual gross earnings in the US before relocation."
 									/>
 									<div className="relative">
-										<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[#6B6B6B] font-semibold">$</span>
+										<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[#5F5B52] font-semibold">$</span>
 										<input
 											type="number"
 											value={homeSpouseIncome}
@@ -1263,7 +1263,7 @@ export default function ExpatEvaluatorCalculator() {
 								</div>
 
 								<div className="border-t border-emerald-100 pt-4">
-									<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#6B6B6B] block mb-2">Spousal Income Post-Move</span>
+									<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#5F5B52] block mb-2">Spousal Income Post-Move</span>
 									<div className="grid grid-cols-2 gap-3">
 										<div>
 											<FieldLabel
@@ -1297,7 +1297,7 @@ export default function ExpatEvaluatorCalculator() {
 								</div>
 
 								<div className="border-t border-emerald-100 pt-4 space-y-3">
-									<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#6B6B6B] block">Expat Relocation Allowances ({selectedCountry.currencySymbol})</span>
+									<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#5F5B52] block">Expat Relocation Allowances ({selectedCountry.currencySymbol})</span>
 									<div className="grid grid-cols-2 gap-3">
 										<div>
 											<FieldLabel
@@ -1364,7 +1364,7 @@ export default function ExpatEvaluatorCalculator() {
 					<div className="bg-white p-6 rounded-2xl border border-stone-200/80 shadow-sm space-y-3">
 						<div className="flex items-center justify-between border-b border-stone-100 pb-2">
 							<h3 className="text-base font-bold text-stone-900">Total Tax Burden Composition ($ USD Normalized)</h3>
-							<span className="text-xs font-mono text-[#6B6B6B]">Host vs. Home Tax Offset</span>
+							<span className="text-xs font-mono text-[#5F5B52]">Host vs. Home Tax Offset</span>
 						</div>
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-4 font-mono text-xs">
 							<div className="space-y-1 bg-stone-50 p-3.5 rounded-xl border border-stone-200">
@@ -1410,7 +1410,7 @@ export default function ExpatEvaluatorCalculator() {
 									<div className="flex items-center justify-between bg-white p-4 rounded-xl border border-amber-200/80">
 										<div>
 											<span className="font-bold text-stone-900 block text-sm">Special Expat Tax Regime</span>
-											<span className="text-[#6B6B6B] text-xs">{selectedCountry.expatRegimeDescription}</span>
+											<span className="text-[#5F5B52] text-xs">{selectedCountry.expatRegimeDescription}</span>
 										</div>
 										<input
 											type="checkbox"
@@ -1435,7 +1435,7 @@ export default function ExpatEvaluatorCalculator() {
 								</div>
 
 								<div className="bg-white p-4 rounded-xl border border-amber-200/80">
-									<span className="text-xs font-mono uppercase text-[#6B6B6B] block mb-1">Tax Engine Note</span>
+									<span className="text-xs font-mono uppercase text-[#5F5B52] block mb-1">Tax Engine Note</span>
 									<p className="font-mono text-xs text-stone-800 font-semibold">
 										{breakdown.hostTaxDetailsNote}
 									</p>
@@ -1446,7 +1446,7 @@ export default function ExpatEvaluatorCalculator() {
 						{/* Home US Tax Panel */}
 						<div className="bg-white rounded-2xl border border-stone-200/80 shadow-sm p-6 space-y-5">
 							<div className="flex items-center justify-between border-b border-stone-100 pb-3">
-								<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#6B6B6B]">
+								<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#5F5B52]">
 									Home Tax Logic (U.S.)
 								</span>
 								<span className="text-xs font-bold text-stone-700 bg-stone-100 px-2.5 py-1 rounded-lg">
@@ -1460,7 +1460,7 @@ export default function ExpatEvaluatorCalculator() {
 								<div className="flex items-center justify-between bg-stone-50 p-4 rounded-xl border border-stone-200">
 									<div>
 										<span className="font-bold text-stone-900 block text-sm">U.S. Citizen / Green Card Holder</span>
-										<span className="text-[#6B6B6B] text-xs">Subject to US worldwide income tax regardless of residence</span>
+										<span className="text-[#5F5B52] text-xs">Subject to US worldwide income tax regardless of residence</span>
 									</div>
 									<input
 										type="checkbox"
@@ -1553,7 +1553,7 @@ export default function ExpatEvaluatorCalculator() {
 						{/* Left Panel: Stay Expenses */}
 						<div className="bg-white rounded-2xl border border-stone-200/80 shadow-sm p-6 space-y-5">
 							<div className="flex items-center justify-between border-b border-stone-100 pb-3">
-								<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#6B6B6B]">
+								<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#5F5B52]">
 									Home Living Expenses ($ USD)
 								</span>
 								<span className="text-xs font-bold text-stone-700 bg-stone-100 px-2.5 py-1 rounded-lg">
@@ -1570,7 +1570,7 @@ export default function ExpatEvaluatorCalculator() {
 										tooltip="Monthly housing costs in the US (rent payment or primary mortgage payment)."
 									/>
 									<div className="relative">
-										<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[#6B6B6B] font-semibold">$</span>
+										<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[#5F5B52] font-semibold">$</span>
 										<input
 											type="number"
 											value={homeRentOrMortgageMonthly}
@@ -1587,7 +1587,7 @@ export default function ExpatEvaluatorCalculator() {
 											tooltip="Monthly private school tuition for children in the US."
 										/>
 										<div className="relative">
-											<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[#6B6B6B] font-semibold">$</span>
+											<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[#5F5B52] font-semibold">$</span>
 											<input
 												type="number"
 												value={homeTuitionMonthly}
@@ -1602,7 +1602,7 @@ export default function ExpatEvaluatorCalculator() {
 											tooltip="Monthly private health insurance premiums in the US."
 										/>
 										<div className="relative">
-											<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[#6B6B6B] font-semibold">$</span>
+											<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[#5F5B52] font-semibold">$</span>
 											<input
 												type="number"
 												value={homeHealthInsuranceMonthly}
@@ -1619,7 +1619,7 @@ export default function ExpatEvaluatorCalculator() {
 										tooltip="Monthly lifestyle outlays in the US (groceries, dining, transportation, utilities)."
 									/>
 									<div className="relative">
-										<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[#6B6B6B] font-semibold">$</span>
+										<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[#5F5B52] font-semibold">$</span>
 										<input
 											type="number"
 											value={discretionarySpendMonthly}
@@ -1707,7 +1707,7 @@ export default function ExpatEvaluatorCalculator() {
 									<div className="mt-2 p-2.5 bg-[#FAF8F5] rounded-xl border border-stone-200/60 text-xs font-mono text-[#2E6F40] font-bold">
 										Resulting Spend: {formatCurrency(discretionarySpendMonthly * hostColIndexRatio)} USD / Month
 										{(selectedCountry.currencyCode as string) !== 'USD' && (
-											<span className="text-[#6B6B6B] font-normal">
+											<span className="text-[#5F5B52] font-normal">
 												{' '} (or {selectedCountry.currencySymbol}{Math.round((discretionarySpendMonthly * hostColIndexRatio) / fxRateHostToUsd).toLocaleString()} {selectedCountry.currencyCode})
 											</span>
 										)}
@@ -1752,7 +1752,7 @@ export default function ExpatEvaluatorCalculator() {
 								onChange={(e) => setFxRateHostToUsd(Math.max(0.00001, Number(e.target.value)))}
 								className="w-full px-3 py-2.5 bg-stone-50 border border-stone-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
 							/>
-							<span className="text-xs text-[#6B6B6B] font-mono mt-1 block">1 {selectedCountry.currencyCode} = ${fxRateHostToUsd} USD</span>
+							<span className="text-xs text-[#5F5B52] font-mono mt-1 block">1 {selectedCountry.currencyCode} = ${fxRateHostToUsd} USD</span>
 						</div>
 
 						<div className="space-y-4">
@@ -1762,7 +1762,7 @@ export default function ExpatEvaluatorCalculator() {
 									tooltip="USD obligations that will remain active in BOTH scenarios (e.g. U.S. student loans, IRA contributions, or a U.S. property mortgage you will keep)."
 								/>
 								<div className="relative">
-									<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[#6B6B6B] font-semibold">$</span>
+									<span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-xs text-[#5F5B52] font-semibold">$</span>
 									<input
 										type="number"
 										value={homeLiabilitiesUsdMonthly}
@@ -1770,7 +1770,7 @@ export default function ExpatEvaluatorCalculator() {
 										className="w-full pl-8 pr-3 py-2.5 bg-stone-50 border border-stone-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
 									/>
 								</div>
-								<span className="text-xs text-[#6B6B6B] mt-1 block">U.S. student loans, IRA contributions, or U.S. mortgage for kept property</span>
+								<span className="text-xs text-[#5F5B52] mt-1 block">U.S. student loans, IRA contributions, or U.S. mortgage for kept property</span>
 							</div>
 
 							<div>
@@ -1787,7 +1787,7 @@ export default function ExpatEvaluatorCalculator() {
 										className="w-full pl-8 pr-3 py-2.5 bg-stone-50 border border-stone-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
 									/>
 								</div>
-								<span className="text-xs text-[#6B6B6B] mt-1 block">U.S. car lease to be returned, U.S. local clubs, etc.</span>
+								<span className="text-xs text-[#5F5B52] mt-1 block">U.S. car lease to be returned, U.S. local clubs, etc.</span>
 							</div>
 						</div>
 					</div>
@@ -1804,17 +1804,17 @@ export default function ExpatEvaluatorCalculator() {
 								onChange={(e) => setHostLiabilitiesMonthly(Math.max(0, Number(e.target.value)))}
 								className="w-full px-3 py-2.5 bg-amber-50/50 border border-amber-200 rounded-xl text-sm font-mono text-stone-900 outline-none"
 							/>
-							<span className="text-xs text-[#6B6B6B] mt-1 block">Host local car lease, local debt, or host pension contributions</span>
+							<span className="text-xs text-[#5F5B52] mt-1 block">Host local car lease, local debt, or host pension contributions</span>
 						</div>
 
 						<div className="bg-stone-50 p-4 rounded-xl border border-stone-200 flex flex-col justify-between">
-							<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#6B6B6B]">
+							<span className="font-mono text-xs font-bold uppercase tracking-wider text-[#5F5B52]">
 								Combined Debt Servicing Summary
 							</span>
 							<p className="text-lg font-mono text-stone-900 font-bold mt-1">
 								Total Move Debt: {formatCurrency(breakdown.moveTotalLiabilitiesUsd)} / year
 							</p>
-							<p className="text-xs text-[#6B6B6B] font-mono">
+							<p className="text-xs text-[#5F5B52] font-mono">
 								Home USD Debt: {formatCurrency(breakdown.moveHomeLiabilities)} + Host Debt: {formatCurrency(breakdown.moveHostLiabilitiesUsd)}
 							</p>
 						</div>
@@ -1840,10 +1840,10 @@ export default function ExpatEvaluatorCalculator() {
 					<div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-stone-100 pb-4">
 						<div>
 							<h3 className="text-xl font-bold text-stone-900 tracking-tight">5-Year Cumulative Wealth Trajectory</h3>
-							<p className="text-xs text-[#6B6B6B]">Compares cumulative wealth accumulation in the US vs. {selectedCountry.name}.</p>
+							<p className="text-xs text-[#5F5B52]">Compares cumulative wealth accumulation in the US vs. {selectedCountry.name}.</p>
 						</div>
 						<div className="flex items-center gap-3 bg-stone-50 px-3 py-1.5 rounded-xl border border-stone-200">
-							<span className="text-xs font-mono uppercase text-[#6B6B6B]">Assumed Growth Rate</span>
+							<span className="text-xs font-mono uppercase text-[#5F5B52]">Assumed Growth Rate</span>
 							<input
 								type="number"
 								step={0.01}
@@ -1877,7 +1877,7 @@ export default function ExpatEvaluatorCalculator() {
 									</div>
 									<div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
 										<div>
-											<div className="flex justify-between text-[11px] text-[#6B6B6B] mb-1">
+											<div className="flex justify-between text-[11px] text-[#5F5B52] mb-1">
 												<span>Stay (US Baseline)</span>
 												<span className="font-bold text-stone-700">{formatCurrency(p.stayCumulativeWealth)}</span>
 											</div>
@@ -1900,7 +1900,7 @@ export default function ExpatEvaluatorCalculator() {
 						})}
 					</div>
 
-					<div className="border-t border-stone-100 pt-4 text-xs text-[#6B6B6B]">
+					<div className="border-t border-stone-100 pt-4 text-xs text-[#5F5B52]">
 						<p>
 							Note: Projections assume annual household free cash flow is reinvested and compounded annually at {(expectedInvestmentReturnRate * 100).toFixed(1)}%.
 						</p>
