@@ -390,9 +390,12 @@ export default function CareerAiResilienceCalculator() {
 	const scatterPlotWidth = scatterDimensions.width - scatterMargin.left - scatterMargin.right;
 	const scatterPlotHeight = scatterDimensions.height - scatterMargin.top - scatterMargin.bottom;
 
-	// Scale bounds
+	// Scale bounds.
+	// The x axis used to stop at $160k, so every occupation above that was clamped onto the
+	// right-hand edge — a stack of dots that looked like one bucket of identical jobs instead of
+	// the high earners they are. $300k covers the top of the OEWS distribution.
 	const salaryMin = 20000;
-	const salaryMax = 160000;
+	const salaryMax = 300000;
 	const riskMin = 0;
 	const riskMax = 100;
 
@@ -1497,7 +1500,7 @@ export default function CareerAiResilienceCalculator() {
 									})}
 
 									{/* Vertical Grid Lines for Salaries */}
-									{[20000, 50000, 80000, 110000, 140000, 160000].map((salVal) => {
+									{[20000, 60000, 100000, 140000, 180000, 220000, 260000, 300000].map((salVal) => {
 										const x = mapSalaryToX(salVal);
 										return (
 											<g key={salVal}>
