@@ -42,6 +42,13 @@ HIGH_BUCKET = 0.60        # task score >= this is high exposure
 MEDIUM_BUCKET = 0.35
 DEFAULT_IMPORTANCE = 3.0  # used when neither task nor GWA ratings exist for a task
 
+# Vintages, so a page can state which release each number came from instead of implying "current".
+# OEWS is annual: the May 2025 panel was published 15 May 2026, and the May 2026 panel does not
+# exist until roughly May 2027.
+OEWS_PANEL = "May 2025"
+OEWS_RELEASED = "2026-05-15"
+PROJECTIONS_RELEASE = "2025-2035"
+
 PHYSICAL_GWAS = (
     "4.A.3.a.1",  # Performing General Physical Activities
     "4.A.3.a.2",  # Handling and Moving Objects
@@ -644,6 +651,7 @@ def main() -> None:
             "salary": wage,
             "salary_source": salary_source,
             "salary_reference": wage_code,
+            "salary_vintage": f"BLS OEWS, {OEWS_PANEL}",
             "employment": int(employment) if employment is not None else None,
             "employment_band": employment_band(employment),
             "projection": projection,
@@ -681,6 +689,7 @@ def main() -> None:
                 "tasks_count": len(tasks),
                 "salary": wage,
                 "salary_source": salary_source,
+                "salary_vintage": f"BLS OEWS, {OEWS_PANEL}",
                 "employment": int(employment) if employment is not None else None,
                 "employment_band": employment_band(employment),
                 "projection": projection,
@@ -720,6 +729,13 @@ def main() -> None:
         "generated_at": generated_at,
         "onet_release": "31.0",
         "onet_task_vintage": max(vintages, key=vintage_key) if vintages else None,
+        "vintages": {
+            "onet_database": "31.0",
+            "onet_task_newest_record": max(vintages, key=vintage_key) if vintages else None,
+            "oews_panel": OEWS_PANEL,
+            "oews_released": OEWS_RELEASED,
+            "bls_projections": PROJECTIONS_RELEASE,
+        },
         "rubric_version": rubric_version,
         "scoring_model": scoring_model,
         "counts": {

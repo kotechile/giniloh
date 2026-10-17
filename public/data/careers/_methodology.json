@@ -1,7 +1,14 @@
 {
-  "generated_at": "2026-10-17T14:29:28Z",
+  "generated_at": "2026-10-17T14:35:27Z",
   "onet_release": "31.0",
   "onet_task_vintage": "08/2026",
+  "vintages": {
+    "onet_database": "31.0",
+    "onet_task_newest_record": "08/2026",
+    "oews_panel": "May 2025",
+    "oews_released": "2026-05-15",
+    "bls_projections": "2025-2035"
+  },
   "rubric_version": "v2.1",
   "scoring_model": "deepseek-chat",
   "counts": {

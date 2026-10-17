@@ -80,6 +80,8 @@ interface Detail {
 	salary: number | null;
 	salary_source: string;
 	salary_reference: string | null;
+	/** Which OEWS release the wage came from, e.g. "BLS OEWS, May 2025". */
+	salary_vintage: string;
 	employment: number | null;
 	employment_band: string;
 	/** BLS Employment Projections 2025-2035, or null when BLS has no equivalent code. */
@@ -138,6 +140,13 @@ const modelReport = JSON.parse(
 ) as {
 	onet_release: string;
 	counts: { tasks_scored: number; tasks_with_task_ratings: number; dwas_scored: number };
+	vintages: {
+		onet_database: string;
+		onet_task_newest_record: string | null;
+		oews_panel: string;
+		oews_released: string;
+		bls_projections: string;
+	};
 	validation: { work_context_checks: Record<string, { element: string; spearman: number | null; n: number }> };
 };
 const paceCheck = modelReport.validation.work_context_checks['4.C.3.d.3'];
@@ -252,10 +261,10 @@ const emerging = detail.emerging_tasks ?? [];
 					</div>
 					<p class="mt-3 text-[11px] leading-5 text-[#6B6B6B]">
 						{detail.salary_source === 'bls-detailed'
-							? 'BLS OEWS, this exact occupation'
+							? `${detail.salary_vintage} — this exact occupation`
 							: detail.salary === null
-								? 'No OEWS wage match for this code'
-								: `BLS OEWS ${detail.salary_reference}, broader group`}
+								? 'OEWS does not survey this occupation'
+								: `${detail.salary_vintage} — ${detail.salary_reference} group row`}
 					</p>
 				</div>
 
@@ -474,7 +483,7 @@ const emerging = detail.emerging_tasks ?? [];
 					))}
 					{!scored && (
 						<p class="rounded-xl border border-[#E5E5E5] bg-[#FBFBFB] p-4 text-sm leading-6 text-[#5E5E5E]">
-							No task statements exist for this code in O*NET release 31.0, so there is nothing to list. Salary and employment above come from BLS OEWS and are unaffected.
+							No task statements exist for this code in O*NET release 31.0, so there is nothing to list. Pay and employment above are separate BLS data and are shown only where BLS covers the occupation — the military branches are covered by neither.
 						</p>
 					)}
 				</div>
@@ -502,8 +511,8 @@ const emerging = detail.emerging_tasks ?? [];
 			<p class="mt-4 text-xs leading-6 text-[#5E5E5E]">
 				Check: across the {paceCheck.n} occupations where O*NET also rates how far machine speed sets the pace, this index moves opposite to it (Spearman ρ = {paceCheck.spearman?.toFixed(2)}). The more a job is paced by equipment, the less of its task content AI can address — the relationship you would expect if the scoring is working.
 			</p>
-			<p class="mt-4 border-t border-[#EFEFEF] pt-4 font-mono text-[10px] uppercase tracking-wider text-[#6B6B6B]">
-				Rubric {detail.methodology.rubric_version} · model {detail.methodology.scoring_model} · scheduled tasks for O*NET, not a forecast
+			<p class="mt-4 border-t border-[#EFEFEF] pt-4 font-mono text-[10px] uppercase leading-5 tracking-wider text-[#6B6B6B]">
+				Sources · O*NET {modelReport.vintages.onet_database} (task records to {modelReport.vintages.onet_task_newest_record}) · BLS OEWS {modelReport.vintages.oews_panel} · BLS projections {modelReport.vintages.bls_projections} · rubric {detail.methodology.rubric_version} · tasks for O*NET, not a forecast
 			</p>
 			<a href="/calculators/career-ai-resilience/" class="mt-4 inline-block font-mono text-[10px] uppercase tracking-wider text-[#4B6478] underline-offset-4 hover:underline">
 				See the full method &rarr;

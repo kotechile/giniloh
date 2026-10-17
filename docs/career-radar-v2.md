@@ -148,6 +148,24 @@ The sheet reports thousands of workers; the build multiplies by 1,000 so `291.6`
 Two wages now exist for the same occupation: OEWS (used) and this matrix's 2025 median (not used).
 Published salary stays on OEWS deliberately — one wage source, stated tier, no competing vintages.
 
+## 3c. Vintages are published, because "latest" differs per source
+
+Three publishers, three cadences, and a reader who assumes they are synchronised:
+
+| source | vintage used | why not newer |
+|---|---|---|
+| O*NET database | 31.0, task records to 08/2026 | current release |
+| BLS OEWS wages | **May 2025 panel**, published 2026-05-15 | the May 2026 panel does not exist until ~May 2027; OEWS is annual |
+| BLS Employment Projections | 2025–2035 | current matrix |
+
+Every occupation page states all three in a `Sources` line, and `_methodology.json.vintages` carries the
+same facts. The point is to stop anyone hunting for a "2026 national.xlsx": there isn't one, and a page
+that silently implies its wage is from this year is the actual defect.
+
+Note on the OEWS download: its `UpdateTime` sheet reads `09MAR2021` on the May 2025 file — a template
+artefact, not the data year. The sheet name (`national_M2025_dl`), the row counts (830 detailed / 454
+broad / 94 minor / 22 major / 1 total) and the release note are what identify the vintage.
+
 ## 4. Honest data labels
 
 - `salary_source` is recorded per occupation: `bls-detailed`, `bls-group` (matched a broader SOC level),
