@@ -38,19 +38,35 @@
 	--brand-slate-text: #5E5E5E;
 	--brand-muted-text: var(--ink-muted);
 	--brand-cyan: #5A7A8F;
-	--brand-emerald: #262626;
+	--brand-emerald: #047857;
 	--brand-slate: #f8fafc;
 	--brand-deep-slate: #FFFFFF;
-	--site-bg: #FFFFFF;
+
+	/* ----------------------------------------------------------------
+	   PRECISION TERMINAL SURFACES.
+
+	   The canvas is a matte paper grey (#FAFAFA), not pure white. Pure white
+	   everywhere flattened every panel into the page, so cards had to earn
+	   their separation with borders nobody could see; the off-white canvas
+	   gives the eye a floor, and a white card on it reads as a raised surface
+	   without a single shadow (the design system bans those).
+
+	   --site-bg is the page floor. --surface is what sits on it.
+	   ---------------------------------------------------------------- */
+	--site-bg: #FAFAFA;
+	--surface: #FFFFFF;
+	--line: #E5E5E5;
+	--line-strong: #C9CCD2;
 
 	/* ----------------------------------------------------------------
 	   INK SCALE. Every step clears WCAG AA (4.5:1) on the LIGHTEST surface
 	   it can land on — measured, not eyeballed, with scripts/contrast-audit.mjs:
 
-	     --ink        on #FFFFFF .... 17.4:1
-	     --ink-heading on #F9FAFB ... 14.5:1
-	     --ink-body   on #F9FAFB ....  6.2:1
-	     --ink-muted  on #F9FAFB ....  5.1:1   (holds at 9px labels)
+	     --ink        on #FAFAFA .... 17.8:1   (was #1A1A1A, 17.2:1)
+	     --ink-body   on #FAFAFA ....  7.2:1   (was #5E5E5E, 6.2:1)
+	     --ink-muted  on #FAFAFA ....  4.6:1   (was #6B6B6B, 5.1:1) — metadata
+	                  NEVER on a #F4F4F5 fill: 4.4:1 there, so keep it on canvas
+	                  or white only.
 	     --ink-faint  DECORATIVE ONLY — rules, dots, hairlines. 3.36:1 on
 	                  white, so never put text on it.
 
@@ -59,20 +75,25 @@
 	   tab. It accounted for 98 of 129 distinct AA failures across the site —
 	   one token, not one careless component.
 	   ---------------------------------------------------------------- */
-	--ink: #1A1A1A;
-	--ink-heading: #262626;
-	--ink-body: #5E5E5E;
-	--ink-muted: #6B6B6B;
+	--ink: #111318;
+	--ink-heading: #111318;
+	--ink-body: #4B5563;
+	--ink-muted: #6B7280;
 	--ink-faint: #8C8C8C;
 
 	/* INTERACTIVE + SEMANTIC.
-	   #5A7A8F is the brand steel blue and passes on white (4.55:1), but text
-	   does not only land on white: it fails on the gray-50 hover fill (4.35:1),
-	   on #E5E5E5 (3.61:1) and on the slate chips (2.47:1). So interactive TEXT
-	   uses the deeper step and #5A7A8F stays as the line/accent colour.
-	   Hue family is unchanged — the steel blue just gets one step deeper. */
-	--accent: #4B6478;        /* 6.19:1 white · 5.92:1 on #F9FAFB · 4.91:1 on #E5E5E5 */
+	   #5A7A8F is the brand steel blue; on the matte canvas it measures 4.36:1,
+	   which is why interactive TEXT uses the deeper step (#4B6478, 5.93:1) and
+	   #5A7A8F stays as the line/accent colour.
+	   Emerald is the one positive-value token. #059669 is a FILL/line colour
+	   only (3.61:1 on canvas — fails as text); text uses #047857 (5.25:1).
+	   ---------------------------------------------------------------- */
+	--accent: #4B6478;        /* 5.93:1 canvas · 6.19:1 white · 4.91:1 on #E5E5E5 */
 	--accent-line: #5A7A8F;   /* borders, 4px section accents, list bullets */
+
+	--positive: #059669;      /* fills, trajectory lines, active slider tracks */
+	--positive-ink: #047857;  /* the same signal as TEXT (5.25:1 canvas) */
+	--negative: #A55252;      /* fills / text, shares the high-risk step */
 
 	/* RISK PALETTE — darkened to AA on white, hue family preserved. */
 	--risk-high: #A55252;     /* 5.35:1  (was #B85C5C — 4.45:1, failed) */
@@ -87,7 +108,7 @@
 	--chart-muted: #5E5E5E;
 
 	--surface-hover: #F9FAFB;
-	--surface-panel: #F8FAFC;
+	--surface-panel: #FAFAFA;
 }
 
 @theme {
@@ -101,6 +122,20 @@
 	--color-brand-emerald: var(--brand-emerald);
 	--color-brand-slate: var(--brand-slate);
 	--color-brand-deep-slate: var(--brand-deep-slate);
+
+	/* Precision Terminal tokens as utilities: bg-canvas, bg-surface, text-ink,
+	   text-ink-muted, border-line, text-positive-ink. Prefer these over new
+	   hex literals — a hex in a component cannot be re-tuned from one place. */
+	--color-canvas: var(--site-bg);
+	--color-surface: var(--surface);
+	--color-line: var(--line);
+	--color-line-strong: var(--line-strong);
+	--color-ink: var(--ink);
+	--color-ink-body: var(--ink-body);
+	--color-ink-muted: var(--ink-muted);
+	--color-positive: var(--positive);
+	--color-positive-ink: var(--positive-ink);
+	--color-negative: var(--negative);
 }
 
 /* ----------------------------------------------------------------
@@ -387,30 +422,30 @@
   margin-bottom: 3rem !important;
   width: 100% !important;
   border-collapse: collapse !important;
-  border-top: 2px solid #262626 !important;
+  border-top: 1px solid var(--line) !important;
 }
 
 .prose th,
 .article-body th {
-  padding: 1.25rem 1rem !important;
+  padding: 1rem 0.9rem !important;
   font-family: var(--font-mono), ui-monospace, monospace !important;
-  font-size: 1.05rem !important;
+  font-size: 0.7rem !important;
   font-weight: 700 !important;
   line-height: 1.4 !important;
   text-transform: uppercase !important;
-  letter-spacing: 0.08em !important;
-  color: #262626 !important;
+  letter-spacing: 0.14em !important;
+  color: var(--ink-muted) !important;
   text-align: left !important;
-  border-bottom: 2px solid #E5E5E5 !important;
+  border-bottom: 1px solid var(--line) !important;
 }
 
 .prose td,
 .article-body td {
-  padding: 1.25rem 1rem !important;
-  color: #262626 !important; /* Charcoal Text */
-  font-size: 1.15rem !important;
-  line-height: 1.7 !important;
-  border-bottom: 1px solid #E5E5E5 !important;
+  padding: 0.9rem !important;
+  color: var(--ink) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  border-bottom: 1px solid var(--line) !important;
 }
 
 .prose td p,
@@ -600,7 +635,7 @@
 /* WordPress injected takeaway summary block */
 .prose .geo-key-takeaways,
 .prose [data-geo-injected="key-takeaways"] {
-  background: #F8FAFC !important; /* Cool pale gray background */
+  background: #FFFFFF !important; /* Raised surface on the matte canvas */
   color: #262626 !important;      /* Crisp charcoal body text */
   border: 1px solid #E5E5E5 !important;
   border-left: 4px solid #5A7A8F !important; /* Steel blue left accent border */
@@ -665,7 +700,7 @@
 .article-body blockquote {
   border: 1px solid #E5E5E5 !important;
   border-left: 4px solid #5A7A8F !important;
-  background-color: #F8FAFC !important; /* Light pale background */
+  background-color: #FFFFFF !important; /* Raised surface on the matte canvas */
   padding: 1.5rem 2rem !important;
   border-radius: 0 0.75rem 0.75rem 0 !important;
   color: #262626 !important;
@@ -690,7 +725,7 @@
 /* Clean, light code block styling */
 .prose pre,
 .article-body pre {
-  background-color: #F8FAFC !important;
+  background-color: #FFFFFF !important;
   border: 1px solid #E5E5E5 !important;
   border-radius: 0.75rem !important;
   padding: 1.25rem 1.5rem !important;
@@ -740,7 +775,7 @@
 
 /* 2. Ditch Background Grids and Orbs */
 .site-background {
-  background-color: #FFFFFF !important;
+  background-color: var(--site-bg) !important;
   background-image: none !important;
 }
 .orb, .orb-one, .orb-two, .orb-three {
@@ -947,25 +982,25 @@ button.bg-black {
 /* 8. Table Alignment and Formatting */
 .prose table,
 .article-body table {
-  border-top: 2px solid #1A1A1A !important;
+  border-top: 1px solid var(--line) !important;
   width: 100% !important;
 }
 .prose th,
 .article-body th {
   text-align: left !important;
-  color: #1A1A1A !important;
-  font-size: 1.05rem !important;
+  color: var(--ink-muted) !important;
+  font-size: 0.7rem !important;
   font-weight: 700 !important;
-  letter-spacing: 0.08em !important;
-  border-bottom: 2px solid #E5E5E5 !important;
+  letter-spacing: 0.14em !important;
+  border-bottom: 1px solid var(--line) !important;
 }
 .prose td,
 .article-body td {
   text-align: left !important;
-  color: #1A1A1A !important;
-  font-size: 1.15rem !important;
-  line-height: 1.7 !important;
-  border-bottom: 1px solid #E5E5E5 !important;
+  color: var(--ink) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  border-bottom: 1px solid var(--line) !important;
 }
 .prose tr:hover td,
 .article-body tr:hover td {

@@ -81,11 +81,11 @@ const shareImage = image || defaultImage;
 		<title>{title}</title>
 		<slot name="head" />
 	</head>
-	<body class="min-h-screen bg-white text-[#1A1A1A] antialiased">
+	<body class="min-h-screen text-[#111318] antialiased">
 		<SiteNav />
 		<SearchOverlay />
 		<main class="relative z-10">
-			<div class="mx-auto max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1600px] px-4 pb-10 pt-6 sm:px-6 lg:px-8">
+			<div class="mx-auto max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1600px] px-4 pb-12 pt-8 sm:px-6 lg:px-8">
 				<slot />
 			</div>
 			{productCta && <ProductCTA match={productCta} />}

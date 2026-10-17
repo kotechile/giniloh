@@ -7,7 +7,7 @@ This styleguide documents the minimalist, high-contrast, "unboxed" visual identi
 ## 1. Core Principles
 
 - **Unboxed Layouts:** Eliminate unnecessary bounding boxes, outer borders (e.g. `border-slate-800`, panels), and nested card outlines. Rely on negative space to naturally delineate logical sections.
-- **Maximum Contrast & Heavy Hierarchy:** Pair pure white backgrounds (`#FFFFFF`) with rich near-black typography (`#1A1A1A`) and heavy font weights (`font-extrabold`, `font-black`).
+- **Maximum Contrast & Heavy Hierarchy:** Pair a matte paper canvas (`#FAFAFA`) with white surfaces and obsidian typography (`#111318`), and keep heavy font weights (`font-extrabold`, `font-black`) for hierarchy.
 - **Desaturated Accent Discipline:** Eliminate bright neon/alarm colors. Use desaturated, earthy tones for data metrics and quiet steel blue (`#5A7A8F`) for interactive state indicators.
 - **Breathable Controls:** Space interactive components generously so each control feels like a distinct step rather than a cramped dashboard control panel.
 - **8-Point Grid System:** Enforce an 8pt grid system for all margins, padding, and flex/grid gaps. Use standard Tailwind spacing (e.g., `gap-4` for 16px, `gap-8` for 32px, `py-12` for 48px).
@@ -16,7 +16,7 @@ This styleguide documents the minimalist, high-contrast, "unboxed" visual identi
 Under NO circumstances should you use the following Tailwind classes or CSS properties:
 - **NO Gradients:** Never use `bg-gradient-*`, `from-*`, `to-*`, or `via-*`.
 - **NO Shadows:** Never use `shadow-sm`, `shadow-md`, `shadow-lg`, or `drop-shadow`. UI elements must sit flat on the page.
-- **NO Dark Hero Banners:** Never use `bg-slate-900`, `bg-black`, or dark backgrounds for header/hero sections. All sections must share the white page background.
+- **NO Dark Hero Banners:** Never use `bg-slate-900`, `bg-black`, or dark backgrounds for header/hero sections. All sections share the matte canvas (`#FAFAFA`) or sit on a white surface.
 - **NO Gray Metric Cards:** Never wrap KPI numbers or summary metrics in gray background boxes (`bg-gray-100`, `bg-slate-50`).
 - **NO Rogue Colors:** If a color hex code is not explicitly listed in Section 2, DO NOT USE IT. (e.g., No bright blues like `text-blue-500`, no bright greens for money).
 
@@ -28,20 +28,34 @@ Every value below is held to **WCAG AA (4.5:1) on the lightest surface it can la
 `#F9FAFB` hover fill and tinted chips, not just the white page. The ratios are measured, not estimated:
 run `npm run audit:contrast` and see `docs/contrast-audit.md`.
 
-### Typography & Structure
-- **Page Background:** `#FFFFFF` (Solid pure white surface; ditch background grid lines)
-- **Primary Text / Headings / Values:** `#1A1A1A` (Rich near-black; 17.4:1 on white)
-- **Body Paragraphs / Explanatory:** `#5E5E5E` (6.5:1 on white, 6.2:1 on the gray-50 fill)
-- **Subtle Accents / Metadata / Eyebrows:** `#6B6B6B` (5.33:1 on white, 5.10:1 on the gray-50 fill — holds at 9px)
+### Typography & Structure — "Precision Terminal"
+- **Canvas (page floor):** `#FAFAFA` (matte paper; `--site-bg` / `bg-canvas`). Not pure white: a page
+  that is white edge to edge leaves cards nowhere to sit, so every panel needs a box to be visible.
+- **Surface / Ghost Card:** `#FFFFFF` (`--surface` / `bg-surface`) with a `1px` hairline `#E5E5E5`.
+  A white card on the matte canvas reads as raised **without** a shadow.
+- **Primary Text / Headings / Values:** `#111318` (17.8:1 on canvas, 18.6:1 on a card)
+- **Body Paragraphs / Explanatory:** `#4B5563` (7.2:1 on canvas) — one step darker than before for long
+  analytical reading
+- **Subtle Accents / Metadata / Eyebrows:** `#6B7280` (4.6:1 on canvas, 4.8:1 on white — holds at 9px).
+  Never place it on the `#F4F4F5` hover fill: 4.4:1 there.
 - **Decorative Only — never for text:** `#8C8C8C`. It measures **3.36:1 on white** and 1.56:1 on an active
   blue tab, so it is for hairlines, dots and separators. It used to be the metadata ink; that one token
   produced 98 of 129 distinct AA failures across the site.
-- **Structural Borders / Dividers:** `#E5E5E5` / `gray-200` (Soft gray lines for subtle division)
+- **Structural Borders / Dividers:** `#E5E5E5` (hairlines) — `#C9CCD2` is the hover-strength step.
 - **Inactive Slider Track:** `#E5E5E5` (Faint background track for range sliders)
 
 These live as custom properties in `src/styles/global.css` (`--ink`, `--ink-heading`, `--ink-body`,
 `--ink-muted`, `--ink-faint`, `--accent`, `--accent-line`, `--risk-*`, `--chart-label`). Components may
 still write the hex directly; keep the value in step with this table.
+
+### Inversions & Accents (one signal only)
+- **Positive value / primary action:** fill `#059669` (3.6:1 — **fill and line only, never text**),
+  text `#047857` (5.25:1). Emerald is reserved for a **positive financial delta** (compounding gain,
+  savings delta, cost reduction) and primary actions. It is not decoration: a "live" or "status" chip
+  stays monochrome and lets the number carry the colour.
+- **Negative value:** shares the high-risk brick `#A55252`.
+- **Chrome stays monochrome.** Badges, pills, chips, icon tiles, hover states and card borders use ink
+  and hairline only. Colour enters the page through data: charts, bars, deltas, active slider states.
 
 ### Semantic Risk Palette (Data & Controls)
 - **High Risk (Routine Tasks):** `#A55252` (Muted Brick — 5.35:1; was `#B85C5C` at 4.45:1, which failed)
@@ -76,8 +90,13 @@ still write the hex directly; keep the value in step with this table.
 
 ## 4. Component Rules
 
-### A. Navigation Tabs
-Flat underline design (no pill backgrounds).
+### A. Navigation
+The site header is **static and in normal document flow** — it scrolls away with the page. It is a
+full-width bar with one `1px` hairline under it (`border-bottom: #E5E5E5`), never a floating pill and
+never `position: fixed`/`sticky`: a floating bar permanently occludes a band of the content readers came
+for. Header height is `h-16`; the wordmark sits left, links right-of-centre, search + menu at the end.
+
+Tabs and nav items use a flat underline (no pill backgrounds).
 - **Active State:** `border-b-2 border-[#1A1A1A] text-[#1A1A1A] font-bold pb-3`
 - **Inactive State:** `border-transparent text-[#8C8C8C] hover:text-[#1A1A1A] pb-3`
 
@@ -89,7 +108,10 @@ Fill outer rings with semantic colors. Insert a 2.5px pure white stroke between 
 - **Thumb/Active:** `accent-[#5A7A8F]` (Flat design, no shadows)
 
 ### D. Data Tables
-Eliminate outer card wrappers. Left-align table headers and content (Occupation Title, Vulnerability Score bars, Salaries). Render all data values in high-contrast `#1A1A1A`. Never use neon green for salaries.
+Eliminate outer card wrappers and **all** alternating row fills. Separate rows with one `1px` hairline
+`#E5E5E5` only; no outer frame, no zebra striping, no hover flood. Headers are small mono caps
+(`0.7rem`, `letter-spacing: 0.14em`) in `#6B7280`; body cells are `0.95rem` in `#111318` and left-aligned,
+with numerical columns right-aligned so figures line up for scanning. Never use neon green for salaries.
 
 ### E. Button & Action Hierarchy
 - **Primary Button:** Near-black `#1A1A1A` background, white text.
@@ -194,8 +216,8 @@ Keep inputs flat and minimal. Never use inset shadows. Background must be `bg-wh
 
 To prevent visual inconsistencies ("Frankenstein UI") where dark-mode calculator elements exist inside light-themed pages:
 - **No Dark Mode Banners:** Hero sections, analytics summaries, and feature headers MUST use the default `bg-white` surface. Do not create inverted "dark sections" anywhere on the page.
-- **Transparent or White Containers:** Replace dark wrappers with pure white (`#FFFFFF`) backgrounds, or leave them transparent so they inherit the page body.
-- **Text Legibility:** Because all backgrounds must be white/transparent, never render text in white or light gray. All primary text must be `#1A1A1A` and secondary text `#5E5E5E`.
-- **Metric Containers:** Replace all boxed wrappers around summary data with pure white (`#FFFFFF`) backgrounds and rely solely on the 8pt grid gap spacing to separate them.
+- **Transparent or White Containers:** Replace dark wrappers with the white surface (`#FFFFFF`), or leave them transparent so they inherit the matte canvas.
+- **Text Legibility:** Because every background is canvas or white surface, never render text in white or light gray outside a near-black button. Primary text is `#111318`, secondary text `#4B5563`, metadata `#6B7280`.
+- **Metric Containers:** Replace all boxed wrappers around summary data with naked type on the canvas and rely on the 8pt grid gap plus 1px hairline dividers to separate them.
 - **Forced Class Contrast Rule:** The global style system forces class names like `.text-white` or `[class*="text-white"]` to always override generic body/container rules to ensure high-contrast white labels on active/dark buttons remain fully white.
 - **Tailwind v4 Gradients & Color Overrides:** Global overrides explicitly target arbitrary linear/radial gradients inside the compiled React components to convert them flat white and map low-contrast active text variables to the desaturated Steel Blue `#5A7A8F` accent.
