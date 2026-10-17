@@ -53,6 +53,16 @@ export interface WordPressPost {
 	featuredImageAlt: string;
 	categoryLabel: string | null;
 	categorySlug: string | null;
+	/**
+	 * WordPress' own image derivatives, smallest first, from the featured media's media_details.
+	 *
+	 * Empty when the payload carries no sizes, in which case callers fall back to the single
+	 * source URL — never to a URL this code invented.
+	 */
+	featuredImageSizes: { url: string; width: number; height: number }[];
+	/** Intrinsic dimensions of the original, for width/height attributes. Null when unknown. */
+	featuredImageWidth: number | null;
+	featuredImageHeight: number | null;
 }
 
 export interface WordPressCategory {
@@ -123,7 +133,17 @@ function stripHtml(value: string | undefined) {
 function normalizePost(post: WordPressPostResponse): WordPressPost {
 	const terms = post._embedded?.['wp:term']?.flat() ?? [];
 	const category = terms.find((term) => term?.slug && term?.name);
-	const featuredMedia = post._embedded?.['wp:featuredmedia']?.[0];
+	const featuredMedia = post._embedded?.['wp:featuredmedia']?.[0] as unknown as
+		| {
+				source_url?: string;
+				alt_text?: string;
+				media_details?: {
+					width?: number;
+					height?: number;
+					sizes?: Record<string, { source_url?: string; width?: number; height?: number }>;
+				};
+		  }
+		| undefined;
 	
 	let featuredImage = featuredMedia?.source_url ?? null;
 	const apiBase = getWordPressApiBase();
@@ -132,6 +152,25 @@ function normalizePost(post: WordPressPostResponse): WordPressPost {
 	if (featuredImage && featuredImage.startsWith('/') && apiBase) {
 		featuredImage = `${apiBase}${featuredImage}`;
 	}
+
+	// Responsive sources straight from WordPress' own derivatives. Measured before adding: the
+	// featured originals are 1344x768 and 1376x768, and every card for every device was fetching
+	// that original to fill a slot at most 208 CSS pixels wide. Astro's remote-image optimisation
+	// was not an option here — it needs network access for every image on every build, and this
+	// build has to survive a restricted environment (AGENTS.md) — so this uses the data the
+	// response already carries and degrades to the plain src when it is absent.
+	const mediaDetails = featuredMedia?.media_details;
+	const absolute = (url: string) => (url.startsWith('/') && apiBase ? `${apiBase}${url}` : url);
+	const featuredImageSizes = Object.values(mediaDetails?.sizes ?? {})
+		.filter((size) => Boolean(size?.source_url && size?.width && size?.height))
+		.map((size) => ({
+			url: absolute(size.source_url as string),
+			width: size.width as number,
+			height: size.height as number
+		}))
+		.sort((a, b) => a.width - b.width);
+	const featuredImageWidth = typeof mediaDetails?.width === 'number' ? mediaDetails.width : null;
+	const featuredImageHeight = typeof mediaDetails?.height === 'number' ? mediaDetails.height : null;
 
 	let htmlContent = post.content?.rendered || '';
 	
@@ -200,6 +239,9 @@ function normalizePost(post: WordPressPostResponse): WordPressPost {
 		modified: post.modified ?? post.date ?? null,
 		featuredImage,
 		featuredImageAlt: featuredMedia?.alt_text || '',
+		featuredImageSizes,
+		featuredImageWidth,
+		featuredImageHeight,
 		categoryLabel: category?.name ? stripHtml(category.name).replace(/:\s*$/, '').trim() : null,
 		categorySlug: category?.slug ?? null
 	};

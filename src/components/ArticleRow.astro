@@ -1,6 +1,7 @@
 ---
 import type { WordPressPost } from '../lib/wordpress';
 import { estimateReadingMinutes } from '../lib/reading-time';
+import { getKeyStat } from '../lib/key-stats';
 
 interface Props {
 	post: WordPressPost;
@@ -19,6 +20,15 @@ const { post, topics } = Astro.props;
  */
 const href = post.slug ? `/${post.slug}/` : post.link;
 const minutes = estimateReadingMinutes(post.content);
+const stat = getKeyStat(post);
+
+// Smaller files to smaller slots. `sizes` matches the thumbnail's real rendered width (w-44 is
+// 176px, md:w-52 is 208px) so the browser can pick 300w for phones and 768w for desktop retina
+// instead of pulling the ~1344px original into a 208px box.
+const srcset = post.featuredImageSizes.length
+	? post.featuredImageSizes.map((size) => `${size.url} ${size.width}w`).join(', ')
+	: null;
+const imageSizes = '(min-width: 768px) 208px, (min-width: 640px) 176px, 100vw';
 
 function formatDate(dateStr: string | null) {
 	if (!dateStr) return 'Recent';
@@ -38,8 +48,13 @@ function formatDate(dateStr: string | null) {
 				post.featuredImage ? (
 					<img
 						src={post.featuredImage}
+						srcset={srcset}
+						sizes={srcset ? imageSizes : undefined}
+						width={post.featuredImageWidth ?? undefined}
+						height={post.featuredImageHeight ?? undefined}
 						alt={post.featuredImageAlt || post.title}
 						loading="lazy"
+						decoding="async"
 						class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
 					/>
 				) : (
@@ -70,6 +85,13 @@ function formatDate(dateStr: string | null) {
 			</h3>
 
 			{post.excerpt && <p class="mt-2 text-sm leading-relaxed text-[#5E5E5E] line-clamp-2">{post.excerpt}</p>}
+
+			{stat && (
+				<p class="mt-3 inline-flex flex-wrap items-baseline gap-x-2 rounded-lg border border-[#E5E5E5] bg-[#F8FAFC] px-3 py-1.5" data-key-stat={stat.value}>
+					<span class="font-mono text-base font-bold text-[#1A1A1A]">{stat.value}</span>
+					<span class="font-mono text-[0.7rem] uppercase tracking-wider text-[#6B6B6B]">{stat.label}</span>
+				</p>
+			)}
 		</div>
 
 		<div class="hidden lg:flex items-center shrink-0 pr-2 text-[#6B6B6B] group-hover:text-[#1A1A1A] transition-colors">

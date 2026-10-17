@@ -11,6 +11,7 @@
     "preview": "astro preview",
     "check": "astro check",
     "audit:contrast": "node scripts/contrast-audit.mjs",
+    "audit:key-stats": "node scripts/key-stat-audit.mjs",
     "audit:layout": "node scripts/layout-audit.mjs",
     "audit:timeline": "node scripts/timeline-audit.mjs",
     "audit:probe": "node scripts/layout-probe.mjs",

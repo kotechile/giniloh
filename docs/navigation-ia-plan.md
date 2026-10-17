@@ -1,6 +1,6 @@
 # Navigation & information architecture — plan
 
-Status: **Phases 1, 2, 3, 5, 6 shipped** — the term and route rename, the curated taxonomy, the archive
+Status: **Phases 1–6 shipped** — the term and route rename, the curated taxonomy, the archive
 hub, the footer, the redirects and verification. **Phase 4 is half done**: card scannability shipped with
 Phase 3; the sourced stat callouts are open by design (see below). Verified results and corrections are
 recorded under each phase.
@@ -176,19 +176,41 @@ that it does the maths honestly — deleted, with its replacement (`ArticleRow`)
 carries. This is the same failure as the `alert()` form and the invented hub counts: an interface
 asserting a result that did not happen. All three are now gone from the repo.
 
-**Phase 4 (the rest) — stat callouts. Still open, by design.**
-The scannability half shipped with Phase 3: two-line clamped summaries, topic pill, date and reading
-time are live in `ArticleRow`, so every card is scannable now. What remains is the content-side half —
-lifting a quantitative anchor that genuinely appears in a piece (the `$47.66` median wage, the `1.26
-hours` figure) into a callout.
-Interim: build-time extraction from the post's existing `[data-geo-injected="key-takeaways"]` block,
-emitted **only** when exactly one unambiguous currency/percent/duration token exists. Durable: an
-editorial field on the WordPress post (`key_stat` + `key_stat_label`) read from the REST payload. Omit
-when absent; never fabricate a number — this session found three separate places where the site had done
-exactly that, and a wrong stat would be the fourth.
-Tokens: stat in `--ink`, label in `--ink-muted` (the AA scale from `docs/contrast-audit.md`).
-*Acceptance:* contrast gate green with callouts present; every rendered stat traceable to post content.
-*Effort:* ~3h interim, ~1h front end once a WP field exists.
+**Phase 4 — stat callouts. ✅ SHIPPED, by a different route than planned.**
+The planned route was extraction, and it was prototyped and measured before being rejected: of the 17
+posts whose body carries a `[data-geo-injected="key-takeaways"]` block, **14 hold two or more distinct
+figures** (one holds more than 50) and exactly one holds a single figure, so the "exactly one
+unambiguous token" rule could emit a callout for 1 post in 17. Worse, the three figures the original
+critique named as examples appear in **none** of those blocks — they live in body prose. Extraction
+would have been a machine for quoting one number out of context, on a site whose pitch is that its
+numbers are trustworthy.
+Shipped instead: the figure is **authored once per post** in `src/data/key-stats.mjs`, and
+`src/lib/key-stats.ts` asserts that the value appears verbatim in that post's own content at build time.
+No entry, or a value the article no longer says, means no callout (plus a build-log warning). Two
+figures are live; `$1,850` was rejected while authoring because it exists only in its post's *title*,
+not its body — exactly what the assertion exists to catch.
+`npm run audit:key-stats` gates it after the build: every rendered figure must be authored, and on the
+article's own page it must appear in the body as well as in the callout.
+*Verified:* 6 callouts across the archive, the homepage and both article pages; 2 verified against their
+article bodies; gate exit 0. *Effort (actual):* ~1.5h including the measurement that killed the original
+design.
+
+**Found on the way — the article template's own fabricated metrics. ✅ FIXED.**
+The sidebar `Decision_Metrics` card reported EST_ROI, IMPLEMENTATION_EFFORT and STRATEGIC_VALUE with
+progress bars, derived from the **category slug** through branches keyed on `buying-decisions`,
+`decision-frameworks` and `money-decisions` — slugs that no longer exist. Every one of the 27 articles
+therefore fell through to the same defaults and rendered an identical "High / Medium / High" with
+invented bar widths, on the most-read template. Removed, with a comment recording why. Replaced by the
+sourced figure. Two decorative "social" controls that looked clickable and had no handler are now real X
+and LinkedIn share links, and the hero image gained intrinsic dimensions — it is `w-full h-auto`, so the
+page reflowed when it loaded, a CLS cost on the LCP element of every article.
+
+**Images — ✅ SHIPPED: responsive sources from WordPress' own derivatives.**
+Cards were fetching the 1344–1376px featured original to fill a slot at most 208 CSS pixels wide. The
+payload already carries `media_details.sizes`, so `WordPressPost` now exposes `featuredImageSizes` and
+the cards emit `srcset` (150w–2560w) with `sizes`, `width`/`height` and `decoding="async"`. Build-time
+optimisation of remote images was rejected: it needs network access for every image on every build, and
+this build must survive a restricted environment. Every derivative URL was checked and returns 206.
 
 **Phase 5 — footer clarify + newsletter. ✅ SHIPPED** (see above).
 Rename the jargon ("System Map" → browse-oriented label, "Active Modules" → Topics, "Sync" →
