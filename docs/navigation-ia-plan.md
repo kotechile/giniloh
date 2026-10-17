@@ -1,7 +1,9 @@
 # Navigation & information architecture — plan
 
-Status: **Phases 1 + 2 shipped** (`/categories/` → `/articles/`, curated taxonomy, 301s). Phases 3–6
-pending. Verified results and corrections are recorded below.
+Status: **Phases 1, 2, 3, 5, 6 shipped** — the term and route rename, the curated taxonomy, the archive
+hub, the footer, the redirects and verification. **Phase 4 is half done**: card scannability shipped with
+Phase 3; the sourced stat callouts are open by design (see below). Verified results and corrections are
+recorded under each phase.
 
 ## What shipped in Phases 1 + 2
 
@@ -142,35 +144,65 @@ renamed path emits a real nginx 301 generated from the same list.
 four cards gone the hub reads cleanly, and the homepage already carries an explicit enterprise hand-off
 section — adding a second one to the hub is a judgement call worth making with you, not unilaterally.
 
-**Phase 3 — the hub becomes an archive with an in-page topic filter.**
-`/articles/` opens with featured/latest pieces (title, 2-line clamped summary, topic pill, date, read
-time) — *titles before taxonomy* — then a compact "Browse by topic" index below for taxonomy browsers.
-Chips filter the rendered list in place; **all cards stay in the HTML**, so no-JS visitors and crawlers
-see every article, and each chip also links to its topic page. The homepage keeps its bento: the
-homepage and the archive have different jobs (themed entry vs. chronological retrieval).
-*Acceptance:* harvester harnesses green; chips keyboard-accessible (`aria-pressed`) with ≥44px targets;
-no layout shift; the five consumer pillar pages stay reachable. *Risk:* medium. *Effort:* ~4h.
+**Phase 3 — the hub becomes an archive. ✅ SHIPPED.**
+`/articles/` is now the article stream: every post on the property, newest first, each row carrying its
+topic, date, measured read time and a two-line summary, with the topics as a filter above and the
+"Browse by topic" cards below. It previously opened with nine taxonomy cards and **no article titles at
+all**, so a reader had to guess which of nine categories held what they wanted and click through a pillar
+page to see a single title.
+The filter is a progressive enhancement over a complete list: every row is in the HTML and a chip only
+toggles `hidden`, so a no-JS reader and a crawler see all 27 articles. Chips filter in place (buttons
+with `aria-pressed` plus a `role="status"` announcement); the topic cards below navigate. Two controls,
+two jobs, so neither is ambiguous — the earlier draft had the chips both filtering *and* navigating.
+*Verified:* 27 rows, 6 chips, 4 topic cards in the built HTML; every chip maps to real rows, so no chip
+can produce an empty list; 27 measured read times, varied (3–20 min); contrast 0 of 631 elements below
+AA; OVERFLOW=0px at 500px; screenshots clean at 1440px and 500px. *Effort (actual):* ~2h.
 
-**Phase 4 — card scannability + stat callouts.**
-Two-line clamped summaries, topic pill, date + reading time. The stat callout is sourced from real
-content only: interim — build-time extraction from the post's existing
-`[data-geo-injected="key-takeaways"]` block, emitted **only** when exactly one unambiguous
-currency/percent/duration token exists; durable — an editorial field on the WordPress post
-(`key_stat` + `key_stat_label`) read from the REST payload. Omit when absent; never fabricate a number.
+The row markup is now one component (`ArticleRow.astro`) shared by the homepage feed and the archive,
+and it links to the **local** `/<slug>/` route rather than the WordPress canonical.
+
+**Phase 5 — footer honesty. ✅ SHIPPED.**
+The newsletter form is gone. It ran `onsubmit="…alert('Transmission logged. Welcome to the System.')"`
+and cleared itself: it told a reader they had subscribed while storing nothing, and there is no list, no
+endpoint and no published address behind it. Restore only alongside a real provider.
+Labels renamed for findability while keeping the site's voice: "System Map" → "Browse",
+"Active Modules" → "Topics", "Home / Dashboard" → "Home".
+
+**Phase 4, partly done ahead of schedule.** Auditing the cards turned up `PostCard.astro`: dead code
+(zero imports) that derived an **"Exp. ROI" percentage and an "Effort" rating from the title's length**
+(`title.length % 3` → 14.2% / 8.5% / 21.0%) and rendered them as facts, alongside placeholder excerpt
+copy about a "Zenith portal". Never visible to a reader, but a loaded gun on a site whose entire pitch is
+that it does the maths honestly — deleted, with its replacement (`ArticleRow`) showing only what the post
+carries. This is the same failure as the `alert()` form and the invented hub counts: an interface
+asserting a result that did not happen. All three are now gone from the repo.
+
+**Phase 4 (the rest) — stat callouts. Still open, by design.**
+The scannability half shipped with Phase 3: two-line clamped summaries, topic pill, date and reading
+time are live in `ArticleRow`, so every card is scannable now. What remains is the content-side half —
+lifting a quantitative anchor that genuinely appears in a piece (the `$47.66` median wage, the `1.26
+hours` figure) into a callout.
+Interim: build-time extraction from the post's existing `[data-geo-injected="key-takeaways"]` block,
+emitted **only** when exactly one unambiguous currency/percent/duration token exists. Durable: an
+editorial field on the WordPress post (`key_stat` + `key_stat_label`) read from the REST payload. Omit
+when absent; never fabricate a number — this session found three separate places where the site had done
+exactly that, and a wrong stat would be the fourth.
 Tokens: stat in `--ink`, label in `--ink-muted` (the AA scale from `docs/contrast-audit.md`).
 *Acceptance:* contrast gate green with callouts present; every rendered stat traceable to post content.
-*Risk:* low–medium (extraction quality). *Effort:* ~3h interim, ~1h front end once a WP field exists.
+*Effort:* ~3h interim, ~1h front end once a WP field exists.
 
-**Phase 5 — footer clarify + newsletter.**
+**Phase 5 — footer clarify + newsletter. ✅ SHIPPED** (see above).
 Rename the jargon ("System Map" → browse-oriented label, "Active Modules" → Topics, "Sync" →
-Subscribe), remove the duplicated Guides/Categories pair, unify the cross-property link to one
-destination, and replace the fake newsletter with a link to a real signup (or wire an endpoint if you
-have one). Keep the mental-model card.
-*Acceptance:* no jargon label remains; no form that lies. *Risk:* low. *Effort:* ~1h.
+Subscribe), remove the duplicated Guides/Categories pair, unify the cross-property link, and replace the
+fake newsletter. Shipped as: labels renamed, duplicate entry removed, the false form deleted outright.
+Not shipped: a real signup link — there is no endpoint or published address, so inventing one would have
+repeated the fake form's lie in a different shape. Wire a provider and the block can come back.
+*Acceptance met:* no jargon label remains; no form that lies. *Effort (actual):* ~30min.
+Kept: the mental-model card (it is real content and the best thing in the footer).
 
-**Phase 6 — verify and record.**
-301 map + `generate-nginx-redirects.mjs`; `validate-routing.mjs`; both audit harnesses on the changed
-routes; update this file's status and `docs/contrast-audit.md`; then commit and push.
+**Phase 6 — verify and record. ✅ SHIPPED.**
+301 map + `generate-nginx-redirects.mjs` (10 category paths, 106 rules total); both audit harnesses run
+on every changed route (contrast 0 failures across 7 + 4 pages; layout OVERFLOW=0px at 500px); status
+recorded in this file; four commits pushed to `main`.
 
 ---
 

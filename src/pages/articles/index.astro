@@ -1,44 +1,68 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import JsonLd from '../../components/JsonLd.astro';
+import ArticleRow from '../../components/ArticleRow.astro';
 import { getContentCategories } from '../../lib/categories';
+import { fetchAllPosts } from '../../lib/wordpress';
 
+/**
+ * The editorial archive: articles first, taxonomy second.
+ *
+ * The topic filter is a progressive enhancement over a complete list — every article is rendered
+ * into the HTML unconditionally and the chip only toggles `hidden`, so a reader without JavaScript,
+ * and a crawler, see every article either way. Chips filter in place; the "Browse by topic" cards
+ * below navigate. Two controls with two jobs, so neither is ambiguous.
+ */
 const categories = await getContentCategories();
+
+const posts = (await fetchAllPosts(200)).sort((a, b) => {
+	const ta = a.date ? new Date(a.date).getTime() : 0;
+	const tb = b.date ? new Date(b.date).getTime() : 0;
+	return tb - ta;
+});
+
+// A post matches its own topic and its parent's, so filtering by a parent topic also surfaces its
+// sub-topic's articles rather than hiding them behind a second click.
+const parentOf = new Map<string, string>();
+for (const category of categories) {
+	for (const child of category.children) parentOf.set(child.slug, category.slug);
+}
+
+const topicsOf = (slug: string | null) =>
+	[slug, slug ? parentOf.get(slug) : undefined].filter((value): value is string => Boolean(value)).join(' ');
+
+const topics = [
+	...categories.map((category) => ({ slug: category.slug, name: category.name, count: category.postCount })),
+	...categories.flatMap((category) =>
+		category.children.map((child) => ({ slug: child.slug, name: child.name, count: child.postCount }))
+	)
+];
 
 const siteUrl = Astro.site?.toString() || 'https://giniloh.com/';
 const pageUrl = new URL('/articles/', siteUrl).toString();
 
 const collectionSchema = {
-	"@context": "https://schema.org",
-	"@type": "CollectionPage",
-	"name": "Articles | Gini Loh",
-	"description": "Browse editorial pillars for high-stakes decisions, career growth strategy, and automated portfolio systems.",
-	"url": pageUrl,
-	"numberOfItems": categories.length,
-	"itemListElement": categories.map((cat, idx) => ({
-		"@type": "ListItem",
-		"position": idx + 1,
-		"name": cat.name,
-		"url": new URL(`/articles/${cat.slug}/`, siteUrl).toString()
+	'@context': 'https://schema.org',
+	'@type': 'CollectionPage',
+	name: 'Articles | Gini Loh',
+	description:
+		'Every article on Gini Loh, newest first: career, compensation, housing, wealth and major-purchase analysis.',
+	url: pageUrl,
+	numberOfItems: posts.length,
+	itemListElement: posts.slice(0, 30).map((post, idx) => ({
+		'@type': 'ListItem',
+		position: idx + 1,
+		name: post.title,
+		url: new URL(`/${post.slug}/`, siteUrl).toString()
 	}))
 };
 
 const breadcrumbSchema = {
-	"@context": "https://schema.org",
-	"@type": "BreadcrumbList",
-	"itemListElement": [
-		{
-			"@type": "ListItem",
-			"position": 1,
-			"name": "Home",
-			"item": siteUrl
-		},
-		{
-			"@type": "ListItem",
-			"position": 2,
-			"name": "Articles",
-			"item": pageUrl
-		}
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+		{ '@type': 'ListItem', position: 2, name: 'Articles', item: pageUrl }
 	]
 };
 
@@ -73,92 +97,184 @@ function getCategoryIcon(slug: string) {
 	}
 	return {
 		color: 'text-[#4B6478]',
-		bg: 'bg-gray-100',
+		bg: 'bg-[#F1F5F9]',
 		svg: '<path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2" />'
 	};
 }
+
+const chipClass =
+	'group inline-flex min-h-[44px] items-center gap-2 rounded-full border border-[#E5E5E5] bg-white px-4 py-2.5 text-sm font-medium text-[#1A1A1A] transition hover:border-[#5A7A8F] hover:bg-[#5A7A8F]/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1A1A1A] aria-pressed:border-[#1A1A1A] aria-pressed:bg-[#1A1A1A] aria-pressed:text-white';
 ---
 
 <BaseLayout
 	title="Articles | Gini Loh"
-	description="Every article on Gini Loh: career, compensation, housing, wealth and major-purchase analysis, organised by decision area."
+	description="Every article on Gini Loh, newest first: career, compensation, housing, wealth and major-purchase analysis, filterable by decision area."
 >
-	<link slot="head" rel="canonical" href={new URL('/articles/', Astro.site).toString()} />
+	<link slot="head" rel="canonical" href={pageUrl} />
 	<JsonLd slot="head" data={collectionSchema} />
 	<JsonLd slot="head" data={breadcrumbSchema} />
 
 	<div class="relative py-12">
-		<div class="mx-auto max-w-3xl text-center">
-			<p class="section-eyebrow">Decision Pillars</p>
+		<header class="mx-auto max-w-3xl text-center">
+			<p class="section-eyebrow">Chronological Archive</p>
 			<h1 class="mt-4 text-4xl font-black tracking-tight text-[#1A1A1A] sm:text-5xl">
-				Explore Our Frameworks
+				Articles
 			</h1>
 			<p class="mt-4 text-lg text-[#5E5E5E]">
-				Deep-dive articles and practical guides organized by financial, tech, and career decision areas.
+				Newest first, across {categories.length} decision areas. Every article is a full breakdown of the maths
+				behind one decision — no summaries you have to take on faith.
 			</p>
-		</div>
+		</header>
 
-		<div class="mx-auto mt-16 max-w-5xl grid gap-8 sm:grid-cols-2">
-			{categories.map((category) => {
-				const icon = getCategoryIcon(category.slug);
-				const hasChildren = category.children && category.children.length > 0;
-				
-				return (
-					<div
-						class="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-[#E5E5E5] bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#1A1A1A]"
+		{
+			posts.length ? (
+				<div class="mx-auto mt-12 max-w-4xl">
+					<nav aria-label="Filter articles by topic" class="flex flex-wrap justify-center gap-2">
+						<button type="button" data-filter="all" aria-pressed="true" class={chipClass}>
+							All<span class="ml-1 font-mono text-[0.7em] opacity-70">{posts.length}</span>
+						</button>
+						{topics.map((topic) => (
+							<button type="button" data-filter={topic.slug} aria-pressed="false" class={chipClass}>
+								{topic.name}
+								<span class="ml-1 font-mono text-[0.7em] opacity-70">{topic.count}</span>
+							</button>
+						))}
+					</nav>
+
+					<p id="filter-status" role="status" class="sr-only">
+						Showing all {posts.length} articles.
+					</p>
+
+					<div class="mt-8 divide-y divide-[#E5E5E5] overflow-hidden rounded-2xl border border-[#E5E5E5] bg-white">
+						{posts.map((post) => (
+							<ArticleRow post={post} topics={topicsOf(post.categorySlug)} />
+						))}
+					</div>
+				</div>
+			) : (
+				<div class="mx-auto mt-12 max-w-2xl rounded-2xl border border-[#E5E5E5] bg-white p-8 text-center">
+					<h2 class="text-xl font-bold text-[#1A1A1A]">No articles published yet</h2>
+					<p class="mt-3 text-sm leading-relaxed text-[#5E5E5E]">
+						The calculators are all live and usable in the meantime.
+					</p>
+					<a
+						href="/calculators/"
+						class="mt-6 inline-flex min-h-[44px] items-center rounded-full bg-[#1A1A1A] px-5 py-2.5 text-sm font-bold text-white transition hover:bg-[#333333]"
 					>
-						<div>
-							<div class="flex items-center justify-between">
-								<div class={`p-3 rounded-xl ${icon.bg} ${icon.color}`}>
-									<svg class="w-7 h-7 transition-transform duration-300 group-hover:scale-110" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" set:html={icon.svg} />
-								</div>
-								<span class="text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#6B6B6B]">
-									{category.postCount} Article{category.postCount === 1 ? '' : 's'}
-								</span>
-							</div>
+						Browse the calculators
+					</a>
+				</div>
+			)
+		}
 
-							<h2 class="mt-6 text-2xl font-black text-[#1A1A1A] tracking-tight group-hover:text-[#4B6478] transition">
-								<a href={`/articles/${category.slug}/`} class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#1A1A1A]">
-									{category.name}
-								</a>
-							</h2>
-							<p class="mt-4 text-sm leading-relaxed text-[#5E5E5E]">
-								{category.description || 'Guides, templates, and analytics to support decision-making in this area.'}
-							</p>
+		{
+			categories.length ? (
+				<section class="mx-auto mt-20 max-w-5xl" aria-labelledby="browse-by-topic">
+					<div class="text-center">
+						<p class="section-eyebrow">Browse by topic</p>
+						<h2 id="browse-by-topic" class="mt-3 text-2xl font-black tracking-tight text-[#1A1A1A] sm:text-3xl">
+							Every decision area
+						</h2>
+					</div>
 
-							{hasChildren && (
-								<div class="mt-6 pt-4 border-t border-[#F0F0F0]">
-									<p class="text-[0.7rem] font-mono font-bold uppercase tracking-widest text-[#6B6B6B] mb-2">
-										Subcategories
-									</p>
-									<div class="flex flex-wrap gap-2">
-										{category.children.map((child) => (
+					<div class="mt-10 grid gap-8 sm:grid-cols-2">
+						{categories.map((category) => {
+							const icon = getCategoryIcon(category.slug);
+							const hasChildren = category.children && category.children.length > 0;
+
+							return (
+								<div class="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-[#E5E5E5] bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[#1A1A1A]">
+									<div>
+										<div class="flex items-center justify-between">
+											<div class={`rounded-xl p-3 ${icon.bg} ${icon.color}`}>
+												<svg
+													class="h-7 w-7 transition-transform duration-300 group-hover:scale-110"
+													fill="none"
+													viewBox="0 0 24 24"
+													stroke="currentColor"
+													stroke-width="1.5"
+													set:html={icon.svg}
+												/>
+											</div>
+											<span class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#6B6B6B]">
+												{category.postCount} Article{category.postCount === 1 ? '' : 's'}
+											</span>
+										</div>
+
+										<h3 class="mt-6 text-2xl font-black tracking-tight text-[#1A1A1A] transition group-hover:text-[#4B6478]">
 											<a
-												href={`/articles/${child.slug}/`}
-												class="inline-flex items-center gap-1.5 rounded-lg border border-[#E5E5E5] bg-gray-50/80 px-2.5 py-1 text-xs font-medium text-[#1A1A1A] transition hover:border-[#5A7A8F] hover:bg-[#5A7A8F]/10 hover:text-[#4B6478]"
+												href={`/articles/${category.slug}/`}
+												class="hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#1A1A1A]"
 											>
-												<span>{child.name}</span>
-												{child.postCount ? (
-													<span class="text-[0.65rem] font-mono text-[#6B6B6B]">({child.postCount})</span>
-												) : null}
+												{category.name}
 											</a>
-										))}
+										</h3>
+										{category.description && (
+											<p class="mt-4 text-sm leading-relaxed text-[#5E5E5E]">{category.description}</p>
+										)}
+
+										{hasChildren && (
+											<div class="mt-6 border-t border-[#F0F0F0] pt-4">
+												<p class="mb-2 font-mono text-[0.7rem] font-bold uppercase tracking-widest text-[#6B6B6B]">
+													Subcategories
+												</p>
+												<div class="flex flex-wrap gap-2">
+													{category.children.map((child) => (
+														<a
+															href={`/articles/${child.slug}/`}
+															class="inline-flex items-center gap-1.5 rounded-lg border border-[#E5E5E5] bg-[#F8FAFC] px-2.5 py-1 text-xs font-medium text-[#1A1A1A] transition hover:border-[#5A7A8F] hover:bg-[#5A7A8F]/10 hover:text-[#4B6478]"
+														>
+															<span>{child.name}</span>
+															<span class="font-mono text-[0.65rem] text-[#6B6B6B]">({child.postCount})</span>
+														</a>
+													))}
+												</div>
+											</div>
+										)}
+									</div>
+
+									<div class="mt-8 flex items-center justify-between border-t border-[#F0F0F0] pt-4">
+										<a
+											href={`/articles/${category.slug}/`}
+											class="flex items-center gap-1 text-sm font-bold text-[#1A1A1A] transition group-hover:text-[#4B6478]"
+										>
+											See all {category.postCount} <span aria-hidden="true" class="inline-block transition group-hover:translate-x-1">→</span>
+										</a>
 									</div>
 								</div>
-							)}
-						</div>
-
-						<div class="mt-8 flex items-center justify-between pt-4 border-t border-gray-100">
-							<a
-								href={`/articles/${category.slug}/`}
-								class="text-sm font-bold text-[#1A1A1A] group-hover:text-[#4B6478] flex items-center gap-1 transition"
-							>
-								Explore Pillar <span aria-hidden="true" class="transition group-hover:translate-x-1 inline-block">→</span>
-							</a>
-						</div>
+							);
+						})}
 					</div>
-				);
-			})}
-		</div>
+				</section>
+			) : null
+		}
 	</div>
+
+	<script>
+		// Progressive enhancement only: the list above is complete and readable without this.
+		const buttons = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-filter]'));
+		const rows = Array.from(document.querySelectorAll<HTMLElement>('[data-topics]'));
+		const status = document.getElementById('filter-status');
+
+		function applyFilter(value: string) {
+			let shown = 0;
+			for (const row of rows) {
+				const topics = (row.dataset.topics || '').split(' ').filter(Boolean);
+				const match = value === 'all' || topics.includes(value);
+				row.hidden = !match;
+				if (match) shown += 1;
+			}
+			for (const button of buttons) {
+				button.setAttribute('aria-pressed', String(button.dataset.filter === value));
+			}
+			if (status) {
+				const label = value === 'all' ? 'all topics' : (buttons.find((b) => b.dataset.filter === value)?.textContent || '').replace(/\s+/g, ' ').trim();
+				status.textContent = `Showing ${shown} article${shown === 1 ? '' : 's'} in ${label}.`;
+			}
+		}
+
+		for (const button of buttons) {
+			button.addEventListener('click', () => applyFilter(button.dataset.filter || 'all'));
+		}
+	</script>
 </BaseLayout>

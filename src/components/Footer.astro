@@ -32,25 +32,11 @@ const topCategories = await getContentCategories();
 					</div>
 				</div>
 
-				<!-- Newsletter Lead Capture -->
-				<div class="mt-8 max-w-sm">
-					<p class="font-mono text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B] mb-3">Newsletter // Join the system builder community</p>
-					<form class="flex gap-2" onsubmit="event.preventDefault(); alert('Transmission logged. Welcome to the System.'); this.reset();">
-						<input 
-							type="email" 
-							placeholder="Enter your email" 
-							required 
-							aria-label="Email address for newsletter"
-							class="min-w-0 flex-1 rounded-xl border border-[#E5E5E5] bg-white px-4 py-2 text-sm text-[#1A1A1A] placeholder-gray-400 focus:border-[#1A1A1A] focus:outline-none focus:ring-1 focus:ring-[#1A1A1A]"
-						/>
-						<button 
-							type="submit" 
-							class="rounded-xl bg-[#1A1A1A] hover:bg-[#333333] px-4 py-2 text-xs font-bold font-mono uppercase tracking-wider text-white transition active:scale-95 shadow-none shrink-0"
-						>
-							Sync
-						</button>
-					</form>
-				</div>
+				<!--
+					No newsletter block: the form that used to sit here cleared itself and claimed a
+					subscription while storing nothing, and there is no list or endpoint behind it.
+					Rationale and restore conditions: docs/navigation-ia-plan.md.
+				-->
 			</div>
 
 			<!-- Col 2: Mental Model of the Week Section -->
@@ -74,9 +60,9 @@ const topCategories = await getContentCategories();
 
 			<!-- Col 3: System Map Navigation -->
 			<div class="lg:col-span-2 sm:col-span-1">
-				<p class="font-mono text-xs uppercase tracking-widest text-[#6B6B6B] font-bold">System Map</p>
+				<p class="font-mono text-xs uppercase tracking-widest text-[#6B6B6B] font-bold">Browse</p>
 				<div class="mt-4 grid gap-3 text-sm font-mono text-[#5E5E5E]">
-					<a href="/" class="transition hover:text-[#4B6478]">Home / Dashboard</a>
+					<a href="/" class="transition hover:text-[#4B6478]">Home</a>
 					<a href="/calculators/" class="transition hover:text-[#4B6478]">Calculators</a>
 					<a href="https://apps.aichieve.net/showcase" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 transition hover:text-[#4B6478]">
 						<span>Apps</span>
@@ -98,7 +84,7 @@ const topCategories = await getContentCategories();
 
 			<!-- Col 4: Active Modules -->
 			<div class="lg:col-span-2 sm:col-span-1">
-				<p class="font-mono text-xs uppercase tracking-widest text-[#6B6B6B] font-bold">Active Modules</p>
+				<p class="font-mono text-xs uppercase tracking-widest text-[#6B6B6B] font-bold">Topics</p>
 				<div class="mt-4 grid gap-3 text-sm font-mono text-[#5E5E5E]">
 					{topCategories.slice(0, 4).map((category) => (
 						<a href={`/articles/${category.slug}/`} class="transition hover:text-[#4B6478] truncate" title={category.name}>
