@@ -139,6 +139,9 @@ export default function CareerAiResilienceCalculator() {
 	// The reader's own state, kept across occupations — it is a fact about them, not about the job.
 	const [statePick, setStatePick] = useState('');
 	const [showFullDesc, setShowFullDesc] = useState(false);
+	// Eight task cards is about one screen of scanning. The rest is a click away rather than a
+	// 5,000px inner scroll area inside an already-scrolling page.
+	const [showAllTasks, setShowAllTasks] = useState(false);
 	
 	// Hover states for donut chart
 	const [hoveredDonutSlice, setHoveredDonutSlice] = useState<'high' | 'medium' | 'low' | null>(null);
@@ -513,6 +516,7 @@ export default function CareerAiResilienceCalculator() {
 		: [];
 	const pickedStatePay = stateWageEntries.find(([name]) => name === statePick)?.[1] ?? null;
 	const pickedStateRank = stateWageEntries.findIndex(([name]) => name === statePick) + 1;
+	const visibleTasks = showAllTasks ? filteredTasks : filteredTasks.slice(0, 8);
 
 	return (
 		<div className="w-full text-[#5E5E5E] font-sans">
@@ -531,7 +535,7 @@ export default function CareerAiResilienceCalculator() {
 							aria-selected={activeView === tab.id}
 							aria-controls={`panel-${tab.id}`}
 							onClick={() => setActiveView(tab.id)}
-							className={`min-h-[36px] whitespace-nowrap border-b-2 pb-2 text-xs font-semibold transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] ${
+							className={`min-h-[44px] whitespace-nowrap border-b-2 pb-2 text-xs font-semibold transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] sm:min-h-[36px] ${
 								activeView === tab.id
 									? 'border-[#1A1A1A] text-[#1A1A1A] font-bold'
 									: 'border-transparent text-[#6B6B6B] hover:text-[#1A1A1A]'
@@ -664,7 +668,7 @@ export default function CareerAiResilienceCalculator() {
 										setSearchQuery(trend.title);
 										setShowSuggestions(false);
 									}}
-									className={`rounded-full border px-2.5 py-0.5 text-xs font-medium transition duration-150 ${
+									className={`inline-flex min-h-[40px] items-center rounded-full border px-3 py-1.5 text-xs font-medium transition duration-150 sm:min-h-0 sm:py-1 ${
 										selectedCode === trend.code
 											? 'border-[#1A1A1A] bg-[#1A1A1A] text-white font-bold'
 											: 'border-gray-300 bg-white text-[#5E5E5E] hover:border-gray-400 hover:text-[#1A1A1A]'
@@ -722,7 +726,7 @@ export default function CareerAiResilienceCalculator() {
 										{careerDetail.description.length > 110 && (
 											<button
 												onClick={() => setShowFullDesc(!showFullDesc)}
-												className="mt-0.5 font-mono text-[10px] text-[#4B6478] hover:text-[#1A1A1A] font-bold hover:underline"
+												className="mt-0.5 inline-flex min-h-[32px] items-center font-mono text-[10px] text-[#4B6478] hover:text-[#1A1A1A] font-bold hover:underline"
 											>
 												{showFullDesc ? "Show less" : "Read more"}
 											</button>
@@ -843,7 +847,7 @@ export default function CareerAiResilienceCalculator() {
 							</div>
 
 							{/* COLUMN 2: Task Composition Donut Chart & Quick-Filter Selectors */}
-							<div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-5 flex flex-col justify-between shadow-sm">
+							<div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-5 flex flex-col shadow-sm">
 								<div>
 									{/* Header */}
 									<div className="flex items-center justify-between border-b border-gray-100 pb-2.5 mb-2">
@@ -851,9 +855,6 @@ export default function CareerAiResilienceCalculator() {
 											<p className="font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-[#6B6B6B]">Task Composition</p>
 											<h3 className="text-base sm:text-lg font-bold text-[#1A1A1A]">What the job is made of</h3>
 										</div>
-										<span className="font-mono text-[10px] text-[#6B6B6B] bg-gray-50 border border-gray-200 px-2 py-0.5 rounded-full">
-											{careerDetail.tasks.length} tasks
-										</span>
 									</div>
 									<p className="text-[11px] text-[#5E5E5E] mb-2">Tap any slice or button to filter tasks by AI exposure level.</p>
 
@@ -936,7 +937,7 @@ export default function CareerAiResilienceCalculator() {
 										</button>
 									))}
 
-									<div className="pt-2 text-center">
+									<div className="mt-auto pt-3 text-center">
 										<a
 											href="#task-breakdown"
 											className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-wider text-[#4B6478] hover:text-[#1A1A1A] font-bold hover:underline"
@@ -1081,37 +1082,43 @@ export default function CareerAiResilienceCalculator() {
 
 							<div className="grid gap-6 sm:grid-cols-3">
 								<div>
-									<label htmlFor="state-wage-pick" className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B]">
-										Your state
-									</label>
-									<select
-										id="state-wage-pick"
-										value={statePick}
-										onChange={(e) => setStatePick(e.target.value)}
-										className="mt-2 w-full rounded-lg border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-medium text-[#1A1A1A]"
-									>
-										<option value="">Select a state</option>
-										{stateWageNames.map((name) => (
-											<option key={name} value={name}>{name}</option>
-										))}
-									</select>
-									<p className="mt-2.5 font-mono text-xl font-black tracking-tight text-[#1A1A1A]">
-										{pickedStatePay !== null ? formatUSD(pickedStatePay) : '—'}
-									</p>
-									<p className="mt-1 text-[11px] leading-5 text-[#6B6B6B]">
-										{statePick === ''
-											? 'Pick your state to see its median and where it ranks.'
-											: pickedStatePay !== null
-												? `Rank ${pickedStateRank} of ${stateWageEntries.length} published state medians, highest first.`
+									<p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B]">Your state</p>
+									{pickedStatePay !== null ? (
+										<>
+											<p className="mt-2 flex flex-wrap items-baseline gap-x-2">
+												<span className="font-mono text-xl font-black tracking-tight text-[#1A1A1A]">{formatUSD(pickedStatePay)}</span>
+												<span className="text-xs text-[#5E5E5E]">{statePick}</span>
+											</p>
+											<p className="mt-1 text-[11px] leading-5 text-[#6B6B6B]">
+												Rank {pickedStateRank} of {stateWageEntries.length} published state medians, highest first.
+											</p>
+										</>
+									) : (
+										<p className="mt-2 text-sm leading-6 text-[#5E5E5E]">
+											{statePick === ''
+												? 'Not picked yet.'
 												: `BLS published no estimate for ${statePick} in this occupation.`}
-									</p>
+										</p>
+									)}
+									{/* One control, one place: this jumps back to the picker rather than cloning it. */}
+									<button
+										type="button"
+										onClick={() => {
+											const picker = document.getElementById('col1-state-pick') as HTMLSelectElement | null;
+											picker?.scrollIntoView({ block: 'center' });
+											picker?.focus({ preventScroll: true });
+										}}
+										className="mt-3 inline-flex min-h-[36px] items-center rounded-lg border border-[#E5E5E5] bg-white px-3 font-mono text-[10px] font-bold uppercase tracking-wider text-[#1A1A1A] transition hover:border-[#1A1A1A]"
+									>
+										{pickedStatePay !== null ? 'Change state' : 'Pick a state'}
+									</button>
 								</div>
 
 								<div>
 									<p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B]">Highest medians</p>
 									<div className="mt-2">
 										{stateWageEntries.slice(0, 5).map(([name, value]) => (
-											<div key={name} className="flex items-baseline justify-between gap-3 border-b border-[#F2F2F2] py-1 last:border-0">
+											<div key={name} className={`flex items-baseline justify-between gap-3 border-b border-[#F2F2F2] py-1 last:border-0 ${name === statePick ? 'bg-[#FAFAFA] font-bold' : ''}`}>
 												<span className="text-[12px] text-[#1A1A1A]">{name}</span>
 												<span className="font-mono text-xs text-[#5E5E5E]">{formatUSD(value)}</span>
 											</div>
@@ -1123,7 +1130,7 @@ export default function CareerAiResilienceCalculator() {
 									<p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B]">Lowest medians</p>
 									<div className="mt-2">
 										{stateWageEntries.slice(-5).reverse().map(([name, value]) => (
-											<div key={name} className="flex items-baseline justify-between gap-3 border-b border-[#F2F2F2] py-1 last:border-0">
+											<div key={name} className={`flex items-baseline justify-between gap-3 border-b border-[#F2F2F2] py-1 last:border-0 ${name === statePick ? 'bg-[#FAFAFA] font-bold' : ''}`}>
 												<span className="text-[12px] text-[#1A1A1A]">{name}</span>
 												<span className="font-mono text-xs text-[#5E5E5E]">{formatUSD(value)}</span>
 											</div>
@@ -1169,14 +1176,14 @@ export default function CareerAiResilienceCalculator() {
 								</div>
 							</div>
 
-							{/* Dynamic Tasks list */}
-							<div className="grid gap-4 max-h-[500px] overflow-y-auto pr-2">
-								{filteredTasks.length === 0 ? (
-									<div className="rounded-2xl border border-dashed border-gray-200 bg-gray-50 py-8 text-center text-xs font-mono text-[#6B6B6B]">
-										No tasks found matching this risk level.
-									</div>
-								) : (
-									filteredTasks.map((task) => (
+			{/* Dynamic Tasks list */}
+			<div className="grid gap-3 md:grid-cols-2">
+				{filteredTasks.length === 0 ? (
+					<div className="rounded-2xl border border-dashed border-gray-200 bg-gray-50 py-8 text-center text-xs font-mono text-[#6B6B6B] md:col-span-2">
+						No tasks found matching this risk level.
+					</div>
+				) : (
+					visibleTasks.map((task) => (
 										<div
 											key={task.id}
 											className={`group relative rounded-xl border p-4 transition-all duration-200 bg-white ${
@@ -1240,10 +1247,22 @@ export default function CareerAiResilienceCalculator() {
 												</p>
 											</div>
 										</div>
-									))
-								)}
-							</div>
-
+					))
+				)}
+				{filteredTasks.length > 8 && (
+					<div className="flex justify-center pt-2 md:col-span-2">
+						<button
+							type="button"
+							onClick={() => setShowAllTasks((v) => !v)}
+							aria-expanded={showAllTasks}
+							className="inline-flex min-h-[40px] items-center gap-1.5 rounded-lg border border-[#E5E5E5] bg-white px-4 font-mono text-[10px] font-bold uppercase tracking-wider text-[#1A1A1A] transition hover:border-[#1A1A1A]"
+						>
+							{showAllTasks ? 'Show fewer tasks' : `Show all ${filteredTasks.length} tasks`}
+							<span aria-hidden="true">{showAllTasks ? '↑' : '↓'}</span>
+						</button>
+					</div>
+				)}
+			</div>
 						</div>
 					)}
 				</div>
