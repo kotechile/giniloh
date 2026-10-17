@@ -73,6 +73,10 @@ interface OccupationDetail {
 	employment_band: string;
 	employment: number | null;
 	salary_source?: string;
+	/** BLS OEWS state medians; null when OEWS has no state detail for this code. */
+	state_wages?: { source: string; code: string; states: Record<string, number> } | null;
+	/** Release the salary figures came from, e.g. "BLS OEWS, May 2025". */
+	salary_vintage?: string;
 	exposure?: Exposure;
 	weighted_distribution?: CategoryDistribution;
 	emerging_tasks?: { task: string; category: string; date: string; domain_source: string; original_task: string | null }[];
@@ -131,6 +135,9 @@ export default function CareerAiResilienceCalculator() {
 
 	// Active task category filter in profile view ('all' | 'high' | 'medium' | 'low')
 	const [taskFilter, setTaskFilter] = useState<'all' | 'high' | 'medium' | 'low'>('all');
+
+	// The reader's own state, kept across occupations — it is a fact about them, not about the job.
+	const [statePick, setStatePick] = useState('');
 	
 	// Hover states for donut chart
 	const [hoveredDonutSlice, setHoveredDonutSlice] = useState<'high' | 'medium' | 'low' | null>(null);
@@ -493,6 +500,17 @@ export default function CareerAiResilienceCalculator() {
 	useEffect(() => {
 		setCurrentPage(1);
 	}, [finderSearchQuery, minVulnerability, maxVulnerability, minSalaryFilter, employmentFilter, sortField, sortDirection]);
+
+	// BLS OEWS state medians for the open occupation, highest first. Same rule as the static
+	// occupation pages: below five published states there is no block to show.
+	const stateWageEntries = careerDetail?.state_wages
+		? Object.entries(careerDetail.state_wages.states).sort((a, b) => b[1] - a[1])
+		: [];
+	const stateWageNames = careerDetail?.state_wages
+		? Object.keys(careerDetail.state_wages.states).sort((a, b) => a.localeCompare(b))
+		: [];
+	const pickedStatePay = stateWageEntries.find(([name]) => name === statePick)?.[1] ?? null;
+	const pickedStateRank = stateWageEntries.findIndex(([name]) => name === statePick) + 1;
 
 	return (
 		<div className="w-full text-[#5E5E5E] font-sans">
@@ -1013,6 +1031,86 @@ export default function CareerAiResilienceCalculator() {
 
 							</div>
 
+						</div>
+					)}
+
+					{/* Pay by state — BLS OEWS state medians, presented as their own estimates */}
+					{!loadingDetail && careerDetail?.state_wages && stateWageEntries.length >= 5 && (
+						<div className="py-4">
+							<div className="mb-6 flex flex-col gap-3 border-b border-gray-200 pb-4 sm:flex-row sm:items-end sm:justify-between">
+								<div>
+									<h3 className="text-xl font-bold text-[#1A1A1A]">Pay by state</h3>
+									<p className="mt-1 max-w-2xl text-xs leading-6 text-[#5E5E5E]">
+										BLS publishes {stateWageEntries.length} state estimates for this occupation. Each is its own survey estimate — not the national median adjusted for local prices.
+									</p>
+								</div>
+								<div className="sm:text-right">
+									<p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B]">Published range</p>
+									<p className="mt-1 font-mono text-xs font-bold text-[#1A1A1A]">
+										{formatUSD(stateWageEntries[stateWageEntries.length - 1][1])} – {formatUSD(stateWageEntries[0][1])}
+									</p>
+								</div>
+							</div>
+
+							<div className="grid gap-8 sm:grid-cols-3">
+								<div>
+									<label htmlFor="state-wage-pick" className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B]">
+										Your state
+									</label>
+									<select
+										id="state-wage-pick"
+										value={statePick}
+										onChange={(e) => setStatePick(e.target.value)}
+										className="mt-3 w-full rounded-lg border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-medium text-[#1A1A1A]"
+									>
+										<option value="">Select a state</option>
+										{stateWageNames.map((name) => (
+											<option key={name} value={name}>{name}</option>
+										))}
+									</select>
+									<p className="mt-3 font-mono text-2xl font-black tracking-tight text-[#1A1A1A]">
+										{pickedStatePay !== null ? formatUSD(pickedStatePay) : '—'}
+									</p>
+									<p className="mt-1 text-[11px] leading-5 text-[#6B6B6B]">
+										{statePick === ''
+											? 'Pick your state to see its median and where it ranks.'
+											: pickedStatePay !== null
+												? `Rank ${pickedStateRank} of ${stateWageEntries.length} published state medians, highest first.`
+												: `BLS published no estimate for ${statePick} in this occupation.`}
+									</p>
+								</div>
+
+								<div>
+									<p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B]">Highest medians</p>
+									<div className="mt-3">
+										{stateWageEntries.slice(0, 5).map(([name, value]) => (
+											<div key={name} className="flex items-baseline justify-between gap-3 border-b border-[#F2F2F2] py-1.5 last:border-0">
+												<span className="text-[13px] text-[#1A1A1A]">{name}</span>
+												<span className="font-mono text-xs text-[#5E5E5E]">{formatUSD(value)}</span>
+											</div>
+										))}
+									</div>
+								</div>
+
+								<div>
+									<p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B]">Lowest medians</p>
+									<div className="mt-3">
+										{stateWageEntries.slice(-5).reverse().map(([name, value]) => (
+											<div key={name} className="flex items-baseline justify-between gap-3 border-b border-[#F2F2F2] py-1.5 last:border-0">
+												<span className="text-[13px] text-[#1A1A1A]">{name}</span>
+												<span className="font-mono text-xs text-[#5E5E5E]">{formatUSD(value)}</span>
+											</div>
+										))}
+									</div>
+								</div>
+							</div>
+
+							<p className="mt-5 text-[11px] leading-5 text-[#6B6B6B]">
+								{careerDetail.state_wages.source === 'bls-state-line'
+									? `This is the ${careerDetail.state_wages.code} row of the ${careerDetail.salary_vintage ?? 'OEWS'} state panel.`
+									: `OEWS has no state row for this exact code, so these figures are the ${careerDetail.state_wages.code} roll-up.`}{' '}
+								States where the estimate was suppressed or too small to publish are absent.
+							</p>
 						</div>
 					)}
 
