@@ -138,6 +138,7 @@ export default function CareerAiResilienceCalculator() {
 
 	// The reader's own state, kept across occupations — it is a fact about them, not about the job.
 	const [statePick, setStatePick] = useState('');
+	const [showFullDesc, setShowFullDesc] = useState(false);
 	
 	// Hover states for donut chart
 	const [hoveredDonutSlice, setHoveredDonutSlice] = useState<'high' | 'medium' | 'low' | null>(null);
@@ -214,6 +215,7 @@ export default function CareerAiResilienceCalculator() {
 				setWeights(publishedWeights(data));
 				setIsCustomized(false);
 				setTaskFilter('all');
+				setShowFullDesc(false);
 			} catch (e) {
 				console.error(`Failed to load details for ${selectedCode}:`, e);
 			} finally {
@@ -515,8 +517,8 @@ export default function CareerAiResilienceCalculator() {
 	return (
 		<div className="w-full text-[#5E5E5E] font-sans">
 			{/* Mode Select Header */}
-			<div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 mb-8">
-				<div role="tablist" aria-label="Calculator views" className="flex gap-6 border-b border-gray-200 mb-4 sm:mb-0 overflow-x-auto">
+			<div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 mb-3">
+				<div role="tablist" aria-label="Calculator views" className="flex gap-4 border-b border-gray-200 overflow-x-auto">
 					{([
 						{ id: 'profile' as const, label: 'My job' },
 						{ id: 'finder' as const, label: 'Find a job' },
@@ -529,7 +531,7 @@ export default function CareerAiResilienceCalculator() {
 							aria-selected={activeView === tab.id}
 							aria-controls={`panel-${tab.id}`}
 							onClick={() => setActiveView(tab.id)}
-							className={`min-h-[44px] whitespace-nowrap border-b-2 pb-3 text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] focus-visible:ring-offset-2 ${
+							className={`min-h-[36px] whitespace-nowrap border-b-2 pb-2 text-xs font-semibold transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] ${
 								activeView === tab.id
 									? 'border-[#1A1A1A] text-[#1A1A1A] font-bold'
 									: 'border-transparent text-[#6B6B6B] hover:text-[#1A1A1A]'
@@ -549,10 +551,10 @@ export default function CareerAiResilienceCalculator() {
 								placeholder="Search careers in cluster map..."
 								value={searchQueryExplorer}
 								onChange={(e) => setSearchQueryExplorer(e.target.value)}
-								className="w-full rounded-2xl border border-gray-200 bg-white py-3.5 pl-11 pr-4 text-sm font-medium text-[#1A1A1A] placeholder-[#6B6B6B] outline-none transition focus:border-[#1A1A1A]"
+								className="w-full rounded-xl border border-gray-200 bg-white py-2 pl-9 pr-4 text-xs font-medium text-[#1A1A1A] placeholder-[#6B6B6B] outline-none transition focus:border-[#1A1A1A]"
 							/>
 							<svg
-								className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-[#64748B]"
+								className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#64748B]"
 								fill="none"
 								viewBox="0 0 24 24"
 								stroke="currentColor"
@@ -566,13 +568,10 @@ export default function CareerAiResilienceCalculator() {
 
 			{/* ==================== VIEW 1: CAREER PROFILE & SIMULATOR ==================== */}
 			{activeView === 'profile' && (
-				<div role="tabpanel" id="panel-profile" aria-labelledby="tab-profile" className="grid gap-12">
-					{/* Search & Selector */}
-					<div className="relative py-2">
-						<label htmlFor="career-search" className="block font-mono text-xs uppercase tracking-[0.25em] text-[#6B6B6B] font-bold mb-3">
-							Your job title
-						</label>
-						<div ref={suggestionsRef} className="relative">
+				<div role="tabpanel" id="panel-profile" aria-labelledby="tab-profile" className="space-y-4">
+					{/* Compact Top Command Bar: Career Search & Popular Occupation Selector */}
+					<div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-2.5 rounded-xl border border-gray-200/90 bg-gray-50/70 p-2.5">
+						<div ref={suggestionsRef} className="relative flex-1 max-w-lg">
 							<div className="relative">
 								<input
 									id="career-search"
@@ -581,17 +580,17 @@ export default function CareerAiResilienceCalculator() {
 									aria-expanded={showSuggestions && suggestions.length > 0}
 									aria-controls="career-suggestions"
 									aria-autocomplete="list"
-									placeholder="Type a job title — registered nurse, accountant, truck driver"
+									placeholder="Search 1,000+ jobs (e.g. Registered Nurse, Accountant)..."
 									value={searchQuery}
 									onChange={(e) => {
 										setSearchQuery(e.target.value);
 										setShowSuggestions(true);
 									}}
 									onFocus={() => setShowSuggestions(true)}
-									className="w-full rounded-xl border border-gray-300 bg-white py-4 pl-12 pr-10 text-base font-medium text-[#1A1A1A] outline-none transition focus:border-[#1A1A1A] focus:ring-1 focus:ring-[#1A1A1A]"
+									className="w-full rounded-lg border border-gray-300 bg-white py-2 pl-9 pr-8 text-xs sm:text-sm font-medium text-[#1A1A1A] outline-none transition focus:border-[#1A1A1A] focus:ring-1 focus:ring-[#1A1A1A]"
 								/>
 								<svg
-									className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-[#64748B]"
+									className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#64748B]"
 									fill="none"
 									viewBox="0 0 24 24"
 									stroke="currentColor"
@@ -604,7 +603,7 @@ export default function CareerAiResilienceCalculator() {
 											setSearchQuery('');
 											setShowSuggestions(false);
 										}}
-										className="absolute right-4 top-1/2 -translate-y-1/2 text-[#64748B] hover:text-gray-600"
+										className="absolute right-2.5 top-1/2 -translate-y-1/2 text-[#64748B] hover:text-gray-800"
 										aria-label="Clear search"
 									>
 										<svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -619,7 +618,7 @@ export default function CareerAiResilienceCalculator() {
 									id="career-suggestions"
 									role="listbox"
 									aria-label="Matching job titles"
-									className="absolute z-50 mt-2 max-h-72 w-full overflow-y-auto rounded-2xl border border-gray-200 bg-white shadow-2xl"
+									className="absolute z-50 mt-1 max-h-72 w-full overflow-y-auto rounded-xl border border-gray-200 bg-white shadow-2xl"
 								>
 									{suggestions.map((item) => (
 										<button
@@ -631,9 +630,9 @@ export default function CareerAiResilienceCalculator() {
 												setSearchQuery(item.title);
 												setShowSuggestions(false);
 											}}
-											className="flex w-full flex-col px-4 py-3 text-left transition hover:bg-gray-50 border-b border-gray-100 last:border-0"
+											className="flex w-full flex-col px-3.5 py-2.5 text-left transition hover:bg-gray-50 border-b border-gray-100 last:border-0"
 										>
-											<span className="text-sm font-semibold text-[#1A1A1A]">{item.title}</span>
+											<span className="text-xs sm:text-sm font-semibold text-[#1A1A1A]">{item.title}</span>
 											<span className="mt-0.5 font-mono text-[10px] uppercase tracking-wider text-[#6B6B6B]">
 												{formatUSD(item.salary)} median · {item.risk_score}/100 exposure
 											</span>
@@ -642,21 +641,21 @@ export default function CareerAiResilienceCalculator() {
 								</div>
 							)}
 							{showSuggestions && searchQuery.trim() && suggestions.length === 0 && (
-								<div className="absolute z-50 mt-2 w-full rounded-2xl border border-gray-200 bg-white px-4 py-4 text-center text-xs font-mono text-[#6B6B6B] shadow-2xl">
-									No match. Try a shorter phrase — job titles only.
+								<div className="absolute z-50 mt-1 w-full rounded-xl border border-gray-200 bg-white px-3 py-3 text-center text-xs font-mono text-[#6B6B6B] shadow-2xl">
+									No match. Try a shorter job title.
 								</div>
 							)}
 						</div>
 
-						{/* Popular quick selectors */}
-						<div className="mt-4 flex flex-wrap items-center gap-3">
-							<span className="font-mono text-xs uppercase tracking-[0.2em] text-[#6B6B6B] font-bold">Popular:</span>
+						{/* Popular quick selector pills */}
+						<div className="flex flex-wrap items-center gap-1.5">
+							<span className="font-mono text-[10px] uppercase tracking-wider text-[#6B6B6B] font-bold">Popular:</span>
 							{[
-								{ title: 'Chief Executives', code: '11-1011.00' },
-								{ title: 'Software Developers', code: '15-1252.00' },
-								{ title: 'Financial Managers', code: '11-3031.00' },
-								{ title: 'Accountants & Auditors', code: '13-2011.00' },
-								{ title: 'Registered Nurses', code: '29-1141.00' }
+								{ title: 'Chief Execs', code: '11-1011.00' },
+								{ title: 'Software Devs', code: '15-1252.00' },
+								{ title: 'Financial Mgrs', code: '11-3031.00' },
+								{ title: 'Accountants', code: '13-2011.00' },
+								{ title: 'Nurses', code: '29-1141.00' }
 							].map((trend) => (
 								<button
 									key={trend.code}
@@ -665,9 +664,9 @@ export default function CareerAiResilienceCalculator() {
 										setSearchQuery(trend.title);
 										setShowSuggestions(false);
 									}}
-									className={`rounded-full border px-3 py-1 text-xs font-medium transition duration-200 ${
+									className={`rounded-full border px-2.5 py-0.5 text-xs font-medium transition duration-150 ${
 										selectedCode === trend.code
-											? 'border-[#1A1A1A] bg-[#1A1A1A] text-white'
+											? 'border-[#1A1A1A] bg-[#1A1A1A] text-white font-bold'
 											: 'border-gray-300 bg-white text-[#5E5E5E] hover:border-gray-400 hover:text-[#1A1A1A]'
 									}`}
 								>
@@ -679,356 +678,384 @@ export default function CareerAiResilienceCalculator() {
 
 					{/* Loading Detail Overlay */}
 					{loadingDetail && (
-						<div className="flex h-96 items-center justify-center py-12">
+						<div className="flex h-72 items-center justify-center py-8">
 							<div className="flex flex-col items-center gap-3">
-								<div className="h-10 w-10 animate-spin rounded-full border-2 border-[#1A1A1A] border-t-transparent"></div>
-								<span className="font-mono text-xs text-[#6B6B6B] uppercase tracking-widest animate-pulse">Assembling Career Profile...</span>
+								<div className="h-8 w-8 animate-spin rounded-full border-2 border-[#1A1A1A] border-t-transparent"></div>
+								<span className="font-mono text-xs text-[#6B6B6B] uppercase tracking-widest animate-pulse">Loading Career Data...</span>
 							</div>
 						</div>
 					)}
 
-					{/* Main Detail Dashboard Grid */}
+					{/* ==================== TRI-PANEL DASHBOARD GRID (CONTROL ROOM BENTO) ==================== */}
 					{!loadingDetail && careerDetail && (
-						<div className="grid gap-12 lg:grid-cols-12 items-start">
+						<div className="grid grid-cols-1 lg:grid-cols-3 gap-3.5 xl:gap-4 items-stretch">
 							
-							{/* LEFT SIDE: General overview, Risk gauge & Donut mix (7 columns) */}
-							<div className="lg:col-span-7 grid gap-10">
-								
-								{/* Core Overview Section */}
-								<div className="py-2">
-									<div className="flex flex-col md:flex-row md:items-baseline justify-between gap-4 border-b border-gray-200 pb-6 mb-6">
-										<div>
-											<span className="font-mono text-xs font-bold uppercase tracking-[0.25em] text-[#6B6B6B]">
-												Job profile
-											</span>
-											<h2 className="text-4xl sm:text-5xl font-black tracking-tight text-[#1A1A1A] mt-2">{careerDetail.title}</h2>
+							{/* COLUMN 1: Profile Header, Median Pay, State Wages & Primary Vulnerability Score */}
+							<div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-5 flex flex-col justify-between shadow-sm">
+								<div>
+									{/* Profile Header */}
+									<div className="flex items-start justify-between gap-2 border-b border-gray-100 pb-2.5 mb-2.5">
+										<div className="min-w-0 flex-1">
+											<div className="flex items-center gap-2">
+												<span className="font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-[#6B6B6B]">
+													Profile
+												</span>
+												<span className="font-mono text-[9px] font-bold text-[#6B6B6B] bg-gray-100 px-1.5 py-0.5 rounded">
+													SOC {careerDetail.code}
+												</span>
+											</div>
+											<h2 className="text-lg sm:text-xl font-black tracking-tight text-[#1A1A1A] mt-1 line-clamp-1" title={careerDetail.title}>
+												{careerDetail.title}
+											</h2>
 										</div>
-										<div className="flex flex-row md:flex-col items-baseline md:items-end justify-between gap-1">
-											<p className="font-mono text-xs font-bold uppercase tracking-wider text-[#6B6B6B]">Median pay</p>
-											<p className="text-2xl sm:text-3xl font-extrabold text-[#1A1A1A]">{formatUSD(careerDetail.salary)}</p>
+										<div className="text-right shrink-0">
+											<span className="font-mono text-[9px] font-bold uppercase tracking-wider text-[#6B6B6B]">Median Pay</span>
+											<p className="text-base sm:text-lg font-extrabold text-[#1A1A1A]">{formatUSD(careerDetail.salary)}</p>
 										</div>
 									</div>
-									<p className="text-base sm:text-lg leading-relaxed text-[#5E5E5E] font-normal">{careerDetail.description}</p>
 
-									{/* The answer, in one sentence. Everything else on the page explains this. */}
-									{careerDetail.tasks.length > 0 && (
-										<div className="mt-6 rounded-2xl border border-gray-200 bg-[#FBFBFB] p-5">
-											<p className="font-mono text-[10px] uppercase tracking-[0.22em] text-[#6B6B6B]">
-												As the job stands today
-											</p>
-											<p className="mt-2.5 text-base sm:text-lg leading-relaxed text-[#1A1A1A]">
-												{(['high', 'medium', 'low'] as const).map((key) => (
-													<span key={key}>
-														<strong
-															className="font-bold"
-															style={{ color: key === 'high' ? '#A55252' : key === 'medium' ? '#96693A' : '#5A7A8F' }}
-														>
-															{weights[key]}%
-														</strong>{' '}
-														{bucketSentence[key]}.{' '}
-													</span>
-												))}
-											</p>
+									{/* Concise Description with toggle */}
+									<div className="text-xs text-[#5E5E5E] leading-relaxed mb-2.5">
+										<p className={showFullDesc ? "" : "line-clamp-2"}>
+											{careerDetail.description}
+										</p>
+										{careerDetail.description.length > 110 && (
+											<button
+												onClick={() => setShowFullDesc(!showFullDesc)}
+												className="mt-0.5 font-mono text-[10px] text-[#4B6478] hover:text-[#1A1A1A] font-bold hover:underline"
+											>
+												{showFullDesc ? "Show less" : "Read more"}
+											</button>
+										)}
+									</div>
+
+									{/* State Wage Selector or Employment Band */}
+									{careerDetail.state_wages && stateWageEntries.length >= 5 ? (
+										<div className="rounded-xl bg-gray-50/80 border border-gray-200/70 p-2.5 mb-2.5 flex items-center justify-between gap-2">
+											<div className="min-w-0 flex-1">
+												<label htmlFor="col1-state-pick" className="block font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B] font-bold truncate">
+													Pay in your state
+												</label>
+												<select
+													id="col1-state-pick"
+													value={statePick}
+													onChange={(e) => setStatePick(e.target.value)}
+													className="mt-0.5 w-full rounded border border-gray-300 bg-white px-2 py-1 text-xs font-medium text-[#1A1A1A] outline-none transition focus:border-[#1A1A1A]"
+												>
+													<option value="">Select state...</option>
+													{stateWageNames.map((name) => (
+														<option key={name} value={name}>{name}</option>
+													))}
+												</select>
+											</div>
+											<div className="text-right shrink-0">
+												<p className="font-mono text-xs sm:text-sm font-black text-[#1A1A1A]">
+													{pickedStatePay !== null ? formatUSD(pickedStatePay) : '—'}
+												</p>
+												<p className="text-[10px] text-[#6B6B6B]">
+													{pickedStatePay !== null ? (
+														`Rank #${pickedStateRank} of ${stateWageEntries.length}`
+													) : (
+														<a href="#state-wages" className="text-[#4B6478] hover:underline font-bold">All states ↓</a>
+													)}
+												</p>
+											</div>
+										</div>
+									) : (
+										<div className="rounded-xl bg-gray-50/80 border border-gray-200/70 p-2.5 mb-2.5 flex items-center justify-between gap-2">
+											<div>
+												<p className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B] font-bold">Employment Band</p>
+												<p className="text-xs font-bold text-[#1A1A1A] mt-0.5">{careerDetail.employment_band || 'National sample'}</p>
+											</div>
+											{careerDetail.employment && (
+												<div className="text-right">
+													<p className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B] font-bold">Employed</p>
+													<p className="font-mono text-xs font-bold text-[#1A1A1A] mt-0.5">{careerDetail.employment.toLocaleString()}</p>
+												</div>
+											)}
 										</div>
 									)}
 								</div>
 
-								{/* The Dashboard Charts Section */}
-								<div className="grid gap-8 md:grid-cols-2">
-									
-									{/* Score Gauge */}
-									<div className="flex flex-col items-center justify-between py-2 text-center">
-										<div>
-											<p className="font-mono text-xs uppercase tracking-[0.24em] text-[#6B6B6B] font-bold">How exposed this job is to AI</p>
-											<p className="mt-1.5 text-sm text-[#5E5E5E] leading-relaxed max-w-[240px] mx-auto">
-												Out of 100. Higher means more of the work is something software can already attempt.
-											</p>
-										</div>
+								{/* Primary Vulnerability Score Gauge */}
+								<div className="pt-2 border-t border-gray-100 flex flex-col items-center text-center">
+									<p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B] font-bold">
+										AI Exposure Score
+									</p>
 
-										{/* Radial Gauge SVG */}
-										<div
-											className="relative h-48 w-48 my-6 flex items-center justify-center"
-											role="img"
-											aria-label={`AI exposure ${overallScore} out of 100`}
-										>
-											<svg className="w-full h-full transform -rotate-90" viewBox="0 0 120 120">
-												{/* Background track circle */}
-												<circle
-													cx="60"
-													cy="60"
-													r="50"
-													fill="transparent"
-													stroke="#E5E5E5"
-													strokeWidth="6"
-												/>
-												{/* Foreground gauge circle */}
-												<circle
-													cx="60"
-													cy="60"
-													r="50"
-													fill="transparent"
-													stroke={overallScore > 65 ? '#A55252' : overallScore > 35 ? '#96693A' : '#5A7A8F'}
-													strokeWidth="7"
-													strokeDasharray="314.159"
-													strokeDashoffset={314.159 - (overallScore / 100) * 314.159}
-													strokeLinecap="round"
-													style={{ transition: 'stroke-dashoffset 0.8s ease-out, stroke 0.5s ease-out' }}
-												/>
-											</svg>
-											{/* Center Text overlay */}
-											<div className="absolute inset-0 flex flex-col items-center justify-center">
-												<span className="text-5xl font-black text-[#1A1A1A] tracking-tight">{overallScore}</span>
-												<span className="font-mono text-[10px] uppercase tracking-widest text-[#6B6B6B] font-bold mt-1">out of 100</span>
-											</div>
-											</div>
-
-											<div className="flex flex-wrap items-center justify-center gap-2">
-											<div className={`rounded-full px-5 py-1.5 font-mono text-xs uppercase tracking-wider font-bold ${
-												overallScore > 65
-													? 'text-[#A55252] bg-[#A55252]/10'
-													: overallScore > 35
-														? 'text-[#96693A] bg-[#96693A]/10'
-														: 'text-[#4B6478] bg-[#5A7A8F]/10'
-											}`}>
-												{overallScore > 65 ? 'High exposure' : overallScore > 35 ? 'Mixed exposure' : 'Low exposure'}
-											</div>
-											{isCustomized && scoreDelta !== 0 && (
-												<span className={`rounded-full px-3 py-1.5 font-mono text-xs font-bold ${
-													scoreDelta < 0 ? 'bg-[#2E6F40]/10 text-[#2E6F40]' : 'bg-[#A55252]/10 text-[#A55252]'
-												}`}>
-													{scoreDelta < 0 ? '−' : '+'}{Math.abs(scoreDelta)} vs. today
-												</span>
-											)}
-											</div>
-											</div>
-
-									{/* Donut Task Mix */}
-									<div className="flex flex-col items-center justify-between py-2 text-center">
-										<div>
-											<p className="font-mono text-xs uppercase tracking-[0.24em] text-[#6B6B6B] font-bold">What the job is made of</p>
-											<p className="mt-1.5 text-sm text-[#5E5E5E] leading-relaxed max-w-[240px] mx-auto">
-												Tap a slice to see just those tasks.
-											</p>
-										</div>
-
-										{/* Donut Chart SVG */}
-										<div className="relative h-48 w-48 my-6 flex items-center justify-center">
-											<svg className="w-full h-full transform -rotate-90" viewBox="-120 -120 240 240">
-												{donutSlices.map((slice) => {
-													const isHovered = hoveredDonutSlice === slice.category;
-													return (
-														<g
-															key={slice.category}
-															role="button"
-															tabIndex={0}
-															aria-label={`${bucketLabel[slice.category]}: ${weights[slice.category]}% of the job. Show those tasks.`}
-															onMouseEnter={() => setHoveredDonutSlice(slice.category)}
-															onMouseLeave={() => setHoveredDonutSlice(null)}
-															onFocus={() => setHoveredDonutSlice(slice.category)}
-															onBlur={() => setHoveredDonutSlice(null)}
-															onClick={() => setTaskFilter(slice.category)}
-															onKeyDown={(e) => {
-																if (e.key === 'Enter' || e.key === ' ') {
-																	e.preventDefault();
-																	setTaskFilter(slice.category);
-																}
-															}}
-															className="cursor-pointer transition-all duration-300 focus-visible:outline-none"
-														>
-															<path
-																d={drawSlicePath(slice.start, slice.end, isHovered ? 108 : 98)}
-																fill={slice.color}
-																stroke="#FFFFFF"
-																strokeWidth="2.5"
-																opacity={hoveredDonutSlice ? (isHovered ? 1.0 : 0.4) : 0.95}
-																style={{ transition: 'all 0.3s ease-out' }}
-																filter={isHovered ? `drop-shadow(0 0 6px ${slice.color})` : undefined}
-															/>
-														</g>
-													);
-												})}
-												{/* Central inner hole circle */}
-												<circle cx="0" cy="0" r="58" fill="#FFFFFF" />
-											</svg>
-											<div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
-												{hoveredDonutSlice ? (
-													<>
-														<span className="text-3xl font-extrabold" style={{ color: hoveredDonutSlice === 'high' ? '#A55252' : hoveredDonutSlice === 'medium' ? '#96693A' : '#5A7A8F' }}>
-															{weights[hoveredDonutSlice]}%
-														</span>
-														<span className="mt-1 max-w-[76px] font-mono text-[9px] uppercase leading-4 tracking-wider" style={{ color: '#6B6B6B' }}>{bucketLabel[hoveredDonutSlice]}</span>
-													</>
-												) : (
-													<>
-														<span className="text-3xl font-extrabold" style={{ color: '#1A1A1A' }}>
-															{careerDetail.tasks.length}
-														</span>
-														<span className="mt-1 font-mono text-[9px] uppercase tracking-wider" style={{ color: '#6B6B6B' }}>tasks</span>
-													</>
-												)}
-											</div>
-										</div>
-
-										{/* Donut Legend */}
-										<div className="mt-1 grid w-full gap-1 text-left">
-											{(['high', 'medium', 'low'] as const).map((key) => (
-												<button
-													key={key}
-													onClick={() => setTaskFilter(taskFilter === key ? 'all' : key)}
-													aria-pressed={taskFilter === key}
-													className={`flex min-h-[36px] items-center justify-between gap-3 rounded-lg px-2 py-1.5 transition ${
-														taskFilter === key ? 'bg-gray-50' : 'hover:bg-gray-50'
-													}`}
-												>
-													<span className="flex items-center gap-2">
-														<span
-															className="h-2.5 w-2.5 shrink-0 rounded-full"
-															style={{ background: key === 'high' ? '#A55252' : key === 'medium' ? '#96693A' : '#5A7A8F' }}
-														></span>
-														<span className={`text-[13px] ${taskFilter === key ? 'font-bold text-[#1A1A1A]' : 'text-[#5E5E5E]'}`}>
-															{bucketLabel[key]}
-														</span>
-													</span>
-													<span
-														className="font-mono text-[13px] font-bold"
-														style={{ color: key === 'high' ? '#A55252' : key === 'medium' ? '#96693A' : '#4B6478' }}
-													>
-														{weights[key]}%
-													</span>
-												</button>
-											))}
+									{/* Compact Radial Gauge */}
+									<div className="relative h-28 w-28 my-1 flex items-center justify-center" role="img" aria-label={`AI exposure ${overallScore} out of 100`}>
+										<svg className="w-full h-full transform -rotate-90" viewBox="0 0 120 120">
+											<circle cx="60" cy="60" r="48" fill="transparent" stroke="#E5E5E5" strokeWidth="6" />
+											<circle
+												cx="60"
+												cy="60"
+												r="48"
+												fill="transparent"
+												stroke={overallScore > 65 ? '#A55252' : overallScore > 35 ? '#96693A' : '#5A7A8F'}
+												strokeWidth="7"
+												strokeDasharray="301.59"
+												strokeDashoffset={301.59 - (overallScore / 100) * 301.59}
+												strokeLinecap="round"
+												style={{ transition: 'stroke-dashoffset 0.8s ease-out, stroke 0.5s ease-out' }}
+											/>
+										</svg>
+										<div className="absolute inset-0 flex flex-col items-center justify-center">
+											<span className="text-3xl font-black text-[#1A1A1A] tracking-tight">{overallScore}</span>
+											<span className="font-mono text-[9px] uppercase tracking-widest text-[#6B6B6B] font-bold">/ 100</span>
 										</div>
 									</div>
 
-								</div>
-
-							</div>
-
-							{/* RIGHT SIDE: Upskilling Simulator Sliders (5 columns) */}
-							<div className="lg:col-span-5 grid gap-10">
-								
-								<div className="py-2">
-									
-									<div className="flex items-center justify-between gap-4 border-b border-gray-200 pb-6 mb-6">
-										<div>
-											<p className="font-mono text-xs uppercase tracking-[0.25em] text-[#6B6B6B] font-bold">What if</p>
-											<h3 className="mt-2 text-3xl font-extrabold tracking-tight text-[#1A1A1A]">Change your week</h3>
-										</div>
-										{isCustomized && (
-										<button
-											onClick={handleResetWeights}
-											className="rounded-md border border-gray-300 bg-white px-3 py-1.5 font-mono text-xs uppercase tracking-wider text-[#5E5E5E] hover:text-[#1A1A1A] hover:border-gray-400 transition"
-										>
-											Reset to today
-										</button>
+									{/* Badge & Delta chip */}
+									<div className="flex flex-wrap items-center justify-center gap-1.5 mt-0.5">
+										<span className={`rounded-full px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-wider font-bold ${
+											overallScore > 65
+												? 'text-[#A55252] bg-[#A55252]/10'
+												: overallScore > 35
+													? 'text-[#96693A] bg-[#96693A]/10'
+													: 'text-[#4B6478] bg-[#5A7A8F]/10'
+										}`}>
+											{overallScore > 65 ? 'High exposure' : overallScore > 35 ? 'Mixed exposure' : 'Low exposure'}
+										</span>
+										{isCustomized && scoreDelta !== 0 && (
+											<span className={`rounded-full px-2 py-0.5 font-mono text-[10px] font-bold ${
+												scoreDelta < 0 ? 'bg-[#2E6F40]/10 text-[#2E6F40]' : 'bg-[#A55252]/10 text-[#A55252]'
+											}`}>
+												{scoreDelta < 0 ? '−' : '+'}{Math.abs(scoreDelta)} vs today
+											</span>
 										)}
 									</div>
 
-									<p className="text-base leading-relaxed text-[#5E5E5E] mb-8 font-normal">
-									Each slider is how much of your week goes to that kind of work. They always add up to 100% — move one and the other two adjust. Drag a bar to see what shifting hours would do to the score.
-									</p>
+									{/* Concise one-sentence summary */}
+									{careerDetail.tasks.length > 0 && (
+										<p className="mt-2 text-[10.5px] text-[#5E5E5E] leading-snug max-w-[280px] text-center">
+											{(['high', 'medium', 'low'] as const).map((key, idx) => (
+												<span key={key}>
+													<strong className="font-bold" style={{ color: key === 'high' ? '#A55252' : key === 'medium' ? '#96693A' : '#5A7A8F' }}>
+														{weights[key]}%
+													</strong>{' '}
+													{bucketSentence[key]}{idx < 2 ? ', ' : '.'}
+												</span>
+											))}
+										</p>
+									)}
+								</div>
+							</div>
 
-									{/* Sliders Container with generous vertical spacing */}
-									<div className="space-y-8">
-										
-										{/* Slider 1: AI already does it */}
-										<div className="py-1">
-											<div className="flex items-center justify-between mb-3">
-												<div className="flex items-center gap-2.5">
-													<span className="h-3 w-3 rounded-full bg-[#A55252]"></span>
-													<span className="text-base font-bold text-[#1A1A1A]">Repetitive work AI already does</span>
+							{/* COLUMN 2: Task Composition Donut Chart & Quick-Filter Selectors */}
+							<div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-5 flex flex-col justify-between shadow-sm">
+								<div>
+									{/* Header */}
+									<div className="flex items-center justify-between border-b border-gray-100 pb-2.5 mb-2">
+										<div>
+											<p className="font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-[#6B6B6B]">Task Composition</p>
+											<h3 className="text-base sm:text-lg font-bold text-[#1A1A1A]">What the job is made of</h3>
+										</div>
+										<span className="font-mono text-[10px] text-[#6B6B6B] bg-gray-50 border border-gray-200 px-2 py-0.5 rounded-full">
+											{careerDetail.tasks.length} tasks
+										</span>
+									</div>
+									<p className="text-[11px] text-[#5E5E5E] mb-2">Tap any slice or button to filter tasks by AI exposure level.</p>
+
+									{/* Donut Chart SVG */}
+									<div className="relative h-32 w-32 mx-auto my-1 flex items-center justify-center">
+										<svg className="w-full h-full transform -rotate-90" viewBox="-120 -120 240 240">
+											{donutSlices.map((slice) => {
+												const isHovered = hoveredDonutSlice === slice.category;
+												return (
+													<g
+														key={slice.category}
+														role="button"
+														tabIndex={0}
+														aria-label={`${bucketLabel[slice.category]}: ${weights[slice.category]}% of the job`}
+														onMouseEnter={() => setHoveredDonutSlice(slice.category)}
+														onMouseLeave={() => setHoveredDonutSlice(null)}
+														onFocus={() => setHoveredDonutSlice(slice.category)}
+														onBlur={() => setHoveredDonutSlice(null)}
+														onClick={() => setTaskFilter(taskFilter === slice.category ? 'all' : slice.category)}
+														className="cursor-pointer transition-all duration-200"
+													>
+														<path
+															d={drawSlicePath(slice.start, slice.end, isHovered ? 104 : 96)}
+															fill={slice.color}
+															stroke="#FFFFFF"
+															strokeWidth="2.5"
+															opacity={hoveredDonutSlice ? (isHovered ? 1.0 : 0.45) : 0.95}
+															filter={isHovered ? `drop-shadow(0 0 6px ${slice.color})` : undefined}
+														/>
+													</g>
+												);
+											})}
+											<circle cx="0" cy="0" r="56" fill="#FFFFFF" />
+										</svg>
+										<div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+											{hoveredDonutSlice ? (
+												<>
+													<span className="text-2xl font-black" style={{ color: hoveredDonutSlice === 'high' ? '#A55252' : hoveredDonutSlice === 'medium' ? '#96693A' : '#5A7A8F' }}>
+														{weights[hoveredDonutSlice]}%
+													</span>
+													<span className="font-mono text-[8.5px] uppercase tracking-wider text-[#6B6B6B] max-w-[65px] text-center leading-tight">
+														{bucketLabel[hoveredDonutSlice]}
+													</span>
+												</>
+											) : (
+												<>
+													<span className="text-2xl font-black text-[#1A1A1A]">{careerDetail.tasks.length}</span>
+													<span className="font-mono text-[8.5px] uppercase tracking-wider text-[#6B6B6B]">tasks</span>
+												</>
+											)}
+										</div>
+									</div>
+								</div>
+
+								{/* Legend / Quick Filter buttons */}
+								<div className="mt-2 space-y-1.5 pt-2 border-t border-gray-100">
+									{(['high', 'medium', 'low'] as const).map((key) => (
+										<button
+											key={key}
+											onClick={() => setTaskFilter(taskFilter === key ? 'all' : key)}
+											aria-pressed={taskFilter === key}
+											className={`w-full flex items-center justify-between px-2.5 py-1.5 rounded-lg border text-xs transition duration-150 ${
+												taskFilter === key 
+													? 'border-gray-400 bg-gray-100 font-bold' 
+													: 'border-transparent bg-gray-50/70 hover:bg-gray-100/70'
+											}`}
+										>
+											<span className="flex items-center gap-2">
+												<span
+													className="h-2 w-2 rounded-full"
+													style={{ background: key === 'high' ? '#A55252' : key === 'medium' ? '#96693A' : '#5A7A8F' }}
+												/>
+												<span className={`text-[12px] ${taskFilter === key ? 'text-[#1A1A1A] font-bold' : 'text-[#5E5E5E]'}`}>
+													{bucketLabel[key]}
+												</span>
+											</span>
+											<span className="font-mono text-[12px] font-bold" style={{ color: key === 'high' ? '#A55252' : key === 'medium' ? '#96693A' : '#4B6478' }}>
+												{weights[key]}%
+											</span>
+										</button>
+									))}
+
+									<div className="pt-2 text-center">
+										<a
+											href="#task-breakdown"
+											className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-wider text-[#4B6478] hover:text-[#1A1A1A] font-bold hover:underline"
+										>
+											<span>View task breakdown ({filteredTasks.length})</span>
+											<span>↓</span>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							{/* COLUMN 3: The Interactive Upskilling Sliders ("Change your week") */}
+							<div className="rounded-2xl border border-gray-200 bg-white p-4 sm:p-5 flex flex-col justify-between shadow-sm">
+								<div>
+									{/* Header */}
+									<div className="flex items-center justify-between border-b border-gray-100 pb-2.5 mb-2">
+										<div>
+											<p className="font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-[#6B6B6B]">Simulator</p>
+											<h3 className="text-base sm:text-lg font-bold text-[#1A1A1A]">Change your week</h3>
+										</div>
+										{isCustomized && (
+											<button
+												onClick={handleResetWeights}
+												className="rounded border border-gray-300 bg-white px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-[#5E5E5E] hover:text-[#1A1A1A] hover:border-gray-400 transition"
+											>
+												Reset
+											</button>
+										)}
+									</div>
+									<p className="text-[11px] text-[#5E5E5E] mb-3">Shift your weekly hours between routine, assisted, and human-only tasks.</p>
+
+									{/* Compact Sliders */}
+									<div className="space-y-3">
+										{/* Slider 1: Repetitive */}
+										<div>
+											<div className="flex items-center justify-between mb-1">
+												<div className="flex items-center gap-1.5">
+													<span className="h-2 w-2 rounded-full bg-[#A55252]"></span>
+													<span className="text-xs font-bold text-[#1A1A1A]">Repetitive work AI does</span>
 												</div>
-												<span className="font-mono text-base font-black text-[#A55252]">{weights.high}%</span>
+												<span className="font-mono text-xs font-black text-[#A55252]">{weights.high}%</span>
 											</div>
 											<input
 												type="range"
 												min="0"
 												max="100"
 												value={weights.high}
-												data-tone="high"
 												aria-label="Repetitive work AI already does, percent of the week"
 												onChange={(e) => handleSliderChange('high', parseInt(e.target.value))}
-												className="w-full accent-[#A55252] h-2 rounded-lg bg-[#E5E5E5] outline-none cursor-pointer"
+												className="w-full accent-[#A55252] h-1.5 rounded-lg bg-gray-200 outline-none cursor-pointer"
 											/>
-											<p className="text-xs leading-relaxed text-[#5E5E5E] mt-2">
-												Scheduling, typing, transcription, sorting, filling in forms.
-											</p>
+											<p className="text-[10px] text-[#6B6B6B] mt-0.5">Scheduling, typing, forms, sorting</p>
 										</div>
 
-										{/* Slider 2: AI drafts, you decide */}
-										<div className="py-1">
-											<div className="flex items-center justify-between mb-3">
-												<div className="flex items-center gap-2.5">
-													<span className="h-3 w-3 rounded-full bg-[#96693A]"></span>
-													<span className="text-base font-bold text-[#1A1A1A]">Work AI drafts, you decide</span>
+										{/* Slider 2: AI Drafts */}
+										<div>
+											<div className="flex items-center justify-between mb-1">
+												<div className="flex items-center gap-1.5">
+													<span className="h-2 w-2 rounded-full bg-[#96693A]"></span>
+													<span className="text-xs font-bold text-[#1A1A1A]">Work AI drafts, you decide</span>
 												</div>
-												<span className="font-mono text-base font-black text-[#96693A]">{weights.medium}%</span>
+												<span className="font-mono text-xs font-black text-[#96693A]">{weights.medium}%</span>
 											</div>
 											<input
 												type="range"
 												min="0"
 												max="100"
 												value={weights.medium}
-												data-tone="medium"
 												aria-label="Work AI drafts and you decide, percent of the week"
 												onChange={(e) => handleSliderChange('medium', parseInt(e.target.value))}
-												className="w-full accent-[#96693A] h-2 rounded-lg bg-[#E5E5E5] outline-none cursor-pointer"
+												className="w-full accent-[#96693A] h-1.5 rounded-lg bg-gray-200 outline-none cursor-pointer"
 											/>
-											<p className="text-xs leading-relaxed text-[#5E5E5E] mt-2">
-												Basic analysis, first drafts, monitoring, routine checks.
-											</p>
+											<p className="text-[10px] text-[#6B6B6B] mt-0.5">Basic analysis, first drafts, monitoring</p>
 										</div>
 
 										{/* Slider 3: Needs a person */}
-										<div className="py-1">
-											<div className="flex items-center justify-between mb-3">
-												<div className="flex items-center gap-2.5">
-													<span className="h-3 w-3 rounded-full bg-[#5A7A8F]"></span>
-													<span className="text-base font-bold text-[#1A1A1A]">Work that still needs a person</span>
+										<div>
+											<div className="flex items-center justify-between mb-1">
+												<div className="flex items-center gap-1.5">
+													<span className="h-2 w-2 rounded-full bg-[#5A7A8F]"></span>
+													<span className="text-xs font-bold text-[#1A1A1A]">Work that needs a person</span>
 												</div>
-												<span className="font-mono text-base font-black text-[#4B6478]">{weights.low}%</span>
+												<span className="font-mono text-xs font-black text-[#4B6478]">{weights.low}%</span>
 											</div>
 											<input
 												type="range"
 												min="0"
 												max="100"
 												value={weights.low}
-												data-tone="low"
 												aria-label="Work that still needs a person, percent of the week"
 												onChange={(e) => handleSliderChange('low', parseInt(e.target.value))}
-												className="w-full accent-[#5A7A8F] h-2 rounded-lg bg-[#E5E5E5] outline-none cursor-pointer"
+												className="w-full accent-[#5A7A8F] h-1.5 rounded-lg bg-gray-200 outline-none cursor-pointer"
 											/>
-											<p className="text-xs leading-relaxed text-[#5E5E5E] mt-2">
-												Judgement calls, negotiation, leading people, hands-on work.
-											</p>
+											<p className="text-[10px] text-[#6B6B6B] mt-0.5">Judgement, negotiation, leadership, hands-on</p>
 										</div>
-
 									</div>
-
-									{/* Output Result Simulator Verdict Banner */}
-									<div className={`mt-8 rounded-xl border p-5 flex items-center justify-between ${
-										isCustomized 
-											? 'border-gray-300 bg-gray-50 text-[#1A1A1A]'
-											: 'border-gray-200 bg-white text-[#5E5E5E]'
-									}`}>
-										<div>
-											<p className="font-mono text-xs uppercase tracking-wider text-[#6B6B6B] font-bold">Your score</p>
-											<p className="text-sm font-bold text-[#1A1A1A] mt-1">
-												{!isCustomized
-													? 'Starting point — the job as it is today'
-													: scoreDelta === 0
-														? 'Same score — this mix adds up to the same thing'
-														: `You moved it ${scoreDelta < 0 ? 'down' : 'up'} ${Math.abs(scoreDelta)} point${Math.abs(scoreDelta) === 1 ? '' : 's'}`}
-											</p>
-										</div>
-										<span className="font-mono text-2xl font-black text-[#1A1A1A]">
-											{overallScore}
-											<span className="ml-1 text-xs font-bold text-[#6B6B6B]">/100</span>
-										</span>
-									</div>
-
 								</div>
 
+								{/* Output Result Simulator Verdict Banner */}
+								<div className={`mt-3.5 rounded-xl border p-2.5 flex items-center justify-between ${
+									isCustomized 
+										? 'border-gray-300 bg-gray-50 text-[#1A1A1A]' 
+										: 'border-gray-200 bg-white text-[#5E5E5E]'
+								}`}>
+									<div>
+										<p className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B] font-bold">Simulated Score</p>
+										<p className="text-xs font-bold text-[#1A1A1A] mt-0.5">
+											{!isCustomized
+												? 'Baseline score'
+												: scoreDelta === 0
+													? 'Net-zero difference'
+													: `${scoreDelta < 0 ? '−' : '+'}{Math.abs(scoreDelta)} pts shift`}
+										</p>
+									</div>
+									<div className="text-right">
+										<span className="font-mono text-2xl font-black text-[#1A1A1A]">{overallScore}</span>
+										<span className="font-mono text-xs text-[#6B6B6B] font-bold">/100</span>
+									</div>
+								</div>
 							</div>
 
 						</div>
@@ -1036,23 +1063,23 @@ export default function CareerAiResilienceCalculator() {
 
 					{/* Pay by state — BLS OEWS state medians, presented as their own estimates */}
 					{!loadingDetail && careerDetail?.state_wages && stateWageEntries.length >= 5 && (
-						<div className="py-4">
-							<div className="mb-6 flex flex-col gap-3 border-b border-gray-200 pb-4 sm:flex-row sm:items-end sm:justify-between">
+						<div id="state-wages" className="py-4 border-t border-gray-200 mt-6 scroll-mt-6">
+							<div className="mb-4 flex flex-col gap-2 border-b border-gray-200 pb-3 sm:flex-row sm:items-end sm:justify-between">
 								<div>
-									<h3 className="text-xl font-bold text-[#1A1A1A]">Pay by state</h3>
-									<p className="mt-1 max-w-2xl text-xs leading-6 text-[#5E5E5E]">
+									<h3 className="text-lg font-bold text-[#1A1A1A]">Pay by state</h3>
+									<p className="mt-0.5 max-w-2xl text-xs leading-5 text-[#5E5E5E]">
 										BLS publishes {stateWageEntries.length} state estimates for this occupation. Each is its own survey estimate — not the national median adjusted for local prices.
 									</p>
 								</div>
 								<div className="sm:text-right">
-									<p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B]">Published range</p>
-									<p className="mt-1 font-mono text-xs font-bold text-[#1A1A1A]">
+									<p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#6B6B6B]">Published range</p>
+									<p className="mt-0.5 font-mono text-xs font-bold text-[#1A1A1A]">
 										{formatUSD(stateWageEntries[stateWageEntries.length - 1][1])} – {formatUSD(stateWageEntries[0][1])}
 									</p>
 								</div>
 							</div>
 
-							<div className="grid gap-8 sm:grid-cols-3">
+							<div className="grid gap-6 sm:grid-cols-3">
 								<div>
 									<label htmlFor="state-wage-pick" className="block font-mono text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B]">
 										Your state
@@ -1061,14 +1088,14 @@ export default function CareerAiResilienceCalculator() {
 										id="state-wage-pick"
 										value={statePick}
 										onChange={(e) => setStatePick(e.target.value)}
-										className="mt-3 w-full rounded-lg border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-medium text-[#1A1A1A]"
+										className="mt-2 w-full rounded-lg border border-[#E5E5E5] bg-white px-3 py-2 text-sm font-medium text-[#1A1A1A]"
 									>
 										<option value="">Select a state</option>
 										{stateWageNames.map((name) => (
 											<option key={name} value={name}>{name}</option>
 										))}
 									</select>
-									<p className="mt-3 font-mono text-2xl font-black tracking-tight text-[#1A1A1A]">
+									<p className="mt-2.5 font-mono text-xl font-black tracking-tight text-[#1A1A1A]">
 										{pickedStatePay !== null ? formatUSD(pickedStatePay) : '—'}
 									</p>
 									<p className="mt-1 text-[11px] leading-5 text-[#6B6B6B]">
@@ -1082,10 +1109,10 @@ export default function CareerAiResilienceCalculator() {
 
 								<div>
 									<p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B]">Highest medians</p>
-									<div className="mt-3">
+									<div className="mt-2">
 										{stateWageEntries.slice(0, 5).map(([name, value]) => (
-											<div key={name} className="flex items-baseline justify-between gap-3 border-b border-[#F2F2F2] py-1.5 last:border-0">
-												<span className="text-[13px] text-[#1A1A1A]">{name}</span>
+											<div key={name} className="flex items-baseline justify-between gap-3 border-b border-[#F2F2F2] py-1 last:border-0">
+												<span className="text-[12px] text-[#1A1A1A]">{name}</span>
 												<span className="font-mono text-xs text-[#5E5E5E]">{formatUSD(value)}</span>
 											</div>
 										))}
@@ -1094,10 +1121,10 @@ export default function CareerAiResilienceCalculator() {
 
 								<div>
 									<p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#6B6B6B]">Lowest medians</p>
-									<div className="mt-3">
+									<div className="mt-2">
 										{stateWageEntries.slice(-5).reverse().map(([name, value]) => (
-											<div key={name} className="flex items-baseline justify-between gap-3 border-b border-[#F2F2F2] py-1.5 last:border-0">
-												<span className="text-[13px] text-[#1A1A1A]">{name}</span>
+											<div key={name} className="flex items-baseline justify-between gap-3 border-b border-[#F2F2F2] py-1 last:border-0">
+												<span className="text-[12px] text-[#1A1A1A]">{name}</span>
 												<span className="font-mono text-xs text-[#5E5E5E]">{formatUSD(value)}</span>
 											</div>
 										))}
@@ -1105,7 +1132,7 @@ export default function CareerAiResilienceCalculator() {
 								</div>
 							</div>
 
-							<p className="mt-5 text-[11px] leading-5 text-[#6B6B6B]">
+							<p className="mt-3 text-[11px] leading-5 text-[#6B6B6B]">
 								{careerDetail.state_wages.source === 'bls-state-line'
 									? `This is the ${careerDetail.state_wages.code} row of the ${careerDetail.salary_vintage ?? 'OEWS'} state panel.`
 									: `OEWS has no state row for this exact code, so these figures are the ${careerDetail.state_wages.code} roll-up.`}{' '}
@@ -1116,7 +1143,7 @@ export default function CareerAiResilienceCalculator() {
 
 					{/* Task Breakdown Section */}
 					{!loadingDetail && careerDetail && (
-						<div className="py-4">
+						<div id="task-breakdown" className="py-4 border-t border-gray-200 mt-6 scroll-mt-6">
 							<div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 border-b border-gray-200 pb-4 mb-6">
 								<div>
 									<h3 className="text-xl font-bold text-[#1A1A1A]">What the job actually involves</h3>

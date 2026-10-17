@@ -13,6 +13,7 @@ interface Props {
 	disableAnalytics?: boolean;
 	// Resolved by the page through `productCtaFor()`; null/absent renders nothing at all.
 	productCta?: ProductCta | null;
+	compactMain?: boolean;
 }
 
 const {
@@ -20,7 +21,8 @@ const {
 	description = 'Decision Engine for Expensive Choices. Total Cost of Ownership (TCO) calculators and decision intelligence for tech workers.',
 	image,
 	disableAnalytics = false,
-	productCta = null
+	productCta = null,
+	compactMain = false
 } = Astro.props;
 
 const analyticsSrc = import.meta.env.PUBLIC_ANALYTICS_SRC || 'https://cloud.umami.is/script.js';
@@ -85,7 +87,10 @@ const shareImage = image || defaultImage;
 		<SiteNav />
 		<SearchOverlay />
 		<main class="relative z-10">
-			<div class="mx-auto max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1600px] px-4 pb-12 pt-8 sm:px-6 lg:px-8">
+			<div class:list={[
+				"mx-auto max-w-7xl xl:max-w-[1440px] 2xl:max-w-[1600px] px-4 pb-12 sm:px-6 lg:px-8",
+				compactMain ? "pt-2 sm:pt-3" : "pt-8"
+			]}>
 				<slot />
 			</div>
 			{productCta && <ProductCTA match={productCta} />}

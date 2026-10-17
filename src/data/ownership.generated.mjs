@@ -33,6 +33,7 @@ export const OWNED_POST_SLUGS_GENERATED = [
 	"the-giniloh-money-flow-simulator-explained",
 	"three-forms-cost-more-than-tax",
 	"why-70-of-startup-options-go-unexercised",
+	"your-disks-35-dead-by-year-six",
 	"your-ipo-payday-tax-bill",
 	"your-raise-dies-at-51-5-hours",
 	"zapier-notion-integration-calculate-your-tinkering-tax"
@@ -101,6 +102,7 @@ export const FOREIGN_POST_SLUGS_GENERATED = [
 	"planner-as-router-fold-the-model-choice-into-the-plan",
 	"planning-ai-buys-capability-not-autonomy",
 	"prefill-decode-two-pool-gap",
+	"prior-disclosure-clock-cuts-penalty",
 	"rack-power-density-ceiling-build-before-you-buy",
 	"rack-ride-through-two-second-duty",
 	"remediator-recovers-46-percent",
@@ -198,6 +200,7 @@ export const FOREIGN_TARGETS = {
 	"planner-as-router-fold-the-model-choice-into-the-plan": "https://aichieve.net",
 	"planning-ai-buys-capability-not-autonomy": "https://aichieve.net",
 	"prefill-decode-two-pool-gap": "https://aichieve.net",
+	"prior-disclosure-clock-cuts-penalty": "https://aichieve.net",
 	"rack-power-density-ceiling-build-before-you-buy": "https://aichieve.net",
 	"rack-ride-through-two-second-duty": "https://aichieve.net",
 	"remediator-recovers-46-percent": "https://aichieve.net",
@@ -232,4 +235,4 @@ export const FOREIGN_TARGETS = {
 	"zet-scale-ev-truck-residual-value-risk": "https://aichieve.net"
 };
 export const GENERATED_FOR = "giniloh.com";
-export const GENERATED_AT = "2026-10-17T14:14:31.381Z";
+export const GENERATED_AT = "2026-10-17T19:28:51.684Z";
