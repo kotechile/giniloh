@@ -731,94 +731,81 @@ export default function MoneyFlowSimulator() {
 				</div>
 			)}
 
-			{/* Mode Toggles Header Section.
-			    Partially addressed, NOT fixed — see docs/contrast-audit.md.
-			    This row measures ~1104px inside a grid track only ~886px wide: as a
-			    GRID ITEM its automatic minimum size (min-width: auto) is its
-			    min-content, so it cannot shrink to the track. `flex-wrap` + `min-w-0`
-			    on the inner group let its two long mode labels reflow on narrow
-			    screens. Adding `min-w-0` to the row itself was tried and REVERTED:
-			    it widened the hydrated document from 1230px to 1368px at a 1000px
-			    viewport, because MoneyFlowCanvas derives its fit zoom from a
-			    container whose own width the scaled canvas influences — the layout
-			    has more than one equilibrium, so the fix belongs in that fit math,
-			    not here. */}
-			<div className="flex flex-wrap items-center justify-between gap-3 bg-white p-3 rounded-2xl border border-[#E5E5E5]">
-				<div className="flex flex-wrap gap-2 min-w-0">
-					<button
-						onClick={() => handleModeSwitch('personal')}
-						className={[
-							'px-4 py-1.5 rounded-lg text-xs font-semibold tracking-tight transition duration-200 cursor-pointer',
-							state.mode === 'personal'
-								? 'bg-gray-200 text-[#1A1A1A]'
-								: 'bg-transparent text-[#5F5B52] hover:text-slate-800'
-						].join(' ')}
-					>
-						👤 Personal Wealth Orchestrator
-					</button>
-					<button
-						onClick={() => handleModeSwitch('enterprise')}
-						className={[
-							'px-4 py-1.5 rounded-lg text-xs font-semibold tracking-tight transition duration-200 cursor-pointer',
-							state.mode === 'enterprise'
-								? 'bg-gray-200 text-[#1A1A1A]'
-								: 'bg-transparent text-[#5F5B52] hover:text-slate-800'
-						].join(' ')}
-					>
-						🏢 Enterprise CFO Simulation Room
-					</button>
-				</div>
-				<span className="text-[10px] font-mono text-[#5F5B52] uppercase tracking-widest px-3">
-					Active Engine Core: T+1 Event loops
-				</span>
-			</div>
-
-			{/* Main Simulator Dashboard - Unboxed */}
-			<div className="w-full bg-white py-6">
-				<div className="flex flex-wrap items-center justify-between gap-6 pb-6 border-b border-[#E5E5E5]">
-					<div>
-						<p className="font-mono text-xs uppercase tracking-[0.28em] text-[#475F73]">
-							{isEnterprise ? 'SPV Waterfall Cash Simulator' : 'High-Fidelity Backtesting & AI Engine'}
-						</p>
-						<h2 className="mt-2 text-2xl font-black tracking-tight text-[#1A1A1A]">
-							{isEnterprise ? 'Enterprise CFO Controls' : 'System Flow Control'}
-						</h2>
+			{/* Main Simulator Dashboard.
+			    Mode switch, identity, live figures and clock controls all share two rows above
+			    the canvas: every pixel spent on chrome here pushes the flow diagram — the thing
+			    people came to use — below the fold. */}
+			<div className="w-full bg-white py-2">
+				<div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 pb-1.5">
+					<div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+						<div className="flex items-center gap-0.5 rounded-lg border border-[#E5E5E5] bg-[#F4F1E8] p-0.5" role="group" aria-label="Simulation mode">
+							<button
+								onClick={() => handleModeSwitch('personal')}
+								aria-pressed={state.mode === 'personal'}
+								title="Personal Wealth Orchestrator"
+								className={[
+									'cursor-pointer rounded-md px-2.5 py-1 text-[11px] font-semibold tracking-tight transition duration-150',
+									state.mode === 'personal' ? 'bg-white font-bold text-[#1A1A1A]' : 'text-[#5F5B52] hover:text-[#1A1A1A]'
+								].join(' ')}
+							>
+								Personal
+							</button>
+							<button
+								onClick={() => handleModeSwitch('enterprise')}
+								aria-pressed={state.mode === 'enterprise'}
+								title="Enterprise CFO Simulation Room"
+								className={[
+									'cursor-pointer rounded-md px-2.5 py-1 text-[11px] font-semibold tracking-tight transition duration-150',
+									state.mode === 'enterprise' ? 'bg-white font-bold text-[#1A1A1A]' : 'text-[#5F5B52] hover:text-[#1A1A1A]'
+								].join(' ')}
+							>
+								Enterprise
+							</button>
+						</div>
+						<div>
+							<p className="font-mono text-[10px] uppercase tracking-[0.24em] text-[#475F73]">
+								{isEnterprise ? 'SPV Waterfall Cash Simulator' : 'High-Fidelity Backtesting & AI Engine'}
+							</p>
+							<h2 className="text-xl font-black tracking-tight text-[#1A1A1A]">
+								{isEnterprise ? 'Enterprise CFO Controls' : 'System Flow Control'}
+							</h2>
+						</div>
 					</div>
-					
+
 					{/* Status Stats - Naked Data */}
-					<div className="flex flex-wrap items-center gap-6 text-left">
+					<div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-left">
 						<div className="flex flex-col">
 							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#5F5B52]">Macro Feed</span>
-							<span className="text-2xl font-black text-[#1A1A1A] mt-1">Index {currentSAndP.toFixed(0)}</span>
+							<span className="text-xl font-black text-[#1A1A1A]">Index {currentSAndP.toFixed(0)}</span>
 						</div>
-						<div className="h-8 w-px bg-[#E5E5E5]"></div>
+						<div className="h-7 w-px bg-[#E5E5E5]"></div>
 						<div className="flex flex-col">
 							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#5F5B52]">Inflation</span>
-							<span className="text-2xl font-black text-[#A55252] mt-1">{currentInflation.toFixed(1)}%</span>
+							<span className="text-xl font-black text-[#A55252]">{currentInflation.toFixed(1)}%</span>
 						</div>
-						<div className="h-8 w-px bg-[#E5E5E5]"></div>
+						<div className="h-7 w-px bg-[#E5E5E5]"></div>
 						<div className="flex flex-col">
 							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#5F5B52]">Day Count</span>
-							<span className="text-2xl font-black text-[#1A1A1A] mt-1">{state.day} days</span>
+							<span className="text-xl font-black text-[#1A1A1A]">{state.day} days</span>
 						</div>
-						<div className="h-8 w-px bg-[#E5E5E5]"></div>
+						<div className="h-7 w-px bg-[#E5E5E5]"></div>
 						<div className="flex flex-col">
 							<span className="font-mono text-[10px] font-bold uppercase tracking-[0.25em] text-[#5F5B52]">
 								{isEnterprise ? 'Treasury net' : 'Wealth Projection'}
 							</span>
-							<span className="text-2xl font-black text-[#475F73] mt-1">
+							<span className="text-xl font-black text-[#475F73]">
 								{formatCurrency(state.totalWealthAccumulated)}
 							</span>
 						</div>
 					</div>
 				</div>
 
-				<div className="flex flex-wrap items-center justify-between gap-6 py-5">
+				<div className="mt-1 flex flex-wrap items-center justify-between gap-3 border-t border-[#E5E5E5] py-2">
 					<div className="flex items-center gap-3">
 						<button
 							onClick={handleToggleClock}
 							className={[
-								'py-2.5 px-5 rounded-lg text-xs font-mono uppercase tracking-wider transition font-bold select-none border cursor-pointer',
+								'whitespace-nowrap px-5 py-2 rounded-lg text-xs font-mono uppercase tracking-wider transition font-bold select-none border cursor-pointer',
 								isRunning
 									? 'bg-[#A55252] border-[#A55252] !text-white hover:bg-[#a64e4e]'
 									: 'bg-[#1A1A1A] border-[#1A1A1A] !text-white hover:bg-black'
@@ -829,13 +816,13 @@ export default function MoneyFlowSimulator() {
 						<button
 							onClick={handleStep}
 							disabled={isRunning || state.isPaused}
-							className="py-2.5 px-4 rounded-lg text-xs font-mono uppercase tracking-wider border border-[#E5E5E5] bg-white hover:border-[#1A1A1A] text-[#1A1A1A] disabled:opacity-30 cursor-pointer"
+							className="cursor-pointer whitespace-nowrap rounded-lg border border-[#E5E5E5] bg-white px-4 py-2 text-xs font-mono uppercase tracking-wider text-[#1A1A1A] hover:border-[#1A1A1A] disabled:opacity-30"
 						>
 							Step 1 day
 						</button>
 						<button
 							onClick={() => handleReset()}
-							className="py-2.5 px-4 rounded-lg text-xs font-mono uppercase tracking-wider border border-[#E5E5E5] bg-white hover:border-[#1A1A1A] text-[#1A1A1A] cursor-pointer"
+							className="cursor-pointer whitespace-nowrap rounded-lg border border-[#E5E5E5] bg-white px-4 py-2 text-xs font-mono uppercase tracking-wider text-[#1A1A1A] hover:border-[#1A1A1A]"
 						>
 							Reset
 						</button>

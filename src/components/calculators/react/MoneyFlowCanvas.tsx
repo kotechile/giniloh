@@ -212,13 +212,31 @@ export default function MoneyFlowCanvas({
 	const [zoom, setZoom] = React.useState<number>(1.0);
 	const containerRef = React.useRef<HTMLDivElement>(null);
 
+	/**
+	 * Fit-to-container, in both directions.
+	 *
+	 * Width alone was the wrong test: on a 1280x800 laptop the diagram fitted the card
+	 * horizontally and still ran 35-80px past the bottom of the viewport, so the last row of
+	 * nodes needed a scroll to see. This also measures the space actually left below the canvas,
+	 * and shrinks a little further when that is the binding constraint — but never by more than
+	 * 14%, because text inside the nodes stops being legible long before the diagram stops
+	 * fitting.
+	 */
 	const handleZoomFit = () => {
-		if (containerRef.current) {
-			const containerWidth = containerRef.current.clientWidth;
-			const maxRight = isEnterprise ? 1950 : 1725;
-			const targetZoom = Math.min(1.0, Math.max(0.4, (containerWidth - 32) / maxRight));
-			setZoom(parseFloat(targetZoom.toFixed(2)));
+		if (!containerRef.current) return;
+		const el = containerRef.current;
+		const containerWidth = el.clientWidth;
+		const maxRight = isEnterprise ? 1950 : 1725;
+		const widthFit = (containerWidth - 32) / maxRight;
+
+		let heightFit = Infinity;
+		if (typeof window !== 'undefined') {
+			const available = window.innerHeight - el.getBoundingClientRect().top - 24;
+			if (available > 0) heightFit = available / canvasHeight;
 		}
+
+		const targetZoom = Math.min(1.0, Math.max(0.4, Math.min(widthFit, Math.max(widthFit * 0.93, heightFit))));
+		setZoom(parseFloat(targetZoom.toFixed(2)));
 	};
 
 	React.useEffect(() => {
@@ -352,7 +370,7 @@ export default function MoneyFlowCanvas({
 	};
 
 	return (
-		<div ref={containerRef} className="relative w-full overflow-hidden min-h-[600px] py-4 bg-white">
+		<div ref={containerRef} className="relative w-full min-h-[340px] overflow-x-auto overflow-y-hidden bg-white py-1">
 			{/* Floating Zoom Controls */}
 			<div className="absolute top-4 right-4 z-40 flex items-center gap-1 bg-white border border-[#E5E5E5] rounded-lg p-1 text-xs font-mono select-none">
 				<button 
