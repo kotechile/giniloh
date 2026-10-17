@@ -11,25 +11,25 @@ const calculator = getCalculatorBySlug('career-ai-resilience');
 const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
 
 const title = "AI Career Radar";
-const description = "Analyze the automation vulnerability of 1,000+ occupations at the task level. Drag sliders to simulate upskilling and see how task-shifting future-proofs your career.";
-const eyebrow = "Career & AI Alignment";
+const description = "Find out how much of your job AI can already do — 1,000+ careers, broken down task by task. Then move the sliders and see what changing your week would do.";
+const eyebrow = "Career & AI";
 
 const faqItems = [
 	{
-		question: "Where does the career and task data come from?",
-		answer: "O*NET release 31.0 (U.S. Department of Labor): 18,838 task statements across 923 occupations, each mapped to Detailed Work Activities, plus a per-task importance and frequency rating and the occupational work-activity ratings. Wages and employment come from BLS OEWS. Nothing on this page is a survey we ran — every number traces to a column in one of those files."
+		question: "Where do these numbers come from?",
+		answer: "Two public U.S. government sources. O*NET, the Department of Labor's database of what each job actually involves — 18,838 tasks across 923 occupations. And the Bureau of Labor Statistics for pay and employment. Nothing on this page is a survey we ran; every number traces back to a published file."
 	},
 	{
-		question: "How is task-level AI exposure scored?",
-		answer: "Each of the 2,085 detailed work activities carries one score for how far current AI can perform it end to end, from 0 (hands still required in the world) to 1 (an AI system does it today at professional quality). A task inherits the mean score of its activities, then gets a weight from its own O*NET importance rating and how often the task is actually performed. The index is the weighted mean across the occupation's tasks."
+		question: "How is a job scored?",
+		answer: "Each task a job involves is matched to the work activities it needs — analysing, persuading, lifting, filing. Every one of those activities has a score for how much of it today's AI can already do. Tasks that are central to the job count for more than occasional ones. The headline number is the weighted average across the job's tasks."
 	},
 	{
 		question: "Does a high score mean the job disappears?",
-		answer: "No. The index measures how much of the task content current AI can address — not whether the occupation survives, and not what an employer will choose to do. A high score means the work is largely information handling that a system can now attempt; the job may still change, shrink, or grow. That is why the page shows the task breakdown rather than a single verdict."
+		answer: "No. It means a lot of the work is information handling that software can now attempt. Whether an occupation shrinks, changes or grows is a decision made by employers and customers — this page measures the task content, not the future. That is why it shows the breakdown instead of a verdict."
 	},
 	{
-		question: "How does the upskilling simulator protect my career?",
-		answer: "No career is 100% automated or 100% safe. By moving the sliders to represent a shift in your daily hours — less high-exposure work, more work that needs judgment, relationships, or hands in the world — the simulator recomputes the weighted index for that mix. It shows how the arithmetic moves, not what will happen to you."
+		question: "How does the simulator help?",
+		answer: "No job is 100% automatable or 100% safe. Moving the sliders shows what the arithmetic does if you spend less of your week on routine work and more on judgement, relationships or hands-on work. It is a way to test a plan, not a prediction about you."
 	}
 ];
 
@@ -47,24 +47,25 @@ const post = await fetchPostBySlug('best-ai-proof-jobs-in-a-changing-market');
 		eyebrow={eyebrow}
 		title={title}
 		description={description}
+		trustBadge="O*NET + BLS data"
 	>
 		<div slot="calculator">
 			<CareerAiResilienceCalculator client:load />
 		</div>
 
 		<article slot="aside" class="rounded-2xl border border-gray-200 bg-white p-6">
-			<p class="font-mono text-xs uppercase tracking-[0.28em] text-[#6B6B6B]">Simulator Guide</p>
-			<h2 class="mt-3 text-2xl font-bold tracking-tight text-[#1A1A1A]">How to operate</h2>
+			<p class="font-mono text-xs uppercase tracking-[0.28em] text-[#6B6B6B]">How to use it</p>
+			<h2 class="mt-3 text-2xl font-bold tracking-tight text-[#1A1A1A]">Four steps, about a minute</h2>
 			<ol class="mt-5 grid gap-4 text-sm leading-7 text-[#5E5E5E]">
-				<li>1. <strong>Search a Career:</strong> Search over 1,000 O*NET occupations using the auto-complete predictive search bar.</li>
-				<li>2. <strong>Inspect Task Mix:</strong> Hover over the task breakdown donut chart to see the percentage of your job dedicated to High, Medium, or Low risk activities.</li>
-				<li>3. <strong>Run the Simulator:</strong> Drag the sliders to simulate shifting your daily task distribution (e.g. automating routine tasks and upskilling to strategy).</li>
-				<li>4. <strong>Explore the Cluster Map:</strong> Switch to the scatter plot view to visually identify clusters of high-paying, low-vulnerability careers.</li>
+				<li><span class="font-bold text-[#1A1A1A]">1. Find your job.</span> Start typing a job title — "registered nurse", "accountant". No sign-up, 1,000+ careers.</li>
+				<li><span class="font-bold text-[#1A1A1A]">2. See what it's made of.</span> The ring splits the job into work AI already does, work AI can draft, and work that still needs a person.</li>
+				<li><span class="font-bold text-[#1A1A1A]">3. Change your week.</span> Say you'd spend fewer hours on the repetitive parts and more on judgement, and watch the score move.</li>
+				<li><span class="font-bold text-[#1A1A1A]">4. Look around.</span> The career map plots every job by pay and AI exposure. Top-left is where you want to be.</li>
 			</ol>
 			<div class="mt-6 rounded-xl border border-gray-100 bg-gray-50 p-4">
-				<p class="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-[#6B6B6B]">Aesthetic Design</p>
+				<p class="font-mono text-[0.68rem] uppercase tracking-[0.24em] text-[#6B6B6B]">What the number means</p>
 				<p class="mt-2 text-xs leading-6 text-[#5E5E5E]">
-					Calculations run entirely client-side using custom responsive SVG charts and data structures. Shift your tasks to watch the AI Vulnerability Gauge drop in real time.
+					Out of 100. Higher means more of the work is something software can already attempt — not that the job is going away.
 				</p>
 			</div>
 		</article>
@@ -85,7 +86,7 @@ const post = await fetchPostBySlug('best-ai-proof-jobs-in-a-changing-market');
 		</article>
 
 		<article slot="aside" class="rounded-2xl border border-gray-200 bg-white p-6">
-			<p class="font-mono text-xs uppercase tracking-[0.28em] text-[#6B6B6B]">FAQ</p>
+			<p class="font-mono text-xs uppercase tracking-[0.28em] text-[#6B6B6B]">Common Questions</p>
 			<div class="mt-5 grid gap-4">
 				{faqItems.map((item) => (
 					<div class="rounded-xl border border-gray-100 bg-gray-50 p-4">

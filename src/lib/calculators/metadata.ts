@@ -129,7 +129,7 @@ export const calculatorTools = [
 		outputType: 'Task Automation Radar',
 		iconType: 'radar',
 		description:
-			'Analyze the automation vulnerability of 1,000+ occupations at the task level. Drag sliders to simulate upskilling and see how task-shifting future-proofs your career.',
+			'Find out how much of your job AI can already do — 1,000+ careers broken down task by task, plus a simulator for what changing your week would do.',
 		utility: 'Analyze career AI risk & upskill',
 		category: 'FinanceApplication',
 		keywords: ['career ai risk', 'occupation vulnerability', 'ai automation calculator', 'future proof career']

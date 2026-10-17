@@ -3,9 +3,11 @@ interface Props {
 	eyebrow: string;
 	title: string;
 	description: string;
+	/** Plain-language trust chip in the hero. Pages that don't pass one keep the legacy label. */
+	trustBadge?: string;
 }
 
-const { eyebrow, title, description } = Astro.props;
+const { eyebrow, title, description, trustBadge } = Astro.props;
 
 const pathname = Astro.url.pathname;
 const slug = pathname.split('/').filter(Boolean).pop() || '';
@@ -18,12 +20,12 @@ const embedCode = `<div class="giniloh-calculator-embed" data-calculator="${slug
 		<p class="section-eyebrow font-bold text-xs uppercase tracking-[0.25em] text-[#6B6B6B]">{eyebrow}</p>
 		<h1 class="mt-4 text-5xl sm:text-6xl font-extrabold tracking-tight text-[#1A1A1A] leading-tight">{title}</h1>
 		<p class="mt-6 text-lg sm:text-xl leading-relaxed text-[#5E5E5E] font-normal">{description}</p>
-		<div class="mt-6 flex flex-wrap items-center gap-3 text-xs font-mono tracking-wider text-[#6B6B6B] uppercase">
+		<div class="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-mono tracking-wider text-[#6B6B6B] uppercase">
 			<div class="flex items-center gap-2 rounded-full border border-[#E5E5E5] bg-white px-3 py-1 text-[#5E5E5E] shadow-none">
 				<span class="inline-block h-2 w-2 rounded-full bg-[#5A7A8F]"></span>
-				<span class="text-[#1A1A1A] font-bold">E-E-A-T Verified</span>
+				<span class="text-[#1A1A1A] font-bold whitespace-nowrap">{trustBadge ?? 'E-E-A-T Verified'}</span>
 			</div>
-			<span>•</span>
+			<span aria-hidden="true" class="hidden sm:inline">•</span>
 			<span>Developed &amp; audited by <a href="/author/gini-loh/" class="text-[#4B6478] hover:text-[#1A1A1A] transition hover:underline font-bold">Gini Loh</a></span>
 		</div>
 	</div>
