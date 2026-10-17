@@ -243,6 +243,7 @@ VALIDATION_ELEMENTS = {
     "4.C.3.b.7": "Importance of Repeating Same Tasks",
     "4.C.3.a.4": "Freedom to Make Decisions",
     "4.C.3.b.8": "Determine Tasks, Priorities and Goals",
+    "4.C.3.a.1": "Consequence of Error",
 }
 
 
@@ -396,7 +397,7 @@ def main() -> None:
         weight_total = 0.0
         bucket_weight = {"high": 0.0, "medium": 0.0, "low": 0.0}
         bucket_count = {"high": 0, "medium": 0, "low": 0}
-        share_weight = {"physical": 0.0, "judgment": 0.0, "routine": 0.0, "augmentation": 0.0}
+        share_weight = {"physical": 0.0, "judgment": 0.0, "routine": 0.0, "revised": 0.0}
         tasks_out: list[dict] = []
         dwas_covered = 0
         tasks_scored = 0
@@ -491,7 +492,7 @@ def main() -> None:
 
             emerging = revised.get(normalise(task["text"])) or added.get(normalise(task["text"]))
             if emerging:
-                share_weight["augmentation"] += weight
+                share_weight["revised"] += weight
 
             lead = max(scored_dwas, key=lambda d: d["score"])
             tasks_out.append(
@@ -528,7 +529,11 @@ def main() -> None:
                 "physical_share": None,
                 "judgment_share": None,
                 "routine_share": None,
-                "augmentation_share": None,
+                "emerging_revised_share": None,
+                "emerging_added_tasks": sum(1 for r in soc_emerging if r["category"] == "New"),
+                "consequence_of_error": round(work_context["4.C.3.a.1"][soc], 2)
+                if soc in work_context.get("4.C.3.a.1", {})
+                else None,
                 "dwas_covered": 0,
                 "tasks_scored": 0,
                 "tasks_rated": 0,
@@ -544,7 +549,15 @@ def main() -> None:
                 "physical_share": round(share_weight["physical"] / weight_total, 4),
                 "judgment_share": round(share_weight["judgment"] / weight_total, 4),
                 "routine_share": round(share_weight["routine"] / weight_total, 4),
-                "augmentation_share": round(share_weight["augmentation"] / weight_total, 4),
+                # O*NET's New tasks are additions that are NOT in task_statements, so they
+                # cannot be scored or weighted. Only Revision rows replace a task we can score,
+                # and only those move the weighted share. The count of additions is reported
+                # beside it so a reader can see how much of the churn the index cannot see.
+                "emerging_revised_share": round(share_weight["revised"] / weight_total, 4),
+                "emerging_added_tasks": sum(1 for r in soc_emerging if r["category"] == "New"),
+                "consequence_of_error": round(work_context["4.C.3.a.1"][soc], 2)
+                if soc in work_context.get("4.C.3.a.1", {})
+                else None,
                 "dwas_covered": dwas_covered,
                 "tasks_scored": tasks_scored,
                 "tasks_rated": tasks_rated,

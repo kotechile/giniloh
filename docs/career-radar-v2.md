@@ -103,8 +103,15 @@ Reported alongside, **not** folded into `V_job`:
   carry accountability: teaching, directing, coaching, advising, caring (`4.A.4.b.3/.4/.5/.6`, `4.A.4.a.5`).
 - `routine_share` — weighted share under `4.A.4.c.1` (administrative activities) and `4.A.3.b.6`
   (documenting/recording).
-- `augmentation_share` — weighted share of tasks that appear in `emerging_tasks.csv` as `New` or
-  `Revision`, plus the raw rows for the occupation.
+- `emerging_revised_share` — weighted share of tasks that O*NET rewrote in a recent update.
+  **Only revisions can enter this**, because a `New` task does not exist in `task_statements.csv`
+  and therefore cannot be scored or weighted (verified: 0 of 292 `New` rows match a task statement;
+  46 of 46 `Revision` rows match through their `Original Task` text).
+- `emerging_added_tasks` — count of `New` rows for the occupation. Reported beside the share so the
+  part of the churn the index cannot see stays visible. 222 occupations have additions; 40 have
+  revisions.
+- `consequence_of_error` — O*NET Work Context 4.C.3.a.1, 0–100. Displayed on the page, deliberately
+  **not** an input: multiplying exposure by stakes would be a value judgement presented as data.
 
 ### Deliberate departure from the pasted proposal
 
@@ -139,6 +146,7 @@ the published index against them across the 911 occupations that have both produ
 | Importance of Repeating Same Tasks (4.C.3.b.7) | +0.01 | 911 | Flat. Routineness in the O*NET sense does not track this index. |
 | Freedom to Make Decisions (4.C.3.a.4) | +0.12 | 911 | **Positive** — decision latitude does not lower the score. |
 | Determine Tasks, Priorities and Goals (4.C.3.b.8) | +0.20 | 911 | **Positive**, same direction. |
+| Consequence of Error (4.C.3.a.1) | **−0.36** | 911 | Stakes and exposure move together — surgeons score low, clerks high. Supports the model. |
 
 The last two rows matter, and they are the reason the site copy changed. The FAQ previously claimed
 low risk was "assigned to … complex strategic planning, and high-empathy interpersonal leadership".
@@ -150,9 +158,25 @@ So the index measures **how much of the task content current AI can address**, w
 information intensity — not with "my judgment protects me". The pages now say that, the FAQ says that,
 and the task breakdown is presented as the evidence rather than a verdict on the job.
 
-Known unmodelled dimension: the rubric scores a task's content, not the accountability attached to it.
-"Direct financial operations" and "draft a status report" are different in consequence, not in text
-handling. A consequence-of-error term (Work Context 4.C.3.a.1) is the obvious next input.
+On accountability: the rubric scores a task's content, not the consequence attached to it. That gap is
+now **reported rather than modelled** — `consequence_of_error` appears on every occupation page with
+O*NET's own rating, and the page says why it is not multiplied into the index. Folding stakes in would
+be a policy choice (should a surgeon's automatable reading task count for less because a mistake is
+catastrophic?), and a published index should not smuggle that in as arithmetic.
+
+### Emerging tasks are a record, not a forecast
+
+`emerging_tasks.csv` is O*NET's log of tasks added (`New`) or rewritten (`Revision`) in specific
+updates — 338 rows, 245 occupations, dates **05/2025 – 08/2026**, sourced from incumbents (173),
+occupational experts (110) and AI/SME review (55). Every row documents a change O*NET has already
+recorded; nothing in it projects the future, and nothing in this pipeline extrapolates. The closest
+thing to a forward signal is the `AI/SME` subset (55 rows, largely drone and autonomy adoption
+language), which is a qualitative judgement that the work is changing — still present tense.
+
+Practical consequence, and the reason `emerging_revised_share` is small: `New` tasks are additions
+outside the scored inventory, so they cannot move the index. They appear in an "Emerging & rewritten
+tasks" panel on the occupation page, with their proposer and date, and that panel is the honest place
+for them.
 
 ## 5. Output contract
 

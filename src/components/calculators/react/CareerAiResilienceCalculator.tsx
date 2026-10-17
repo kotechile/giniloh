@@ -16,7 +16,9 @@ interface Exposure {
 	physical_share: number;
 	judgment_share: number;
 	routine_share: number;
-	augmentation_share: number;
+	emerging_revised_share: number | null;
+	emerging_added_tasks: number;
+	consequence_of_error: number | null;
 	dwas_covered: number;
 	tasks_scored: number;
 	tasks_total: number;

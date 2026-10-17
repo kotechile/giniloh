@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T14:13:31Z",
+  "generated_at": "2026-10-17T14:20:59Z",
   "onet_release": "31.0",
   "onet_task_vintage": "08/2026",
   "rubric_version": "v2.1",
@@ -56,6 +56,11 @@
       "4.C.3.b.8": {
         "element": "Determine Tasks, Priorities and Goals",
         "spearman": 0.201,
+        "n": 911
+      },
+      "4.C.3.a.1": {
+        "element": "Consequence of Error",
+        "spearman": -0.3601,
         "n": 911
       }
     },

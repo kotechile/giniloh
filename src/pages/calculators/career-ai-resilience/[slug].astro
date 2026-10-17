@@ -87,7 +87,9 @@ interface Detail {
 		physical_share: number;
 		judgment_share: number;
 		routine_share: number;
-		augmentation_share: number;
+		emerging_revised_share: number | null;
+		emerging_added_tasks: number;
+		consequence_of_error: number | null;
 		dwas_covered: number;
 		tasks_scored: number;
 		tasks_total: number;
@@ -181,10 +183,10 @@ const signals = [
 		note: 'Share in documenting, recording, and administrative activities.'
 	},
 	{
-		label: 'Emerging-task churn',
-		value: detail.exposure.augmentation_share,
+		label: 'Rewritten by O*NET',
+		value: detail.exposure.emerging_revised_share ?? 0,
 		color: '#7C6BA8',
-		note: 'Share of weighted tasks O*NET added or rewrote since the occupation was last surveyed. Reported, not folded into the score.'
+		note: 'Share of weighted tasks O*NET rewrote in a recent update. Reported, not folded into the score.'
 	}
 ];
 
@@ -284,6 +286,23 @@ const emerging = detail.emerging_tasks ?? [];
 						</p>
 					)}
 				</div>
+
+				{scored && detail.exposure.consequence_of_error !== null && (
+					<div class="mt-7 rounded-2xl border border-[#E5E5E5] bg-[#FBFBFB] p-5">
+						<div class="flex flex-wrap items-baseline justify-between gap-2">
+							<span class="text-sm font-semibold text-[#1A1A1A]">Consequence of error</span>
+							<span class="font-mono text-sm font-bold text-[#1A1A1A]">
+								{Math.round(detail.exposure.consequence_of_error)}/100
+								<span class="ml-2 font-mono text-[10px] uppercase tracking-wider text-[#6B6B6B]">
+									{detail.exposure.consequence_of_error > 50 ? 'High' : detail.exposure.consequence_of_error > 25 ? 'Moderate' : 'Low'}
+								</span>
+							</span>
+						</div>
+						<p class="mt-1.5 text-[11px] leading-5 text-[#6B6B6B]">
+							O*NET's own rating of how serious an uncorrectable mistake would be here — respondents, not us. Deliberately <strong>not</strong> in the index: the score measures what AI can do with the task content, and multiplying it by stakes would be our judgment dressed as data.
+						</p>
+					</div>
+				)}
 			</div>
 
 			<!-- Task mix + CTA -->
@@ -353,7 +372,7 @@ const emerging = detail.emerging_tasks ?? [];
 				<div class="rounded-[1.8rem] border border-[#E5E5E5] bg-white p-6 md:p-8">
 					<h3 class="text-2xl font-bold tracking-tight text-[#1A1A1A]">Emerging &amp; rewritten tasks</h3>
 					<p class="mt-2 text-sm leading-6 text-[#5E5E5E]">
-						O*NET added or revised these tasks for this occupation. They show which parts of the job are moving — including the parts created by the technology itself.
+						Tasks O*NET added or rewrote for this occupation in its recent updates (05/2025 – 08/2026), with who proposed them. Additions are <em>not</em> in the scored task inventory — they are new work O*NET is still measuring, so they appear here and nowhere in the index. A <strong>Revision</strong> replaces a task that is scored, which is why only those move the "Rewritten by O*NET" share.
 					</p>
 					<ul class="mt-6 grid gap-3">
 						{emerging.map((row) => (
