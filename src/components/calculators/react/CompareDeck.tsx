@@ -3,9 +3,10 @@ import React, { useState } from 'react';
 export interface CompareItem {
 	code: string;
 	title: string;
-	salary: number;
+	salary: number | null;
 	risk_score: number;
-	demand: string;
+	/** BLS OEWS employment size band — not a growth projection. */
+	employment_band: string;
 }
 
 interface Props {
@@ -19,7 +20,8 @@ export default function CompareDeck({ items, onRemove, onClear }: Props) {
 
 	if (items.length === 0) return null;
 
-	const formatUSD = (val: number) => {
+	const formatUSD = (val: number | null) => {
+		if (val === null) return 'Not reported';
 		return new Intl.NumberFormat('en-US', {
 			style: 'currency',
 			currency: 'USD',
@@ -122,9 +124,9 @@ export default function CompareDeck({ items, onRemove, onClear }: Props) {
 											</div>
 
 											<div>
-												<p className="text-[10px] font-mono uppercase tracking-wider text-[#5E5E5E]">Growth Projection</p>
-												<span className={`inline-block text-xs font-bold rounded-full mt-1.5 px-2.5 py-0.5 ${item.demand === 'High' ? 'bg-cyan-500/10 text-[#4B6478]' : 'bg-gray-200 text-[#5E5E5E]'}`}>
-													{item.demand} Demand
+												<p className="text-[10px] font-mono uppercase tracking-wider text-[#5E5E5E]">Employment Level</p>
+												<span className={`inline-block text-xs font-bold rounded-full mt-1.5 px-2.5 py-0.5 ${item.employment_band === 'High' || item.employment_band === 'Very High' ? 'bg-cyan-500/10 text-[#4B6478]' : 'bg-gray-200 text-[#5E5E5E]'}`}>
+													{item.employment_band}
 												</span>
 											</div>
 										</div>

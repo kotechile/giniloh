@@ -7,23 +7,57 @@ interface CategoryDistribution {
 	low: number;
 }
 
+/**
+ * What the index is made of. `automation` is the headline number; the shares are reported
+ * dimensions that are never folded into it (see docs/career-radar-v2.md).
+ */
+interface Exposure {
+	automation: number;
+	physical_share: number;
+	judgment_share: number;
+	routine_share: number;
+	augmentation_share: number;
+	dwas_covered: number;
+	tasks_scored: number;
+	tasks_total: number;
+}
+
+interface Dwa {
+	id: string;
+	name: string;
+	gwa: string;
+	gwa_name: string;
+	importance: number | null;
+	level: number | null;
+}
+
 interface OccupationIndexItem {
 	code: string;
 	title: string;
 	description: string;
 	risk_score: number;
 	tasks_count: number;
-	salary: number;
-	demand: string;
+	salary: number | null;
+	/** BLS OEWS employment size band. Was `demand` in v1, which mislabelled employment as growth. */
+	employment_band: string;
+	employment: number | null;
+	salary_source?: string;
+	exposure?: Exposure;
 	category_distribution: CategoryDistribution;
+	/** Share of task weight per bucket — reproduces risk_score at the simulator's starting point. */
+	weighted_distribution?: CategoryDistribution;
 }
 
 interface Task {
 	id: string;
 	text: string;
 	type: string;
-	risk: 'high' | 'medium' | 'low';
+	risk: 'high' | 'medium' | 'low' | null;
+	score: number | null;
+	weight: number | null;
 	rationale: string;
+	dwas?: Dwa[];
+	emerging?: { task: string; category: string; date: string; domain_source: string } | null;
 }
 
 interface OccupationDetail {
@@ -31,9 +65,34 @@ interface OccupationDetail {
 	title: string;
 	description: string;
 	risk_score: number;
-	salary: number;
-	demand: string;
+	salary: number | null;
+	employment_band: string;
+	employment: number | null;
+	salary_source?: string;
+	exposure?: Exposure;
+	weighted_distribution?: CategoryDistribution;
+	emerging_tasks?: { task: string; category: string; date: string; domain_source: string; original_task: string | null }[];
 	tasks: Task[];
+}
+
+/**
+ * The bucket split the simulator starts from — and returns to on reset.
+ *
+ * `weighted_distribution` is the share of task weight per bucket as published by the build.
+ * Starting from it makes the gauge at rest equal the occupation's risk score; v1 derived the
+ * split from task counts, so the simulator opened on a different number than the card.
+ */
+function publishedWeights(data: OccupationDetail) {
+	const dist = data.weighted_distribution;
+	if (dist) return { high: dist.high, medium: dist.medium, low: dist.low };
+
+	const tasks = data.tasks ?? [];
+	const total = tasks.length || 1;
+	const highCount = tasks.filter((t) => t.risk === 'high').length;
+	const mediumCount = tasks.filter((t) => t.risk === 'medium').length;
+	const hPct = Math.round((highCount / total) * 100);
+	const mPct = Math.round((mediumCount / total) * 100);
+	return { high: hPct, medium: mPct, low: 100 - hPct - mPct };
 }
 
 export default function CareerAiResilienceCalculator() {
@@ -45,8 +104,8 @@ export default function CareerAiResilienceCalculator() {
 	const [minVulnerability, setMinVulnerability] = useState<number>(0);
 	const [maxVulnerability, setMaxVulnerability] = useState<number>(100);
 	const [minSalaryFilter, setMinSalaryFilter] = useState<number>(0);
-	const [demandFilter, setDemandFilter] = useState<string>('all');
-	const [sortField, setSortField] = useState<'title' | 'risk_score' | 'salary' | 'demand'>('risk_score');
+	const [employmentFilter, setEmploymentFilter] = useState<string>('all');
+	const [sortField, setSortField] = useState<'title' | 'risk_score' | 'salary' | 'employment_band'>('risk_score');
 	const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('desc');
 	const [currentPage, setCurrentPage] = useState<number>(1);
 	const itemsPerPage = 15;
@@ -140,17 +199,8 @@ export default function CareerAiResilienceCalculator() {
 				const data: OccupationDetail = await res.json();
 				setCareerDetail(data);
 
-				// Initialize simulator weights based on actual task distribution
-				const tasks = data.tasks || [];
-				const total = tasks.length || 1;
-				const highCount = tasks.filter((t) => t.risk === 'high').length;
-				const mediumCount = tasks.filter((t) => t.risk === 'medium').length;
-
-				const hPct = Math.round((highCount / total) * 100);
-				const mPct = Math.round((mediumCount / total) * 100);
-				const lPct = 100 - hPct - mPct;
-
-				setWeights({ high: hPct, medium: mPct, low: lPct });
+				// Start from the published weighted split, so the gauge at rest equals risk_score.
+				setWeights(publishedWeights(data));
 				setIsCustomized(false);
 				setTaskFilter('all');
 			} catch (e) {
@@ -236,24 +286,30 @@ export default function CareerAiResilienceCalculator() {
 	// Reset weight adjustments
 	const handleResetWeights = () => {
 		if (!careerDetail) return;
-		const tasks = careerDetail.tasks || [];
-		const total = tasks.length || 1;
-		const highCount = tasks.filter((t) => t.risk === 'high').length;
-		const mediumCount = tasks.filter((t) => t.risk === 'medium').length;
-
-		const hPct = Math.round((highCount / total) * 100);
-		const mPct = Math.round((mediumCount / total) * 100);
-		const lPct = 100 - hPct - mPct;
-
-		setWeights({ high: hPct, medium: mPct, low: lPct });
+		setWeights(publishedWeights(careerDetail));
 		setIsCustomized(false);
 	};
 
-	// Calculated overall score based on current weights
-	// High risk contributes 100%, Medium 50%, Low 0%
+	// Mean task score inside each bucket, weighted the way the build weighted it. The simulator
+	// then reports the same quantity the published index does: a weighted mean, not "high + half
+	// of medium", which understated every high-exposure task between 0.60 and 1.00.
+	const bucketMeans = useMemo(() => {
+		const acc = { high: [0, 0], medium: [0, 0], low: [0, 0] } as Record<'high' | 'medium' | 'low', [number, number]>;
+		for (const task of careerDetail?.tasks ?? []) {
+			if (task.score === null || !task.risk) continue;
+			const weight = task.weight ?? 1;
+			acc[task.risk][0] += weight * task.score;
+			acc[task.risk][1] += weight;
+		}
+		const mean = (pair: [number, number]) => (pair[1] > 0 ? pair[0] / pair[1] : 0);
+		return { high: mean(acc.high), medium: mean(acc.medium), low: mean(acc.low) };
+	}, [careerDetail]);
+
 	const overallScore = useMemo(() => {
-		return Math.round(weights.high + weights.medium * 0.5);
-	}, [weights]);
+		const total = weights.high + weights.medium + weights.low || 100;
+		const blended = (weights.high * bucketMeans.high + weights.medium * bucketMeans.medium + weights.low * bucketMeans.low) / total;
+		return Math.round(blended * 100);
+	}, [weights, bucketMeans]);
 
 	// Filtered tasks in detailed view
 	const filteredTasks = useMemo(() => {
@@ -262,8 +318,10 @@ export default function CareerAiResilienceCalculator() {
 		return careerDetail.tasks.filter((t) => t.risk === taskFilter);
 	}, [careerDetail, taskFilter]);
 
-	// Format currency utility
-	const formatUSD = (val: number) => {
+	// Format currency utility. A null salary means BLS published no wage for the occupation;
+	// it is stated, not replaced with a number.
+	const formatUSD = (val: number | null) => {
+		if (val === null) return 'Not reported';
 		return new Intl.NumberFormat('en-US', {
 			style: 'currency',
 			currency: 'USD',
@@ -313,22 +371,24 @@ export default function CareerAiResilienceCalculator() {
 	const riskMin = 0;
 	const riskMax = 100;
 
-	const mapSalaryToX = (salary: number) => {
-		const clamped = Math.max(salaryMin, Math.min(salaryMax, salary));
+	const mapSalaryToX = (salary: number | null) => {
+		const clamped = Math.max(salaryMin, Math.min(salaryMax, salary ?? salaryMin));
 		return scatterMargin.left + ((clamped - salaryMin) / (salaryMax - salaryMin)) * scatterPlotWidth;
 	};
 
-	const mapRiskToY = (risk: number) => {
-		const clamped = Math.max(riskMin, Math.min(riskMax, risk));
+	const mapRiskToY = (risk: number | null) => {
+		const clamped = Math.max(riskMin, Math.min(riskMax, risk ?? riskMin));
 		// Invert Y so that 100 is at top, 0 at bottom
 		return scatterMargin.top + (1 - (clamped - riskMin) / (riskMax - riskMin)) * scatterPlotHeight;
 	};
 
-	// Filtered careers inside Explorer scatter plot
+	// Filtered careers inside Explorer scatter plot. Occupations with no O*NET task inventory
+	// have a null score and cannot be placed on the axis — they are not plotted as zero risk.
 	const filteredExplorerCareers = useMemo(() => {
-		if (!searchQueryExplorer.trim()) return indexData;
+		const plottable = indexData.filter((item) => item.risk_score !== null);
+		if (!searchQueryExplorer.trim()) return plottable;
 		const q = searchQueryExplorer.toLowerCase();
-		return indexData.filter((item) =>
+		return plottable.filter((item) =>
 			item.title.toLowerCase().includes(q) || item.code.includes(q)
 		);
 	}, [searchQueryExplorer, indexData]);
@@ -363,14 +423,15 @@ export default function CareerAiResilienceCalculator() {
 			list = list.filter(item => item.title.toLowerCase().includes(q) || item.code.includes(q));
 		}
 
+		list = list.filter(item => item.risk_score !== null);
 		list = list.filter(item => item.risk_score >= minVulnerability && item.risk_score <= maxVulnerability);
 
 		if (minSalaryFilter > 0) {
-			list = list.filter(item => item.salary >= minSalaryFilter);
+			list = list.filter(item => item.salary !== null && item.salary >= minSalaryFilter);
 		}
 
-		if (demandFilter !== 'all') {
-			list = list.filter(item => item.demand === demandFilter);
+		if (employmentFilter !== 'all') {
+			list = list.filter(item => item.employment_band === employmentFilter);
 		}
 
 		// Sorting
@@ -392,7 +453,7 @@ export default function CareerAiResilienceCalculator() {
 		});
 
 		return list;
-	}, [indexData, finderSearchQuery, minVulnerability, maxVulnerability, minSalaryFilter, demandFilter, sortField, sortDirection]);
+	}, [indexData, finderSearchQuery, minVulnerability, maxVulnerability, minSalaryFilter, employmentFilter, sortField, sortDirection]);
 
 	const totalPages = Math.ceil(filteredFinderCareers.length / itemsPerPage) || 1;
 	const paginatedFinderCareers = useMemo(() => {
@@ -403,7 +464,7 @@ export default function CareerAiResilienceCalculator() {
 	// Reset page on filter adjustment
 	useEffect(() => {
 		setCurrentPage(1);
-	}, [finderSearchQuery, minVulnerability, maxVulnerability, minSalaryFilter, demandFilter, sortField, sortDirection]);
+	}, [finderSearchQuery, minVulnerability, maxVulnerability, minSalaryFilter, employmentFilter, sortField, sortDirection]);
 
 	return (
 		<div className="w-full text-[#5E5E5E] font-sans">
@@ -908,18 +969,44 @@ export default function CareerAiResilienceCalculator() {
 												<span className="font-mono text-[9px] uppercase tracking-wider text-[#6B6B6B] font-bold">
 													TASK ID #{task.id} • <span className="text-[#5E5E5E] font-semibold">{task.type}</span>
 												</span>
-												<span className={`rounded-full px-2.5 py-0.5 font-mono text-[8.5px] uppercase tracking-widest font-bold ${
-													task.risk === 'high'
-														? 'bg-[#A55252]/10 text-[#A55252]'
-														: task.risk === 'medium'
-															? 'bg-[#96693A]/10 text-[#96693A]'
-															: 'bg-[#5A7A8F]/10 text-[#4B6478]'
-												}`}>
-													{task.risk} Risk
-												</span>
-											</div>
-											<p className="text-sm leading-relaxed text-[#1A1A1A] font-medium">{task.text}</p>
-											
+												<div className="flex items-center gap-2">
+													{task.score !== null && (
+														<span className="font-mono text-[10px] font-bold text-[#1A1A1A]">
+															{Math.round(task.score * 100)}%
+														</span>
+													)}
+													{task.emerging && (
+														<span className="rounded-full bg-[#7C6BA8]/10 px-2 py-0.5 font-mono text-[8.5px] uppercase tracking-widest font-bold text-[#7C6BA8]">
+															{task.emerging.category}
+														</span>
+													)}
+													<span className={`rounded-full px-2.5 py-0.5 font-mono text-[8.5px] uppercase tracking-widest font-bold ${
+														task.risk === 'high'
+															? 'bg-[#A55252]/10 text-[#A55252]'
+															: task.risk === 'medium'
+																? 'bg-[#96693A]/10 text-[#96693A]'
+																: 'bg-[#5A7A8F]/10 text-[#4B6478]'
+													}`}>
+														{task.risk ?? 'no data'} {task.risk ? 'Risk' : ''}
+													</span>
+												</div>
+												</div>
+												<p className="text-sm leading-relaxed text-[#1A1A1A] font-medium">{task.text}</p>
+
+												{task.dwas && task.dwas.length > 0 && (
+												<div className="mt-2.5 flex flex-wrap gap-1.5">
+													{task.dwas.map((dwa) => (
+														<span
+															key={dwa.id}
+															title={`${dwa.gwa_name}${dwa.importance !== null ? ` · importance ${dwa.importance}/5 in this occupation` : ''}`}
+															className="rounded border border-gray-200 bg-gray-50 px-1.5 py-0.5 font-mono text-[9.5px] leading-4 text-[#5E5E5E]"
+														>
+															{dwa.name}
+														</span>
+													))}
+												</div>
+												)}
+
 											<div className="mt-3 pt-3 border-t border-gray-100 flex items-start gap-2">
 												<svg className={`h-4 w-4 shrink-0 mt-0.5 ${
 													task.risk === 'high' ? 'text-[#A55252]' : task.risk === 'medium' ? 'text-[#96693A]' : 'text-[#4B6478]'
@@ -959,7 +1046,7 @@ export default function CareerAiResilienceCalculator() {
 									setMinVulnerability(0);
 									setMaxVulnerability(100);
 									setMinSalaryFilter(0);
-									setDemandFilter('all');
+									setEmploymentFilter('all');
 								}}
 								className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 font-mono text-[9.5px] uppercase tracking-wider text-[#5E5E5E] hover:text-[#1A1A1A] hover:bg-gray-50 transition"
 							>
@@ -986,15 +1073,15 @@ export default function CareerAiResilienceCalculator() {
 								</div>
 								<div>
 									<label htmlFor="finder-demand" className="block font-mono text-[9px] uppercase tracking-[0.2em] text-[#6B6B6B] font-bold mb-2">
-										Market Demand
+										Employment Level
 									</label>
 									<select
 										id="finder-demand"
-										value={demandFilter}
-										onChange={(e) => setDemandFilter(e.target.value)}
+										value={employmentFilter}
+										onChange={(e) => setEmploymentFilter(e.target.value)}
 										className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-sm text-[#1A1A1A] outline-none focus:border-[#5A7A8F]"
 									>
-										<option value="all">All Demands</option>
+										<option value="all">All Sizes</option>
 										<option value="Very High">Very High</option>
 										<option value="High">High</option>
 										<option value="Medium">Medium</option>
@@ -1034,7 +1121,7 @@ export default function CareerAiResilienceCalculator() {
 											<option value="risk_score">AI Vulnerability</option>
 											<option value="title">Occupation Name</option>
 											<option value="salary">Median Salary</option>
-											<option value="demand">Demand Level</option>
+											<option value="employment_band">Employment Level</option>
 										</select>
 										<button
 											onClick={() => setSortDirection(sortDirection === 'asc' ? 'desc' : 'asc')}
@@ -1129,7 +1216,7 @@ export default function CareerAiResilienceCalculator() {
 										<th scope="col" className="pl-0 pr-6 py-4 font-bold text-left">Occupation Title</th>
 										<th scope="col" className="px-6 py-4 font-bold text-left">Vulnerability Score</th>
 										<th scope="col" className="px-6 py-4 font-bold text-left">Est. Salary</th>
-										<th scope="col" className="px-6 py-4 font-bold text-left">Market Demand</th>
+										<th scope="col" className="px-6 py-4 font-bold text-left">Employment Level</th>
 										<th scope="col" className="pl-6 pr-0 py-4 font-bold text-right">Action</th>
 									</tr>
 								</thead>
@@ -1175,15 +1262,15 @@ export default function CareerAiResilienceCalculator() {
 												</td>
 												<td className="px-6 py-6 text-left">
 													<span className={`inline-flex rounded-full px-2.5 py-0.5 text-[9.5px] font-bold font-mono uppercase border ${
-														item.demand === 'Very High'
+														item.employment_band === 'Very High'
 															? 'bg-[#5A7A8F]/10 text-[#4B6478] border-transparent'
-															: item.demand === 'High'
+															: item.employment_band === 'High'
 																? 'bg-[#5A7A8F]/10 text-[#4B6478] border-transparent'
-																: item.demand === 'Medium'
+																: item.employment_band === 'Medium'
 																	? 'bg-gray-100 text-[#5E5E5E] border-transparent'
 																	: 'bg-gray-100 text-[#6B6B6B] border-transparent'
 													}`}>
-														{item.demand}
+														{item.employment_band}
 													</span>
 												</td>
 												<td className="pl-6 pr-0 py-6 text-right">

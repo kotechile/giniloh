@@ -19,7 +19,11 @@
     "astro": "astro",
     "routing:sync": "node scripts/routing.mjs --sync",
     "routing:check": "node scripts/routing.mjs --check",
-    "routing:derive": "node scripts/routing.mjs"
+    "routing:derive": "node scripts/routing.mjs",
+    "data:careers": "python3 scripts/onet/build_career_radar.py",
+    "data:careers:score": "python3 scripts/onet/score_dwas.py",
+    "data:careers:audit": "python3 scripts/onet/score_dwas.py --audit 200",
+    "data:careers:fetch": "bash scripts/onet/fetch_onet.sh"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.1",

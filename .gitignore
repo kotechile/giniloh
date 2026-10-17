@@ -41,3 +41,11 @@ nginx-redirects.conf
 # is in every clone forever, so these stay out of history entirely.
 # ─────────────────────────────────────────────────────────────────────────────
 brag-output*/
+
+# ─────────────────────────────────────────────────────────────────────────────
+# O*NET 31.0 inputs. task_statements / task_ratings / tasks_to_dwas / work_activities
+# are committed: they drive the published scores. work_context.csv is 51 MB and is used
+# only to validate the index, so it is fetched on demand instead.
+#   bash scripts/onet/fetch_onet.sh
+# ─────────────────────────────────────────────────────────────────────────────
+data/onet/work_context.csv

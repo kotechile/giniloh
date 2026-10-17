@@ -17,15 +17,19 @@ const eyebrow = "Career & AI Alignment";
 const faqItems = [
 	{
 		question: "Where does the career and task data come from?",
-		answer: "The data is ingested directly from the official O*NET database (sponsored by the U.S. Department of Labor). It contains over 1,000 standardized occupations and their constituent tasks, which we parse and join dynamically."
+		answer: "O*NET release 31.0 (U.S. Department of Labor): 18,838 task statements across 923 occupations, each mapped to Detailed Work Activities, plus a per-task importance and frequency rating and the occupational work-activity ratings. Wages and employment come from BLS OEWS. Nothing on this page is a survey we ran — every number traces to a column in one of those files."
 	},
 	{
-		question: "How is task-level AI risk classified?",
-		answer: "Tasks are categorized based on automation frameworks: High Risk represents routine cognitive or manual tasks (e.g., data entry, standard document prep). Medium Risk covers semi-structured cognitive tasks (e.g., basic financial analysis, code templating). Low Risk is assigned to unstructured physical adaptability, complex strategic planning, and high-empathy interpersonal leadership."
+		question: "How is task-level AI exposure scored?",
+		answer: "Each of the 2,085 detailed work activities carries one score for how far current AI can perform it end to end, from 0 (hands still required in the world) to 1 (an AI system does it today at professional quality). A task inherits the mean score of its activities, then gets a weight from its own O*NET importance rating and how often the task is actually performed. The index is the weighted mean across the occupation's tasks."
+	},
+	{
+		question: "Does a high score mean the job disappears?",
+		answer: "No. The index measures how much of the task content current AI can address — not whether the occupation survives, and not what an employer will choose to do. A high score means the work is largely information handling that a system can now attempt; the job may still change, shrink, or grow. That is why the page shows the task breakdown rather than a single verdict."
 	},
 	{
 		question: "How does the upskilling simulator protect my career?",
-		answer: "No career is 100% automated or 100% safe. By adjusting the sliders to represent a shift in your daily hours—reducing routine tasks (High Risk) and increasing strategic advisory or complex execution (Low Risk)—the simulator calculates a customized, lower career vulnerability score."
+		answer: "No career is 100% automated or 100% safe. By moving the sliders to represent a shift in your daily hours — less high-exposure work, more work that needs judgment, relationships, or hands in the world — the simulator recomputes the weighted index for that mix. It shows how the arithmetic moves, not what will happen to you."
 	}
 ];
 

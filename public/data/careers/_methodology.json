@@ -1,0 +1,64 @@
+{
+  "generated_at": "2026-10-17T14:13:31Z",
+  "onet_release": "31.0",
+  "onet_task_vintage": "08/2026",
+  "rubric_version": "v2.1",
+  "scoring_model": "deepseek-chat",
+  "counts": {
+    "occupations": 1016,
+    "occupations_scored": 923,
+    "occupations_without_inventory": 93,
+    "tasks_scored": 18838,
+    "tasks_with_task_ratings": 18369,
+    "tasks_without_dwa_mapping": 0,
+    "dwas_scored": 2085,
+    "dwas_missing_score": 0
+  },
+  "weights": {
+    "importance_floor": 0.35,
+    "importance_span": 0.65,
+    "frequency_floor": 0.55,
+    "frequency_span": 0.45,
+    "supplemental_weight": 0.7,
+    "default_importance": 3.0,
+    "buckets": {
+      "high": 0.6,
+      "medium": 0.35
+    }
+  },
+  "validation": {
+    "degree_of_automation": {
+      "source": "O*NET Work Context 4.C.3.b.2, human-rated, not an input to the index",
+      "spearman_vs_index": -0.1516,
+      "n": 911
+    },
+    "work_context_checks": {
+      "4.C.3.d.3": {
+        "element": "Pace Determined by Speed of Equipment",
+        "spearman": -0.4921,
+        "n": 910
+      },
+      "4.C.3.b.2": {
+        "element": "Degree of Automation",
+        "spearman": -0.1516,
+        "n": 911
+      },
+      "4.C.3.b.7": {
+        "element": "Importance of Repeating Same Tasks",
+        "spearman": 0.0067,
+        "n": 911
+      },
+      "4.C.3.a.4": {
+        "element": "Freedom to Make Decisions",
+        "spearman": 0.1154,
+        "n": 911
+      },
+      "4.C.3.b.8": {
+        "element": "Determine Tasks, Priorities and Goals",
+        "spearman": 0.201,
+        "n": 911
+      }
+    },
+    "reading": "A negative correlation with machine-paced work is expected and correct: the index measures how much of the task content current AI can address, not how industrialised the job already is. Note that decision latitude does not lower the index \u2014 information work carries more automatable text and data handling than physical work does."
+  }
+}
