@@ -192,11 +192,17 @@ handling. A consequence-of-error term (Work Context 4.C.3.a.1) is the obvious ne
 ## 6. Re-running
 
 ```bash
+npm run data:careers:fetch    # download the O*NET 31.0 tables (skips files already present)
 npm run data:careers          # rebuild JSON from data/onet (offline, uses committed scores)
 npm run data:careers:score    # LLM pass over DWAs (writes data/onet/dwa-automation.json)
 npm run data:careers:audit    # re-score 200 DWAs, print mean absolute deviation
 npm run check && npm run build
 ```
+
+The Python steps need `pandas` and `openpyxl`. On this machine the system `python3` (3.9) has pandas
+but not openpyxl, and `/opt/homebrew/bin/python3` (3.14) has both — the build script says so explicitly
+if the import fails rather than producing a file with no wages. `npm run data:careers:score` needs a
+deepseek key in `.env` (`PUBLIC_DEEPSEEK_API_KEY`); it is the only step that touches the network.
 
 ## 7. Known limits
 
