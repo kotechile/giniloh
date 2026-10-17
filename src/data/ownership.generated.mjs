@@ -21,6 +21,7 @@ export const OWNED_POST_SLUGS_GENERATED = [
 	"lease-break-calculator-save-1850-in-3-steps",
 	"negotiate-job-offer-with-giniloh-visualizer",
 	"nvidia-rtx-pro-groundbreaking-performance-but-does-the-math-check",
+	"pi-5-price-jump-older-kit-wins",
 	"post-termination-option-clock-tax",
 	"replace-laptop-screen-let-this-decision-engine-do-the-math",
 	"self-hosting-break-even-one-hour-a-year",
@@ -130,6 +131,7 @@ export const FOREIGN_POST_SLUGS_GENERATED = [
 	"your-chip-stopped-deciding",
 	"your-cluster-hidden-clock",
 	"your-fleets-charger-gap",
+	"your-mexico-hedge-renewal-risk",
 	"zet-scale-ev-truck-residual-value-risk"
 ];
 export const FOREIGN_TARGETS = {
@@ -226,7 +228,8 @@ export const FOREIGN_TARGETS = {
 	"your-chip-stopped-deciding": "https://aichieve.net",
 	"your-cluster-hidden-clock": "https://aichieve.net",
 	"your-fleets-charger-gap": "https://aichieve.net",
+	"your-mexico-hedge-renewal-risk": "https://aichieve.net",
 	"zet-scale-ev-truck-residual-value-risk": "https://aichieve.net"
 };
 export const GENERATED_FOR = "giniloh.com";
-export const GENERATED_AT = "2026-10-17T00:17:06.626Z";
+export const GENERATED_AT = "2026-10-17T14:14:31.381Z";
