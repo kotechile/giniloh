@@ -34,23 +34,13 @@ export const GET: APIRoute = async ({ site }) => {
 		entries.push(urlEntry(baseUrl, path, today));
 	}
 
-	// 2. Apps & Showcase (apps.aichieve.net)
-	// Product-host URLs. Paths are LOWERCASE and match the product routes exactly: Next routes are
-	// case-sensitive, so the capitalised variants this list used to carry (`/LedgerLink`,
-	// `/ParcelProof`, …) answered 404 — five dead URLs advertised to Google from every page's sitemap.
-	// The bare origin is omitted too: it 307s to giniloh.com, and a sitemap should list the
-	// destination, not a redirect.
-	const appUrls = [
-		'https://apps.aichieve.net/showcase',
-		'https://apps.aichieve.net/ledgerlink',
-		'https://apps.aichieve.net/facturgate',
-		'https://apps.aichieve.net/parcelproof',
-		'https://apps.aichieve.net/caseproof',
-		'https://apps.aichieve.net/spendproof'
-	];
-	for (const appUrl of appUrls) {
-		entries.push(urlEntry(baseUrl, appUrl, today));
-	}
+	// 2. Apps & Showcase deliberately ABSENT.
+	//
+	// This sitemap used to list six apps.aichieve.net URLs (/showcase, /ledgerlink, /facturgate,
+	// /parcelproof, /caseproof, /spendproof). They all resolve, but the sitemap protocol requires
+	// every <loc> to be on the SAME host as the sitemap: Google discards cross-host entries and
+	// reports them as errors against the property, so those six bought nothing and cost a broken
+	// sitemap. They belong in a sitemap served by apps.aichieve.net.
 
 	// 3. Main Calculators
 	for (const tool of calculatorTools) {

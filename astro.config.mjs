@@ -95,7 +95,12 @@ export default defineConfig({
   },
   integrations: [
     react(),
-    sitemap()
+    // Every <loc> here must be a page we actually want indexed, and one the declared sitemap also
+    // lists. `/calculators/embed/*` are iframe embeds carrying <meta name="robots" content="noindex">:
+    // advertising them in a sitemap asks Google to index pages that tell it not to, which surfaces as
+    // an error in the coverage report. The declared sitemap (src/pages/sitemap.xml.ts) already omits
+    // them; this keeps the generated chunk consistent with it.
+    sitemap({ filter: (page) => !page.includes('/calculators/embed/') })
   ],
   vite: {
     plugins: [tailwindcss()],

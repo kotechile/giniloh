@@ -10,6 +10,7 @@
     "build": "node scripts/routing.mjs && astro build",
     "preview": "astro preview",
     "check": "astro check",
+    "verify": "node scripts/verify.mjs",
     "audit:contrast": "node scripts/contrast-audit.mjs",
     "audit:key-stats": "node scripts/key-stat-audit.mjs",
     "audit:layout": "node scripts/layout-audit.mjs",
