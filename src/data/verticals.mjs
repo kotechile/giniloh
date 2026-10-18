@@ -9,11 +9,9 @@ export const SITE_DOMAIN = "giniloh.com";
 
 export const OWNED_VERTICAL_SLUGS = [
 	"career_velocity_equity_engineering",
-	"consumer_cost_per_use",
+	"concentrated_equity_portfolio_capital",
+	"consumer_asset_repair_replace_tco",
 	"expat_cross_border_relocation",
-	"giniloh_product_guides",
-	"personal_compute_hardware",
-	"personal_investing",
 	"personal_microeconomics_tinkering_tax"
 ];
 
@@ -44,9 +42,8 @@ export const ORIGIN_BY_VERTICAL = {
 	"supplier_risk_reshoring_decision": "https://aichieve.net",
 	"supply_chain": "https://aichieve.net",
 	"warehouse_automation_robotics_capex": "https://aichieve.net",
-	"giniloh_product_guides": "https://giniloh.com",
-	"consumer_cost_per_use": "https://giniloh.com",
-	"personal_investing": "https://giniloh.com",
-	"personal_compute_hardware": "https://giniloh.com",
-	"pro_app_notes": "https://aichieve.net"
+	"concentrated_equity_portfolio_capital": "https://giniloh.com",
+	"consumer_asset_repair_replace_tco": "https://giniloh.com",
+	"sales_order_service_level_otif": "https://aichieve.net",
+	"property_loss_insurance_mitigation": "https://wellroost.com"
 };
