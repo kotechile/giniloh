@@ -13,7 +13,7 @@ import {
   Copy,
   Check,
   ArrowRight,
-} from 'lucide-react';
+} from '../ui/icons';
 import {
   computeW2Vs1099,
   type W2Vs1099Inputs,

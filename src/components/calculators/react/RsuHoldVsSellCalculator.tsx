@@ -11,7 +11,7 @@ import {
   Wallet,
   CheckCircle2,
   HelpCircle,
-} from 'lucide-react';
+} from '../ui/icons';
 import {
   calculateRsuHoldVsSell,
   PORTFOLIO_CONSTANTS_2026,
