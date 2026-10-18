@@ -1,0 +1,9 @@
+---
+import VerticalHub from '../../components/verticals/VerticalHub.astro';
+import { getVertical } from '../../data/verticalArchitecture';
+
+const vertical = getVertical('portfolio-capital');
+if (!vertical) throw new Error('Unknown vertical: portfolio-capital');
+---
+
+<VerticalHub vertical={vertical} />

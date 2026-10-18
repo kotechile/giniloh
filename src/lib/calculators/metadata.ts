@@ -1,5 +1,137 @@
 export const calculatorTools = [
 	{
+		title: 'RSU Hold vs. Sell & Mega Backdoor Roth Simulator',
+		slug: 'rsu-hold-vs-sell',
+		href: '/calculators/rsu-hold-vs-sell/',
+		status: 'Live',
+		accent: 'cyan',
+		domainCategory: 'Portfolio Capital',
+		outputType: 'Portfolio Risk & Tax Matrix',
+		iconType: 'chart-line',
+		description:
+			'2026 IRS statutory model quantifying employer concentration risk, double-jeopardy exposure, and $72,000 Section 415(c) Mega Backdoor Roth asset allocation.',
+		utility: 'Simulate RSU vest liquidation vs holding and Mega Backdoor Roth sheltering',
+		category: 'FinanceApplication',
+		keywords: [
+			'rsu hold vs sell calculator',
+			'mega backdoor roth 2026 calculator',
+			'concentrated stock risk model',
+			'double jeopardy tech compensation',
+			'72k section 415c limit'
+		]
+	},
+
+	{
+		title: 'W-2 vs. 1099 / S-Corp Net Yield Calculator',
+		slug: 'w2-vs-1099-scorp-calculator',
+		href: '/calculators/w2-vs-1099-scorp-calculator/',
+		status: 'Live',
+		accent: 'emerald',
+		domainCategory: 'Career',
+		outputType: '3-Way Economic Yield Matrix',
+		iconType: 'chart-line',
+		description:
+			'2026 IRS statutory model comparing W-2 salary against 1099 Sole Prop and S-Corp entity structures. Models SE tax arbitrage, Solo 401(k) caps, and QBI deductions.',
+		utility: 'Compare W-2 vs 1099 vs S-Corp net yield',
+		category: 'FinanceApplication',
+		keywords: [
+			'w2 vs 1099 calculator',
+			's corp vs sole prop calculator',
+			'1099 vs w2 breakeven hourly rate',
+			'solo 401k s corp calculator',
+			'qbi deduction 1099 vs scorp'
+		]
+	},
+
+	{
+		title: 'Secondary Tender vs. IPO Horizon Calculator',
+		slug: 'secondary-tender-calculator',
+		href: '/calculators/secondary-tender-calculator/',
+		status: 'Live',
+		accent: 'amber',
+		domainCategory: 'Portfolio Capital',
+		outputType: 'After-Tax Exit Comparison',
+		iconType: 'matrix',
+		description:
+			'Model a private secondary or tender offer against the IPO you are waiting for: after-tax cash today, probability-weighted and discounted exit proceeds, and the break-even IPO price.',
+		utility: 'Price a tender offer vs. holding for liquidity',
+		category: 'FinanceApplication',
+		keywords: [
+			'secondary tender offer calculator',
+			'startup secondary sale tax',
+			'qsbs 1202 calculator',
+			'ipo lockup opportunity cost',
+			'private equity tender offer discount'
+		]
+	},
+
+	{
+		title: 'Build-vs-Buy Amortization Simulator',
+		slug: 'build-vs-buy',
+		href: '/calculators/build-vs-buy/',
+		status: 'Live',
+		accent: 'cyan',
+		domainCategory: 'Stack Economics',
+		outputType: 'Discounted TCO Comparison',
+		iconType: 'table',
+		description:
+			'Compare internal tooling against a vendor on loaded engineering time, the permanent maintenance fraction, infrastructure and renewal escalation, over one discounted horizon.',
+		utility: 'Compare build TCO against vendor TCO',
+		category: 'FinanceApplication',
+		keywords: [
+			'build vs buy calculator',
+			'internal tooling maintenance cost',
+			'engineering time TCO',
+			'vendor renewal escalation',
+			'build vs buy software amortization'
+		]
+	},
+
+	{
+		title: 'Local Workstation vs. Cloud GPU Break-even',
+		slug: 'gpu-breakeven',
+		href: '/calculators/gpu-breakeven/',
+		status: 'Live',
+		accent: 'emerald',
+		domainCategory: 'Compute Capital',
+		outputType: 'Cost per GPU-Hour',
+		iconType: 'server',
+		description:
+			'Compute cost per GPU-hour for owned hardware — purchase, power, maintenance and residual value — against on-demand cloud rates at your real utilisation, with the break-even hours per month.',
+		utility: 'Find the local vs cloud GPU break-even',
+		category: 'FinanceApplication',
+		keywords: [
+			'local vs cloud gpu calculator',
+			'gpu cost per hour',
+			'workstation break even cloud',
+			'llm training hardware roi',
+			'cloud gpu vs buying'
+		]
+	},
+
+	{
+		title: 'Rent vs. Buy with Opportunity Cost',
+		slug: 'rent-vs-buy',
+		href: '/calculators/rent-vs-buy/',
+		status: 'Live',
+		accent: 'indigo',
+		domainCategory: 'Personal Capital',
+		outputType: 'Net Worth at Horizon',
+		iconType: 'chart-bar',
+		description:
+			'Run an owner and a renter to the same horizon: mortgage amortisation, tax, maintenance and selling costs against a portfolio funded by the down payment and the monthly difference.',
+		utility: 'Compare rent vs buy net worth',
+		category: 'FinanceApplication',
+		keywords: [
+			'rent vs buy calculator',
+			'rent vs buy opportunity cost',
+			'price to rent ratio',
+			'home equity break even year',
+			'buying a home vs investing'
+		]
+	},
+
+	{
 		title: 'Lease Break Penalty & Offset Estimator',
 		slug: 'lease-break',
 		href: '/calculators/lease-break/',

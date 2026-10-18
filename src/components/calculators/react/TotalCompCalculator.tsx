@@ -1187,6 +1187,27 @@ export default function TotalCompCalculator() {
 					</div>
 				</div>
 
+
+				{/* 1099 / S-Corp Cross-Link Bridge */}
+				<div className="mt-8 p-6 rounded-[2rem] bg-gradient-to-r from-emerald-950/40 via-slate-900 to-indigo-950/40 border border-emerald-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+					<div>
+						<span className="text-[10px] font-mono font-bold text-emerald-400 uppercase tracking-wider block">
+							Independent Arbitrage Bridge
+						</span>
+						<p className="text-base font-bold text-slate-100 mt-1">
+							Considering consulting or 1099 contract work instead?
+						</p>
+						<p className="text-xs text-slate-400 mt-0.5">
+							Compare this offer against a 1099 Sole Prop or S-Corp using 2026 IRS statutory limits ($72k Solo 401k & QBI).
+						</p>
+					</div>
+					<a
+						href={`/calculators/w2-vs-1099-scorp-calculator/?base=${offerA.cash.baseSalary}&bonus=${Math.round(offerA.cash.baseSalary * (offerA.cash.targetBonusPercent / 100))}&equity=${Math.round(offerA.equity.totalGrantValue / Math.max(1, offerA.equity.vestingYears))}`}
+						className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold uppercase tracking-wider shadow-lg transition whitespace-nowrap"
+					>
+						Compare to 1099 Contract &rarr;
+					</a>
+				</div>
 			</div>
 		</div>
 	);

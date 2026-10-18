@@ -1,0 +1,17 @@
+---
+import BuildVsBuyCalculator from '../../components/calculators/react/BuildVsBuyCalculator';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+
+const calculator = getCalculatorBySlug('build-vs-buy');
+const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+---
+
+<BaseLayout title="Build-vs-Buy Amortization Simulator | Gini Loh" description="Compare internal tooling against a vendor on loaded engineering time, maintenance, infrastructure and renewal escalation over one discounted horizon.">
+	<link slot="head" rel="canonical" href={new URL('/calculators/build-vs-buy/', Astro.site).toString()} />
+	{schema ? <JsonLd slot="head" data={schema} /> : null}
+	<main class="px-4 pb-24 pt-12 sm:px-6 lg:px-8">
+		<BuildVsBuyCalculator client:load />
+	</main>
+</BaseLayout>

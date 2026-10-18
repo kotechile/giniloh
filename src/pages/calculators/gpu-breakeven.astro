@@ -1,0 +1,17 @@
+---
+import GpuBreakevenCalculator from '../../components/calculators/react/GpuBreakevenCalculator';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+
+const calculator = getCalculatorBySlug('gpu-breakeven');
+const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+---
+
+<BaseLayout title="Local Workstation vs. Cloud GPU Break-even | Gini Loh" description="Cost per GPU-hour for owned hardware against on-demand cloud rates at your real utilisation, with break-even hours per month.">
+	<link slot="head" rel="canonical" href={new URL('/calculators/gpu-breakeven/', Astro.site).toString()} />
+	{schema ? <JsonLd slot="head" data={schema} /> : null}
+	<main class="px-4 pb-24 pt-12 sm:px-6 lg:px-8">
+		<GpuBreakevenCalculator client:load />
+	</main>
+</BaseLayout>

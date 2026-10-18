@@ -84,7 +84,14 @@ export default defineConfig({
 
     // Moved out of here during the split — derived from data/ownership.mjs.
     ...movedToolRedirects,
-    ...movedPostRedirects
+    ...movedPostRedirects,
+
+    // The two vertical-hub tool paths a first pass published before the calculator URLs were
+    // settled. The canonical engine URLs are /calculators/<slug>/; keep the old paths working.
+    '/career-capital/tools/w2-vs-1099-scorp-calculator': '/calculators/w2-vs-1099-scorp-calculator/',
+    '/career-capital/tools/w2-vs-1099-scorp-calculator/': '/calculators/w2-vs-1099-scorp-calculator/',
+    '/portfolio-capital/tools/rsu-hold-vs-sell': '/calculators/rsu-hold-vs-sell/',
+    '/portfolio-capital/tools/rsu-hold-vs-sell/': '/calculators/rsu-hold-vs-sell/'
   },
   integrations: [
     react(),

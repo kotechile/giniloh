@@ -1,4 +1,6 @@
 ---
+import { VERTICALS } from '../data/verticalArchitecture';
+
 interface NavLink {
 	href: string;
 	label: string;
@@ -15,6 +17,13 @@ const pathname = Astro.url.pathname;
 
 const isCurrent = (href: string) =>
 	pathname === href || (href !== '/' && pathname.startsWith(href));
+
+const inVertical = VERTICALS.some(
+	(v) => pathname === `/${v.slug}/` || pathname.startsWith(`/${v.slug}/`)
+);
+const activeVertical = VERTICALS.find(
+	(v) => pathname === `/${v.slug}/` || pathname.startsWith(`/${v.slug}/`)
+);
 ---
 
 <!--
@@ -51,7 +60,59 @@ const isCurrent = (href: string) =>
 
 		<nav class="hidden h-16 items-center gap-1 md:flex" aria-label="Primary navigation">
 			{
-				navLinks.map((link) => {
+				navLinks.filter((link) => link.href === '/').map((link) => (
+					<a
+						href={link.href}
+						class:list={[
+							'inline-flex h-16 items-center border-b-2 px-4 font-mono text-[0.7rem] uppercase tracking-[0.16em] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#111318]',
+							isCurrent(link.href)
+								? 'border-[#111318] font-bold text-[#111318]'
+								: 'border-transparent text-[#4B5563] hover:border-[#C9CCD2] hover:text-[#111318]'
+						]}
+						aria-current={isCurrent(link.href) ? 'page' : undefined}
+					>
+						{link.label}
+					</a>
+				))
+			}
+
+			<details class="group relative h-16">
+				<summary
+					class:list={[
+						'inline-flex h-16 cursor-pointer list-none items-center gap-1.5 border-b-2 px-4 font-mono text-[0.7rem] uppercase tracking-[0.16em] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#111318] [&::-webkit-details-marker]:hidden',
+						inVertical
+							? 'border-[#111318] font-bold text-[#111318]'
+							: 'border-transparent text-[#4B5563] hover:border-[#C9CCD2] hover:text-[#111318]'
+					]}
+				>
+					<span>{activeVertical ? activeVertical.shortLabel : 'Verticals'}</span>
+					<svg viewBox="0 0 24 24" fill="none" class="h-3 w-3 opacity-60" aria-hidden="true">
+						<path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</summary>
+				<div class="absolute left-0 top-16 z-50 w-[22rem] border border-line bg-surface p-2">
+					{VERTICALS.map((vertical) => (
+						<a
+							href={`/${vertical.slug}/`}
+							class:list={[
+								'block border-l-2 px-3 py-3 transition-colors',
+								pathname.startsWith(`/${vertical.slug}/`)
+									? 'border-[#111318] bg-[#F4F4F5]'
+									: 'border-transparent hover:border-[#C9CCD2] hover:bg-[#F4F4F5]'
+							]}
+						>
+							<span class="flex items-baseline justify-between gap-3">
+								<span class="text-sm font-semibold tracking-tight text-[#111318]">{vertical.title}</span>
+								<span class="font-mono text-[0.6rem] text-[#8C8C8C]">0{vertical.position}</span>
+							</span>
+							<span class="mt-0.5 block text-xs leading-snug text-[#5F5B52]">{vertical.question}</span>
+						</a>
+					))}
+				</div>
+			</details>
+
+			{
+				navLinks.filter((link) => link.href !== '/').map((link) => {
 					const isActive = isCurrent(link.href);
 					return (
 						<a
@@ -105,6 +166,24 @@ const isCurrent = (href: string) =>
 				</summary>
 				<div class="absolute right-0 top-[3.6rem] z-50 w-60 border border-line bg-surface p-2">
 					<nav class="grid" aria-label="Mobile navigation">
+						<span class="px-3 pt-2 pb-1 font-mono text-[0.58rem] uppercase tracking-[0.2em] text-[#8C8C8C]">Verticals</span>
+						{
+							VERTICALS.map((vertical) => (
+								<a
+									href={`/${vertical.slug}/`}
+									class:list={[
+										'inline-flex items-center justify-between border-l-2 px-3 py-2.5 font-mono text-[0.68rem] uppercase tracking-[0.16em] transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-ink',
+										pathname.startsWith(`/${vertical.slug}/`)
+											? 'border-[#111318] bg-[#F4F4F5] font-bold text-[#111318]'
+											: 'border-transparent text-[#4B5563] hover:border-[#C9CCD2] hover:text-[#111318]'
+									]}
+								>
+									<span>{vertical.shortLabel}</span>
+									<span class="text-[0.55rem] text-[#8C8C8C]">0{vertical.position}</span>
+								</a>
+							))
+						}
+						<span class="mt-2 border-t border-line px-3 pt-3 pb-1 font-mono text-[0.58rem] uppercase tracking-[0.2em] text-[#8C8C8C]">Site</span>
 						{
 							navLinks.map((link) => {
 								const isActive = isCurrent(link.href);

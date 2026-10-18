@@ -1,0 +1,17 @@
+---
+import W2Vs1099Calculator from '../../components/calculators/react/W2Vs1099Calculator';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+
+const calculator = getCalculatorBySlug('w2-vs-1099-scorp-calculator');
+const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+---
+
+<BaseLayout title="W-2 vs. 1099 / S-Corp Net Yield Calculator | Gini Loh" description="Compare W-2 total compensation against 1099 independent consulting and S-Corp distribution arbitrage under 2026 IRS statutory limits.">
+	<link slot="head" rel="canonical" href={new URL('/calculators/w2-vs-1099-scorp-calculator/', Astro.site).toString()} />
+	{schema ? <JsonLd slot="head" data={schema} /> : null}
+	<main class="px-4 pb-24 pt-12 sm:px-6 lg:px-8">
+		<W2Vs1099Calculator client:load />
+	</main>
+</BaseLayout>

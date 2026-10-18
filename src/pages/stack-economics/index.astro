@@ -1,0 +1,9 @@
+---
+import VerticalHub from '../../components/verticals/VerticalHub.astro';
+import { getVertical } from '../../data/verticalArchitecture';
+
+const vertical = getVertical('stack-economics');
+if (!vertical) throw new Error('Unknown vertical: stack-economics');
+---
+
+<VerticalHub vertical={vertical} />

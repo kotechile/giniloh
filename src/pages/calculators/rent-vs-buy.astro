@@ -1,0 +1,17 @@
+---
+import RentVsBuyCalculator from '../../components/calculators/react/RentVsBuyCalculator';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+
+const calculator = getCalculatorBySlug('rent-vs-buy');
+const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+---
+
+<BaseLayout title="Rent vs. Buy with Opportunity Cost | Gini Loh" description="Compare an owner and a renter at the same horizon: equity after selling costs against a portfolio funded by the down payment and monthly difference.">
+	<link slot="head" rel="canonical" href={new URL('/calculators/rent-vs-buy/', Astro.site).toString()} />
+	{schema ? <JsonLd slot="head" data={schema} /> : null}
+	<main class="px-4 pb-24 pt-12 sm:px-6 lg:px-8">
+		<RentVsBuyCalculator client:load />
+	</main>
+</BaseLayout>

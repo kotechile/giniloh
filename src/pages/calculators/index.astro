@@ -2,29 +2,18 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { calculatorTools } from '../../lib/calculators/metadata';
 import { fetchPostBySlug } from '../../lib/wordpress';
+import { VERTICALS } from '../../data/verticalArchitecture';
 
-const categories = [
-	{
-		title: 'Career & Compensation Strategy',
-		description: 'Model raises, job-hopping scenarios, total compensation offers, and relocation payback timelines to maximize your earning potential.',
-		slugs: ['raise-velocity', 'total-comp', 'relocation-cost', 'expat-evaluator', 'career-ai-resilience']
-	},
-	{
-		title: 'Wealth & Investment Automation',
-		description: 'Simulate frictionless money routing, index fund allocations, tax shelter optimizations, and automated cash flows.',
-		slugs: ['money-flow']
-	},
-	{
-		title: 'Purchase & Asset TCO Analysis',
-		description: 'Run objective cost-per-use and repair-versus-replace analyses on the assets you actually buy: laptops and phones, premium home equipment, and the hidden labour cost of a stack of free tools.',
-		slugs: ['coffee-arbitrage', 'tech-debt-repair', 'no-code-terminator']
-	},
-	{
-		title: 'Housing & Rental Strategy',
-		description: 'Quantify landlord exit costs, early lease break options, and the financial trade-offs of apartment hunting.',
-		slugs: ['lease-break']
-	}
-] as const;
+// The library is grouped by the same six verticals the nav and the hub pages use, so a calculator
+// can never be reachable from a hub and invisible here (or listed twice).
+const categories = VERTICALS.map((vertical) => ({
+	title: vertical.title,
+	description: vertical.question,
+	href: `/${vertical.slug}/`,
+	slugs: vertical.tools
+}));
+
+const seenTools = new Set<string>();
 
 // Mapping of calculators to related WordPress post slugs
 const calculatorArticlesMap: Record<string, string[]> = {
@@ -124,23 +113,29 @@ const breadcrumbSchema = {
 
 	<div class="mt-16 space-y-20" aria-label="Calculator library">
 		{categories.map((category) => {
-			const toolsInCategory = calculatorTools.filter((tool) =>
-				(category.slugs as readonly string[]).includes(tool.slug)
+			const toolsInCategory = calculatorTools.filter(
+				(tool) => category.slugs.includes(tool.slug as never) && !seenTools.has(tool.slug)
 			);
+			toolsInCategory.forEach((tool) => seenTools.add(tool.slug));
 			if (toolsInCategory.length === 0) return null;
 
 			return (
 				<section aria-labelledby={`cat-${category.title.toLowerCase().replace(/\s+/g, '-')}`}>
-					<div class="border-l-2 border-[#5A7A8F] pl-4 mb-8">
-						<h2
-							id={`cat-${category.title.toLowerCase().replace(/\s+/g, '-')}`}
-							class="text-2xl font-bold tracking-tight text-[#1A1A1A] sm:text-3xl"
-						>
-							{category.title}
-						</h2>
-						<p class="mt-2 max-w-3xl text-sm leading-relaxed text-[#5E5E5E]">
-							{category.description}
-						</p>
+					<div class="border-l-2 border-[#5A7A8F] pl-4 mb-8 flex flex-wrap items-end justify-between gap-4">
+						<div>
+							<h2
+								id={`cat-${category.title.toLowerCase().replace(/\s+/g, '-')}`}
+								class="text-2xl font-bold tracking-tight text-[#1A1A1A] sm:text-3xl"
+							>
+								{category.title}
+							</h2>
+							<p class="mt-2 max-w-3xl text-sm leading-relaxed text-[#5E5E5E]">
+								{category.description}
+							</p>
+						</div>
+						<a href={category.href} class="font-mono text-[0.66rem] font-bold uppercase tracking-[0.22em] text-[#5A7A8F] hover:text-[#1A1A1A]">
+							Open vertical &rarr;
+						</a>
 					</div>
 
 					<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -149,7 +144,7 @@ const breadcrumbSchema = {
 							const relatedPosts = relatedSlugs.map(slug => postBySlugMap[slug]).filter(Boolean);
 
 							return (
-								<article class="group relative flex h-full flex-col rounded-2xl border border-[#E5E5E5] bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-[#1A1A1A] hover:shadow-[0_8px_30px_rgba(0,0,0,0.02)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A1A1A]">
+								<article class="group relative flex h-full flex-col rounded-xl border border-[#E5E5E5] bg-white p-6 transition-colors duration-200 hover:border-[#1A1A1A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A1A1A]">
 									<div class="flex items-center justify-between gap-4">
 										<span class="text-xs font-mono font-bold uppercase tracking-[0.25em] text-[#5F5B52]">{tool.status}</span>
 										<span class="text-xs font-mono font-bold uppercase tracking-[0.25em] text-[#5F5B52]">

@@ -1,0 +1,17 @@
+---
+import RsuHoldVsSellCalculator from '../../components/calculators/react/RsuHoldVsSellCalculator';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+
+const calculator = getCalculatorBySlug('rsu-hold-vs-sell');
+const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+---
+
+<BaseLayout title="RSU Hold vs. Sell & Mega Backdoor Roth Simulator | Gini Loh" description="Quantify single-stock employer concentration risk, double-jeopardy exposure, and 2026 $72k Section 415(c) Mega Backdoor Roth asset allocation.">
+	<link slot="head" rel="canonical" href={new URL('/calculators/rsu-hold-vs-sell/', Astro.site).toString()} />
+	{schema ? <JsonLd slot="head" data={schema} /> : null}
+	<main class="px-4 pb-24 pt-12 sm:px-6 lg:px-8">
+		<RsuHoldVsSellCalculator client:load />
+	</main>
+</BaseLayout>

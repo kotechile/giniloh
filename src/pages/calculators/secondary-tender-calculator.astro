@@ -1,0 +1,17 @@
+---
+import SecondaryTenderCalculator from '../../components/calculators/react/SecondaryTenderCalculator';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+
+const calculator = getCalculatorBySlug('secondary-tender-calculator');
+const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+---
+
+<BaseLayout title="Secondary Tender vs. IPO Horizon Calculator | Gini Loh" description="Price a private secondary or tender offer against the IPO you are waiting for: after-tax cash today, risk-adjusted exit proceeds, and the break-even IPO price.">
+	<link slot="head" rel="canonical" href={new URL('/calculators/secondary-tender-calculator/', Astro.site).toString()} />
+	{schema ? <JsonLd slot="head" data={schema} /> : null}
+	<main class="px-4 pb-24 pt-12 sm:px-6 lg:px-8">
+		<SecondaryTenderCalculator client:load />
+	</main>
+</BaseLayout>
