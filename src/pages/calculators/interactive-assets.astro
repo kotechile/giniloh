@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { VibeAssetGrid } from '../../components/calculators/react/VibeAssetGrid';
+
+const pageTitle = "Interactive Decision Assets | Gini Loh";
+const pageDescription = "Embedded interactive micro-applications for evaluating high-stakes tech and capital trade-offs in real time.";
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+	<main class="mx-auto max-w-5xl px-4 pb-24 pt-12 sm:px-6 lg:px-8">
+		<header class="border-b border-[#D8D3C4] pb-8 mb-12">
+			<p class="font-mono text-xs font-bold uppercase tracking-[0.24em] text-[#5F5B52]">
+				Interactive Acquisition & Decision Mechanics
+			</p>
+			<h1 class="mt-3 text-4xl sm:text-5xl font-extrabold tracking-tight text-[#191610] leading-tight">
+				Interactive Decision Assets
+			</h1>
+			<p class="mt-4 text-base sm:text-lg leading-relaxed text-[#4E4A42] max-w-3xl">
+				Evaluating expensive choices requires mathematical clarity, not static PDFs or vague rules of thumb. 
+				These embedded micro-applications run deterministic models directly in your browser.
+			</p>
+		</header>
+
+		<!-- Interactive Micro-Assets Grid -->
+		<section aria-labelledby="interactive-assets-grid-heading">
+			<h2 id="interactive-assets-grid-heading" class="sr-only">Interactive Assets</h2>
+			<VibeAssetGrid client:load />
+		</section>
+
+		<footer class="mt-16 border-t border-[#D8D3C4] pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+			<p class="text-xs font-mono text-[#5F5B52] uppercase tracking-wider">
+				Gini Loh · Decision Engine for Expensive Choices
+			</p>
+			<a
+				href="/calculators/"
+				class="text-xs font-mono font-bold text-[#475F73] hover:underline uppercase tracking-wider"
+			>
+				View Full Multivariable Calculators &rarr;
+			</a>
+		</footer>
+	</main>
+</BaseLayout>
