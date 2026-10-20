@@ -1,292 +1,319 @@
+/**
+ * Generates the n8n workflow JSON for the vibe-marketing pipeline.
+ *
+ * WHY GENERATED, NOT HAND-WRITTEN: all three properties (giniloh.com, aichieve.net,
+ * wellroost.com) point `PUBLIC_N8N_WEBHOOK_URL` at the SAME endpoint
+ * (`https://n8n.giniloh.com/webhook/vibe-telemetry`) on ONE n8n instance. A workflow file that
+ * drifts per repo registers a different path or payload shape and silently stops matching. Generate
+ * once, copy everywhere — the files are identical in every repo's `n8n/` folder on purpose.
+ *
+ * FOUR FAULTS THIS FIXES. The previous output was dead on arrival for all of them:
+ *
+ * 1. NO CORS. The webhook had `options: {}`, so n8n returned no `Access-Control-Allow-Origin` and
+ *    the browser blocked every POST at the preflight. The site looked fine; n8n saw nothing.
+ * 2. EMAIL IN THE TELEMETRY PATH. The workflow ended in `emailSend` reading `$json.email`, which a
+ *    telemetry event never carries (field names only, by design). With no SMTP credential attached,
+ *    every execution that reached it failed — the reported "failing because missing emails".
+ *    Addresses live in Supabase, so mailing is now a scheduled poll of that table, not a reaction to
+ *    a webhook that has no address in it.
+ * 3. PLACEHOLDER SIDE EFFECTS. The Slack node pointed at `hooks.slack.com/services/REPLACE/...` with
+ *    no error handling, so an unconfigured alert turned a good event into a failed execution.
+ * 4. DUPLICATE WRITES. It also POSTed events to Supabase, which the browser already does.
+ */
 import fs from 'node:fs';
 
-function generateWorkflow({ name, defaultDomain, defaultEmail, defaultColor }) {
-  return {
-    name,
-    nodes: [
-      {
-        parameters: {
-          httpMethod: "POST",
-          path: "vibe-telemetry",
-          responseMode: "responseNode",
-          options: {}
-        },
-        type: "n8n-nodes-base.webhook",
-        typeVersion: 2,
-        position: [-480, 300],
-        id: "webhook-trigger",
-        name: "Vibe Telemetry Webhook"
-      },
-      {
-        parameters: {
-          respondWith: "json",
-          responseBody: JSON.stringify({
-            success: true,
-            message: "Telemetry event received",
-            timestamp: "{{ $now.toISO() }}"
-          }, null, 2),
-          options: {
-            responseCode: 200
-          }
-        },
-        type: "n8n-nodes-base.respondToWebhook",
-        typeVersion: 1.1,
-        position: [-240, 180],
-        id: "respond-to-client",
-        name: "Immediate 200 Response"
-      },
-      {
-        parameters: {
-          rules: {
-            values: [
-              {
-                conditions: {
-                  options: {
-                    caseSensitive: false,
-                    leftValue: "",
-                    typeValidation: "loose"
-                  },
-                  conditions: [
-                    {
-                      leftValue: "={{ $json.body.type || $json.type }}",
-                      rightValue: "lead_intent",
-                      operator: {
-                        type: "string",
-                        operation: "equals"
-                      }
-                    }
-                  ],
-                  combinator: "and"
-                },
-                renameOutput: true,
-                outputKey: "lead_intent"
-              },
-              {
-                conditions: {
-                  options: {
-                    caseSensitive: false,
-                    leftValue: "",
-                    typeValidation: "loose"
-                  },
-                  conditions: [
-                    {
-                      leftValue: "={{ $json.body.type || $json.type }}",
-                      rightValue: "telemetry_event",
-                      operator: {
-                        type: "string",
-                        operation: "equals"
-                      }
-                    }
-                  ],
-                  combinator: "and"
-                },
-                renameOutput: true,
-                outputKey: "telemetry_event"
-              }
-            ]
-          },
-          options: {}
-        },
-        type: "n8n-nodes-base.switch",
-        typeVersion: 3.2,
-        position: [-240, 420],
-        id: "event-type-router",
-        name: "Route by Event Type"
-      },
-      {
-        parameters: {
-          jsCode: `
-const input = $json.body || $json;
-const lead = input.lead || {};
-const metrics = lead.calculatedMetrics || {};
+const SUPABASE_URL = 'https://ixfdkninqeqmwuxncpvh.supabase.co';
+const WEBHOOK_PATH = 'vibe-telemetry';
 
-const origin = input.origin || (lead.verticalSlug ? 'giniloh.com' : 'aichieve.net');
-const verticalOrDomain = lead.verticalSlug || lead.domainCategory || 'general';
-const assetSlug = lead.assetSlug || 'unspecified-asset';
+// Every lead table, polled by the ONE scheduled workflow. One file means importing it anywhere
+// cannot double-send: each table is handled exactly once per tick.
+const LEAD_TABLES = [
+	{ table: 'vibe_lead_intents', label: 'giniloh + wellroost', fallbackDomain: 'giniloh.com' },
+	{ table: 'aichieve_lead_intents', label: 'aichieve', fallbackDomain: 'aichieve.net' }
+];
+
+const node = (type, name, parameters, position, extra = {}) => ({
+	parameters,
+	name,
+	type: `n8n-nodes-base.${type}`,
+	typeVersion: extra.typeVersion ?? 2,
+	position,
+	id: extra.id ?? name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+	...(extra.notes ? { notes: extra.notes } : {})
+});
+
+/** Telemetry receiver — human alerts only. Events are already stored by the browser. */
+function telemetryWorkflow() {
+	return {
+		name: 'Vibe Telemetry — giniloh / aichieve / wellroost',
+		nodes: [
+			node(
+				'webhook',
+				'Telemetry Webhook',
+				{
+					httpMethod: 'POST',
+					path: WEBHOOK_PATH,
+					responseMode: 'onReceived',
+					options: { allowedOrigins: '*' }
+				},
+				[-560, 200],
+				{
+					typeVersion: 2,
+					notes: `Path must stay "${WEBHOOK_PATH}" — that is the path inside PUBLIC_N8N_WEBHOOK_URL on all three apps.`
+				}
+			),
+			node(
+				'switch',
+				'Route by Payload Type',
+				{
+					rules: {
+						values: [
+							{
+								conditions: {
+									options: { caseSensitive: false, leftValue: '', typeValidation: 'loose' },
+									conditions: [
+										{
+											leftValue: '={{ $json.body.type }}',
+											rightValue: 'lead_intent',
+											operator: { type: 'string', operation: 'equals' }
+										}
+									],
+									combinator: 'and'
+								},
+								renameOutput: true,
+								outputKey: 'lead_intent'
+							}
+						]
+					},
+					options: { fallbackOutput: 'extra' }
+				},
+				[-300, 200],
+				{
+					typeVersion: 3.2,
+					notes: 'Clients send { type: "lead_intent", lead } or { type: "telemetry_event", event }; anything else falls through to Ignore instead of failing.'
+				}
+			),
+			node(
+				'code',
+				'Shape Lead Alert',
+				{
+					jsCode: `// giniloh/aichieve send camelCase inside \`lead\`; accept snake_case too.
+const body = $json.body || $json;
+const lead = body.lead || body;
 const email = lead.email || '';
-const calculatedDelta = metrics.calculatedDelta || metrics.calculatedMetric || 'Calculated during session';
-const paramValue = metrics.paramValue !== undefined ? metrics.paramValue : 'N/A';
-
-const summaryText = \`🎯 *New High-Intent Lead [\${origin}]*
-• *Email:* \` + email + \`
-• *Asset:* \` + assetSlug + \` (\` + verticalOrDomain + \`)
-• *Tested Input:* \` + paramValue + \`
-• *Computed Delta:* \` + calculatedDelta + \`
-• *Session ID:* \` + (lead.sessionId || 'N/A') + \`
-• *Timestamp:* \` + new Date().toISOString();
-
-return {
-  origin,
+const assetSlug = lead.assetSlug || lead.asset_slug || 'unknown-asset';
+const vertical = lead.verticalSlug || lead.vertical_slug || 'general';
+const metrics = lead.calculatedMetrics || lead.calculated_metrics || {};
+return [{ json: {
   email,
   assetSlug,
-  verticalOrDomain,
-  paramValue,
-  calculatedDelta,
-  metrics,
-  summaryText,
-  sessionId: lead.sessionId
-};`.trim()
-        },
-        type: "n8n-nodes-base.code",
-        typeVersion: 2,
-        position: [60, 340],
-        id: "lead-normalizer",
-        name: "Parse & Normalize Lead Data"
-      },
-      {
-        parameters: {
-          method: "POST",
-          url: "https://hooks.slack.com/services/REPLACE/WITH/YOUR_SLACK_WEBHOOK",
-          sendBody: true,
-          bodyParameters: {
-            parameters: [
-              {
-                name: "text",
-                value: "={{ $json.summaryText }}"
-              }
-            ]
-          },
-          options: {}
-        },
-        type: "n8n-nodes-base.httpRequest",
-        typeVersion: 4.2,
-        position: [360, 240],
-        id: "slack-alert",
-        name: "Send Slack / Discord Alert",
-        notes: "Replace URL with your Slack Incoming Webhook or Discord Webhook URL (/slack appended)"
-      },
-      {
-        parameters: {
-          fromEmail: defaultEmail,
-          toEmail: "={{ $json.email }}",
-          subject: "=Your Decision Model Dossier: {{ $json.assetSlug }}",
-          html: `<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #191610; line-height: 1.6; background-color: #fafafa; padding: 20px; }
-    .card { background: #ffffff; border: 1px solid #d8d3c4; padding: 24px; max-width: 580px; margin: 0 auto; }
-    .eyebrow { font-family: monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; color: #5f5b52; }
-    .headline { font-size: 22px; font-weight: 800; margin: 8px 0 16px 0; color: #191610; }
-    .metric-box { background: #f4f1e8; border: 1px solid #d8d3c4; padding: 16px; margin: 16px 0; text-align: center; }
-    .metric-val { font-size: 26px; font-weight: 900; color: ${defaultColor}; font-family: monospace; }
-    .metric-label { font-size: 11px; text-transform: uppercase; font-family: monospace; color: #5f5b52; margin-top: 4px; }
-    .footer { font-size: 11px; color: #8c8c8c; margin-top: 24px; border-top: 1px solid #eee; padding-top: 12px; font-family: monospace; }
-  </style>
-</head>
-<body>
-  <div class="card">
-    <div class="eyebrow">${defaultDomain} &middot; Precision Decision Dossier</div>
-    <h1 class="headline">Your Calculated Scenario Model</h1>
-    <p>Here are the verified calculation outputs generated during your interactive session for <strong>{{ $json.assetSlug }}</strong>:</p>
-    <div class="metric-box">
-      <div class="metric-val">{{ $json.calculatedDelta }}</div>
-      <div class="metric-label">Calculated Net Yield Delta (Evaluated Input: {{ $json.paramValue }})</div>
-    </div>
-    <p>This deterministic model accounts for statutory tax adjustments, friction costs, and loaded operational overhead. Run multi-variable sensitivity models anytime on our web terminal:</p>
-    <p><a href="https://${defaultDomain}/calculators/" style="color: #475f73; font-weight: bold;">Open Full Multivariable Engine &rarr;</a></p>
-    <div class="footer">Session ID: {{ $json.sessionId }} &middot; ${defaultDomain} Decision Intelligence</div>
-  </div>
-</body>
-</html>`,
-          options: {}
-        },
-        type: "n8n-nodes-base.emailSend",
-        typeVersion: 2.1,
-        position: [360, 440],
-        id: "email-lead-report",
-        name: "Send Scenario Report to Lead",
-        notes: "Configure with your SMTP or replace with Resend/Postmark/SendGrid node"
-      },
-      {
-        parameters: {
-          conditions: {
-            options: {
-              caseSensitive: false,
-              leftValue: "",
-              typeValidation: "loose"
-            },
-            conditions: [
-              {
-                leftValue: "={{ ($json.body && $json.body.event && $json.body.event.eventName) || $json.eventName || '' }}",
-                rightValue: "card_impression",
-                operator: {
-                  type: "string",
-                  operation: "notEquals"
-                }
-              }
-            ],
-            combinator: "and"
-          },
-          options: {}
-        },
-        type: "n8n-nodes-base.filter",
-        typeVersion: 2.2,
-        position: [60, 560],
-        id: "filter-impressions",
-        name: "Filter High-Signal Telemetry",
-        notes: "Filters out passive card impressions to keep active calculations and slider adjustments"
-      }
-    ],
-    connections: {
-      "Vibe Telemetry Webhook": {
-        main: [
-          [
-            { node: "Immediate 200 Response", type: "main", index: 0 },
-            { node: "Route by Event Type", type: "main", index: 0 }
-          ]
-        ]
-      },
-      "Route by Event Type": {
-        main: [
-          [{ node: "Parse & Normalize Lead Data", type: "main", index: 0 }],
-          [{ node: "Filter High-Signal Telemetry", type: "main", index: 0 }]
-        ]
-      },
-      "Parse & Normalize Lead Data": {
-        main: [
-          [
-            { node: "Send Slack / Discord Alert", type: "main", index: 0 },
-            { node: "Send Scenario Report to Lead", type: "main", index: 0 }
-          ]
-        ]
-      }
-    },
-    settings: {
-      executionOrder: "v1"
-    }
-  };
+  vertical,
+  domain: metrics.domain || 'unknown',
+  hasEmail: email.includes('@'),
+  summary: 'New scenario request — ' + assetSlug + ' (' + vertical + ' · ' + (metrics.domain || 'unknown') + ')'
+} }];`
+				},
+				[-40, 100],
+				{ typeVersion: 2, notes: 'Leads are mailed by the scheduled "Lead Reports" workflow; this branch only alerts a human.' }
+			),
+			node(
+				'if',
+				'Has Email?',
+				{
+					conditions: {
+						options: { caseSensitive: false, leftValue: '', typeValidation: 'loose' },
+						conditions: [
+							{
+								leftValue: '={{ $json.hasEmail }}',
+								rightValue: true,
+								operator: { type: 'boolean', operation: 'true', singleValue: true }
+							}
+						],
+						combinator: 'and'
+					},
+					options: {}
+				},
+				[200, 100],
+				{ typeVersion: 2.2 }
+			),
+			node(
+				'noOp',
+				'Notify a Human',
+				{},
+				[440, 0],
+				{
+					typeVersion: 1,
+					notes: 'Attach Slack / email / Telegram here. Empty on purpose: a placeholder webhook used to make every execution report failure.'
+				}
+			),
+			node(
+				'noOp',
+				'Ignore',
+				{},
+				[440, 200],
+				{ typeVersion: 1, notes: 'Telemetry events are already written by the browser. Nothing to do.' }
+			)
+		],
+		connections: {
+			'Telemetry Webhook': { main: [[{ node: 'Route by Payload Type', type: 'main', index: 0 }]] },
+			'Route by Payload Type': {
+				main: [
+					[{ node: 'Shape Lead Alert', type: 'main', index: 0 }],
+					[{ node: 'Ignore', type: 'main', index: 0 }]
+				]
+			},
+			'Shape Lead Alert': { main: [[{ node: 'Has Email?', type: 'main', index: 0 }]] },
+			'Has Email?': { main: [[{ node: 'Notify a Human', type: 'main', index: 0 }], []] }
+		},
+		settings: { executionOrder: 'v1' },
+		pinData: {}
+	};
 }
 
-fs.mkdirSync('n8n', { recursive: true });
-fs.writeFileSync(
-  'n8n/vibe_telemetry_workflow.json',
-  JSON.stringify(
-    generateWorkflow({
-      name: 'GiniLoh & AIChieve - Vibe Marketing Telemetry & Lead Pipeline',
-      defaultDomain: 'giniloh.com',
-      defaultEmail: 'reports@giniloh.com',
-      defaultColor: '#047857'
-    }),
-    null,
-    2
-  )
-);
+/** One table's poll → mail → mark-sent chain. */
+function leadBranch({ table, label, fallbackDomain }, x) {
+	const fetchName = `Fetch Pending (${label})`;
+	const resolveName = `Resolve Domain (${label})`;
+	const loopName = `One at a Time (${label})`;
+	const emailName = `Send Report (${label})`;
+	const markName = `Mark Sent (${label})`;
 
-fs.mkdirSync('AICHIEVE/n8n', { recursive: true });
-fs.writeFileSync(
-  'AICHIEVE/n8n/vibe_telemetry_workflow.json',
-  JSON.stringify(
-    generateWorkflow({
-      name: 'AIChieve & GiniLoh - Enterprise Telemetry & Lead Pipeline',
-      defaultDomain: 'aichieve.net',
-      defaultEmail: 'reports@aichieve.net',
-      defaultColor: '#e8a33d'
-    }),
-    null,
-    2
-  )
-);
+	const fetchNode = node(
+		'httpRequest',
+		fetchName,
+		{
+			url: `${SUPABASE_URL}/rest/v1/${table}?select=*&status=eq.pending_n8n_sync&order=created_at.asc&limit=20`,
+			authentication: 'genericCredentialType',
+			genericAuthType: 'httpHeaderAuth',
+			sendHeaders: true,
+			headerParameters: { parameters: [{ name: 'Accept', value: 'application/json' }] },
+			options: {}
+		},
+		[x, 200],
+		{
+			typeVersion: 4.2,
+			notes: 'Header Auth credential: apikey = service role key, Authorization = "Bearer <service role key>". Service role, not anon: this reads rows.'
+		}
+	);
 
-console.log('Successfully generated n8n workflows!');
+	const resolveNode = node(
+		'code',
+		resolveName,
+		{
+			jsCode: `// Links must point at the property the visitor used, not at the repo this file lives in.
+const row = $json;
+const metrics = row.calculated_metrics || {};
+const vertical = String(row.vertical_slug || '');
+const domain = metrics.domain
+  || (vertical.includes('aichieve') ? 'aichieve.net' : vertical.includes('wellroost') ? 'wellroost.com' : '${fallbackDomain}');
+return [{ json: { ...row, resolved_domain: domain, from_email: 'reports@' + domain } }];`
+		},
+		[x + 240, 200],
+		{ typeVersion: 2 }
+	);
+
+	const loopNode = node('splitInBatches', loopName, { batchSize: 1, options: {} }, [x + 480, 200], {
+		typeVersion: 3,
+		notes: 'One email per item, so one bad address cannot block the rest.'
+	});
+
+	const emailNode = node(
+		'emailSend',
+		emailName,
+		{
+			fromEmail: '={{ $json.from_email }}',
+			toEmail: '={{ $json.email }}',
+			subject: '=Your scenario report: {{ $json.asset_slug }}',
+			html: `<div style="font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#191610;line-height:1.6;max-width:580px;margin:0 auto;border:1px solid #d8d3c4;padding:24px">
+  <div style="font-family:monospace;font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:#5f5b52">{{ $json.resolved_domain }} &middot; Scenario report</div>
+  <h1 style="font-size:22px;font-weight:800;margin:8px 0 16px">Your model, as you built it</h1>
+  <p>You asked us to send the scenario you calculated for <strong>{{ $json.asset_slug }}</strong>.</p>
+  <p><a href="https://{{ $json.resolved_domain }}/calculators/" style="color:#0f766e;font-weight:700">Open the decision engine &rarr;</a></p>
+  <div style="background:#f4f1e8;border:1px solid #d8d3c4;padding:14px;margin:16px 0;font-family:monospace;font-size:11px;white-space:pre-wrap;overflow-wrap:anywhere">{{ JSON.stringify($json.calculated_metrics) }}</div>
+  <p style="font-size:11px;color:#8c8c8c;border-top:1px solid #eee;padding-top:12px">You received this because you asked for a scenario report. Reply to unsubscribe.</p>
+</div>`,
+			options: {}
+		},
+		[x + 720, 200],
+		{
+			typeVersion: 2.1,
+			notes: 'Attach the SMTP credential here. Until it is attached this fails LOUDLY and the row stays pending — the honest failure mode, retried next tick.'
+		}
+	);
+
+	const markNode = node(
+		'httpRequest',
+		markName,
+		{
+			method: 'PATCH',
+			url: `={{ "${SUPABASE_URL}/rest/v1/${table}?id=eq." + $json.id }}`,
+			authentication: 'genericCredentialType',
+			genericAuthType: 'httpHeaderAuth',
+			sendBody: true,
+			specifyBody: 'json',
+			jsonBody: '={{ JSON.stringify({ status: "sent", delivered_at: $now.toISO() }) }}',
+			options: {}
+		},
+		[x + 960, 200],
+		{ typeVersion: 4.2, notes: 'Runs only after the email succeeds — a failed send leaves the lead pending for the next tick.' }
+	);
+
+	return {
+		nodes: [fetchNode, resolveNode, loopNode, emailNode, markNode],
+		connections: {
+			[fetchName]: { main: [[{ node: resolveName, type: 'main', index: 0 }]] },
+			[resolveName]: { main: [[{ node: loopName, type: 'main', index: 0 }]] },
+			[loopName]: { main: [[{ node: emailName, type: 'main', index: 0 }]] },
+			[emailName]: { main: [[{ node: markName, type: 'main', index: 0 }]] }
+		}
+	};
+}
+
+/**
+ * Scheduled report sender — polls both lead tables every five minutes.
+ *
+ * Polling rather than reacting to the webhook, because the address only exists in Supabase
+ * (wellroost never posts leads to n8n at all) and because a failed send must be retried, not lost:
+ * the row stays `pending_n8n_sync` until it is mailed.
+ *
+ * REQUIRES TWO CREDENTIALS, attached once in n8n (JSON cannot carry them):
+ *   - HTTP Header Auth  (apikey + Authorization, service role key)
+ *   - SMTP              (from address must be a verified sender for its domain)
+ */
+function leadReportsWorkflow() {
+	const trigger = node(
+		'scheduleTrigger',
+		'Every 5 Minutes',
+		{ rule: { interval: [{ field: 'minutes', minutesInterval: 5 }] } },
+		[-560, 200],
+		{ typeVersion: 1.2, notes: 'A failed send leaves the row pending, so the next tick retries it — no manual replay.' }
+	);
+
+	const branches = LEAD_TABLES.map((t, i) => leadBranch(t, -300 + i * 1400));
+	const connections = branches.reduce((acc, b) => ({ ...acc, ...b.connections }), {});
+	connections['Every 5 Minutes'] = {
+		main: [LEAD_TABLES.map((t) => ({ node: `Fetch Pending (${t.label})`, type: 'main', index: 0 }))]
+	};
+
+	return {
+		name: 'Lead Reports — all properties',
+		nodes: [trigger, ...branches.flatMap((b) => b.nodes)],
+		connections,
+		settings: { executionOrder: 'v1' },
+		pinData: {}
+	};
+}
+
+const telemetry = JSON.stringify(telemetryWorkflow(), null, 2) + '\n';
+const lead = JSON.stringify(leadReportsWorkflow(), null, 2) + '\n';
+
+for (const dir of ['n8n/', 'AICHIEVE/n8n/', '../wellroost front end/n8n/']) {
+	try {
+		fs.mkdirSync(dir, { recursive: true });
+		fs.writeFileSync(`${dir}vibe_telemetry_workflow.json`, telemetry);
+		fs.writeFileSync(`${dir}lead_reports_workflow.json`, lead);
+		console.log(`wrote ${dir}vibe_telemetry_workflow.json + ${dir}lead_reports_workflow.json`);
+	} catch (error) {
+		console.warn(`skipped ${dir}: ${error.message}`);
+	}
+}
