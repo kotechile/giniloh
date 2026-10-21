@@ -28,9 +28,19 @@ const WEBHOOK_PATH = 'vibe-telemetry';
 // Every lead table, polled by the ONE scheduled workflow. One file means importing it anywhere
 // cannot double-send: each table is handled exactly once per tick.
 const LEAD_TABLES = [
-	{ table: 'vibe_lead_intents', label: 'giniloh + wellroost', fallbackDomain: 'giniloh.com' },
-	{ table: 'aichieve_lead_intents', label: 'aichieve', fallbackDomain: 'aichieve.net' }
+	// A table can hold rows for several properties, but a mail account cannot send as another
+	// domain's address. `domains` is what the send step is split on.
+	{
+		table: 'vibe_lead_intents',
+		label: 'giniloh + wellroost',
+		fallbackDomain: 'giniloh.com',
+		domains: ['wellroost.com', 'giniloh.com']
+	},
+	{ table: 'aichieve_lead_intents', label: 'aichieve', fallbackDomain: 'aichieve.net', domains: ['aichieve.net'] }
 ];
+
+/** `wellroost.com` -> `wellroost`, so node names stay readable on the canvas. */
+const domainLabel = (domain) => domain.split('.')[0];
 
 const node = (type, name, parameters, position, extra = {}) => ({
 	parameters,
@@ -170,12 +180,16 @@ return [{ json: {
 	};
 }
 
-/** One table's poll → mail → mark-sent chain. */
-function leadBranch({ table, label, fallbackDomain }, x) {
+/**
+ * One table's poll → route → mail → mark-sent chain.
+ *
+ * The send step is split per domain when a table holds several properties, because one SMTP
+ * credential authenticates one mail account and that account may only send as its own address.
+ */
+function leadBranch({ table, label, fallbackDomain, domains }, x) {
 	const fetchName = `Fetch Pending (${label})`;
 	const resolveName = `Resolve Domain (${label})`;
 	const loopName = `One at a Time (${label})`;
-	const emailName = `Send Report (${label})`;
 	const markName = `Mark Sent (${label})`;
 
 	const fetchNode = node(
@@ -217,14 +231,18 @@ return [{ json: { ...row, resolved_domain: domain, from_email: 'reports@' + doma
 		notes: 'One email per item, so one bad address cannot block the rest.'
 	});
 
-	const emailNode = node(
-		'emailSend',
-		emailName,
-		{
-			fromEmail: '={{ $json.from_email }}',
-			toEmail: '={{ $json.email }}',
-			subject: '=Your scenario report: {{ $json.asset_slug }}',
-			html: `<div style="font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#191610;line-height:1.6;max-width:580px;margin:0 auto;border:1px solid #d8d3c4;padding:24px">
+	const emailNodes = domains.map((domain, i) => {
+		const stacked = domains.length > 1;
+		return node(
+			'emailSend',
+			`Send Report (${domainLabel(domain)})`,
+			{
+				// Literal, not `$json.from_email`: this node exists precisely because one credential
+				// can only authenticate one account, and that account signs its own domain.
+				fromEmail: `reports@${domain}`,
+				toEmail: '={{ $json.email }}',
+				subject: '=Your scenario report: {{ $json.asset_slug }}',
+				html: `=<div style="font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#191610;line-height:1.6;max-width:580px;margin:0 auto;border:1px solid #d8d3c4;padding:24px">
   <div style="font-family:monospace;font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:#5f5b52">{{ $json.resolved_domain }} &middot; Scenario report</div>
   <h1 style="font-size:22px;font-weight:800;margin:8px 0 16px">Your model, as you built it</h1>
   <p>You asked us to send the scenario you calculated for <strong>{{ $json.asset_slug }}</strong>.</p>
@@ -232,14 +250,49 @@ return [{ json: { ...row, resolved_domain: domain, from_email: 'reports@' + doma
   <div style="background:#f4f1e8;border:1px solid #d8d3c4;padding:14px;margin:16px 0;font-family:monospace;font-size:11px;white-space:pre-wrap;overflow-wrap:anywhere">{{ JSON.stringify($json.calculated_metrics) }}</div>
   <p style="font-size:11px;color:#8c8c8c;border-top:1px solid #eee;padding-top:12px">You received this because you asked for a scenario report. Reply to unsubscribe.</p>
 </div>`,
-			options: {}
-		},
-		[x + 720, 200],
-		{
-			typeVersion: 2.1,
-			notes: 'Attach the SMTP credential here. Until it is attached this fails LOUDLY and the row stays pending — the honest failure mode, retried next tick.'
-		}
-	);
+				options: {}
+			},
+			[stacked ? x + 960 : x + 720, stacked ? 200 + (i - (domains.length - 1) / 2) * 220 : 200],
+			{
+				typeVersion: 2.1,
+				notes: `Attach the SMTP credential for reports@${domain}. From is a literal: this branch is already domain-specific.`
+			}
+		);
+	});
+
+	const routeNode =
+		domains.length > 1
+			? node(
+					'switch',
+					`Route by Domain (${label})`,
+					{
+						rules: {
+							values: domains.map((domain) => ({
+								conditions: {
+									options: { caseSensitive: false, leftValue: '', typeValidation: 'loose', version: 1 },
+									conditions: [
+										{
+											leftValue: '={{ $json.resolved_domain }}',
+											rightValue: domain,
+											operator: { type: 'string', operation: 'equals' }
+										}
+									],
+									combinator: 'and'
+								},
+								renameOutput: true,
+								outputKey: domainLabel(domain)
+							}))
+						},
+						// Unmatched rows take the fallback, which Resolve Domain has already defaulted.
+						options: { fallbackOutput: 'extra' }
+					},
+					[x + 720, 200],
+					{
+						typeVersion: 3.2,
+						notes: 'One send node per domain, because each SMTP account may only send as its own address.'
+					}
+				)
+			: null;
 
 	const markNode = node(
 		'httpRequest',
@@ -254,18 +307,32 @@ return [{ json: { ...row, resolved_domain: domain, from_email: 'reports@' + doma
 			jsonBody: '={{ JSON.stringify({ status: "sent", delivered_at: $now.toISO() }) }}',
 			options: {}
 		},
-		[x + 960, 200],
+		[domains.length > 1 ? x + 1200 : x + 960, 200],
 		{ typeVersion: 4.2, notes: 'Runs only after the email succeeds — a failed send leaves the lead pending for the next tick.' }
 	);
 
+	const connections = {
+		[fetchName]: { main: [[{ node: resolveName, type: 'main', index: 0 }]] },
+		[resolveName]: { main: [[{ node: loopName, type: 'main', index: 0 }]] }
+	};
+
+	if (routeNode) {
+		connections[loopName] = { main: [[{ node: routeNode.name, type: 'main', index: 0 }]] };
+		const outputs = emailNodes.map((e) => [{ node: e.name, type: 'main', index: 0 }]);
+		// The extra output is the fallback: send as the table's default property rather than nowhere.
+		outputs.push([{ node: emailNodes[emailNodes.length - 1].name, type: 'main', index: 0 }]);
+		connections[routeNode.name] = { main: outputs };
+	} else {
+		connections[loopName] = { main: [[{ node: emailNodes[0].name, type: 'main', index: 0 }]] };
+	}
+
+	for (const emailNode of emailNodes) {
+		connections[emailNode.name] = { main: [[{ node: markName, type: 'main', index: 0 }]] };
+	}
+
 	return {
-		nodes: [fetchNode, resolveNode, loopNode, emailNode, markNode],
-		connections: {
-			[fetchName]: { main: [[{ node: resolveName, type: 'main', index: 0 }]] },
-			[resolveName]: { main: [[{ node: loopName, type: 'main', index: 0 }]] },
-			[loopName]: { main: [[{ node: emailName, type: 'main', index: 0 }]] },
-			[emailName]: { main: [[{ node: markName, type: 'main', index: 0 }]] }
-		}
+		nodes: [fetchNode, resolveNode, loopNode, ...(routeNode ? [routeNode] : []), ...emailNodes, markNode],
+		connections
 	};
 }
 
@@ -276,9 +343,14 @@ return [{ json: { ...row, resolved_domain: domain, from_email: 'reports@' + doma
  * (wellroost never posts leads to n8n at all) and because a failed send must be retried, not lost:
  * the row stays `pending_n8n_sync` until it is mailed.
  *
- * REQUIRES TWO CREDENTIALS, attached once in n8n (JSON cannot carry them):
- *   - HTTP Header Auth  (apikey + Authorization, service role key)
- *   - SMTP              (from address must be a verified sender for its domain)
+ * REQUIRES THREE CREDENTIALS, attached once in n8n (JSON cannot carry them):
+ *   - HTTP Header Auth  (apikey + Authorization, service role key)  — shared by the six Supabase nodes
+ *   - SMTP × 3          (reports@giniloh.com, reports@wellroost.com, reports@aichieve.net)
+ *
+ * One SMTP credential per sending domain, not one for all: Stalwart authenticates an account and
+ * that account only signs its own address. A shared credential with a per-row `From` either gets
+ * refused by the submission server or is signed by the wrong domain, and DMARC is `p=reject` on
+ * giniloh.com and wellroost.com — so "wrong domain" means rejected mail, not a spam folder.
  */
 function leadReportsWorkflow() {
 	const trigger = node(
