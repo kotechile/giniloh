@@ -119,7 +119,7 @@ also apply to the clients already deployed on the three sites:
 | Limit | Value |
 | --- | --- |
 | Repeat submit | same address + asset inside 10 min is **skipped** (the visitor still sees success: their report is already queued) |
-| Per address | 3 reports / hour |
+| Per address | 5 reports / hour (one per asset, plus one retry) |
 | Per session | 5 captured addresses |
 | Metrics payload | 8 KB |
 | Event payload | 4 KB, 400 events per session |

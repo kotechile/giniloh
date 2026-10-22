@@ -78,13 +78,14 @@ begin
 		return null;
 	end if;
 
-	-- The mail-bomb cap. Three reports an hour to one address is generous for a human comparing
-	-- scenarios, and useless to anyone trying to flood a stranger's inbox.
+	-- The mail-bomb cap. Five an hour, because there are four assets and a reader comparing all of
+	-- them is the behaviour this page exists to produce. Five is still useless to anyone trying to
+	-- flood a stranger's inbox.
 	execute format(
 		'select count(*) from %s where email = $1 and created_at > now() - interval ''1 hour''',
 		tbl
 	) into same_address_last_hour using new.email;
-	if same_address_last_hour >= 3 then
+	if same_address_last_hour >= 5 then
 		raise exception 'lead rejected: this address has already requested % reports in the last hour', same_address_last_hour
 			using errcode = 'P0001';
 	end if;
@@ -114,7 +115,7 @@ end;
 $$;
 
 comment on function public.vibe_guard_lead() is
-	'Bounds the anonymous lead INSERT on any lead table: normalises the address, collapses repeat submits, caps 3/hour per address and 5 per session, caps the metrics payload, allowlists intent_type.';
+	'Bounds the anonymous lead INSERT on any lead table: normalises the address, collapses repeat submits, caps 5/hour per address and 5 per session, caps the metrics payload, allowlists intent_type.';
 
 drop trigger if exists vibe_guard_lead on public.vibe_lead_intents;
 create trigger vibe_guard_lead

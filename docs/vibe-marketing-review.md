@@ -49,7 +49,7 @@ wrong: the anonymous write surface, the sender's failure loop, and the arithmeti
 
 | # | Sev | Finding | Fix |
 | --- | --- | --- | --- |
-| F18 | P0 | **The lead table was a mail-bomb.** `vibe_lead_intents` accepts anonymous INSERTs with a publishable key, and every accepted row makes the poller email that address. RLS validated the shape of the address, never the volume: one script could queue 10,000 reports for a victim and we would send them all from `reports@giniloh.com`, with our DMARC reputation. | `vibe_guard_lead()` trigger: normalises the address, collapses repeat submits inside 10 minutes, caps **3/hour per address** and **5 per session**, 8KB metrics, allowlisted `intent_type`. Trigger, not policy — it also holds for the already-deployed clients that know nothing about limits. |
+| F18 | P0 | **The lead table was a mail-bomb.** `vibe_lead_intents` accepts anonymous INSERTs with a publishable key, and every accepted row makes the poller email that address. RLS validated the shape of the address, never the volume: one script could queue 10,000 reports for a victim and we would send them all from `reports@giniloh.com`, with our DMARC reputation. | `vibe_guard_lead()` trigger: normalises the address, collapses repeat submits inside 10 minutes, caps **5/hour per address** and **5 per session**, 8KB metrics, allowlisted `intent_type`. Trigger, not policy — it also holds for the already-deployed clients that know nothing about limits. |
 | F19 | P1 | **A failed send was retried forever.** A hard-bounced address stayed `pending_n8n_sync` and came back every five minutes, indefinitely — 288 sends/day to someone who will never receive one, with nothing recording how often it had been tried. | `send_attempts` + `last_attempt_at`; the email node reports via `continueErrorOutput`; a failure branch counts the attempt and retires the row as `failed` at five. The fetch skips retired rows. |
 | F20 | P1 | *Caught in my own fix:* the new `send_attempts=lt.5` filter applied to `aichieve_lead_intents`, which has no such column — the aichieve branch would have failed on 42703 and stopped mailing enterprise dossiers. | Columns and index added to the aichieve table in the same migration; the filter is verified 200 against both tables. |
 | F21 | P1 | Every displayed number was formatted with `toLocaleString()` and **no locale**. These cards are server-rendered *and* hydrated, so the server pass uses the build machine's ICU default and the client pass uses the visitor's. Any difference is a React hydration mismatch that flashes on first paint. | `formatNumber` / `formatWithUnit` in `src/lib/calculators/format.ts`, locale pinned to `en-US`; used for the parameter, `aria-valuetext`, and all four yield headlines. |
@@ -64,8 +64,8 @@ wrong: the anonymous write surface, the sender's failure loop, and the arithmeti
   `vibe_telemetry_events` returns `content-range: */0` (RLS), and `vibe_asset_sessions` returns
   `401 permission denied`.
 - **Guard behaviour, through the anon key:** first insert 201; identical resubmit 201 with **no second
-  row** (dedupe); a fourth distinct asset for one address in an hour → `400 lead rejected: this
-  address has already requested 3 reports in the last hour`; 9KB metrics → `400 … 9020 bytes (limit
+  row** (dedupe); a sixth distinct asset for one address in an hour → `400 lead rejected: this
+  address has already requested 5 reports in the last hour`; 9KB metrics → `400 … 9020 bytes (limit
   8192)`; 5KB event payload → `400 … limit 4096`; 90-character session id → `400 identifier too
   long`; 401st event in one session → blocked at exactly 400 stored rows.
 - **Retry branch, executed:** `send_attempts` 0→1 and 1→2 keep `pending_n8n_sync`; 4→5 sets
