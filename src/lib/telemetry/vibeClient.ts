@@ -13,6 +13,15 @@ const N8N_WEBHOOK_URL = typeof import.meta !== 'undefined' && import.meta.env ? 
 /** Version of the consent wording on screen. Bump when the notice text changes. */
 export const CONSENT_TEXT_VERSION = '2026-10-22';
 
+/**
+ * The property a lead belongs to — the SITE, not the content pillar.
+ *
+ * giniloh's cards carry a `verticalSlug` like 'career-capital' or 'us-taxes'; that is a topic, and
+ * writing it here put a pillar in the column that is supposed to answer "which site did this come
+ * from". The pillar belongs in `domain_category`, which is why the two lead tables now have both.
+ */
+const PROPERTY_SLUG = 'giniloh';
+
 function generateSessionId(): string {
   if (typeof crypto !== 'undefined' && crypto.randomUUID) {
     return crypto.randomUUID();
@@ -140,10 +149,11 @@ export async function captureVibeLead(
         body: JSON.stringify({
           session_id: leadPayload.sessionId,
           asset_slug: leadPayload.assetSlug,
-          vertical_slug: leadPayload.verticalSlug,
-          // What the asset is about, alongside who it belongs to — the pair aichieve_lead_intents
-          // stores, so both lead tables answer the same questions.
-          domain_category: domainCategory ?? null,
+          // The site, always 'giniloh' — NOT the card's pillar. See PROPERTY_SLUG.
+          vertical_slug: PROPERTY_SLUG,
+          // What the asset is about: the card's pillar ('Career Capital'), which is also what
+          // aichieve_lead_intents.domain_category holds for its own taxonomy.
+          domain_category: domainCategory ?? leadPayload.verticalSlug ?? null,
           email: leadPayload.email,
           intent_type: leadPayload.intentType,
           calculated_metrics: leadPayload.calculatedMetrics,
