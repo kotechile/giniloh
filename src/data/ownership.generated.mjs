@@ -70,6 +70,7 @@ export const FOREIGN_POST_SLUGS_GENERATED = [
 	"control-tower-silent-exception",
 	"demurrage-invoice-30-day-clocks",
 	"diesel-620-electric-freight-certificate-gap",
+	"duet-bills-your-five-hour-window",
 	"durable-execution-not-a-transaction",
 	"enclave-overhead-62-percent-not-4",
 	"enterprisebuildvsbuy-the-250k-ai-upkeep-tax",
@@ -196,6 +197,7 @@ export const FOREIGN_TARGETS = {
 	"control-tower-silent-exception": "https://aichieve.net",
 	"demurrage-invoice-30-day-clocks": "https://aichieve.net",
 	"diesel-620-electric-freight-certificate-gap": "https://aichieve.net",
+	"duet-bills-your-five-hour-window": "https://aichieve.net",
 	"durable-execution-not-a-transaction": "https://aichieve.net",
 	"enclave-overhead-62-percent-not-4": "https://aichieve.net",
 	"enterprisebuildvsbuy-the-250k-ai-upkeep-tax": "https://aichieve.net",
@@ -291,4 +293,4 @@ export const FOREIGN_TARGETS = {
 	"zet-scale-ev-truck-residual-value-risk": "https://aichieve.net"
 };
 export const GENERATED_FOR = "giniloh.com";
-export const GENERATED_AT = "2026-10-22T00:43:51.601Z";
+export const GENERATED_AT = "2026-10-22T01:37:06.028Z";
