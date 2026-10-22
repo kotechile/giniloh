@@ -299,7 +299,10 @@ return [{ json: { ...row, resolved_domain: domain, from_email: 'reports@' + doma
 		markName,
 		{
 			method: 'PATCH',
-			url: `={{ "${SUPABASE_URL}/rest/v1/${table}?id=eq." + $json.id }}`,
+			// `$json` is the EMAIL node's output by now — it carries no row id, so the PATCH built
+			// "...id=eq.undefined" and Supabase answered 400 (invalid uuid). Reach back through the
+			// paired item on the node that still holds the row.
+			url: `={{ "${SUPABASE_URL}/rest/v1/${table}?id=eq." + $("${resolveName}").item.json.id }}`,
 			authentication: 'genericCredentialType',
 			genericAuthType: 'httpHeaderAuth',
 			sendBody: true,
@@ -316,19 +319,26 @@ return [{ json: { ...row, resolved_domain: domain, from_email: 'reports@' + doma
 		[resolveName]: { main: [[{ node: loopName, type: 'main', index: 0 }]] }
 	};
 
+	// SplitInBatches v3 has outputNames ['done', 'loop']: index 0 is `done`, index 1 is `loop`.
+	// Wiring the work to index 0 sends every item down the "nothing left to do" branch — the batch
+	// node then waits forever for a loop-back that never comes, and no email is ever sent. The loop
+	// output also requires the body to connect back, or only the first batch is processed.
+	const loopOut = routeNode ? { node: routeNode.name, type: 'main', index: 0 } : { node: emailNodes[0].name, type: 'main', index: 0 };
+	connections[loopName] = { main: [[], [loopOut]] };
+
 	if (routeNode) {
-		connections[loopName] = { main: [[{ node: routeNode.name, type: 'main', index: 0 }]] };
 		const outputs = emailNodes.map((e) => [{ node: e.name, type: 'main', index: 0 }]);
 		// The extra output is the fallback: send as the table's default property rather than nowhere.
 		outputs.push([{ node: emailNodes[emailNodes.length - 1].name, type: 'main', index: 0 }]);
 		connections[routeNode.name] = { main: outputs };
-	} else {
-		connections[loopName] = { main: [[{ node: emailNodes[0].name, type: 'main', index: 0 }]] };
 	}
 
 	for (const emailNode of emailNodes) {
 		connections[emailNode.name] = { main: [[{ node: markName, type: 'main', index: 0 }]] };
 	}
+
+	// Loop back: the mark-sent node closes the iteration so the next item is dispatched.
+	connections[markName] = { main: [[{ node: loopName, type: 'main', index: 0 }]] };
 
 	return {
 		nodes: [fetchNode, resolveNode, loopNode, ...(routeNode ? [routeNode] : []), ...emailNodes, markNode],
