@@ -61,23 +61,20 @@ const categoryRedirects = Object.fromEntries([
 export default defineConfig({
   site: process.env.PUBLIC_SITE_URL ?? 'https://giniloh.com',
   redirects: {
+    // ONE key per path. Astro normalises trailing slashes, so `/apps` and `/apps/` resolve to the
+    // same route; listing both produced nine "route is defined twice" router warnings on every
+    // build, which a future Astro turns into a hard error. The nginx server block matches the same
+    // paths with `/?$`, so the slash form keeps 301-ing at the edge regardless.
     // Legacy WordPress pages
     '/home/about-us': '/about',
-    '/home/about-us/': '/about',
     '/home/career': '/calculators/career-ai-resilience',
-    '/home/career/': '/calculators/career-ai-resilience',
     '/tutorials/espresso-dial-in': '/calculators/coffee-arbitrage',
-    '/tutorials/espresso-dial-in/': '/calculators/coffee-arbitrage',
     '/tutorials/coffee-beans': '/calculators/coffee-arbitrage',
-    '/tutorials/coffee-beans/': '/calculators/coffee-arbitrage',
 
     // The PRO app directory is aichieve's now. These used to point at apps.giniloh.com.
     '/apps': `${AICHIEVE_ORIGIN}/apps/`,
-    '/apps/': `${AICHIEVE_ORIGIN}/apps/`,
     '/showcase': `${AICHIEVE_ORIGIN}/apps/`,
-    '/showcase/': `${AICHIEVE_ORIGIN}/apps/`,
     '/pro-apps': `${AICHIEVE_ORIGIN}/apps/`,
-    '/pro-apps/': `${AICHIEVE_ORIGIN}/apps/`,
 
     // The editorial hub was renamed: /categories/ -> /articles/ (see docs/navigation-ia-plan.md).
     ...categoryRedirects,
@@ -89,9 +86,7 @@ export default defineConfig({
     // The two vertical-hub tool paths a first pass published before the calculator URLs were
     // settled. The canonical engine URLs are /calculators/<slug>/; keep the old paths working.
     '/career-capital/tools/w2-vs-1099-scorp-calculator': '/calculators/w2-vs-1099-scorp-calculator/',
-    '/career-capital/tools/w2-vs-1099-scorp-calculator/': '/calculators/w2-vs-1099-scorp-calculator/',
-    '/portfolio-capital/tools/rsu-hold-vs-sell': '/calculators/rsu-hold-vs-sell/',
-    '/portfolio-capital/tools/rsu-hold-vs-sell/': '/calculators/rsu-hold-vs-sell/'
+    '/portfolio-capital/tools/rsu-hold-vs-sell': '/calculators/rsu-hold-vs-sell/'
   },
   integrations: [
     react(),
