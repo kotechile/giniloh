@@ -42,12 +42,51 @@ giniloh's client and schema had drifted back to the pre-correction shape.
 | F16 | P1 | n8n `Resolve Domain` is one Code node in its default "run once for **all** items" mode, but it read `$json` and returned a single item. Every tick therefore routed **one** row out of the 20 `Fetch Pending` returns; the other 19 were dropped and only re-read after the first was marked sent — a 20-lead backlog took 100 minutes to clear. | Node iterates `$input.all()`; verified with a six-row sample that all six come back routed. |
 | F17 | P2 | *Found while testing the fix:* the first version of `captureVibeLead` treated **either** sink as success. The n8n webhook is a human alert, not delivery — the visitor's report comes from the poll of `vibe_lead_intents` — so a Supabase rejection plus a successful alert still showed "Scenario queued" for a row that did not exist. | Success now requires the row itself; the alert is recorded separately (`captured` vs `alerted` on the `lead_engaged` event). |
 
+## Second pass — ownership review (security, delivery, honesty)
+
+The first pass fixed what made the pipeline lie. This pass went after what makes it dangerous or
+wrong: the anonymous write surface, the sender's failure loop, and the arithmetic on the cards.
+
+| # | Sev | Finding | Fix |
+| --- | --- | --- | --- |
+| F18 | P0 | **The lead table was a mail-bomb.** `vibe_lead_intents` accepts anonymous INSERTs with a publishable key, and every accepted row makes the poller email that address. RLS validated the shape of the address, never the volume: one script could queue 10,000 reports for a victim and we would send them all from `reports@giniloh.com`, with our DMARC reputation. | `vibe_guard_lead()` trigger: normalises the address, collapses repeat submits inside 10 minutes, caps **3/hour per address** and **5 per session**, 8KB metrics, allowlisted `intent_type`. Trigger, not policy — it also holds for the already-deployed clients that know nothing about limits. |
+| F19 | P1 | **A failed send was retried forever.** A hard-bounced address stayed `pending_n8n_sync` and came back every five minutes, indefinitely — 288 sends/day to someone who will never receive one, with nothing recording how often it had been tried. | `send_attempts` + `last_attempt_at`; the email node reports via `continueErrorOutput`; a failure branch counts the attempt and retires the row as `failed` at five. The fetch skips retired rows. |
+| F20 | P1 | *Caught in my own fix:* the new `send_attempts=lt.5` filter applied to `aichieve_lead_intents`, which has no such column — the aichieve branch would have failed on 42703 and stopped mailing enterprise dossiers. | Columns and index added to the aichieve table in the same migration; the filter is verified 200 against both tables. |
+| F21 | P1 | Every displayed number was formatted with `toLocaleString()` and **no locale**. These cards are server-rendered *and* hydrated, so the server pass uses the build machine's ICU default and the client pass uses the visitor's. Any difference is a React hydration mismatch that flashes on first paint. | `formatNumber` / `formatWithUnit` in `src/lib/calculators/format.ts`, locale pinned to `en-US`; used for the parameter, `aria-valuetext`, and all four yield headlines. |
+| F22 | P1 | **Three of four cards asserted something the slider does not change.** GPU: "pays for itself in under 8 months" was a constant — false at the top of the range (it is ~13 months at 400 hrs/mo). RSU: an unlabelled 24% "downside buffer". Build-vs-buy: a one-sided build cost presented as the answer to a TCO comparison. W-2: an unexplained `×0.5` that understated the delta while the copy claimed to include compliance cost it never subtracted. | Payback computed from capital ÷ monthly saving; RSU states a 30% single-stock drawdown assumption and labels the figure *at risk*; build-vs-buy reports a stated 3-year TCO; W-2 deducts a named $1,800 compliance cost and applies the half-SE-tax deduction at a stated 32% marginal rate. |
+| F23 | P2 | The RSU card asked for "Annual **Unvested** Equity" — you cannot sell unvested RSUs, so the question had no answer. | "Vested Company Stock Held". |
+| F24 | P3 | `verify.mjs` had no assertion that a telemetry sink exists in the shipped bundle. | Added in the first pass; now proven green against production (`supabase + n8n webhook`). |
+| F25 | P3 | **Open:** `vibe_asset_telemetry` (wellroost) accepts anonymous inserts with `WITH CHECK (true)` and carries no session id on any of its 7 rows — its deployed client is older than its repo, so a per-session cap has nothing to key on. | Flagged, not changed: not this repo's table and the fix belongs with that client. The same `vibe_guard_lead` pattern applies once it sends `session_id`. |
+
+### Verified on the live project
+
+- **No PII exposure:** with the publishable key, `select *` on `vibe_lead_intents` and
+  `vibe_telemetry_events` returns `content-range: */0` (RLS), and `vibe_asset_sessions` returns
+  `401 permission denied`.
+- **Guard behaviour, through the anon key:** first insert 201; identical resubmit 201 with **no second
+  row** (dedupe); a fourth distinct asset for one address in an hour → `400 lead rejected: this
+  address has already requested 3 reports in the last hour`; 9KB metrics → `400 … 9020 bytes (limit
+  8192)`; 5KB event payload → `400 … limit 4096`; 90-character session id → `400 identifier too
+  long`; 401st event in one session → blocked at exactly 400 stored rows.
+- **Retry branch, executed:** `send_attempts` 0→1 and 1→2 keep `pending_n8n_sync`; 4→5 sets
+  `failed`; the PATCH URL resolves the row id through the paired item.
+- **Hydration:** `astro dev` log shows zero hydration warnings on `/calculators/interactive-assets/`;
+  SSR and client agree on `$150/hr`, `120 hrs/mo`, `$180,000`.
+- **Card maths at the edges:** GPU at 400 hrs/mo → `+$650/mo`, "repays its $8,400 cost in about 13
+  months"; at the 120 hrs/mo default → `-$50/mo` with the cloud winning, which the old copy could
+  never say.
+- **End-to-end capture after the refactor:** row stored with `vertical_slug = giniloh`,
+  `domain_category = portfolio-capital`, `consent_text_version`, `send_attempts = 0`; deleted
+  immediately so the poller never mails it.
+- All four card CTAs point at pages that exist in `dist` (`w2-vs-1099-scorp-calculator`,
+  `gpu-breakeven`, `build-vs-buy`, `rsu-hold-vs-sell`).
+
 ## Not fixed here (open risks)
 
-- **Open anon INSERT.** `vibe_lead_intents` and `vibe_telemetry_events` accept anonymous inserts by design
-  (RLS `WITH CHECK` limits the shape, not the rate). A script can fill the tables and trigger scenario mail
-  to arbitrary addresses. The fix is a server-side edge function with a CAPTCHA/turnstile, not a client change —
-  tracked, not pretended.
+- **Anonymous INSERT is bounded, not authenticated.** The guards cap volume per address and per
+  session (F18), which kills the mail-bomb and the table flood, but they cannot tell a human from a
+  script. A CAPTCHA'd edge function in front of the INSERT is the remaining step; nothing in the
+  client can substitute for it.
 - **wellroost's own client** (`wellroost front end/src/lib/telemetry.ts`) is a different shape (flat
   `vibe_asset_telemetry` rows). It reaches n8n, and its leads carry `calculated_metrics.domain`, so it resolves;
   it does not write `vibe_lead_intents` from the client at all. Out of scope for this repo.

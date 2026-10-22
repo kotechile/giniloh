@@ -58,15 +58,22 @@ const LEAD_TABLES = [
 /** `wellroost.com` -> `wellroost`, so node names stay readable on the canvas. */
 const domainLabel = (domain) => domain.split('.')[0];
 
-const node = (type, name, parameters, position, extra = {}) => ({
-	parameters,
-	name,
-	type: `n8n-nodes-base.${type}`,
-	typeVersion: extra.typeVersion ?? 2,
-	position,
-	id: extra.id ?? name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
-	...(extra.notes ? { notes: extra.notes } : {})
-});
+const node = (type, name, parameters, position, extra = {}) => {
+	// Anything that is not one of the four core fields is a platform-level node setting
+	// (`onError`, `retryOnFail`, `alwaysOutputData`, ...) and is emitted as-is. Dropping them here
+	// is how a workflow ends up with error handling that silently does not exist.
+	const { typeVersion = 2, id, notes, ...rest } = extra;
+	return {
+		parameters,
+		name,
+		type: `n8n-nodes-base.${type}`,
+		typeVersion,
+		position,
+		id: id ?? name.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+		...(notes ? { notes } : {}),
+		...rest
+	};
+};
 
 /** Telemetry receiver — human alerts only. Events are already stored by the browser. */
 function telemetryWorkflow() {
@@ -214,12 +221,15 @@ function leadBranch({ table, label, fallbackDomain, domains }, x) {
 	const resolveName = `Resolve Domain (${label})`;
 	const loopName = `One at a Time (${label})`;
 	const markName = `Mark Sent (${label})`;
+	const attemptName = `Record Attempt (${label})`;
 
 	const fetchNode = node(
 		'httpRequest',
 		fetchName,
 		{
-			url: `${SUPABASE_URL}/rest/v1/${table}?select=*&status=eq.pending_n8n_sync&order=created_at.asc&limit=20`,
+			// `send_attempts=lt.5` is the retry budget: a hard-bounced address used to stay pending and
+			// come back every five minutes forever (288 sends a day, to a stranger, from our domain).
+			url: `${SUPABASE_URL}/rest/v1/${table}?select=*&status=eq.pending_n8n_sync&send_attempts=lt.5&order=created_at.asc&limit=20`,
 			authentication: 'genericCredentialType',
 			genericAuthType: 'httpHeaderAuth',
 			sendHeaders: true,
@@ -301,6 +311,9 @@ return rows.map((item) => {
 			[stacked ? x + 960 : x + 720, stacked ? 200 + (i - (domains.length - 1) / 2) * 220 : 200],
 			{
 				typeVersion: 2.1,
+				// Output 0 = sent, output 1 = failed. Without this a single bad address aborts the whole
+				// tick and the remaining rows are never attempted.
+				onError: 'continueErrorOutput',
 				notes: `Attach the SMTP credential for reports@${domain}. From is a literal: this branch is already domain-specific.`
 			}
 		);
@@ -360,6 +373,30 @@ return rows.map((item) => {
 		{ typeVersion: 4.2, notes: 'Runs only after the email succeeds — a failed send leaves the lead pending for the next tick.' }
 	);
 
+	// Failure branch. Counts the attempt and, at five, retires the row: before this, a single
+	// hard-bounced address stayed pending forever and was retried every five minutes indefinitely,
+	// with nothing recording how many times it had already been tried.
+	const prevAttempts = `($("${resolveName}").item.json.send_attempts || 0)`;
+	const attemptNode = node(
+		'httpRequest',
+		attemptName,
+		{
+			method: 'PATCH',
+			url: `={{ "${SUPABASE_URL}/rest/v1/${table}?id=eq." + $("${resolveName}").item.json.id }}`,
+			authentication: 'genericCredentialType',
+			genericAuthType: 'httpHeaderAuth',
+			sendBody: true,
+			specifyBody: 'json',
+			jsonBody: `={{ JSON.stringify({ send_attempts: ${prevAttempts} + 1, last_attempt_at: $now.toISO(), status: (${prevAttempts} + 1) >= 5 ? "failed" : "pending_n8n_sync" }) }}`,
+			options: {}
+		},
+		[domains.length > 1 ? x + 1200 : x + 960, 480],
+		{
+			typeVersion: 4.2,
+			notes: 'Runs only when the send fails. Five failures retires the row as `failed`; below that it stays pending for the next tick.'
+		}
+	);
+
 	const connections = {
 		[fetchName]: { main: [[{ node: resolveName, type: 'main', index: 0 }]] },
 		[resolveName]: { main: [[{ node: loopName, type: 'main', index: 0 }]] }
@@ -379,15 +416,22 @@ return rows.map((item) => {
 		connections[routeNode.name] = { main: outputs };
 	}
 
+	// `onError: continueErrorOutput` gives every email node two outputs: 0 sent, 1 failed.
 	for (const emailNode of emailNodes) {
-		connections[emailNode.name] = { main: [[{ node: markName, type: 'main', index: 0 }]] };
+		connections[emailNode.name] = {
+			main: [
+				[{ node: markName, type: 'main', index: 0 }],
+				[{ node: attemptName, type: 'main', index: 0 }]
+			]
+		};
 	}
 
-	// Loop back: the mark-sent node closes the iteration so the next item is dispatched.
+	// Loop back: whichever node closed the iteration hands control back for the next item.
 	connections[markName] = { main: [[{ node: loopName, type: 'main', index: 0 }]] };
+	connections[attemptName] = { main: [[{ node: loopName, type: 'main', index: 0 }]] };
 
 	return {
-		nodes: [fetchNode, resolveNode, loopNode, ...(routeNode ? [routeNode] : []), ...emailNodes, markNode],
+		nodes: [fetchNode, resolveNode, loopNode, ...(routeNode ? [routeNode] : []), ...emailNodes, markNode, attemptNode],
 		connections
 	};
 }

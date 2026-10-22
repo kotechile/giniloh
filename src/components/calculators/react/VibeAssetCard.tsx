@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { trackVibeEvent, captureVibeLead } from '../../../lib/telemetry/vibeClient';
+import { formatWithUnit } from '../../../lib/calculators/format';
 
 export interface VibeAssetProps {
   title: string;
@@ -194,7 +195,9 @@ export const VibeAssetCard: React.FC<VibeAssetProps> = ({
               {quickParamLabel}
             </label>
             <span className="font-mono text-sm font-bold text-[#191610]">
-              {paramUnit === '$' ? `$${paramValue.toLocaleString()}` : `${paramValue} ${paramUnit}`}
+              {/* Locale pinned in formatWithUnit: this string is server-rendered AND hydrated, and
+                  toLocaleString() would use the build machine's locale on the server pass. */}
+              {formatWithUnit(paramValue, paramUnit)}
             </span>
           </div>
 
@@ -208,7 +211,7 @@ export const VibeAssetCard: React.FC<VibeAssetProps> = ({
             onChange={handleSliderChange}
             className="w-full h-1.5 bg-[#D8D3C4] appearance-none cursor-pointer accent-[#5A7A8F]"
             aria-label={quickParamLabel}
-            aria-valuetext={paramUnit === '$' ? `$${paramValue.toLocaleString()}` : `${paramValue} ${paramUnit}`}
+            aria-valuetext={formatWithUnit(paramValue, paramUnit)}
           />
 
           {/* Real-time Net Yield Output */}

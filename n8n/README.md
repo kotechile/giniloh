@@ -93,6 +93,42 @@ already allowed on that branch — a row cannot choose its own `From` address. T
 over every fetched row (`$input.all()`), not just the first, so a tick with 20 pending leads sends
 20 reports.
 
+## Retry budget
+
+The poll selects `status=eq.pending_n8n_sync&send_attempts=lt.5`. Each send node is wired with
+`onError: continueErrorOutput`, so output 0 (sent) goes to **Mark Sent** and output 1 (failed) goes
+to **Record Attempt**:
+
+```
+Mark Sent        PATCH { status: 'sent', delivered_at: now }
+Record Attempt   PATCH { send_attempts: +1, last_attempt_at: now,
+                         status: attempts+1 >= 5 ? 'failed' : 'pending_n8n_sync' }
+```
+
+Five failures retire the row. Before this, a hard-bounced address stayed `pending_n8n_sync` and
+came back every five minutes forever — 288 sends a day to an address that will never accept one,
+with no record of how many times it had been tried. A failed send also no longer aborts the tick:
+one bad address used to stop the other 19 rows from being attempted.
+
+## What the database refuses (so the workflow cannot be used as an open relay)
+
+The lead tables are written directly by the browser with a publishable key, so the limits live in
+`20261024_vibe_ingest_limits.sql` as `BEFORE INSERT` triggers, not in this workflow — that way they
+also apply to the clients already deployed on the three sites:
+
+| Limit | Value |
+| --- | --- |
+| Repeat submit | same address + asset inside 10 min is **skipped** (the visitor still sees success: their report is already queued) |
+| Per address | 3 reports / hour |
+| Per session | 5 captured addresses |
+| Metrics payload | 8 KB |
+| Event payload | 4 KB, 400 events per session |
+
+Without the per-address cap, one script could queue thousands of scenario emails for a stranger and
+`reports@giniloh.com` would send every one of them — a mail-bomb from our domain, paid for by our
+own SMTP quota.
+
+
 ## Verifying without clicking around
 
 ```bash
