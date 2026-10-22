@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { trackVibeEvent, captureVibeLead } from '../../../lib/telemetry/vibeClient';
 
 export interface VibeAssetProps {
@@ -6,7 +6,8 @@ export interface VibeAssetProps {
   category: string;
   description: string;
   assetSlug: string;
-  verticalSlug: string;
+  /** The pillar this asset belongs to ('career-capital'). The property is always giniloh. */
+  domainCategory: string;
   calculatorUrl?: string;
   quickParamLabel?: string;
   defaultParamValue?: number;
@@ -14,16 +15,26 @@ export interface VibeAssetProps {
   paramMin?: number;
   paramMax?: number;
   paramStep?: number;
-  computeYield?: (value: number) => { headline: string; delta: string; subtext: string };
+  /**
+   * Deterministic yield for the current parameter. Required on purpose: the previous optional
+   * default invented 14.2% of the input, so an asset that forgot to pass one shipped fabricated
+   * arithmetic under a real-looking headline.
+   */
+  computeYield: (value: number) => { headline: string; delta: string; subtext: string };
   onDeploy?: () => void;
 }
+
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[A-Za-z]{2,}$/;
+
+/** Trailing debounce for the slider: one event per pause, not one per pixel. */
+const ADJUST_DEBOUNCE_MS = 600;
 
 export const VibeAssetCard: React.FC<VibeAssetProps> = ({
   title,
   category,
   description,
   assetSlug,
-  verticalSlug,
+  domainCategory,
   calculatorUrl,
   quickParamLabel = 'Estimated Annual Value',
   defaultParamValue = 200000,
@@ -37,68 +48,117 @@ export const VibeAssetCard: React.FC<VibeAssetProps> = ({
   const [engaged, setEngaged] = useState(false);
   const [paramValue, setParamValue] = useState(defaultParamValue);
   const [emailInput, setEmailInput] = useState('');
+  const [submittedEmail, setSubmittedEmail] = useState('');
   const [leadCaptured, setLeadCaptured] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [captureError, setCaptureError] = useState<string | null>(null);
 
-  // Track initial impression
+  const cardRef = useRef<HTMLElement | null>(null);
+  const impressionSent = useRef(false);
+  const adjustTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const pendingValue = useRef(defaultParamValue);
+
+  // An impression is a card someone saw. Firing on hydration counted all four cards on load,
+  // including the two below the fold (docs/vibe-marketing-review.md, F8).
   useEffect(() => {
-    trackVibeEvent('card_impression', assetSlug, verticalSlug);
-  }, [assetSlug, verticalSlug]);
+    const element = cardRef.current;
+    if (!element || impressionSent.current) return;
 
-  // Default ROI engine calculation if not explicitly provided
-  const calculateResult = computeYield || ((val: number) => {
-    const netSavings = Math.round(val * 0.142);
-    return {
-      headline: `+$${netSavings.toLocaleString()}/yr`,
-      delta: 'Estimated Net Yield Delta',
-      subtext: 'Optimized after self-employment tax, QBI deduction, and compliance overhead.'
+    const fire = () => {
+      if (impressionSent.current) return;
+      impressionSent.current = true;
+      trackVibeEvent('card_impression', assetSlug, domainCategory);
     };
-  });
 
-  const currentYield = calculateResult(paramValue);
+    if (typeof IntersectionObserver === 'undefined') {
+      fire();
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+            fire();
+            observer.disconnect();
+            break;
+          }
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [assetSlug, domainCategory]);
+
+  // Flush a pending slider event when the island unmounts (navigation mid-drag).
+  useEffect(() => {
+    return () => {
+      if (adjustTimer.current) {
+        clearTimeout(adjustTimer.current);
+        adjustTimer.current = null;
+        trackVibeEvent('input_adjusted', assetSlug, domainCategory, { paramValue: pendingValue.current });
+      }
+    };
+  }, [assetSlug, domainCategory]);
+
+  const currentYield = computeYield(paramValue);
 
   const handleSliderChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = Number(e.target.value);
     setParamValue(val);
+    pendingValue.current = val;
+
     if (!engaged) {
       setEngaged(true);
-      trackVibeEvent('session_start', assetSlug, verticalSlug, { initialValue: val });
+      trackVibeEvent('session_start', assetSlug, domainCategory, { initialValue: val });
     }
-    trackVibeEvent('input_adjusted', assetSlug, verticalSlug, { paramValue: val });
+
+    if (adjustTimer.current) clearTimeout(adjustTimer.current);
+    adjustTimer.current = setTimeout(() => {
+      adjustTimer.current = null;
+      trackVibeEvent('input_adjusted', assetSlug, domainCategory, { paramValue: pendingValue.current });
+    }, ADJUST_DEBOUNCE_MS);
   };
 
   const handleDeploy = () => {
     setEngaged(true);
-    trackVibeEvent('session_start', assetSlug, verticalSlug, { paramValue });
+    trackVibeEvent('session_start', assetSlug, domainCategory, { paramValue });
     if (onDeploy) onDeploy();
   };
 
   const handleLeadSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!emailInput || !emailInput.includes('@')) return;
+    setCaptureError(null);
+
+    const address = emailInput.trim();
+    if (!EMAIL_PATTERN.test(address)) {
+      setCaptureError('That address does not look complete — check it and send again.');
+      return;
+    }
 
     setIsSubmitting(true);
-    const success = await captureVibeLead(
-      emailInput,
-      assetSlug,
-      verticalSlug,
-      {
-        paramValue,
-        calculatedDelta: currentYield.headline,
-        timestamp: new Date().toISOString()
-      },
-      'model_export',
-      category
-    );
+    const result = await captureVibeLead(address, assetSlug, domainCategory, {
+      assetTitle: title,
+      paramValue,
+      calculatedDelta: currentYield.headline
+    });
 
     setIsSubmitting(false);
-    if (success) {
+
+    if (result.ok) {
+      setSubmittedEmail(address);
       setLeadCaptured(true);
+    } else {
+      // No silent revert: the visitor is told, and the reason is in the console for us.
+      setCaptureError('We could not queue that report just now. Try again in a moment.');
     }
   };
 
   return (
     <article
+      ref={cardRef}
       className="border border-[#D8D3C4] bg-white p-6 sm:p-8 flex flex-col justify-between transition-colors duration-150 hover:border-[#C6C0AE]"
       aria-labelledby={`vibe-title-${assetSlug}`}
     >
@@ -148,6 +208,7 @@ export const VibeAssetCard: React.FC<VibeAssetProps> = ({
             onChange={handleSliderChange}
             className="w-full h-1.5 bg-[#D8D3C4] appearance-none cursor-pointer accent-[#5A7A8F]"
             aria-label={quickParamLabel}
+            aria-valuetext={paramUnit === '$' ? `$${paramValue.toLocaleString()}` : `${paramValue} ${paramUnit}`}
           />
 
           {/* Real-time Net Yield Output */}
@@ -161,7 +222,11 @@ export const VibeAssetCard: React.FC<VibeAssetProps> = ({
               </p>
             </div>
             <div className="text-right">
-              <span className="font-mono text-xl sm:text-2xl font-black text-[#047857]">
+              <span
+                className="font-mono text-xl sm:text-2xl font-black text-[#047857]"
+                aria-live="polite"
+                aria-atomic="true"
+              >
                 {currentYield.headline}
               </span>
             </div>
@@ -181,12 +246,12 @@ export const VibeAssetCard: React.FC<VibeAssetProps> = ({
             <span aria-hidden="true">&rarr;</span>
           </button>
         ) : leadCaptured ? (
-          <div className="p-3 bg-[#F4F1E8] border border-[#047857] text-center">
+          <div className="p-3 bg-[#F4F1E8] border border-[#047857]">
             <p className="font-mono text-xs font-bold uppercase tracking-[0.16em] text-[#047857]">
-              Decision Model Synced
+              Scenario queued
             </p>
             <p className="text-xs text-[#4E4A42] mt-1">
-              Telemetry recorded. Full telemetry dispatch dispatched via n8n pipeline.
+              We are sending the model you configured to {submittedEmail}.
             </p>
             {calculatorUrl && (
               <a
@@ -203,11 +268,18 @@ export const VibeAssetCard: React.FC<VibeAssetProps> = ({
               <input
                 type="email"
                 required
+                name="email"
+                autoComplete="email"
                 placeholder="Work email for scenario report"
                 value={emailInput}
-                onChange={(e) => setEmailInput(e.target.value)}
+                onChange={(e) => {
+                  setEmailInput(e.target.value);
+                  if (captureError) setCaptureError(null);
+                }}
                 className="flex-1 px-3 py-2 text-xs border border-[#D8D3C4] bg-white text-[#191610] focus:outline-none focus:border-[#5A7A8F]"
                 aria-label="Work email"
+                aria-describedby={`consent-${assetSlug}`}
+                aria-invalid={captureError ? true : undefined}
               />
               <button
                 type="submit"
@@ -218,8 +290,14 @@ export const VibeAssetCard: React.FC<VibeAssetProps> = ({
               </button>
             </form>
 
+            {captureError && (
+              <p role="alert" className="text-[11px] leading-relaxed text-[#8A1C1C]">
+                {captureError}
+              </p>
+            )}
+
             {/* One stated purpose, at the point of capture. The address is not a subscription. */}
-            <p className="text-[11px] leading-relaxed text-[#5F5B52]">
+            <p id={`consent-${assetSlug}`} className="text-[11px] leading-relaxed text-[#5F5B52]">
               We use this address only to send the scenario you just configured. No newsletter, no resale.
             </p>
 

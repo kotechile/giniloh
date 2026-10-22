@@ -6,7 +6,7 @@ const DEFAULT_VIBE_ASSETS: VibeAssetProps[] = [
     title: 'W-2 vs. 1099 vs. S-Corp Net Yield Engine',
     category: 'Career Capital',
     assetSlug: 'w2-vs-1099-yield-engine',
-    verticalSlug: 'career-capital',
+    domainCategory: 'career-capital',
     calculatorUrl: '/calculators/w2-vs-1099-scorp-calculator/',
     description:
       'Gross rate parity is an illusion. Compare your true take-home after self-employment tax, the 20% Section 199A QBI deduction, and $69k Solo 401(k) tax-sheltering.',
@@ -31,7 +31,7 @@ const DEFAULT_VIBE_ASSETS: VibeAssetProps[] = [
     title: 'Workstation vs. Cloud GPU Breakeven Engine',
     category: 'Compute Capital',
     assetSlug: 'gpu-utilization-breakeven',
-    verticalSlug: 'compute-capital',
+    domainCategory: 'compute-capital',
     calculatorUrl: '/calculators/gpu-breakeven/',
     description:
       'Local silicon vs. cloud clusters is an hourly utilization question. Identify the exact tipping point where an on-prem workstation outperforms on-demand cloud.',
@@ -60,7 +60,7 @@ const DEFAULT_VIBE_ASSETS: VibeAssetProps[] = [
     title: 'In-House Build vs. SaaS Vendor TCO Engine',
     category: 'Stack Economics',
     assetSlug: 'build-vs-buy-tco',
-    verticalSlug: 'stack-economics',
+    domainCategory: 'stack-economics',
     calculatorUrl: '/calculators/build-vs-buy/',
     description:
       'Vendor prices escalate; custom builds demand a permanent maintenance tax. Factor fully loaded engineer hours ($210/hr) to evaluate the true 3-year TCO.',
@@ -85,7 +85,7 @@ const DEFAULT_VIBE_ASSETS: VibeAssetProps[] = [
     title: 'RSU Hold vs. Auto-Sell Diversification Engine',
     category: 'Portfolio Capital',
     assetSlug: 'rsu-concentration-diversifier',
-    verticalSlug: 'portfolio-capital',
+    domainCategory: 'portfolio-capital',
     calculatorUrl: '/calculators/rsu-hold-vs-sell/',
     description:
       'Holding vested RSUs is economically identical to using cash compensation to purchase company stock today. Quantify the concentration risk penalty.',

@@ -59,10 +59,15 @@ successful event.
 
 ## Payload shapes
 
+`verticalSlug` is the **property** that collected the lead (`giniloh`, `wellroost`, `aichieve`);
+`domainCategory` is **what the asset is about** (`career-capital`, `agentic-ai`, …). They are two
+different facts and the pipeline breaks when they share a column — see
+`docs/vibe-marketing-review.md` in the giniloh repo.
+
 ```jsonc
 // giniloh.com and aichieve.net front ends
-{ "type": "telemetry_event", "event": { "sessionId": "…", "assetSlug": "…", "verticalSlug": "…", "eventName": "view", "payload": {} } }
-{ "type": "lead_intent", "lead": { "sessionId": "…", "assetSlug": "…", "verticalSlug": "…", "email": "…", "intentType": "…", "calculatedMetrics": {} } }
+{ "origin": "giniloh.com", "type": "telemetry_event", "event": { "sessionId": "…", "assetSlug": "…", "verticalSlug": "giniloh", "domainCategory": "career-capital", "eventName": "card_impression", "payload": {} } }
+{ "origin": "giniloh.com", "type": "lead_intent", "lead": { "sessionId": "…", "assetSlug": "…", "verticalSlug": "giniloh", "domainCategory": "career-capital", "email": "…", "intentType": "model_export", "consentTextVersion": "2026-10-22", "calculatedMetrics": { "assetTitle": "…", "paramValue": 150, "calculatedDelta": "+$8,721/yr" } } }
 
 // wellroost.com front end (flat)
 { "asset_id": "…", "asset_slug": "…", "event_type": "view", "category": "…", "title": "…", "domain": "wellroost.com", "metadata": { "fields": ["engine"] } }
@@ -70,6 +75,23 @@ successful event.
 
 The workflow branches only on `type == "lead_intent"`; wellroost's flat events fall through to
 `Ignore`, which is correct — they are already in Supabase.
+
+## Which property a row is mailed as
+
+The scheduled workflow decides the sending domain from the row, never from the repo whose copy of
+this file you imported:
+
+```
+vertical_slug == 'giniloh'    -> reports@giniloh.com     (links to giniloh.com)
+vertical_slug == 'wellroost'  -> reports@wellroost.com   (links to wellroost.com)
+vertical_slug == 'aichieve'   -> reports@aichieve.net    (links to aichieve.net)
+anything else                 -> the table's default property
+```
+
+`calculated_metrics.domain` is a client-supplied hint and is used **only** when it names a domain
+already allowed on that branch — a row cannot choose its own `From` address. The resolution runs
+over every fetched row (`$input.all()`), not just the first, so a tick with 20 pending leads sends
+20 reports.
 
 ## Verifying without clicking around
 

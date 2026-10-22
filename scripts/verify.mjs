@@ -322,11 +322,52 @@ async function checkWwwCanonicalisation() {
 	ok(`https://www.${apex}/ -> ${location}`);
 }
 
+/**
+ * Telemetry sinks are compiled into the bundle, so a missing build-time variable is invisible.
+ *
+ * This is the check that would have caught the actual failure: `PUBLIC_SUPABASE_URL`,
+ * `PUBLIC_SUPABASE_ANON_KEY` and `PUBLIC_N8N_WEBHOOK_URL` are read through `import.meta.env`, and
+ * Astro inlines them during `astro build`. Set them on the running container instead and the site
+ * still builds, still renders, still answers 200 — it just silently drops every event and every
+ * lead, and tells the visitor their report was queued. Nothing but the bundle can prove otherwise.
+ */
+async function checkTelemetryWiring() {
+	console.log('\nTelemetry wiring');
+	const page = await probe('/calculators/interactive-assets/');
+	if (page.status !== 200) {
+		fail('/calculators/interactive-assets/', '200', `${page.status}`);
+		return;
+	}
+	const chunks = [...new Set([...page.body.matchAll(/\/_astro\/[^"']+\.js/g)].map((m) => m[0]))];
+	if (chunks.length === 0) {
+		fail('interactive-assets hydration chunk', 'at least one /_astro/*.js', 'none linked — the assets cannot record anything');
+		return;
+	}
+	let bundle = '';
+	for (const chunk of chunks) {
+		const r = await probe(chunk);
+		if (r.status === 200) bundle += r.body;
+	}
+	const supabase = /[a-z0-9]+\.supabase\.co/i.test(bundle);
+	const webhook = /\/webhook\/vibe-telemetry/.test(bundle);
+	if (supabase || webhook) {
+		const sinks = [supabase ? 'supabase' : null, webhook ? 'n8n webhook' : null].filter(Boolean).join(' + ');
+		ok('a telemetry sink is baked into the bundle', sinks);
+	} else {
+		fail(
+			'telemetry sink in the bundle',
+			'PUBLIC_SUPABASE_URL + PUBLIC_SUPABASE_ANON_KEY, or PUBLIC_N8N_WEBHOOK_URL, present at BUILD time',
+			'none inlined — every event and lead is dropped client-side, and the form still reports success'
+		);
+	}
+}
+
 async function main() {
 	console.log(`\nVerifying deploy contract at ${ORIGIN}`);
 	try {
 		await checkCoreRoutes();
 		await checkAssets();
+		await checkTelemetryWiring();
 		await checkCrawlArtifacts();
 		await checkRedirects();
 		await checkBoundary();

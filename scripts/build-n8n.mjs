@@ -25,6 +25,22 @@ import fs from 'node:fs';
 const SUPABASE_URL = 'https://ixfdkninqeqmwuxncpvh.supabase.co';
 const WEBHOOK_PATH = 'vibe-telemetry';
 
+/**
+ * Property slug -> the hostname that may send as it. This is the ONE place the mapping lives; the
+ * "Resolve Domain" node emits it into the workflow as a literal so a row cannot invent a sender.
+ *
+ * `vertical_slug` holds the PROPERTY (giniloh | wellroost | aichieve) on every lead table now;
+ * `domain_category` holds the pillar (`career-capital`, `agentic-ai`, ...). The previous resolver
+ * searched the string 'aichieve' inside vertical_slug and defaulted everything else to giniloh.com,
+ * so a wellroost row without `calculated_metrics.domain` was mailed from reports@giniloh.com with a
+ * giniloh link — and a client-chosen `metrics.domain` could choose the From address outright.
+ */
+const PROPERTY_DOMAINS = {
+	giniloh: 'giniloh.com',
+	wellroost: 'wellroost.com',
+	aichieve: 'aichieve.net'
+};
+
 // Every lead table, polled by the ONE scheduled workflow. One file means importing it anywhere
 // cannot double-send: each table is handled exactly once per tick.
 const LEAD_TABLES = [
@@ -108,19 +124,26 @@ function telemetryWorkflow() {
 				'Shape Lead Alert',
 				{
 					jsCode: `// giniloh/aichieve send camelCase inside \`lead\`; accept snake_case too.
+// verticalSlug is the PROPERTY, domainCategory is the PILLAR. Keep them apart in the alert: the
+// point of the notification is "which site, which topic, what did they build".
 const body = $json.body || $json;
 const lead = body.lead || body;
 const email = lead.email || '';
 const assetSlug = lead.assetSlug || lead.asset_slug || 'unknown-asset';
-const vertical = lead.verticalSlug || lead.vertical_slug || 'general';
 const metrics = lead.calculatedMetrics || lead.calculated_metrics || {};
+const assetTitle = metrics.assetTitle || assetSlug;
+const property = lead.verticalSlug || lead.vertical_slug || body.origin || 'unknown-property';
+const pillar = lead.domainCategory || lead.domain_category || 'unclassified';
+const consent = lead.consentTextVersion || lead.consent_text_version || 'unrecorded';
 return [{ json: {
   email,
   assetSlug,
-  vertical,
-  domain: metrics.domain || 'unknown',
-  hasEmail: email.includes('@'),
-  summary: 'New scenario request — ' + assetSlug + ' (' + vertical + ' · ' + (metrics.domain || 'unknown') + ')'
+  assetTitle,
+  property,
+  pillar,
+  consentTextVersion: consent,
+  hasEmail: String(email).includes('@'),
+  summary: 'New scenario request — ' + assetTitle + ' (' + property + ' · ' + pillar + ')'
 } }];`
 				},
 				[-40, 100],
@@ -214,13 +237,36 @@ function leadBranch({ table, label, fallbackDomain, domains }, x) {
 		'code',
 		resolveName,
 		{
-			jsCode: `// Links must point at the property the visitor used, not at the repo this file lives in.
-const row = $json;
-const metrics = row.calculated_metrics || {};
-const vertical = String(row.vertical_slug || '');
-const domain = metrics.domain
-  || (vertical.includes('aichieve') ? 'aichieve.net' : vertical.includes('wellroost') ? 'wellroost.com' : '${fallbackDomain}');
-return [{ json: { ...row, resolved_domain: domain, from_email: 'reports@' + domain } }];`
+			jsCode: `// Route the sending domain from the row's PROPERTY. \`vertical_slug\` is the property
+// (giniloh | wellroost | aichieve); \`domain_category\` is what the asset is about. Merging the two
+// is what sent wellroost leads out under a giniloh From with a giniloh link.
+const rows = $input.all();
+const PROPERTY_DOMAINS = ${JSON.stringify(PROPERTY_DOMAINS)};
+// Only this branch's own domains: a row must never borrow another property's sender.
+const allowed = ${JSON.stringify(domains)};
+const normalise = (value) => String(value || '').trim().toLowerCase()
+  .replace(/^https?:\\/\\//, '').replace(/^www\\./, '').replace(/\\/$/, '');
+return rows.map((item) => {
+  const row = item.json;
+  const metrics = row.calculated_metrics || {};
+  const propertyKey = normalise(row.vertical_slug).replace(/\\.(com|net|org|io)$/, '');
+  const byProperty = PROPERTY_DOMAINS[propertyKey];
+  // \`metrics.domain\` is a CLIENT-supplied hint. Honoured only when this branch may send as it.
+  const declared = normalise(metrics.domain);
+  const domain = allowed.includes(byProperty)
+    ? byProperty
+    : allowed.includes(declared)
+      ? declared
+      : '${fallbackDomain}';
+  return {
+    json: {
+      ...row,
+      resolved_domain: domain,
+      from_email: 'reports@' + domain,
+      asset_title: metrics.assetTitle || row.asset_slug
+    }
+  };
+});`
 		},
 		[x + 240, 200],
 		{ typeVersion: 2 }
@@ -241,11 +287,11 @@ return [{ json: { ...row, resolved_domain: domain, from_email: 'reports@' + doma
 				// can only authenticate one account, and that account signs its own domain.
 				fromEmail: `reports@${domain}`,
 				toEmail: '={{ $json.email }}',
-				subject: '=Your scenario report: {{ $json.asset_slug }}',
+				subject: '=Your scenario report: {{ $json.asset_title || $json.asset_slug }}',
 				html: `=<div style="font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#191610;line-height:1.6;max-width:580px;margin:0 auto;border:1px solid #d8d3c4;padding:24px">
   <div style="font-family:monospace;font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:#5f5b52">{{ $json.resolved_domain }} &middot; Scenario report</div>
   <h1 style="font-size:22px;font-weight:800;margin:8px 0 16px">Your model, as you built it</h1>
-  <p>You asked us to send the scenario you calculated for <strong>{{ $json.asset_slug }}</strong>.</p>
+  <p>You asked us to send the scenario you calculated for <strong>{{ $json.asset_title || $json.asset_slug }}</strong>.</p>
   <p><a href="https://{{ $json.resolved_domain }}/calculators/" style="color:#0f766e;font-weight:700">Open the decision engine &rarr;</a></p>
   <div style="background:#f4f1e8;border:1px solid #d8d3c4;padding:14px;margin:16px 0;font-family:monospace;font-size:11px;white-space:pre-wrap;overflow-wrap:anywhere">{{ JSON.stringify($json.calculated_metrics) }}</div>
   <p style="font-size:11px;color:#8c8c8c;border-top:1px solid #eee;padding-top:12px">You received this because you asked for a scenario report. Reply to unsubscribe.</p>

@@ -39,6 +39,8 @@ giniloh's client and schema had drifted back to the pre-correction shape.
 | F13 | P2 | Nothing in the deploy contract noticed a bundle without sinks — `npm run check` and `npm run build` are green either way. | `scripts/verify.mjs` asserts a sink is baked into the `/calculators/interactive-assets/` chunks. |
 | F14 | P3 | Email subject to the visitor was the raw slug (`w2-vs-1099-yield-engine`). | `assetTitle` travels in `calculated_metrics`; subject falls back to the slug. |
 | F15 | P3 | `n8n/README.md` documented payloads without `domainCategory`, `consent_text_version` or `origin`, and never stated the property/topic contract the resolve step depends on. | README updated; workflows regenerated from `scripts/build-n8n.mjs` (never hand-edited). |
+| F16 | P1 | n8n `Resolve Domain` is one Code node in its default "run once for **all** items" mode, but it read `$json` and returned a single item. Every tick therefore routed **one** row out of the 20 `Fetch Pending` returns; the other 19 were dropped and only re-read after the first was marked sent — a 20-lead backlog took 100 minutes to clear. | Node iterates `$input.all()`; verified with a six-row sample that all six come back routed. |
+| F17 | P2 | *Found while testing the fix:* the first version of `captureVibeLead` treated **either** sink as success. The n8n webhook is a human alert, not delivery — the visitor's report comes from the poll of `vibe_lead_intents` — so a Supabase rejection plus a successful alert still showed "Scenario queued" for a row that did not exist. | Success now requires the row itself; the alert is recorded separately (`captured` vs `alerted` on the `lead_engaged` event). |
 
 ## Not fixed here (open risks)
 
@@ -54,10 +56,25 @@ giniloh's client and schema had drifted back to the pre-correction shape.
 
 ## Verification performed
 
-1. `npm run check` — 0 errors.
-2. `npm run build` — succeeds.
-3. Browser run against `astro dev`: slider drag, impression, lead submit → rows land in Supabase with
-   `vertical_slug = giniloh` + `domain_category`; the failure path (bad anon key) shows the alert instead of
-   claiming success; the test rows are deleted afterwards so the poller never mails them.
-4. `node scripts/build-n8n.mjs` — all three copies rewritten and byte-identical.
-5. `node scripts/verify.mjs` against the built preview — telemetry wiring check green.
+1. `npm run check` — 0 errors; `npm run build` — succeeds (1097 pages).
+2. **Live schema:** `20261023_align_giniloh_telemetry.sql` applied to `ixfdkninqeqmwuxncpvh` through the Supabase MCP.
+   Confirmed afterwards: events now expose `domain_category`; all 13 pre-existing events backfilled to
+   `vertical_slug = 'giniloh'` + their pillar; `vibe_asset_sessions` is a view with 9 derived rows; `anon`
+   can INSERT events and leads and cannot read the session view.
+3. **Generated workflow logic**, executed with `new Function` against representative rows:
+   `giniloh → giniloh.com`, `wellroost → wellroost.com`, legacy `wellroost.com` hostname → `wellroost.com`,
+   empty property + `metrics.domain` hint → honoured, `metrics.domain = evil.example` → refused in favour of
+   the table default, legacy pillar `career-capital` → giniloh.com, `aichieve` → aichieve.net. Six rows in,
+   six routed rows out.
+4. **Browser run against `astro dev`** (`/calculators/interactive-assets/`):
+   - hydration fired `card_impression` for the **two visible cards only**;
+   - three slider moves produced **one** `input_adjusted` (debounced) at the final value;
+   - every payload carried `vertical_slug = 'giniloh'` + `domain_category = 'career-capital'`;
+   - a submitted address produced a `vibe_lead_intents` row with both columns, `consent_text_version`
+     and `status = pending_n8n_sync`, and the card said "Scenario queued" naming that address;
+   - with the lead endpoint forced to `400 PGRST204`, the same card showed a `role="alert"` error, kept the
+     address, offered retry, and did **not** claim success — the exact behaviour that was missing.
+   - test rows (1 lead, 13 events) were deleted afterwards so the 5-minute poller never mailed them.
+5. Local bundle check: `dist/_astro/VibeAssetGrid.*.js` now contains the Supabase URL, the webhook path and
+   `domain_category` — before the `.env` rename it contained none of them.
+6. `node scripts/build-n8n.mjs` — all three copies rewritten and byte-identical.
