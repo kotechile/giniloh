@@ -87,7 +87,8 @@ export const VibeAssetCard: React.FC<VibeAssetProps> = ({
         calculatedDelta: currentYield.headline,
         timestamp: new Date().toISOString()
       },
-      'model_export'
+      'model_export',
+      category
     );
 
     setIsSubmitting(false);
@@ -216,6 +217,11 @@ export const VibeAssetCard: React.FC<VibeAssetProps> = ({
                 {isSubmitting ? 'Syncing...' : 'Export Model'}
               </button>
             </form>
+
+            {/* One stated purpose, at the point of capture. The address is not a subscription. */}
+            <p className="text-[11px] leading-relaxed text-[#5F5B52]">
+              We use this address only to send the scenario you just configured. No newsletter, no resale.
+            </p>
 
             <div className="flex items-center justify-between text-xs text-[#5F5B52]">
               <span className="font-mono text-[10px] uppercase tracking-wider">

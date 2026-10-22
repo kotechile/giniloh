@@ -10,6 +10,9 @@ const SUPABASE_URL = typeof import.meta !== 'undefined' && import.meta.env ? (im
 const SUPABASE_ANON_KEY = typeof import.meta !== 'undefined' && import.meta.env ? (import.meta.env.PUBLIC_SUPABASE_ANON_KEY || '') : '';
 const N8N_WEBHOOK_URL = typeof import.meta !== 'undefined' && import.meta.env ? (import.meta.env.PUBLIC_N8N_WEBHOOK_URL || '') : '';
 
+/** Version of the consent wording on screen. Bump when the notice text changes. */
+export const CONSENT_TEXT_VERSION = '2026-10-22';
+
 function generateSessionId(): string {
   if (typeof crypto !== 'undefined' && crypto.randomUUID) {
     return crypto.randomUUID();
@@ -108,7 +111,8 @@ export async function captureVibeLead(
   assetSlug: string,
   verticalSlug: string,
   calculatedMetrics: Record<string, unknown> = {},
-  intentType: 'model_export' | 'audit_request' | 'benchmark_sync' = 'model_export'
+  intentType: 'model_export' | 'audit_request' | 'benchmark_sync' = 'model_export',
+  domainCategory?: string
 ): Promise<boolean> {
   if (typeof window === 'undefined') return false;
 
@@ -137,9 +141,15 @@ export async function captureVibeLead(
           session_id: leadPayload.sessionId,
           asset_slug: leadPayload.assetSlug,
           vertical_slug: leadPayload.verticalSlug,
+          // What the asset is about, alongside who it belongs to — the pair aichieve_lead_intents
+          // stores, so both lead tables answer the same questions.
+          domain_category: domainCategory ?? null,
           email: leadPayload.email,
           intent_type: leadPayload.intentType,
           calculated_metrics: leadPayload.calculatedMetrics,
+          // Which consent wording the address was given under; NULL here meant the row could not
+          // answer for itself at all.
+          consent_text_version: CONSENT_TEXT_VERSION,
           status: 'pending_n8n_sync'
         })
       });
