@@ -10,6 +10,25 @@ https://n8n.giniloh.com/webhook/vibe-telemetry
 
 Do not hand-edit the JSON. Change the generator, re-run it, copy.
 
+## Live state (2026-10-22, applied through the n8n MCP)
+
+| Workflow | ID | State |
+| --- | --- | --- |
+| Vibe Telemetry — giniloh / aichieve / wellroost | `8Ku6uNdxeNxMbFzd` | **active**, published: alert names property + pillar + asset title |
+| Lead Reports — all properties | `YCOLGsTqaYlGd2Tc` | **active**, published: property→domain map, `send_attempts` filter, explicit 5-minute interval |
+| Lead Reports — draft (needs header-auth attached) | `akY6DYzjXGP02jR1` | **inactive**: per-attempt retry branch, no head-of-line blocking |
+
+The draft is the stronger design and it is parked for one reason: the n8n MCP will not attach a
+**generic** credential (`httpHeaderAuth`) to an HTTP Request node. `setNodeCredential` and `addNode`
+both answer *"node type 'n8n-nodes-base.httpRequest' does not accept credential 'httpHeaderAuth'"*,
+and the Workflow SDK drops the credential silently at creation. Its SMTP credentials are attached
+per property. To finish it: open the workflow, pick `sbdomainservice` on each of the nine HTTP
+Request nodes, save, publish, then archive `YCOLGsTqaYlGd2Tc`.
+
+Until then the retry bound lives in the database (`20261025_retire_stale_lead_sends.sql`): pending
+rows older than 30 minutes are retired as `failed` by pg_cron, whatever version of the sender is
+running. That is what makes the live workflow safe without the retry branch.
+
 ## Import order
 
 1. **`vibe_telemetry_workflow.json`** — receives browser events. Import once (importing the copies

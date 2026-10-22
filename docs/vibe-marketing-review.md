@@ -81,6 +81,51 @@ wrong: the anonymous write surface, the sender's failure loop, and the arithmeti
 - All four card CTAs point at pages that exist in `dist` (`w2-vs-1099-scorp-calculator`,
   `gpu-breakeven`, `build-vs-buy`, `rsu-hold-vs-sell`).
 
+## Third pass — what was actually running, fixed through the n8n MCP
+
+The repo and the n8n instance had drifted. The **live** sender was still the pre-fix graph: no
+`send_attempts` filter, no property→domain map (it still searched `vertical_slug` for the string
+`aichieve` and defaulted everything else to giniloh), a subject built from the raw slug, and an
+implicit schedule interval. The live telemetry workflow still shaped alerts from `vertical` +
+`metrics.domain` with no property, pillar or title.
+
+Applied with `update_workflow` / `publish_workflow` (both active versions bumped, verified by
+re-reading the published version):
+
+1. schedule interval made explicit (`minutesInterval: 5` — the observed cadence was already five
+   minutes, executions at 02:00/02:05/02:10, so this is clarity rather than a behaviour fix);
+2. both `Fetch Pending` URLs now carry `send_attempts=lt.5`;
+3. `Resolve Domain` rewritten: property→domain allowlist, `metrics.domain` honoured only when the
+   branch may send as it, and `asset_title` added;
+4. all three subjects use `asset_title || asset_slug`;
+5. the telemetry alert now carries `property`, `pillar`, `consentTextVersion` and the asset title,
+   with a summary a human can read.
+
+**Verified by executing the workflows, not by reading them back:** a `lead_intent` webhook POST
+produced `{property: giniloh, pillar: career-capital, assetTitle: …}` at `Shape Lead Alert`; the
+sender ran to `success` with both fetches returning `200 []`; and a throwaway three-node workflow
+executed the *exact* resolver text against six rows — `giniloh → giniloh.com`, `wellroost →
+wellroost.com`, legacy hostname, declared domain honoured, `evil.example` refused in favour of the
+table default, legacy pillar → giniloh.com. The temp workflow was archived afterwards.
+
+**A bug I introduced and caught here:** the first version of the appended `jsCode` was
+double-escaped on the way through JSON (`\\/\\/`), which would have been a syntax error that only
+fires when the first real lead arrives — the empty-table execution says nothing. The resolver was
+rewritten regex-free (`indexOf`/`slice`) so there is nothing to escape, and proven in n8n's own
+sandbox instead of trusted from a read-back.
+
+**Not landed:** the stronger sender (per-attempt retry branch, no head-of-line blocking) exists as an
+inactive draft, `akY6DYzjXGP02jR1`, because the n8n MCP refuses to attach a generic credential to an
+HTTP Request node — `setNodeCredential` and `addNode` both return *"node type does not accept
+credential 'httpHeaderAuth'"*, and the SDK drops it silently at creation. Finishing it needs one
+manual step (pick `sbdomainservice` on its nine HTTP nodes). Until then the live sender still aborts
+a tick on a bad address, which is why the database sweep retires stale rows at **30 minutes**
+(`20261025_retire_stale_lead_sends.sql`, pg_cron every 10 minutes) — six attempts, then `failed`.
+
+Also observed in the execution history: one scheduled run failed on `getaddrinfo EAI_AGAIN` (DNS),
+not on data. It self-healed on the next tick; the sweep window is sized for exactly that kind of
+transient rather than for a data fault.
+
 ## Not fixed here (open risks)
 
 - **Anonymous INSERT is bounded, not authenticated.** The guards cap volume per address and per
