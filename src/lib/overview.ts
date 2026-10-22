@@ -23,7 +23,7 @@ const FALLBACK_OVERVIEW: OverviewContent = {
 	subheadline:
 		'Job offers, equity, leases, relocations, expat tax, laptop repairs — even the espresso machine. Every model runs in your browser: no signup, nothing uploaded.',
 	mission:
-		'Our mission is to give professionals the tools to quantify the decisions they pay for themselves — job offers, equity, lease exits, relocations, cross-border tax, and the purchases that quietly compound.',
+		'Professionals pay for these decisions themselves: job offers, equity, lease exits, relocations, cross-border tax, and the purchases that quietly compound. The tools put a number on each one before the money moves.',
 	originStory:
 		'Evaluating high-stakes personal and professional trade-offs shouldn\'t be about guessing. Gini Loh builds interactive, data-driven calculators that put the real total cost of ownership on career moves, housing, mobility and major purchases — before you commit.',
 	audience: [

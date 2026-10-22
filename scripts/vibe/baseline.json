@@ -1,0 +1,20 @@
+{
+  "components/calculators/react/ExpatEvaluatorCalculator.tsx|sentence-length|if host currency ({selectedcountry.currencycode}) depreciates by 10% against usd (from ${f": 1,
+  "components/calculators/react/MoneyFlowSimulator.tsx|adjective:effortless|effortless": 1,
+  "components/calculators/react/RelocationCalculator.tsx|sentence-length|the employer has agreed to provide or reimburse the employee for relocation expenses up to": 1,
+  "components/calculators/react/RelocationCalculator.tsx|sentence-length|in consideration for receiving the relocation benefits, the employee agrees to remain empl": 1,
+  "components/calculators/react/RsuHoldVsSellCalculator.tsx|sentence-length|because rsus are taxed as ordinary earned income on vest date, holding company stock after": 1,
+  "components/calculators/react/TimeDrainTemplate.tsx|adjective:solutions|solution": 2,
+  "components/calculators/react/W2Vs1099Calculator.tsx|sentence-length|lowering your s-corp w-2 salary saves 15.3% fica below the $184,500 social security cap (a": 1,
+  "data/verticalArchitecture.ts|sentence-length|how directors and staff engineers schedule quarterly sales without insider-trading exposur": 1,
+  "lib/calculators/metadata.ts|sentence-length|compute cost per gpu-hour for owned hardware — purchase, power, maintenance and residual v": 1,
+  "lib/calculators/metadata.ts|sentence-length|run an owner and a renter to the same horizon: mortgage amortisation, tax, maintenance and": 1,
+  "lib/calculators/metadata.ts|preferred:pref-calculator|cost calculator": 1,
+  "lib/calculators/metadata.ts|sentence-length|find out how much of your job ai can already do — 1,000+ careers broken down task by task,": 1,
+  "lib/product-cta.ts|sentence-length|this page is about money a carrier bills by rule — parcelproof recomputes those same rule ": 1,
+  "lib/product-cta.ts|sentence-length|the bill this page is about, line by line: spendproof reconciles an ai provider invoice ag": 1,
+  "lib/product-cta.ts|sentence-length|this is the buying decision caseproof audits: it re-runs a vendor’s quoted numbers against": 1,
+  "pages/calculators/money-flow.astro|sentence-length|establish pipelines: use the ai chat with natural language and numerical values (e.g., \"sw": 1,
+  "pages/calculators/total-comp.astro|sentence-length|toggle auto-exercise options to see if your base salary and bonus can absorb the grant pri": 1,
+  "pages/calculators/total-comp.astro|sentence-length|purchasing options or partnership units in a private company can trigger alternative minim": 1
+}

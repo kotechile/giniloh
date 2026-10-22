@@ -25,7 +25,9 @@
     "data:careers": "python3 scripts/onet/build_career_radar.py",
     "data:careers:score": "python3 scripts/onet/score_dwas.py",
     "data:careers:audit": "python3 scripts/onet/score_dwas.py --audit 200",
-    "data:careers:fetch": "bash scripts/onet/fetch_onet.sh"
+    "data:careers:fetch": "bash scripts/onet/fetch_onet.sh",
+    "copy:check": "node scripts/vibe/verify-vendor.mjs && node scripts/vibe/vibe-lint.mjs --root src --baseline scripts/vibe/baseline.json",
+    "prebuild": "npm run copy:check"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.1",

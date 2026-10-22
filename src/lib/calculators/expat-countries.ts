@@ -494,7 +494,7 @@ export const COUNTRY_PROFILES: Record<HostCountryId, CountryProfile> = {
 		defaultColRatio: 0.48,
 		hasSpecialExpatRegime: true,
 		expatRegimeName: 'Financial MEP Exchange Rate Arbitrage',
-		expatRegimeDescription: 'Leverages the financial MEP / CCL exchange rate to maximize USD purchasing power against local Peso inflation.',
+		expatRegimeDescription: 'Uses the financial MEP / CCL exchange rate to raise USD purchasing power against local peso inflation.',
 		calculateHostTax: (earnedIncome, useSpecialRegime, foreignInvIncomeUsd, fxToUsd) => {
 			if (earnedIncome <= 0) return { taxAmountHostCurr: 0, effectiveRatePercent: 0, detailsNote: 'No income' };
 
