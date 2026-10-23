@@ -33,6 +33,7 @@ export const OWNED_POST_SLUGS_GENERATED = [
 	"the-giniloh-money-flow-simulator-explained",
 	"three-forms-cost-more-than-tax",
 	"why-70-of-startup-options-go-unexercised",
+	"why-your-fridge-upgrade-pays-12-50",
 	"why-your-swap-died-at-25",
 	"your-125-exam-costs-122-hours",
 	"your-130000-cap-costs-the-credit",
@@ -176,6 +177,7 @@ export const FOREIGN_POST_SLUGS_GENERATED = [
 	"your-platform-23-features-no-stop-rule",
 	"your-render-bill-multiplies-by-22-97",
 	"your-retrieval-misses-57",
+	"your-routes-5x-stop-gap",
 	"your-seller-wont-stay",
 	"your-tool-surface-is-a-release-surface",
 	"your-trace-wont-prove-925-points",
@@ -312,10 +314,11 @@ export const FOREIGN_TARGETS = {
 	"your-platform-23-features-no-stop-rule": "https://aichieve.net",
 	"your-render-bill-multiplies-by-22-97": "https://aichieve.net",
 	"your-retrieval-misses-57": "https://aichieve.net",
+	"your-routes-5x-stop-gap": "https://aichieve.net",
 	"your-seller-wont-stay": "https://aichieve.net",
 	"your-tool-surface-is-a-release-surface": "https://aichieve.net",
 	"your-trace-wont-prove-925-points": "https://aichieve.net",
 	"zet-scale-ev-truck-residual-value-risk": "https://aichieve.net"
 };
 export const GENERATED_FOR = "giniloh.com";
-export const GENERATED_AT = "2026-10-23T18:58:26.819Z";
+export const GENERATED_AT = "2026-10-23T20:44:49.799Z";

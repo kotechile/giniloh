@@ -4,6 +4,7 @@ import SearchOverlay from '../components/SearchOverlay.astro';
 import SiteNav from '../components/SiteNav.astro';
 import ProductCTA from '../components/ProductCTA.astro';
 import type { ProductCta } from '../lib/product-cta';
+import { ANALYTICS } from '../data/analytics.mjs';
 import '../styles/global.css';
 
 interface Props {
@@ -25,9 +26,27 @@ const {
 	compactMain = false
 } = Astro.props;
 
-const analyticsSrc = import.meta.env.PUBLIC_ANALYTICS_SRC || 'https://cloud.umami.is/script.js';
-const analyticsWebsiteId = import.meta.env.PUBLIC_ANALYTICS_WEBSITE_ID || '9ac06c91-4dc2-4120-b74a-6d87b9519bd1';
-const analyticsDomains = import.meta.env.PUBLIC_ANALYTICS_DOMAINS || 'giniloh.com,www.giniloh.com';
+/**
+ * Analytics. Values live in `src/data/analytics.mjs` (committed), environment wins when set.
+ *
+ * The id used to exist only as a literal fallback in this file while the Dockerfile declared no
+ * `PUBLIC_ANALYTICS_*` build args — so the value in Coolify could never reach `astro build`, and the
+ * siblings, which had no literal at all, shipped unmeasured. An unmeasured site and an unvisited one
+ * look identical from the outside, which is how "no traffic" survived for weeks.
+ *
+ * Empty is now a build failure, not a silent no-op: a property that cannot be measured should not
+ * deploy at all.
+ */
+const analyticsSrc = import.meta.env.PUBLIC_ANALYTICS_SRC || ANALYTICS.src;
+const analyticsWebsiteId = import.meta.env.PUBLIC_ANALYTICS_WEBSITE_ID || ANALYTICS.websiteId;
+const analyticsDomains = import.meta.env.PUBLIC_ANALYTICS_DOMAINS || ANALYTICS.domains;
+
+if (!analyticsWebsiteId || !analyticsSrc) {
+	throw new Error(
+		'[analytics] no website id or tracker configured — refusing to build an unmeasured site. ' +
+			'Set it in src/data/analytics.mjs or PUBLIC_ANALYTICS_WEBSITE_ID.'
+	);
+}
 
 const is404 = disableAnalytics || Astro.url.pathname === '/404' || Astro.url.pathname === '/404/' || Astro.url.pathname.endsWith('/404.html');
 const shouldTrack = !is404 && Boolean(analyticsSrc && analyticsWebsiteId);

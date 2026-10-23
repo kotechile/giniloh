@@ -25,6 +25,7 @@
  * No dependencies, deliberately: it has to run anywhere the image runs.
  */
 import { OWNED_POST_SLUGS_GENERATED, FOREIGN_POST_SLUGS_GENERATED, GENERATED_FOR } from '../src/data/ownership.generated.mjs';
+import { ANALYTICS } from '../src/data/analytics.mjs';
 
 const ORIGIN = (process.argv[2] || process.env.VERIFY_ORIGIN || 'http://localhost:8899').replace(/\/$/, '');
 const CANONICAL_HOST = 'giniloh.com';
@@ -475,7 +476,15 @@ async function checkAnalyticsTag() {
 		fail('analytics tag on /', 'a script with data-website-id', 'none in the served HTML — this property is unmeasured');
 		return;
 	}
-	ok('analytics tag on /', id);
+	// The exact id, not just "an id": the failure this replaces was two properties sharing one, or a
+	// copy-paste of a sibling's. Either records visits against the wrong site and looks fine.
+	if (id === ANALYTICS.websiteId) ok('analytics tag on /', id);
+	else fail('analytics website id', `${ANALYTICS.websiteId} (giniloh.com)`, `${id} — wrong property or a stale build`);
+
+	const src = home.body.match(/src="([^"]*)"[^>]*data-website-id/)?.[1] || home.body.match(/data-website-id[^>]*/)?.[0]?.match(/src="([^"]+)"/)?.[1] || '';
+	if (src && new URL(src).host === new URL(ANALYTICS.src).host) ok('tracker is the self-hosted Umami', src);
+	else fail('tracker host', new URL(ANALYTICS.src).host, src || '(not detected)');
+
 	const domains = home.body.match(/data-domains="([^"]*)"/)?.[1] || '';
 	if (domains.split(',').map((d) => d.trim()).includes(CANONICAL_HOST)) ok('analytics scoped to this host', domains);
 	else fail('analytics data-domains', `a list including ${CANONICAL_HOST}`, domains || '(none)');
