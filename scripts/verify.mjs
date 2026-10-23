@@ -161,7 +161,8 @@ async function checkCrawlArtifacts() {
 	}
 
 	// A noindex page listed in a sitemap asks Google to index a page that tells it not to. The
-	// calculator embeds are exactly that, and are excluded by the sitemap filter in astro.config.
+	// calculator embeds are exactly that, and `src/pages/sitemap.xml.ts` builds its list from the
+	// calculator metadata plus the career page set, neither of which contains an embed route.
 	const embed = await probe('/calculators/embed/money-flow/');
 	if (embed.status === 200) {
 		const declared = locs.some((loc) => loc.includes('/calculators/embed/'));
@@ -362,6 +363,124 @@ async function checkTelemetryWiring() {
 	}
 }
 
+/**
+ * Every URL the sitemap advertises must be a page that exists AND agrees with itself.
+ *
+ * This is the assertion the estate was missing. All 1,016 career-occupation URLs returned 200 with
+ * 2,000 words of real content, passed the host-scope check, were listed in the declared sitemap — and
+ * every one of them declared `<link rel="canonical">` pointing at
+ * `/calculators/career-ai-resilience/occupations/<slug>/`, a path no route has ever served, which
+ * answered 404. Google resolves that as fetch ok -> canonical -> 404 -> drop, and 94% of the sitemap
+ * was unindexable while every existing check stayed green.
+ *
+ * Status codes cannot see this. Only the canonical can.
+ */
+async function checkCanonicalAgreement() {
+	console.log('\nSitemap URLs canonicalise to themselves');
+	const sitemap = await probe('/sitemap.xml');
+	if (sitemap.status !== 200) {
+		fail('/sitemap.xml for canonical check', '200', `${sitemap.status}`);
+		return;
+	}
+	const locs = [...sitemap.body.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
+
+	// A canonical pointing at a path shape that was never routed is the specific failure; catch it by
+	// name so a reintroduced segment fails loudly instead of quietly emptying the index again.
+	const orphanedSegments = locs.filter((loc) => /\/career-ai-resilience\/occupations\//.test(loc));
+	if (orphanedSegments.length === 0) ok('no sitemap URL uses the unrouted /occupations/ segment');
+	else fail('sitemap URL shape', 'no /career-ai-resilience/occupations/ paths', `${orphanedSegments.length} listed, e.g. ${orphanedSegments[0]}`);
+
+	// Spread the sample across the page types rather than taking the first N, which are all hubs.
+	const buckets = [
+		locs.filter((l) => /\/career-ai-resilience\/[^/]+\/$/.test(l)),
+		locs.filter((l) => /\/calculators\/[^/]+\/$/.test(l) && !/career-ai-resilience/.test(l)),
+		locs.filter((l) => /^https?:\/\/[^/]+\/[^/]+\/$/.test(l)),
+		locs.filter((l) => /\/career-ai-resilience\/all-occupations\/$/.test(l))
+	];
+	const sample = [];
+	for (const bucket of buckets) {
+		if (bucket.length === 0) continue;
+		sample.push(bucket[0], bucket[Math.floor(bucket.length / 2)]);
+	}
+	if (sample.length === 0) {
+		fail('canonical sample', 'at least one URL per page type', 'no URLs matched any page type');
+		return;
+	}
+
+	let mismatches = 0;
+	for (const loc of sample) {
+		const path = loc.replace(/^https?:\/\/[^/]+/, '') || '/';
+		const r = await probe(path);
+		if (r.status !== 200) {
+			fail(`canonical ${path}`, '200', `${r.status}`);
+			mismatches++;
+			continue;
+		}
+		const canonical =
+			r.body.match(/<link[^>]+rel="canonical"[^>]*href="([^"]+)"/)?.[1] ||
+			r.body.match(/<link[^>]+href="([^"]+)"[^>]*rel="canonical"/)?.[1] ||
+			'';
+		if (!canonical) {
+			fail(`canonical on ${path}`, 'a self-referential canonical', 'none in the served HTML');
+			mismatches++;
+			continue;
+		}
+		// Compare the path, and require the host to be this property's: on a non-public origin the
+		// canonical is still baked as the production host, and that is correct, not a mismatch.
+		const canonicalUrl = new URL(canonical, ORIGIN);
+		const canonicalPath = canonicalUrl.pathname;
+		if (canonicalUrl.host !== CANONICAL_HOST) {
+			fail(`canonical host on ${path}`, CANONICAL_HOST, canonicalUrl.host);
+			mismatches++;
+		} else if (canonicalPath !== path) {
+			fail(`canonical on ${path}`, path, canonicalPath);
+			mismatches++;
+		}
+	}
+	if (mismatches === 0) ok(`canonical agreement on ${sample.length} sampled URLs across ${buckets.filter((b) => b.length).length} page types`);
+
+	// A uniform lastmod teaches crawlers the field is noise and they then ignore it sitewide. Posts
+	// carry a real WordPress `modified`; everything else carries none.
+	const lastmods = [...sitemap.body.matchAll(/<lastmod>([^<]+)<\/lastmod>/g)].map((m) => m[1].split('T')[0]);
+	if (lastmods.length > 0) {
+		const counts = new Map();
+		for (const date of lastmods) counts.set(date, (counts.get(date) ?? 0) + 1);
+		const [worstDate, worstCount] = [...counts.entries()].sort((a, b) => b[1] - a[1])[0];
+		const share = worstCount / locs.length;
+		if (share > 0.2) {
+			fail('sitemap lastmod spread', 'no single date on more than 20% of URLs', `${worstDate} on ${worstCount}/${locs.length} (${Math.round(share * 100)}%)`);
+		} else {
+			ok('sitemap lastmod spread', `${lastmods.length} dated URLs, worst date ${worstDate} at ${Math.round(share * 100)}%`);
+		}
+	}
+}
+
+/**
+ * The property must measure itself.
+ *
+ * The analytics tag is gated on `PUBLIC_ANALYTICS_WEBSITE_ID`, a BUILD-time variable Astro inlines.
+ * Set it on the running container instead of at build and the site still renders, still answers 200,
+ * and records nothing — which reads from the outside exactly like "no traffic". Assert the served
+ * HTML, since that is the only place the difference is visible.
+ */
+async function checkAnalyticsTag() {
+	console.log('\nAnalytics tag');
+	const home = await probe('/');
+	if (home.status !== 200) {
+		fail('/', '200', `${home.status}`);
+		return;
+	}
+	const id = home.body.match(/data-website-id="([^"]*)"/)?.[1];
+	if (!id) {
+		fail('analytics tag on /', 'a script with data-website-id', 'none in the served HTML — this property is unmeasured');
+		return;
+	}
+	ok('analytics tag on /', id);
+	const domains = home.body.match(/data-domains="([^"]*)"/)?.[1] || '';
+	if (domains.split(',').map((d) => d.trim()).includes(CANONICAL_HOST)) ok('analytics scoped to this host', domains);
+	else fail('analytics data-domains', `a list including ${CANONICAL_HOST}`, domains || '(none)');
+}
+
 async function main() {
 	console.log(`\nVerifying deploy contract at ${ORIGIN}`);
 	try {
@@ -369,6 +488,8 @@ async function main() {
 		await checkAssets();
 		await checkTelemetryWiring();
 		await checkCrawlArtifacts();
+		await checkCanonicalAgreement();
+		await checkAnalyticsTag();
 		await checkRedirects();
 		await checkBoundary();
 		await checkCanonicalHost();

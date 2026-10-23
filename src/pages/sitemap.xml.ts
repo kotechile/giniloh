@@ -1,37 +1,51 @@
 import type { APIRoute } from 'astro';
-import fs from 'node:fs';
-import path from 'node:path';
 import { calculatorTools } from '../lib/calculators/metadata';
 import { getContentCategorySlugs } from '../lib/categories';
 import { fetchAllPosts } from '../lib/wordpress';
+import { CAREER_INDEX_PATH, publishedCareerEntries } from '../lib/careers';
 
-const staticPaths = ['/', '/calculators/', '/articles/', '/about/', '/author/gini-loh/'];
+/**
+ * The one sitemap this property serves.
+ *
+ * `robots.txt` declares `/sitemap.xml`, and this route is what answers it. `@astrojs/sitemap` used to
+ * emit a second, unreferenced `sitemap-index.xml` + `sitemap-0.xml` alongside it — two answers to
+ * "what is on this site", drifting apart, with only one of them read by crawlers. That integration is
+ * gone; this file is the only authority.
+ *
+ * Two rules that were learned the hard way, and that `scripts/verify.mjs` now enforces:
+ *
+ *  1. Every URL here must be a page that exists and canonicalises to itself. The career entries come
+ *     from `src/lib/careers.ts` — the same module the `[slug]` route builds paths from — precisely so
+ *     the sitemap cannot advertise a URL shape the routes do not serve.
+ *  2. `lastmod` appears only where the content system gives a real modification date. Stamping every
+ *     URL with `today` taught crawlers the field is noise, and they then ignore it sitewide.
+ */
 
-function slugify(text: string) {
-	return text
-		.toLowerCase()
-		.replace(/[^\w\s-]/g, '')
-		.replace(/[\s_-]+/g, '-')
-		.replace(/^-+|-+$/g, '');
-}
+const staticPaths = ['/', '/calculators/', '/articles/', '/about/', '/author/gini-loh/', CAREER_INDEX_PATH];
 
 function urlEntry(site: URL, path: string, lastmod?: string) {
-	const loc = path.startsWith('http://') || path.startsWith('https://')
-		? path
-		: new URL(path, site).toString();
-	return `\t<url>\n\t\t<loc>${loc}</loc>\n\t\t<lastmod>${lastmod}</lastmod>\n\t</url>`;
+	const loc = path.startsWith('http://') || path.startsWith('https://') ? path : new URL(path, site).toString();
+	const lastmodTag = lastmod ? `\n\t\t<lastmod>${lastmod}</lastmod>` : '';
+	return `\t<url>\n\t\t<loc>${loc}</loc>${lastmodTag}\n\t</url>`;
+}
+
+/** WordPress gives an ISO timestamp; the sitemap protocol wants a date. */
+function isoDate(raw: string | undefined | null): string | undefined {
+	if (!raw) return undefined;
+	const date = raw.includes('T') ? raw.split('T')[0] : raw;
+	return /^\d{4}-\d{2}-\d{2}$/.test(date) ? date : undefined;
 }
 
 export const GET: APIRoute = async ({ site }) => {
 	const baseUrl = site ?? new URL('https://giniloh.com');
 	const [categories, posts] = await Promise.all([getContentCategorySlugs(), fetchAllPosts()]);
-	
-	const today = new Date().toISOString().split('T')[0];
+
 	const entries: string[] = [];
 
-	// 1. Static Pages
+	// 1. Static pages. Undated on purpose: these are hubs, and a hub's "last modified" is whatever the
+	// build clock says, which is not information.
 	for (const path of staticPaths) {
-		entries.push(urlEntry(baseUrl, path, today));
+		entries.push(urlEntry(baseUrl, path));
 	}
 
 	// 2. Apps & Showcase deliberately ABSENT.
@@ -42,46 +56,44 @@ export const GET: APIRoute = async ({ site }) => {
 	// reports them as errors against the property, so those six bought nothing and cost a broken
 	// sitemap. They belong in a sitemap served by apps.aichieve.net.
 
-	// 3. Main Calculators
+	// 3. Main calculators. No per-tool date exists in the metadata, so none is invented.
 	for (const tool of calculatorTools) {
-		entries.push(urlEntry(baseUrl, tool.href, today));
+		entries.push(urlEntry(baseUrl, tool.href));
 	}
 
-	// 3. Career AI Resilience Occupation Pages
-	try {
-		const careersIndexPath = path.resolve('./public/data/careers/index.json');
-		if (fs.existsSync(careersIndexPath)) {
-			const careers = JSON.parse(fs.readFileSync(careersIndexPath, 'utf-8'));
-			const slugsSeen = new Set<string>();
-			for (const item of careers) {
-				let slug = slugify(item.title || '');
-				if (slugsSeen.has(slug)) {
-					slug = `${slug}-${(item.code || '').replace('.', '-')}`;
-				}
-				slugsSeen.add(slug);
-				entries.push(urlEntry(baseUrl, `/calculators/career-ai-resilience/${slug}/`, today));
-			}
-		}
-	} catch (e) {
-		console.warn('Could not load career occupations for sitemap:', e);
+	// 4. Career AI Resilience occupation pages — the published subset only.
+	//
+	// `publishedCareerEntries()` is the same list `[slug].astro` builds from, so the 93 codes with no
+	// O*NET task inventory (no longer built) cannot leak in here, and the paths carry no
+	// `/occupations/` segment because the path is defined in exactly one place.
+	for (const entry of publishedCareerEntries()) {
+		entries.push(urlEntry(baseUrl, entry.path));
 	}
 
-	// 4. Articles
+	// 5. Article category hubs.
 	for (const category of categories) {
-		entries.push(urlEntry(baseUrl, `/articles/${category.slug}/`, today));
+		entries.push(urlEntry(baseUrl, `/articles/${category.slug}/`));
 	}
 
-	// 5. WordPress Article Posts
+	// 6. WordPress posts. These are the only URLs with an honest lastmod.
 	for (const post of posts) {
-		const rawDate = post.modified || post.date || today;
-		const formattedDate = rawDate.includes('T') ? rawDate.split('T')[0] : rawDate;
-		entries.push(urlEntry(baseUrl, `/${post.slug}/`, formattedDate));
+		entries.push(urlEntry(baseUrl, `/${post.slug}/`, isoDate(post.modified) ?? isoDate(post.date)));
 	}
+
+	// Dedupe by <loc>: a path can legitimately arrive from two sources (a calculator's metadata href
+	// and the career index), and listing it twice is a crawl-report error for no gain.
+	const seen = new Set<string>();
+	const unique = entries.filter((entry) => {
+		const loc = entry.match(/<loc>([^<]+)<\/loc>/)?.[1];
+		if (!loc || seen.has(loc)) return false;
+		seen.add(loc);
+		return true;
+	});
 
 	const body = [
 		'<?xml version="1.0" encoding="UTF-8"?>',
 		'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-		...entries,
+		...unique,
 		'</urlset>'
 	].join('\n');
 

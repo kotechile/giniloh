@@ -1,7 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import sitemap from '@astrojs/sitemap';
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -89,13 +88,11 @@ export default defineConfig({
     '/portfolio-capital/tools/rsu-hold-vs-sell': '/calculators/rsu-hold-vs-sell/'
   },
   integrations: [
-    react(),
-    // Every <loc> here must be a page we actually want indexed, and one the declared sitemap also
-    // lists. `/calculators/embed/*` are iframe embeds carrying <meta name="robots" content="noindex">:
-    // advertising them in a sitemap asks Google to index pages that tell it not to, which surfaces as
-    // an error in the coverage report. The declared sitemap (src/pages/sitemap.xml.ts) already omits
-    // them; this keeps the generated chunk consistent with it.
-    sitemap({ filter: (page) => !page.includes('/calculators/embed/') })
+    react()
+    // `@astrojs/sitemap` used to sit here and emitted `sitemap-index.xml` + `sitemap-0.xml`, neither
+    // of which robots.txt declares. The declared sitemap is `src/pages/sitemap.xml.ts` (it is the one
+    // that can filter the noindex `/calculators/embed/*` routes and carry a real per-post lastmod), so
+    // the generated pair was a second, unreferenced answer to "what is on this site". One authority.
   ],
   vite: {
     plugins: [tailwindcss()],

@@ -1,0 +1,137 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import JsonLd from '../../../components/JsonLd.astro';
+import {
+	CAREER_HUB_PATH,
+	CAREER_INDEX_PATH,
+	careersByLetter,
+	publishedCareerEntries,
+	topCareers
+} from '../../../lib/careers';
+
+/**
+ * The crawlable surface for the occupation set.
+ *
+ * 1,000+ occupation pages used to be reachable only through the sitemap: nothing on the site linked
+ * to one of them. Google does not rank orphaned pages, and a sitemap whose entries canonicalise to a
+ * 404 does not rescue them. This page is linked from the hub and from every occupation page, and it
+ * links to all of them in turn — the internal graph the sitemap assumed existed.
+ */
+
+const siteUrl = Astro.site?.toString() || 'https://giniloh.com/';
+const pageUrl = new URL(CAREER_INDEX_PATH, siteUrl).toString();
+
+const entries = publishedCareerEntries();
+const groups = careersByLetter();
+const top = topCareers(50);
+
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+		{ '@type': 'ListItem', position: 2, name: 'Calculators', item: new URL('/calculators/', siteUrl).toString() },
+		{ '@type': 'ListItem', position: 3, name: 'AI Career Radar', item: new URL(CAREER_HUB_PATH, siteUrl).toString() },
+		{ '@type': 'ListItem', position: 4, name: 'All occupations', item: pageUrl }
+	]
+};
+
+const collectionSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'CollectionPage',
+	name: 'AI automation exposure by occupation',
+	url: pageUrl,
+	isPartOf: { '@type': 'WebSite', name: 'Gini Loh', url: siteUrl },
+	about: 'Task-level automation exposure for US occupations, scored from O*NET task statements and work activities.',
+	mainEntity: {
+		'@type': 'ItemList',
+		numberOfItems: entries.length,
+		itemListElement: top.slice(0, 10).map((entry, index) => ({
+			'@type': 'ListItem',
+			position: index + 1,
+			name: entry.title,
+			url: new URL(entry.path, siteUrl).toString()
+		}))
+	}
+};
+
+const title = 'Every occupation, scored for AI exposure';
+const description = `All ${entries.length.toLocaleString('en-US')} US occupations with a task-level automation score from O*NET and BLS data. Browse A–Z or start with the largest occupations.`;
+---
+
+<BaseLayout title={`${title} | Gini Loh`} description={description}>
+	<link slot="head" rel="canonical" href={pageUrl} />
+	<JsonLd slot="head" data={breadcrumbSchema} />
+	<JsonLd slot="head" data={collectionSchema} />
+
+	<section class="pt-4">
+		<p class="section-eyebrow">AI Career Radar</p>
+		<h1 class="mt-4 max-w-4xl text-4xl font-black leading-tight tracking-tight text-[#1A1A1A] sm:text-5xl">
+			{title}
+		</h1>
+		<p class="mt-6 max-w-3xl text-lg leading-relaxed text-[#5E5E5E] font-mono">
+			> {entries.length.toLocaleString('en-US')} occupations, each scored task by task against what
+			software can already do. Pick one to see the breakdown, the pay, and what changes if you shift
+			your week.
+		</p>
+		<p class="mt-4 text-sm leading-7 text-[#5E5E5E]">
+			Scores come from two public sources: O*NET task statements and work-activity ratings, and BLS pay
+			and employment. <a href={CAREER_HUB_PATH} class="text-[#475F73] underline-offset-4 hover:underline">How the scoring works &rarr;</a>
+		</p>
+	</section>
+
+	<section class="mt-12">
+		<h2 class="text-2xl font-bold tracking-tight text-[#1A1A1A]">Start with the largest occupations</h2>
+		<p class="mt-2 text-sm leading-7 text-[#5E5E5E]">
+			The fifty occupations employing the most people in the US. Same scoring, most readers first.
+		</p>
+		<ul class="mt-5 grid gap-2 sm:grid-cols-2">
+			{top.map((entry) => (
+				<li>
+					<a
+						href={entry.path}
+						class="flex items-baseline justify-between gap-3 rounded-xl border border-[#E5E5E5] bg-white px-3 py-2 text-sm leading-6 text-[#1A1A1A] underline-offset-4 hover:border-[#D8D8D8] hover:underline"
+					>
+						<span>{entry.title}</span>
+						<span class="font-mono text-[11px] text-[#5E5E5E]">{entry.risk_score}%</span>
+					</a>
+				</li>
+			))}
+		</ul>
+	</section>
+
+	<section class="mt-14">
+		<h2 class="text-2xl font-bold tracking-tight text-[#1A1A1A]">All occupations, A–Z</h2>
+		<nav aria-label="Jump to a letter" class="mt-4 flex flex-wrap gap-1.5">
+			{groups.map(({ letter }) => (
+				<a
+					href={`#${letter}`}
+					class="rounded-md border border-[#E5E5E5] px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-[#5F5B52] hover:border-[#D8D8D8] hover:text-[#1A1A1A]"
+				>
+					{letter}
+				</a>
+			))}
+		</nav>
+
+		{groups.map(({ letter, entries: letterEntries }) => (
+			<div class="mt-8">
+				<h3 id={letter} class="scroll-mt-28 font-mono text-xs uppercase tracking-[0.28em] text-[#5F5B52]">
+					{letter}
+				</h3>
+				<ul class="mt-3 grid gap-x-6 gap-y-1.5 sm:grid-cols-2 lg:grid-cols-3">
+					{letterEntries.map((entry) => (
+						<li>
+							<a
+								href={entry.path}
+								class="flex items-baseline justify-between gap-2 text-sm leading-6 text-[#1A1A1A] underline-offset-4 hover:underline"
+							>
+								<span>{entry.title}</span>
+								<span class="font-mono text-[11px] text-[#5E5E5E]">{entry.risk_score}%</span>
+							</a>
+						</li>
+					))}
+				</ul>
+			</div>
+		))}
+	</section>
+</BaseLayout>
