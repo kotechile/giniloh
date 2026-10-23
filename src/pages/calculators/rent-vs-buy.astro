@@ -2,16 +2,106 @@
 import RentVsBuyCalculator from '../../components/calculators/react/RentVsBuyCalculator';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import JsonLd from '../../components/JsonLd.astro';
+import CalculatorShell from '../../components/calculators/CalculatorShell.astro';
+import CalculatorIntent from '../../components/calculators/CalculatorIntent.astro';
 import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+import { calculateRentVsBuy, type RentVsBuyInputs } from '../../lib/calculators/rentVsBuy';
+import { faqPageSchema, usd } from '../../lib/calculators/intent';
 
 const calculator = getCalculatorBySlug('rent-vs-buy');
 const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+
+const common = {
+	downPaymentPct: 20, mortgageRatePct: 6.5, termYears: 30,
+	propertyTaxPct: 1.1, insuranceAnnual: 1800, hoaMonthly: 0, maintenancePct: 1,
+	appreciationPct: 3.5, rentGrowthPct: 3, horizonYears: 7,
+	investmentReturnPct: 7, sellingCostPct: 6, closingCostPct: 2
+};
+
+const SCENARIOS: { label: string; inputs: RentVsBuyInputs }[] = [
+	{ label: 'Entry market', inputs: { ...common, homePrice: 480000, rentMonthly: 2400 } },
+	{ label: 'Mid market', inputs: { ...common, homePrice: 650000, rentMonthly: 3300 } },
+	{ label: 'Low price-to-rent, strong market', inputs: { ...common, homePrice: 420000, rentMonthly: 2900, appreciationPct: 4.5 } }
+];
+
+const rows = SCENARIOS.map((scenario) => {
+	const out = calculateRentVsBuy(scenario.inputs);
+	return {
+		label: scenario.label,
+		inputs: usd(scenario.inputs.homePrice) + ' home · ' + usd(scenario.inputs.rentMonthly) + '/mo rent · P/R ' + out.comparison.priceToRentRatio,
+		result:
+			'Owner nets ' + usd(out.owner.netProceeds) + ' vs renter portfolio ' + usd(out.renter.investedPortfolio) +
+			' — ' + out.comparison.recommendation.toLowerCase() +
+			(out.comparison.breakevenYear ? ', break-even year ' + out.comparison.breakevenYear : ', no break-even inside 7 years')
+	};
+});
+
+const faqs = [
+	{
+		q: 'Why does the renter get credit for the down payment?',
+		a: 'Because the buyer no longer has it. The renter starts with the down payment plus closing costs invested, and every month invests the difference between the owner cost and the rent. When rent is higher than owning, that contribution turns negative and the portfolio is drawn down instead.'
+	},
+	{
+		q: 'What is a price-to-rent ratio and when does it matter?',
+		a: 'Home price divided by a year of rent. Around 15 or below, owning tends to work on cost alone. Above 20, the model needs rent growth and appreciation to carry it, and those are the two assumptions you should be least confident in.'
+	},
+	{
+		q: 'Why subtract selling costs at the horizon?',
+		a: 'Because you do not own the sale price, you own what is left after the agent and the transfer. Net proceeds are the appreciated value minus 6% selling costs minus the remaining loan balance. Skipping that step is worth a year of appreciation in the comparison.'
+	},
+	{
+		q: 'Why is there no break-even year in some scenarios?',
+		a: 'Because owner net worth never overtakes the invested portfolio inside the horizon. At a high price-to-rent ratio with moderate appreciation, the renter compounds the down payment faster than the owner builds equity net of costs. The model reports that rather than forcing an answer.'
+	},
+	{
+		q: 'What breaks this comparison?',
+		a: 'A short stay. Closing costs are paid up front and selling costs at the end, so horizons under five years are usually decided by those two charges alone. Also unpriced: rent risk, the option value of moving, and any renovation that changes the home value.'
+	}
+];
 ---
 
-<BaseLayout title="Rent vs. Buy with Opportunity Cost | Gini Loh" description="Compare an owner and a renter at the same horizon: equity after selling costs against a portfolio funded by the down payment and monthly difference.">
+<BaseLayout
+	title="Rent vs Buy Calculator with Opportunity Cost | Gini Loh"
+	description="Compare renting and investing against buying and selling over a fixed horizon, with mortgage amortization, taxes, maintenance, appreciation and selling costs."
+>
 	<link slot="head" rel="canonical" href={new URL('/calculators/rent-vs-buy/', Astro.site).toString()} />
 	{schema ? <JsonLd slot="head" data={schema} /> : null}
-	<main class="px-4 pb-24 pt-12 sm:px-6 lg:px-8">
-		<RentVsBuyCalculator client:load />
-	</main>
+	<JsonLd slot="head" data={faqPageSchema(faqs)} />
+
+	<CalculatorShell
+		eyebrow="Housing"
+		title="Rent vs. Buy with Opportunity Cost"
+		description="A rent-versus-buy comparison only means something if the renter invests what the buyer sinks at close. This runs both sides to the same horizon and prices the exit."
+		trustBadge="Amortization + opportunity cost"
+	>
+		<div slot="calculator">
+			<RentVsBuyCalculator client:load />
+
+			<CalculatorIntent
+				scenarioCaption="Three price points, same terms: 20% down, 6.5% over 30 years, 1.1% property tax, 1% maintenance, 3.5% appreciation, 3% rent growth, 7% portfolio return, 2% closing and 6% selling costs, seven-year horizon."
+				steps={[
+					{
+						label: 'What the buyer commits at close',
+						body: 'Down payment plus closing costs. That total is the renter starting portfolio, which is why the comparison begins level rather than with the buyer at zero and the renter at zero.'
+					},
+					{
+						label: 'Monthly principal and interest',
+						body: 'The standard amortization payment on the loan balance. Property tax, insurance, maintenance as a share of home value, and HOA are added to it to get the true monthly cost of owning.'
+					},
+					{
+						label: 'The renter side',
+						body: 'Rent rises every twelve months. Each month the portfolio earns the investment return and receives the difference between owner cost and rent; when rent is the larger number, the portfolio pays the gap.'
+					},
+					{
+						label: 'Both sides at the horizon',
+						body: 'Owner net worth is appreciated value minus selling costs minus the remaining loan balance. Renter net worth is the portfolio. The larger one wins, and the break-even year is the first year the owner overtakes.'
+					}
+				]}
+				columns={['Scenario', 'Inputs', 'Outcome']}
+				rows={rows}
+				faqs={faqs}
+				caveat="Assumes the full horizon is served. Rent risk, the option value of being able to move, and renovation spending are not priced. Appreciation and rent growth are the two assumptions that move the answer most."
+			/>
+		</div>
+	</CalculatorShell>
 </BaseLayout>

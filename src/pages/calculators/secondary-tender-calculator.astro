@@ -2,16 +2,106 @@
 import SecondaryTenderCalculator from '../../components/calculators/react/SecondaryTenderCalculator';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import JsonLd from '../../components/JsonLd.astro';
+import CalculatorShell from '../../components/calculators/CalculatorShell.astro';
+import CalculatorIntent from '../../components/calculators/CalculatorIntent.astro';
 import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+import { calculateSecondaryTender, type SecondaryTenderInputs } from '../../lib/calculators/secondaryTender';
+import { faqPageSchema, usd } from '../../lib/calculators/intent';
 
 const calculator = getCalculatorBySlug('secondary-tender-calculator');
 const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+
+const common = {
+	shares: 20000, instrument: 'options' as const, basisPerShare: 2,
+	offerPricePerShare: 18, lastRoundPricePerShare: 24, expectedIpoPricePerShare: 40,
+	monthsToIpo: 24, annualDiscountRatePct: 12,
+	ordinaryTaxRatePct: 37, capitalGainsTaxRatePct: 23.8,
+	heldOverOneYear: false, qsbsEligible: false, qsbsHeldYears: 0
+};
+
+const SCENARIOS: { label: string; inputs: SecondaryTenderInputs }[] = [
+	{ label: 'Slow exit, unlikely', inputs: { ...common, monthsToIpo: 36, probabilityOfExitPct: 40 } },
+	{ label: 'Two-year exit, coin flip', inputs: { ...common, monthsToIpo: 24, probabilityOfExitPct: 55 } },
+	{ label: 'Near-term exit, likely', inputs: { ...common, monthsToIpo: 12, probabilityOfExitPct: 75 } }
+];
+
+const rows = SCENARIOS.map((scenario) => {
+	const out = calculateSecondaryTender(scenario.inputs);
+	return {
+		label: scenario.label,
+		inputs: scenario.inputs.probabilityOfExitPct + '% exit chance · ' + scenario.inputs.monthsToIpo + ' months · ' + usd(scenario.inputs.offerPricePerShare) + ' offer vs ' + usd(scenario.inputs.expectedIpoPricePerShare) + ' expected',
+		result:
+			usd(out.today.netCash) + ' today vs ' + usd(out.hold.riskAdjustedValue) + ' risk-adjusted hold — ' +
+			out.verdict.recommendation.toLowerCase() + '; break-even IPO price ' + usd(out.verdict.breakevenIpoPrice)
+	};
+});
+
+const faqs = [
+	{
+		q: 'Why is the hold path worth nothing if the company does not exit?',
+		a: 'Because that is the honest downside for private stock. A secondary offer usually exists because the company is not public and the shares cannot be sold elsewhere. Assuming a failed exit still recovers a fraction of the last round would make holding look better than it is.'
+	},
+	{
+		q: 'What is the break-even IPO price?',
+		a: 'The share price at which the after-tax proceeds of waiting equal the cash you could take today. If you think the eventual price will be below it, the offer is the better trade on arithmetic, whatever your view of the company.'
+	},
+	{
+		q: 'How is the discount on the offer calculated?',
+		a: 'Offer price against the last preferred round, shown as an effective discount. A 24 dollar round and an 18 dollar offer is a 25% discount. That discount is partly the buyer pricing illiquidity and partly the market pricing the odds of a worse outcome.'
+	},
+	{
+		q: 'Does QSBS change the answer?',
+		a: 'It can remove federal tax on a large part of the gain, but only if the shares qualify, have been held at least five years, and the gain fits the statutory cap of the greater of 10 million dollars or ten times basis. The model applies the exclusion only when those conditions are met.'
+	},
+	{
+		q: 'Why value the hold at a discount rate?',
+		a: 'Because a dollar two years from now is not a dollar today, and private stock carries more risk than a public position. The implied probability needed to justify holding is the cleanest read: it tells you what odds the current prices already assume.'
+	}
+];
 ---
 
-<BaseLayout title="Secondary Tender vs. IPO Horizon Calculator | Gini Loh" description="Price a private secondary or tender offer against the IPO you are waiting for: after-tax cash today, risk-adjusted exit proceeds, and the break-even IPO price.">
+<BaseLayout
+	title="Secondary Tender vs IPO Calculator for Startup Equity | Gini Loh"
+	description="Price a secondary tender offer against waiting for an IPO on an after-tax, risk-adjusted basis, including exercise cost, QSBS limits and the break-even exit price."
+>
 	<link slot="head" rel="canonical" href={new URL('/calculators/secondary-tender-calculator/', Astro.site).toString()} />
 	{schema ? <JsonLd slot="head" data={schema} /> : null}
-	<main class="px-4 pb-24 pt-12 sm:px-6 lg:px-8">
-		<SecondaryTenderCalculator client:load />
-	</main>
+	<JsonLd slot="head" data={faqPageSchema(faqs)} />
+
+	<CalculatorShell
+		eyebrow="Private Equity"
+		title="Secondary Tender vs. IPO Horizon"
+		description="A tender offer is cash now at a discount; waiting is an illiquid bet on an exit that may not happen. This prices both on one after-tax present-value basis."
+		trustBadge="After-tax, probability-weighted"
+	>
+		<div slot="calculator">
+			<SecondaryTenderCalculator client:load />
+
+			<CalculatorIntent
+				scenarioCaption="20,000 options with a 2 dollar strike, an 18 dollar offer against a 24 dollar last round and a 40 dollar expected IPO price, 37% ordinary and 23.8% long-term rates, 12% discount rate. Only the exit odds and the time to exit change."
+				steps={[
+					{
+						label: 'Cash today, after tax',
+						body: 'Shares times the offer price, minus the exercise cost, minus tax on the spread. Options are treated as non-qualified, so the spread is ordinary income.'
+					},
+					{
+						label: 'The hold path at exit',
+						body: 'Shares times the expected IPO price, minus exercise, minus tax at capital gains rates where the shares would be long-term, with any QSBS exclusion applied only inside the statutory caps.'
+					},
+					{
+						label: 'Discount the hold, weight the odds',
+						body: 'The exit value is discounted back at an annual rate and multiplied by the probability of that exit. The downside case is zero, because a private position with no exit has no market.'
+					},
+					{
+						label: 'Break-even exit price',
+						body: 'Solve for the share price at which the risk-adjusted hold equals today cash. Comparing that price with what you actually expect is the decision, rather than comparing the offer with the last round.'
+					}
+				]}
+				columns={['Scenario', 'Inputs', 'Outcome']}
+				rows={rows}
+				faqs={faqs}
+				caveat="Assumes a cashless exercise and NSO treatment. ISO and AMT treatment, secondary-market haircuts for preferred versus common, and company-imposed transfer restrictions are out of scope."
+			/>
+		</div>
+	</CalculatorShell>
 </BaseLayout>

@@ -2,16 +2,112 @@
 import W2Vs1099Calculator from '../../components/calculators/react/W2Vs1099Calculator';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import JsonLd from '../../components/JsonLd.astro';
+import CalculatorShell from '../../components/calculators/CalculatorShell.astro';
+import CalculatorIntent from '../../components/calculators/CalculatorIntent.astro';
 import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+import { computeW2Vs1099, type W2Vs1099Inputs } from '../../lib/calculators/w2Vs1099';
+import { faqPageSchema, usd } from '../../lib/calculators/intent';
 
 const calculator = getCalculatorBySlug('w2-vs-1099-scorp-calculator');
 const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+
+const common = {
+	w2Base: 180000, w2Bonus: 20000, w2Equity: 40000, w2MatchPct: 4, w2PtoDays: 20,
+	w2WorkHours: 2000, w2CommuteHours: 250,
+	billableHoursPerWeek: 32, adminHoursPerWeek: 8, vacationWeeks: 4, benchWeeks: 4,
+	opsExpenses: 6000, healthInsuranceAnnual: 9000,
+	sCorpSalaryRatio: 45, sCorpComplianceCost: 3000,
+	effectiveTaxRate: 28, maxOutRetirement: true, qbiEligible: true
+};
+
+const SCENARIOS: { label: string; inputs: W2Vs1099Inputs }[] = [
+	{ label: 'Low contract rate', inputs: { ...common, hourlyRate: 100 } },
+	{ label: 'Rate matches the package', inputs: { ...common, hourlyRate: 125 } },
+	{ label: 'Premium contract rate', inputs: { ...common, hourlyRate: 150 } }
+];
+
+const rows = SCENARIOS.map((scenario) => {
+	const out = computeW2Vs1099(scenario.inputs);
+	const options = [
+		{ label: 'W-2', net: out.w2.net },
+		{ label: 'sole prop', net: out.soleProp.net },
+		{ label: 'S-corp', net: out.sCorp.net }
+	].sort((a, b) => b.net - a.net);
+	return {
+		label: scenario.label,
+		inputs: usd(scenario.inputs.hourlyRate) + '/hr · ' + scenario.inputs.billableHoursPerWeek + ' billable hrs/wk · ' + scenario.inputs.vacationWeeks + ' wks off · ' + scenario.inputs.benchWeeks + ' wks bench',
+		result:
+			'W-2 ' + usd(out.w2.net) + ' | sole prop ' + usd(out.soleProp.net) + ' | S-corp ' + usd(out.sCorp.net) +
+			' — ' + options[0].label + ' leads by ' + usd(options[0].net - options[1].net) + ' over ' + options[1].label
+	};
+});
+
+const faqs = [
+	{
+		q: 'Why is the contract revenue lower than the W-2 package?',
+		a: 'Because billable hours are not paid hours. The model bills the weekly billable hours across the working weeks left after vacation and bench time, then subtracts operating costs and health insurance. A 125 dollar rate at 32 billable hours does not produce 250,000 of revenue once those weeks are removed.'
+	},
+	{
+		q: 'What does the S-corp election actually change?',
+		a: 'It splits the profit into a salary and a distribution, so payroll tax applies to the salary rather than the whole profit. The model also charges the compliance cost and the employer share of payroll tax, because both are real. The gain is the payroll tax avoided on the distribution; the risk is a salary the IRS considers unreasonably low.'
+	},
+	{
+		q: 'Is the employer 401(k) contribution counted for the S-corp?',
+		a: 'Yes, and it is computed on the salary rather than the profit, which is why electing a low salary to save payroll tax also cuts the employer contribution. The model runs both effects together instead of letting you optimise one in isolation.'
+	},
+	{
+		q: 'Why does the W-2 side count commute hours?',
+		a: 'Because the comparison is about the value of an hour of your life, not only the tax bill. Commute time and paid time off are real differences between the two arrangements, and the yield per hour is only meaningful if the hours denominator includes them.'
+	},
+	{
+		q: 'What is left out?',
+		a: 'Client concentration risk, payment delays, the cost of chasing work, and the loss of unemployment insurance. It also assumes steady billable weeks, which is the assumption most contractors overstate. Drop the billable weeks until the two options are level, and that is your real risk buffer.'
+	}
+];
 ---
 
-<BaseLayout title="W-2 vs. 1099 / S-Corp Net Yield Calculator | Gini Loh" description="Compare W-2 total compensation against 1099 independent consulting and S-Corp distribution arbitrage under 2026 IRS statutory limits.">
+<BaseLayout
+	title="W-2 vs 1099 vs S-Corp Net Yield Calculator | Gini Loh"
+	description="Compare a W-2 package against 1099 contracting and the S-corp election after federal taxes, payroll tax, retirement capacity, compliance cost and hours worked."
+>
 	<link slot="head" rel="canonical" href={new URL('/calculators/w2-vs-1099-scorp-calculator/', Astro.site).toString()} />
 	{schema ? <JsonLd slot="head" data={schema} /> : null}
-	<main class="px-4 pb-24 pt-12 sm:px-6 lg:px-8">
-		<W2Vs1099Calculator client:load />
-	</main>
+	<JsonLd slot="head" data={faqPageSchema(faqs)} />
+
+	<CalculatorShell
+		eyebrow="Compensation Structure"
+		title="W-2 vs. 1099 vs. S-Corp"
+		description="Three ways to be paid for the same work, compared after tax, after compliance cost, and after the hours each one actually costs you."
+		trustBadge="Federal tax + payroll tax"
+	>
+		<div slot="calculator">
+			<W2Vs1099Calculator client:load />
+
+			<CalculatorIntent
+				scenarioCaption="A 240,000 W-2 package with 4% match and 20 days off, against 32 billable hours a week after 4 weeks of vacation and 4 weeks of bench, 6,000 of operating costs, 9,000 of health insurance and a 3,000 S-corp compliance cost. Only the hourly rate changes."
+				steps={[
+					{
+						label: 'W-2 take-home',
+						body: 'Base, bonus and equity, plus the employer match, minus payroll tax and income tax at your effective rate, with retirement shelter counted separately because it is deferred rather than spent.'
+					},
+					{
+						label: 'Sole proprietor',
+						body: 'Billable hours across the remaining weeks produce gross revenue. Operating costs, insurance and half of self-employment tax are deducted before income tax, and the QBI deduction applies where eligible.'
+					},
+					{
+						label: 'S-corp',
+						body: 'The same revenue, split into a salary and a distribution. Payroll tax is charged on the salary at both the employee and employer rate, the employer retirement contribution is computed from the salary, and the compliance cost is subtracted.'
+					},
+					{
+						label: 'Compare net, then hours',
+						body: 'Each structure ends at a take-home figure. Divide by the hours each one really costs, including commute and unbillable admin, before deciding that the largest number is the best arrangement.'
+					}
+				]}
+				columns={['Scenario', 'Inputs', 'Outcome']}
+				rows={rows}
+				faqs={faqs}
+				caveat="Federal treatment only; state payroll and income tax are folded into the effective rate you enter. Assumes steady billable weeks, no client concentration risk and no unpaid invoices."
+			/>
+		</div>
+	</CalculatorShell>
 </BaseLayout>

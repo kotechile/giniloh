@@ -2,16 +2,114 @@
 import GpuBreakevenCalculator from '../../components/calculators/react/GpuBreakevenCalculator';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import JsonLd from '../../components/JsonLd.astro';
+import CalculatorShell from '../../components/calculators/CalculatorShell.astro';
+import CalculatorIntent from '../../components/calculators/CalculatorIntent.astro';
 import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+import { calculateGpuBreakeven, type GpuBreakevenInputs } from '../../lib/calculators/gpuBreakeven';
+import { faqPageSchema, usd, usdPrecise } from '../../lib/calculators/intent';
 
 const calculator = getCalculatorBySlug('gpu-breakeven');
 const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+
+/**
+ * Scenario rows are computed here, at build, by calling the same engine the island runs. Nothing in
+ * the table was typed by hand, so editing `gpuBreakeven.ts` updates the prose numbers with it.
+ */
+const hardware = {
+	hardwarePrice: 7500,
+	resaleValuePct: 15,
+	usefulLifeYears: 3,
+	powerDrawWatts: 450,
+	electricityRatePerKwh: 0.18,
+	annualMaintenance: 200,
+	cloudHourlyRate: 1.1
+};
+
+const SCENARIOS: { label: string; inputs: GpuBreakevenInputs }[] = [
+	{ label: 'Light use, one box', inputs: { ...hardware, hoursPerMonth: 120 } },
+	{ label: 'Steady use, one box', inputs: { ...hardware, hoursPerMonth: 320 } },
+	{ label: 'Heavy use, one box', inputs: { ...hardware, hoursPerMonth: 560 } }
+];
+
+const rows = SCENARIOS.map((scenario) => {
+	const out = calculateGpuBreakeven(scenario.inputs);
+	return {
+		label: scenario.label,
+		inputs: scenario.inputs.hoursPerMonth + ' h/mo · ' + usd(hardware.hardwarePrice) + ' box · ' + usdPrecise(hardware.cloudHourlyRate) + '/hr cloud',
+		result:
+			usdPrecise(out.ownedCostPerHour) + '/hr owned vs ' + usdPrecise(out.cloudCostPerHour) + '/hr cloud — ' +
+			out.recommendation.toLowerCase() + ' by ' + usd(out.advantageAtLifeEnd) + ' over ' + hardware.usefulLifeYears + ' years'
+	};
+});
+
+const breakeven = calculateGpuBreakeven({ ...hardware, hoursPerMonth: 200 }).breakevenHoursPerMonth;
+
+const faqs = [
+	{
+		q: 'At what monthly utilisation does a local GPU pay for itself?',
+		a: 'Break-even is the fixed cost of the card divided by the hours you run, net of the electricity you stop buying per cloud hour. At ' + usd(hardware.hardwarePrice) + ' with ' + hardware.resaleValuePct + '% residual value, ' + usdPrecise(hardware.electricityRatePerKwh) + '/kWh power and a ' + usdPrecise(hardware.cloudHourlyRate) + '/hr cloud rate, that is roughly ' + breakeven + ' hours a month. Below it the cloud bill buys the same compute for less; above it ownership wins.'
+	},
+	{
+		q: 'Should power draw be measured at the wall or on the card?',
+		a: 'At the wall, for the whole box. A 450 W card sits in a system that pulls 550 to 700 W under load once the processor, memory and fans are counted, and the meter bills the wall figure. Using the card rating alone understates owned cost by roughly a third.'
+	},
+	{
+		q: 'Why does residual value change the answer so much?',
+		a: 'Because it is subtracted before anything else is divided. A card that resells for 40% of its price costs 60% of the headline figure to own, which pulls break-even hours down by a third against a card that resells for nothing. Datacentre cards hold value differently from consumer cards, so use the price you could actually sell at.'
+	},
+	{
+		q: 'The box sits idle most of the month. How is that charged?',
+		a: 'Two ways. Power is charged only for the hours you run, because idle draw is small. The hardware is charged across its whole life regardless, because idle silicon still depreciates. That asymmetry is why the model reports break-even hours per month rather than one total.'
+	},
+	{
+		q: 'What is missing from this comparison?',
+		a: 'Your own admin time for driver updates, failed runs and hardware support, and the cost of being unable to scale past one box during a deadline. Both push the decision toward renting. They are left out because they vary too much to price, so add them by hand before treating a narrow win as a win.'
+	}
+];
 ---
 
-<BaseLayout title="Local Workstation vs. Cloud GPU Break-even | Gini Loh" description="Cost per GPU-hour for owned hardware against on-demand cloud rates at your real utilisation, with break-even hours per month.">
+<BaseLayout
+	title="Local GPU vs Cloud Break-even Calculator | Gini Loh"
+	description="Compare a local GPU workstation against a cloud hourly rate on cost per GPU-hour, including power, residual value, maintenance and the utilisation you actually run."
+>
 	<link slot="head" rel="canonical" href={new URL('/calculators/gpu-breakeven/', Astro.site).toString()} />
 	{schema ? <JsonLd slot="head" data={schema} /> : null}
-	<main class="px-4 pb-24 pt-12 sm:px-6 lg:px-8">
-		<GpuBreakevenCalculator client:load />
-	</main>
+	<JsonLd slot="head" data={faqPageSchema(faqs)} />
+
+	<CalculatorShell
+		eyebrow="Compute Economics"
+		title="Local GPU vs. Cloud Break-even"
+		description="A local box is a capital purchase and cloud GPUs are a usage bill. This prices both per GPU-hour at the utilisation you will actually run, over the life you will actually keep the hardware."
+		trustBadge="Power, residual value, utilisation"
+	>
+		<div slot="calculator">
+			<GpuBreakevenCalculator client:load />
+
+			<CalculatorIntent
+				scenarioCaption={'One ' + usd(hardware.hardwarePrice) + ' workstation, ' + hardware.usefulLifeYears + '-year life, ' + hardware.resaleValuePct + '% residual value, ' + hardware.powerDrawWatts + ' W at the wall, ' + usdPrecise(hardware.electricityRatePerKwh) + '/kWh, ' + usd(hardware.annualMaintenance) + '/yr maintenance, against ' + usdPrecise(hardware.cloudHourlyRate) + '/hr cloud. Only the hours per month change.'}
+				steps={[
+					{
+						label: 'Owned cost, net of resale',
+						body: 'Hardware price minus what it is worth at the end of its life, plus power, plus maintenance. At ' + usd(hardware.hardwarePrice) + ' with ' + hardware.resaleValuePct + '% residual value the net capital outlay is ' + usd(hardware.hardwarePrice * (1 - hardware.resaleValuePct / 100)) + '.'
+					},
+					{
+						label: 'Power over the whole life',
+						body: 'Kilowatts at the wall multiplied by total hours and your electricity rate. Total hours are monthly hours times the life in months, so power scales with use while depreciation does not.'
+					},
+					{
+						label: 'Cost per GPU-hour, both sides',
+						body: 'Owned cost divided by total hours, compared with the cloud rate multiplied by the same hours. Comparing a capital purchase to an hourly rate without normalising hours is the step that makes local hardware look cheap.'
+					},
+					{
+						label: 'Break-even hours per month',
+						body: 'Fixed owned cost divided by (life in months times the cloud rate minus power cost per hour). That is the utilisation above which ownership is cheaper, and the number to hold your estimate of real usage against.'
+					}
+				]}
+				columns={['Scenario', 'Inputs', 'Outcome']}
+				rows={rows}
+				faqs={faqs}
+				caveat="Not priced: your admin time, hardware support, and the inability to scale past one box during a deadline. Electricity assumes a residential or small-office rate; colocation adds rack and bandwidth costs."
+			/>
+		</div>
+	</CalculatorShell>
 </BaseLayout>

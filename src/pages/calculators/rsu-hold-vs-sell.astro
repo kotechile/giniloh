@@ -2,16 +2,108 @@
 import RsuHoldVsSellCalculator from '../../components/calculators/react/RsuHoldVsSellCalculator';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import JsonLd from '../../components/JsonLd.astro';
+import CalculatorShell from '../../components/calculators/CalculatorShell.astro';
+import CalculatorIntent from '../../components/calculators/CalculatorIntent.astro';
 import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+import { calculateRsuHoldVsSell, type RsuHoldVsSellInputs } from '../../lib/calculators/rsuHoldVsSell';
+import { faqPageSchema, usd } from '../../lib/calculators/intent';
 
 const calculator = getCalculatorBySlug('rsu-hold-vs-sell');
 const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+
+const common = {
+	annualVestValue: 120000, currentStockPrice: 150, vestPrice: 100,
+	expectedIndexReturnPct: 8.5,
+	householdLiquidNetWorth: 400000, baseSalary: 180000,
+	effectiveIncomeTaxRatePct: 35, longTermCapitalGainsRatePct: 23.8,
+	enableMegaBackdoor: false, employer401kMatch: 7200, employee401kElective: 24500
+};
+
+const SCENARIOS: { label: string; inputs: RsuHoldVsSellInputs }[] = [
+	{ label: 'Company tracks the index', inputs: { ...common, holdingYears: 5, expectedCompanyReturnPct: 8.5 } },
+	{ label: 'Company beats the index', inputs: { ...common, holdingYears: 5, expectedCompanyReturnPct: 13 } },
+	{ label: 'Company lags the index', inputs: { ...common, holdingYears: 5, expectedCompanyReturnPct: 4 } }
+];
+
+const rows = SCENARIOS.map((scenario) => {
+	const out = calculateRsuHoldVsSell(scenario.inputs);
+	return {
+		label: scenario.label,
+		inputs: scenario.inputs.expectedCompanyReturnPct + '% company vs ' + scenario.inputs.expectedIndexReturnPct + '% index, ' + scenario.inputs.holdingYears + ' years',
+		result:
+			'Sell and diversify ' + usd(out.strategySellAndDiversify.endNetWealth) + ' | hold ' +
+			usd(out.strategyHoldConcentrated.endNetWealth) + ' | concentration ' +
+			Math.round(out.strategyHoldConcentrated.concentrationRatioPct) + '% of liquid net worth, break-even growth ' +
+			out.verdict.breakevenCompanyGrowthRatePct + '%'
+	};
+});
+
+const faqs = [
+	{
+		q: 'Why is the break-even growth rate the number that matters?',
+		a: 'Because holding a single stock instead of a diversified portfolio only pays if that stock beats the portfolio by more than the extra tax and risk. The break-even growth rate is the company return at which holding and selling end level. Above it holding wins on arithmetic; below it the concentration buys nothing.'
+	},
+	{
+		q: 'What is double jeopardy in this context?',
+		a: 'Your salary and your concentrated stock come from the same employer. A bad year cuts the bonus, freezes the vest and marks the shares down together, which is the risk the concentration ratio measures against your liquid net worth.'
+	},
+	{
+		q: 'How is the vest taxed, and what becomes the cost basis?',
+		a: 'The value at vest is ordinary income, taxed at your income rate, and the vest price becomes the cost basis for whatever happens next. That is why selling immediately after vest usually produces almost no capital gain, and why holding creates a second tax decision later.'
+	},
+	{
+		q: 'What does the Roth waterfall do here?',
+		a: 'It routes part of the liquidated proceeds through after-tax 401(k) contributions if your plan allows them, up to the annual additions limit. It changes where the money compounds, not whether selling was right, so it is modelled as a separate strategy rather than a correction.'
+	},
+	{
+		q: 'Why compare against an index return at all?',
+		a: 'Because the alternative to holding company stock is not cash, it is a diversified portfolio. Comparing a stock position to zero makes every holding decision look correct. The index return is what you give up to stay concentrated.'
+	}
+];
 ---
 
-<BaseLayout title="RSU Hold vs. Sell & Mega Backdoor Roth Simulator | Gini Loh" description="Quantify single-stock employer concentration risk, double-jeopardy exposure, and 2026 $72k Section 415(c) Mega Backdoor Roth asset allocation.">
+<BaseLayout
+	title="RSU Hold vs Sell Calculator with Concentration Risk | Gini Loh"
+	description="Model RSU sell-and-diversify against holding concentrated stock, with ordinary income at vest, capital gains at exit, concentration risk and the break-even company growth rate."
+>
 	<link slot="head" rel="canonical" href={new URL('/calculators/rsu-hold-vs-sell/', Astro.site).toString()} />
 	{schema ? <JsonLd slot="head" data={schema} /> : null}
-	<main class="px-4 pb-24 pt-12 sm:px-6 lg:px-8">
-		<RsuHoldVsSellCalculator client:load />
-	</main>
+	<JsonLd slot="head" data={faqPageSchema(faqs)} />
+
+	<CalculatorShell
+		eyebrow="Equity Compensation"
+		title="RSU Hold vs. Sell"
+		description="Vesting already taxed the shares as income. The only question left is whether keeping them beats a diversified portfolio by enough to justify the concentration."
+		trustBadge="After-tax, concentration-weighted"
+	>
+		<div slot="calculator">
+			<RsuHoldVsSellCalculator client:load />
+
+			<CalculatorIntent
+				scenarioCaption="A 120,000 annual vest, 150 current price and 100 vest price, 400,000 liquid net worth on a 180,000 salary, 35% ordinary rate, 23.8% long-term rate, against an 8.5% index. Only the company return changes."
+				steps={[
+					{
+						label: 'Tax at vest',
+						body: 'The vest value is ordinary income. What is left is the cash a sell-and-diversify strategy can actually deploy, and the vest price becomes the cost basis.'
+					},
+					{
+						label: 'Two strategies, same starting cash',
+						body: 'Sell and diversify invests the after-tax proceeds in the index at the index return. Hold keeps the shares at the company return. Both are then taxed at exit on their gains.'
+					},
+					{
+						label: 'The break-even growth rate',
+						body: 'Solve for the company return at which the two after-tax outcomes are equal. It is usually a few points above the index, because holding pays capital gains later on a larger gain while selling pays tax sooner on a smaller one.'
+					},
+					{
+						label: 'Concentration against the balance sheet',
+						body: 'The held position is measured as a share of liquid net worth. Above roughly half, a single bad year in one stock moves the household number more than any decision the household makes.'
+					}
+				]}
+				columns={['Scenario', 'Inputs', 'Outcome']}
+				rows={rows}
+				faqs={faqs}
+				caveat="Assumes a flat holding period and a single exit tax event. It does not model a falling share price, a cliff that removes future vests, or trading windows that stop you selling when you decide to."
+			/>
+		</div>
+	</CalculatorShell>
 </BaseLayout>

@@ -2,16 +2,125 @@
 import BuildVsBuyCalculator from '../../components/calculators/react/BuildVsBuyCalculator';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import JsonLd from '../../components/JsonLd.astro';
+import CalculatorShell from '../../components/calculators/CalculatorShell.astro';
+import CalculatorIntent from '../../components/calculators/CalculatorIntent.astro';
 import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/metadata';
+import { calculateBuildVsBuy, type BuildVsBuyInputs } from '../../lib/calculators/buildVsBuy';
+import { faqPageSchema, usd } from '../../lib/calculators/intent';
 
 const calculator = getCalculatorBySlug('build-vs-buy');
 const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
+
+const SCENARIOS: { label: string; inputs: BuildVsBuyInputs }[] = [
+	{
+		label: 'Single workflow, one engineer',
+		inputs: {
+			engineers: 1, monthsToParity: 2, loadedMonthlyCostPerEngineer: 20000,
+			maintenancePctPerYear: 30, infraMonthly: 150,
+			vendorAnnualPerSeat: 900, seats: 15, implementationFee: 2500, vendorEscalationPct: 6,
+			horizonYears: 5, discountRatePct: 10
+		}
+	},
+	{
+		label: 'Internal tool, small team',
+		inputs: {
+			engineers: 2, monthsToParity: 3, loadedMonthlyCostPerEngineer: 21500,
+			maintenancePctPerYear: 20, infraMonthly: 600,
+			vendorAnnualPerSeat: 420, seats: 60, implementationFee: 8000, vendorEscalationPct: 7,
+			horizonYears: 5, discountRatePct: 10
+		}
+	},
+	{
+		label: 'Large seat count, steep escalation',
+		inputs: {
+			engineers: 3, monthsToParity: 6, loadedMonthlyCostPerEngineer: 22000,
+			maintenancePctPerYear: 18, infraMonthly: 2000,
+			vendorAnnualPerSeat: 260, seats: 800, implementationFee: 75000, vendorEscalationPct: 12,
+			horizonYears: 5, discountRatePct: 10
+		}
+	}
+];
+
+const rows = SCENARIOS.map((scenario) => {
+	const out = calculateBuildVsBuy(scenario.inputs);
+	const i = scenario.inputs;
+	return {
+		label: scenario.label,
+		inputs:
+			i.engineers + ' eng × ' + i.monthsToParity + ' mo × ' + usd(i.loadedMonthlyCostPerEngineer) + ' vs ' +
+			i.seats + ' seats at ' + usd(i.vendorAnnualPerSeat) + '/yr',
+		result:
+			'Build ' + usd(out.buildNpv) + ' vs vendor ' + usd(out.vendorNpv) + ' — ' + out.recommendation.toLowerCase() +
+			(out.breakevenYear ? ', break-even year ' + out.breakevenYear : ', no break-even inside ' + i.horizonYears + ' years')
+	};
+});
+
+const faqs = [
+	{
+		q: 'Why is the build cost more than engineers times months?',
+		a: 'Because the loaded monthly cost includes salary, benefits and overhead, and because the build leaves a permanent run cost behind. Maintenance is charged as a share of the initial build every year, and infrastructure is charged monthly for as long as the tool exists. Most business cases count the build and stop.'
+	},
+	{
+		q: 'What makes a vendor renewal expensive over five years?',
+		a: 'Escalation compounding. A 8% annual increase on 300 seats turns a ' + usd(195000) + ' first-year bill into a bill 47% higher by year five, and the total is what gets discounted. Flat-rate comparisons understate the vendor side in exactly the years where the build side has already amortised.'
+	},
+	{
+		q: 'Should the same discount rate apply to both options?',
+		a: 'Yes, and that is a choice worth stating. Discounting the vendor side at the cost of capital and the build side at nothing is the most common way a build case is made to win. Both are cash outflows at the same risk to the balance sheet, so both get the same rate here.'
+	},
+	{
+		q: 'Why hold engineering cost flat instead of escalating salaries?',
+		a: 'To keep the comparison honest. If internal salaries escalate and vendor prices also escalate, the result depends mostly on which assumption you picked. Holding engineer cost flat gives the vendor side the benefit of the doubt, so a build win is a win despite the conservative assumption.'
+	},
+	{
+		q: 'What does the model leave out?',
+		a: 'Opportunity cost of the engineers, the value of owning the roadmap, and the risk that the vendor is acquired or re-priced. It also treats feature parity as a fixed cost, when in practice scope grows. Use the break-even year as a sanity check against your own staying power.'
+	}
+];
 ---
 
-<BaseLayout title="Build-vs-Buy Amortization Simulator | Gini Loh" description="Compare internal tooling against a vendor on loaded engineering time, maintenance, infrastructure and renewal escalation over one discounted horizon.">
+<BaseLayout
+	title="Build vs Buy Software Amortization Calculator | Gini Loh"
+	description="Compare internal tooling against a vendor on loaded engineering time, permanent maintenance, infrastructure and renewal escalation, discounted over the same horizon."
+>
 	<link slot="head" rel="canonical" href={new URL('/calculators/build-vs-buy/', Astro.site).toString()} />
 	{schema ? <JsonLd slot="head" data={schema} /> : null}
-	<main class="px-4 pb-24 pt-12 sm:px-6 lg:px-8">
-		<BuildVsBuyCalculator client:load />
-	</main>
+	<JsonLd slot="head" data={faqPageSchema(faqs)} />
+
+	<CalculatorShell
+		eyebrow="Enterprise Tooling"
+		title="Build-vs-Buy Amortization"
+		description="Internal tooling business cases count the engineer-months and forget the loaded cost of them, plus the maintenance that never ends. This puts both sides on one discounted basis."
+		trustBadge="Loaded cost + permanent run rate"
+	>
+		<div slot="calculator">
+			<BuildVsBuyCalculator client:load />
+
+			<CalculatorIntent
+				scenarioCaption="Three sizes of internal tool against a vendor quote, all at a 10% discount rate over five years. Renewal escalation is 6% to 8% depending on the scenario, which is where the vendor totals diverge from the headline quote."
+				steps={[
+					{
+						label: 'Initial build cost',
+						body: 'Engineers multiplied by months to feature parity, multiplied by fully loaded monthly cost. Loaded means salary plus benefits plus overhead, not salary.'
+					},
+					{
+						label: 'The run rate the build leaves behind',
+						body: 'Annual maintenance as a share of the initial build, plus infrastructure times twelve. It repeats every year of the horizon and never converts into an asset.'
+					},
+					{
+						label: 'The vendor side',
+						body: 'Implementation fee once, then seats times the per-seat annual price, escalating at each renewal. Escalation compounds, so the fifth year is the one that decides the total.'
+					},
+					{
+						label: 'Discount both, then compare',
+						body: 'Each year of both streams is discounted at the same rate and summed. The lower net present value wins, and the break-even year is the first year cumulative build cost falls below cumulative vendor cost.'
+					}
+				]}
+				columns={['Scenario', 'Inputs', 'Outcome']}
+				rows={rows}
+				faqs={faqs}
+				caveat="Feature parity is treated as a fixed scope. In practice scope grows after launch, and the build side carries that growth alone. Opportunity cost and vendor lock-in risk are not priced."
+			/>
+		</div>
+	</CalculatorShell>
 </BaseLayout>

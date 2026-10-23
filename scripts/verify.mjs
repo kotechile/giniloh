@@ -490,6 +490,45 @@ async function checkAnalyticsTag() {
 	else fail('analytics data-domains', `a list including ${CANONICAL_HOST}`, domains || '(none)');
 }
 
+/**
+ * A calculator page has to make sense without JavaScript.
+ *
+ * The crawler cannot move a slider, so a page whose only content is a React island is thin by
+ * construction: six calculator pages here carried 237 to 365 words of served HTML and no structure
+ * at all. What fixed that is the intent wrapper — method, worked numbers, questions — and the FAQPage
+ * markup beside it. This asserts the wrapper survives, because the tempting thing for the next person
+ * is to add a seventh calculator with just the island.
+ */
+async function checkCalculatorIntent() {
+	console.log('\nCalculator pages are indexable without JavaScript');
+	const sample = [
+		'/calculators/gpu-breakeven/',
+		'/calculators/build-vs-buy/',
+		'/calculators/rent-vs-buy/',
+		'/calculators/w2-vs-1099-scorp-calculator/'
+	];
+	for (const path of sample) {
+		const r = await probe(path);
+		if (r.status !== 200) {
+			fail(path, '200', `${r.status}`);
+			continue;
+		}
+		const text = r.body
+			.replace(/<script[\s\S]*?<\/script>/gi, ' ')
+			.replace(/<style[\s\S]*?<\/style>/gi, ' ')
+			.replace(/<[^>]+>/g, ' ')
+			.replace(/\s+/g, ' ')
+			.trim();
+		const words = text.split(' ').filter(Boolean).length;
+		const hasFaq = /"@type"\s*:\s*"FAQPage"/.test(r.body);
+		const hasTable = /<table/.test(r.body);
+		if (words < 700) fail(`${path} static words`, 'at least 700 words of served text', `${words}`);
+		else if (!hasFaq) fail(`${path} FAQPage`, 'FAQPage JSON-LD', 'absent — no FAQ structured data');
+		else if (!hasTable) fail(`${path} scenario table`, 'a <table> of pre-computed outcomes', 'absent');
+		else ok(`${path}`, `${words} words, FAQPage + table`);
+	}
+}
+
 async function main() {
 	console.log(`\nVerifying deploy contract at ${ORIGIN}`);
 	try {
@@ -499,6 +538,7 @@ async function main() {
 		await checkCrawlArtifacts();
 		await checkCanonicalAgreement();
 		await checkAnalyticsTag();
+		await checkCalculatorIntent();
 		await checkRedirects();
 		await checkBoundary();
 		await checkCanonicalHost();
