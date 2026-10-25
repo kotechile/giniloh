@@ -42,12 +42,15 @@ export const OWNED_POST_SLUGS_GENERATED = [
 	"your-61-day-window-costs-the-position",
 	"your-cheap-part-a-599-bill",
 	"your-disks-35-dead-by-year-six",
+	"your-home-servers-45-day-patch-gap",
+	"your-homelab-heat-pays-back-45-cents",
 	"your-ipo-payday-tax-bill",
 	"your-raise-dies-at-51-5-hours",
 	"zapier-notion-integration-calculate-your-tinkering-tax"
 ];
 export const FOREIGN_POST_SLUGS_GENERATED = [
 	"100-case-eval-925-coverage",
+	"7-days-notice-rewrites-your-duty",
 	"agent-audit-trail-not-evidence",
 	"agent-failure-topology-not-model",
 	"agent-failures-tests-stayed-green",
@@ -180,11 +183,13 @@ export const FOREIGN_POST_SLUGS_GENERATED = [
 	"your-routes-5x-stop-gap",
 	"your-seller-wont-stay",
 	"your-tool-surface-is-a-release-surface",
+	"your-tooling-assist-is-dutiable",
 	"your-trace-wont-prove-925-points",
 	"zet-scale-ev-truck-residual-value-risk"
 ];
 export const FOREIGN_TARGETS = {
 	"100-case-eval-925-coverage": "https://aichieve.net",
+	"7-days-notice-rewrites-your-duty": "https://aichieve.net",
 	"agent-audit-trail-not-evidence": "https://aichieve.net",
 	"agent-failure-topology-not-model": "https://aichieve.net",
 	"agent-failures-tests-stayed-green": "https://aichieve.net",
@@ -317,8 +322,9 @@ export const FOREIGN_TARGETS = {
 	"your-routes-5x-stop-gap": "https://aichieve.net",
 	"your-seller-wont-stay": "https://aichieve.net",
 	"your-tool-surface-is-a-release-surface": "https://aichieve.net",
+	"your-tooling-assist-is-dutiable": "https://aichieve.net",
 	"your-trace-wont-prove-925-points": "https://aichieve.net",
 	"zet-scale-ev-truck-residual-value-risk": "https://aichieve.net"
 };
 export const GENERATED_FOR = "giniloh.com";
-export const GENERATED_AT = "2026-10-23T21:19:17.147Z";
+export const GENERATED_AT = "2026-10-25T15:14:50.501Z";

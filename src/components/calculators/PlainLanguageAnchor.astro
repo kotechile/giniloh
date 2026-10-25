@@ -1,0 +1,98 @@
+---
+/**
+ * The four-stage orientation panel that sits between the page title and the first input.
+ *
+ * The failure it fixes is cognitive inversion: the old page led with method and jargon, so a visitor
+ * could not tell what decision they were pricing until they had already moved a slider. This states
+ * the decision in their words, lists the paperwork to fetch, translates the words on the page once,
+ * and says what to do with the verdict — before any number appears.
+ *
+ * Copy lives in lib/calculators/plainLanguage.ts, keyed by calculator slug. Nothing here is authored
+ * per page, so the panel cannot drift between calculators.
+ */
+import { getPlainLanguage } from '../../lib/calculators/plainLanguage';
+
+interface Props {
+	/** Calculator slug, as derived by CalculatorShell from the URL. */
+	slug: string;
+	/**
+	 * Whether to render the question block here. The full-width hero already states it above the
+	 * method paragraph; the compact header cannot, so it asks for it back.
+	 */
+	showQuestion?: boolean;
+}
+
+const { slug, showQuestion = true } = Astro.props;
+const entry = getPlainLanguage(slug);
+---
+
+{
+	entry && (
+		<section aria-labelledby="plain-language-heading" class:list={['border-y border-[#E5E5E5] py-8', { 'mt-8': showQuestion }]}>
+			<h2 id="plain-language-heading" class="sr-only">
+				What this calculator answers, what you need, and what to do with the result
+			</h2>
+
+			<div class="grid gap-8 lg:grid-cols-[1.15fr_0.85fr]">
+				{showQuestion && (
+					<div>
+						<p class="font-mono text-[0.62rem] font-bold uppercase tracking-[0.24em] text-[#5F5B52]">
+							What this answers
+						</p>
+						<p class="mt-3 max-w-xl text-xl font-semibold leading-snug text-[#1A1A1A] sm:text-[1.3rem]">
+							{entry.question}
+						</p>
+					</div>
+				)}
+
+				<div class={showQuestion ? '' : 'lg:col-span-2'}>
+					<p class="font-mono text-[0.62rem] font-bold uppercase tracking-[0.24em] text-[#5F5B52]">
+						Have this in front of you
+					</p>
+					<ul class:list={['mt-3 grid gap-2.5', { 'sm:grid-cols-3 sm:gap-6': !showQuestion }]}>
+						{entry.haveReady.map((item) => (
+							<li class="flex gap-2.5 text-sm leading-6 text-[#5E5E5E]">
+								<span aria-hidden="true" class="mt-[0.6rem] h-1 w-1 shrink-0 rounded-full bg-[#5A7A8F]" />
+								<span>{item}</span>
+							</li>
+						))}
+					</ul>
+				</div>
+			</div>
+
+			{entry.words && entry.words.length > 0 && (
+				<div class="mt-8 border-t border-[#EFEFEF] pt-6">
+					<p class="font-mono text-[0.62rem] font-bold uppercase tracking-[0.24em] text-[#5F5B52]">
+						Words on this page, in plain English
+					</p>
+					<dl class="mt-4 grid gap-x-10 gap-y-4 sm:grid-cols-2">
+						{entry.words.map((word) => (
+							<div>
+								<dt class="text-sm font-bold leading-6 text-[#1A1A1A]">{word.term}</dt>
+								<dd class="mt-0.5 text-sm leading-6 text-[#5E5E5E]">{word.plain}</dd>
+							</div>
+						))}
+					</dl>
+				</div>
+			)}
+
+			{entry.next && entry.next.length > 0 && (
+				<div class="mt-8 border-t border-[#EFEFEF] pt-6">
+					<p class="font-mono text-[0.62rem] font-bold uppercase tracking-[0.24em] text-[#5F5B52]">
+						What to do with the answer
+					</p>
+					<ol class="mt-4 grid gap-3">
+						{entry.next.map((step, index) => (
+							<li class="flex gap-3.5">
+								<span class="mt-0.5 shrink-0 font-mono text-[11px] tabular-nums text-[#5A7A8F]">
+									{String(index + 1).padStart(2, '0')}
+								</span>
+								<span class="max-w-2xl text-sm leading-6 text-[#5E5E5E]">{step}</span>
+							</li>
+						))}
+					</ol>
+				</div>
+			)}
+		</section>
+	)
+}

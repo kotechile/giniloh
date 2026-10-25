@@ -5,6 +5,7 @@ import { getCalculatorBySlug, getCalculatorSchema } from '../../lib/calculators/
 import { fetchPostBySlug } from '../../lib/wordpress';
 
 import MoneyFlowSimulator from '../../components/calculators/react/MoneyFlowSimulator';
+import PlainLanguageAnchor from '../../components/calculators/PlainLanguageAnchor.astro';
 
 const calculator = getCalculatorBySlug('money-flow');
 const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.site) : null;
@@ -13,8 +14,8 @@ const post = await fetchPostBySlug('the-blueprint-behind-giniloh-money-flow');
 ---
 
 <BaseLayout
-	title="Automated Income Waterfall Simulator | Gini Loh"
-	description="Visualize automated account routing: from checking, through retirement matches, HSAs, and index fund allocation."
+	title="Where Each Paycheck Goes: Money Flow Simulator | Gini Loh"
+	description="Route each paycheck across savings, retirement match, tax-sheltered accounts and index funds, then see what the order is worth over ten years."
 >
 	<link slot="head" rel="canonical" href={new URL('/calculators/money-flow/', Astro.site).toString()} />
 	{schema ? <JsonLd slot="head" data={schema} /> : null}
@@ -25,14 +26,18 @@ const post = await fetchPostBySlug('the-blueprint-behind-giniloh-money-flow');
 		     vertical space that the flow diagram needs. The title stays display-size. -->
 		<div class="mb-5 grid items-end gap-x-10 gap-y-3 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,0.75fr)]">
 			<div>
-				<p class="section-eyebrow">Automation Simulator</p>
+				<p class="section-eyebrow">Where your paycheck goes</p>
 				<h1 class="mt-3 text-4xl font-extrabold leading-[1.05] tracking-tight text-[#191610] sm:text-5xl lg:text-[3.5rem]">
 					Automated Income Waterfall Simulator
 				</h1>
 			</div>
 			<p class="max-w-xl text-base leading-7 text-[#4E4A42] lg:pb-2">
-				Map and configure automated money pipelines to route savings, retirement matching, tax-sheltered accounts, and taxable indexing without manual budgeting.
+				Set where each paycheck lands, then watch what a different order is worth over ten years. No budgeting app and no spreadsheet to maintain.
 			</p>
+		</div>
+
+		<div class="mt-8">
+			<PlainLanguageAnchor slug="money-flow" showQuestion={false} />
 		</div>
 
 		<!-- Simulator spans the full screen width -->
@@ -94,15 +99,15 @@ const post = await fetchPostBySlug('the-blueprint-behind-giniloh-money-flow');
 				<ul class="mt-3 space-y-2.5 text-sm leading-6 text-[#5E5E5E]">
 					<li class="flex items-start gap-2">
 						<span class="text-[#475F73] font-bold select-none">•</span>
-						<span><strong>Configure via Canvas:</strong> Click nodes (e.g., Primary Checking) to drag sliders adjusting balances, ceilings (T_over), or floors (T_under) in real time. Double-click to view tooltip stats.</span>
+						<span><strong>Drag the accounts:</strong> Click a node such as Primary Checking and move its balance, its upper limit or its minimum. Double-click for the numbers behind it.</span>
 					</li>
 					<li class="flex items-start gap-2">
 						<span class="text-[#475F73] font-bold select-none">•</span>
-						<span><strong>Establish Pipelines:</strong> Use the AI Chat with natural language and numerical values (e.g., "Sweep 500 from checking to savings") or type exact shorthand (e.g., <code>checking hysa</code>) in the CLI.</span>
+						<span><strong>Set the route:</strong> Type it in plain words, such as "sweep 500 from checking to savings", or use the short form <code>checking hysa</code>.</span>
 					</li>
 					<li class="flex items-start gap-2">
 						<span class="text-[#475F73] font-bold select-none">•</span>
-						<span><strong>Control System Flow:</strong> Set income, sim speed, and macro regimes (Baseline, Stagflation, Contraction) via the dashboard. Start the clock to watch your waterfall routing automate in real-time.</span>
+						<span><strong>Run it:</strong> Set your income and a scenario such as normal, high inflation or recession, then start the clock and watch the money move.</span>
 					</li>
 				</ul>
 			</article>

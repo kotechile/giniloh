@@ -7,6 +7,11 @@
  *
  * `tools` are calculator slugs from lib/calculators/metadata.ts, most important first. `flagship`
  * marks the tool that answers the hub's core question — the one the page leads with.
+ *
+ * COPY RULE: a hub is the shop window for its calculators, so it is written for the person with the
+ * problem rather than for the desk that priced it. `question` is the household question;
+ * `coreProblem` says why the obvious answer is wrong. Scheme sections, acronyms and "net yield" belong
+ * in the calculator's own glossary, not here.
  */
 export interface VerticalTopic {
 	title: string;
@@ -33,21 +38,21 @@ export const VERTICALS: Vertical[] = [
 		position: 1,
 		title: 'Career Equity & Compensation',
 		shortLabel: 'Career',
-		question: 'What is my labor and equity actually worth after taxes and friction?',
+		question: 'What is a job actually worth, once tax, hours and benefits are counted?',
 		coreProblem:
-			'Offers are compared on gross numbers. The decision that matters is net yield after self-employment tax, benefits, retirement caps, commute and admin hours, and the cliff forfeiture you take by leaving. Two offers that differ by $40k of headline comp can invert once those are priced.',
+			'Offers get compared on the headline number, and the headline is not what reaches your account. Tax, benefits, the commute, the unpaid admin, and the shares you forfeit by leaving all move the answer. Two offers $40,000 apart can swap places once those are counted.',
 		topics: [
 			{
-				title: 'W-2 vs. 1099 vs. S-Corp',
-				body: 'SE tax, the QBI deduction, Solo 401(k) capacity and compliance overhead — modelled as three net yields, not three gross incomes.'
+				title: 'The same work, paid three ways',
+				body: 'A salary, a day rate and a company of your own are taxed differently, and the gap is bigger than most people assume. Compare what lands in your account per hour worked, not what the contract calls gross.'
 			},
 			{
-				title: 'Offer engineering and cliff forfeiture',
-				body: 'The cost of walking away from unvested equity, and what a counter-offer has to clear to be worth the reset.'
+				title: 'What leaving actually costs',
+				body: 'Unvested shares, a bonus you were three months from, and a retirement match are real money. A counter-offer has to clear that number before it is worth the disruption.'
 			},
 			{
-				title: 'True hourly yield',
-				body: 'Commute, on-call and admin time divided into net pay. A $220k salary at 55 hours is a different job from $200k at 40.'
+				title: 'What an hour pays',
+				body: 'Commute, on-call and admin time divided into take-home pay. $220,000 at 55 hours a week is a different job from $200,000 at 40.'
 			}
 		],
 		tools: ['w2-vs-1099-scorp-calculator', 'raise-velocity', 'total-comp', 'career-ai-resilience', 'relocation-cost'],
@@ -58,29 +63,29 @@ export const VERTICALS: Vertical[] = [
 		position: 2,
 		title: 'Concentrated Equity & Portfolio Capital',
 		shortLabel: 'Portfolio',
-		question: 'How do I de-risk single-stock exposure and engineer tax-sheltered wealth?',
+		question: 'How much of my savings should depend on one company?',
 		coreProblem:
-			'Engineers hold company stock because it keeps going up, while their salary, bonus and unvested equity are tied to the same employer. That is double jeopardy: one bad quarter cuts income and liquid net worth together. The fix is deterministic — price the concentration, then decide where the proceeds live.',
+			'Your salary, your bonus and your savings can all depend on the same employer. One bad quarter then cuts your income and your net worth together. The way out is arithmetic rather than conviction: measure what one company is worth to you, then sell down to that number on a schedule.',
 		topics: [
 			{
-				title: 'The RSU vest fallacy',
-				body: 'Shares taxed as ordinary income on vest and then held are economically identical to taking the cash bonus and buying company stock at today’s price. If you would not buy it with new cash, auto-selling on vest is the same decision in reverse.'
+				title: 'Shares taxed the day they vest',
+				body: 'Stock you are given and keep is the same as taking the cash bonus and buying the shares at today’s price. If you would not buy it with new money, selling on vest is that same decision in reverse.'
 			},
 			{
-				title: '10b5-1 plans and systematic de-risking',
-				body: 'How directors and staff engineers schedule quarterly sales without insider-trading exposure — and why the plan has to be adopted while you are not in possession of material information.'
+				title: 'Selling on a schedule, not on a hunch',
+				body: 'A written selling plan, adopted while you hold no company news, lets you sell quarterly without arguing about compliance every time.'
 			},
 			{
-				title: 'Exchange funds vs. direct indexing',
-				body: 'When a $500k+ single-stock position justifies a seven-year exchange-fund lockup, and when systematic tax-loss harvesting in a separately managed account is the cheaper diversifier.'
+				title: 'A concentration you can live with',
+				body: 'Pick the share of your savings one company may hold, then sell down to it on dates you set in advance. Most people land between 10% and 20%.'
 			},
 			{
-				title: 'Asset location and the $72k ceiling',
-				body: 'High-dividend, REIT and bond exposure belongs in tax-deferred; high-growth equity belongs in Roth; the harvested core sits in taxable. The Mega Backdoor Roth is how the Roth bucket gets funded past the elective deferral cap.'
+				title: 'Where the money goes next',
+				body: 'High-growth shares in the Roth, bonds and property income in tax-deferred, the harvested rest in a normal account. Which account holds a fund matters as much as which fund.'
 			},
 			{
-				title: 'Secondary tenders and QSBS',
-				body: 'A tender offer is a price, not a verdict. Model the haircut against the risk-adjusted IPO path, then check whether §1202/§1045 rollover treatment survives the transaction.'
+				title: 'Selling private shares before an IPO',
+				body: 'A tender offer is a price, not a verdict. Compare it with what an exit might realistically pay after tax, then check the holding-period rules before you sign anything.'
 			}
 		],
 		tools: ['rsu-hold-vs-sell', 'secondary-tender-calculator', 'money-flow'],
@@ -93,19 +98,19 @@ export const VERTICALS: Vertical[] = [
 		shortLabel: 'Stack',
 		question: 'Should we build this in-house or pay a vendor?',
 		coreProblem:
-			'Build-vs-buy is usually decided on the licence price and a gut feeling about control. The honest comparison is loaded engineering time to reach parity, the maintenance tax that never appears in the business case, integration and on-call, against a vendor price that escalates every renewal.',
+			'Build-or-buy usually comes down to the licence price and a feeling about control. The honest version counts the engineer-years to match what the vendor already does, the maintenance that never appears in the business case, and a renewal price that rises every year.',
 		topics: [
 			{
-				title: 'Loaded build cost, not headcount',
-				body: 'Person-months at a fully loaded rate, including the review, testing and migration work that a v1 estimate always omits.'
+				title: 'What the build really costs',
+				body: 'Engineer-months at a fully loaded rate, including the review, testing and migration that a first estimate always leaves out.'
 			},
 			{
-				title: 'The maintenance multiplier',
-				body: 'A tool that took eight engineer-months to build consumes a permanent fraction of an engineer to keep alive. That is the line item vendors quote and internal teams do not.'
+				title: 'The maintenance nobody budgets',
+				body: 'A tool that took eight engineer-months to build consumes a permanent share of an engineer to keep alive. Vendors quote that line item; internal teams do not.'
 			},
 			{
-				title: 'Renewal escalation and exit cost',
-				body: 'Vendor pricing escalates; so does the cost of leaving. The comparison is only fair over the same horizon, with the same discount rate.'
+				title: 'The price after year one',
+				body: 'Vendor pricing rises at renewal, and so does the cost of leaving. Compare both sides over the same years, at the same discount rate.'
 			}
 		],
 		tools: ['build-vs-buy', 'no-code-terminator'],
@@ -116,21 +121,21 @@ export const VERTICALS: Vertical[] = [
 		position: 4,
 		title: 'Compute & Workstation Capital',
 		shortLabel: 'Compute',
-		question: 'Should I buy high-end local silicon or rent cloud GPU clusters?',
+		question: 'Should I buy the hardware, or rent it by the hour?',
 		coreProblem:
-			'Local versus cloud is a utilisation question disguised as a hardware question. A $9k workstation that runs 40 hours a month costs more per GPU-hour than on-demand cloud; one that runs 300 hours a month beats it comfortably. The answer flips on hours, power, resale value and how long you keep the box.',
+			'Local versus cloud is a question about hours used, dressed up as a question about hardware. A $9,000 workstation that runs 40 hours a month costs more per GPU-hour than on-demand cloud; one that runs 300 hours a month beats it comfortably. The answer flips on hours, power, resale value and how long you keep the box.',
 		topics: [
 			{
 				title: 'Cost per GPU-hour, owned',
-				body: 'Purchase price minus resale, plus power and maintenance, divided by the hours you will actually use it before it is obsolete.'
+				body: 'Purchase price minus resale, plus power and maintenance, divided by the hours you will actually run before the hardware is obsolete.'
 			},
 			{
-				title: 'The idle-silicon penalty',
-				body: 'Cloud bills only when you run. Local hardware bills every month whether or not the model is training, which is why low utilisation quietly loses.'
+				title: 'Idle hardware still bills',
+				body: 'Cloud bills only while you compute. Owned hardware bills every month whether or not it is running, which is why low use quietly loses.'
 			},
 			{
-				title: 'Repair vs. replace',
-				body: 'The same capital logic applied to the laptop or workstation already on the desk — when a repair is rational and when it is a sunk-cost argument.'
+				title: 'Repair or replace',
+				body: 'The same arithmetic applied to the laptop already on the desk: when a repair buys real years, and when it is a sunk cost talking.'
 			}
 		],
 		tools: ['gpu-breakeven', 'tech-debt-repair'],
@@ -141,21 +146,21 @@ export const VERTICALS: Vertical[] = [
 		position: 5,
 		title: 'Cross-Border & Relocation',
 		shortLabel: 'Cross-Border',
-		question: 'Is moving jurisdictions a real tax arbitrage or a hidden double-tax trap?',
+		question: 'If I move country, what is left of my pay after both tax systems?',
 		coreProblem:
-			'A move abroad is usually sold on cost of living and a headline tax rate. The real result depends on treaty mechanics: FEIE versus foreign tax credit, social-security totalisation, where equity vests, tax equalisation and what the currency does over five years.',
+			'A move abroad is sold on cost of living and a headline tax rate. What you keep depends on the treaty, which credit you claim, where your shares vest, what the employer equalises, and what the currency does over five years.',
 		topics: [
 			{
-				title: 'FEIE vs. FTC',
-				body: 'The exclusion and the credit are not interchangeable, and the better one changes with income mix, housing and equity.'
+				title: 'The exclusion or the credit',
+				body: 'Two ways to avoid paying tax twice, and which one wins depends on your income mix, housing and shares. They are not interchangeable.'
 			},
 			{
-				title: 'Where the equity is taxed',
-				body: 'RSUs and options can be sourced to the work location in the year they vest — a relocation mid-vest splits the same grant across two tax regimes.'
+				title: 'Where the shares are taxed',
+				body: 'Equity can be taxed where you worked in the year it vested. A move mid-vest splits one grant across two tax systems.'
 			},
 			{
-				title: 'Relocation payback',
-				body: 'Moving costs, temporary housing and a spouse’s lost income are a capital outlay against future cash flow. It has a payback period, and it can be negative.'
+				title: 'What the move costs before it pays',
+				body: 'Moving costs, temporary housing and a partner’s lost income are money out before any raise arrives. That has a payback period, and it can be negative.'
 			}
 		],
 		tools: ['expat-evaluator', 'relocation-cost'],
@@ -166,21 +171,21 @@ export const VERTICALS: Vertical[] = [
 		position: 6,
 		title: 'High-Impact Personal Capital',
 		shortLabel: 'Personal',
-		question: 'Am I paying for real utility or wasting investment capital on lifestyle drag?',
+		question: 'Am I paying for something I use, or for something I stopped noticing?',
 		coreProblem:
-			'The biggest household decisions are not investment picks. They are the lease you want to break, the rent-versus-buy call, and the recurring subscriptions and appliances that quietly consume the capital that would otherwise compound. Each has a deterministic answer.',
+			'The largest household decisions are not investment picks. They are the lease you want to break, the rent-or-buy call, the machine on the counter and the subscriptions you stopped noticing. Each one has an answer you can compute before you commit.',
 		topics: [
 			{
-				title: 'Lease break economics',
-				body: 'Early-termination clauses, remaining rent, reletting fees and offsets. The penalty is a number you can compute before you sign.'
+				title: 'Breaking a lease',
+				body: 'The termination clause, the rent still owed, the reletting fee and what the deposit can legally cover are all knowable before you sign.'
 			},
 			{
-				title: 'Rent vs. buy with opportunity cost',
-				body: 'A mortgage builds equity and consumes cash. The comparison is the net worth of an owner after selling costs against a renter who invests the down payment and the monthly difference.'
+				title: 'Rent or buy',
+				body: 'A mortgage builds equity and consumes cash. The comparison is what the owner keeps after selling costs against what the renter has after investing the down payment and the monthly difference.'
 			},
 			{
-				title: 'Cost-per-use discipline',
-				body: 'A $3,000 espresso machine is a bargain at four shots a day and a lifestyle tax at four a month. The same arithmetic applies to hobby hardware and subscription creep.'
+				title: 'Cost per use',
+				body: 'A $3,000 espresso machine is a bargain at four shots a day and a waste at four a month. The same arithmetic applies to hobby hardware and subscription creep.'
 			}
 		],
 		tools: ['rent-vs-buy', 'lease-break', 'money-flow', 'coffee-arbitrage'],

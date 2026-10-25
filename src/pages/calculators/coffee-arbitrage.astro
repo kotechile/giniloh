@@ -12,30 +12,30 @@ const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.
 
 const config = {
 	title: 'Home Espresso Cost-per-Use Calculator',
-	description: 'Compare the TCO of a premium espresso setup against daily café runs or capsule systems.',
-	eyebrow: 'Asset Cost-per-Use',
+	description: 'The machine, its beans and its upkeep, against what the café charges per cup.',
+	eyebrow: 'Coffee, per cup',
 
-	stickerLabel: 'Sticker Price (Upfront Cost)',
-	stickerHelp: 'The initial cost of your espresso machine, grinder, and initial accessories.',
+	stickerLabel: 'What the setup costs',
+	stickerHelp: 'Machine, grinder and the accessories that come with them.',
 	stickerDefault: 3000,
 
-	frequencyLabel: 'Weekly Usage Frequency',
-	frequencyHelp: 'How many espresso drinks you expect to make at home each week.',
+	frequencyLabel: 'Cups a week',
+	frequencyHelp: 'Drinks you will really make at home each week.',
 	frequencyUnit: 'drinks / wk',
 	frequencyDefault: 5,
 	frequencyStep: 1,
 	frequencyMin: 1,
 	frequencyMax: 42,
 
-	outsourceLabel: 'Outsourced Cost (Café Price)',
+	outsourceLabel: 'What your café charges',
 	outsourceHelp: 'The average price you pay per drink at your local coffee shop.',
 	outsourceDefault: 6.00,
 
-	secondaryLabel: 'Upkeep / Internal Cost (Per Use)',
+	secondaryLabel: 'Beans and upkeep, per cup',
 	secondaryHelp: 'Cost of coffee beans, milk, water filters, and descaling chemicals per drink.',
 	secondaryDefault: 1.50,
 
-	lifespanLabel: 'Target Lifespan Horizon',
+	lifespanLabel: 'How many years you keep it',
 	lifespanHelp: 'How many years you expect to own and use this setup.',
 	lifespanDefault: 3,
 
@@ -77,13 +77,13 @@ const config = {
 		}
 	],
 
-	buyVerdictTitle: 'Invest in the Setup',
-	buyVerdictSubtitle: 'Ownership is financially superior. Your home drink cost is lower than the local café rate, successfully amortizing the CapEx.',
-	skipVerdictTitle: 'Keep Visiting the Café',
-	skipVerdictSubtitle: 'Café runs are financially superior. Your weekly coffee density is not high enough to amortize the setup and maintenance costs.',
+	buyVerdictTitle: 'The machine wins',
+	buyVerdictSubtitle: 'Your home cup costs less than the café, at the number of drinks you entered. The setup pays for itself before you replace it.',
+	skipVerdictTitle: 'The café wins',
+	skipVerdictSubtitle: 'At this many drinks a week, the setup and its upkeep cost more than the café. You would need to drink more to make it pay.',
 
 	aspirationalThreshold: 14,
-	aspirationalWarning: 'Optimistic frequency alert: Preparing 14+ drinks/week at home requires significant cleaning, maintenance, and dial-in labor. Ensure this aligns with your routine.',
+	aspirationalWarning: 'Fourteen drinks a week is a daily habit, with cleaning and dialling in behind it. Count only what you will actually make.',
 
 	tutorials: [
 		{ label: 'Espresso Dial-in Guide', url: '/tutorials/espresso-dial-in/' },
@@ -110,8 +110,8 @@ const post = await fetchPostBySlug('is-a-3000-espresso-maker-machine-worth-it');
 ---
 
 <BaseLayout
-	title="Home Espresso Cost-per-Use Calculator | Gini Loh"
-	description="Determine if investing in a premium home espresso setup beats your daily café runs. Real-time cost-per-use calculator."
+	title="Espresso Cost per Cup: Machine vs. Café | Gini Loh"
+	description="A $3,000 machine is cheap at four shots a day and expensive at four a month. Enter your real habit and see the cost per cup."
 >
 	<link slot="head" rel="canonical" href={new URL('/calculators/coffee-arbitrage/', Astro.site).toString()} />
 	{schema ? <JsonLd slot="head" data={schema} /> : null}

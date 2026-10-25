@@ -1,6 +1,18 @@
+/**
+ * The calculator register: what each tool is called, what question it answers, and the one line a
+ * browsing visitor reads before deciding whether to open it.
+ *
+ * WHY THE COPY LOOKS LIKE THIS
+ * These cards are the shop window. They used to read like a structured-products term sheet ("Net
+ * Yield", "Amortization Simulator", "Section 415(c)") and the visitors who need the tool most — the
+ * person with an offer letter or a lease — could not tell it was for them. `title` is now the plain
+ * name of the decision, `utility` is the question in six words, and `description` opens with a
+ * number or a rule instead of a category. Search terms live in `keywords` and in the page H1, not
+ * here, so the plain name costs nothing in search.
+ */
 export const calculatorTools = [
 	{
-		title: 'RSU Hold vs. Sell & Mega Backdoor Roth Simulator',
+		title: 'RSU Hold vs. Sell',
 		slug: 'rsu-hold-vs-sell',
 		href: '/calculators/rsu-hold-vs-sell/',
 		status: 'Live',
@@ -9,8 +21,8 @@ export const calculatorTools = [
 		outputType: 'Portfolio Risk & Tax Matrix',
 		iconType: 'chart-line',
 		description:
-			'2026 IRS statutory model quantifying employer concentration risk, double-jeopardy exposure, and $72,000 Section 415(c) Mega Backdoor Roth asset allocation.',
-		utility: 'Simulate RSU vest liquidation vs holding and Mega Backdoor Roth sheltering',
+			'Your shares are already taxed as income the day they vest. This tells you whether keeping them beats selling and putting the money somewhere less tied to your employer.',
+		utility: 'Sell on vest, or hold?',
 		category: 'FinanceApplication',
 		keywords: [
 			'rsu hold vs sell calculator',
@@ -22,17 +34,17 @@ export const calculatorTools = [
 	},
 
 	{
-		title: 'W-2 vs. 1099 / S-Corp Net Yield Calculator',
+		title: 'W-2 vs. 1099 vs. S-Corp',
 		slug: 'w2-vs-1099-scorp-calculator',
 		href: '/calculators/w2-vs-1099-scorp-calculator/',
 		status: 'Live',
 		accent: 'emerald',
 		domainCategory: 'Career',
-		outputType: '3-Way Economic Yield Matrix',
+		outputType: '3-Way Net Pay Comparison',
 		iconType: 'chart-line',
 		description:
-			'2026 IRS statutory model comparing W-2 salary against 1099 Sole Prop and S-Corp entity structures. Models SE tax arbitrage, Solo 401(k) caps, and QBI deductions.',
-		utility: 'Compare W-2 vs 1099 vs S-Corp net yield',
+			'The same work, paid three ways. See what each structure leaves you after tax, health cover, retirement limits and the unpaid admin hours it adds.',
+		utility: 'Which structure pays more?',
 		category: 'FinanceApplication',
 		keywords: [
 			'w2 vs 1099 calculator',
@@ -44,7 +56,7 @@ export const calculatorTools = [
 	},
 
 	{
-		title: 'Secondary Tender vs. IPO Horizon Calculator',
+		title: 'Secondary Tender vs. IPO',
 		slug: 'secondary-tender-calculator',
 		href: '/calculators/secondary-tender-calculator/',
 		status: 'Live',
@@ -53,8 +65,8 @@ export const calculatorTools = [
 		outputType: 'After-Tax Exit Comparison',
 		iconType: 'matrix',
 		description:
-			'Model a private secondary or tender offer against the IPO you are waiting for: after-tax cash today, probability-weighted and discounted exit proceeds, and the break-even IPO price.',
-		utility: 'Price a tender offer vs. holding for liquidity',
+			'An offer for your private shares is cash today at a discount; waiting is a bet on an exit that may never happen. Compare both after tax, in today\u2019s dollars.',
+		utility: 'Cash now, or wait?',
 		category: 'FinanceApplication',
 		keywords: [
 			'secondary tender offer calculator',
@@ -66,7 +78,7 @@ export const calculatorTools = [
 	},
 
 	{
-		title: 'Build-vs-Buy Amortization Simulator',
+		title: 'Build vs. Buy',
 		slug: 'build-vs-buy',
 		href: '/calculators/build-vs-buy/',
 		status: 'Live',
@@ -75,8 +87,8 @@ export const calculatorTools = [
 		outputType: 'Discounted TCO Comparison',
 		iconType: 'table',
 		description:
-			'Compare internal tooling against a vendor on loaded engineering time, the permanent maintenance fraction, infrastructure and renewal escalation, over one discounted horizon.',
-		utility: 'Compare build TCO against vendor TCO',
+			'A build case usually counts the licence it avoids and forgets the engineer-years it spends. This prices both sides over the same horizon, maintenance included.',
+		utility: 'Build it, or pay for it?',
 		category: 'FinanceApplication',
 		keywords: [
 			'build vs buy calculator',
@@ -88,7 +100,7 @@ export const calculatorTools = [
 	},
 
 	{
-		title: 'Local Workstation vs. Cloud GPU Break-even',
+		title: 'Local GPU vs. Cloud',
 		slug: 'gpu-breakeven',
 		href: '/calculators/gpu-breakeven/',
 		status: 'Live',
@@ -97,8 +109,8 @@ export const calculatorTools = [
 		outputType: 'Cost per GPU-Hour',
 		iconType: 'server',
 		description:
-			'Compute cost per GPU-hour for owned hardware — purchase, power, maintenance and residual value — against on-demand cloud rates at your real utilisation, with the break-even hours per month.',
-		utility: 'Find the local vs cloud GPU break-even',
+			'A workstation is a purchase; cloud GPUs are a bill. This works out the cost per GPU-hour each way, at the hours you will run and the years you will keep it.',
+		utility: 'Own the hardware, or rent?',
 		category: 'FinanceApplication',
 		keywords: [
 			'local vs cloud gpu calculator',
@@ -110,7 +122,7 @@ export const calculatorTools = [
 	},
 
 	{
-		title: 'Rent vs. Buy with Opportunity Cost',
+		title: 'Rent vs. Buy',
 		slug: 'rent-vs-buy',
 		href: '/calculators/rent-vs-buy/',
 		status: 'Live',
@@ -119,8 +131,8 @@ export const calculatorTools = [
 		outputType: 'Net Worth at Horizon',
 		iconType: 'chart-bar',
 		description:
-			'Run an owner and a renter to the same horizon: mortgage amortisation, tax, maintenance and selling costs against a portfolio funded by the down payment and the monthly difference.',
-		utility: 'Compare rent vs buy net worth',
+			'Renting is not money thrown away if the down payment gets invested. This runs both households to the same year and compares what each one is actually worth.',
+		utility: 'Buy the home, or rent and invest?',
 		category: 'FinanceApplication',
 		keywords: [
 			'rent vs buy calculator',
@@ -132,7 +144,7 @@ export const calculatorTools = [
 	},
 
 	{
-		title: 'Lease Break Penalty & Offset Estimator',
+		title: 'Lease Break Cost',
 		slug: 'lease-break',
 		href: '/calculators/lease-break/',
 		status: 'Live',
@@ -141,28 +153,28 @@ export const calculatorTools = [
 		outputType: 'Penalty Offset Matrix',
 		iconType: 'table',
 		description:
-			'Evaluate your early lease termination exposure. Calculate contract penalty structures, exit fees, and security deposit offsets.',
-		utility: 'Calculate renter exit costs',
+			'What walking out early costs: the termination clause, the rent still owed, the reletting fee and what your deposit can legally cover.',
+		utility: 'What leaving early costs',
 		category: 'FinanceApplication',
 		keywords: ['lease break penalty calculator', 'early lease termination penalty', 'lease break penalty estimator']
 	},
 	{
-		title: 'Job-Hop vs. Retention Compensation Calculator',
+		title: 'Job-Hop vs. Staying',
 		slug: 'raise-velocity',
 		href: '/calculators/raise-velocity/',
 		status: 'Live',
 		accent: 'cyan',
 		domainCategory: 'Career',
-		outputType: 'Cumulative Compounding Curve',
+		outputType: 'Cumulative Earnings Curve',
 		iconType: 'chart-line',
 		description:
-			'Compare traditional 3% annual raises vs. strategic job-hops yielding 15-20% bumps, projecting 10-year cumulative earnings.',
-		utility: 'Evaluate career compensation options',
+			'Staying earns about 3% a year; changing employer earns 10-20% in one move. This projects both over ten years, including the equity you forfeit by leaving.',
+		utility: 'Move jobs, or stay?',
 		category: 'FinanceApplication',
 		keywords: ['should I job hop calculator', 'job-hop calculator', 'job hop vs retention calculator', 'salary projection']
 	},
 	{
-		title: 'Total Compensation & Equity Visualizer',
+		title: 'Total Compensation',
 		slug: 'total-comp',
 		href: '/calculators/total-comp/',
 		status: 'Live',
@@ -171,13 +183,13 @@ export const calculatorTools = [
 		outputType: 'Vesting & Equity Schedule',
 		iconType: 'chart-bar',
 		description:
-			'Model base salary, cash bonuses, and vesting RSUs or options with stock growth assumptions to evaluate tech offers.',
-		utility: 'Evaluate RSUs and stock options values',
+			'Base salary is the smallest part of most tech offers. This adds bonus, equity and vesting so two offers can be compared on cash you can actually spend.',
+		utility: 'Which offer pays more?',
 		category: 'FinanceApplication',
 		keywords: ['equity compensation calculator', 'total compensation calculator', 'total compensation visualizer', 'rsu calculator', 'equity visualizer']
 	},
 	{
-		title: 'Automated Income Waterfall Simulator',
+		title: 'Where Your Paycheck Goes',
 		slug: 'money-flow',
 		href: '/calculators/money-flow/',
 		status: 'Proposed',
@@ -186,13 +198,13 @@ export const calculatorTools = [
 		outputType: 'Automated Routing Waterfall',
 		iconType: 'flow',
 		description:
-			'Visualize automated account routing: from checking, through retirement matches, HSAs, and index fund allocation.',
-		utility: 'Simulate automated investing systems',
+			'Map every dollar from the paycheck to the account it reaches, then see what a different order is worth over ten years.',
+		utility: 'Where each paycheck lands',
 		category: 'FinanceApplication',
 		keywords: ['total compensation visualizer', 'money flow flowchart', 'automated investing', 'portfolio flow']
 	},
 	{
-		title: 'Career Relocation Cost & Payback Calculator',
+		title: 'Relocation Payback',
 		slug: 'relocation-cost',
 		href: '/calculators/relocation-cost/',
 		status: 'Live',
@@ -201,28 +213,28 @@ export const calculatorTools = [
 		outputType: 'Payback Horizon Timeline',
 		iconType: 'timeline',
 		description:
-			'Find out how many months of a new salary bump it takes to break even on moving costs, lease breaks, and new deposits.',
-		utility: 'Calculate relocation payback period',
+			'Moving for a job costs money before it pays any. This finds how many months of the after-tax raise it takes to recover the move.',
+		utility: 'Months to pay back the move',
 		category: 'FinanceApplication',
 		keywords: ['relocation cost benefit calculator', 'relocation payback calculator', 'moving cost payback', 'relocation calculator']
 	},
 	{
-		title: 'Home Espresso Cost-per-Use Calculator',
+		title: 'Espresso Cost per Cup',
 		slug: 'coffee-arbitrage',
 		href: '/calculators/coffee-arbitrage/',
 		status: 'Live',
 		accent: 'emerald',
 		domainCategory: 'Lifestyle',
-		outputType: 'Per-Cup Amortization Model',
+		outputType: 'Per-Cup Cost Model',
 		iconType: 'chart-line',
 		description:
-			'Determine if investing in a premium home espresso setup beats your daily café runs. Real-time cost-per-use calculator.',
-		utility: 'Evaluate espresso machine cost-per-use',
+			'A $3,000 machine is cheap at four shots a day and expensive at four a month. Enter the habit you actually have and see the cost per cup.',
+		utility: 'Cost per cup, at your habit',
 		category: 'FinanceApplication',
 		keywords: ['espresso cost per use calculator', 'home espresso cost-per-use', 'home espresso vs cafe cost', 'espresso machine cpu']
 	},
 	{
-		title: 'Tech Repair vs. Replace Optimizer',
+		title: 'Repair vs. Replace',
 		slug: 'tech-debt-repair',
 		href: '/calculators/tech-debt-repair/',
 		status: 'Live',
@@ -231,13 +243,13 @@ export const calculatorTools = [
 		outputType: 'Repair vs. Replace Index',
 		iconType: 'gauge',
 		description:
-			'Calculate if repairing a 3-to-5-year-old laptop or phone is a smart fix or a financial liability. Uses the adapted consumer 1,500 index rule.',
-		utility: 'Calculate repair vs replace index score',
+			'A repair that buys two more years is cheap; one that buys six months is not. Compare the quote against the replacement price, per year of use.',
+		utility: 'Fix it, or replace it?',
 		category: 'FinanceApplication',
 		keywords: ['technical debt calculator', 'repair vs replace calculator', 'tech repair vs replace', 'laptop screen repair cost']
 	},
 	{
-		title: 'Tinkering Tax vs. SaaS Upgrade Calculator',
+		title: 'Spreadsheet vs. Real Software',
 		slug: 'no-code-terminator',
 		href: '/calculators/no-code-terminator/',
 		status: 'Live',
@@ -246,8 +258,8 @@ export const calculatorTools = [
 		outputType: 'Time-Tax vs. SaaS Audit',
 		iconType: 'clock',
 		description:
-			'Calculate the hidden tinkering tax of manual workarounds and sheets vs. upgrading to a centralized SaaS platform.',
-		utility: 'Calculate time tax vs premium software cost',
+			'Rebuilding the same automation every month is a cost even when nobody invoices it. Price the hours against the subscription that replaces them.',
+		utility: 'Hours lost, or subscription',
 		category: 'FinanceApplication',
 		keywords: ['no-code total cost calculator', 'tinkering tax calculator', 'SaaS burn rate vs build', 'no-code workaround']
 	},
@@ -261,13 +273,13 @@ export const calculatorTools = [
 		outputType: 'Task Automation Radar',
 		iconType: 'radar',
 		description:
-			'Find out how much of your job AI can already do — 1,000+ careers broken down task by task, plus a simulator for what changing your week would do.',
-		utility: 'Analyze career AI risk & upskill',
+			'See which parts of your job a current model can already do, task by task, and what changing one part of your week would do to the risk.',
+		utility: 'What AI can do in your job',
 		category: 'FinanceApplication',
 		keywords: ['career ai risk', 'occupation vulnerability', 'ai automation calculator', 'future proof career']
 	},
 	{
-		title: 'Expat Financial & International Tax Evaluator',
+		title: 'Expat Tax',
 		slug: 'expat-evaluator',
 		href: '/calculators/expat-evaluator/',
 		status: 'Live',
@@ -276,8 +288,8 @@ export const calculatorTools = [
 		outputType: '5-Year Wealth & Tax Model',
 		iconType: 'globe',
 		description:
-			'Compare cash flow and 5-year wealth impact of an international relocation (e.g. US to Spain). Model Beckham Law tax regime, US FEIE/FTC, tax equalization, and FX liability risks.',
-		utility: 'Evaluate international relocation tax & wealth impact',
+			'A move abroad is sold on the headline tax rate. This compares what you keep after both countries have taxed you, measured over five years.',
+		utility: 'What you keep after both taxes',
 		category: 'FinanceApplication',
 		keywords: [
 			'expat financial evaluator',

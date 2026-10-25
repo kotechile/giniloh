@@ -12,29 +12,29 @@ const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.
 
 const config = {
 	title: 'Tinkering Tax vs. SaaS Upgrade Calculator',
-	description: 'Determine if managing business pipelines with a fragile web of Notion and Zapier beats upgrading to HubSpot.',
-	eyebrow: 'Tinkering Tax Audit',
+	description: 'The hours the workaround costs, against the subscription that replaces it.',
+	eyebrow: 'The workaround audit',
 
-	hoursLabel: 'Monthly Troubleshooting Time',
-	hoursHelp: 'Hours spent fixing broken integrations, syncing contacts, and resolving data discrepancies.',
+	hoursLabel: 'Hours lost per month',
+	hoursHelp: 'Fixing broken automations, re-syncing contacts and chasing duplicate records.',
 	hoursDefault: 8,
 	hoursUnit: 'hrs / mo',
 	hoursMin: 1,
 	hoursMax: 80,
 	hoursStep: 1,
 
-	timeValueLabel: 'Loaded Opportunity Rate',
-	timeValueHelp: 'The average hourly labor value of the person troubleshooting these sheets and API disconnects.',
+	timeValueLabel: 'What your hour is worth',
+	timeValueHelp: 'What an hour of the person doing this work costs, salary and overhead included.',
 	timeValueDefault: 75,
 
-	premiumLabel: 'Unified Platform Premium Cost',
+	premiumLabel: 'Extra cost of proper software',
 	premiumHelp: 'The incremental monthly fee of upgrading to a centralized CRM platform (like HubSpot).',
 	premiumDefault: 450,
 
-	buyVerdictTitle: 'Upgrade to Centralized Platform',
-	buyVerdictSubtitle: 'Adopting a unified CRM is mathematically superior. Your monthly time-drag cost exceeds the platform subscription premium, eliminating the tinkering tax.',
-	waitVerdictTitle: 'Keep the Fragile Setup',
-	waitVerdictSubtitle: 'Continue using the current workaround. Your monthly time-drain cost is lower than the premium subscription price. Keep monitoring scaling friction.'
+	buyVerdictTitle: 'Move to proper software',
+	buyVerdictSubtitle: 'The hours you lose each month cost more than the platform does. The workaround is the expensive option.',
+	waitVerdictTitle: 'Keep the workaround',
+	waitVerdictSubtitle: 'The hours lost cost less than the platform right now. Re-check when the volume grows.',
 };
 
 const faqItems = [
@@ -56,8 +56,8 @@ const post = await fetchPostBySlug('zapier-notion-integration-calculate-your-tin
 ---
 
 <BaseLayout
-	title="Tinkering Tax vs. SaaS Upgrade Calculator | Gini Loh"
-	description="Calculate the hidden tinkering tax of manual workarounds and sheets vs upgrading to HubSpot CRM. Focus optimization calculator."
+	title="Spreadsheet vs. Real Software: Workaround Cost | Gini Loh"
+	description="Rebuilding the same automation every month is a cost even when nobody invoices it. Price the hours against the software that replaces them."
 >
 	<link slot="head" rel="canonical" href={new URL('/calculators/no-code-terminator/', Astro.site).toString()} />
 	{schema ? <JsonLd slot="head" data={schema} /> : null}

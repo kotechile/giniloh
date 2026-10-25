@@ -12,34 +12,34 @@ const schema = calculator && Astro.site ? getCalculatorSchema(calculator, Astro.
 
 const config = {
 	title: 'Tech Repair vs. Replace Optimizer',
-	description: 'Determine if repairing a 3-to-5-year-old laptop or phone makes financial sense vs. buying a replacement.',
+	description: 'A repair that buys two more years is cheap; one that buys six months is not.',
 	eyebrow: 'Repair vs. Replace',
 
-	ageLabel: 'Device Age',
+	ageLabel: 'How old is it',
 	ageHelp: 'How many years old the phone or laptop is.',
 	ageDefault: 4,
 	ageUnit: 'Yrs Old',
 	ageMin: 1,
 	ageMax: 10,
 
-	repairLabel: 'Immediate Repair Quote',
-	repairHelp: 'The technician/manufacturer repair estimate for screen, battery, or keyboard fixes.',
+	repairLabel: 'Repair quote',
+	repairHelp: 'The shop’s quote for the screen, battery or keyboard.',
 	repairDefault: 450,
 	repairMin: 50,
 	repairStep: 25,
 
 	threshold: 1500, // Consumer electronics threshold
 
-	repairVerdictTitle: 'Repair the Device',
-	repairVerdictSubtitle: 'Your device index is in the safe zone. Patching this unit is mathematically efficient compared to paying for a full modern replacement.',
-	replaceVerdictTitle: 'Replace the Device',
-	replaceVerdictSubtitle: 'Your device index exceeds the 1,500 threshold. Depreciating tech stack assets become financial money pits; upgrade to a modern baseline instead.'
+	repairVerdictTitle: 'Repair it',
+	repairVerdictSubtitle: 'The repair is cheap for a device this age. Fix it and put the rest toward the replacement you did not have to buy.',
+	replaceVerdictTitle: 'Replace it',
+	replaceVerdictSubtitle: 'Priced per year of use, a replacement costs less than this repair on a device this old.'
 };
 
 const faqItems = [
 	{
 		question: 'What is the 1,500 threshold?',
-		answer: 'This is the standard index limit for consumer electronics (phones, laptops). It is calculated by multiplying the device age in years by the repair cost. If the score exceeds 1,500, a replacement is mathematically superior.'
+		answer: 'Age in years multiplied by the repair cost. Above 1,500, the money is better spent on a replacement. It is a long-standing rule of thumb for consumer electronics, not a tax rule.'
 	},
 	{
 		question: 'Why does age matter so much?',
@@ -55,8 +55,8 @@ const post = await fetchPostBySlug('replace-laptop-screen-let-this-decision-engi
 ---
 
 <BaseLayout
-	title="Tech Repair vs. Replace Optimizer | Gini Loh"
-	description="Calculate if repairing an old laptop or phone is a smart fix or a financial liability. Uses the adapted consumer 1,500 index rule."
+	title="Repair or Replace a Laptop or Phone | Gini Loh"
+	description="A repair that buys two more years is cheap; one that buys six months is not. Compare the quote with a replacement, per year of use."
 >
 	<link slot="head" rel="canonical" href={new URL('/calculators/tech-debt-repair/', Astro.site).toString()} />
 	{schema ? <JsonLd slot="head" data={schema} /> : null}

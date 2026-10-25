@@ -1,4 +1,7 @@
 ---
+import { getPlainLanguage } from '../../lib/calculators/plainLanguage';
+import PlainLanguageAnchor from './PlainLanguageAnchor.astro';
+
 interface Props {
 	eyebrow: string;
 	title: string;
@@ -12,6 +15,9 @@ const { eyebrow, title, description, trustBadge, compact = false } = Astro.props
 
 const pathname = Astro.url.pathname;
 const slug = pathname.split('/').filter(Boolean).pop() || '';
+// The decision in the reader's words, rendered above the method paragraph rather than inside the
+// calculator: a visitor should learn what the page is for before they learn how it computes.
+const plain = getPlainLanguage(slug);
 const siteUrl = Astro.site?.toString().replace(/\/$/, '') || 'https://giniloh.com';
 const embedCode = `<div class="giniloh-calculator-embed" data-calculator="${slug}"></div>\n<script src="${siteUrl}/embed.js" async></script>`;
 ---
@@ -39,7 +45,12 @@ const embedCode = `<div class="giniloh-calculator-embed" data-calculator="${slug
 		<div class="max-w-4xl">
 			<p class="section-eyebrow font-bold text-xs uppercase tracking-[0.25em] text-[#5F5B52]">{eyebrow}</p>
 			<h1 class="mt-4 text-5xl sm:text-6xl font-extrabold tracking-tight text-[#1A1A1A] leading-tight">{title}</h1>
-			<p class="mt-6 text-lg sm:text-xl leading-relaxed text-[#5E5E5E] font-normal">{description}</p>
+			{plain && (
+				<p class="mt-6 max-w-3xl text-xl font-semibold leading-snug text-[#1A1A1A] sm:text-2xl">
+					{plain.question}
+				</p>
+			)}
+			<p class="mt-4 max-w-3xl text-lg leading-relaxed text-[#5E5E5E] font-normal">{description}</p>
 			<div class="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-mono tracking-wider text-[#5F5B52] uppercase">
 				<div class="flex items-center gap-2 rounded-full border border-[#E5E5E5] bg-white px-3 py-1 text-[#5E5E5E] shadow-none">
 					<span class="inline-block h-2 w-2 rounded-full bg-[#5A7A8F]"></span>
@@ -53,6 +64,8 @@ const embedCode = `<div class="giniloh-calculator-embed" data-calculator="${slug
 
 	<div class={compact ? "mt-2 flex flex-col gap-10" : "mt-16 flex flex-col gap-16"}>
 		<div class="w-full">
+			<PlainLanguageAnchor slug={slug} showQuestion={compact} />
+
 			<slot name="calculator" />
 
 			<!-- Embed Block -->

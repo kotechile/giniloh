@@ -62,7 +62,7 @@ const itemListSchema = {
 	"@context": "https://schema.org",
 	"@type": "ItemList",
 	"name": "Gini Loh Calculators",
-	"description": "Centralized library of practical decision-intelligence tools for ambitious professionals.",
+	"description": "Free calculators for job offers, equity, rent versus buy, lease exits and household costs.",
 	"url": pageUrl,
 	"numberOfItems": calculatorTools.length,
 	"itemListElement": calculatorTools.map((tool, idx) => ({
@@ -94,24 +94,24 @@ const breadcrumbSchema = {
 ---
 
 <BaseLayout
-	title="Decision Calculators & Financial Tools | Gini Loh"
-	description="Free public interactive decision-intelligence calculators. Run the numbers on career relocation, raises, job-hopping compensation, equity value, and automated investments."
+	title="Calculator Library: Rent, Leases, Offers and Equity | Gini Loh"
+	description="Free calculators for the money decisions you make yourself: job offers and equity, rent versus buy, lease exits, moving abroad, repairs and cost per use. No signup."
 >
 	<link slot="head" rel="canonical" href={new URL('/calculators/', Astro.site).toString()} />
 	<JsonLd slot="head" data={itemListSchema} />
 	<JsonLd slot="head" data={breadcrumbSchema} />
 
 	<section class="pt-4">
-		<p class="section-eyebrow">Interactive Decision Engines</p>
+		<p class="section-eyebrow">Free calculators</p>
 		<h1 class="mt-4 max-w-4xl text-5xl font-black tracking-tight text-[#1A1A1A] sm:text-6xl leading-tight">
-			Run the numbers.<br />Eliminate the guesswork.
+			Run the numbers.<br />Before you commit.
 		</h1>
 		<p class="mt-6 max-w-3xl text-lg leading-relaxed text-[#5E5E5E]">
-			A centralized library of practical decision-intelligence tools for ambitious professionals. Evaluate career moves, project compounding raises, audit workflow tinkering taxes, and simulate automated wealth systems with live inputs.
+			Job offers, rent, leases, equity and repairs, priced with the numbers you actually have. Nothing to sign up for, and no input leaves your browser.
 		</p>
 		<div class="mt-6">
 			<a href="/calculators/interactive-assets/" class="inline-flex items-center gap-2 font-mono text-xs font-bold uppercase tracking-wider text-[#047857] hover:underline">
-				&rarr; Explore Embedded Interactive Micro-Assets
+				&rarr; Embed a calculator in your own article
 			</a>
 		</div>
 	</section>
@@ -139,7 +139,7 @@ const breadcrumbSchema = {
 							</p>
 						</div>
 						<a href={category.href} class="font-mono text-[0.66rem] font-bold uppercase tracking-[0.22em] text-[#5A7A8F] hover:text-[#1A1A1A]">
-							Open vertical &rarr;
+							Open this section &rarr;
 						</a>
 					</div>
 
@@ -157,8 +157,8 @@ const breadcrumbSchema = {
 										</span>
 									</div>
 									<h3 class="mt-6 text-2xl font-black tracking-tight text-[#1A1A1A]">{tool.title}</h3>
-									<p class="mt-3 font-mono text-xs uppercase tracking-[0.22em] text-[#475F73] font-bold">{tool.utility}</p>
-									<p class="mt-3 flex-1 text-sm leading-relaxed text-[#5E5E5E]">{tool.description}</p>
+									<p class="mt-3 text-sm font-bold text-[#1A1A1A]">{tool.utility}</p>
+									<p class="mt-2 flex-1 text-sm leading-relaxed text-[#5E5E5E]">{tool.description}</p>
 									<a
 										href={tool.href}
 										class="mt-6 inline-flex items-center gap-1 text-sm font-bold text-[#1A1A1A] hover:text-[#475F73] transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1A1A1A] after:absolute after:inset-0 after:z-10"

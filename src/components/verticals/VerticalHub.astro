@@ -32,7 +32,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
 >
 	<main class="mx-auto max-w-5xl px-4 pb-24 pt-12 sm:px-6 lg:px-8">
 		<p class="font-mono text-[0.68rem] font-bold uppercase tracking-[0.28em] text-ink-muted">
-			Vertical {pad(vertical.position)} of {pad(VERTICALS.length)}
+			Section {pad(vertical.position)} of {pad(VERTICALS.length)}
 		</p>
 		<h1 class="mt-4 max-w-3xl text-4xl font-extrabold leading-[1.08] tracking-tight text-ink sm:text-5xl">
 			{vertical.title}
@@ -47,7 +47,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
 		</section>
 
 		<section class="mt-16">
-			<h2 class="text-2xl font-black tracking-tight text-ink">What this vertical answers</h2>
+			<h2 class="text-2xl font-black tracking-tight text-ink">What you can work out here</h2>
 			<ul class="mt-8 grid gap-8 sm:grid-cols-2">
 				{vertical.topics.map((topic, i) => (
 					<li class="border-t border-line pt-5">
@@ -65,7 +65,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
 			flagship && (
 				<section class="mt-16 border-t border-line pt-10">
 					<h2 class="font-mono text-[0.68rem] font-bold uppercase tracking-[0.28em] text-ink-muted">
-						Flagship engine
+						Start here
 					</h2>
 					<a
 						href={flagship.href}
@@ -74,7 +74,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
 						<h3 class="text-2xl font-extrabold tracking-tight text-ink">{flagship.title}</h3>
 						<p class="mt-2 text-base leading-relaxed text-ink-body">{flagship.description}</p>
 						<p class="mt-4 font-mono text-[0.68rem] font-bold uppercase tracking-[0.24em] text-[var(--accent-line)]">
-							Open the engine &rarr;
+							Open the calculator &rarr;
 						</p>
 					</a>
 				</section>
@@ -83,7 +83,7 @@ const pad = (n: number) => String(n).padStart(2, '0');
 
 		<section class="mt-16">
 			<h2 class="font-mono text-[0.68rem] font-bold uppercase tracking-[0.28em] text-ink-muted">
-				Every engine in this vertical
+				Every calculator in this section
 			</h2>
 			<ul class="mt-4 divide-y divide-line border-y border-line">
 				{
@@ -102,13 +102,13 @@ const pad = (n: number) => String(n).padStart(2, '0');
 			</ul>
 		</section>
 
-		<nav class="mt-16 flex flex-col gap-4 border-t border-line pt-8 sm:flex-row sm:justify-between" aria-label="Adjacent verticals">
+		<nav class="mt-16 flex flex-col gap-4 border-t border-line pt-8 sm:flex-row sm:justify-between" aria-label="Adjacent sections">
 			<a href={`/${previous.slug}/`} class="group no-underline">
-				<span class="font-mono text-[0.64rem] font-bold uppercase tracking-[0.24em] text-ink-muted">&larr; Vertical {pad(previous.position)}</span>
+				<span class="font-mono text-[0.64rem] font-bold uppercase tracking-[0.24em] text-ink-muted">&larr; Section {pad(previous.position)}</span>
 				<span class="mt-1 block text-base font-bold text-ink group-hover:text-[var(--accent-line)]">{previous.title}</span>
 			</a>
 			<a href={`/${next.slug}/`} class="group no-underline sm:text-right">
-				<span class="font-mono text-[0.64rem] font-bold uppercase tracking-[0.24em] text-ink-muted">Vertical {pad(next.position)} &rarr;</span>
+				<span class="font-mono text-[0.64rem] font-bold uppercase tracking-[0.24em] text-ink-muted">Section {pad(next.position)} &rarr;</span>
 				<span class="mt-1 block text-base font-bold text-ink group-hover:text-[var(--accent-line)]">{next.title}</span>
 			</a>
 		</nav>
