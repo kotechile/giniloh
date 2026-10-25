@@ -4,6 +4,7 @@ import JsonLd from '../components/JsonLd.astro';
 import { productCtaFor } from '../lib/product-cta';
 import { fetchAllPosts } from '../lib/wordpress';
 import { getKeyStat } from '../lib/key-stats';
+import ToolRail from '../components/calculators/ToolRail.astro';
 
 export async function getStaticPaths() {
   const posts = await fetchAllPosts(100);
@@ -236,15 +237,8 @@ const breadcrumbSchema = {
             </div>
           )}
 
-          <div class="rounded-3xl border border-[#E5E5E5] bg-white p-8">
-            <h3 class="mb-4 font-mono text-[10px] uppercase tracking-[0.2em] text-[#5F5B52]">Run your own numbers</h3>
-            <p class="text-sm leading-relaxed text-[#5E5E5E]">
-              This article works through the maths once. The calculators take your figures and do it again.
-            </p>
-            <a href="/calculators/" class="mt-6 block w-full rounded-2xl bg-[#1A1A1A] px-6 py-4 text-center text-sm font-bold text-white transition-all hover:bg-[#333333] active:scale-95">
-              Browse the calculators
-            </a>
-          </div>
+          <!-- Every calculator, with its mark. See components/calculators/ToolRail.astro. -->
+          <ToolRail />
 
           <!-- Share/Action Tool -->
           <div class="p-6 rounded-2xl border border-gray-200 bg-gray-50/50 text-center">

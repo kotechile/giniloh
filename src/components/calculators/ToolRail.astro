@@ -1,0 +1,63 @@
+---
+/**
+ * The calculator rail that rides beside every article.
+ *
+ * The article works the arithmetic once, in prose. This is the other half of that deal: the same
+ * question, live, with the reader's numbers. It used to be a single "Browse the calculators" button,
+ * which asked a reader who had just finished a piece about lease penalties to go hunting for the
+ * lease calculator. Every tool is listed instead, with its mark, so the relevant one is one click
+ * from the sentence that raised it.
+ *
+ * Design: bone stock against the white cards around it, so the rail reads as a different kind of
+ * object rather than another content card. Tiles are steel (the interactive accent), ink on hover.
+ */
+import { getPlainLanguage } from '../../lib/calculators/plainLanguage';
+import { calculatorTools } from '../../lib/calculators/metadata';
+import ToolIcon from './ToolIcon.astro';
+---
+
+<section
+	aria-labelledby="tool-rail-heading"
+	class="rounded-3xl border border-[#E5E5E5] bg-[#F4F1E8] p-6 lg:max-h-[calc(100vh-7rem)] lg:overflow-y-auto lg:overscroll-contain [scrollbar-width:thin]"
+>
+	<h3 id="tool-rail-heading" class="font-mono text-[10px] uppercase tracking-[0.2em] text-[#5F5B52]">
+		Run your own numbers
+	</h3>
+	<p class="mt-2 text-[0.8rem] leading-relaxed text-[#5E5E5E]">
+		This article works through the maths once. These take your figures and do it again.
+	</p>
+
+	<nav aria-label="All calculators" class="mt-4">
+		<ul class="grid gap-0.5">
+			{
+				calculatorTools.map((tool) => (
+					<li>
+						<a
+							href={tool.href}
+							title={getPlainLanguage(tool.slug)?.question ?? tool.utility}
+							class="group flex items-center gap-2.5 rounded-lg px-2 py-1 transition-colors hover:bg-white focus-visible:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-0 focus-visible:outline-[#475F73]"
+						>
+							<span
+								aria-hidden="true"
+								class="flex h-6 w-6 shrink-0 items-center justify-center rounded-[5px] bg-[#5A7A8F] text-[#F4F1E8] transition-colors group-hover:bg-[#1A1A1A]"
+							>
+								<ToolIcon type={tool.iconType} class="h-3 w-3" />
+							</span>
+							<span class="min-w-0 text-[0.79rem] font-bold leading-snug text-[#1A1A1A] transition-colors group-hover:text-[#475F73]">
+								{tool.title}
+							</span>
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</nav>
+
+	<a
+		href="/calculators/"
+		class="mt-4 flex items-center justify-between border-t border-[#E5E5E5] pt-3 font-mono text-[0.62rem] font-bold uppercase tracking-[0.18em] text-[#475F73] transition hover:text-[#1A1A1A]"
+	>
+		<span>All {calculatorTools.length} calculators</span>
+		<span aria-hidden="true">&rarr;</span>
+	</a>
+</section>
