@@ -124,14 +124,14 @@ function InfoTip({ label, plain, id, align = 'left' }: { label: string; plain: s
 				type="button"
 				aria-label={`What ${label} means`}
 				aria-describedby={id}
-				className="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-[#D8D8D8] bg-white font-mono text-[10px] font-bold text-[#5F5B52] transition hover:border-[#1A1A1A] hover:text-[#1A1A1A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A]"
+				className="flex h-[18px] w-[18px] items-center justify-center rounded-full border border-[#D8D8D8] bg-white font-mono text-[12px] font-bold text-[#5F5B52] transition hover:border-[#1A1A1A] hover:text-[#1A1A1A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A]"
 			>
 				?
 			</button>
 			<span
 				id={id}
 				role="tooltip"
-				className={`pointer-events-none absolute top-full z-50 mt-2 w-[min(18rem,calc(100vw-3rem))] rounded-lg border border-[#E5E5E5] bg-white p-2.5 text-[11px] font-normal normal-case leading-5 tracking-normal text-[#5E5E5E] opacity-0 shadow-xl transition-opacity duration-150 group-hover/info:opacity-100 group-focus-within/info:opacity-100 ${
+				className={`pointer-events-none absolute top-full z-50 mt-2 w-[min(18rem,calc(100vw-3rem))] rounded-lg border border-[#E5E5E5] bg-white p-2.5 text-[13px] font-normal normal-case leading-5 tracking-normal text-[#5E5E5E] opacity-0 shadow-xl transition-opacity duration-150 group-hover/info:opacity-100 group-focus-within/info:opacity-100 ${
 					align === 'right' ? 'right-0' : 'left-0'
 				}`}
 			>
@@ -687,7 +687,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 									if (e.key === 'Escape') setShowSuggestions(false);
 									if (e.key === 'Enter' && suggestions.length > 0) openRole(suggestions[0].code);
 								}}
-								className="w-full rounded-lg border border-gray-300 bg-white py-2 pl-9 pr-8 text-xs sm:text-sm font-medium text-[#1A1A1A] outline-none transition focus:border-[#1A1A1A] focus:ring-1 focus:ring-[#1A1A1A]"
+								className="w-full rounded-lg border border-gray-300 bg-white py-2 pl-9 pr-8 text-sm sm:text-[15px] font-medium text-[#1A1A1A] outline-none transition focus:border-[#1A1A1A] focus:ring-1 focus:ring-[#1A1A1A]"
 							/>
 							<svg
 								className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#64748B]"
@@ -729,8 +729,8 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 										onClick={() => openRole(item.code)}
 										className="flex w-full flex-col border-b border-gray-100 px-3.5 py-2.5 text-left transition last:border-0 hover:bg-gray-50"
 									>
-										<span className="text-xs sm:text-sm font-semibold text-[#1A1A1A]">{item.title}</span>
-										<span className="mt-0.5 font-mono text-[10px] uppercase tracking-wider text-[#5F5B52]">
+										<span className="text-sm sm:text-[15px] font-semibold text-[#1A1A1A]">{item.title}</span>
+										<span className="mt-0.5 font-mono text-[12px] uppercase tracking-wider text-[#5F5B52]">
 											{formatUSD(item.salary)} median · {item.risk_score}/100 exposure
 										</span>
 									</button>
@@ -738,14 +738,14 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 								<button
 									type="button"
 									onClick={() => openBrowse(searchQuery)}
-									className="w-full px-3.5 py-2.5 text-left font-mono text-[10px] font-bold uppercase tracking-wider text-[#475F73] transition hover:bg-gray-50 hover:text-[#1A1A1A]"
+									className="w-full px-3.5 py-2.5 text-left font-mono text-[12px] font-bold uppercase tracking-wider text-[#475F73] transition hover:bg-gray-50 hover:text-[#1A1A1A]"
 								>
 									Browse every matching role →
 								</button>
 							</div>
 						)}
 						{showSuggestions && searchQuery.trim() && suggestions.length === 0 && (
-							<div className="absolute z-50 mt-1 w-full rounded-xl border border-gray-200 bg-white px-3 py-3 text-center font-mono text-xs text-[#5F5B52] shadow-2xl">
+							<div className="absolute z-50 mt-1 w-full rounded-xl border border-gray-200 bg-white px-3 py-3 text-center font-mono text-sm text-[#5F5B52] shadow-2xl">
 								No match. Try a shorter job title.
 							</div>
 						)}
@@ -763,7 +763,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 								aria-selected={activeView === tab.id}
 								aria-controls={tab.panel}
 								onClick={() => setActiveView(tab.id)}
-								className={`min-h-[36px] rounded-md px-4 text-xs font-bold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] ${
+								className={`min-h-[36px] rounded-md px-4 text-sm font-bold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1A1A1A] ${
 									activeView === tab.id ? 'bg-[#1A1A1A] text-white' : 'text-[#5F5B52] hover:text-[#1A1A1A]'
 								}`}
 							>
@@ -776,7 +776,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 						<button
 							type="button"
 							onClick={() => openBrowse('')}
-							className="inline-flex min-h-[36px] items-center rounded-lg border border-[#E5E5E5] bg-white px-3 font-mono text-[10px] font-bold uppercase tracking-wider text-[#5E5E5E] transition hover:border-[#1A1A1A] hover:text-[#1A1A1A]"
+							className="inline-flex min-h-[36px] items-center rounded-lg border border-[#E5E5E5] bg-white px-3 font-mono text-[12px] font-bold uppercase tracking-wider text-[#5E5E5E] transition hover:border-[#1A1A1A] hover:text-[#1A1A1A]"
 						>
 							{indexData.length > 0 ? `All ${indexData.length.toLocaleString('en-US')} roles` : 'All roles'}
 						</button>
@@ -785,7 +785,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 
 				{/* Popular quick selector pills */}
 				<div className="mt-2 flex flex-wrap items-center gap-1.5 border-t border-gray-100 pt-2">
-					<span className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#5F5B52]">Popular:</span>
+					<span className="font-mono text-[12px] font-bold uppercase tracking-wider text-[#5F5B52]">Popular:</span>
 					{[
 						{ title: 'Chief Execs', code: '11-1011.00' },
 						{ title: 'Software Devs', code: '15-1252.00' },
@@ -796,7 +796,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 						<button
 							key={trend.code}
 							onClick={() => openRole(trend.code)}
-							className={`inline-flex min-h-[32px] items-center rounded-full border px-3 py-1 text-xs font-medium transition duration-150 sm:min-h-0 ${
+							className={`inline-flex min-h-[32px] items-center rounded-full border px-3 py-1 text-sm font-medium transition duration-150 sm:min-h-0 ${
 								selectedCode === trend.code && !showBrowse
 									? 'border-[#1A1A1A] bg-[#1A1A1A] font-bold text-white'
 									: 'border-gray-300 bg-white text-[#5E5E5E] hover:border-gray-400 hover:text-[#1A1A1A]'
@@ -816,7 +816,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 						<div className="flex h-72 items-center justify-center py-8">
 							<div className="flex flex-col items-center gap-3">
 								<div className="h-8 w-8 animate-spin rounded-full border-2 border-[#1A1A1A] border-t-transparent"></div>
-								<span className="animate-pulse font-mono text-xs uppercase tracking-widest text-[#5F5B52]">Loading Career Data...</span>
+								<span className="animate-pulse font-mono text-sm uppercase tracking-widest text-[#5F5B52]">Loading Career Data...</span>
 							</div>
 						</div>
 					)}
@@ -830,21 +830,21 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 								    the figure here, and the full 48-state panel is an anchor away. */}
 								<div className="flex flex-col rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5">
 									<div className="mb-2 flex items-center gap-2">
-										<span className="font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">Role</span>
-										<span className="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-[9px] font-bold text-[#5F5B52]">
+										<span className="font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">Role</span>
+										<span className="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-[10.5px] font-bold text-[#5F5B52]">
 											SOC {careerDetail.code}
 										</span>
 									</div>
-									<h2 className="text-lg font-black leading-tight tracking-tight text-[#1A1A1A] sm:text-xl" title={careerDetail.title}>
+									<h2 className="text-xl font-black leading-tight tracking-tight text-[#1A1A1A] sm:text-2xl" title={careerDetail.title}>
 										{careerDetail.title}
 									</h2>
 
-									<div className="mb-2.5 mt-1.5 text-xs leading-relaxed text-[#5E5E5E]">
+									<div className="mb-2.5 mt-1.5 text-sm leading-relaxed text-[#5E5E5E]">
 										<p className={showFullDesc ? '' : 'line-clamp-3'}>{careerDetail.description}</p>
 										{careerDetail.description.length > 150 && (
 											<button
 												onClick={() => setShowFullDesc(!showFullDesc)}
-												className="mt-0.5 inline-flex min-h-[28px] items-center font-mono text-[10px] font-bold text-[#475F73] hover:text-[#1A1A1A] hover:underline"
+												className="mt-0.5 inline-flex min-h-[28px] items-center font-mono text-[12px] font-bold text-[#475F73] hover:text-[#1A1A1A] hover:underline"
 											>
 												{showFullDesc ? 'Show less' : 'Read more'}
 											</button>
@@ -853,20 +853,20 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 
 									<div className="rounded-xl border border-gray-200/70 bg-gray-50/80 p-2.5">
 										<div className="flex items-baseline justify-between gap-2">
-											<p className="font-mono text-[9px] font-bold uppercase tracking-wider text-[#5F5B52]">National median</p>
-											<p className="font-mono text-sm font-black text-[#1A1A1A]">{formatUSD(careerDetail.salary)}</p>
+											<p className="font-mono text-[10.5px] font-bold uppercase tracking-wider text-[#5F5B52]">National median</p>
+											<p className="font-mono text-[15px] font-black text-[#1A1A1A]">{formatUSD(careerDetail.salary)}</p>
 										</div>
 
 										{careerDetail.state_wages && stateWageEntries.length >= 5 ? (
 											<div className="mt-2 border-t border-gray-200/70 pt-2">
-												<label htmlFor="role-state-pick" className="block font-mono text-[9px] font-bold uppercase tracking-wider text-[#5F5B52]">
+												<label htmlFor="role-state-pick" className="block font-mono text-[10.5px] font-bold uppercase tracking-wider text-[#5F5B52]">
 													Pay in your state
 												</label>
 												<select
 													id="role-state-pick"
 													value={statePick}
 													onChange={(e) => setStatePick(e.target.value)}
-													className="mt-1 w-full rounded border border-gray-300 bg-white px-2 py-1 text-xs font-medium text-[#1A1A1A] outline-none transition focus:border-[#1A1A1A]"
+													className="mt-1 w-full rounded border border-gray-300 bg-white px-2 py-1 text-sm font-medium text-[#1A1A1A] outline-none transition focus:border-[#1A1A1A]"
 												>
 													<option value="">Select state...</option>
 													{stateWageNames.map((name) => (
@@ -877,8 +877,8 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 												{pickedStatePay !== null ? (
 													<div className="mt-1.5">
 														<div className="flex items-baseline justify-between gap-2">
-															<span className="font-mono text-base font-black text-[#1A1A1A]">{formatUSD(pickedStatePay)}</span>
-															<span className="font-mono text-[10px] font-bold text-[#5F5B52]">
+															<span className="font-mono text-lg font-black text-[#1A1A1A]">{formatUSD(pickedStatePay)}</span>
+															<span className="font-mono text-[12px] font-bold text-[#5F5B52]">
 																#{pickedStateRank} of {stateWageEntries.length}
 															</span>
 														</div>
@@ -888,37 +888,37 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 																style={{ width: `${Math.max(3, (1 - (pickedStateRank - 1) / Math.max(1, stateWageEntries.length - 1)) * 100)}%` }}
 															/>
 														</div>
-														<p className="mt-1 text-[10px] leading-4 text-[#5F5B52]">
+														<p className="mt-1 text-[12px] leading-4 text-[#5F5B52]">
 															{formatUSD(stateWageEntries[stateWageEntries.length - 1][1])} – {formatUSD(stateWageEntries[0][1])} across {stateWageEntries.length} states.
 														</p>
 													</div>
 												) : statePick === '' ? (
-													<p className="mt-1.5 text-[11px] leading-5 text-[#5E5E5E]">Pick a state for its own survey estimate.</p>
+													<p className="mt-1.5 text-[13px] leading-5 text-[#5E5E5E]">Pick a state for its own survey estimate.</p>
 												) : (
-													<p className="mt-1.5 text-[11px] leading-5 text-[#5E5E5E]">BLS published no estimate for {statePick} in this occupation.</p>
+													<p className="mt-1.5 text-[13px] leading-5 text-[#5E5E5E]">BLS published no estimate for {statePick} in this occupation.</p>
 												)}
 
-												<a href="#state-wages" className="mt-1.5 inline-block font-mono text-[10px] font-bold text-[#475F73] hover:text-[#1A1A1A] hover:underline">
+												<a href="#state-wages" className="mt-1.5 inline-block font-mono text-[12px] font-bold text-[#475F73] hover:text-[#1A1A1A] hover:underline">
 													Compare all {stateWageEntries.length} states ↓
 												</a>
 											</div>
 										) : (
 											<div className="mt-2 flex items-center justify-between gap-2 border-t border-gray-200/70 pt-2">
 												<div>
-													<p className="font-mono text-[9px] font-bold uppercase tracking-wider text-[#5F5B52]">Employment band</p>
-													<p className="mt-0.5 text-xs font-bold text-[#1A1A1A]">{careerDetail.employment_band || 'National sample'}</p>
+													<p className="font-mono text-[10.5px] font-bold uppercase tracking-wider text-[#5F5B52]">Employment band</p>
+													<p className="mt-0.5 text-sm font-bold text-[#1A1A1A]">{careerDetail.employment_band || 'National sample'}</p>
 												</div>
 												{careerDetail.employment && (
 													<div className="text-right">
-														<p className="font-mono text-[9px] font-bold uppercase tracking-wider text-[#5F5B52]">Employed</p>
-														<p className="mt-0.5 font-mono text-xs font-bold text-[#1A1A1A]">{careerDetail.employment.toLocaleString()}</p>
+														<p className="font-mono text-[10.5px] font-bold uppercase tracking-wider text-[#5F5B52]">Employed</p>
+														<p className="mt-0.5 font-mono text-sm font-bold text-[#1A1A1A]">{careerDetail.employment.toLocaleString()}</p>
 													</div>
 												)}
 											</div>
 										)}
 									</div>
 
-									<div className="mt-auto flex flex-wrap gap-x-3 gap-y-1 pt-2 font-mono text-[9.5px] uppercase tracking-wider text-[#5F5B52]">
+									<div className="mt-auto flex flex-wrap gap-x-3 gap-y-1 pt-2 font-mono text-[11px] uppercase tracking-wider text-[#5F5B52]">
 										{careerDetail.employment_band && <span>Employment {careerDetail.employment_band}</span>}
 										{careerDetail.salary_vintage && <span>{careerDetail.salary_vintage}</span>}
 									</div>
@@ -928,13 +928,13 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 								    kept as one argument. */}
 								<div className="flex flex-col rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5">
 									<div className="relative mb-2 flex items-center gap-1.5 border-b border-gray-100 pb-2.5">
-										<p className="font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">AI exposure score</p>
+										<p className="font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">AI exposure score</p>
 										<InfoTip id="tip-exposure" label="AI exposure score" plain={definition('Task exposure')} />
 									</div>
 
 									<div className="flex items-center justify-center gap-3">
 										{/* The score, as an arc */}
-										<div className="relative my-1 flex h-24 w-24 items-center justify-center" role="img" aria-label={`AI exposure ${overallScore} out of 100`}>
+										<div className="relative my-1 flex h-28 w-28 items-center justify-center" role="img" aria-label={`AI exposure ${overallScore} out of 100`}>
 											<svg className="h-full w-full -rotate-90" viewBox="0 0 120 120">
 												<circle cx="60" cy="60" r="48" fill="transparent" stroke="#E5E5E5" strokeWidth="7" />
 												<circle
@@ -951,13 +951,13 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 												/>
 											</svg>
 											<div className="absolute inset-0 flex flex-col items-center justify-center">
-												<span className="text-2xl font-black tracking-tight text-[#1A1A1A]">{overallScore}</span>
-												<span className="font-mono text-[8.5px] font-bold uppercase tracking-widest text-[#5F5B52]">of 100</span>
+												<span className="text-3xl font-black tracking-tight text-[#1A1A1A]">{overallScore}</span>
+												<span className="font-mono text-[10px] font-bold uppercase tracking-widest text-[#5F5B52]">of 100</span>
 											</div>
 										</div>
 
 										{/* The mix, as a donut. Hover a slice or a row to isolate it. */}
-										<div className="relative my-1 flex h-24 w-24 items-center justify-center">
+										<div className="relative my-1 flex h-28 w-28 items-center justify-center">
 											<svg className="h-full w-full -rotate-90" viewBox="-120 -120 240 240" aria-hidden="true">
 												{donutSlices.map((slice) => {
 													const isHovered = hoveredDonutSlice === slice.category;
@@ -990,17 +990,17 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 											<div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
 												{hoveredDonutSlice ? (
 													<>
-														<span className="text-lg font-black" style={{ color: hoveredDonutSlice === 'high' ? '#A55252' : hoveredDonutSlice === 'medium' ? '#96693A' : '#5A7A8F' }}>
+														<span className="text-xl font-black" style={{ color: hoveredDonutSlice === 'high' ? '#A55252' : hoveredDonutSlice === 'medium' ? '#96693A' : '#5A7A8F' }}>
 															{weights[hoveredDonutSlice]}%
 														</span>
-														<span className="max-w-[62px] text-center font-mono text-[7.5px] uppercase leading-tight tracking-wider text-[#5F5B52]">
+														<span className="max-w-[62px] text-center font-mono text-[9.5px] uppercase leading-tight tracking-wider text-[#5F5B52]">
 															{bucketLabel[hoveredDonutSlice]}
 														</span>
 													</>
 												) : (
 													<>
-														<span className="text-lg font-black text-[#1A1A1A]">{careerDetail.tasks.length}</span>
-														<span className="font-mono text-[7.5px] uppercase tracking-wider text-[#5F5B52]">tasks</span>
+														<span className="text-xl font-black text-[#1A1A1A]">{careerDetail.tasks.length}</span>
+														<span className="font-mono text-[9.5px] uppercase tracking-wider text-[#5F5B52]">tasks</span>
 													</>
 												)}
 											</div>
@@ -1009,7 +1009,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 
 									{/* Verdict for the current week */}
 									<div className="mt-1 flex flex-wrap items-center justify-center gap-1.5">
-										<span className={`rounded-full px-2.5 py-0.5 font-mono text-[10px] font-bold uppercase tracking-wider ${
+										<span className={`rounded-full px-2.5 py-0.5 font-mono text-[12px] font-bold uppercase tracking-wider ${
 											overallScore > 65
 												? 'bg-[#A55252]/10 text-[#A55252]'
 												: overallScore > 35
@@ -1019,7 +1019,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 											{overallScore > 65 ? 'High exposure' : overallScore > 35 ? 'Mixed exposure' : 'Low exposure'}
 										</span>
 										{isEdited && scoreDelta !== 0 && (
-											<span className={`rounded-full px-2 py-0.5 font-mono text-[10px] font-bold ${
+											<span className={`rounded-full px-2 py-0.5 font-mono text-[12px] font-bold ${
 												scoreDelta < 0 ? 'bg-[#2E6F40]/10 text-[#2E6F40]' : 'bg-[#A55252]/10 text-[#A55252]'
 											}`}>
 												{scoreDelta < 0 ? '−' : '+'}{Math.abs(scoreDelta)} vs today
@@ -1027,7 +1027,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 										)}
 									</div>
 
-									<p className="mt-2 text-center text-[10.5px] leading-snug text-[#5E5E5E]">
+									<p className="mt-2 text-center text-[12.5px] leading-snug text-[#5E5E5E]">
 										{(['high', 'medium', 'low'] as const).map((key, idx) => (
 											<span key={key}>
 												<strong className="font-bold" style={{ color: key === 'high' ? '#A55252' : key === 'medium' ? '#96693A' : '#5A7A8F' }}>
@@ -1040,7 +1040,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 
 									<div className="mt-2.5 border-t border-gray-100 pt-2">
 										<div className="relative mb-1 flex items-center gap-1.5">
-											<p className="font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">Task composition</p>
+											<p className="font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">Task composition</p>
 											<InfoTip id="tip-composition" label="Task composition" plain={definition('Automation risk')} />
 										</div>
 										{(['high', 'medium', 'low'] as const).map((key) => (
@@ -1048,17 +1048,17 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 												key={key}
 												onClick={() => setTaskFilter(taskFilter === key ? 'all' : key)}
 												aria-pressed={taskFilter === key}
-												className={`flex w-full items-center justify-between gap-2 rounded-lg border px-2.5 py-1.5 text-xs transition duration-150 ${
+												className={`flex w-full items-center justify-between gap-2 rounded-lg border px-2.5 py-1.5 text-sm transition duration-150 ${
 													taskFilter === key ? 'border-gray-400 bg-gray-100 font-bold' : 'border-transparent bg-gray-50/70 hover:bg-gray-100/70'
 												}`}
 											>
 												<span className="flex min-w-0 items-center gap-2">
 													<span className="h-2 w-2 shrink-0 rounded-full" style={{ background: key === 'high' ? '#A55252' : key === 'medium' ? '#96693A' : '#5A7A8F' }} />
-													<span className={`truncate text-[12px] ${taskFilter === key ? 'font-bold text-[#1A1A1A]' : 'text-[#5E5E5E]'}`}>{bucketLabel[key]}</span>
+													<span className={`truncate text-[13.5px] ${taskFilter === key ? 'font-bold text-[#1A1A1A]' : 'text-[#5E5E5E]'}`}>{bucketLabel[key]}</span>
 												</span>
 												<span className="flex shrink-0 items-baseline gap-1.5">
-													<span className="font-mono text-[10px] text-[#5F5B52]">{week.hours[key].toFixed(1)} h</span>
-													<span className="font-mono text-[12px] font-bold" style={{ color: key === 'high' ? '#A55252' : key === 'medium' ? '#96693A' : '#475F73' }}>
+													<span className="font-mono text-[12px] text-[#5F5B52]">{week.hours[key].toFixed(1)} h</span>
+													<span className="font-mono text-[13.5px] font-bold" style={{ color: key === 'high' ? '#A55252' : key === 'medium' ? '#96693A' : '#475F73' }}>
 														{weights[key]}%
 													</span>
 												</span>
@@ -1068,7 +1068,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 
 									<a
 										href="#task-breakdown"
-										className="mt-auto inline-flex items-center justify-center gap-1 pt-2.5 font-mono text-[10px] font-bold uppercase tracking-wider text-[#475F73] hover:text-[#1A1A1A] hover:underline"
+										className="mt-auto inline-flex items-center justify-center gap-1 pt-2.5 font-mono text-[12px] font-bold uppercase tracking-wider text-[#475F73] hover:text-[#1A1A1A] hover:underline"
 									>
 										Inspect {filteredTasks.length} tasks ↓
 									</a>
@@ -1079,19 +1079,19 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 									<div>
 										<div className="relative mb-2 flex items-center justify-between border-b border-gray-100 pb-2.5">
 											<div className="flex items-center gap-1.5">
-												<p className="font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">Change your week</p>
+												<p className="font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">Change your week</p>
 												<InfoTip id="tip-week" label="Change your week" plain={definition('Simulated week')} align="right" />
 											</div>
 											{isEdited && (
 												<button
 													onClick={handleResetWeights}
-													className="rounded border border-gray-300 bg-white px-2 py-0.5 font-mono text-[9px] uppercase tracking-wider text-[#5E5E5E] transition hover:border-gray-400 hover:text-[#1A1A1A]"
+													className="rounded border border-gray-300 bg-white px-2 py-0.5 font-mono text-[10.5px] uppercase tracking-wider text-[#5E5E5E] transition hover:border-gray-400 hover:text-[#1A1A1A]"
 												>
 													Reset
 												</button>
 											)}
 										</div>
-										<p className="mb-3 text-[11px] leading-snug text-[#5E5E5E]">
+										<p className="mb-3 text-[13px] leading-snug text-[#5E5E5E]">
 											A {WEEK_HOURS}-hour week. Move the hours here, or hand tasks over in the list below.
 										</p>
 
@@ -1101,11 +1101,11 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 													<div className="mb-1 flex items-center justify-between gap-2">
 														<div className="flex min-w-0 items-center gap-1.5">
 															<span className="h-2 w-2 shrink-0 rounded-full" style={{ background: key === 'high' ? '#A55252' : key === 'medium' ? '#96693A' : '#5A7A8F' }} />
-															<span className="truncate text-xs font-bold text-[#1A1A1A]">{key === 'high' ? 'Repetitive work AI does' : key === 'medium' ? 'Work AI drafts, you decide' : 'Work that needs a person'}</span>
+															<span className="truncate text-sm font-bold text-[#1A1A1A]">{key === 'high' ? 'Repetitive work AI does' : key === 'medium' ? 'Work AI drafts, you decide' : 'Work that needs a person'}</span>
 														</div>
 														<span className="flex shrink-0 items-baseline gap-1.5">
-															<span className="font-mono text-[10px] text-[#5F5B52]">{week.hours[key].toFixed(1)} h</span>
-															<span className="font-mono text-xs font-black" style={{ color: key === 'high' ? '#A55252' : key === 'medium' ? '#96693A' : '#475F73' }}>
+															<span className="font-mono text-[12px] text-[#5F5B52]">{week.hours[key].toFixed(1)} h</span>
+															<span className="font-mono text-sm font-black" style={{ color: key === 'high' ? '#A55252' : key === 'medium' ? '#96693A' : '#475F73' }}>
 																{weights[key]}%
 															</span>
 														</span>
@@ -1121,7 +1121,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 															key === 'high' ? 'accent-[#A55252]' : key === 'medium' ? 'accent-[#96693A]' : 'accent-[#5A7A8F]'
 														}`}
 													/>
-													<p className="mt-0.5 text-[10px] text-[#5F5B52]">
+													<p className="mt-0.5 text-[12px] text-[#5F5B52]">
 														{key === 'high' ? 'Scheduling, typing, forms, sorting' : key === 'medium' ? 'Basic analysis, first drafts, monitoring' : 'Judgement, negotiation, leadership, hands-on'}
 													</p>
 												</div>
@@ -1129,7 +1129,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 										</div>
 
 										{delegated.length > 0 && (
-											<p className="mt-2 rounded-lg bg-[#F4F1E8] p-2 font-mono text-[10px] leading-4 text-[#5F5B52]">
+											<p className="mt-2 rounded-lg bg-[#F4F1E8] p-2 font-mono text-[12px] leading-4 text-[#5F5B52]">
 												{delegated.length} task{delegated.length === 1 ? '' : 's'} handed over · {week.handedOver.toFixed(1)} h off the week
 											</p>
 										)}
@@ -1139,21 +1139,21 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 										isEdited ? 'border-gray-300 bg-gray-50 text-[#1A1A1A]' : 'border-gray-200 bg-white text-[#5E5E5E]'
 									}`}>
 										<div>
-											<p className="font-mono text-[9px] font-bold uppercase tracking-wider text-[#5F5B52]">Simulated score</p>
-											<p className="mt-0.5 text-xs font-bold text-[#1A1A1A]">
+											<p className="font-mono text-[10.5px] font-bold uppercase tracking-wider text-[#5F5B52]">Simulated score</p>
+											<p className="mt-0.5 text-sm font-bold text-[#1A1A1A]">
 												{!isEdited
 													? 'Baseline score'
 													: scoreDelta === 0
 														? 'No change yet'
 														: `${scoreDelta < 0 ? '−' : '+'}${Math.abs(scoreDelta)} pts vs today`}
 											</p>
-											<p className="mt-0.5 font-mono text-[9.5px] text-[#5F5B52]">
+											<p className="mt-0.5 font-mono text-[11px] text-[#5F5B52]">
 												{week.total < 0.5 ? 'Whole week handed over' : `${week.total.toFixed(1)} of ${WEEK_HOURS} h still yours`}
 											</p>
 										</div>
 										<div className="text-right">
-											<span className="font-mono text-2xl font-black text-[#1A1A1A]">{overallScore}</span>
-											<span className="font-mono text-xs font-bold text-[#5F5B52]">/100</span>
+											<span className="font-mono text-3xl font-black text-[#1A1A1A]">{overallScore}</span>
+											<span className="font-mono text-sm font-bold text-[#5F5B52]">/100</span>
 										</div>
 									</div>
 								</div>
@@ -1161,12 +1161,12 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 
 							{/* What to do with the answer: three steps, in the place the reader has an answer. */}
 							<div className="rounded-xl border border-gray-200 bg-[#FBFBFB] p-3">
-								<p className="mb-2 font-mono text-[9px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">What to do with the answer</p>
+								<p className="mb-2 font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">What to do with the answer</p>
 								<ol className="grid gap-2 sm:grid-cols-3 sm:gap-4">
 									{nextSteps.map((step, index) => (
 										<li key={step} className="flex gap-2.5">
-											<span className="font-mono text-[10px] font-bold tabular-nums text-[#5A7A8F]">{String(index + 1).padStart(2, '0')}</span>
-											<span className="text-[11.5px] leading-5 text-[#5E5E5E]">{step}</span>
+											<span className="font-mono text-[12px] font-bold tabular-nums text-[#5A7A8F]">{String(index + 1).padStart(2, '0')}</span>
+											<span className="text-[13px] leading-5 text-[#5E5E5E]">{step}</span>
 										</li>
 									))}
 								</ol>
@@ -1179,8 +1179,8 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 						<div id="task-breakdown" className="mt-6 scroll-mt-6 border-t border-gray-200 py-4">
 							<div className="mb-6 flex flex-col items-stretch justify-between gap-4 border-b border-gray-200 pb-4 sm:flex-row sm:items-center">
 								<div>
-									<h3 className="text-xl font-bold text-[#1A1A1A]">What the job actually involves</h3>
-									<p className="mt-1 text-xs text-[#5E5E5E]">
+									<h3 className="text-2xl font-bold text-[#1A1A1A]">What the job actually involves</h3>
+									<p className="mt-1 text-sm text-[#5E5E5E]">
 										Every task is scored for how much of it AI can do today. Hand one over and its hours leave the week above.
 									</p>
 								</div>
@@ -1191,7 +1191,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 											key={cat}
 											onClick={() => setTaskFilter(cat)}
 											aria-pressed={taskFilter === cat}
-											className={`min-h-[32px] rounded-lg px-3 py-1.5 font-mono text-[10.5px] uppercase tracking-wider transition ${
+											className={`min-h-[32px] rounded-lg px-3 py-1.5 font-mono text-[12.5px] uppercase tracking-wider transition ${
 												taskFilter === cat ? 'bg-[#1A1A1A] font-bold text-white' : 'text-[#5E5E5E] hover:text-[#1A1A1A]'
 											}`}
 										>
@@ -1201,9 +1201,9 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 								</div>
 							</div>
 
-							<div className="grid gap-3 md:grid-cols-2">
+							<div className="grid items-start gap-3 md:grid-cols-2">
 								{filteredTasks.length === 0 ? (
-									<div className="rounded-2xl border border-dashed border-gray-200 bg-gray-50 py-8 text-center font-mono text-xs text-[#5F5B52] md:col-span-2">
+									<div className="rounded-2xl border border-dashed border-gray-200 bg-gray-50 py-8 text-center font-mono text-sm text-[#5F5B52] md:col-span-2">
 										No tasks found matching this risk level.
 									</div>
 								) : (
@@ -1223,7 +1223,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 												}`}
 											>
 												<div className="mb-2 flex flex-wrap items-center justify-between gap-2">
-													<span className={`rounded-full px-2.5 py-0.5 font-mono text-[9px] font-bold uppercase tracking-widest ${
+													<span className={`rounded-full px-2.5 py-0.5 font-mono text-[10.5px] font-bold uppercase tracking-widest ${
 														task.risk === 'high'
 															? 'bg-[#A55252]/10 text-[#A55252]'
 															: task.risk === 'medium'
@@ -1234,12 +1234,12 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 													</span>
 													<div className="flex items-center gap-2">
 														{task.score !== null && (
-															<span className="font-mono text-[10px] font-bold text-[#5E5E5E]">
+															<span className="font-mono text-[12px] font-bold text-[#5E5E5E]">
 																AI could do {Math.round(task.score * 100)}% · {taskHours(task).toFixed(1)} h
 															</span>
 														)}
 														{task.emerging && (
-															<span className="rounded-full bg-[#7C6BA8]/10 px-2 py-0.5 font-mono text-[8.5px] font-bold uppercase tracking-widest text-[#7C6BA8]">
+															<span className="rounded-full bg-[#7C6BA8]/10 px-2 py-0.5 font-mono text-[10px] font-bold uppercase tracking-widest text-[#7C6BA8]">
 																{task.emerging.category}
 															</span>
 														)}
@@ -1249,7 +1249,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 																onClick={() => toggleDelegation(task)}
 																aria-pressed={isDelegated}
 																aria-label={`${isDelegated ? 'Take back' : 'Hand to AI'}: ${task.text}`}
-																className={`inline-flex min-h-[26px] items-center gap-1 rounded-full border px-2 font-mono text-[9px] font-bold uppercase tracking-wider transition ${
+																className={`inline-flex min-h-[26px] items-center gap-1 rounded-full border px-2 font-mono text-[10.5px] font-bold uppercase tracking-wider transition ${
 																	isDelegated
 																		? 'border-[#1A1A1A] bg-[#1A1A1A] text-white'
 																		: 'border-gray-300 bg-white text-[#5E5E5E] hover:border-[#1A1A1A] hover:text-[#1A1A1A]'
@@ -1260,7 +1260,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 														)}
 													</div>
 												</div>
-												<p className={`text-sm font-medium leading-relaxed ${isDelegated ? 'text-[#5E5E5E]' : 'text-[#1A1A1A]'}`}>{task.text}</p>
+												<p className={`text-[15px] font-medium leading-relaxed ${isDelegated ? 'text-[#5E5E5E]' : 'text-[#1A1A1A]'}`}>{task.text}</p>
 
 												{task.dwas && task.dwas.length > 0 && (
 													<div className="mt-2.5 flex flex-wrap gap-1.5">
@@ -1268,7 +1268,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 															<span
 																key={dwa.id}
 																title={`${dwa.gwa_name}${dwa.importance !== null ? ` · importance ${dwa.importance}/5 in this occupation` : ''}`}
-																className="rounded border border-gray-200 bg-gray-50 px-1.5 py-0.5 font-mono text-[9.5px] leading-4 text-[#5E5E5E]"
+																className="rounded border border-gray-200 bg-gray-50 px-1.5 py-0.5 font-mono text-[11px] leading-4 text-[#5E5E5E]"
 															>
 																{dwa.name}
 															</span>
@@ -1282,8 +1282,8 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 													}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
 														<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
 													</svg>
-													<p className="text-xs italic leading-relaxed text-[#5E5E5E]">
-														<span className="mr-1 font-mono text-[10px] font-bold uppercase not-italic tracking-wider" style={{ color: task.risk === 'high' ? '#A55252' : task.risk === 'medium' ? '#96693A' : '#5A7A8F' }}>
+													<p className="text-sm italic leading-relaxed text-[#5E5E5E]">
+														<span className="mr-1 font-mono text-[12px] font-bold uppercase not-italic tracking-wider" style={{ color: task.risk === 'high' ? '#A55252' : task.risk === 'medium' ? '#96693A' : '#5A7A8F' }}>
 															Why:
 														</span>
 														{task.rationale}
@@ -1299,7 +1299,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 											type="button"
 											onClick={() => setShowAllTasks((v) => !v)}
 											aria-expanded={showAllTasks}
-											className="inline-flex min-h-[40px] items-center gap-1.5 rounded-lg border border-[#E5E5E5] bg-white px-4 font-mono text-[10px] font-bold uppercase tracking-wider text-[#1A1A1A] transition hover:border-[#1A1A1A]"
+											className="inline-flex min-h-[40px] items-center gap-1.5 rounded-lg border border-[#E5E5E5] bg-white px-4 font-mono text-[12px] font-bold uppercase tracking-wider text-[#1A1A1A] transition hover:border-[#1A1A1A]"
 										>
 											{showAllTasks ? 'Show fewer tasks' : `Show all ${filteredTasks.length} tasks`}
 											<span aria-hidden="true">{showAllTasks ? '↑' : '↓'}</span>
@@ -1315,14 +1315,14 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 						<div id="state-wages" className="mt-6 scroll-mt-6 border-t border-gray-200 py-4">
 							<div className="mb-4 flex flex-col gap-2 border-b border-gray-200 pb-3 sm:flex-row sm:items-end sm:justify-between">
 								<div>
-									<h3 className="text-lg font-bold text-[#1A1A1A]">Pay by state</h3>
-									<p className="mt-0.5 max-w-2xl text-xs leading-5 text-[#5E5E5E]">
+									<h3 className="text-xl font-bold text-[#1A1A1A]">Pay by state</h3>
+									<p className="mt-0.5 max-w-2xl text-sm leading-5 text-[#5E5E5E]">
 										BLS publishes {stateWageEntries.length} state estimates for this occupation. Each is its own survey estimate — not the national median adjusted for local prices.
 									</p>
 								</div>
 								<div className="sm:text-right">
-									<p className="font-mono text-[9px] uppercase tracking-[0.2em] text-[#5F5B52]">Published range</p>
-									<p className="mt-0.5 font-mono text-xs font-bold text-[#1A1A1A]">
+									<p className="font-mono text-[10.5px] uppercase tracking-[0.2em] text-[#5F5B52]">Published range</p>
+									<p className="mt-0.5 font-mono text-sm font-bold text-[#1A1A1A]">
 										{formatUSD(stateWageEntries[stateWageEntries.length - 1][1])} – {formatUSD(stateWageEntries[0][1])}
 									</p>
 								</div>
@@ -1330,19 +1330,19 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 
 							<div className="grid gap-6 sm:grid-cols-3">
 								<div>
-									<p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#5F5B52]">Your state</p>
+									<p className="font-mono text-[12px] uppercase tracking-[0.2em] text-[#5F5B52]">Your state</p>
 									{pickedStatePay !== null ? (
 										<>
 											<p className="mt-2 flex flex-wrap items-baseline gap-x-2">
-												<span className="font-mono text-xl font-black tracking-tight text-[#1A1A1A]">{formatUSD(pickedStatePay)}</span>
-												<span className="text-xs text-[#5E5E5E]">{statePick}</span>
+												<span className="font-mono text-2xl font-black tracking-tight text-[#1A1A1A]">{formatUSD(pickedStatePay)}</span>
+												<span className="text-sm text-[#5E5E5E]">{statePick}</span>
 											</p>
-											<p className="mt-1 text-[11px] leading-5 text-[#5F5B52]">
+											<p className="mt-1 text-[13px] leading-5 text-[#5F5B52]">
 												Rank {pickedStateRank} of {stateWageEntries.length} published state medians, highest first.
 											</p>
 										</>
 									) : (
-										<p className="mt-2 text-sm leading-6 text-[#5E5E5E]">
+										<p className="mt-2 text-[15px] leading-6 text-[#5E5E5E]">
 											{statePick === ''
 												? 'Not picked yet.'
 												: `BLS published no estimate for ${statePick} in this occupation.`}
@@ -1356,38 +1356,38 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 											picker?.scrollIntoView({ block: 'center' });
 											picker?.focus({ preventScroll: true });
 										}}
-										className="mt-3 inline-flex min-h-[36px] items-center rounded-lg border border-[#E5E5E5] bg-white px-3 font-mono text-[10px] font-bold uppercase tracking-wider text-[#1A1A1A] transition hover:border-[#1A1A1A]"
+										className="mt-3 inline-flex min-h-[36px] items-center rounded-lg border border-[#E5E5E5] bg-white px-3 font-mono text-[12px] font-bold uppercase tracking-wider text-[#1A1A1A] transition hover:border-[#1A1A1A]"
 									>
 										{pickedStatePay !== null ? 'Change state' : 'Pick a state'}
 									</button>
 								</div>
 
 								<div>
-									<p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#5F5B52]">Highest medians</p>
+									<p className="font-mono text-[12px] uppercase tracking-[0.2em] text-[#5F5B52]">Highest medians</p>
 									<div className="mt-2">
 										{stateWageEntries.slice(0, 5).map(([name, value]) => (
 											<div key={name} className={`flex items-baseline justify-between gap-3 border-b border-[#F2F2F2] py-1 last:border-0 ${name === statePick ? 'bg-[#F4F1E8] font-bold' : ''}`}>
-												<span className="text-[12px] text-[#1A1A1A]">{name}</span>
-												<span className="font-mono text-xs text-[#5E5E5E]">{formatUSD(value)}</span>
+												<span className="text-[13.5px] text-[#1A1A1A]">{name}</span>
+												<span className="font-mono text-sm text-[#5E5E5E]">{formatUSD(value)}</span>
 											</div>
 										))}
 									</div>
 								</div>
 
 								<div>
-									<p className="font-mono text-[10px] uppercase tracking-[0.2em] text-[#5F5B52]">Lowest medians</p>
+									<p className="font-mono text-[12px] uppercase tracking-[0.2em] text-[#5F5B52]">Lowest medians</p>
 									<div className="mt-2">
 										{stateWageEntries.slice(-5).reverse().map(([name, value]) => (
 											<div key={name} className={`flex items-baseline justify-between gap-3 border-b border-[#F2F2F2] py-1 last:border-0 ${name === statePick ? 'bg-[#F4F1E8] font-bold' : ''}`}>
-												<span className="text-[12px] text-[#1A1A1A]">{name}</span>
-												<span className="font-mono text-xs text-[#5E5E5E]">{formatUSD(value)}</span>
+												<span className="text-[13.5px] text-[#1A1A1A]">{name}</span>
+												<span className="font-mono text-sm text-[#5E5E5E]">{formatUSD(value)}</span>
 											</div>
 										))}
 									</div>
 								</div>
 							</div>
 
-							<p className="mt-3 text-[11px] leading-5 text-[#5F5B52]">
+							<p className="mt-3 text-[13px] leading-5 text-[#5F5B52]">
 								{careerDetail.state_wages.source === 'bls-state-line'
 									? `This is the ${careerDetail.state_wages.code} row of the ${careerDetail.salary_vintage ?? 'OEWS'} state panel.`
 									: `OEWS has no state row for this exact code, so these figures are the ${careerDetail.state_wages.code} roll-up.`}{' '}
@@ -1411,12 +1411,12 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 										setShowBrowse(false);
 										setSearchQuery('');
 									}}
-									className="mb-1 font-mono text-[10px] font-bold uppercase tracking-wider text-[#475F73] hover:text-[#1A1A1A] hover:underline"
+									className="mb-1 font-mono text-[12px] font-bold uppercase tracking-wider text-[#475F73] hover:text-[#1A1A1A] hover:underline"
 								>
 									← Back to {careerDetail ? careerDetail.title : 'the role'}
 								</button>
-								<h3 className="text-xl font-bold text-[#1A1A1A]">Every role with a task-level score</h3>
-								<p className="mt-1 text-xs text-[#5E5E5E]">Filter by AI exposure and pay. Open any row for the full breakdown.</p>
+								<h3 className="text-2xl font-bold text-[#1A1A1A]">Every role with a task-level score</h3>
+								<p className="mt-1 text-sm text-[#5E5E5E]">Filter by AI exposure and pay. Open any row for the full breakdown.</p>
 							</div>
 							<button
 								onClick={() => {
@@ -1426,7 +1426,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 									setMinSalaryFilter(0);
 									setEmploymentFilter('all');
 								}}
-								className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 font-mono text-[9.5px] uppercase tracking-wider text-[#5E5E5E] transition hover:bg-gray-50 hover:text-[#1A1A1A]"
+								className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-[#5E5E5E] transition hover:bg-gray-50 hover:text-[#1A1A1A]"
 							>
 								Clear filters
 							</button>
@@ -1437,7 +1437,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 							{/* Row 1: Four inputs */}
 							<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 items-end">
 								<div>
-									<label htmlFor="finder-search" className="block font-mono text-[9px] uppercase tracking-[0.2em] text-[#5F5B52] font-bold mb-2">
+									<label htmlFor="finder-search" className="block font-mono text-[10.5px] uppercase tracking-[0.2em] text-[#5F5B52] font-bold mb-2">
 										Search job title
 									</label>
 									<input
@@ -1446,18 +1446,18 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 										placeholder="e.g. designer, analyst…"
 										value={finderSearchQuery}
 										onChange={(e) => setFinderSearchQuery(e.target.value)}
-										className="w-full rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-sm text-[#1A1A1A] placeholder-gray-400 outline-none transition focus:border-[#5A7A8F]"
+										className="w-full rounded-xl border border-gray-200 bg-white px-4 py-2.5 text-[15px] text-[#1A1A1A] placeholder-gray-400 outline-none transition focus:border-[#5A7A8F]"
 									/>
 								</div>
 								<div>
-									<label htmlFor="finder-demand" className="block font-mono text-[9px] uppercase tracking-[0.2em] text-[#5F5B52] font-bold mb-2">
+									<label htmlFor="finder-demand" className="block font-mono text-[10.5px] uppercase tracking-[0.2em] text-[#5F5B52] font-bold mb-2">
 										Employment level
 									</label>
 									<select
 										id="finder-demand"
 										value={employmentFilter}
 										onChange={(e) => setEmploymentFilter(e.target.value)}
-										className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-sm text-[#1A1A1A] outline-none focus:border-[#5A7A8F]"
+										className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-[15px] text-[#1A1A1A] outline-none focus:border-[#5A7A8F]"
 									>
 										<option value="all">Any size</option>
 										<option value="Very High">Very large</option>
@@ -1467,14 +1467,14 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 									</select>
 								</div>
 								<div>
-									<label htmlFor="finder-salary" className="block font-mono text-[9px] uppercase tracking-[0.2em] text-[#5F5B52] font-bold mb-2">
+									<label htmlFor="finder-salary" className="block font-mono text-[10.5px] uppercase tracking-[0.2em] text-[#5F5B52] font-bold mb-2">
 										Minimum pay
 									</label>
 									<select
 										id="finder-salary"
 										value={minSalaryFilter}
 										onChange={(e) => setMinSalaryFilter(Number(e.target.value))}
-										className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-sm text-[#1A1A1A] outline-none focus:border-[#5A7A8F]"
+										className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-[15px] text-[#1A1A1A] outline-none focus:border-[#5A7A8F]"
 									>
 										<option value={0}>Any pay</option>
 										<option value={40000}>$40,000+</option>
@@ -1486,7 +1486,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 									</select>
 								</div>
 								<div>
-									<label htmlFor="finder-sort" className="block font-mono text-[9px] uppercase tracking-[0.2em] text-[#5F5B52] font-bold mb-2">
+									<label htmlFor="finder-sort" className="block font-mono text-[10.5px] uppercase tracking-[0.2em] text-[#5F5B52] font-bold mb-2">
 										Sort by
 									</label>
 									<div className="flex gap-2">
@@ -1494,7 +1494,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 											id="finder-sort"
 											value={sortField}
 											onChange={(e) => setSortField(e.target.value as any)}
-											className="flex-1 rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-sm text-[#1A1A1A] outline-none focus:border-[#5A7A8F]"
+											className="flex-1 rounded-xl border border-gray-200 bg-white px-3 py-2.5 text-[15px] text-[#1A1A1A] outline-none focus:border-[#5A7A8F]"
 										>
 											<option value="risk_score">AI exposure</option>
 											<option value="title">Job title</option>
@@ -1515,10 +1515,10 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 							{/* Row 2: Vulnerability Range Sliders (Full width) */}
 							<div className="pt-4 border-t border-gray-100">
 								<div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-									<label className="text-xs font-bold text-[#1A1A1A]">
+									<label className="text-sm font-bold text-[#1A1A1A]">
 										AI exposure
 									</label>
-									<span className="font-mono text-xs font-extrabold text-[#475F73]">
+									<span className="font-mono text-sm font-extrabold text-[#475F73]">
 										{minVulnerability} – {maxVulnerability} out of 100
 									</span>
 								</div>
@@ -1572,7 +1572,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 									/>
 								</div>
 								
-								<div className="flex items-center justify-between text-[10px] font-mono text-[#5F5B52] px-1">
+								<div className="flex items-center justify-between text-[12px] font-mono text-[#5F5B52] px-1">
 									<span>0 — less exposed</span>
 									<span>100 — more exposed</span>
 								</div>
@@ -1583,7 +1583,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 					{/* Results List */}
 					<div className="overflow-hidden mt-10">
 						<div className="flex items-center justify-between mb-6">
-							<span className="font-mono text-[10px] uppercase tracking-[0.24em] text-[#475F73] font-bold">
+							<span className="font-mono text-[12px] uppercase tracking-[0.24em] text-[#475F73] font-bold">
 								{filteredFinderCareers.length} careers match
 							</span>
 						</div>
@@ -1592,7 +1592,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 						<div className="overflow-x-auto w-full">
 							<table className="min-w-full divide-y divide-gray-200 text-left border-collapse">
 								<thead>
-									<tr className="border-b border-gray-200 font-mono text-[9.5px] uppercase tracking-[0.15em] text-[#5E5E5E]">
+									<tr className="border-b border-gray-200 font-mono text-[11px] uppercase tracking-[0.15em] text-[#5E5E5E]">
 										<th scope="col" className="pl-0 pr-6 py-4 font-bold text-left">Job</th>
 										<th scope="col" className="px-6 py-4 font-bold text-left">AI exposure</th>
 										<th scope="col" className="px-6 py-4 font-bold text-left">Median pay</th>
@@ -1600,10 +1600,10 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 										<th scope="col" className="pl-6 pr-0 py-4 font-bold text-right"><span className="sr-only">Open job</span></th>
 									</tr>
 								</thead>
-								<tbody className="divide-y divide-gray-200 text-sm">
+								<tbody className="divide-y divide-gray-200 text-[15px]">
 									{paginatedFinderCareers.length === 0 ? (
 										<tr>
-											<td colSpan={5} className="px-6 py-12 text-center font-mono text-xs text-[#5F5B52] italic">
+											<td colSpan={5} className="px-6 py-12 text-center font-mono text-sm text-[#5F5B52] italic">
 												No careers match. Try widening the filters.
 											</td>
 										</tr>
@@ -1616,7 +1616,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 											>
 												<td className="pl-0 pr-6 py-6 text-left">
 													<div className="font-bold text-[#1A1A1A] group-hover:text-[#475F73] transition line-clamp-1">{item.title}</div>
-													<div className="font-mono text-[9px] text-[#5F5B52] uppercase mt-0.5">{item.code}</div>
+													<div className="font-mono text-[10.5px] text-[#5F5B52] uppercase mt-0.5">{item.code}</div>
 												</td>
 												<td className="px-6 py-6 text-left">
 													<div className="flex items-center justify-start gap-2">
@@ -1630,7 +1630,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 																}}
 															></div>
 														</div>
-														<span className={`font-mono text-xs font-bold leading-none ${
+														<span className={`font-mono text-sm font-bold leading-none ${
 															item.risk_score > 65 ? 'text-[#A55252]' : item.risk_score > 35 ? 'text-[#96693A]' : 'text-[#475F73]'
 														}`}>
 															{item.risk_score}%
@@ -1641,7 +1641,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 													{formatUSD(item.salary)}
 												</td>
 												<td className="px-6 py-6 text-left">
-													<span className={`inline-flex rounded-full px-2.5 py-0.5 text-[9.5px] font-bold font-mono uppercase border ${
+													<span className={`inline-flex rounded-full px-2.5 py-0.5 text-[11px] font-bold font-mono uppercase border ${
 														item.employment_band === 'Very High'
 															? 'bg-[#5A7A8F]/10 text-[#475F73] border-transparent'
 															: item.employment_band === 'High'
@@ -1653,11 +1653,11 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 														{item.employment_band}
 													</span>
 													{item.projection && item.projection.change_percent !== null ? (
-														<span className={`mt-1 block font-mono text-[10px] font-bold ${item.projection.change_percent > 0 ? 'text-[#2E6F40]' : item.projection.change_percent < 0 ? 'text-[#A55252]' : 'text-[#5F5B52]'}`}>
+														<span className={`mt-1 block font-mono text-[12px] font-bold ${item.projection.change_percent > 0 ? 'text-[#2E6F40]' : item.projection.change_percent < 0 ? 'text-[#A55252]' : 'text-[#5F5B52]'}`}>
 															{item.projection.change_percent > 0 ? '+' : ''}{item.projection.change_percent.toFixed(1)}% <span className="font-normal text-[#5F5B52]">by 2035</span>
 														</span>
 													) : (
-														<span className="mt-1 block font-mono text-[10px] text-[#5F5B52]">not projected</span>
+														<span className="mt-1 block font-mono text-[12px] text-[#5F5B52]">not projected</span>
 													)}
 												</td>
 												<td className="pl-6 pr-0 py-6 text-right">
@@ -1667,7 +1667,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 																e.stopPropagation();
 																handleAddToCompare(item);
 															}}
-															className="font-mono text-[10.5px] uppercase tracking-wider text-[#5E5E5E] hover:text-[#1A1A1A] hover:underline transition font-bold bg-transparent border-none cursor-pointer"
+															className="font-mono text-[12.5px] uppercase tracking-wider text-[#5E5E5E] hover:text-[#1A1A1A] hover:underline transition font-bold bg-transparent border-none cursor-pointer"
 															>
 															Compare
 															</button>
@@ -1676,7 +1676,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 																e.stopPropagation();
 																openRole(item.code);
 															}}
-															className="rounded-lg bg-[#1A1A1A] px-4 py-1.5 font-mono text-[9.5px] uppercase tracking-wider text-white hover:bg-[#333333] transition shadow-sm font-bold"
+															className="rounded-lg bg-[#1A1A1A] px-4 py-1.5 font-mono text-[11px] uppercase tracking-wider text-white hover:bg-[#333333] transition shadow-sm font-bold"
 															aria-label={`Open ${item.title}`}
 															>
 															Open
@@ -1693,24 +1693,24 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 						{/* Pagination Controls */}
 						{totalPages > 1 && (
 							<div className="flex items-center justify-between mt-6 border-t border-gray-200 pt-4">
-								<span className="font-mono text-[10px] text-[#5F5B52]">
+								<span className="font-mono text-[12px] text-[#5F5B52]">
 									Showing {(currentPage - 1) * itemsPerPage + 1} - {Math.min(currentPage * itemsPerPage, filteredFinderCareers.length)} of {filteredFinderCareers.length} careers
 								</span>
 								<div className="flex items-center gap-2">
 									<button
 										disabled={currentPage === 1}
 										onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
-										className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 font-mono text-[10px] text-[#5E5E5E] hover:text-[#1A1A1A] disabled:opacity-30 disabled:hover:text-[#5E5E5E] transition"
+										className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 font-mono text-[12px] text-[#5E5E5E] hover:text-[#1A1A1A] disabled:opacity-30 disabled:hover:text-[#5E5E5E] transition"
 									>
 										← Prev
 									</button>
-									<span className="font-mono text-xs text-[#5E5E5E]">
+									<span className="font-mono text-sm text-[#5E5E5E]">
 										Page {currentPage} of {totalPages}
 									</span>
 									<button
 										disabled={currentPage === totalPages}
 										onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
-										className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 font-mono text-[10px] text-[#5E5E5E] hover:text-[#1A1A1A] disabled:opacity-30 disabled:hover:text-[#5E5E5E] transition"
+										className="rounded-lg border border-gray-200 bg-white px-3 py-1.5 font-mono text-[12px] text-[#5E5E5E] hover:text-[#1A1A1A] disabled:opacity-30 disabled:hover:text-[#5E5E5E] transition"
 									>
 										Next →
 									</button>
@@ -1725,11 +1725,11 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 			{activeView === 'map' && (
 				<div role="tabpanel" id="panel-map" aria-labelledby="tab-map" className="grid gap-8">
 					<div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-						<h3 className="text-xl font-bold text-[#1A1A1A] mb-2">Where careers sit</h3>
-						<p className="text-xs text-[#5E5E5E] leading-relaxed max-w-3xl">
+						<h3 className="text-2xl font-bold text-[#1A1A1A] mb-2">Where careers sit</h3>
+						<p className="text-sm text-[#5E5E5E] leading-relaxed max-w-3xl">
 							Every job we score, plotted by typical pay and by how much of its work AI can already do. The top-left corner is the sweet spot — well paid, less exposed. Type in the search field above to narrow the map; hover or tap a dot for details, and click it to open the full breakdown.
 						</p>
-						<div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[10px] uppercase tracking-wider text-[#5E5E5E]">
+						<div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[12px] uppercase tracking-wider text-[#5E5E5E]">
 							<span className="flex items-center gap-1.5">
 								<span className="h-2.5 w-2.5 rounded-full" style={{ background: '#5A7A8F' }}></span> Low exposure
 							</span>
@@ -1745,7 +1745,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 							<div className="flex h-96 items-center justify-center">
 								<div className="flex flex-col items-center gap-3">
 									<div className="h-10 w-10 animate-spin rounded-full border-2 border-cyan-500 border-t-transparent"></div>
-									<span className="font-mono text-xs text-[#64748B] uppercase tracking-widest animate-pulse">Placing 1,000 careers on the map…</span>
+									<span className="font-mono text-sm text-[#64748B] uppercase tracking-widest animate-pulse">Placing 1,000 careers on the map…</span>
 								</div>
 							</div>
 						) : (
@@ -1775,7 +1775,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 													y={y + 4}
 													textAnchor="end"
 													fill="#5E5E5E"
-													className="font-mono text-[10px] font-semibold"
+													className="font-mono text-[12px] font-semibold"
 												>
 													{riskVal}%
 												</text>
@@ -1802,7 +1802,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 													y={scatterDimensions.height - scatterMargin.bottom + 20}
 													textAnchor="middle"
 													fill="#5E5E5E"
-													className="font-mono text-[10px] font-semibold"
+													className="font-mono text-[12px] font-semibold"
 												>
 													{salVal >= 100000 ? `$${salVal/1000}k` : `$${salVal/1000}k`}
 												</text>
@@ -1834,7 +1834,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 										y={scatterDimensions.height / 2 - 20}
 										fill="#1A1A1A"
 										textAnchor="middle"
-										className="font-mono text-[10px] uppercase font-bold tracking-widest"
+										className="font-mono text-[12px] uppercase font-bold tracking-widest"
 										transform={`rotate(-90, ${scatterMargin.left - 55}, ${scatterDimensions.height / 2 - 20})`}
 									>
 										AI exposure
@@ -1844,7 +1844,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 										y={scatterDimensions.height - 10}
 										fill="#1A1A1A"
 										textAnchor="middle"
-										className="font-mono text-[10px] uppercase font-bold tracking-widest"
+										className="font-mono text-[12px] uppercase font-bold tracking-widest"
 									>
 										Typical annual pay
 									</text>
@@ -1897,14 +1897,14 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 												: 'translate(15px, -50%)'
 										}}
 									>
-										<p className="font-mono text-[8px] uppercase tracking-wider text-[#475F73] font-bold mb-1">
+										<p className="font-mono text-[9.5px] uppercase tracking-wider text-[#475F73] font-bold mb-1">
 											{hoveredScatterCareer.code}
 										</p>
-										<div className="text-xs font-bold line-clamp-1 text-[#1A1A1A]">
+										<div className="text-sm font-bold line-clamp-1 text-[#1A1A1A]">
 											{hoveredScatterCareer.title}
 										</div>
 										
-										<div className="mt-2.5 flex items-center justify-between gap-4 border-t border-gray-150 pt-2 font-mono text-[9.5px]">
+										<div className="mt-2.5 flex items-center justify-between gap-4 border-t border-gray-150 pt-2 font-mono text-[11px]">
 											<div>
 												<span className="text-[#5E5E5E]">AI exposure:</span>
 												<strong className={`ml-1 ${
@@ -1924,7 +1924,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 												</strong>
 											</div>
 										</div>
-										<p className="mt-2 font-mono text-[8px] text-[#5F5B52] italic text-center">Click to open this job</p>
+										<p className="mt-2 font-mono text-[9.5px] text-[#5F5B52] italic text-center">Click to open this job</p>
 									</div>
 								)}
 							</div>
