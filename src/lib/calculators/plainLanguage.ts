@@ -20,6 +20,8 @@
  * - `next` is an action someone can take this week without hiring anyone.
  */
 import type { CalculatorTool } from './metadata';
+import { CAREER_AI_NEXT, CAREER_AI_QUESTION, CAREER_AI_WORDS } from './careerAiCopy';
+
 
 export type CalculatorSlug = CalculatorTool['slug'];
 
@@ -411,27 +413,14 @@ export const PLAIN_LANGUAGE: Record<CalculatorSlug, PlainLanguageEntry> = {
 	},
 
 	'career-ai-resilience': {
-		question: 'How much of your job can AI already do, task by task?',
+		question: CAREER_AI_QUESTION,
 		haveReady: [
 			'Your job title, and the tasks that actually fill the week.',
 			'The share of those tasks that happen at a desk, on text, in software.',
 			'Which tasks you would hand over today if the output were good enough.'
 		],
-		words: [
-			{
-				term: 'Task exposure',
-				plain: 'The share of your weekly tasks a current model can do at your quality bar. Not the share of your job title.'
-			},
-			{
-				term: 'Automation risk',
-				plain: 'How much of the work can be done without you, weighted by how much of your pay depends on it.'
-			}
-		],
-		next: [
-			'Start with the tasks you would hand over tomorrow, not the ones you fear losing.',
-			'Pick one exposed task and automate it this month. The skill compounds faster than the risk does.',
-			'Move toward the parts of the job that need judgement, relationships, or accountability for a decision.'
-		]
+		words: CAREER_AI_WORDS,
+		next: CAREER_AI_NEXT
 	},
 
 	'expat-evaluator': {
