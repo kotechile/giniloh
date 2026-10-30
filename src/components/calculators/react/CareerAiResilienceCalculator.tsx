@@ -108,6 +108,12 @@ function publishedWeights(data: OccupationDetail) {
 const WEEK_HOURS = 40;
 
 /**
+ * How many task cards show before the counter. Three is the number a reader will actually read, and
+ * they are the three with the most hours at stake — the rest belong behind a counter, not 2,800px of page.
+ */
+const TASK_PREVIEW = 3;
+
+/**
  * A definition behind a `(?)` marker.
  *
  * CSS-only disclosure: `group-hover` covers a pointer, `group-focus-within` covers a keyboard and a
@@ -284,22 +290,29 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 		fetchDetail();
 	}, [selectedCode]);
 
-	// Auto-resize for scatter plot SVG
+	// Auto-resize for scatter plot SVG. Height follows width so the field reads as a square-ish map
+	// instead of a 400px letterbox: 1,016 dots in a 1100×400 strip compress into an unreadable blob.
 	useEffect(() => {
 		if (activeView === 'map' && scatterContainerRef.current) {
+			const resize = (width: number) => {
+				setScatterDimensions({
+					width: Math.max(320, Math.floor(width)),
+					height: Math.max(420, Math.min(560, Math.round(width * 0.5)))
+				});
+			};
+			resize(scatterContainerRef.current.getBoundingClientRect().width);
 			const observer = new ResizeObserver((entries) => {
-				for (let entry of entries) {
-					const { width } = entry.contentRect;
-					setScatterDimensions((prev) => ({
-						...prev,
-						width: Math.max(320, Math.floor(width * 0.95))
-					}));
-				}
+				for (const entry of entries) resize(entry.contentRect.width);
 			});
 			observer.observe(scatterContainerRef.current);
 			return () => observer.disconnect();
 		}
 	}, [activeView]);
+
+	// A new bucket is a new list: start it at the top rather than inheriting "show all" from the last one.
+	useEffect(() => {
+		setShowAllTasks(false);
+	}, [taskFilter, selectedCode]);
 
 	// Close suggestions dropdown when clicking outside
 	useEffect(() => {
@@ -474,6 +487,13 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 		low: 'still needs someone in the room'
 	};
 
+	/** One source for the three bucket colours — ring, pillars, sliders, week bar and chips. */
+	const bucketColor: Record<'high' | 'medium' | 'low', string> = {
+		high: '#A55252',
+		medium: '#96693A',
+		low: '#5A7A8F'
+	};
+
 	/** The published score for the job as it stands today; the sliders move away from it. */
 	const baselineScore = Math.round(careerDetail?.risk_score ?? overallScore);
 	const scoreDelta = overallScore - baselineScore;
@@ -496,39 +516,38 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 		}).format(val);
 	};
 
-	// Donut slicing helper
-	const drawSlicePath = (startPercent: number, endPercent: number, radius: number) => {
-		if (endPercent - startPercent >= 0.9999) {
-			return `M 0 -${radius} A ${radius} ${radius} 0 1 1 -0.01 -${radius} Z`;
-		}
-		const [startX, startY] = [
-			radius * Math.sin(2 * Math.PI * startPercent),
-			-radius * Math.cos(2 * Math.PI * startPercent)
-		];
-		const [endX, endY] = [
-			radius * Math.sin(2 * Math.PI * endPercent),
-			-radius * Math.cos(2 * Math.PI * endPercent)
-		];
-		const largeArcFlag = endPercent - startPercent > 0.5 ? 1 : 0;
-		return `M 0 0 L ${startX} ${startY} A ${radius} ${radius} 0 ${largeArcFlag} 1 ${endX} ${endY} Z`;
-	};
-
+	/**
+	 * The ring around the score.
+	 *
+	 * Each bucket is a stroked arc on one circle, so the segments are the composition and the centre
+	 * is the number — one object instead of a score ring and a task donut competing at 112px. A 3px
+	 * gap comes off each arc so adjacent buckets stay separable at a 26px stroke.
+	 */
+	const RING_RADIUS = 104;
+	const RING_CIRCUMFERENCE = 2 * Math.PI * RING_RADIUS;
 	const donutSlices = useMemo(() => {
 		const total = weights.high + weights.medium + weights.low || 1;
-		const highPct = weights.high / total;
-		const medPct = weights.medium / total;
-
-		let accum = 0;
-		const slices = [
-			{ category: 'high' as const, start: accum, end: accum + highPct, color: '#A55252', glowColor: 'rgba(184,92,92,0.4)' },
-			{ category: 'medium' as const, start: accum + highPct, end: accum + highPct + medPct, color: '#96693A', glowColor: 'rgba(200,141,78,0.4)' },
-			{ category: 'low' as const, start: accum + highPct + medPct, end: 1.0, color: '#5A7A8F', glowColor: 'rgba(90,122,143,0.4)' }
-		];
-		return slices.filter(s => s.end > s.start);
+		let offset = 0;
+		const buckets = (['high', 'medium', 'low'] as const).map((category) => {
+			const length = (weights[category] / total) * RING_CIRCUMFERENCE;
+			const slice = {
+				category,
+				color: bucketColor[category],
+				dashArray: `${Math.max(0, length - 3)} ${RING_CIRCUMFERENCE}`,
+				dashOffset: -offset
+			};
+			offset += length;
+			return slice;
+		});
+		return buckets.filter((slice) => weights[slice.category] > 0);
 	}, [weights]);
 
-	// Scatter Plot dimensions and mapping parameters
-	const scatterMargin = { top: 20, right: 30, bottom: 50, left: 85 };
+	/**
+	 * Plot geometry. Axes: pay on x (right = better paid), exposure on y (up = more exposed), so the
+	 * bottom-right corner is the quiet, well-paid end of the field.
+	 */
+	const narrowPlot = scatterDimensions.width < 560;
+	const scatterMargin = { top: 28, right: narrowPlot ? 16 : 28, bottom: 52, left: narrowPlot ? 44 : 74 };
 	const scatterPlotWidth = scatterDimensions.width - scatterMargin.left - scatterMargin.right;
 	const scatterPlotHeight = scatterDimensions.height - scatterMargin.top - scatterMargin.bottom;
 
@@ -563,6 +582,30 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 			item.title.toLowerCase().includes(q) || item.code.includes(q)
 		);
 	}, [searchQuery, indexData]);
+
+	/**
+	 * Quadrant rules. Drawn at the median of every plottable role rather than at a round number, so
+	 * "higher pay" and "more exposed" mean what they say about this field. Computed from the whole
+	 * index, not the search result: narrowing the map should not move the frame.
+	 */
+	const medians = useMemo(() => {
+		const plottable = indexData.filter((item) => item.risk_score !== null);
+		const pays = plottable.map((item) => item.salary).filter((value): value is number => value !== null).sort((a, b) => a - b);
+		const risks = plottable.map((item) => item.risk_score).sort((a, b) => a - b);
+		const mid = (values: number[]) => (values.length ? values[Math.floor(values.length / 2)] : 0);
+		return { pay: Math.round(mid(pays) / 1000) * 1000, risk: Math.round(mid(risks)) };
+	}, [indexData]);
+
+	const quadrantPay = medians.pay;
+	const quadrantRisk = medians.risk;
+	const quadrantX = mapSalaryToX(quadrantPay);
+	const quadrantY = mapRiskToY(quadrantRisk);
+
+	/** The open role as an index row, so the map can mark it even before detail has loaded. */
+	const selectedIndexItem = useMemo(
+		() => indexData.find((item) => item.code === selectedCode && item.risk_score !== null) ?? null,
+		[indexData, selectedCode]
+	);
 
 	const handleScatterMouseMove = (e: React.MouseEvent<any>, item: OccupationIndexItem) => {
 		if (!scatterContainerRef.current) return;
@@ -660,14 +703,26 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 		: [];
 	const pickedStatePay = stateWageEntries.find(([name]) => name === statePick)?.[1] ?? null;
 	const pickedStateRank = stateWageEntries.findIndex(([name]) => name === statePick) + 1;
-	const visibleTasks = showAllTasks ? filteredTasks : filteredTasks.slice(0, 8);
+
+	/**
+	 * Tasks ordered by what is at stake: the hours a task occupies at the current week mix, times how
+	 * much of it AI can already do. The first three are therefore the ones worth acting on, and the
+	 * remaining ones are a counter rather than another two thousand pixels of scroll.
+	 */
+	const rankedTasks = useMemo(() => {
+		const stake = (task: Task) => (task.score === null ? -1 : taskHours(task) * task.score);
+		return [...filteredTasks].sort((a, b) => stake(b) - stake(a));
+	}, [filteredTasks, weights]);
+	const visibleTasks = showAllTasks ? rankedTasks : rankedTasks.slice(0, TASK_PREVIEW);
 
 	return (
 		<div className="w-full text-[#5E5E5E] font-sans">
 			{/* Persistent header: one search field, one view switch, one way into the role index. */}
-			<div className="mb-3 rounded-xl border border-gray-200 bg-white p-2.5">
+			<div className="mb-4 rounded-xl border border-[#E5E5E5] bg-white p-2.5 sm:p-3">
 				<div className="flex flex-col gap-2.5 md:flex-row md:items-center">
-					<div ref={suggestionsRef} className="relative w-full md:max-w-md">
+					{/* The input is the anchor: it takes the free width, so on a desktop it reads as the
+					    one thing to do, not as a field squeezed beside the tab switch. */}
+					<div ref={suggestionsRef} className="relative w-full md:max-w-2xl md:flex-1">
 						<div className="relative">
 							<input
 								id="career-search"
@@ -687,7 +742,7 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 									if (e.key === 'Escape') setShowSuggestions(false);
 									if (e.key === 'Enter' && suggestions.length > 0) openRole(suggestions[0].code);
 								}}
-								className="w-full rounded-lg border border-gray-300 bg-white py-2 pl-9 pr-8 text-sm sm:text-[15px] font-medium text-[#1A1A1A] outline-none transition focus:border-[#1A1A1A] focus:ring-1 focus:ring-[#1A1A1A]"
+								className="w-full rounded-lg border border-[#D8D3C4] bg-white py-2.5 pl-10 pr-9 text-base font-medium text-[#1A1A1A] outline-none transition placeholder:text-[#8C8C8C] focus:border-[#1A1A1A] focus:ring-1 focus:ring-[#1A1A1A]"
 							/>
 							<svg
 								className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-[#64748B]"
@@ -823,353 +878,334 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 
 					{!loadingDetail && careerDetail && (
 						<>
-							{/* ==================== TRI-PANEL: ROLE & PAY · EXPOSURE & TASKS · WEEK ==================== */}
-							<div className="grid grid-cols-1 items-stretch gap-3.5 lg:grid-cols-3 xl:gap-4">
-
-								{/* PANEL 1 — ROLE & PAY. Compensation stays in one card: picking a state changes
-								    the figure here, and the full 48-state panel is an anchor away. */}
-								<div className="flex flex-col rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5">
-									<div className="mb-2 flex items-center gap-2">
-										<span className="font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">Role</span>
-										<span className="rounded bg-gray-100 px-1.5 py-0.5 font-mono text-[10.5px] font-bold text-[#5F5B52]">
-											SOC {careerDetail.code}
-										</span>
-									</div>
-									<h2 className="text-xl font-black leading-tight tracking-tight text-[#1A1A1A] sm:text-2xl" title={careerDetail.title}>
-										{careerDetail.title}
-									</h2>
-
-									<div className="mb-2.5 mt-1.5 text-sm leading-relaxed text-[#5E5E5E]">
-										<p className={showFullDesc ? '' : 'line-clamp-3'}>{careerDetail.description}</p>
-										{careerDetail.description.length > 150 && (
-											<button
-												onClick={() => setShowFullDesc(!showFullDesc)}
-												className="mt-0.5 inline-flex min-h-[28px] items-center font-mono text-[12px] font-bold text-[#475F73] hover:text-[#1A1A1A] hover:underline"
-											>
-												{showFullDesc ? 'Show less' : 'Read more'}
-											</button>
+							{/* ==================== ROLE STRIP — identity and pay, one row, no box ==================== */}
+							<div className="flex flex-col gap-4 border-b border-[#E5E5E5] pb-4 lg:flex-row lg:items-start lg:justify-between lg:gap-8">
+								<div className="min-w-0">
+									<div className="flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">
+										<span>SOC {careerDetail.code}</span>
+										{careerDetail.employment !== null && (
+											<>
+												<span aria-hidden="true" className="text-[#D8D3C4]">/</span>
+												<span>{careerDetail.employment.toLocaleString('en-US')} employed</span>
+											</>
 										)}
 									</div>
+									<h2 className="mt-1.5 text-2xl font-black leading-tight tracking-tight text-[#1A1A1A] sm:text-[30px]" title={careerDetail.title}>
+										{careerDetail.title}
+									</h2>
+									<p className={`mt-1.5 max-w-2xl text-sm leading-6 text-[#5E5E5E] ${showFullDesc ? '' : 'line-clamp-2'}`}>
+										{careerDetail.description}
+									</p>
+									{careerDetail.description.length > 150 && (
+										<button
+											onClick={() => setShowFullDesc(!showFullDesc)}
+											className="mt-0.5 inline-flex min-h-[28px] items-center font-mono text-[12px] font-bold text-[#475F73] hover:text-[#1A1A1A] hover:underline"
+										>
+											{showFullDesc ? 'Show less' : 'Read more'}
+										</button>
+									)}
+								</div>
 
-									<div className="rounded-xl border border-gray-200/70 bg-gray-50/80 p-2.5">
-										<div className="flex items-baseline justify-between gap-2">
-											<p className="font-mono text-[10.5px] font-bold uppercase tracking-wider text-[#5F5B52]">National median</p>
-											<p className="font-mono text-[15px] font-black text-[#1A1A1A]">{formatUSD(careerDetail.salary)}</p>
-										</div>
+								{/* Pay sits with the role because it is the other half of the same answer. */}
+								<div className="flex shrink-0 flex-col gap-1.5 lg:w-[300px]">
+									<div className="flex items-baseline justify-between gap-3">
+										<span className="font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">National median</span>
+										<span className="font-mono text-[28px] font-black leading-none tracking-tight text-[#1A1A1A]">{formatUSD(careerDetail.salary)}</span>
+									</div>
 
-										{careerDetail.state_wages && stateWageEntries.length >= 5 ? (
-											<div className="mt-2 border-t border-gray-200/70 pt-2">
-												<label htmlFor="role-state-pick" className="block font-mono text-[10.5px] font-bold uppercase tracking-wider text-[#5F5B52]">
-													Pay in your state
-												</label>
+									{careerDetail.state_wages && stateWageEntries.length >= 5 ? (
+										<div className="mt-1 border-t border-[#EFEFEF] pt-2">
+											<label htmlFor="role-state-pick" className="block font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">
+												Pay in your state
+											</label>
+											<div className="mt-1 flex items-baseline gap-2">
 												<select
 													id="role-state-pick"
 													value={statePick}
 													onChange={(e) => setStatePick(e.target.value)}
-													className="mt-1 w-full rounded border border-gray-300 bg-white px-2 py-1 text-sm font-medium text-[#1A1A1A] outline-none transition focus:border-[#1A1A1A]"
+													className="min-w-0 flex-1 rounded border border-[#D8D3C4] bg-white px-2 py-1.5 text-sm font-medium text-[#1A1A1A] outline-none transition focus:border-[#1A1A1A]"
 												>
 													<option value="">Select state...</option>
 													{stateWageNames.map((name) => (
 														<option key={name} value={name}>{name}</option>
 													))}
 												</select>
-
-												{pickedStatePay !== null ? (
-													<div className="mt-1.5">
-														<div className="flex items-baseline justify-between gap-2">
-															<span className="font-mono text-lg font-black text-[#1A1A1A]">{formatUSD(pickedStatePay)}</span>
-															<span className="font-mono text-[12px] font-bold text-[#5F5B52]">
-																#{pickedStateRank} of {stateWageEntries.length}
-															</span>
-														</div>
-														<div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-gray-200" aria-hidden="true">
-															<div
-																className="h-full rounded-full bg-[#5A7A8F]"
-																style={{ width: `${Math.max(3, (1 - (pickedStateRank - 1) / Math.max(1, stateWageEntries.length - 1)) * 100)}%` }}
-															/>
-														</div>
-														<p className="mt-1 text-[12px] leading-4 text-[#5F5B52]">
-															{formatUSD(stateWageEntries[stateWageEntries.length - 1][1])} – {formatUSD(stateWageEntries[0][1])} across {stateWageEntries.length} states.
-														</p>
-													</div>
-												) : statePick === '' ? (
-													<p className="mt-1.5 text-[13px] leading-5 text-[#5E5E5E]">Pick a state for its own survey estimate.</p>
-												) : (
-													<p className="mt-1.5 text-[13px] leading-5 text-[#5E5E5E]">BLS published no estimate for {statePick} in this occupation.</p>
+												{pickedStatePay !== null && (
+													<span className="font-mono text-lg font-black text-[#1A1A1A]">{formatUSD(pickedStatePay)}</span>
 												)}
-
-												<a href="#state-wages" className="mt-1.5 inline-block font-mono text-[12px] font-bold text-[#475F73] hover:text-[#1A1A1A] hover:underline">
-													Compare all {stateWageEntries.length} states ↓
-												</a>
 											</div>
-										) : (
-											<div className="mt-2 flex items-center justify-between gap-2 border-t border-gray-200/70 pt-2">
-												<div>
-													<p className="font-mono text-[10.5px] font-bold uppercase tracking-wider text-[#5F5B52]">Employment band</p>
-													<p className="mt-0.5 text-sm font-bold text-[#1A1A1A]">{careerDetail.employment_band || 'National sample'}</p>
+
+											{pickedStatePay !== null ? (
+												<div className="mt-1.5 flex items-center justify-between gap-2">
+													<span className="font-mono text-[11.5px] font-bold text-[#5F5B52]">#{pickedStateRank} of {stateWageEntries.length}</span>
+													<a href="#state-wages" className="font-mono text-[11.5px] font-bold text-[#475F73] hover:text-[#1A1A1A] hover:underline">
+														Compare all {stateWageEntries.length} states ↓
+													</a>
 												</div>
-												{careerDetail.employment && (
-													<div className="text-right">
-														<p className="font-mono text-[10.5px] font-bold uppercase tracking-wider text-[#5F5B52]">Employed</p>
-														<p className="mt-0.5 font-mono text-sm font-bold text-[#1A1A1A]">{careerDetail.employment.toLocaleString()}</p>
-													</div>
-												)}
-											</div>
-										)}
-									</div>
+											) : statePick === '' ? (
+												<p className="mt-1.5 text-[12.5px] leading-5 text-[#5E5E5E]">Pick a state for its own survey estimate.</p>
+											) : (
+												<p className="mt-1.5 text-[12.5px] leading-5 text-[#5E5E5E]">BLS published no estimate for {statePick} in this occupation.</p>
+											)}
+										</div>
+									) : (
+										<div className="mt-1 flex items-center justify-between gap-2 border-t border-[#EFEFEF] pt-2">
+											<span className="font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">Employment</span>
+											<span className="text-sm font-bold text-[#1A1A1A]">
+												{careerDetail.employment_band || 'National sample'}
+												{careerDetail.employment ? ` · ${careerDetail.employment.toLocaleString('en-US')}` : ''}
+											</span>
+										</div>
+									)}
 
-									<div className="mt-auto flex flex-wrap gap-x-3 gap-y-1 pt-2 font-mono text-[11px] uppercase tracking-wider text-[#5F5B52]">
-										{careerDetail.employment_band && <span>Employment {careerDetail.employment_band}</span>}
-										{careerDetail.salary_vintage && <span>{careerDetail.salary_vintage}</span>}
-									</div>
+									{careerDetail.salary_vintage && (
+										<p className="font-mono text-[10.5px] uppercase tracking-wider text-[#5F5B52]">{careerDetail.salary_vintage}</p>
+									)}
 								</div>
+							</div>
 
-								{/* PANEL 2 — EXPOSURE & TASKS. Score, composition and the way into the task list,
-								    kept as one argument. */}
-								<div className="flex flex-col rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5">
-									<div className="relative mb-2 flex items-center gap-1.5 border-b border-gray-100 pb-2.5">
-										<p className="font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">AI exposure score</p>
+							{/* ==================== THE ANSWER · THE WEEK ==================== */}
+							<div className="grid grid-cols-1 items-stretch gap-3.5 lg:grid-cols-[minmax(0,42fr)_minmax(0,58fr)] xl:gap-4">
+
+								{/* LEFT — the headline number. Score, ring and pillars are one object: the ring is
+								    the composition, its centre is the score, the rows are the legend. */}
+								<section aria-labelledby="answer-heading" className="flex flex-col rounded-2xl border border-[#E5E5E5] bg-white p-4 sm:p-5">
+									<div className="mb-1 flex items-center gap-1.5">
+										<h3 id="answer-heading" className="font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">The answer</h3>
 										<InfoTip id="tip-exposure" label="AI exposure score" plain={definition('Task exposure')} />
 									</div>
 
-									<div className="flex items-center justify-center gap-3">
-										{/* The score, as an arc */}
-										<div className="relative my-1 flex h-28 w-28 items-center justify-center" role="img" aria-label={`AI exposure ${overallScore} out of 100`}>
-											<svg className="h-full w-full -rotate-90" viewBox="0 0 120 120">
-												<circle cx="60" cy="60" r="48" fill="transparent" stroke="#E5E5E5" strokeWidth="7" />
-												<circle
-													cx="60"
-													cy="60"
-													r="48"
-													fill="transparent"
-													stroke={overallScore > 65 ? '#A55252' : overallScore > 35 ? '#96693A' : '#5A7A8F'}
-													strokeWidth="7"
-													strokeDasharray="301.59"
-													strokeDashoffset={301.59 - (overallScore / 100) * 301.59}
-													strokeLinecap="round"
-													style={{ transition: 'stroke-dashoffset 0.6s ease-out, stroke 0.5s ease-out' }}
-												/>
-											</svg>
-											<div className="absolute inset-0 flex flex-col items-center justify-center">
-												<span className="text-3xl font-black tracking-tight text-[#1A1A1A]">{overallScore}</span>
-												<span className="font-mono text-[10px] font-bold uppercase tracking-widest text-[#5F5B52]">of 100</span>
-											</div>
-										</div>
-
-										{/* The mix, as a donut. Hover a slice or a row to isolate it. */}
-										<div className="relative my-1 flex h-28 w-28 items-center justify-center">
+									<div className="flex flex-col items-center">
+										<div
+											className="relative flex h-[228px] w-[228px] items-center justify-center sm:h-[252px] sm:w-[252px]"
+											role="img"
+											aria-label={`AI exposure ${overallScore} out of 100`}
+										>
 											<svg className="h-full w-full -rotate-90" viewBox="-120 -120 240 240" aria-hidden="true">
+												<circle cx="0" cy="0" r="104" fill="none" stroke="#F4F1E8" strokeWidth="26" />
 												{donutSlices.map((slice) => {
 													const isHovered = hoveredDonutSlice === slice.category;
 													return (
-														<g
+														<circle
 															key={slice.category}
-															role="button"
-															tabIndex={0}
-															aria-label={`${bucketLabel[slice.category]}: ${weights[slice.category]}% of the job`}
-															onMouseEnter={() => setHoveredDonutSlice(slice.category)}
-															onMouseLeave={() => setHoveredDonutSlice(null)}
-															onFocus={() => setHoveredDonutSlice(slice.category)}
-															onBlur={() => setHoveredDonutSlice(null)}
-															onClick={() => setTaskFilter(taskFilter === slice.category ? 'all' : slice.category)}
-															className="cursor-pointer transition-all duration-200"
-														>
-															<path
-																d={drawSlicePath(slice.start, slice.end, isHovered ? 104 : 96)}
-																fill={slice.color}
-																stroke="#FFFFFF"
-																strokeWidth="2.5"
-																opacity={hoveredDonutSlice ? (isHovered ? 1.0 : 0.45) : 0.95}
-																filter={isHovered ? `drop-shadow(0 0 6px ${slice.color})` : undefined}
-															/>
-														</g>
+															cx="0"
+															cy="0"
+															r="104"
+															fill="none"
+															stroke={slice.color}
+															strokeWidth={isHovered ? 34 : 26}
+															strokeDasharray={slice.dashArray}
+															strokeDashoffset={slice.dashOffset}
+															opacity={hoveredDonutSlice ? (isHovered ? 1 : 0.35) : 0.95}
+															style={{ transition: 'stroke-width 0.18s ease-out, opacity 0.18s ease-out' }}
+														/>
 													);
 												})}
-												<circle cx="0" cy="0" r="52" fill="#FFFFFF" />
 											</svg>
 											<div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center">
-												{hoveredDonutSlice ? (
-													<>
-														<span className="text-xl font-black" style={{ color: hoveredDonutSlice === 'high' ? '#A55252' : hoveredDonutSlice === 'medium' ? '#96693A' : '#5A7A8F' }}>
-															{weights[hoveredDonutSlice]}%
-														</span>
-														<span className="max-w-[62px] text-center font-mono text-[9.5px] uppercase leading-tight tracking-wider text-[#5F5B52]">
-															{bucketLabel[hoveredDonutSlice]}
-														</span>
-													</>
-												) : (
-													<>
-														<span className="text-xl font-black text-[#1A1A1A]">{careerDetail.tasks.length}</span>
-														<span className="font-mono text-[9.5px] uppercase tracking-wider text-[#5F5B52]">tasks</span>
-													</>
-												)}
+												<span className="font-mono text-[56px] font-black leading-none tracking-tighter tabular-nums text-[#1A1A1A] sm:text-[64px]">
+													{overallScore}
+												</span>
+												<span className="mt-1.5 font-mono text-[11px] font-bold uppercase tracking-[0.24em] text-[#5F5B52]">of 100</span>
 											</div>
 										</div>
-									</div>
 
-									{/* Verdict for the current week */}
-									<div className="mt-1 flex flex-wrap items-center justify-center gap-1.5">
-										<span className={`rounded-full px-2.5 py-0.5 font-mono text-[12px] font-bold uppercase tracking-wider ${
-											overallScore > 65
-												? 'bg-[#A55252]/10 text-[#A55252]'
-												: overallScore > 35
-													? 'bg-[#96693A]/10 text-[#96693A]'
-													: 'bg-[#5A7A8F]/10 text-[#475F73]'
-										}`}>
-											{overallScore > 65 ? 'High exposure' : overallScore > 35 ? 'Mixed exposure' : 'Low exposure'}
-										</span>
-										{isEdited && scoreDelta !== 0 && (
-											<span className={`rounded-full px-2 py-0.5 font-mono text-[12px] font-bold ${
-												scoreDelta < 0 ? 'bg-[#2E6F40]/10 text-[#2E6F40]' : 'bg-[#A55252]/10 text-[#A55252]'
+										<div className="mt-3 flex flex-wrap items-center justify-center gap-1.5">
+											<span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 font-mono text-[11.5px] font-bold uppercase tracking-wider ${
+												overallScore > 65
+													? 'bg-[#A55252]/10 text-[#A55252]'
+													: overallScore > 35
+														? 'bg-[#96693A]/10 text-[#96693A]'
+														: 'bg-[#5A7A8F]/10 text-[#475F73]'
 											}`}>
-												{scoreDelta < 0 ? '−' : '+'}{Math.abs(scoreDelta)} vs today
+												<span className="h-1.5 w-1.5 rounded-full bg-current" aria-hidden="true" />
+												{overallScore > 65 ? 'High exposure' : overallScore > 35 ? 'Mixed exposure' : 'Low exposure'}
 											</span>
-										)}
+											{isEdited && scoreDelta !== 0 && (
+												<span className={`inline-flex items-center rounded-full px-2.5 py-1 font-mono text-[11.5px] font-bold uppercase tracking-wider ${
+													scoreDelta < 0 ? 'bg-[#2E6F40]/10 text-[#2E6F40]' : 'bg-[#A55252]/10 text-[#A55252]'
+												}`}>
+													{scoreDelta < 0 ? '−' : '+'}{Math.abs(scoreDelta)} pts
+												</span>
+											)}
+										</div>
+
+										{/* One line of plain language: the hovered bucket while the pointer is on the
+										    ring, the whole composition at rest. Height is reserved so nothing jumps. */}
+										<p className="mt-2 min-h-[2.5rem] max-w-[24rem] text-center text-[12.5px] leading-snug text-[#5E5E5E]">
+											{hoveredDonutSlice ? (
+												<>
+													<strong className="font-bold" style={{ color: bucketColor[hoveredDonutSlice] }}>{weights[hoveredDonutSlice]}%</strong>{' '}
+													{bucketSentence[hoveredDonutSlice]} — {week.hours[hoveredDonutSlice].toFixed(1)} h a week.
+												</>
+											) : (
+												<>
+													<strong className="font-bold" style={{ color: bucketColor.high }}>{weights.high}%</strong> is repetitive work AI already does,{' '}
+													<strong className="font-bold" style={{ color: bucketColor.medium }}>{weights.medium}%</strong> is work AI can draft — but a person still checks and decides,{' '}
+													<strong className="font-bold" style={{ color: bucketColor.low }}>{weights.low}%</strong> still needs someone in the room.
+												</>
+											)}
+										</p>
 									</div>
 
-									<p className="mt-2 text-center text-[12.5px] leading-snug text-[#5E5E5E]">
-										{(['high', 'medium', 'low'] as const).map((key, idx) => (
-											<span key={key}>
-												<strong className="font-bold" style={{ color: key === 'high' ? '#A55252' : key === 'medium' ? '#96693A' : '#5A7A8F' }}>
-													{weights[key]}%
-												</strong>{' '}
-												{bucketSentence[key]}{idx < 2 ? ', ' : '.'}
-											</span>
-										))}
-									</p>
-
-									<div className="mt-2.5 border-t border-gray-100 pt-2">
-										<div className="relative mb-1 flex items-center gap-1.5">
-											<p className="font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">Task composition</p>
-											<InfoTip id="tip-composition" label="Task composition" plain={definition('Automation risk')} />
-										</div>
+									<div className="mt-3 space-y-1 border-t border-[#EFEFEF] pt-2">
 										{(['high', 'medium', 'low'] as const).map((key) => (
 											<button
 												key={key}
+												type="button"
 												onClick={() => setTaskFilter(taskFilter === key ? 'all' : key)}
+												onMouseEnter={() => setHoveredDonutSlice(key)}
+												onMouseLeave={() => setHoveredDonutSlice(null)}
+												onFocus={() => setHoveredDonutSlice(key)}
+												onBlur={() => setHoveredDonutSlice(null)}
 												aria-pressed={taskFilter === key}
-												className={`flex w-full items-center justify-between gap-2 rounded-lg border px-2.5 py-1.5 text-sm transition duration-150 ${
-													taskFilter === key ? 'border-gray-400 bg-gray-100 font-bold' : 'border-transparent bg-gray-50/70 hover:bg-gray-100/70'
+												className={`grid w-full grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-x-3 rounded-lg border px-2 py-1.5 text-left transition duration-150 ${
+													taskFilter === key ? 'border-[#D8D3C4] bg-[#F4F1E8]' : 'border-transparent hover:bg-[#FAFAFA]'
 												}`}
 											>
-												<span className="flex min-w-0 items-center gap-2">
-													<span className="h-2 w-2 shrink-0 rounded-full" style={{ background: key === 'high' ? '#A55252' : key === 'medium' ? '#96693A' : '#5A7A8F' }} />
-													<span className={`truncate text-[13.5px] ${taskFilter === key ? 'font-bold text-[#1A1A1A]' : 'text-[#5E5E5E]'}`}>{bucketLabel[key]}</span>
+												<span className="h-2.5 w-2.5 shrink-0 rounded-full" style={{ background: bucketColor[key] }} aria-hidden="true" />
+												<span className="min-w-0">
+													<span className="block truncate text-[13.5px] font-bold text-[#1A1A1A]">{bucketLabel[key]}</span>
+													<span className="block font-mono text-[11.5px] text-[#5F5B52]">{week.hours[key].toFixed(1)} h of the week</span>
 												</span>
-												<span className="flex shrink-0 items-baseline gap-1.5">
-													<span className="font-mono text-[12px] text-[#5F5B52]">{week.hours[key].toFixed(1)} h</span>
-													<span className="font-mono text-[13.5px] font-bold" style={{ color: key === 'high' ? '#A55252' : key === 'medium' ? '#96693A' : '#475F73' }}>
-														{weights[key]}%
-													</span>
+												<span className="font-mono text-[26px] font-black leading-none tabular-nums sm:text-[30px]" style={{ color: bucketColor[key] }}>
+													{weights[key]}<span className="text-base">%</span>
 												</span>
 											</button>
 										))}
 									</div>
 
-									<a
-										href="#task-breakdown"
-										className="mt-auto inline-flex items-center justify-center gap-1 pt-2.5 font-mono text-[12px] font-bold uppercase tracking-wider text-[#475F73] hover:text-[#1A1A1A] hover:underline"
-									>
-										Inspect {filteredTasks.length} tasks ↓
-									</a>
-								</div>
+									<div className="mt-auto flex flex-wrap items-center justify-between gap-x-3 gap-y-1 pt-3">
+										<a
+											href="#task-breakdown"
+											className="inline-flex min-h-[32px] items-center font-mono text-[12px] font-bold uppercase tracking-wider text-[#475F73] hover:text-[#1A1A1A] hover:underline"
+										>
+											Inspect {filteredTasks.length} tasks ↓
+										</a>
+										<button
+											type="button"
+											onClick={() => {
+												setActiveView('map');
+												window.scrollTo({ top: 160, behavior: 'smooth' });
+											}}
+											className="inline-flex min-h-[32px] items-center font-mono text-[12px] font-bold uppercase tracking-wider text-[#475F73] hover:text-[#1A1A1A] hover:underline"
+										>
+											Where this sits on the map →
+										</button>
+									</div>
+								</section>
 
-								{/* PANEL 3 — CHANGE YOUR WEEK. Hours, not percentages, and the tasks below feed it. */}
-								<div className="flex flex-col justify-between rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5">
-									<div>
-										<div className="relative mb-2 flex items-center justify-between border-b border-gray-100 pb-2.5">
-											<div className="flex items-center gap-1.5">
-												<p className="font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">Change your week</p>
-												<InfoTip id="tip-week" label="Change your week" plain={definition('Simulated week')} align="right" />
-											</div>
-											{isEdited && (
-												<button
-													onClick={handleResetWeights}
-													className="rounded border border-gray-300 bg-white px-2 py-0.5 font-mono text-[10.5px] uppercase tracking-wider text-[#5E5E5E] transition hover:border-gray-400 hover:text-[#1A1A1A]"
-												>
-													Reset
-												</button>
-											)}
+								{/* RIGHT — the simulator. It answers "and if I change it?", so it reports the
+								    move (46 → 34) rather than restating the score at a second size. */}
+								<section aria-labelledby="week-heading" className="flex flex-col rounded-2xl border border-[#E5E5E5] bg-white p-4 sm:p-5">
+									<div className="flex items-center justify-between gap-2">
+										<div className="relative flex items-center gap-1.5">
+											<h3 id="week-heading" className="font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">Change your week</h3>
+											<InfoTip id="tip-week" label="Change your week" plain={definition('Simulated week')} align="right" />
 										</div>
-										<p className="mb-3 text-[13px] leading-snug text-[#5E5E5E]">
-											A {WEEK_HOURS}-hour week. Move the hours here, or hand tasks over in the list below.
-										</p>
-
-										<div className="space-y-3">
-											{(['high', 'medium', 'low'] as const).map((key) => (
-												<div key={key}>
-													<div className="mb-1 flex items-center justify-between gap-2">
-														<div className="flex min-w-0 items-center gap-1.5">
-															<span className="h-2 w-2 shrink-0 rounded-full" style={{ background: key === 'high' ? '#A55252' : key === 'medium' ? '#96693A' : '#5A7A8F' }} />
-															<span className="truncate text-sm font-bold text-[#1A1A1A]">{key === 'high' ? 'Repetitive work AI does' : key === 'medium' ? 'Work AI drafts, you decide' : 'Work that needs a person'}</span>
-														</div>
-														<span className="flex shrink-0 items-baseline gap-1.5">
-															<span className="font-mono text-[12px] text-[#5F5B52]">{week.hours[key].toFixed(1)} h</span>
-															<span className="font-mono text-sm font-black" style={{ color: key === 'high' ? '#A55252' : key === 'medium' ? '#96693A' : '#475F73' }}>
-																{weights[key]}%
-															</span>
-														</span>
-													</div>
-													<input
-														type="range"
-														min="0"
-														max="100"
-														value={weights[key]}
-														aria-label={`${bucketLabel[key]}, share of the ${WEEK_HOURS}-hour week`}
-														onChange={(e) => handleSliderChange(key, parseInt(e.target.value))}
-														className={`h-1.5 w-full cursor-pointer rounded-lg bg-gray-200 outline-none ${
-															key === 'high' ? 'accent-[#A55252]' : key === 'medium' ? 'accent-[#96693A]' : 'accent-[#5A7A8F]'
-														}`}
-													/>
-													<p className="mt-0.5 text-[12px] text-[#5F5B52]">
-														{key === 'high' ? 'Scheduling, typing, forms, sorting' : key === 'medium' ? 'Basic analysis, first drafts, monitoring' : 'Judgement, negotiation, leadership, hands-on'}
-													</p>
-												</div>
-											))}
-										</div>
-
-										{delegated.length > 0 && (
-											<p className="mt-2 rounded-lg bg-[#F4F1E8] p-2 font-mono text-[12px] leading-4 text-[#5F5B52]">
-												{delegated.length} task{delegated.length === 1 ? '' : 's'} handed over · {week.handedOver.toFixed(1)} h off the week
-											</p>
+										{isEdited && (
+											<button
+												onClick={handleResetWeights}
+												className="rounded border border-[#D8D3C4] bg-white px-2 py-0.5 font-mono text-[10.5px] uppercase tracking-wider text-[#5E5E5E] transition hover:border-[#1A1A1A] hover:text-[#1A1A1A]"
+											>
+												Reset
+											</button>
 										)}
 									</div>
+									<p className="mt-1.5 text-[13px] leading-snug text-[#5E5E5E]">
+										A {WEEK_HOURS}-hour week. Move the hours here, or hand tasks over in the list below.
+									</p>
 
-									<div className={`mt-3 flex items-center justify-between rounded-xl border p-2.5 ${
-										isEdited ? 'border-gray-300 bg-gray-50 text-[#1A1A1A]' : 'border-gray-200 bg-white text-[#5E5E5E]'
-									}`}>
-										<div>
-											<p className="font-mono text-[10.5px] font-bold uppercase tracking-wider text-[#5F5B52]">Simulated score</p>
-											<p className="mt-0.5 text-sm font-bold text-[#1A1A1A]">
-												{!isEdited
-													? 'Baseline score'
-													: scoreDelta === 0
-														? 'No change yet'
-														: `${scoreDelta < 0 ? '−' : '+'}${Math.abs(scoreDelta)} pts vs today`}
-											</p>
-											<p className="mt-0.5 font-mono text-[11px] text-[#5F5B52]">
-												{week.total < 0.5 ? 'Whole week handed over' : `${week.total.toFixed(1)} of ${WEEK_HOURS} h still yours`}
-											</p>
+									{/* Where the week actually sits, as one bar. */}
+									<div className="mt-3">
+										<div className="flex h-2.5 w-full gap-[3px] overflow-hidden rounded-full" aria-hidden="true">
+											{(['high', 'medium', 'low'] as const)
+												.filter((key) => weights[key] > 0)
+												.map((key) => (
+													<div
+														key={key}
+														className="h-full transition-all duration-300 ease-out"
+														style={{ width: `${weights[key]}%`, background: bucketColor[key] }}
+													/>
+												))}
 										</div>
-										<div className="text-right">
-											<span className="font-mono text-3xl font-black text-[#1A1A1A]">{overallScore}</span>
-											<span className="font-mono text-sm font-bold text-[#5F5B52]">/100</span>
+										<div className="mt-1 flex items-center justify-between gap-2 font-mono text-[10.5px] uppercase tracking-wider text-[#5F5B52]">
+											<span>{week.total.toFixed(1)} h of {WEEK_HOURS} still yours</span>
+											{week.handedOver > 0 && <span className="text-[#2E6F40]">{week.handedOver.toFixed(1)} h handed over</span>}
 										</div>
 									</div>
-								</div>
-							</div>
 
-							{/* What to do with the answer: three steps, in the place the reader has an answer. */}
-							<div className="rounded-xl border border-gray-200 bg-[#FBFBFB] p-3">
-								<p className="mb-2 font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">What to do with the answer</p>
-								<ol className="grid gap-2 sm:grid-cols-3 sm:gap-4">
-									{nextSteps.map((step, index) => (
-										<li key={step} className="flex gap-2.5">
-											<span className="font-mono text-[12px] font-bold tabular-nums text-[#5A7A8F]">{String(index + 1).padStart(2, '0')}</span>
-											<span className="text-[13px] leading-5 text-[#5E5E5E]">{step}</span>
-										</li>
-									))}
-								</ol>
+									<div className="mt-3.5 space-y-3.5">
+										{(['high', 'medium', 'low'] as const).map((key) => (
+											<div key={key}>
+												<div className="mb-1 flex items-end justify-between gap-2">
+													<div className="flex min-w-0 items-center gap-1.5">
+														<span className="h-2 w-2 shrink-0 rounded-full" style={{ background: bucketColor[key] }} aria-hidden="true" />
+														<span className="truncate text-sm font-bold text-[#1A1A1A]">{bucketLabel[key]}</span>
+													</div>
+													<span className="flex shrink-0 items-baseline gap-2">
+														<span className="font-mono text-[12px] tabular-nums text-[#5F5B52]">{week.hours[key].toFixed(1)} h</span>
+														<span className="font-mono text-2xl font-black leading-none tabular-nums" style={{ color: bucketColor[key] }}>
+															{weights[key]}%
+														</span>
+													</span>
+												</div>
+												<input
+													type="range"
+													min="0"
+													max="100"
+													value={weights[key]}
+													aria-label={`${bucketLabel[key]}, share of the ${WEEK_HOURS}-hour week`}
+													onChange={(e) => handleSliderChange(key, parseInt(e.target.value))}
+													className={`h-1.5 w-full cursor-pointer rounded-lg bg-[#E5E5E5] outline-none ${
+														key === 'high' ? 'accent-[#A55252]' : key === 'medium' ? 'accent-[#96693A]' : 'accent-[#5A7A8F]'
+													}`}
+												/>
+												<p className="mt-0.5 text-[12px] text-[#5F5B52]">
+													{key === 'high' ? 'Scheduling, typing, forms, sorting' : key === 'medium' ? 'Basic analysis, first drafts, monitoring' : 'Judgement, negotiation, leadership, hands-on'}
+												</p>
+											</div>
+										))}
+									</div>
+
+									{delegated.length > 0 && (
+										<p className="mt-2.5 rounded-lg bg-[#F4F1E8] px-2.5 py-1.5 font-mono text-[11.5px] leading-5 text-[#5F5B52]">
+											{delegated.length} task{delegated.length === 1 ? '' : 's'} handed over · {week.handedOver.toFixed(1)} h off the week
+										</p>
+									)}
+
+									<div className="mt-auto flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 border-t border-[#EFEFEF] pt-3">
+										<div className="flex items-baseline gap-2">
+											<span className="font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">This week</span>
+											{isEdited ? (
+												<span className="flex items-baseline gap-1.5 font-mono tabular-nums">
+													<span className="text-lg font-bold text-[#8C8C8C] line-through decoration-1">{baselineScore}</span>
+													<span aria-hidden="true" className="text-[#8C8C8C]">→</span>
+													<span className="text-2xl font-black text-[#1A1A1A]">{overallScore}</span>
+												</span>
+											) : (
+												<span className="font-mono text-2xl font-black tabular-nums text-[#1A1A1A]">{overallScore}</span>
+											)}
+										</div>
+										<span className={`font-mono text-[12px] font-bold ${isEdited && scoreDelta !== 0 ? (scoreDelta < 0 ? 'text-[#2E6F40]' : 'text-[#A55252]') : 'text-[#5F5B52]'}`}>
+											{!isEdited ? 'Baseline score' : scoreDelta === 0 ? 'No change yet' : `${scoreDelta < 0 ? '−' : '+'}${Math.abs(scoreDelta)} pts vs today`}
+										</span>
+									</div>
+
+									{/* What to do next: three steps, in the panel where the reader is already holding
+									    the controls. They used to sit in a full-width strip below both panels. */}
+									<div className="mt-4 border-t border-[#EFEFEF] pt-3">
+										<p className="font-mono text-[10.5px] font-bold uppercase tracking-[0.2em] text-[#5F5B52]">What to do with the answer</p>
+										<ol className="mt-2 space-y-1.5">
+											{nextSteps.map((step, index) => (
+												<li key={step} className="flex gap-2.5">
+													<span className="font-mono text-[11.5px] font-bold tabular-nums text-[#5A7A8F]">{String(index + 1).padStart(2, '0')}</span>
+													<span className="text-[12.5px] leading-5 text-[#5E5E5E]">{step}</span>
+												</li>
+											))}
+										</ol>
+									</div>
+								</section>
 							</div>
 						</>
 					)}
@@ -1180,8 +1216,8 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 							<div className="mb-6 flex flex-col items-stretch justify-between gap-4 border-b border-gray-200 pb-4 sm:flex-row sm:items-center">
 								<div>
 									<h3 className="text-2xl font-bold text-[#1A1A1A]">What the job actually involves</h3>
-									<p className="mt-1 text-sm text-[#5E5E5E]">
-										Every task is scored for how much of it AI can do today. Hand one over and its hours leave the week above.
+									<p className="mt-1 max-w-2xl text-sm leading-6 text-[#5E5E5E]">
+										Every task is scored for how much of it AI can do today. These are the {TASK_PREVIEW} with the most hours at stake; hand one over and its hours leave the week above.
 									</p>
 								</div>
 
@@ -1201,18 +1237,22 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 								</div>
 							</div>
 
-							<div className="grid items-start gap-3 md:grid-cols-2">
+							<div className="grid items-start gap-3 md:grid-cols-2 xl:grid-cols-3">
 								{filteredTasks.length === 0 ? (
-									<div className="rounded-2xl border border-dashed border-gray-200 bg-gray-50 py-8 text-center font-mono text-sm text-[#5F5B52] md:col-span-2">
+									<div className="rounded-2xl border border-dashed border-gray-200 bg-gray-50 py-8 text-center font-mono text-sm text-[#5F5B52] md:col-span-2 xl:col-span-3">
 										No tasks found matching this risk level.
 									</div>
 								) : (
-									visibleTasks.map((task) => {
+									visibleTasks.map((task, index) => {
 										const isDelegated = delegated.includes(task.id);
+										// An odd last card in the two-column band would sit alone in the left column;
+										// it spans the row until the three-column breakpoint takes over.
+										const orphan = visibleTasks.length % 2 === 1 && index === visibleTasks.length - 1;
 										return (
 											<div
 												key={task.id}
-												className={`group relative rounded-xl border p-4 transition-all duration-200 ${
+												data-orphan={orphan ? 'true' : undefined}
+												className={`group relative rounded-xl border p-4 transition-all duration-200 ${orphan ? 'md:col-span-2 xl:col-span-1' : ''} ${
 													isDelegated
 														? 'border-[#1A1A1A]/40 bg-[#FBFBFB]'
 														: task.risk === 'high'
@@ -1293,15 +1333,15 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 										);
 									})
 								)}
-								{filteredTasks.length > 8 && (
-									<div className="flex justify-center pt-2 md:col-span-2">
+								{rankedTasks.length > TASK_PREVIEW && (
+									<div className="flex justify-center pt-2 md:col-span-2 xl:col-span-3">
 										<button
 											type="button"
 											onClick={() => setShowAllTasks((v) => !v)}
 											aria-expanded={showAllTasks}
-											className="inline-flex min-h-[40px] items-center gap-1.5 rounded-lg border border-[#E5E5E5] bg-white px-4 font-mono text-[12px] font-bold uppercase tracking-wider text-[#1A1A1A] transition hover:border-[#1A1A1A]"
+											className="inline-flex min-h-[44px] items-center gap-2 rounded-lg border border-[#D8D3C4] bg-white px-5 font-mono text-[12px] font-bold uppercase tracking-wider text-[#1A1A1A] transition hover:border-[#1A1A1A] hover:bg-[#FAFAFA]"
 										>
-											{showAllTasks ? 'Show fewer tasks' : `Show all ${filteredTasks.length} tasks`}
+											{showAllTasks ? 'Show fewer tasks' : `View remaining ${rankedTasks.length - TASK_PREVIEW} tasks`}
 											<span aria-hidden="true">{showAllTasks ? '↑' : '↓'}</span>
 										</button>
 									</div>
@@ -1723,211 +1763,305 @@ export default function CareerAiResilienceCalculator({ words = CAREER_AI_WORDS, 
 
 			{/* ==================== VIEW 2: THE CAREER MAP ==================== */}
 			{activeView === 'map' && (
-				<div role="tabpanel" id="panel-map" aria-labelledby="tab-map" className="grid gap-8">
-					<div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
-						<h3 className="text-2xl font-bold text-[#1A1A1A] mb-2">Where careers sit</h3>
-						<p className="text-sm text-[#5E5E5E] leading-relaxed max-w-3xl">
-							Every job we score, plotted by typical pay and by how much of its work AI can already do. The top-left corner is the sweet spot — well paid, less exposed. Type in the search field above to narrow the map; hover or tap a dot for details, and click it to open the full breakdown.
-						</p>
-						<div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 font-mono text-[12px] uppercase tracking-wider text-[#5E5E5E]">
-							<span className="flex items-center gap-1.5">
-								<span className="h-2.5 w-2.5 rounded-full" style={{ background: '#5A7A8F' }}></span> Low exposure
-							</span>
-							<span className="flex items-center gap-1.5">
-								<span className="h-2.5 w-2.5 rounded-full" style={{ background: '#96693A' }}></span> Mixed
-							</span>
-							<span className="flex items-center gap-1.5">
-								<span className="h-2.5 w-2.5 rounded-full" style={{ background: '#A55252' }}></span> High exposure
-							</span>
+				<div role="tabpanel" id="panel-map" aria-labelledby="tab-map">
+					<div className="rounded-2xl border border-[#E5E5E5] bg-white p-4 sm:p-6">
+						<div className="flex flex-col gap-3 border-b border-[#EFEFEF] pb-3 sm:flex-row sm:items-end sm:justify-between">
+							<div>
+								<h3 className="text-2xl font-black tracking-tight text-[#1A1A1A]">Where careers sit</h3>
+								<p className="mt-1 max-w-2xl text-sm leading-6 text-[#5E5E5E]">
+									Every job we score, plotted by typical pay against how much of its work AI can already do.
+									The bottom-right corner is the one to aim for. Click a dot to open it.
+								</p>
+							</div>
+							<div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 font-mono text-[11px] uppercase tracking-wider text-[#5F5B52]">
+								<span className="flex items-center gap-1.5">
+									<span className="h-2.5 w-2.5 rounded-full" style={{ background: bucketColor.low }} aria-hidden="true" /> Low exposure
+								</span>
+								<span className="flex items-center gap-1.5">
+									<span className="h-2.5 w-2.5 rounded-full" style={{ background: bucketColor.medium }} aria-hidden="true" /> Mixed
+								</span>
+								<span className="flex items-center gap-1.5">
+									<span className="h-2.5 w-2.5 rounded-full" style={{ background: bucketColor.high }} aria-hidden="true" /> High exposure
+								</span>
+								<span className="flex items-center gap-1.5 text-[#1A1A1A] font-bold">
+									<span className="h-3 w-3 rounded-full border-2 border-white bg-[#1A1A1A]" aria-hidden="true" /> Your role
+								</span>
+							</div>
 						</div>
-						
+
 						{loadingIndex ? (
 							<div className="flex h-96 items-center justify-center">
 								<div className="flex flex-col items-center gap-3">
-									<div className="h-10 w-10 animate-spin rounded-full border-2 border-cyan-500 border-t-transparent"></div>
-									<span className="font-mono text-sm text-[#64748B] uppercase tracking-widest animate-pulse">Placing 1,000 careers on the map…</span>
+									<div className="h-10 w-10 animate-spin rounded-full border-2 border-[#1A1A1A] border-t-transparent"></div>
+									<span className="animate-pulse font-mono text-sm uppercase tracking-widest text-[#5F5B52]">Placing 1,000 careers on the map…</span>
 								</div>
 							</div>
 						) : (
-							<div ref={scatterContainerRef} className="relative mt-8 w-full flex justify-center overflow-hidden">
-								{/* Custom SVG Scatter Plot */}
-								<svg
-									width={scatterDimensions.width}
-									height={scatterDimensions.height}
-									className="overflow-visible"
-								>
-									{/* Horizontal Grid Lines for Risk Score */}
-									{[0, 25, 50, 75, 100].map((riskVal) => {
-										const y = mapRiskToY(riskVal);
-										return (
-											<g key={riskVal}>
-												<line
-													x1={scatterMargin.left}
-													y1={y}
-													x2={scatterDimensions.width - scatterMargin.right}
-													y2={y}
-													stroke="#E5E5E5"
-													strokeWidth="0.5"
-													strokeDasharray="4 4"
-												/>
+							<>
+								<div ref={scatterContainerRef} className="relative mt-4 w-full overflow-hidden">
+									<svg width={scatterDimensions.width} height={scatterDimensions.height} className="block">
+										{/* Horizontal grid lines for AI exposure */}
+										{[0, 25, 50, 75, 100].map((riskVal) => {
+											const y = mapRiskToY(riskVal);
+											return (
+												<g key={riskVal}>
+													<line
+														x1={scatterMargin.left}
+														y1={y}
+														x2={scatterDimensions.width - scatterMargin.right}
+														y2={y}
+														stroke="#EFEFEF"
+														strokeWidth="1"
+													/>
+													<text x={scatterMargin.left - 10} y={y + 4} textAnchor="end" fill="#64748B" className="font-mono text-[11px] font-semibold">
+														{riskVal}%
+													</text>
+												</g>
+											);
+										})}
+
+										{/* Vertical grid lines for pay */}
+										{[20000, 60000, 100000, 140000, 180000, 220000, 260000, 300000].map((salVal) => {
+											const x = mapSalaryToX(salVal);
+											return (
+												<g key={salVal}>
+													<line
+														x1={x}
+														y1={scatterMargin.top}
+														x2={x}
+														y2={scatterDimensions.height - scatterMargin.bottom}
+														stroke="#EFEFEF"
+														strokeWidth="1"
+													/>
+													<text
+														x={x}
+														y={scatterDimensions.height - scatterMargin.bottom + 18}
+														textAnchor="middle"
+														fill="#64748B"
+														className="font-mono text-[11px] font-semibold"
+													>
+														${salVal / 1000}k
+													</text>
+												</g>
+											);
+										})}
+
+										{/* Quadrant rules at the medians of every plotted role. A dot's position only
+										    means something relative to the rest of the field, so the field's midpoint is
+										    the line worth drawing. */}
+										<line
+											x1={quadrantX}
+											y1={scatterMargin.top}
+											x2={quadrantX}
+											y2={scatterDimensions.height - scatterMargin.bottom}
+											stroke="#C6C0AE"
+											strokeWidth="1"
+											strokeDasharray="3 3"
+										/>
+										<line
+											x1={scatterMargin.left}
+											y1={quadrantY}
+											x2={scatterDimensions.width - scatterMargin.right}
+											y2={quadrantY}
+											stroke="#C6C0AE"
+											strokeWidth="1"
+											strokeDasharray="3 3"
+										/>
+
+										{/* Corner labels, on the canvas, where the reading rule belongs. A narrow plot gets
+										    two lines per corner, so opposite corners cannot run into each other at phone width. */}
+										{(narrowPlot
+											? [
+													// At phone width only the two corners that carry the actionable claim survive:
+													// four labels crowd the tick column the axis needs.
+													{ anchor: 'end' as const, x: scatterDimensions.width - scatterMargin.right - 10, top: true, pay: 'High pay', exposure: 'high exposure', tone: '#64748B' },
+													{ anchor: 'end' as const, x: scatterDimensions.width - scatterMargin.right - 10, top: false, pay: 'High pay', exposure: 'low exposure', tone: '#475F73' }
+												]
+											: [
+													{ anchor: 'start' as const, x: scatterMargin.left + 10, top: true, pay: 'Low pay', exposure: 'high exposure', tone: '#64748B' },
+													{ anchor: 'end' as const, x: scatterDimensions.width - scatterMargin.right - 10, top: true, pay: 'High pay', exposure: 'high exposure', tone: '#64748B' },
+													{ anchor: 'start' as const, x: scatterMargin.left + 10, top: false, pay: 'Low pay', exposure: 'low exposure', tone: '#64748B' },
+													{ anchor: 'end' as const, x: scatterDimensions.width - scatterMargin.right - 10, top: false, pay: 'High pay', exposure: 'low exposure', tone: '#475F73' }
+												]
+										).map((corner) => {
+											const y = corner.top
+												? scatterMargin.top + 16
+												: scatterDimensions.height - scatterMargin.bottom - (narrowPlot ? 20 : 10);
+											const lines = narrowPlot
+												? [corner.pay, corner.exposure]
+												: [`${corner.pay} · ${corner.exposure}`];
+											return (
 												<text
-													x={scatterMargin.left - 12}
-													y={y + 4}
-													textAnchor="end"
-													fill="#5E5E5E"
-													className="font-mono text-[12px] font-semibold"
+													key={`${corner.pay}-${corner.exposure}`}
+													x={corner.x}
+													y={y}
+													textAnchor={corner.anchor}
+													fill={corner.tone}
+													stroke="#FFFFFF"
+													strokeWidth="3"
+													paintOrder="stroke"
+													className="font-mono text-[10px] font-bold uppercase tracking-[0.12em]"
 												>
-													{riskVal}%
+													{lines.map((line, index) => (
+														<tspan key={line} x={corner.x} dy={index === 0 ? 0 : 12}>
+															{line}
+														</tspan>
+													))}
 												</text>
-											</g>
-										);
-									})}
+											);
+										})}
 
-									{/* Vertical Grid Lines for Salaries */}
-									{[20000, 60000, 100000, 140000, 180000, 220000, 260000, 300000].map((salVal) => {
-										const x = mapSalaryToX(salVal);
-										return (
-											<g key={salVal}>
-												<line
-													x1={x}
-													y1={scatterMargin.top}
-													x2={x}
-													y2={scatterDimensions.height - scatterMargin.bottom}
-													stroke="#E5E5E5"
-													strokeWidth="0.5"
-													strokeDasharray="4 4"
+										{/* Axis frames */}
+										<line
+											x1={scatterMargin.left}
+											y1={scatterMargin.top}
+											x2={scatterMargin.left}
+											y2={scatterDimensions.height - scatterMargin.bottom}
+											stroke="#D8D3C4"
+											strokeWidth="1"
+										/>
+										<line
+											x1={scatterMargin.left}
+											y1={scatterDimensions.height - scatterMargin.bottom}
+											x2={scatterDimensions.width - scatterMargin.right}
+											y2={scatterDimensions.height - scatterMargin.bottom}
+											stroke="#D8D3C4"
+											strokeWidth="1"
+										/>
+
+										{/* Axis labels */}
+										<text
+											x={scatterMargin.left - 44}
+											y={scatterDimensions.height / 2}
+											fill="#1A1A1A"
+											textAnchor="middle"
+											className="font-mono text-[10.5px] uppercase font-bold tracking-[0.16em]"
+											transform={`rotate(-90, ${scatterMargin.left - 44}, ${scatterDimensions.height / 2})`}
+										>
+											AI exposure
+										</text>
+										<text
+											x={scatterMargin.left + scatterPlotWidth / 2}
+											y={scatterDimensions.height - 8}
+											fill="#1A1A1A"
+											textAnchor="middle"
+											className="font-mono text-[10.5px] uppercase font-bold tracking-[0.16em]"
+										>
+											Typical annual pay
+										</text>
+
+										{/* The field. Neutral enough to read as texture, coloured enough to carry risk. Each
+										    dot carries a 9px transparent stroke, so the marker stays small while the thing
+										    you can actually hit does not. */}
+										{filteredExplorerCareers.map((item) => {
+											const isSelected = selectedCode === item.code;
+											if (isSelected) return null;
+											const isHovered = hoveredScatterCareer?.code === item.code;
+											const dotColor = item.risk_score > 65 ? bucketColor.high : item.risk_score > 35 ? bucketColor.medium : bucketColor.low;
+											return (
+												<circle
+													key={item.code}
+													cx={mapSalaryToX(item.salary)}
+													cy={mapRiskToY(item.risk_score)}
+													r={isHovered ? 6.5 : narrowPlot ? 4.5 : 3.5}
+													fill={dotColor}
+													opacity={hoveredScatterCareer ? (isHovered ? 1 : 0.12) : 0.38}
+													stroke="transparent"
+													strokeWidth="9"
+													pointerEvents="all"
+													onMouseMove={(e) => handleScatterMouseMove(e, item)}
+													onMouseLeave={() => setHoveredScatterCareer(null)}
+													onClick={() => openRole(item.code)}
+													className="cursor-pointer"
 												/>
-												<text
-													x={x}
-													y={scatterDimensions.height - scatterMargin.bottom + 20}
-													textAnchor="middle"
-													fill="#5E5E5E"
-													className="font-mono text-[12px] font-semibold"
-												>
-													{salVal >= 100000 ? `$${salVal/1000}k` : `$${salVal/1000}k`}
-												</text>
+											);
+										})}
+
+										{/* The reader's role, drawn once and drawn last so nothing sits on top of it. */}
+										{selectedIndexItem && (
+											<g className="pointer-events-none">
+												<circle
+													cx={mapSalaryToX(selectedIndexItem.salary)}
+													cy={mapRiskToY(selectedIndexItem.risk_score)}
+													r="14"
+													fill="#1A1A1A"
+													opacity="0.1"
+												/>
+												<circle
+													cx={mapSalaryToX(selectedIndexItem.salary)}
+													cy={mapRiskToY(selectedIndexItem.risk_score)}
+													r="7.5"
+													fill="#1A1A1A"
+													stroke="#FFFFFF"
+													strokeWidth="2"
+												/>
 											</g>
-										);
-									})}
+										)}
+									</svg>
 
-									{/* The Axis Boundary Lines */}
-									<line
-										x1={scatterMargin.left}
-										y1={scatterMargin.top}
-										x2={scatterMargin.left}
-										y2={scatterDimensions.height - scatterMargin.bottom}
-										stroke="#E5E5E5"
-										strokeWidth="1"
-									/>
-									<line
-										x1={scatterMargin.left}
-										y1={scatterDimensions.height - scatterMargin.bottom}
-										x2={scatterDimensions.width - scatterMargin.right}
-										y2={scatterDimensions.height - scatterMargin.bottom}
-										stroke="#E5E5E5"
-										strokeWidth="1"
-									/>
-
-									{/* Axis Labels */}
-									<text
-										x={scatterMargin.left - 55}
-										y={scatterDimensions.height / 2 - 20}
-										fill="#1A1A1A"
-										textAnchor="middle"
-										className="font-mono text-[12px] uppercase font-bold tracking-widest"
-										transform={`rotate(-90, ${scatterMargin.left - 55}, ${scatterDimensions.height / 2 - 20})`}
-									>
-										AI exposure
-									</text>
-									<text
-										x={scatterMargin.left + scatterPlotWidth / 2}
-										y={scatterDimensions.height - 10}
-										fill="#1A1A1A"
-										textAnchor="middle"
-										className="font-mono text-[12px] uppercase font-bold tracking-widest"
-									>
-										Typical annual pay
-									</text>
-
-									{/* Scatter dots */}
-									{filteredExplorerCareers.map((item) => {
-										const cx = mapSalaryToX(item.salary);
-										const cy = mapRiskToY(item.risk_score);
-										
-										const isSelected = selectedCode === item.code;
-										const isHovered = hoveredScatterCareer?.code === item.code;
-
-										// Determine Dot Accent Neutral Colors
-										const dotColor =
-											item.risk_score > 65
-												? '#A55252' // Muted Brick
-												: item.risk_score > 35
-													? '#96693A' // Soft Ochre
-													: '#5A7A8F'; // Steel Blue
-
+									{/* The selected role's label, always on: at 1,016 dots, a highlighted dot without a
+									    name is a dot the reader has to hunt for. */}
+									{selectedIndexItem && (() => {
+										const x = mapSalaryToX(selectedIndexItem.salary);
+										const y = mapRiskToY(selectedIndexItem.risk_score);
+										const above = y > scatterDimensions.height * 0.45;
 										return (
-											<circle
-												key={item.code}
-												cx={cx}
-												cy={cy}
-												r={isSelected ? 6.5 : isHovered ? 5.5 : 4.5}
-												fill={dotColor}
-												opacity={hoveredScatterCareer ? (isHovered || isSelected ? 1.0 : 0.2) : 0.5}
-												stroke={isSelected ? '#1A1A1A' : isHovered ? '#1A1A1A' : 'transparent'}
-												strokeWidth={isSelected || isHovered ? 1.5 : 0}
-												onMouseMove={(e) => handleScatterMouseMove(e, item)}
-												onMouseLeave={() => setHoveredScatterCareer(null)}
-												onClick={() => openRole(item.code)}
-												className={`cursor-pointer ${isHovered || isSelected ? 'transition-all duration-75' : ''}`}
-												style={{ transformOrigin: `${cx}px ${cy}px` }}
-											/>
+											<div
+												className="pointer-events-none absolute z-10 max-w-[15rem] rounded-lg border border-[#1A1A1A] bg-white px-2.5 py-1.5"
+												style={{
+													left: Math.min(Math.max(x, 110), scatterDimensions.width - 110),
+													top: above ? y - 66 : y + 18,
+													transform: 'translateX(-50%)'
+												}}
+											>
+												<p className="truncate text-[12.5px] font-bold leading-tight text-[#1A1A1A]">{selectedIndexItem.title}</p>
+												<p className="font-mono text-[11px] uppercase tracking-wider text-[#5F5B52]">
+													{selectedIndexItem.risk_score}/100 · {formatUSD(selectedIndexItem.salary)}
+												</p>
+											</div>
 										);
-									})}
-								</svg>
+									})()}
 
-								{/* Dynamic Hover Tooltip inside SVG Container */}
-								{hoveredScatterCareer && (
-									<div
-										className="absolute pointer-events-none z-50 rounded-xl border border-gray-200 bg-white p-3.5 shadow-xl max-w-xs"
-										style={{
-											left: `${tooltipPos.x}px`,
-											top: `${tooltipPos.y - 45}px`,
-											transform: tooltipPos.isRightHalf 
-												? 'translate(calc(-100% - 15px), -50%)' 
-												: 'translate(15px, -50%)'
-										}}
-									>
-										<p className="font-mono text-[9.5px] uppercase tracking-wider text-[#475F73] font-bold mb-1">
-											{hoveredScatterCareer.code}
-										</p>
-										<div className="text-sm font-bold line-clamp-1 text-[#1A1A1A]">
-											{hoveredScatterCareer.title}
-										</div>
-										
-										<div className="mt-2.5 flex items-center justify-between gap-4 border-t border-gray-150 pt-2 font-mono text-[11px]">
-											<div>
-												<span className="text-[#5E5E5E]">AI exposure:</span>
-												<strong className={`ml-1 ${
-													hoveredScatterCareer.risk_score > 65
-														? 'text-[#A55252]'
-														: hoveredScatterCareer.risk_score > 35
-															? 'text-[#96693A]'
-															: 'text-[#475F73]'
-												}`}>
-													{hoveredScatterCareer.risk_score}%
-												</strong>
+									{/* Hover tooltip */}
+									{hoveredScatterCareer && (
+										<div
+											className="pointer-events-none absolute z-50 max-w-xs rounded-xl border border-[#D8D3C4] bg-white p-3"
+											style={{
+												left: `${tooltipPos.x}px`,
+												top: `${tooltipPos.y - 45}px`,
+												transform: tooltipPos.isRightHalf ? 'translate(calc(-100% - 15px), -50%)' : 'translate(15px, -50%)'
+											}}
+										>
+											<p className="mb-1 font-mono text-[9.5px] font-bold uppercase tracking-wider text-[#475F73]">
+												{hoveredScatterCareer.code}
+											</p>
+											<div className="line-clamp-1 text-sm font-bold text-[#1A1A1A]">{hoveredScatterCareer.title}</div>
+
+											<div className="mt-2.5 flex items-center justify-between gap-4 border-t border-[#EFEFEF] pt-2 font-mono text-[11px]">
+												<div>
+													<span className="text-[#5E5E5E]">AI exposure:</span>
+													<strong
+														className={`ml-1 ${
+															hoveredScatterCareer.risk_score > 65 ? 'text-[#A55252]' : hoveredScatterCareer.risk_score > 35 ? 'text-[#96693A]' : 'text-[#475F73]'
+														}`}
+													>
+														{hoveredScatterCareer.risk_score}%
+													</strong>
+												</div>
+												<div>
+													<span className="text-[#5E5E5E]">Salary:</span>
+													<strong className="ml-1 text-[#1A1A1A]">{formatUSD(hoveredScatterCareer.salary)}</strong>
+												</div>
 											</div>
-											<div>
-												<span className="text-[#5E5E5E]">Salary:</span>
-												<strong className="ml-1 text-[#1A1A1A]">
-													{formatUSD(hoveredScatterCareer.salary)}
-												</strong>
-											</div>
+											<p className="mt-2 text-center font-mono text-[9.5px] italic text-[#5F5B52]">Click to open this job</p>
 										</div>
-										<p className="mt-2 font-mono text-[9.5px] text-[#5F5B52] italic text-center">Click to open this job</p>
-									</div>
-								)}
-							</div>
+									)}
+								</div>
+
+								<p className="mt-2 font-mono text-[11px] uppercase tracking-wider text-[#5F5B52]">
+									{filteredExplorerCareers.length.toLocaleString('en-US')} roles plotted · median pay {formatUSD(quadrantPay)} · median exposure {quadrantRisk}/100
+								</p>
+							</>
 						)}
 					</div>
 				</div>
