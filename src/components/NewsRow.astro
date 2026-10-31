@@ -1,0 +1,62 @@
+---
+import type { WordPressPost } from '../lib/wordpress';
+import { estimateReadingMinutes } from '../lib/reading-time';
+
+interface Props {
+	post: WordPressPost;
+}
+
+const { post } = Astro.props;
+
+/**
+ * One row in a daily feed.
+ *
+ * Deliberately not `ArticleRow`: a news row leads with the date and carries no artwork, because
+ * the question a reader asks of a feed is "what changed since I last looked", not "which story
+ * looks best". The image rows stay on `/articles/`, where a picture is worth the vertical space.
+ */
+const href = post.slug ? `/${post.slug}/` : post.link;
+const minutes = estimateReadingMinutes(post.content);
+
+const published = post.date ? new Date(post.date) : null;
+const valid = published && !Number.isNaN(published.getTime()) ? published : null;
+const iso = valid ? valid.toISOString() : undefined;
+const day = valid ? valid.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : 'Dated';
+const year = valid ? valid.getFullYear() : '';
+---
+
+<article class="group relative transition-colors duration-150 hover:bg-[#F4F1E8]">
+	<a
+		href={href}
+		class="flex items-start gap-4 py-4 pl-3 pr-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#1A1A1A] sm:gap-6 sm:py-4 sm:pl-4 sm:pr-5"
+	>
+		<time
+			datetime={iso}
+			class="w-14 shrink-0 border-t-2 border-[#E5E5E5] pt-2 font-mono text-xs uppercase leading-tight tracking-wider text-[#5F5B52] group-hover:border-[#5A7A8F] sm:w-20"
+		>
+			<span class="block font-bold text-[#1A1A1A]">{day}</span>
+			<span class="block">{year}</span>
+		</time>
+
+		<div class="min-w-0 flex-1">
+			<div class="flex flex-wrap items-center gap-x-2.5 gap-y-1 font-mono text-[0.68rem] uppercase tracking-wider text-[#5F5B52]">
+				{post.categoryLabel && <span class="font-bold text-[#475F73]">{post.categoryLabel}</span>}
+				{post.categoryLabel && <span aria-hidden="true">•</span>}
+				{minutes ? <span>{minutes} min read</span> : <span>Brief</span>}
+			</div>
+
+			<h2 class="mt-1.5 text-base font-bold leading-snug tracking-tight text-[#1A1A1A] transition-colors group-hover:text-[#475F73] sm:text-lg">
+				{post.title}
+			</h2>
+
+			{post.excerpt && <p class="mt-1.5 line-clamp-2 text-sm leading-relaxed text-[#5E5E5E]">{post.excerpt}</p>}
+		</div>
+
+		<span
+			aria-hidden="true"
+			class="hidden shrink-0 self-center font-mono text-sm text-[#5F5B52] transition group-hover:translate-x-1 group-hover:text-[#1A1A1A] sm:block"
+		>
+			→
+		</span>
+	</a>
+</article>

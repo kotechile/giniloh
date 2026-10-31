@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import NewsRow from '../../components/NewsRow.astro';
+import { fetchPostsByKind, byNewest } from '../../lib/wordpress';
+
+/**
+ * The news fleet: dated dispatches, newest first.
+ *
+ * This route exists because one reverse-chronological archive could not serve two content
+ * lifecycles. Roughly 200 posts landed in October 2026 alone, and every one of them pushed the
+ * standing analysis one row further down a list that only knew how to sort by date. News gets its
+ * own feed here; the pieces that outlive the month they were written live at `/articles/`.
+ *
+ * Both lists are built from the same CMS tag (`news` / `evergreen` / `review`), so filing a post
+ * in one place is a tagging decision, not a code change. See docs/content-kinds-plan.md.
+ */
+const posts = (await fetchPostsByKind('news', 500)).sort(byNewest);
+
+const siteUrl = Astro.site?.toString() || 'https://giniloh.com/';
+const pageUrl = new URL('/news/', siteUrl).toString();
+
+const formatDate = (value: string | null) => {
+	if (!value) return null;
+	const date = new Date(value);
+	if (Number.isNaN(date.getTime())) return null;
+	return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+};
+
+const newest = formatDate(posts[0]?.date ?? null);
+
+const collectionSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'CollectionPage',
+	name: 'News | Gini Loh',
+	description: 'Dated decision dispatches, newest first, from the Gini Loh news desk.',
+	url: pageUrl,
+	numberOfItems: posts.length,
+	itemListElement: posts.slice(0, 30).map((post, index) => ({
+		'@type': 'ListItem',
+		position: index + 1,
+		name: post.title,
+		url: new URL(`/${post.slug}/`, siteUrl).toString()
+	}))
+};
+
+const breadcrumbSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+		{ '@type': 'ListItem', position: 2, name: 'News', item: pageUrl }
+	]
+};
+---
+
+<BaseLayout
+	title="News | Gini Loh"
+	description="Dated decision dispatches from the Gini Loh news desk, newest first. The standing analysis lives in Articles."
+>
+	<link slot="head" rel="canonical" href={pageUrl} />
+	<JsonLd slot="head" data={collectionSchema} />
+	<JsonLd slot="head" data={breadcrumbSchema} />
+
+	<div class="relative py-12">
+		<header class="mx-auto max-w-3xl">
+			<p class="section-eyebrow">News desk</p>
+			<h1 class="mt-4 text-4xl font-black tracking-tight text-[#1A1A1A] sm:text-5xl">News</h1>
+			<p class="mt-4 text-lg leading-relaxed text-[#5E5E5E]">
+				Dated dispatches, newest first. Each one answers a single question with a number and retires when
+				the number moves.
+			</p>
+			<p class="mt-3 text-base leading-relaxed text-[#5E5E5E]">
+				The pieces that outlive the month they were written are kept separately in
+				<a href="/articles/" class="font-bold text-[#1A1A1A] underline decoration-[#5A7A8F] decoration-2 underline-offset-4 hover:text-[#475F73]">
+					Articles
+				</a>.
+			</p>
+
+			{posts.length > 0 && (
+				<p class="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-xs uppercase tracking-wider text-[#5F5B52]">
+					<span class="font-bold text-[#1A1A1A]">{posts.length} dispatch{posts.length === 1 ? '' : 'es'}</span>
+					{newest && <span aria-hidden="true">•</span>}
+					{newest && <span>most recent {newest}</span>}
+				</p>
+			)}
+		</header>
+
+		{
+			posts.length ? (
+				<div class="mx-auto mt-10 max-w-3xl divide-y divide-[#E5E5E5] overflow-hidden rounded-2xl border border-[#E5E5E5] bg-white">
+					{posts.map((post) => (
+						<NewsRow post={post} />
+					))}
+				</div>
+			) : (
+				<div class="mx-auto mt-10 max-w-2xl rounded-2xl border border-[#E5E5E5] bg-white p-8">
+					<h2 class="text-xl font-bold text-[#1A1A1A]">The feed is empty</h2>
+					<p class="mt-3 text-sm leading-relaxed text-[#5E5E5E]">
+						No post currently carries the <code class="font-mono text-[#1A1A1A]">news</code> tag in the CMS, or
+						the CMS was unreachable during this build. The standing library is still at
+						<a href="/articles/" class="font-bold text-[#1A1A1A] underline underline-offset-4">/articles/</a>.
+					</p>
+				</div>
+			)
+		}
+	</div>
+</BaseLayout>

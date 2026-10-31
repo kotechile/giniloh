@@ -3,23 +3,27 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import JsonLd from '../../components/JsonLd.astro';
 import ArticleRow from '../../components/ArticleRow.astro';
 import { getContentCategories } from '../../lib/categories';
-import { fetchAllPosts } from '../../lib/wordpress';
+import { fetchAllPosts, isDurablePost, byNewest } from '../../lib/wordpress';
 
 /**
- * The editorial archive: articles first, taxonomy second.
+ * The durable library: evergreen articles first, taxonomy second.
+ *
+ * `/articles/` used to list every post newest-first, which meant a daily publishing fleet buried
+ * the standing analysis within a month (198 posts landed in October 2026 alone). It now lists only
+ * the posts tagged `evergreen` in the CMS — plus any post carrying no kind tag at all, because a
+ * post in neither list would vanish from navigation, and `scripts/routing.mjs` names those on
+ * every build rather than hiding them.
+ *
+ * The dated dispatch fleet lives at `/news/`. Topic pages (`/articles/<topic>/`) still hold every
+ * post filed under a topic, news and articles together: a topic page is a record of the topic.
  *
  * The topic filter is a progressive enhancement over a complete list — every article is rendered
  * into the HTML unconditionally and the chip only toggles `hidden`, so a reader without JavaScript,
- * and a crawler, see every article either way. Chips filter in place; the "Browse by topic" cards
- * below navigate. Two controls with two jobs, so neither is ambiguous.
+ * and a crawler, see every article either way.
  */
 const categories = await getContentCategories();
 
-const posts = (await fetchAllPosts(200)).sort((a, b) => {
-	const ta = a.date ? new Date(a.date).getTime() : 0;
-	const tb = b.date ? new Date(b.date).getTime() : 0;
-	return tb - ta;
-});
+const posts = (await fetchAllPosts()).filter(isDurablePost).sort(byNewest);
 
 // A post matches its own topic and its parent's, so filtering by a parent topic also surfaces its
 // sub-topic's articles rather than hiding them behind a second click.
@@ -31,12 +35,26 @@ for (const category of categories) {
 const topicsOf = (slug: string | null) =>
 	[slug, slug ? parentOf.get(slug) : undefined].filter((value): value is string => Boolean(value)).join(' ');
 
+// Chip counts are counts of THIS list, not of the site: a chip labelled 8 that reveals 3 rows is
+// worse than no chip. The topic cards below keep the site-wide total and say so.
+const countByTopic = new Map<string, number>();
+for (const post of posts) {
+	if (!post.categorySlug) continue;
+	countByTopic.set(post.categorySlug, (countByTopic.get(post.categorySlug) ?? 0) + 1);
+	const parent = parentOf.get(post.categorySlug);
+	if (parent) countByTopic.set(parent, (countByTopic.get(parent) ?? 0) + 1);
+}
+
 const topics = [
-	...categories.map((category) => ({ slug: category.slug, name: category.name, count: category.postCount })),
+	...categories.map((category) => ({ slug: category.slug, name: category.name, count: countByTopic.get(category.slug) ?? 0 })),
 	...categories.flatMap((category) =>
-		category.children.map((child) => ({ slug: child.slug, name: child.name, count: child.postCount }))
+		category.children.map((child) => ({
+			slug: child.slug,
+			name: child.name,
+			count: countByTopic.get(child.slug) ?? 0
+		}))
 	)
-];
+].filter((topic) => topic.count > 0);
 
 const siteUrl = Astro.site?.toString() || 'https://giniloh.com/';
 const pageUrl = new URL('/articles/', siteUrl).toString();
@@ -46,7 +64,7 @@ const collectionSchema = {
 	'@type': 'CollectionPage',
 	name: 'Articles | Gini Loh',
 	description:
-		'Every article on Gini Loh, newest first: career, compensation, housing, wealth and major-purchase analysis.',
+		'The standing analysis on Gini Loh: career, compensation, housing, wealth and major-purchase articles that outlive the month they were written.',
 	url: pageUrl,
 	numberOfItems: posts.length,
 	itemListElement: posts.slice(0, 30).map((post, idx) => ({
@@ -108,7 +126,7 @@ const chipClass =
 
 <BaseLayout
 	title="Articles | Gini Loh"
-	description="Every article on Gini Loh, newest first: career, compensation, housing, wealth and major-purchase analysis, filterable by decision area."
+	description="The standing analysis: career, compensation, housing and wealth articles that outlive the month they were written, filterable by decision area."
 >
 	<link slot="head" rel="canonical" href={pageUrl} />
 	<JsonLd slot="head" data={collectionSchema} />
@@ -116,13 +134,19 @@ const chipClass =
 
 	<div class="relative py-12">
 		<header class="mx-auto max-w-3xl text-center">
-			<p class="section-eyebrow">Chronological Archive</p>
+			<p class="section-eyebrow">Durable library</p>
 			<h1 class="mt-4 text-4xl font-black tracking-tight text-[#1A1A1A] sm:text-5xl">
 				Articles
 			</h1>
 			<p class="mt-4 text-lg text-[#5E5E5E]">
-				Newest first, across {categories.length} decision areas. Every article is a full breakdown of the maths
-				behind one decision — no summaries you have to take on faith.
+				The standing analysis, newest first. Each of these answers a question that outlives the month it
+				was written, and stays at the same URL as the numbers move.
+			</p>
+			<p class="mt-3 text-base text-[#5E5E5E]">
+				Dated dispatches, newest first, are kept separately in
+				<a href="/news/" class="font-bold text-[#1A1A1A] underline decoration-[#5A7A8F] decoration-2 underline-offset-4 hover:text-[#475F73]">
+					News
+				</a>.
 			</p>
 		</header>
 
@@ -175,6 +199,10 @@ const chipClass =
 						<h2 id="browse-by-topic" class="mt-3 text-2xl font-black tracking-tight text-[#1A1A1A] sm:text-3xl">
 							Every decision area
 						</h2>
+						<p class="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-[#5E5E5E]">
+							A topic page holds everything filed under it, news and articles together. The counts here are
+							the full record.
+						</p>
 					</div>
 
 					<div class="mt-10 grid gap-8 sm:grid-cols-2">
@@ -197,7 +225,7 @@ const chipClass =
 												/>
 											</div>
 											<span class="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[#5F5B52]">
-												{category.postCount} Article{category.postCount === 1 ? '' : 's'}
+												{category.postCount} in topic
 											</span>
 										</div>
 
@@ -238,7 +266,7 @@ const chipClass =
 											href={`/articles/${category.slug}/`}
 											class="flex items-center gap-1 text-sm font-bold text-[#1A1A1A] transition group-hover:text-[#475F73]"
 										>
-											See all {category.postCount} <span aria-hidden="true" class="inline-block transition group-hover:translate-x-1">→</span>
+											See the full topic <span aria-hidden="true" class="inline-block transition group-hover:translate-x-1">→</span>
 										</a>
 									</div>
 								</div>

@@ -21,7 +21,7 @@ import { CAREER_INDEX_PATH, publishedCareerEntries } from '../lib/careers';
  *     URL with `today` taught crawlers the field is noise, and they then ignore it sitewide.
  */
 
-const staticPaths = ['/', '/calculators/', '/articles/', '/about/', '/author/gini-loh/', CAREER_INDEX_PATH];
+const staticPaths = ['/', '/news/', '/calculators/', '/articles/', '/about/', '/author/gini-loh/', CAREER_INDEX_PATH];
 
 function urlEntry(site: URL, path: string, lastmod?: string) {
 	const loc = path.startsWith('http://') || path.startsWith('https://') ? path : new URL(path, site).toString();

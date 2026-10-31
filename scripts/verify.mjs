@@ -70,6 +70,7 @@ async function checkCoreRoutes() {
 	console.log('\nCore routes');
 	const routes = [
 		'/',
+		'/news/',
 		'/calculators/',
 		'/calculators/money-flow/',
 		'/calculators/career-ai-resilience/',
