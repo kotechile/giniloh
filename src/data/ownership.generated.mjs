@@ -33,6 +33,7 @@ export const OWNED_POST_SLUGS_GENERATED = [
 	"the-blueprint-behind-giniloh-money-flow",
 	"the-giniloh-money-flow-simulator-explained",
 	"three-forms-cost-more-than-tax",
+	"two-builds-one-vault",
 	"why-70-of-startup-options-go-unexercised",
 	"why-one-share-outvotes-5300-staff",
 	"why-your-fridge-upgrade-pays-12-50",
@@ -216,6 +217,7 @@ export const FOREIGN_POST_SLUGS_GENERATED = [
 	"your-green-passes-hide-31-wrong",
 	"your-hidden-quantity-gap",
 	"your-label-bills-2500-series",
+	"your-machine-duty-180-days-still-unpriced",
 	"your-mexico-hedge-renewal-risk",
 	"your-miss-costs-9x-the-chargeback",
 	"your-platform-23-features-no-stop-rule",
@@ -393,6 +395,7 @@ export const FOREIGN_TARGETS = {
 	"your-green-passes-hide-31-wrong": "https://aichieve.net",
 	"your-hidden-quantity-gap": "https://aichieve.net",
 	"your-label-bills-2500-series": "https://aichieve.net",
+	"your-machine-duty-180-days-still-unpriced": "https://aichieve.net",
 	"your-mexico-hedge-renewal-risk": "https://aichieve.net",
 	"your-miss-costs-9x-the-chargeback": "https://aichieve.net",
 	"your-platform-23-features-no-stop-rule": "https://aichieve.net",
@@ -411,4 +414,4 @@ export const FOREIGN_TARGETS = {
 	"zet-scale-ev-truck-residual-value-risk": "https://aichieve.net"
 };
 export const GENERATED_FOR = "giniloh.com";
-export const GENERATED_AT = "2026-10-31T05:11:08.300Z";
+export const GENERATED_AT = "2026-10-31T11:43:16.556Z";
