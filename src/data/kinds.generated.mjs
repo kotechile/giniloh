@@ -9,8 +9,8 @@
  * property owns. See docs/content-kinds-plan.md.
  */
 export const KIND_COUNTS = {
-	"news": 15,
-	"evergreen": 33,
+	"news": 17,
+	"evergreen": 38,
 	"review": 0
 };
 

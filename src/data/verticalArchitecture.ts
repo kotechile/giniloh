@@ -16,6 +16,7 @@
 export interface VerticalTopic {
 	title: string;
 	body: string;
+	href?: string;
 }
 
 export interface Vertical {
@@ -30,6 +31,7 @@ export interface Vertical {
 	topics: VerticalTopic[];
 	tools: string[];
 	flagship: string;
+	articles?: string[];
 }
 
 export const VERTICALS: Vertical[] = [
@@ -44,19 +46,29 @@ export const VERTICALS: Vertical[] = [
 		topics: [
 			{
 				title: 'The same work, paid three ways',
-				body: 'A salary, a day rate and a company of your own are taxed differently, and the gap is bigger than most people assume. Compare what lands in your account per hour worked, not what the contract calls gross.'
+				body: 'A salary, a day rate and a company of your own are taxed differently, and the gap is bigger than most people assume. Compare what lands in your account per hour worked, not what the contract calls gross.',
+				href: '/calculators/w2-vs-1099-scorp-calculator/'
 			},
 			{
 				title: 'What leaving actually costs',
-				body: 'Unvested shares, a bonus you were three months from, and a retirement match are real money. A counter-offer has to clear that number before it is worth the disruption.'
+				body: 'Unvested shares, a bonus you were three months from, and a retirement match are real money. A counter-offer has to clear that number before it is worth the disruption.',
+				href: '/calculators/total-comp/'
 			},
 			{
 				title: 'What an hour pays',
-				body: 'Commute, on-call and admin time divided into take-home pay. $220,000 at 55 hours a week is a different job from $200,000 at 40.'
+				body: 'Commute, on-call and admin time divided into take-home pay. $220,000 at 55 hours a week is a different job from $200,000 at 40.',
+				href: '/calculators/raise-velocity/'
 			}
 		],
 		tools: ['w2-vs-1099-scorp-calculator', 'raise-velocity', 'total-comp', 'career-ai-resilience', 'relocation-cost'],
-		flagship: 'w2-vs-1099-scorp-calculator'
+		flagship: 'w2-vs-1099-scorp-calculator',
+		articles: [
+			'jobs-switch-calculator-step-by-step-profit-guide',
+			'negotiate-job-offer-with-giniloh-visualizer',
+			'calculate-your-career-relocation-payback',
+			'best-ai-proof-jobs-in-a-changing-market',
+			'post-termination-option-clock-tax'
+		]
 	},
 	{
 		slug: 'portfolio-capital',
@@ -69,27 +81,40 @@ export const VERTICALS: Vertical[] = [
 		topics: [
 			{
 				title: 'Shares taxed the day they vest',
-				body: 'Stock you are given and keep is the same as taking the cash bonus and buying the shares at today’s price. If you would not buy it with new money, selling on vest is that same decision in reverse.'
+				body: 'Stock you are given and keep is the same as taking the cash bonus and buying the shares at today’s price. If you would not buy it with new money, selling on vest is that same decision in reverse.',
+				href: '/calculators/rsu-hold-vs-sell/'
 			},
 			{
 				title: 'Selling on a schedule, not on a hunch',
-				body: 'A written selling plan, adopted while you hold no company news, lets you sell quarterly without arguing about compliance every time.'
+				body: 'A written selling plan, adopted while you hold no company news, lets you sell quarterly without arguing about compliance every time.',
+				href: '/staggered-lockup-six-selling-decisions/'
 			},
 			{
 				title: 'A concentration you can live with',
-				body: 'Pick the share of your savings one company may hold, then sell down to it on dates you set in advance. Most people land between 10% and 20%.'
+				body: 'Pick the share of your savings one company may hold, then sell down to it on dates you set in advance. Most people land between 10% and 20%.',
+				href: '/why-70-of-startup-options-go-unexercised/'
 			},
 			{
 				title: 'Where the money goes next',
-				body: 'High-growth shares in the Roth, bonds and property income in tax-deferred, the harvested rest in a normal account. Which account holds a fund matters as much as which fund.'
+				body: 'High-growth shares in the Roth, bonds and property income in tax-deferred, the harvested rest in a normal account. Which account holds a fund matters as much as which fund.',
+				href: '/calculators/money-flow/'
 			},
 			{
 				title: 'Selling private shares before an IPO',
-				body: 'A tender offer is a price, not a verdict. Compare it with what an exit might realistically pay after tax, then check the holding-period rules before you sign anything.'
+				body: 'A tender offer is a price, not a verdict. Compare it with what an exit might realistically pay after tax, then check the holding-period rules before you sign anything.',
+				href: '/calculators/secondary-tender-calculator/'
 			}
 		],
 		tools: ['rsu-hold-vs-sell', 'secondary-tender-calculator', 'money-flow'],
-		flagship: 'rsu-hold-vs-sell'
+		flagship: 'rsu-hold-vs-sell',
+		articles: [
+			'staggered-lockup-six-selling-decisions',
+			'why-70-of-startup-options-go-unexercised',
+			'the-blueprint-behind-giniloh-money-flow',
+			'how-to-use-giniloh-to-simulate-automate-and-backtest-frictionless',
+			'beyond-the-emergency-fund-how-to-build-a-frictionless-wealth',
+			'smart-ways-to-invest-an-extra-500-a-day'
+		]
 	},
 	{
 		slug: 'stack-economics',
@@ -102,19 +127,26 @@ export const VERTICALS: Vertical[] = [
 		topics: [
 			{
 				title: 'What the build really costs',
-				body: 'Engineer-months at a fully loaded rate, including the review, testing and migration that a first estimate always leaves out.'
+				body: 'Engineer-months at a fully loaded rate, including the review, testing and migration that a first estimate always leaves out.',
+				href: '/calculators/build-vs-buy/'
 			},
 			{
 				title: 'The maintenance nobody budgets',
-				body: 'A tool that took eight engineer-months to build consumes a permanent share of an engineer to keep alive. Vendors quote that line item; internal teams do not.'
+				body: 'A tool that took eight engineer-months to build consumes a permanent share of an engineer to keep alive. Vendors quote that line item; internal teams do not.',
+				href: '/calculators/no-code-terminator/'
 			},
 			{
 				title: 'The price after year one',
-				body: 'Vendor pricing rises at renewal, and so does the cost of leaving. Compare both sides over the same years, at the same discount rate.'
+				body: 'Vendor pricing rises at renewal, and so does the cost of leaving. Compare both sides over the same years, at the same discount rate.',
+				href: '/zapier-notion-integration-calculate-your-tinkering-tax/'
 			}
 		],
 		tools: ['build-vs-buy', 'no-code-terminator'],
-		flagship: 'build-vs-buy'
+		flagship: 'build-vs-buy',
+		articles: [
+			'zapier-notion-integration-calculate-your-tinkering-tax',
+			'home-assistant-cloud-rename-hardware-rent'
+		]
 	},
 	{
 		slug: 'compute-capital',
@@ -127,19 +159,28 @@ export const VERTICALS: Vertical[] = [
 		topics: [
 			{
 				title: 'Cost per GPU-hour, owned',
-				body: 'Purchase price minus resale, plus power and maintenance, divided by the hours you will actually run before the hardware is obsolete.'
+				body: 'Purchase price minus resale, plus power and maintenance, divided by the hours you will actually run before the hardware is obsolete.',
+				href: '/calculators/gpu-breakeven/'
 			},
 			{
 				title: 'Idle hardware still bills',
-				body: 'Cloud bills only while you compute. Owned hardware bills every month whether or not it is running, which is why low use quietly loses.'
+				body: 'Cloud bills only while you compute. Owned hardware bills every month whether or not it is running, which is why low use quietly loses.',
+				href: '/nvidia-rtx-pro-groundbreaking-performance-but-does-the-math-check/'
 			},
 			{
 				title: 'Repair or replace',
-				body: 'The same arithmetic applied to the laptop already on the desk: when a repair buys real years, and when it is a sunk cost talking.'
+				body: 'The same arithmetic applied to the laptop already on the desk: when a repair buys real years, and when it is a sunk cost talking.',
+				href: '/calculators/tech-debt-repair/'
 			}
 		],
 		tools: ['gpu-breakeven', 'tech-debt-repair'],
-		flagship: 'gpu-breakeven'
+		flagship: 'gpu-breakeven',
+		articles: [
+			'nvidia-rtx-pro-groundbreaking-performance-but-does-the-math-check',
+			'replace-laptop-screen-let-this-decision-engine-do-the-math',
+			'self-hosting-break-even-one-hour-a-year',
+			'pi-5-price-jump-older-kit-wins'
+		]
 	},
 	{
 		slug: 'cross-border',
@@ -152,19 +193,28 @@ export const VERTICALS: Vertical[] = [
 		topics: [
 			{
 				title: 'The exclusion or the credit',
-				body: 'Two ways to avoid paying tax twice, and which one wins depends on your income mix, housing and shares. They are not interchangeable.'
+				body: 'Two ways to avoid paying tax twice, and which one wins depends on your income mix, housing and shares. They are not interchangeable.',
+				href: '/calculators/expat-evaluator/'
 			},
 			{
 				title: 'Where the shares are taxed',
-				body: 'Equity can be taxed where you worked in the year it vested. A move mid-vest splits one grant across two tax systems.'
+				body: 'Equity can be taxed where you worked in the year it vested. A move mid-vest splits one grant across two tax systems.',
+				href: '/split-year-two-clock-seam/'
 			},
 			{
 				title: 'What the move costs before it pays',
-				body: 'Moving costs, temporary housing and a partner’s lost income are money out before any raise arrives. That has a payback period, and it can be negative.'
+				body: 'Moving costs, temporary housing and a partner’s lost income are money out before any raise arrives. That has a payback period, and it can be negative.',
+				href: '/calculators/relocation-cost/'
 			}
 		],
 		tools: ['expat-evaluator', 'relocation-cost'],
-		flagship: 'expat-evaluator'
+		flagship: 'expat-evaluator',
+		articles: [
+			'expats-evaluating-the-true-value-of-a-job-driven-move-overseas',
+			'calculate-your-career-relocation-payback',
+			'split-year-two-clock-seam',
+			'three-forms-cost-more-than-tax'
+		]
 	},
 	{
 		slug: 'personal-capital',
@@ -177,19 +227,28 @@ export const VERTICALS: Vertical[] = [
 		topics: [
 			{
 				title: 'Breaking a lease',
-				body: 'The termination clause, the rent still owed, the reletting fee and what the deposit can legally cover are all knowable before you sign.'
+				body: 'The termination clause, the rent still owed, the reletting fee and what the deposit can legally cover are all knowable before you sign.',
+				href: '/calculators/lease-break/'
 			},
 			{
 				title: 'Rent or buy',
-				body: 'A mortgage builds equity and consumes cash. The comparison is what the owner keeps after selling costs against what the renter has after investing the down payment and the monthly difference.'
+				body: 'A mortgage builds equity and consumes cash. The comparison is what the owner keeps after selling costs against what the renter has after investing the down payment and the monthly difference.',
+				href: '/calculators/rent-vs-buy/'
 			},
 			{
 				title: 'Cost per use',
-				body: 'A $3,000 espresso machine is a bargain at four shots a day and a waste at four a month. The same arithmetic applies to hobby hardware and subscription creep.'
+				body: 'A $3,000 espresso machine is a bargain at four shots a day and a waste at four a month. The same arithmetic applies to hobby hardware and subscription creep.',
+				href: '/is-a-3000-espresso-maker-machine-worth-it/'
 			}
 		],
 		tools: ['rent-vs-buy', 'lease-break', 'money-flow', 'coffee-arbitrage'],
-		flagship: 'rent-vs-buy'
+		flagship: 'rent-vs-buy',
+		articles: [
+			'lease-break-calculator-save-1850-in-3-steps',
+			'is-a-3000-espresso-maker-machine-worth-it',
+			'ebike-costs-per-use-calculator-for-commuters',
+			'disney-hulu-fourth-hike-subscription-creep'
+		]
 	}
 ];
 

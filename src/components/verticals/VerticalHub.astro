@@ -9,6 +9,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { calculatorTools } from '../../lib/calculators/metadata';
 import { VERTICALS, type Vertical } from '../../data/verticalArchitecture';
+import { fetchPostBySlug, type WordPressPost } from '../../lib/wordpress';
 
 interface Props {
 	vertical: Vertical;
@@ -19,6 +20,19 @@ const { vertical } = Astro.props;
 const toolBySlug = (slug: string) => calculatorTools.find((t) => (t.slug as string) === slug);
 const tools = vertical.tools.map(toolBySlug).filter((t): t is (typeof calculatorTools)[number] => Boolean(t));
 const flagship = toolBySlug(vertical.flagship);
+
+const articleSlugs = vertical.articles ?? [];
+const articles = (
+	await Promise.all(
+		articleSlugs.map(async (slug) => {
+			try {
+				return await fetchPostBySlug(slug);
+			} catch {
+				return null;
+			}
+		})
+	)
+).filter((p): p is WordPressPost => Boolean(p));
 
 const position = VERTICALS.findIndex((v) => v.slug === vertical.slug);
 const previous = VERTICALS[(position + VERTICALS.length - 1) % VERTICALS.length];
@@ -51,11 +65,25 @@ const pad = (n: number) => String(n).padStart(2, '0');
 			<ul class="mt-8 grid gap-8 sm:grid-cols-2">
 				{vertical.topics.map((topic, i) => (
 					<li class="border-t border-line pt-5">
-						<p class="font-mono text-[0.64rem] font-bold uppercase tracking-[0.24em] text-ink-muted">
-							{pad(i + 1)}
-						</p>
-						<h3 class="mt-2 text-lg font-bold text-ink">{topic.title}</h3>
-						<p class="mt-2 text-sm leading-relaxed text-ink-body">{topic.body}</p>
+						{topic.href ? (
+							<a href={topic.href} class="group block no-underline">
+								<p class="font-mono text-[0.64rem] font-bold uppercase tracking-[0.24em] text-ink-muted">
+									{pad(i + 1)}
+								</p>
+								<h3 class="mt-2 text-lg font-bold text-ink transition-colors group-hover:text-[var(--accent-line)]">
+									{topic.title} <span aria-hidden="true" class="inline-block transition-transform group-hover:translate-x-1">&rarr;</span>
+								</h3>
+								<p class="mt-2 text-sm leading-relaxed text-ink-body">{topic.body}</p>
+							</a>
+						) : (
+							<div>
+								<p class="font-mono text-[0.64rem] font-bold uppercase tracking-[0.24em] text-ink-muted">
+									{pad(i + 1)}
+								</p>
+								<h3 class="mt-2 text-lg font-bold text-ink">{topic.title}</h3>
+								<p class="mt-2 text-sm leading-relaxed text-ink-body">{topic.body}</p>
+							</div>
+						)}
 					</li>
 				))}
 			</ul>
@@ -77,6 +105,47 @@ const pad = (n: number) => String(n).padStart(2, '0');
 							Open the calculator &rarr;
 						</p>
 					</a>
+				</section>
+			)
+		}
+
+		{
+			articles.length > 0 && (
+				<section class="mt-16 border-t border-line pt-10">
+					<div class="flex items-baseline justify-between">
+						<h2 class="font-mono text-[0.68rem] font-bold uppercase tracking-[0.28em] text-ink-muted">
+							Articles in this section
+						</h2>
+						<span class="font-mono text-xs text-[#8C8C8C]">{articles.length} guides</span>
+					</div>
+					<div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+						{articles.map((post) => (
+							<a
+								href={`/${post.slug}/`}
+								class="group flex flex-col justify-between rounded-2xl border border-line bg-surface p-6 no-underline transition hover:border-[#111318]"
+							>
+								<div>
+									{post.categoryLabel && (
+										<span class="font-mono text-[0.6rem] font-bold uppercase tracking-wider text-[#475F73]">
+											{post.categoryLabel}
+										</span>
+									)}
+									<h3 class="mt-2 text-base font-bold leading-snug text-ink transition-colors group-hover:text-[#475F73]">
+										{post.title}
+									</h3>
+									{post.excerpt && (
+										<p class="mt-2 text-xs leading-relaxed text-ink-body line-clamp-3">
+											{post.excerpt}
+										</p>
+									)}
+								</div>
+								<div class="mt-4 flex items-center justify-between border-t border-line/60 pt-3 text-xs font-mono text-[#475F73]">
+									<span>Read guide</span>
+									<span aria-hidden="true" class="transition-transform group-hover:translate-x-1">&rarr;</span>
+								</div>
+							</a>
+						))}
+					</div>
 				</section>
 			)
 		}
